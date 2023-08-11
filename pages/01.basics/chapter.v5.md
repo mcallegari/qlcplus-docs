@@ -3,12 +3,12 @@ title: Basics
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'final-logo-dark-white-plus4.svg,qlcplus.svg'
+media_order: 'qlcplus.svg,qlcplus-2023.svg'
 ---
 
 ### Chapter 1
 
-![qlcplus](final-logo-dark-white-plus4.svg "qlcplus")
+![qlcplus](qlcplus-2023.svg "qlcplus")
 
 # Introduction
 
