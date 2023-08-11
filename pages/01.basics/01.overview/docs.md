@@ -5,8 +5,6 @@ taxonomy:
         - docs
 ---
 
-## Overview
-
 QLC+ is a free and cross-platform software to control DMX or analog lighting systems like moving heads, dimmers, scanners etc.
 
 This project is a fork of the great QLC project written by Heikki Junnila that aims to continue the QLC development and to introduce new features.
