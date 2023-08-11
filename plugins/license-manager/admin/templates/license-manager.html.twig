@@ -1,0 +1,107 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set slug = uri.basename %}
+{% set base_route = location %}
+
+{% block stylesheets %}
+  {{ parent() }}
+  {% do assets.addInlineCss('[data-grav-array-name="data[licenses]"] [name^="data[licenses]"] { font-family: monospace; font-size: 1.1rem; }') %}
+{% endblock %}
+
+{% block titlebar %}
+    <div class="button-bar">
+        <a class="button" href="{{ base_url }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMIN.BACK"|tu }}</a>
+        <button class="button" type="submit" name="task" value="importLicenses" form="blueprints"><i class="fa fa-upload"></i> {{ "PLUGIN_LICENSE_MANAGER.IMPORT"|tu }}</button>
+        <button class="button" type="submit" name="task" value="exportLicenses" form="blueprints"><i class="fa fa-download"></i> {{ "PLUGIN_LICENSE_MANAGER.EXPORT"|tu }}</button>
+        <button class="button" type="submit" name="task" value="saveLicenses" form="blueprints"><i class="fa fa-check"></i> {{ "PLUGIN_ADMIN.SAVE"|tu }}</button>
+    </div>
+    <h1><i class="fa fa-fw fa-key"></i> {{ "PLUGIN_LICENSE_MANAGER.TITLE"|tu }}</h1>
+{% endblock %}
+
+{% block content %}
+    {% include 'partials/blueprints.html.twig' with { data: license_data, blueprints: license_data.blueprints.init() } %}
+
+    <h1>{{ "PLUGIN_LICENSE_MANAGER.IMPORT_TITLE"|tu }}</h1>
+
+    <form action="{{ base_url_relative }}/license-manager/task:importLicenses" method="post" enctype="multipart/form-data">
+        <div class="form-section">
+            <div class="form-field grid">
+                <input type="file" class="medium" name="uploaded_file" id="uploaded_file" required accept="application/x-yaml,text/yaml,.yaml">
+                <input type="submit" value="{{ "PLUGIN_LICENSE_MANAGER.IMPORT"|tu }}" name="submit" class="button">
+                <input type="hidden" name="task" value="importLicenses" />
+
+                {{ nonce_field('admin-form', 'admin-nonce')|raw }}
+            </div>
+        </div>
+
+    </form>
+
+    <h1>Products Installation State</h1>
+
+    <style>
+        .status-row {
+          margin: 0 1.5rem;
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+        }
+
+        a.status-row {
+          font-weight: bold;
+        }
+
+        .icon {
+          font-size: 150%;
+          margin-right: 0.5rem;
+        }
+
+        .row__success {
+          color: #27AE60;
+        }
+
+        .row__info {
+          color: #2980B9;
+        }
+
+        .row__warning {
+          color: #F39C12 !important;
+        }
+
+        .row__error {
+          color: #C0392B;
+        }
+    </style>
+
+    <div class="block">
+        {% set plugins = { remote: admin.plugins(false), local: admin.plugins(true) } %}
+        {% set themes = { remote: admin.themes(false), local: admin.themes(true) } %}
+
+        {% for slug, license in license_data.toArray.licenses %}
+            {% set isTheme = attribute(themes.remote, slug) or attribute(themes.local, slug) %}
+            {% set isPlugin = attribute(plugins.remote, slug) or attribute(plugins.local, slug) %}
+            {% set label = isTheme ? 'theme' : 'plugin' %}
+            {% set data = admin.data((isTheme ? 'themes/' : 'plugins/') ~ slug).toArray %}
+
+            {% if data == null %}
+                <a class="status-row row__info" href="#" data-remodal-target="add-package" data-packages-slugs="{{ slug }}" data-{{ label }}-action="start-package-installation">
+                    <i class="icon  fa fa-plus"></i> {{ "PLUGIN_ADMIN.INSTALL"|tu }} {{ slug }} {{ label }}
+                </a>
+            {% elseif data.enabled == true %}
+                <div class="status-row row__success">
+                    <i class="icon  fa fa-check"></i> {{ label|title }} {{ slug }} is installed and enabled
+                </div>
+            {% elseif data.enabled == false %}
+                <div class="status-row row__warning">
+                    <i class="icon  fa fa-close"></i> {{ label|title }} {{ slug }} is installed but not enabled
+                </div>
+            {% else %}
+                <div class="status-row row__error">
+                    <i class="icon  fa fa-error"></i> {{ slug }} not found in GPM or GPM is out-of-date.
+                </div>
+            {% endif %}
+
+        {% endfor %}
+    </div>
+    {% include 'partials/modal-changes-detected.html.twig' %}
+  {% include 'partials/modal-add-package.html.twig' with { type: 'plugin' } %}
+{% endblock %}
