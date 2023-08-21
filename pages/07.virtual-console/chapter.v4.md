@@ -34,7 +34,7 @@ Each Virtual Console widget's style can be configured (to some extent). Widgets 
 |     |     |
 | --- | --- |
 | ![](/basics/button.png) | Add a new [Button](button) to the currently selected frame. |
-| ![](/basics/buttonmatrix.png) | Add a new [Button Matrix](button-matrix) to the currently selected frame, using the [Add Button Matrix](add-button-matrix) dialog. |
+| ![](/basics/buttonmatrix.png) | Add a new [Button Matrix](button-matrix) to the currently selected frame, using the dedicated dialog. |
 | ![](/basics/slider.png) | Add a new [Slider](slider) to the currently selected frame. |
 | ![](/basics/slidermatrix.png) | Add a new [Slider Matrix](slider-matrix) to the currently selected frame. |
 | ![](/basics/rgbmatrix.png) | Add a new [Animation](animation) to the currently selected frame. |
