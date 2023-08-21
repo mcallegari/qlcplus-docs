@@ -18,13 +18,13 @@ Controls
 
 |     |     |
 | --- | --- |
-| ![](/basics/scene.png) | Create a new [Scene](/basics/glossary-and-concepts#scene) and edit it using the [Scene Editor](sceneeditor.html). (Shortcut: CTRL+1) |
-| ![](/basics/chaser.png) | Create a new [Chaser](/basics/glossary-and-concepts#chaser) and edit it using the [Chaser Editor](chasereditor.html). (Shortcut: CTRL+2) |
-| ![](/basics/sequence.png) | Create a new [Sequence](/basics/glossary-and-concepts#sequence) and edit it using the [Chaser Editor](chasereditor.html). (Shortcut: CTRL+3) |
-| ![](/basics/efx.png) | Create a new [EFX](/basics/glossary-and-concepts#efx) and edit it using the [EFX Editor](efxeditor.html). (Shortcut: CTRL+4) |
-| ![](/basics/collection.png) | Create a new [Collection](/basics/glossary-and-concepts#collection) and edit it using the [Collection Editor](collectioneditor.html). (Shortcut: CTRL+5) |
-| ![](/basics/rgbmatrix.png) | Create a new [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix) and edit it using the [RGB Matrix Editor](rgbmatrixeditor.html). (Shortcut: CTRL+6) |
-| ![](/basics/script.png) | Create a new [RGB Script](/basics/glossary-and-concepts#rgb-script) and edit it using the [RGB Script Editor](rgbmscriptapi.html). (Shortcut: CTRL+7) |
+| ![](/basics/scene.png) | Create a new [Scene](/basics/glossary-and-concepts#scene) and edit it using the [Scene Editor](scene-editor). (Shortcut: CTRL+1) |
+| ![](/basics/chaser.png) | Create a new [Chaser](/basics/glossary-and-concepts#chaser) and edit it using the [Chaser Editor](chaser-editor). (Shortcut: CTRL+2) |
+| ![](/basics/sequence.png) | Create a new [Sequence](/basics/glossary-and-concepts#sequence) and edit it using the [Chaser Editor](chaser-editor). (Shortcut: CTRL+3) |
+| ![](/basics/efx.png) | Create a new [EFX](/basics/glossary-and-concepts#efx) and edit it using the [EFX Editor](efx-editor.html). (Shortcut: CTRL+4) |
+| ![](/basics/collection.png) | Create a new [Collection](/basics/glossary-and-concepts#collection) and edit it using the [Collection Editor](collection-editor). (Shortcut: CTRL+5) |
+| ![](/basics/rgbmatrix.png) | Create a new [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix) and edit it using the [RGB Matrix Editor](rgb-matrix-editor). (Shortcut: CTRL+6) |
+| ![](/basics/script.png) | Create a new [RGB Script](/basics/glossary-and-concepts#rgb-script) and edit it using the [RGB Script Editor](rgb-script-api). (Shortcut: CTRL+7) |
 | ![](/basics/audio.png) | Create a new [Audio](/basics/glossary-and-concepts#audio) function to be used in [Chasers](/basics/glossary-and-concepts#chaser) or [Shows](/basics/glossary-and-concepts#show). (Shortcut: CTRL+8) |
 | ![](/basics/video.png) | Create a new [Video](/basics/glossary-and-concepts#video) function to be used in [Chasers](/basics/glossary-and-concepts#chaser) or [Shows](/basics/glossary-and-concepts#show). (Shortcut: CTRL+9) |
 | ![](/basics/folder.png) | Create a new folder in the selected category. (Shortcut: CTRL+L) A folder can be renamed by double clicking on it.  <br>When a folder is selected, a newly created function will be added to it. To move existing functions inside a folder, just select and drag them into it. In the same way they can be moved outside a folder by dragging them onto a category item.  <br>When deleting a folder, all the functions and subfolders contained into it will be deleted as well.  <br>**Note:** Empty folders will not be saved into your project. |
