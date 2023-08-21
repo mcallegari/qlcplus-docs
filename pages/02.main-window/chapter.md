@@ -44,9 +44,9 @@ The menu bar on the top of the workspace window contains the following buttons (
 
 * * *
 
-![](../basics/monitor.png)[DMX Monitor](fixturemonitor.html) (CTRL+M)  
-![](../basics/diptool.png)[DMX Address tool](addresstool.html)  
-![](../basics/audioinput.png)[Audio triggers](audiotriggers.html)  
+![](../basics/monitor.png)[DMX Monitor](dmx-monitor) (CTRL+M)  
+![](../basics/diptool.png)[DMX Address tool](addresstool)  
+![](../basics/audioinput.png)[Audio triggers](audiotriggers)  
 
 * * *
 
