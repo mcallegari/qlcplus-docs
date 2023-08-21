@@ -18,7 +18,7 @@ The fixture manager is the heart of QLC+'s fixture-oriented architecture. As its
 | ![](/basics/rgbpanel.png) | Add a RGB panel to the workspace with with the [Add RGB Panel](add-rgb-panel) dialog. |
 | ![](/basics/edit_remove.png) | Remove the selected fixtures from the workspace. This also removes the fixtures from ALL groups they have been assigned to. |
 | ![](/basics/configure.png) | Edit the currently selected fixture's properties with the [Add/Edit Fixture](add-edit-fixtures) dialog. |
-| ![](/basics/fade.png) | Opens the [Channel Properties Configuration](channelproperties.html) window. |
+| ![](/basics/fade.png) | Opens the [Channel Properties Configuration](channel-properties) window. |
 | ![](/basics/group.png) | Assign the selected fixtures to a [Fixture Group](/basics/glossary-and-concepts#fixture-group) displayed in a popup menu. If you have no groups defined yet, you can choose to create a new one from the menu that opens when this button is clicked. |
 | ![](/basics/ungroup.png) | Resign (remove) the selected fixtures from the group they are currently in. Note that removing fixtures from a group will NOT destroy the fixtures completely. Also, removal from one group will not affect the fixtures' memberships to other groups. |
 | ![](/basics/up.png) | Move the selected Channel Group up |
