@@ -10,8 +10,8 @@ Here you can either find the answer directly or find help to point you in the ri
 | | |
 | -- | -- | -- |
 | 1 | Q: | QLC+ cannot detect my USB device |
-| | A: | QLC+ supports a wide variety of USB devices. First of all you should check if the physical connection is OK. Usually a LED on your device should indicate if it is powered up and working correctly.<br>
-If you are using Windows and your device is manufactured by Peperoni or Velleman, please read the information on how to get them working on these help pages. For licensing issues they both need an extra DLL file to work. Please check [Peperoni output plugin](peperonioutput.html) or [Velleman output plugin](vellemanoutput.html)<br>
+| | A: | QLC+ supports a wide variety of USB devices. First of all you should check if the physical connection is OK. Usually a LED on your device should indicate if it is powered up and working correctly.\
+If you are using Windows and your device is manufactured by Peperoni or Velleman, please read the information on how to get them working on these help pages. For licensing issues they both need an extra DLL file to work. Please check [Peperoni output plugin](peperonioutput.html) or [Velleman output plugin](vellemanoutput.html)\
 If you're using Linux, please check if your distribution detected the device when plugged in. Basically, the "`dmesg`" command should tell you something. |
   
 | | |
