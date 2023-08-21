@@ -18,7 +18,7 @@ Once a RGB panel is created, it is straight forward to go to the [Function Manag
   
 Let's have a look at every option in this panel:
 
-#### **Panel Properties**
+#### Panel Properties
 |     |     |
 | --- | --- |
 | **Name** | An arbitrary string that can be used to name the RGB panel |
