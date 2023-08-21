@@ -11,7 +11,7 @@ This page has been arranged in alphabetical order to facilitate searching for a 
 
 An audio [function](#functions) is an object representing an audio file stored in a disk.  
 QLC+ supports the most common audio formats like Wave, MP3, M4A, Ogg and Flac. It supports mono or stereo channels and several sample rates like 44.1KHz, 48KHz, etc...  
-Audio functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](showmanager.html) panel.  
+Audio functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](/show-manager) panel.  
 Like most of the QLC+ functions, Audio supports fade in and fade out times.  
 
 ### ![](../blackout.png) Blackout
@@ -28,7 +28,7 @@ Some channels in intelligent fixtures provide many kinds of functions, or _capab
 
 ### Channel Groups
 
-Channel groups can be added and defined in the [Fixture Manager](fixturemanager.html) panel by using the [Channel groups editor](channelsgroupeditor.html).  
+Channel groups can be added and defined in the [Fixture Manager](/fixture-manager) panel by using the [Channel groups editor](/fixture-manager/channel-groups-editor).  
 Channel groups can have a user defined name and can group together any user defined channels selected from an existing Fixtures list.
 
 ### ![](../chaser.png) Chaser
@@ -44,7 +44,7 @@ Each Chaser has its own speed settings:
 *   **Fade Out:** The fade out speed of a step
 *   **Duration:** The duration of a step
 
-Copies of chaser functions can be created with the [Function Manager](functionmanager.html). The scenes inside a chaser are not duplicated when a chaser is copied. Only the order and direction are copied to the new one.
+Copies of chaser functions can be created with the [Function Manager](/function-manager). The scenes inside a chaser are not duplicated when a chaser is copied. Only the order and direction are copied to the new one.
 
 ### Click And Go
 
@@ -63,7 +63,7 @@ A collection [function](#functions) encapsulates multiple functions that are run
 
 Collections have no speed settings. The speed of each member function is set individually using their own editors.
 
-Copies of collection functions can be created with the [Function Manager](functionmanager.html). The functions contained in a collection are not duplicated; only the list of functions is copied.
+Copies of collection functions can be created with the [Function Manager](/function-manager). The functions contained in a collection are not duplicated; only the list of functions is copied.
 
 ### DMX
 
@@ -148,7 +148,7 @@ A head represents an individual light output device in a fixture. Usually, a sin
 
 For example, you might have a RGB LED bar fixture that is assembled onto a single chassis and as such it appears as a single fixture with one DMX input and one DMX output. However, it is actually comprised of four separate RGB LED "fixtures". These separate fixtures are treated in QLC+ as heads; they share some properties with their sibling heads, they can be controlled individually, but they might also have a master intensity control that controls the light output of all the heads together.
 
-Each head belongs to a [Fixture Mode](#fixtureMode) because in one mode, a fixture might provide enough channels to control each of its heads individually while in another mode, only a handful of channels might be provided for controlling all the heads simultaneously.
+Each head belongs to a [Fixture Mode](#fixture-mode) because in one mode, a fixture might provide enough channels to control each of its heads individually while in another mode, only a handful of channels might be provided for controlling all the heads simultaneously.
 
 ### HTP (Highest Takes Precedence)
 
@@ -163,7 +163,7 @@ A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first 
 ### ![](../input_output.png) Input/Output plugins
 
 QLC+ supports a variety of plugins to send and receive data from/to the external world.  
-A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](artnetplugin.html), [OSC](oscplugin.html) or [E1.31](e131plugin.html)).  
+A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](/plugins/artnetplugin), [OSC](/plugins/oscplugin) or [E1.31](/plugins/e131plugin)).  
 Plugins support input, output or feedback capabilities depending on the device or the protocol they're controlling.  
 
 The primary input methods for QLC+ are naturally the keyboard and mouse. Users can assign keyboard keys to virtual console buttons and drag sliders and do pretty much everything with a mouse.
@@ -205,7 +205,7 @@ Each RGB matrix has its own speed settings:
 
 ### ![](../rgbmatrix.png) RGB Script
 
-A RGB script is a program written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (also known as JavaScript) that produces the necessary image data for [RGB Matrix](#rgbmatrix) functions. Learn more from the [RGB Script API](rgbscriptapi.html) page.
+A RGB script is a program written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (also known as JavaScript) that produces the necessary image data for [RGB Matrix](#rgb-matrix) functions. Learn more from the [RGB Script API](/function-manager/rgb-script-api) page.
 
 ### ![](../scene.png) Scene
 
@@ -216,26 +216,26 @@ Each function has its own speed settings:
 *   **Fade In:** The time used to fade all channels to their target values, from whatever value they had
 *   **Fade Out:** The time used to fade HTP/intensity channels back to zero. Note that ONLY [HTP](#htp) channels are affected by this setting.
 
-Copies of scene functions can be created with the [Function Manager](functionmanager.html). All of the scene's contents are copied to the duplicate.
+Copies of scene functions can be created with the [Function Manager](/function-manager). All of the scene's contents are copied to the duplicate.
 
 ### ![](../sequence.png) Sequence
 
 A Sequence has some of the functionality of a [Chaser](#chaser).  
 It is equivalent to a Chaser in which each step is a single [Scene](#scene) and every one of those Scenes controls the same set of channels. A Sequence is bound to one specific Scene, which means that all the steps of the Sequence can only control the enabled channels of that Scene.  
 When creating new steps in a Sequence, no Function selection pop-up will appear, since a Sequence step cannot include other Functions, unlike a Chaser step.  
-When a Sequence is created, a special sequence icon will appear in the [Function Manager](functionmanager.html) as a child of the Scene to which it is bound.  
-To understand the difference between a Sequence and a Chaser, you are invited to read the second paragraph of the [Show Manager](showmanager.html) documentation.
+When a Sequence is created, a special sequence icon will appear in the [Function Manager](/function-manager) as a child of the Scene to which it is bound.  
+To understand the difference between a Sequence and a Chaser, you are invited to read the second paragraph of the [Show Manager](/show-manager) documentation.
 
 ### ![](../script.png) Script
 
-The Script [function](#functions) works on a simple yet powerful scripting language to automate QLC+ functionalities in a sequential order. A Script can be modified with the [Script Editor](scripteditor.html).
+The Script [function](#functions) works on a simple yet powerful scripting language to automate QLC+ functionalities in a sequential order. A Script can be modified with the [Script Editor](/function-manager/script-editor).
 
 ### ![](../show.png) Show
 
-A Show is an advanced [function](#functions) which encapsulates most of the QLC+ Functions to create a time driven light show. A Show can be created only with the [Show Manager](showmanager.html) and can be inspected and renamed with the [Show Editor](showeditor.html).
+A Show is an advanced [function](#functions) which encapsulates most of the QLC+ Functions to create a time driven light show. A Show can be created only with the [Show Manager](/show-manager) and can be inspected and renamed with the [Show Editor](/function-manager/show-editor).
 
 ### ![](../video.png) Video
 
 A video [function](#functions) is an object representing a video file stored in a disk or a network URL.  
 The supported video formats depends on your Operating System. For example Mac OSX is limited to MOV/MP4 files and not much more.  
-Video functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](showmanager.html) panel.
+Video functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](/show-manager) panel.
