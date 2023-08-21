@@ -1,6 +1,7 @@
 ---
 title: 'EFX Editor'
 date: '12:13 21-08-2023'
+media_order: 'efx-general.png,efx-movement.png'
 ---
 
 The EFX editor, as its name suggests, is used to edit ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) functions. The view is split into two tabs:
