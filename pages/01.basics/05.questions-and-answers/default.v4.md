@@ -15,28 +15,15 @@ If you are using Windows and your device is manufactured by Peperoni or Velleman
 If you're using Linux, please check if your distribution detected the device when plugged in. Basically, the "`dmesg`" command should tell you something. |
 
   
+| | |
+| -- | -- | -- |
+| 2 | Q: | I've got several [buttons](vcbutton.html) in my Virtual Console. I need a way to disable the currently active button when I enable another one. How do I do that? |
+| | A: | Simply place your buttons inside a [Solo Frame](vcsoloframe.html). It does exactly that. |
 
-2
-
-Q:
-
-I've got several [buttons](vcbutton.html) in my Virtual Console. I need a way to disable the currently active button when I enable another one. How do I do that?
-
-A:
-
-Simply place your buttons inside a [Solo Frame](vcsoloframe.html). It does exactly that.
-
-  
-
-3
-
-Q:
-
-I just upgraded my Mac to Mavericks (or later) and my USB DMX adapter doesn't transmit any data.
-
-A:
-
-The problem is in an Apple driver called AppleUSBFTDI, which takes control of every FTDI based device detected in the system.  
+| | |
+| -- | -- | -- |
+| 3 | Q: | I just upgraded my Mac to Mavericks (or later) and my USB DMX adapter doesn't transmit any data. |
+| | A: | The problem is in an Apple driver called AppleUSBFTDI, which takes control of every FTDI based device detected in the system.  
 There are a few ways to solve the problem, but basically the result is the same: the Apple driver must be disabled.  
   
 Please check the dedicated page to understand how to [disable the Apple FTDI driver](disable_apple_ftdi_driver.html)  
@@ -44,8 +31,7 @@ Otherwise, you can download the [ENTTEC FTDI Driver Control tool](https://www.dm
   
 **Note 1: this can compromise the behaviour of other USB devices, so do it only if you know what you're doing!**  
 **Note 2: every time Mac OS receives an update, you need to perform this procedure again!**  
-**Note 3: Most likely, when you disable/enable the Apple driver, you need to reboot your Mac**
-
+**Note 3: Most likely, when you disable/enable the Apple driver, you need to reboot your Mac** |
   
 
 4
