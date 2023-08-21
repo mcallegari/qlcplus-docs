@@ -6,8 +6,8 @@ taxonomy:
 process:
     markdown: true
     twig: true
+media_order: pan-tilt.png
 ---
-
 
 The DMX Monitor is a useful tool to track the values that are being sent to the output universes. Only the information related to the required fixtures are displayed. The monitor's display options have no effect on actual fixture addressing, after all, it is just a **monitor**.  
 The DMX monitor has two display modes: **DMX view** and **2D view**.
@@ -135,4 +135,4 @@ PAN/TILT display is schematically displayed using colored rings/arcs around fixt
 
 In the folowing picture PAN range is 660 degrees and tilt range is 300 degrees. Pan is at counter-clockwise end (-330 deg) and tilt is at -150 deg.
 
-![](../pan-tilt.png)
+![](pan-tilt.png)
