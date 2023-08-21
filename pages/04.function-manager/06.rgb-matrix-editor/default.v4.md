@@ -1,6 +1,7 @@
 ---
 title: 'RGB Matrix Editor'
 date: '12:24 21-08-2023'
+media_order: blending.png
 ---
 
 The RGB matrix editor, as its name suggests, is used to edit ![](/basics/rgbmatrix.png) [RGB matrix](/basics/glossary-and-concepts#rgb-matrix) functions. The function works on predefined ![](/basics/group.png) [Fixture Groups](/basics/glossary-and-concepts#fixture-group) created by the user with the ![](/basics/fixture.png) [Fixture Manager](/fixture-manager).
