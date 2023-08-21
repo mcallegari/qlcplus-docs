@@ -27,7 +27,7 @@ The QLC+ Main Window consists of three main parts:
 
 Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
 
-Menu bar (1)
+### Menu bar (1)
 ------------
 
 The menu bar on the top of the workspace window contains the following buttons (from left to right):
@@ -60,12 +60,12 @@ The menu bar on the top of the workspace window contains the following buttons (
 ![](../basics/blackout.png) Toggle Blackout  
 ![](../basics/operate.png) Switch between Design Mode and Operate Mode (CTRL+F12)
 
-Active Panel (2)
+### Active Panel (2)
 ----------------
 
 Everything happens here. Which panel is active depends on which tab is currently selected.
 
-Panel Tabs (3)
+### Panel Tabs (3)
 --------------
 
 At the bottom of main window you can find easy eye catching icons for switching between QLC+ contexts.  
