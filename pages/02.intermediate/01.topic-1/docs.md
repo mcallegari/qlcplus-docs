@@ -27,7 +27,7 @@ The DMX view shows the all the fixtures of the project, representing each channe
 
 By clicking on this button, it is possible to switch to the 2D view mode.
 
-![](../basics/fonts.png)
+![](/basics/fonts.png)
 
 Change the monitor font. To prevent the numbers from flickering and jumping, you should choose a proportional (i.e. fixed width) font; for example Monaco, Andale or Courier. The font property is global, meaning it will not be saved into your current project, but it will be stored in the QLC+ main configuration.
 
