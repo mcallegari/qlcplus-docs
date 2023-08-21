@@ -15,7 +15,7 @@ The EFX editor, as its name suggests, is used to edit ![](/basics/efx.png) [EFX]
 
 |     |     |
 | --- | --- |
-| ![](/basics/speed.png) | Adjust the EFX speed settings:<br><br>* **Fade In:** Not used currently<br>* **Fade Out:** Not used currently<br>* **Duration:** The duration of one full round using the selected pattern |
+| ![](/basics/speed.png) | Adjust the EFX speed settings:<br><br>**Fade In:** Fade the EFX startup to target size<br>**Fade Out:** Currently not used<br>**Duration:** The duration of one full round using the selected pattern |
 | ![](/basics/player_play.png) | Enable the output and run the EFX to test how it looks like |
 | **EFX name** | Change the name of the EFX. |
 | **Fixture list** | * Step: Shows the order in which the fixtures start their movement in serial/asymmetric order<br>* Fixture: The name of each fixture that has been added to the EFX<br>* Mode: The channels the EFX should control. They can be **Position**, **Dimmer** or **RGB**  <br>    Note: when selecting RGB, you might want to enable the "Color Background" described below.<br>* Reverse: When checked, the fixture reverses its movement as opposed to non-reversed fixtures. The "normal" direction is set by direction in the "Movement" page.<br>* Start Offset: Value in degrees, where on the movement path this fixture should start |
