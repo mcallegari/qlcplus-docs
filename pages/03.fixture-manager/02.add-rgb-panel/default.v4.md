@@ -20,7 +20,7 @@ Let's have a look at every option in this panel:
 
 |     |     |
 | --- | --- |
-<td colspan=2>**Panel Properties**</td>
+|<td colspan=2>**Panel Properties**</td>|
 | **Name** | An arbitrary string that can be used to name the RGB panel |
 | **Universe** | The universe where the RGB Panel is going to start. If the panel requires a number of channels that don't fit in a single universe, it will span across multiple universes, starting from the one selected with this option. |
 | **Address** | The DMX start address where the RGB Panel has to be mapped |
