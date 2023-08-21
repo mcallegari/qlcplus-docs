@@ -30,3 +30,9 @@ Put your custom CSS in this file.
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     text-transform: unset !important;
 }
+
+/* renders pictures inline */
+#body img {
+    margin: -5px 5px;
+    display: inline-block;
+}
