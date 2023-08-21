@@ -71,7 +71,7 @@ At the bottom of main window you can find easy eye catching icons for switching 
 By double clicking on a tab, **a context can be detached on a separate window**. To reattach a detached context, just close the window.  
 QLC+ contexts appear in the following order (from left to right):
 
-![](../basics/fixture.png) View the [Fixture Manager](fixturemanager.html)  
+![](../basics/fixture.png) View the [Fixture Manager](/fixture-manager)  
 ![](../basics/function.png) View the [Function Manager](functionmanager.html)  
 ![](../basics/show.png) View the [Show Manager](showmanager.html)  
 ![](../basics/virtualconsole.png) View the [Virtual Console](virtualconsole.html)  
