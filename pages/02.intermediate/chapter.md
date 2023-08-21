@@ -6,6 +6,13 @@ child_type: docs
 media_order: mainwindow.png
 ---
 
+<style>
+    #body img {
+        margin: -5px 5px;
+        display: inline-block;
+    }
+</style>
+
 ### Chapter 2
 
 # Main Window
