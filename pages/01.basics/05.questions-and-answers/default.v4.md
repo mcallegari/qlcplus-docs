@@ -10,10 +10,9 @@ Here you can either find the answer directly or find help to point you in the ri
 | | |
 | -- | -- | -- |
 | 1 | Q: | QLC+ cannot detect my USB device |
-| | A: | QLC+ supports a wide variety of USB devices. First of all you should check if the physical connection is OK. Usually a LED on your device should indicate if it is powered up and working correctly.  
-If you are using Windows and your device is manufactured by Peperoni or Velleman, please read the information on how to get them working on these help pages. For licensing issues they both need an extra DLL file to work. Please check [Peperoni output plugin](peperonioutput.html) or [Velleman output plugin](vellemanoutput.html)  
+| | A: | QLC+ supports a wide variety of USB devices. First of all you should check if the physical connection is OK. Usually a LED on your device should indicate if it is powered up and working correctly.<br>
+If you are using Windows and your device is manufactured by Peperoni or Velleman, please read the information on how to get them working on these help pages. For licensing issues they both need an extra DLL file to work. Please check [Peperoni output plugin](peperonioutput.html) or [Velleman output plugin](vellemanoutput.html)<br>
 If you're using Linux, please check if your distribution detected the device when plugged in. Basically, the "`dmesg`" command should tell you something. |
-
   
 | | |
 | -- | -- | -- |
@@ -23,14 +22,14 @@ If you're using Linux, please check if your distribution detected the device whe
 | | |
 | -- | -- | -- |
 | 3 | Q: | I just upgraded my Mac to Mavericks (or later) and my USB DMX adapter doesn't transmit any data. |
-| | A: | The problem is in an Apple driver called AppleUSBFTDI, which takes control of every FTDI based device detected in the system.  
-There are a few ways to solve the problem, but basically the result is the same: the Apple driver must be disabled.  
-  
-Please check the dedicated page to understand how to [disable the Apple FTDI driver](disable_apple_ftdi_driver.html)  
-Otherwise, you can download the [ENTTEC FTDI Driver Control tool](https://www.dmxis.com/release/FtdiDriverControl.zip) and try to enable/disable the Apple driver with it.  
-  
-**Note 1: this can compromise the behaviour of other USB devices, so do it only if you know what you're doing!**  
-**Note 2: every time Mac OS receives an update, you need to perform this procedure again!**  
+| | A: | The problem is in an Apple driver called AppleUSBFTDI, which takes control of every FTDI based device detected in the system.<br>
+There are a few ways to solve the problem, but basically the result is the same: the Apple driver must be disabled.<br>
+<br>
+Please check the dedicated page to understand how to [disable the Apple FTDI driver](disable_apple_ftdi_driver.html)<br>
+Otherwise, you can download the [ENTTEC FTDI Driver Control tool](https://www.dmxis.com/release/FtdiDriverControl.zip) and try to enable/disable the Apple driver with it.<br>
+<br>
+**Note 1: this can compromise the behaviour of other USB devices, so do it only if you know what you're doing!**<br>
+**Note 2: every time Mac OS receives an update, you need to perform this procedure again!**<br>
 **Note 3: Most likely, when you disable/enable the Apple driver, you need to reboot your Mac** |
   
 
