@@ -7,7 +7,7 @@ taxonomy:
 
 The same dialog (with slight differences) is used for both adding new and editing the properties of existing [Fixtures](/basics/glossary-and-concepts#fixtures).
 
-**NOTE:** When editing an existing fixture, you can always choose a completely different fixture type to replace the previous one, but if their channels don't match each other exactly, any [Scene](/basics/glossary-and-concepts#scene) functions you may have created, will very probably do things that you don't want. Also, if the channel counts don't match, you might end up having fixtures with overlapping channels, which results also to unwanted behaviour. [RGB Matrix](/basics/glossary-and-concepts#rgbmatrix), [EFX](/basics/glossary-and-concepts#efx), [Chaser](/basics/glossary-and-concepts#chaser) and [Collection](/basics/glossary-and-concepts#collection) functions remain unaffected since they don't directly address specific channels, but are more dynamic in nature.
+**NOTE:** When editing an existing fixture, you can always choose a completely different fixture type to replace the previous one, but if their channels don't match each other exactly, any [Scene](/basics/glossary-and-concepts#scene) functions you may have created, will very probably do things that you don't want. Also, if the channel counts don't match, you might end up having fixtures with overlapping channels, which results also to unwanted behaviour. [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix), [EFX](/basics/glossary-and-concepts#efx), [Chaser](/basics/glossary-and-concepts#chaser) and [Collection](/basics/glossary-and-concepts#collection) functions remain unaffected since they don't directly address specific channels, but are more dynamic in nature.
 
 ### Controls
 
