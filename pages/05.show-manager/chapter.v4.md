@@ -5,6 +5,11 @@ taxonomy:
     category: docs
 ---
 
+<style>
+    #chapter p {
+        text-align: left;
+    }
+</style>
 ### Chapter 5
 
 # Show Manager
@@ -27,18 +32,18 @@ Even if the [Sequence](/basics/glossary-and-concepts#sequence) and the [Chaser](
 If not done yet, you are invited to read once again their definitions in the [Basic Concepts & Glossary](/basics/glossary-and-concepts) page of this documentation.  
 The main differences are:
 
-* **Steps**: The steps of a Chaser can represent any QLC+ Function, while the steps of a Sequence represents different values of the same [Scene](/basics/glossary-and-concepts#scene).  
+**Steps**: The steps of a Chaser can represent any QLC+ Function, while the steps of a Sequence represents different values of the same [Scene](/basics/glossary-and-concepts#scene).  
     In other words, a Chaser is an independent function, while a Sequence can exist only on top of a Scene.  
     The reason for this is, as mentioned before, the visual approach of the Show Manager. If a track of a Show is the graphical representation of a Scene, then it's more intuitive to think that each Sequence created on that track is a function controlling the values of that Scene.
-* **Order**: Chasers can be reproduced in any order (Forward, Backward, Ping-Pong, Random) while in the Show Manager, Sequences are always reproduced from the beginning to the end (Forward). Again, this is related to the visual aspect of the Show Manager, where the playback has a natural time forward direction.  
+**Order**: Chasers can be reproduced in any order (Forward, Backward, Ping-Pong, Random) while in the Show Manager, Sequences are always reproduced from the beginning to the end (Forward). Again, this is related to the visual aspect of the Show Manager, where the playback has a natural time forward direction.  
     On the other hand, Sequences created with the Function Manager can have the same order properties of Chasers.
-* **Editing**: The editing approach between Sequences and Chaser is different too.  
+**Editing**: The editing approach between Sequences and Chaser is different too.  
     Normally the workflow of a Chaser is: create a Function, then add it to the Chaser as a step.  
     The workflow of a Sequence is: create a Scene, create a Sequence on top of it, add steps to it.  
     The Sequence approach might be very effective when you design a light show if you can pre-determine which fixtures you're going to use. Another major advantage of Sequence editing is that when you create a new step, the values of the previous step are copied in the new one. So the user is simply required to adjust the differences between them.  
     If you are going to create 500 steps and they're all different, then Sequences and Chasers will take almost the same time to be created.  
     
-* **Synchronization**: another major advantage of using Sequences in a Show is that a Show can easily be extended (or reduced) while with a Chaser you will have a hard time to synchronize the new functions to the existing ones.  
+**Synchronization**: another major advantage of using Sequences in a Show is that a Show can easily be extended (or reduced) while with a Chaser you will have a hard time to synchronize the new functions to the existing ones.  
     An example. Let's say your project controls 50 fixtures that are a mixture of moving heads, PARs and scanners. At some point you buy a couple of lasers and you want them to become active in existing scenes at precise moments in time. The Show Manager allows you to do that in a few minutes! You just need to add the 2 new fixtures to the project, add a track to the Shows affected by the change and create a few Sequences to control the lasers.  
     The Show Manager resume functionality will also save you a lot of time when testing the new changes.  
     With Chasers you'd probably have to deal with complex [Collections](/basics/glossary-and-concepts#collection) and review the timings of a few steps before finding the right combination.
