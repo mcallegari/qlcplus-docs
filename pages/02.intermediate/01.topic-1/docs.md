@@ -66,7 +66,7 @@ Graphical items can be manually moved by dragging them over the grid, or, when c
 | **Grid units** | Set the 2D view grid measurement units by selecting the desired one from the drop down menu. Possible options are meters and feet. |
 | ![](/basics/edit_add.png) | Add a fixture to the 2D view grid. When clicking on this icon, the fixture selection dialog will be displayed. Fixtures already added to the view will be greyed as it isn't possible to add the same fixture twice |
 | ![](/basics/edit_remove.png) | Remove a fixture from the 2D view grid. Clicking on this icon will remove the currently selected fixture. A fixture is highlighted in yellow when selected. |
-| ![](/basics/image.png) | Open the Monitor background picture selection dialog.<br>Here it is possible to choose between 3 possible modes:<br><br>*   **No background**: the Monitor 2D view won't have any background picture<br>*   **Common background**: the Monitor 2D view will display the chosen background picture<br>*   **Custom background list**: in this mode it is possible to select a background picture for a specific QLC+ Function. Just click on the ![](/basics/edit_add.png) and ![](/basics/edit_remove.png) buttons to add/remove Functions and their associated background picture to the Monitor. When a Function in this list will start the Monitor 2D view background picture will change accordingly. |
+| ![](/basics/image.png) | Open the Monitor background picture selection dialog.<br>Here it is possible to choose between 3 possible modes:<br><br>**No background**: the Monitor 2D view won't have any background picture<br>**Common background**: the Monitor 2D view will display the chosen background picture<br>**Custom background list**: in this mode it is possible to select a background picture for a specific QLC+ Function. Just click on the ![](/basics/edit_add.png) and ![](/basics/edit_remove.png) buttons to add/remove Functions and their associated background picture to the Monitor. When a Function in this list will start the Monitor 2D view background picture will change accordingly. |
 | ![](/basics/label.png) | Show/hide fixtures' names underneath their graphical representation |
 
 ### Fixture Item Editor
@@ -74,25 +74,13 @@ Graphical items can be manually moved by dragging them over the grid, or, when c
 When a fixture is clicked, it gets highlighted in yellow and the Monitor Fixture Item Editor is displayed on the right side of the window.  
 Following, the possible parameters that it is possible to tune:
 
-**Horizontal position**
-
-Set the position on the grid X axis using the grid measurement units
-
-**Vertical position**
-
-Set the position on the grid Y axis using the grid measurement units
-
-**Rotation**
-
-Set the rotation angle of the graphical item representing the selected fixture
-
-**Color gel**
-
-Set the color gel to be applied to the currently selected fixture item. This is useful for generic dimmers with a traditional light bulb, not emitting any color by itself. This function has no effect on RGB LED fixtures.
-
-![](/basics/fileclose.png)
-
-Reset a previously set color gel
+| | |
+| - | - |
+| **Horizontal position** | Set the position on the grid X axis using the grid measurement units |
+| **Vertical position** | Set the position on the grid Y axis using the grid measurement units |
+| **Rotation** | Set the rotation angle of the graphical item representing the selected fixture |
+| **Color gel** | Set the color gel to be applied to the currently selected fixture item. This is useful for generic dimmers with a traditional light bulb, not emitting any color by itself. This function has no effect on RGB LED fixtures. |
+| ![](/basics/fileclose.png) | Reset a previously set color gel |
 
 ### Pan/Tilt display
 
