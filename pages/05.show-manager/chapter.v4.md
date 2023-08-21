@@ -78,12 +78,12 @@ Just 4 steps
 
 The Show Manager has been set up to be used quickly and easily. Basically, with just 4 steps a complete [Show](/basics/glossary-and-concepts#show) can be created:
 
-### Add a new Show ![](/basics/show.png)
+1. ### Add a new Show ![](/basics/show.png)
 
 First of all you need to add a new Show to the view. This creates an empty multitrack view with no tracks and no items, ready to be filled.  
 A popup will appear asking the name to assign to the Show. It is possible to change the name afterwards with the [Function Manager](functionmanager.html), using the [Show Editor](showeditor.html) panel.
 
-### Add a track ![](/basics/edit_add.png)
+2. ### Add a track ![](/basics/edit_add.png)
 
 When you add a track, a popup will ask you to select an existing function or to create a new one with a default name.  
 When done, a new track will be created. All the sequences created on this track will act only on the associated Scene, not affecting any of the other tracks.  
@@ -92,7 +92,7 @@ A Track can be set to ![](../images/track-mute.png) mute and ![](../images/track
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
 Once selected, a track will display its [Scene Editor](sceneeditor.html) on the bottom of the screen.
 
-### Add some [Functions](/basics/glossary-and-concepts#function)
+3. ### Add some [Functions](/basics/glossary-and-concepts#function)
 
 When a track has been activated, you can quickly add a ![](/basics/sequence.png) [Sequence](/basics/glossary-and-concepts#sequence) or an ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio) function to it by pressing the toolbar buttons.  
 Otherwise, by clicking on the ![](/basics/edit_add.png) button, it is possible to import existing QLC+ Functions and add them to the Show timeline.  
@@ -108,7 +108,7 @@ Once selected, an item will display its specific Function Editor on the right ha
 
 Follow step 4 to understand how to fill a Sequence  
 
-### Edit your Functions
+4. ### Edit your Functions
 
 Once an item has been created, it is now the time to edit it.  
 **Please note** that the difference between a Chaser and a Sequence is that a Sequence is bound to the Track (so the Scene) where it has been created. So, when adding a step, QLC+ will not ask to select a particular function, but will always use the channels of the same Scene.  
