@@ -21,12 +21,12 @@ When a project is loaded, instead, moving a Simple desk channel will override an
 This is very useful in some live circumstances where a running function needs some manual adjustment.  
 To "disengage" Simple desk from overriding channels, just click on the reset button. Resetting channels will either bring them back to zero or to the value previously set by a function.  
   
-Cues operates separately from other QLC+ components. For example, cues within the cue stack are not visible in the [Function Manager](functionmanager.html) and [Scenes](/basics/glossary-and-concepts#scene) are not visible in the cue stack.
+Cues operates separately from other QLC+ components. For example, cues within the cue stack are not visible in the [Function Manager](/function-manager) and [Scenes](/basics/glossary-and-concepts#scene) are not visible in the cue stack.
 
 Controls - Universe
 -------------------
 
-The universe box contains the sliders that are used to control individual DMX channels in the first DMX universe. Since 512 sliders cannot fit nicely on the screen at the same time, they have been divided into pages. By default, each page contains 32 sliders but that can be [tuned](#Tuning).
+The universe box contains the sliders that are used to control individual DMX channels in the first DMX universe. Since 512 sliders cannot fit nicely on the screen at the same time, they have been divided into pages. By default, each page contains 32 sliders but that can be [tuned](#tuning).
 
 |     |     |
 | --- | --- |
