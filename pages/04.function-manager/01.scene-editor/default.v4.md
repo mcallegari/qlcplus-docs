@@ -1,6 +1,5 @@
 ---
 title: 'Scene Editor'
-date: '12:02 21-08-2023'
 ---
 
 The scene editor, as its name suggests, is used to edit ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) functions. The editor is divided into tabs; with the first, **General** tab, you control the list of fixtures and [channel groups](/basics/glossary-and-concepts#channel-groups) that take part in the scene editing, together with the Scene name.  
