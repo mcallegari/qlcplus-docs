@@ -15,14 +15,13 @@ This page has been arranged in alphabetical order to facilitate searching for a 
 
 ### ![](../audio.png) Audio
 
-<img style="float: left; padding: 0 20px 0 0;" src="../audio.png"><br>
 An audio [function](#functions) is an object representing an audio file stored in a disk.  
 QLC+ supports the most common audio formats like Wave, MP3, M4A, Ogg and Flac. It supports mono or stereo channels and several sample rates like 44.1KHz, 48KHz, etc...  
 Audio functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](showmanager.html) panel.  
 Like most of the QLC+ functions, Audio supports fade in and fade out times.  
 
-### Blackout
-<img style="float: left; padding: 0 20px 0 0;" src="../blackout.png">
+### ![](../blackout.png) Blackout
+
 Blackout is used to set all channels in all universes to zero and keep them that way, regardless of which functions are currently being run or what values have been set to them manually. When blackout is turned off, the current values of all channels are sent to each universe.
 
 ### Capabilities
@@ -38,8 +37,8 @@ Some channels in intelligent fixtures provide many kinds of functions, or _capab
 Channel groups can be added and defined in the [Fixture Manager](fixturemanager.html) panel by using the [Channel groups editor](channelsgroupeditor.html).  
 Channel groups can have a user defined name and can group together any user defined channels selected from an existing Fixtures list.
 
-### Chaser
-<img style="float: left; padding: 0 20px 0 0;" src="../chaser.png">
+### ![](../chaser.png) Chaser
+
 A chaser [function](#functions) is built up from multiple scenes that are run in sequence, one after the other, when the chaser function is started. The next function is run only after the previous has finished. Any number of [functions](#functions) can be inserted to a chaser.
 
 The Chaser function's direction can be reversed. The Chaser function can also be set to do an infinite loop, an infinite ping-pong-loop (direction is reversed after each pass) or it can run through just once, in a single-shot mode, after which it terminates by itself. If the function is set to loop infinitely, it must be stopped manually.
@@ -64,8 +63,8 @@ So far, three types of widgets are available:
 
 An overview with screenshots is available [here](https://qlcplus.org/clickandgo.html)
 
-### Collection
-<img style="float: left; padding: 0 20px 0 0;" src="../collection.png">
+### ![](../collection.png) Collection
+
 A collection [function](#functions) encapsulates multiple functions that are run simultaneously when the collection function is executed. Any number of functions can be inserted to a collection, but each function can be inserted only once and a collection cannot be a direct member of itself.
 
 Collections have no speed settings. The speed of each member function is set individually using their own editors.
@@ -78,12 +77,12 @@ Copies of collection functions can be created with the [Function Manager](functi
 
 QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware; rather, DMX has just been selected as the de facto lighting standard. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#outputplugins).
 
-### EFX
-<img style="float: left; padding: 0 20px 0 0;" src="../efx.png">
+### ![](../efx.png) EFX
+
 An EFX [function](#functions) is mainly used to automate moving lights (e.g. scanners & moving heads). The EFX can create complex mathematical paths on an X-Y plane that are converted to DMX values for the fixture's pan and tilt channels. **Only fixtures that contain valid pan & tilt channels can take part in an EFX function.** Lately EFX can control also other channels like Dimmer or RGB.
 
-### Fixtures
-<img style="float: left; padding: 0 20px 0 0;" src="../fixture.png">
+### ![](../fixture.png) Fixtures
+
 A fixture is essentially one lighting device. It can be, for example, one moving head, one scanner, one laser etc.. However, for simplicity, individual PAR cans (and the like) that are usually controlled thru one dimmer channel per can, can be grouped together to form one single fixture.
 
 With the Fixture Definition Editor, users can edit shared fixture information stored in a fixture library that contains the following properties for each fixture:
@@ -108,16 +107,16 @@ Several instances of a fixture can be created (e.g. users must be able to have s
 
 Generic dimmer devices don't need their own fixture definitions, because usually multiple dimmers are patched into a common address space, employing one or more dimmer racks. Users can create instances of these generic dimmer entities just by defining the number of channels each one of them should have.
 
-### Fixture Group
-<img style="float: left; padding: 0 20px 0 0;" src="../group.png">
+### ![](../group.png) Fixture Group
+
 A fixture group is, as the name says, a group of [fixtures](#fixtures). They also define (at a rather basic level) the actual physical, real world arrangement of these fixtures. This knowledge can be used, for example, in the RGB Matrix to produce a wall of RGB-mixable lights that can act as individual pixels in a graphic pattern or scrolling text.
 
 ### Fixture Mode
 
 Many manufacturers design their intelligent lights in such a way that they can be configured to understand different sets of channels. For example, a scanner might have two configuration options: one for only 8bit movement channels (1x pan, 1x tilt) and another one for 16bit movement channels (2x pan, 2x tilt). Instead of creating a completely new fixture definition for each variation, they have been bundled together in QLC+'s fixture definitions into fixture modes.
 
-### Functions
-<img style="float: left; padding: 0 20px 0 0;" src="../function.png">
+### ![](../function.png) Functions
+
 The number of functions is practically unlimited. Functions are used to automate the setting of values to DMX channels. Each function type has its own way of automating lights.
 
 The function types are:
@@ -167,8 +166,8 @@ Let's say you have two sliders that control the same intensity channel. First, y
 
 A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first scene with the HTP levels of the second. The new HTP levels will be combined with HTP levels from other functions and virtual console widgets as above. See also [LTP](#ltp).
 
-### Input/Output plugins
-<img style="float: left; padding: 0 20px 0 0;" src="../input_output.png">
+### ![](../input_output.png) Input/Output plugins
+
 QLC+ supports a variety of plugins to send and receive data from/to the external world.  
 A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](artnetplugin.html), [OSC](oscplugin.html) or [E1.31](e131plugin.html)).  
 Plugins support input, output or feedback capabilities depending on the device or the protocol they're controlling.  
@@ -193,15 +192,15 @@ The LTP rule is simple: the latest level that has been set by a function or a Vi
 
 During a crossfade between [Scenes](#scene), LTP levels will often be changed. This has to be handled with some care as some LTP levels need to jump immediately to a new level, for example, changing from one gobo to another. LTP groups such as pan and tilt, however, might need to change gradually from one level to another during a crossfade. Different timings can be achieved by combining scenes in a [Collection](#collection). See also [HTP](#htp).
 
-### Modes
-<img style="float: left; padding: 0 20px 0 0;" src="../operate.png">
+### ![](../operate.png) Modes
+
 Q Light Controller Plus is based on the common concept of having two distinct operational modes to prevent accidental and possibly harmful changes during operation:
 
 *   Design mode is meant to edit the behaviour of the program; create and edit [functions](#functions) and [fixtures](#fixtures) and adjust how they work.
 *   Operate mode is meant to execute the created functions that eventually control the user's lighting fixtures.
 
-### RGB Matrix
-<img style="float: left; padding: 0 20px 0 0;" src="../rgbmatrix.png">
+### ![](../rgbmatrix.png) RGB Matrix
+
 An RGB matrix [function](#functions) can be used to impose simple graphics and text on a matrix (a grid or a wall) of RGB and/or monochrome fixture [heads](#head). The RGB matrix function has been designed to be extendable with [scripts](#rgbscript) that can be written by users.
 
 Each RGB matrix has its own speed settings:
@@ -210,12 +209,12 @@ Each RGB matrix has its own speed settings:
 *   **Fade Out:** Time to fade each pixel OFF
 *   **Duration:** The duration of the current step/frame
 
-### RGB Script
-<img style="float: left; padding: 0 20px 0 0;" src="../rgbmatrix.png">
+### ![](../rgbmatrix.png) RGB Script
+
 A RGB script is a program written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (also known as JavaScript) that produces the necessary image data for [RGB Matrix](#rgbmatrix) functions. Learn more from the [RGB Script API](rgbscriptapi.html) page.
 
-### Scene
-<img style="float: left; padding: 0 20px 0 0;" src="../scene.png">
+### ![](../scene.png) Scene
+
 A scene [function](#functions) comprises the values of selected channels that are contained in one or more fixture instances. When a scene is started, the time it takes for its channels to reach their target values depends on the scene's speed settings:
 
 Each function has its own speed settings:
@@ -225,24 +224,24 @@ Each function has its own speed settings:
 
 Copies of scene functions can be created with the [Function Manager](functionmanager.html). All of the scene's contents are copied to the duplicate.
 
-### Sequence
-<img style="float: left; padding: 0 20px 0 0;" src="../sequence.png">
+### ![](../sequence.png) Sequence
+
 A Sequence has some of the functionality of a [Chaser](#chaser).  
 It is equivalent to a Chaser in which each step is a single [Scene](#scene) and every one of those Scenes controls the same set of channels. A Sequence is bound to one specific Scene, which means that all the steps of the Sequence can only control the enabled channels of that Scene.  
 When creating new steps in a Sequence, no Function selection pop-up will appear, since a Sequence step cannot include other Functions, unlike a Chaser step.  
 When a Sequence is created, a special sequence icon will appear in the [Function Manager](functionmanager.html) as a child of the Scene to which it is bound.  
 To understand the difference between a Sequence and a Chaser, you are invited to read the second paragraph of the [Show Manager](showmanager.html) documentation.
 
-### Script
-<img style="float: left; padding: 0 20px 0 0;" src="../script.png">
+### ![](../script.png) Script
+
 The Script [function](#functions) works on a simple yet powerful scripting language to automate QLC+ functionalities in a sequential order. A Script can be modified with the [Script Editor](scripteditor.html).
 
-### Show
-<img style="float: left; padding: 0 20px 0 0;" src="../show.png">
+### ![](../show.png) Show
+
 A Show is an advanced [function](#functions) which encapsulates most of the QLC+ Functions to create a time driven light show. A Show can be created only with the [Show Manager](showmanager.html) and can be inspected and renamed with the [Show Editor](showeditor.html).
 
-### Video
-<img style="float: left; padding: 0 20px 0 0;" src="../video.png">
+### ![](../video.png) Video
+
 A video [function](#functions) is an object representing a video file stored in a disk or a network URL.  
 The supported video formats depends on your Operating System. For example Mac OSX is limited to MOV/MP4 files and not much more.  
 Video functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](showmanager.html) panel.
