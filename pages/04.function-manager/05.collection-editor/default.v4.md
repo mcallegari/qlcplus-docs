@@ -17,5 +17,5 @@ For example a Scene setting Pan/Tilt channels + a EFX in relative mode must have
 |     |     |
 | --- | --- |
 | **Collection name** | Change the name of the collection. |
-| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the collection, using the [Select Function](selectfunction.html) dialog. The order of the functions has no significance. |
+| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the collection, using the [Select Function](select-function) dialog. The order of the functions has no significance. |
 | ![](/basics/edit_remove.png) | Remove the selected functions from the collection. |
