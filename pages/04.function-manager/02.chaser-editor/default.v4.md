@@ -29,7 +29,7 @@ The timings steps and the note field can be modified by double clicking on them.
 | ![](/basics/editcopy.png) | Copy the selected steps into the clipboard. |
 | ![](/basics/editpaste.png) | Paste the previously copied steps from clipboard to the current position selected. If none, the steps will be appended at the end of the list |
 | ![](/basics/editcut.png) | Remove the selected steps from the list and copy them into the clipboard. |
-| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the chaser, using the [Select Function](selectfunction.html) dialog. The function are inserted after the currently selected step. |
+| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the chaser, using the [Select Function](select-function) dialog. The function are inserted after the currently selected step. |
 | ![](/basics/edit_remove.png) | Remove the selected step from the chaser. |
 | ![](/basics/up.png) | Move the selected step above/before the previous step. |
 | ![](/basics/down.png) | Move the selected step below/after the next step. |
