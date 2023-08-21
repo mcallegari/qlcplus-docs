@@ -17,7 +17,7 @@ For example, if you have 20 PARs you might want to control the RED channel of al
 | ![](/basics/up.png) | Move the selected group up in the list to change the logical order. |
 | ![](/basics/down.png) | Move the selected group down in the list to change the logical order. |
 
-### Add/Edit Channels Group
+### Add/Edit Channel Groups
 
 |     |     |
 | --- | --- |
