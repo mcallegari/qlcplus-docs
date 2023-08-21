@@ -34,10 +34,10 @@ The menu bar on the top of the workspace window contains the following buttons (
 
 * * *
 
-![](../basics/filenew.png) New workspace (CTRL+N)  
-![](../basics/fileopen.png) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
-![](../basics/filesave.png) Save the current workspace (CTRL+S)  
-![](../basics/filesaveas.png) Save the current workspace with a new name  
+* ![](../basics/filenew.png) New workspace (CTRL+N)  
+* ![](../basics/fileopen.png) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
+* ![](../basics/filesave.png) Save the current workspace (CTRL+S)  
+* ![](../basics/filesaveas.png) Save the current workspace with a new name  
 
 * * *
 
