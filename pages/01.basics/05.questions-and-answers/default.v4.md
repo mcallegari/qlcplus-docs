@@ -3,6 +3,11 @@ title: 'Questions and Answers'
 date: '08:32 21-08-2023'
 ---
 
+<style>
+    table td:nth-child(1) {
+       background-color: #afdbbb;
+    }
+</style>
 In this page you will find the common questions that may come to mind when starting with QLC+.  
 Here you can either find the answer directly or find help to point you in the right direction.  
 
