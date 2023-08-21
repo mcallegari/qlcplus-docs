@@ -1,6 +1,7 @@
 ---
 title: 'Fixture Remapping'
 date: '11:36 21-08-2023'
+media_order: fixremap.png
 ---
 
 Starting from version 4.4.1, QLC+ offers a functionality called fixtures remapping.  
@@ -20,8 +21,7 @@ Let's now explain how to use the fixture remapping window, starting from a scree
   
 ![](../images/fixremap.png)  
   
-And now, here is a detailed explanation of each element of the remapping window.  
-  
+And now, here is a detailed explanation of each element of the remapping window.
 
 |     |     |
 | --- | --- |
