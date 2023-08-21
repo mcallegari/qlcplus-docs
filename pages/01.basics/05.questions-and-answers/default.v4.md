@@ -5,7 +5,7 @@ date: '08:32 21-08-2023'
 
 <style>
     table td:nth-child(1) {
-       background-color: #afdbbb;
+       background-color: #dff0d7;
     }
 </style>
 In this page you will find the common questions that may come to mind when starting with QLC+.  
