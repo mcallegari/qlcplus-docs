@@ -19,7 +19,7 @@ Remapping window
 
 Let's now explain how to use the fixture remapping window, starting from a screenshot of a complete example:  
   
-![](../images/fixremap.png)  
+![](fixremap.png)  
   
 And now, here is a detailed explanation of each element of the remapping window.
 
