@@ -26,43 +26,23 @@ Here you can either find the answer directly or find help to point you in the ri
 | | |
 | -- | -- | -- |
 | 4 | Q: | Where is the QLC+ user folder located in my system? |
-| | A: | The user folder is where user fixtures, input profiles, RGB scripts and MIDI templates go.<br>It changes depending on your operating system:<br>**Linux**: it is a hidden folder in your user home directory: `$HOME/.qlcplus`<br>**Windows**: it is a folder in your user (e.g. MyUser) directory: `C:\\Users\\MyUser\\QLC+`<br>**Mac OS**: it is located in your user `Library` directory: `$HOME/Library/Application\\ Support/QLC+`<br>You can reach any of these folders from a terminal with the 'cd' command. For example:<br><br>`cd $HOME/Library/Application\\ Support/QLC+`<br><br> Please keep in mind that fixures and input profiles found in the user folder will have precedence over the same files in the QLC+ system folder. |
+| | A: | The user folder is where user fixtures, input profiles, RGB scripts and MIDI templates go.<br>It changes depending on your operating system:<br>**Linux**: it is a hidden folder in your user home directory: `$HOME/.qlcplus`<br>**Windows**: it is a folder in your user (e.g. MyUser) directory: `C:\\Users\\MyUser\\QLC+`<br>**Mac OS**: it is located in your user `Library` directory: `$HOME/Library/Application\\ Support/QLC+`<br>You can reach any of these folders from a terminal with the `cd` command. For example:<br><br>`cd $HOME/Library/Application\\ Support/QLC+`<br><br> Please keep in mind that fixures and input profiles found in the user folder will have precedence over the same files in the QLC+ system folder. |
 
 
 | | |
 | -- | -- | -- |
 | 5 | Q: | Where is the QLC+ system folder located in my system? |
-| | A: | The system folder is where QLC+ resources (fixtures, input profiles, RGB scripts, etc) are installed and it changes depending on your operating system:<br>**Linux**: it's a fixed folder named `/usr/share/qlcplus`<br>**Windows**: it is the folder where you actually installed QLC+. By default: `C:\\QLC+`<br>**Mac OS**: it is a folder inside the QLC+ bundle (.app file). It is possible to browse the QLC+.app bundle contents simply with Finder. Just right click on the file and select "Show Package Contents".<br><br>Otherwise, the system folder can be reached with a terminal but it depends on where you installed QLC+.<br>For example if you dragged QLC+ into Applications it will be: `/Applications/QLC+.app/Contents/Resources` |
+| | A: | The system folder is where QLC+ resources (fixtures, input profiles, RGB scripts, etc) are installed and it changes depending on your operating system:<br>**Linux**: it's a fixed folder named `/usr/share/qlcplus`<br>**Windows**: it is the folder where you actually installed QLC+. By default: `C:\\QLC+`<br>**Mac OS**: it is a folder inside the QLC+ bundle (.app file). It is possible to browse the QLC+.app bundle contents simply with Finder. Just right click on the file and select "Show Package Contents".<br>Otherwise, the system folder can be reached with a terminal but it depends on where you installed QLC+.<br>For example if you dragged QLC+ into Applications it will be: `/Applications/QLC+.app/Contents/Resources` |
 
   
 
-6
+| | |
+| -- | -- | -- |
+| 6 | Q: | QLC+ cannot play some videos on Windows |
+| | A: | QLC+ relies on the Qt libraries which relies on the DirectShow filters installed in the system.<br>Unfortunately the basic codecs supported by Windows are quite poor, so you need to install some extra codecs package like K-Lite, [available here](https://www.codecguide.com/download_kl.htm). |
 
-Q:
-
-QLC+ cannot play some videos on Windows
-
-A:
-
-QLC+ relies on the Qt libraries which relies on the DirectShow filters installed in the system.  
-Unfortunately the basic codecs supported by Windows are quite poor, so you need to install some extra codecs package like K-Lite, [available here](https://www.codecguide.com/download_kl.htm).
-
-  
-
-7
-
-Q:
-
-I have a 4k display and everything in the QLC+ interface is extremely small
-
-A:
-
-You need to add an option to the QLC+ command line to tell the Qt libraries to autoscale the interface on a High DPI display. Examples:  
-
-**Linux (from terminal)**: QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 qlcplus
-
-**Windows shortcut**: C:\\Windows\\System32\\cmd.exe /c "SET QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"
-
-**Mac OS (from terminal)**: QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus
-
-In case, see the [command line parameters page](commandlineparameters.html) for further information.
+| | |
+| -- | -- | -- |
+| 7 | Q: | I have a 4k display and everything in the QLC+ interface is extremely small |
+| | A: | You need to add an option to the QLC+ command line to tell the Qt libraries to autoscale the interface on a High DPI display. Examples:<br><br>**Linux (from terminal)**: `QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 qlcplus`<br>**Windows shortcut**: `C:\\Windows\\System32\\cmd.exe /c "SET QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`<br>
+**Mac OS (from terminal)**: `QT\_AUTO\_SCREEN\_SCALE\_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`<br><br>In case, see the [command line parameters page](commandlineparameters.html) for further information. |
