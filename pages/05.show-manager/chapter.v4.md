@@ -33,10 +33,12 @@ If not done yet, you are invited to read once again their definitions in the [Ba
 The main differences are:
 
 **Steps**: The steps of a Chaser can represent any QLC+ Function, while the steps of a Sequence represents different values of the same [Scene](/basics/glossary-and-concepts#scene).  
-    In other words, a Chaser is an independent function, while a Sequence can exist only on top of a Scene.  
+    In other words, a Chaser is an independent function, while a Sequence can exist only on top of a Scene.
     The reason for this is, as mentioned before, the visual approach of the Show Manager. If a track of a Show is the graphical representation of a Scene, then it's more intuitive to think that each Sequence created on that track is a function controlling the values of that Scene.
+
 **Order**: Chasers can be reproduced in any order (Forward, Backward, Ping-Pong, Random) while in the Show Manager, Sequences are always reproduced from the beginning to the end (Forward). Again, this is related to the visual aspect of the Show Manager, where the playback has a natural time forward direction.  
     On the other hand, Sequences created with the Function Manager can have the same order properties of Chasers.
+
 **Editing**: The editing approach between Sequences and Chaser is different too.  
     Normally the workflow of a Chaser is: create a Function, then add it to the Chaser as a step.  
     The workflow of a Sequence is: create a Scene, create a Sequence on top of it, add steps to it.  
