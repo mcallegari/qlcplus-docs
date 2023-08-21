@@ -5,7 +5,7 @@ date: '07:32 21-08-2023'
 
 <style>
     #body img {
-        margin: 0;
+        margin: 5px 0;
         display: inline-block;
     }
 </style>
