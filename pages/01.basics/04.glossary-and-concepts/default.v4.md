@@ -3,11 +3,17 @@ title: 'Glossary and Concepts'
 date: '07:32 21-08-2023'
 ---
 
+<style>
+    img {
+        margin: 0;
+        display: none;
+    }
+</style>
 Q Light Controller Plus (QLC+ for short) is meant to control lighting equipment used in various performances, like live concerts and theatres etc. The main intention is that QLC+ will be able to outperform commercial lighting desks without the need for a 500+ page manual through the use of an intuitive and flexible user interface.
 
 This page has been arranged in alphabetical order to facilitate searching for a specific topic.
 
-### Audio ![](../audio.png)
+### ![](../audio.png) Audio
 
 <img style="float: left; padding: 0 20px 0 0;" src="../audio.png"><br>
 An audio [function](#functions) is an object representing an audio file stored in a disk.  
