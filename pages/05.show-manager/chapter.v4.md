@@ -57,11 +57,11 @@ Show Manager toolbar controls
 | --- | --- | --- |
 | ![](/basics/show.png) | CTRL+H | Create a new [Show](/basics/glossary-and-concepts#show). A Show is represented as a multitrack workspace where tracks, sequences and audio elements can be added |
 | **Shows list** |     | This drop down box lists the currently created Shows. Clicking on a Show will display it. |
-| ![](/basics/edit_add.png) | CTRL+N | Create a new track or add existing functions to the Show. When clicking on this button a window is displayed, allowing you to perform the following operations:<br><br>* Create a new track: This creates a new empty track that will serve as a container for Sequences and Audio functions.<br>* Import an existing Scene. This will create a new track and a 10 seconds Sequence with one single step representing the selected Scene.<br>* Import an existing Sequence: this operation scans the existing tracks and if it finds a track already bound to the Sequence's bound Scene, then add the Sequence to that track at the cursor position.  <br>    If no compatible track is found, a new track will be created and bound to the Sequence's bound Scene.<br>* Import an existing [Chaser](/basics/glossary-and-concepts#chaser): add a Chaser function at the cursor position on the selected track. If no track is available, it will create a new one.<br>* Import an existing [Audio](/basics/glossary-and-concepts#audio): add an Audio function at the cursor position on the selected track. If no track is available, it will create a new one.<br>* Import an existing [EFX](/basics/glossary-and-concepts#efx): add an EFX function at the cursor position on the selected track. If no track is available, it will create a new one.<br>* Import an existing [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix): add a RGB Matrix function at the cursor position on the selected track. If no track is available, it will create a new one.<br><br>A Show can have a virtually infinite number of tracks. |
+| ![](/basics/edit_add.png) | CTRL+N | Create a new track or add existing functions to the Show. When clicking on this button a window is displayed, allowing you to perform the following operations:<br><br>**Create a new track**: This creates a new empty track that will serve as a container for Sequences and Audio functions.<br>**Import an existing Scene**: This will create a new track and a 10 seconds Sequence with one single step representing the selected Scene.<br>**Import an existing Sequence**: this operation scans the existing tracks and if it finds a track already bound to the Sequence's bound Scene, then add the Sequence to that track at the cursor position.  <br>    If no compatible track is found, a new track will be created and bound to the Sequence's bound Scene.<br>**Import an existing [Chaser](/basics/glossary-and-concepts#chaser)**: add a Chaser function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [Audio](/basics/glossary-and-concepts#audio)**: add an Audio function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [EFX](/basics/glossary-and-concepts#efx)**: add an EFX function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix)**: add a RGB Matrix function at the cursor position on the selected track. If no track is available, it will create a new one.<br><br>A Show can have a virtually infinite number of tracks. |
 | ![](/basics/sequence.png) | CTRL+E | Create a new [Sequence](/basics/glossary-and-concepts#sequence) item and bind it to the selected track. |
 | ![](/basics/audio.png) | CTRL+A | Create a new [Audio](/basics/glossary-and-concepts#audio) item. An audio item simply represents an audio file. Audio items can be added on any track, but if you want to to create a separate track for it, just create an new track.  <br>**Note:** It is possible to display the waveform preview of an audio item just by right clicking it and selecting the channels you want to display (mono, left channel, right channel, stereo)  <br>**Warning:** Even though QLC+ allows you to, it is not possible to play two audio files simultaneously. Especially on Windows, you might experience unwanted crashes. |
 | ![](/basics/editcopy.png) | CTRL+C | Copy the currently selected item into QLC+ clipboard |
-| ![](/basics/editpaste.png) | CTRL+V | Paste QLC+ clipboard content at the cursor position. When performing this operation two checks are performed:<br><br>* Overlapping: checks if the item you're going to paste overlaps with an existing item in the selected track<br>* Validity: If you're pasting a Sequence, QLC+ will verify that the Sequence contents are compatible with the currently selected track |
+| ![](/basics/editpaste.png) | CTRL+V | Paste QLC+ clipboard content at the cursor position. When performing this operation two checks are performed:<br><br>**Overlapping**: checks if the item you're going to paste overlaps with an existing item in the selected track<br>**Validity**: If you're pasting a Sequence, QLC+ will verify that the Sequence contents are compatible with the currently selected track |
 | ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](functionmanager.html)** |
 | ![](/basics/color.png) | CTRL+R | Assign a custom color to the selected item |
 | ![](/basics/lock.png) | CTRL+K | Lock or unlock then selected item. Once an item is locked, it cannot be dragged on the timeline anymore |
@@ -78,12 +78,12 @@ Just 4 steps
 
 The Show Manager has been set up to be used quickly and easily. Basically, with just 4 steps a complete [Show](/basics/glossary-and-concepts#show) can be created:
 
-### * Add a new Show ![](/basics/show.png)
+### Add a new Show ![](/basics/show.png)
 
 First of all you need to add a new Show to the view. This creates an empty multitrack view with no tracks and no items, ready to be filled.  
 A popup will appear asking the name to assign to the Show. It is possible to change the name afterwards with the [Function Manager](functionmanager.html), using the [Show Editor](showeditor.html) panel.
 
-### * Add a track ![](/basics/edit_add.png)
+### Add a track ![](/basics/edit_add.png)
 
 When you add a track, a popup will ask you to select an existing function or to create a new one with a default name.  
 When done, a new track will be created. All the sequences created on this track will act only on the associated Scene, not affecting any of the other tracks.  
@@ -92,7 +92,7 @@ A Track can be set to ![](../images/track-mute.png) mute and ![](../images/track
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
 Once selected, a track will display its [Scene Editor](sceneeditor.html) on the bottom of the screen.
 
-### * Add some [Functions](/basics/glossary-and-concepts#function)
+### Add some [Functions](/basics/glossary-and-concepts#function)
 
 When a track has been activated, you can quickly add a ![](/basics/sequence.png) [Sequence](/basics/glossary-and-concepts#sequence) or an ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio) function to it by pressing the toolbar buttons.  
 Otherwise, by clicking on the ![](/basics/edit_add.png) button, it is possible to import existing QLC+ Functions and add them to the Show timeline.  
@@ -108,7 +108,7 @@ Once selected, an item will display its specific Function Editor on the right ha
 
 Follow step 4 to understand how to fill a Sequence  
 
-### * Edit your Functions
+### Edit your Functions
 
 Once an item has been created, it is now the time to edit it.  
 **Please note** that the difference between a Chaser and a Sequence is that a Sequence is bound to the Track (so the Scene) where it has been created. So, when adding a step, QLC+ will not ask to select a particular function, but will always use the channels of the same Scene.  
