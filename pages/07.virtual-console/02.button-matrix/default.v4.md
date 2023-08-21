@@ -9,7 +9,7 @@ When creating a new button matrix, you can assign functions to each of the butto
 
 ### Add a Matrix of Buttons
 
-When you want to create many buttons at the same time on the [Virtual Console](virtualconsole.html), you may do this by creating a [Button Matrix](vcbuttonmatrix.html), using the Add Button Matrix dialog.
+When you want to create many buttons at the same time on the [Virtual Console](virtual-console), you may do this by using the Add Button Matrix dialog.
 
 |     |     |
 | --- | --- |
@@ -17,7 +17,7 @@ When you want to create many buttons at the same time on the [Virtual Console](v
 | ![](/basics/edit_add.png) | Add [Functions](/basics/glossary-and-concepts#function) to the list. |
 | ![](/basics/edit_remove.png) | Remove the selected functions from the list. |
 | **Dimensions** | **Horizontal button count**: Number of buttons to create horizontally<br>**Vertical button count**: Number of buttons to create vertically<br>**Button size**: The size of each button<br>**Allocation**: Shows you the number of functions currently in the list and the number of buttons that will be created with the current parameters. If you have less buttons than functions, the remaining functions will NOT be allocated to any buttons. On the other hand, if you have more buttons than functions, some buttons are not assigned a function, leaving them empty. |
-| **Frame** | * Normal: Place the buttons inside a [Normal Frame](vcframe.html)<br>* Solo: Place the buttons inside a [Solo Frame](vcsoloframe.html) |
+| **Frame** | **Normal**: Place the buttons inside a [Normal Frame](frame)<br>**Solo**: Place the buttons inside a [Solo Frame](solo-frame) |
 
 ### Configuration
 
