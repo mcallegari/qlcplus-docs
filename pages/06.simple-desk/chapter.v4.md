@@ -5,6 +5,11 @@ taxonomy:
     category: docs
 ---
 
+<style>
+    #chapter p {
+        text-align: left;
+    }
+</style>
 ### Chapter 6
 
 # Simple Desk
