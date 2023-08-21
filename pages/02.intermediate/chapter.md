@@ -1,5 +1,5 @@
 ---
-title: Intermediate
+title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
@@ -7,6 +7,6 @@ child_type: docs
 
 ### Chapter 2
 
-# Intermediate
+# Main Window
 
 Delve deeper into more **complex** topics
