@@ -43,7 +43,7 @@ A chaser [function](#functions) is built up from multiple scenes that are run in
 
 The Chaser function's direction can be reversed. The Chaser function can also be set to do an infinite loop, an infinite ping-pong-loop (direction is reversed after each pass) or it can run through just once, in a single-shot mode, after which it terminates by itself. If the function is set to loop infinitely, it must be stopped manually.
 
-As of version 3.3.0, each chaser has its own speed settings:
+Each Chaser has its own speed settings:
 
 *   **Fade In:** The fade in speed of a step
 *   **Hold:** The hold time of a step
