@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-The Fixture Group Editor is used when you select a [Fixture Group](/basics/glossary-and-concepts#fixture-group) in the [Fixture Manager](fixturemanager.html). This editor can be used to describe the physical arrangement of the [fixtures](/basics/glossary-and-concepts#fixtures) and their [heads](/basics/glossary-and-concepts#head) that are assigned to the group.
+The Fixture Group Editor is used when you select a [Fixture Group](/basics/glossary-and-concepts#fixture-group) in the [Fixture Manager](fixture-manager). This editor can be used to describe the physical arrangement of the [fixtures](/basics/glossary-and-concepts#fixtures) and their [heads](/basics/glossary-and-concepts#head) that are assigned to the group.
 
 ### Controls
 
