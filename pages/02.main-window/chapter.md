@@ -41,7 +41,7 @@ The menu bar on the top of the workspace window contains the following buttons (
 * * *
 
 ![](../basics/monitor.png)[DMX Monitor](dmx-monitor) (CTRL+M)  
-![](../basics/diptool.png)[DMX Address tool](addresstool)  
+![](../basics/diptool.png)[DMX Address tool](dmx-address-tool)  
 ![](../basics/audioinput.png)[Audio triggers](audiotriggers)  
 
 * * *
