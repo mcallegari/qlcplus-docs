@@ -14,7 +14,7 @@ When clicking OK on this dialog two things will happen:
 * QLC+ will create a fixture for each row of the panel. They can be considered like if the panel is composed by individual RGB bars.
 * QLC+ will create a fixture group representing the panel with heads already in the right displacement
 
-Once a RGB panel is created, it is straight forward to go to the [Function Manager](functionmanager.html), create a new [RGB Matrix](concept.html#RGBMatrix) and start using the panel very quickly.  
+Once a RGB panel is created, it is straight forward to go to the [Function Manager](/function-manager), create a new [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix) and start using the panel very quickly.  
   
 Let's have a look at every option in this panel:
 
