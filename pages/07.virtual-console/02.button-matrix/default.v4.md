@@ -14,7 +14,7 @@ When you want to create many buttons at the same time on the [Virtual Console](v
 |     |     |
 | --- | --- |
 | **Function list** | Shows you a list of functions that will be assigned to the buttons, one function per button. |
-| ![](/basics/edit_add.png) | Add [Functions](/basics/glossary-and-concepts#function) to the list. |
+| ![](/basics/edit_add.png) | Add [Functions](/basics/glossary-and-concepts#functions) to the list. |
 | ![](/basics/edit_remove.png) | Remove the selected functions from the list. |
 | **Dimensions** | **Horizontal button count**: Number of buttons to create horizontally<br>**Vertical button count**: Number of buttons to create vertically<br>**Button size**: The size of each button<br>**Allocation**: Shows you the number of functions currently in the list and the number of buttons that will be created with the current parameters. If you have less buttons than functions, the remaining functions will NOT be allocated to any buttons. On the other hand, if you have more buttons than functions, some buttons are not assigned a function, leaving them empty. |
 | **Frame** | **Normal**: Place the buttons inside a [Normal Frame](frame)<br>**Solo**: Place the buttons inside a [Solo Frame](solo-frame) |
