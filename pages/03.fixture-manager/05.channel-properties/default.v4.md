@@ -1,6 +1,7 @@
 ---
 title: 'Channel Properties'
 date: '11:32 21-08-2023'
+media_order: channelmodifier.png
 ---
 
 This window displays a tree with items nested in a Universes/Fixtures/Channels structure.  
@@ -24,7 +25,7 @@ Channel Modifier Editor
 -----------------------
 
 The channel modifier editor is presented like this:  
-![](../images/channelmodifier.png)  
+![](channelmodifier.png)  
   
 On the right side of the window, a list of available modifier templates is displayed.  
 Clicking on a template in the list, will show the curve preview on the left side of the window.  
