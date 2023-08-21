@@ -52,8 +52,8 @@ The menu bar on the top of the workspace window contains the following buttons (
 
 * * *
 
-![](../basics/add_dump.png)[DMX Dump](dmxdump.html) (CTRL+D)  
-![](../basics/liveedit.png) Live Edit: allows you to modify a function while QLC+ is in Operate Mode  
+![](../basics/add_dump.png)[DMX Dump](dmx-dump) (CTRL+D)  
+![](../basics/liveedit.png)[live-edit] Live Edit: allows you to modify a function while QLC+ is in Operate Mode  
 ![](../basics/liveedit_vc.png) Live Edit Virtual Console: allows you to modify the Virtual Console while QLC+ is in Operate Mode. Click to Toggle  
 ![](../basics/panic.png) Stop All Functions (CTRL+Shift+ESC)  
 ![](../basics/blackout.png) Toggle Blackout  
