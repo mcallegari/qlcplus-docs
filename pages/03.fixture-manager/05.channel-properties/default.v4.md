@@ -24,7 +24,8 @@ This can save you quite a lot of time when setting up your projects for the firs
 Channel Modifier Editor
 -----------------------
 
-The channel modifier editor is presented like this:  
+The channel modifier editor is presented like this:
+
 ![](channelmodifier.png)  
   
 On the right side of the window, a list of available modifier templates is displayed.  
