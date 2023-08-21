@@ -37,7 +37,7 @@ When clicking on a handler this gets clearer as the fields above the curve previ
 Handlers can be simply moved with the mouse by dragging them around or by manually changing the values of the original or modified DMX values.  
   
 To create a new template just select an existing template, give it a new name and add/remove handlers as needed with the ![](/basics/edit_add.png) and ![](/basics/edit_remove.png) buttons.  
-When done, just click the ![](/basics/filesave.png) button and your template will be saved in your user templates folder. Please refer to the [Questions and Answers](questionsandanswers.html) page to locate this folder.
+When done, just click the ![](/basics/filesave.png) button and your template will be saved in your user templates folder. Please refer to the [Questions and Answers](/basics/questions-and-answers) page to locate this folder.
 
 Channel Modifier Templates
 --------------------------
