@@ -8,7 +8,7 @@ Q Light Controller Plus (QLC+ for short) is meant to control lighting equipment 
 This page has been arranged in alphabetical order to facilitate searching for a specific topic.
 
 ### Audio
-<img style="float: left; padding: 0 20 0 0" src="../audio.png">
+<img style="float: left; padding: 0 20px 0 0;" src="../audio.png">
 An audio [function](#functions) is an object representing an audio file stored in a disk.  
 QLC+ supports the most common audio formats like Wave, MP3, M4A, Ogg and Flac. It supports mono or stereo channels and several sample rates like 44.1KHz, 48KHz, etc...  
 Audio functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](showmanager.html) panel.  
