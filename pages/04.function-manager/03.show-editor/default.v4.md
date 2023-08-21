@@ -3,7 +3,7 @@ title: 'Show Editor'
 date: '12:10 21-08-2023'
 ---
 
-The Show Editor is a panel to display the current structure of a ![](qrc:/show.png) [Show](/basics/glossary-and-concepts#show) created with the [Show Manager](/show-manager).  
+The Show Editor is a panel to display the current structure of a ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show) created with the [Show Manager](/show-manager).  
 At the moment the Show Editor can only rename a Show, which is not possible in the Show Manager.  
   
 The tree view of this panel shows useful information regarding the displayed Show such as:
