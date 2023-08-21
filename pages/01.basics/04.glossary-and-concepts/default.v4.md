@@ -3,12 +3,6 @@ title: 'Glossary and Concepts'
 date: '07:32 21-08-2023'
 ---
 
-<style>
-    #body img {
-        margin: -5px 5px;
-        display: inline-block;
-    }
-</style>
 Q Light Controller Plus (QLC+ for short) is meant to control lighting equipment used in various performances, like live concerts and theatres etc. The main intention is that QLC+ will be able to outperform commercial lighting desks without the need for a 500+ page manual through the use of an intuitive and flexible user interface.
 
 This page has been arranged in alphabetical order to facilitate searching for a specific topic.
