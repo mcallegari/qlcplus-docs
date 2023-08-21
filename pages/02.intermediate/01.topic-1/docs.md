@@ -9,6 +9,7 @@ process:
 media_order: pan-tilt.png
 ---
 
+
 The DMX Monitor is a useful tool to track the values that are being sent to the output universes. Only the information related to the required fixtures are displayed. The monitor's display options have no effect on actual fixture addressing, after all, it is just a **monitor**.  
 The DMX monitor has two display modes: **DMX view** and **2D view**.
 
