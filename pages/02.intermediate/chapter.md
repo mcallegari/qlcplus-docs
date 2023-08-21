@@ -3,6 +3,7 @@ title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
+media_order: mainwindow.png
 ---
 
 ### Chapter 2
