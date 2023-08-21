@@ -30,33 +30,15 @@ The DMX view shows the all the fixtures of the project, representing each channe
 
 ### Toolbar controls
 
-**2D View**
-
-By clicking on this button, it is possible to switch to the 2D view mode.
-
-![](/basics/fonts.png)
-
-Change the monitor font. To prevent the numbers from flickering and jumping, you should choose a proportional (i.e. fixed width) font; for example Monaco, Andale or Courier. The font property is global, meaning it will not be saved into your current project, but it will be stored in the QLC+ main configuration.
-
-**DMX Channels**
-
-Display fixtures' channel numbers as absolute DMX channels; channel numbers go from 1 to 512 as they are assigned to each fixture.
-
-**Relative Channels**
-
-Display fixtures' channel numbers relative to fixtures i.e. every fixture's channel numbers always start from 1.
-
-**DMX Values**
-
-Display channel values as absolute DMX values (0-255).
-
-**Percent Values**
-
-Display channel values as percentages of 255 (0-100%).
-
-**Universe**
-
-Select which universe to monitor. The first entry is always "All universes"
+| | |
+| - | - |
+| **2D View**| By clicking on this button, it is possible to switch to the 2D view mode. |
+| ![](/basics/fonts.png) | Change the monitor font. To prevent the numbers from flickering and jumping, you should choose a proportional (i.e. fixed width) font; for example Monaco, Andale or Courier. The font property is global, meaning it will not be saved into your current project, but it will be stored in the QLC+ main configuration. |
+| **DMX Channels** | Display fixtures' channel numbers as absolute DMX channels; channel numbers go from 1 to 512 as they are assigned to each fixture. |
+| **Relative Channels** | Display fixtures' channel numbers relative to fixtures i.e. every fixture's channel numbers always start from 1. |
+| **DMX Values** | Display channel values as absolute DMX values (0-255). |
+| **Percent Values** | Display channel values as percentages of 255 (0-100%). |
+| **Universe** | Select which universe to monitor. The first entry is always "All universes" |
 
 2D view
 -------
