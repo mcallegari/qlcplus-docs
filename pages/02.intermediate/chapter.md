@@ -11,6 +11,9 @@ media_order: mainwindow.png
         margin: -5px 5px;
         display: inline-block;
     }
+    #chapter p {
+        text-align: left;
+    }
 </style>
 
 ### Chapter 2
