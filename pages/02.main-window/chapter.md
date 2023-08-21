@@ -7,10 +7,6 @@ media_order: mainwindow.png
 ---
 
 <style>
-    #body img {
-        margin: -5px 5px;
-        display: inline-block;
-    }
     #chapter p {
         text-align: left;
     }
