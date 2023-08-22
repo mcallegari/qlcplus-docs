@@ -43,7 +43,7 @@ However, a script with nothing more than an empty object does nothing, no matter
 * **apiVersion:** The API version that the script follows. Currently, the accepted values are '1' or '2'.  
     apiVersion 1 allows simple scripting and easier coding, while apiVersion 2 offers advanced features [described below](#apiv2).  
     Any other value will cause the script to be treated as invalid.
-* **name:** The name of your script. This name appears in the pattern selection box in the [RGB Matrix Editor](rgbmatrixeditor.html)
+* **name:** The name of your script. This name appears in the pattern selection box in the [RGB Matrix Editor](../rgb-matrix-editor)
 * **author:** The name of the person who has written the script. **You.**
 * **acceptColors (optional):** Informs QLC+ if the script can accept a start color, an end color or none.  
     'acceptColors = 0' means no colors are accepted/needed. It means that the script will autonomously generate the colors information for the matrix pixels.  
@@ -69,7 +69,7 @@ With this in mind we add declarations for these three properties to the script:
 Functions
 ---------
 
-Now we are getting to the actual business of producing data for the [RGB Matrix](concept.html#RGBMatrix). The current API version uses two functions to achieve this:
+Now we are getting to the actual business of producing data for the [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix). The current API version uses two functions to achieve this:
 
 * rgbMapStepCount(width, height)
 * rgbMap(width, height, rgb, step)
@@ -108,7 +108,7 @@ So, now we add this support function to the script:
 
 ### rgbMap(width, height, rgb, step)
 
-This function is the actual brains of the script. It produces two-dimensional arrays whose size MUST be **height** times **width**. I.e. the array returned from this function must contain **height** items and each of these items must be an array that contains **width** items that must be 32bit integers, representing an RGB color as understood by [QRgb](https://doc.qt.io/qt-5/qcolor.html#QRgb-typedef) without alpha channel (0x00RRGGBB). The **rgb** parameter is an integer-representation of the color selected by user in the [RGB Matrix Editor](rgbmatrixeditor.html). The **step** parameter tells the step number requested by the RGB Matrix function and is guaranteed to be within (0, rgbMapStepCount(w, h) - 1).
+This function is the actual brains of the script. It produces two-dimensional arrays whose size MUST be **height** times **width**. I.e. the array returned from this function must contain **height** items and each of these items must be an array that contains **width** items that must be 32bit integers, representing an RGB color as understood by [QRgb](https://doc.qt.io/qt-5/qcolor.html#QRgb-typedef) without alpha channel (0x00RRGGBB). The **rgb** parameter is an integer-representation of the color selected by user in the [RGB Matrix Editor](../rgb-matrix-editor). The **step** parameter tells the step number requested by the RGB Matrix function and is guaranteed to be within (0, rgbMapStepCount(w, h) - 1).
 
 **Parameters:**
 
