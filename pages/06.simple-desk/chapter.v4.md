@@ -67,4 +67,4 @@ The cue stack box shows the contents of the currently selected playback.
 Tuning
 ------
 
-Please refer to the [Manual parameters tuning](parameterstuning.html#SimpleDesk) Simple Desk section
+Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#1-simple-desk) Simple Desk section
