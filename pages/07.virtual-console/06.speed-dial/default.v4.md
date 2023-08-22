@@ -1,6 +1,7 @@
 ---
 title: 'Speed Dial'
 date: '03:18 22-08-2023'
+media_order: speeddial.png
 ---
 
 Speed dials are meant for adjusting the speed of a set of functions from virtual console, much like bus-mode sliders in the previous versions of QLC+. While the bus concept relied on assigning functions and a slider to the same bus, the speed dial's method is a simpler and more straightforward one: The user directly selects a set of functions whose speed properties are controlled with the dial, thus removing the need for buses in the middle.
