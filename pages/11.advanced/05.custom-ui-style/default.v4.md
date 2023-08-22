@@ -27,23 +27,23 @@ QLC+ dark blue style example
 
 Just to give you an example of how easy this process is, here's a blue-ish dark style for QLC+.  
 If you copy the following lines into `qlcplusStyle.qss` in the right location as explained above, you will see it immediately applied to QLC+.
-```cpp
+```css
 QMainWindow, QDialog
 {
- background-color: #404B57;
- color: #E6E6E6;
+    background-color: #404B57;
+    color: #E6E6E6;
 }
 
 QTreeWidget
 {
- background-color: #3A444F;
- alternate-background-color: #404B57;
- color: #E6E6E6;
+    background-color: #3A444F;
+    alternate-background-color: #404B57;
+    color: #E6E6E6;
 }
 
 QTextBrowser
 {
- background-color: #3A444F;
- color: #E6E6E6;
+    background-color: #3A444F;
+    color: #E6E6E6;
 }
 ```
