@@ -13,6 +13,6 @@ The first entry of the list is always **"Default device"**, and it is selected a
 The default device is the one that you currently use to listen to music or to record audio with a microphone.  
   
 If in your system there are additional audio cards (PCI or USB), it is possible to select them in this panel as the preferred QLC+ input or output device.  
-Basically an input device is used by [Virtual Console Audio Triggers](../virtual-console/audio-triggers) while an output device is used by [audio functions](/basics/glossary-and-concepts#audio).  
+Basically an input device is used by [Virtual Console Audio Triggers](/virtual-console/audio-triggers) while an output device is used by [audio functions](/basics/glossary-and-concepts#audio).  
   
 The selection of an audio input/output line should take immediate effect in QLC+. If not you are invited to restart QLC+ to allow a complete initialization of the internal audio engine.
