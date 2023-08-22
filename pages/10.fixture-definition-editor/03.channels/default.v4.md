@@ -22,12 +22,17 @@ The Channel Editor is used to edit individual channels and the DMX value ranges 
 
 Here's a few screenshots showing the possible scenarios that can be encountered while editing a Fixture channel.
 
-|     |     |
-| --- | --- |
-| ![](../images/fixtureeditor_channel_preset.png) | ![](../fixtureeditor_channel_shutter.png) |
-| Fig. 1 | Fig. 2 |
-| ![](../images/fixtureeditor_channel_color.png) | ![](../fixtureeditor_channel_gobo.png) |
-| Fig. 3 | Fig. 4 |
+![](../images/fixtureeditor_channel_preset.png)
+Fig. 1
+
+![](../fixtureeditor_channel_shutter.png)
+Fig. 2
+
+![](../images/fixtureeditor_channel_color.png)
+Fig. 3
+
+![](../fixtureeditor_channel_gobo.png)
+Fig. 4
 
 Following, the description of the settings that appear in the Channel Editor. Reference to the above figures will be done to point you to a visual context.
 
