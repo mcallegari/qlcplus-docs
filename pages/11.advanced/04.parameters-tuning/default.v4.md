@@ -6,7 +6,7 @@ date: '11:41 22-08-2023'
 This section explains how to manually get at and tune some QLC+ parameters not available from the UI.  
 Keep in mind that if you cannot change them from the UI, it means there is a good reason for it.
 
-# Warning: DO NOT edit the configuration files manually unless you know what you're doing. Any misplaced change can cause program crashes or awkward instability.
+> **Warning: DO NOT edit the configuration files manually unless you know what you're doing. Any misplaced change can cause program crashes or awkward instability.**
 
 
 ## QLC+ configuration location
@@ -58,7 +58,7 @@ Linux
 
 Parameters are stored in a plain text file that you can modify with a plain text editor like gedit, kwrite, kate, nano, vim or similar. They are presented as follows:
 
-    \[category\]
+    [category]
     name=value
 
 Windows
@@ -75,10 +75,10 @@ Mac OSX
 
 Parameters are stored in a plain text file that you can modify with a plain text editor like [TextWrangler](https://www.barebones.com/products/textwrangler/) or similar. They are presented as follows:
 
-    `<key>category.name</key>`<br>
-    `<string>value</string>`<br>
+    <key>category.name</key>
+    <string>value</string>
     or
-    `<integer>42</integer>`<br>
+    <integer>42</integer>
 
 ## Parameters list
 <hr>
@@ -87,22 +87,22 @@ Most likely you will not find the following parameters in a standard QLC+ config
 
 ### 1. Simple Desk
 
-**Category:** simpledesk<br>
-**Name:** channelsperpage<br>
+**Category:** `simpledesk`<br>
+**Name:** `channelsperpage`<br>
 **Type:** integer<br>
 **Description:** Set the number of DMX channel sliders displayed per page<br>
 **Default:** 32<br>
 <br>
-**Category:** simpledesk<br>
-**Name:** playbacksperpage<br>
+**Category:** `simpledesk`<br>
+**Name:** `playbacksperpage`<br>
 **Type:** integer<br>
 **Description:** set the number of playback sliders displayed per page<br>
 **Default:** 15<br>
 
 ### 2. DMX USB Enttec Open channels number
 
-**Category:** enttecdmxusbopen<br>
-**Name:** channels<br>
+**Category:** `enttecdmxusbopen`<br>
+**Name:** `channels`<br>
 **Type:** integer<br>
 **Description:** Set the maximum number of DMX channels transmitted by Enttec Open (and similar) devices.<br>
 In some cases this could solve flickering issues. For example you might try with 256.<br>
@@ -110,16 +110,16 @@ In some cases this could solve flickering issues. For example you might try with
 
 ### 3. uDMX frequency
 
-**Category:** udmx<br>
-**Name:** frequency<br>
+**Category:** `udmx`<br>
+**Name:** `frequency`<br>
 **Type:** integer<br>
 **Description:** Set the DMX frame frequency in Hertz for uDMX devices<br>
 **Default:** 30<br>
 
 ### 4. uDMX channels number
 
-**Category:** udmx<br>
-**Name:** channels<br>
+**Category:** `udmx`<br>
+**Name:** `channels`<br>
 **Type:** integer<br>
 **Description:** Set the maximum number of DMX channels transmitted by uDMX devices.<br>
 In some cases this could solve flickering issues. For example you might try with 128.<br>
@@ -127,8 +127,8 @@ In some cases this could solve flickering issues. For example you might try with
 
 ### 5. Master Timer frequency
 
-**Category:** mastertimer<br>
-**Name:** frequency<br>
+**Category:** `mastertimer`<br>
+**Name:** `frequency`<br>
 **Type:** integer<br>
 **Description:** Set the QLC+ core timer frequency in Hertz<br>
 **Default:** 50<br>
