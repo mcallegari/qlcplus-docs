@@ -39,7 +39,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-k or --kiosk**<br><br>**Description:** Enable kiosk-mode (only [virtual console](virtualconsole.html) is visible and the application is locked in [operate mode](/basics/glossary-and-concepts#Modes))<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start the application in kiosk mode:  <br>qlcplus -k  <br>qlcplus --kiosk |
+| **-k or --kiosk**<br><br>**Description:** Enable kiosk-mode (only [virtual console](/virtual-console) is visible and the application is locked in [operate mode](/basics/glossary-and-concepts#modes))<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start the application in kiosk mode:  <br>qlcplus -k  <br>qlcplus --kiosk |
 
 |     |
 | --- |
@@ -59,7 +59,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-p or --operate**<br><br>**Description:** Start the application in [Operate](/basics/glossary-and-concepts#Modes) mode.<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start QLC+ in operate mode:  <br>qlcplus -p  <br>qlcplus --operate |
+| **-p or --operate**<br><br>**Description:** Start the application in [Operate](/basics/glossary-and-concepts#modes) mode.<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start QLC+ in operate mode:  <br>qlcplus -p  <br>qlcplus --operate |
 
 |     |
 | --- |
