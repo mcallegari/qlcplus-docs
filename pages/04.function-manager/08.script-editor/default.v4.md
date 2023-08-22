@@ -27,10 +27,28 @@ The QLC+ Script meta-language is based on a **keyword:value** model, with some i
 Each line of code is parsed by the QLC+ engine and verified to detect the presence of syntax errors.  
 Here's a table describing each keyword accepted by the Script engine and its syntax.
 
-|     |     |
-| --- | --- |
-| startfunction | **Type**: keyword  <br>**Description**: starts a QLC+ Function with the given ID.  <br>**Syntax**: startfunction:functionID  <br>  <br>_functionID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name.  <br>Eventually a user will learn the ID of a Function and therefore use it to manually add more code to the script.  <br>**Example**:<br><br>startfunction:2 // Green scene |
-| stopfunction | **Type**: keyword  <br>**Description**: stops a running QLC+ Function with the given ID.  <br>**Syntax**: stopfunction:functionID  <br>  <br>_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description.  <br>**Example**:<br><br>stopfunction:0 // Blue scene |
+#### startfunction
+**Type**: keyword
+**Description**: starts a QLC+ Function with the given ID
+**Syntax**: startfunction:functionID
+functionID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name.  <br>
+Eventually a user will learn the ID of a Function and therefore use it to manually add more code to the script.
+**Example**:
+```
+startfunction:2 // Green scene
+```
+
+#### stopfunction
+**Type**: keyword
+**Description**: stops a running QLC+ Function with the given ID
+**Syntax**: stopfunction:functionID
+_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description
+**Example**:
+```
+stopfunction:0 // Blue scene |
+```
+
+
 | blackout | **Type**: keyword  <br>**Description**: turns blackout on or off.  <br>**Syntax**: blackout:on\|off  <br>  <br>_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description.  <br>**Examples**:<br><br>blackout:on<br>blackout:off |
 | systemcommand | **Type**: keyword  <br>**Description**: execute a program or a script at the provided absolute path with the (optional) provided arguments.  <br>**Syntax**: systemcommand:programPath arg:arg1 arg:arg2 ... arg:argN  <br>  <br>_programPath_ is the absolute path of an executable program or script. For example "/usr/bin/vlc" or "C:\\Tools\\myTool.exe"  <br>If the path to an executable contains spaces, it must be written between quotes.  <br>_arg1 ... argN_ are the arguments to be used when executing _programPath_. If no arguments are needed, then the arg: keywords are not necessary.  <br>If an argument contans spaces it must be written between quotes.  <br>**Examples**:<br><br>systemcommand:/usr/bin/vlc arg:-f arg:/home/user/video.mp4 // plays my video with VLC in fullscreen<br>systemcommand:"C:\\Program Files\\Tools\\My Tool.exe" arg:"D:\\My Files\\My file.txt" |
 | setfixture | **Type**: keyword  <br>**Description**: sets a QLC+ Fixture channel to the provided DMX value.  <br>**Syntax**: setfixture:fixtureID ch:channelIndex val:DMXValue  <br>  <br>_fixtureID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the fixture and channel name.  <br>Eventually a user will learn the ID of a fixture and the index of a channel and therefore use them to manually add more code to the script.  <br>_channelIndex_ is an integer number representing the fixture channel number. Channels indices here start from 0.  <br>_DMXValue_ is the actual DMX value to be set to the specified fixture channel. It ranges from 0 to 255  <br>**Example**:<br><br>```setfixture:0 ch:1 val:135 // Generic RGB, Red. Sets the red channel of a Generic RGB fixture to DMX value 135``` |
