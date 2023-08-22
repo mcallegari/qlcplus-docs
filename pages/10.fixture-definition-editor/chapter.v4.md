@@ -29,5 +29,10 @@ Main toolbar
 Fixture Editor
 ==============
 
-Fixture Editor windows contain everything needed to edit one Fixture Definition at a time. The windows are separated in five tabs: [**General**](general), [**Physical**](physical), [**Channels**](channels), [**Modes**](modes) and [**Aliases**](aliases).  
+Fixture Editor windows contain everything needed to edit one Fixture Definition at a time. The windows are separated in five tabs: 
+[**General**](general)<br>
+[**Physical**](physical)<br>
+[**Channels**](channels)<br>
+[**Modes**](modes)<br>
+[**Aliases**](aliases)<br>
 Tabs are organized in a logical order that should be followed from left to right when creating a new fixture definition.
