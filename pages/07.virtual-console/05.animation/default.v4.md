@@ -3,7 +3,7 @@ title: Animation
 date: '03:09 22-08-2023'
 ---
 
-An Animation widget is a complete tool to operate with the [RGB Matrices](/basics/glossary-and-concepts#function) of your project.  
+An Animation widget is a complete tool to operate with the [RGB Matrices](/basics/glossary-and-concepts#rgb-matrix) of your project.  
 It displays several graphical elements to fully control a matrix during live shows.  
 Most importantly, it allows you to define a number of so called "custom controls" to quickly recall presets, colors and properties and apply them immediately to a running matrix.
 
