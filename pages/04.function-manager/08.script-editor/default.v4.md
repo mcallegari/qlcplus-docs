@@ -77,10 +77,10 @@ If the path to an executable contains spaces, it must be written between quotes.
 _arg1 ... argN_ are the arguments to be used when executing _programPath_. If no arguments are needed, then the arg: keywords are not necessary.  <br>
 If an argument contans spaces it must be written between quotes.<br>
 **Examples**:
-```
+`
 systemcommand:/usr/bin/vlc arg:-f arg:/home/user/video.mp4 // plays my video with VLC in fullscreen
 systemcommand:"C:\\Program Files\\Tools\\My Tool.exe" arg:"D:\\My Files\\My file.txt"
-```
+`
 
 #### setfixture
 **Type**: keyword  <br>
