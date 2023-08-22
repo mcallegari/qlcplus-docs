@@ -4,21 +4,6 @@ Put your custom CSS in this file.
 ===============================================================================================================================
 */
 
-/* CSS to hide sidebar numbering (uncomment to enable) */
-/*
-#sidebar ul.topics > li > a b
-{
-    visibility: hidden;
-}
-*/
-
-/* CSS to hide clipboard icon (uncomment to enable) */
-/*
-.copy-to-clipboard {
-    display:none;
-}
-*/
-
 /* Load of Font Awesome for use by Presentation Plugin */
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
 
@@ -39,4 +24,12 @@ Put your custom CSS in this file.
 
 #header {
     background: #364E5E;
+}
+
+.version-chooser select {
+    color: #fff;
+    background: transparent;
+    border-radius: 0.1875rem;
+    height: 30px;
+    padding: 0 25px;
 }
