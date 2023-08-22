@@ -98,7 +98,7 @@ So, now we add this support function to the script:
 
         algo.rgbMapStepCount = function(width, height) {
             ...
-            return number\_of\_steps\_when\_width\_is\_oranges\_and\_height\_is\_jabberwocky;
+            return number_of_steps_when_width_is_oranges_and_height_is_jabberwocky;
         }
 
         return algo;
@@ -130,12 +130,12 @@ Just like the previous function, we also add this other one to the script. Now w
 
         algo.rgbMapStepCount = function(width, height) {
             ...
-            return number\_of\_steps\_when\_width\_is\_oranges\_and\_height\_is\_jabberwock;
+            return number_of_steps_when_width_is_oranges_and_height_is_jabberwocky;
         }
 
         algo.rgbMap = function(width, height, rgb, step) {
             ...
-            return a\_2d\_array\_of\_arrays;
+            return a_2d_array_of_arrays;
         }
 
         return algo;
