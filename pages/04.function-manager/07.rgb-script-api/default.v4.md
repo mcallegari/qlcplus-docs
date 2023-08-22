@@ -18,7 +18,7 @@ Script files should be named after the script's name and must have a **.js** ext
 * **Windows user dir:** %HOMEPATH%\\QLC+\\RGBScripts
 * **Windows system dir:** C:\\QLC+\\RGBScripts
 
-RGB Script API
+RGB Script Syntax
 ==============
 
 Foundation
