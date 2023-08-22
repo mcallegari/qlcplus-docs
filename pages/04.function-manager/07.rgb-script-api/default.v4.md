@@ -27,12 +27,12 @@ Foundation
 The scripts must be self-executing, i.e. when they are evaluated, the script itself is put inside an anonymous function that executes itself and returns an object that contains the required API functions:
 
 ```
-    (
+(
     function() { // Anonymous function starts here
         var algo = new Object;
         return algo; // Return the script object
     } // Anonymous function ends here
-    )() // Anonymous function is executed here upon evaluation
+)() // Anonymous function is executed here upon evaluation
 ```
 
 Properties
@@ -54,7 +54,7 @@ However, a script with nothing more than an empty object does nothing, no matter
 With this in mind we add declarations for these three properties to the script:
 
 ```
-    (
+(
     function() {
         var algo = new Object;
         algo.apiVersion = 2; // Can be '1' or '2'
@@ -63,7 +63,7 @@ With this in mind we add declarations for these three properties to the script:
         algo.acceptColors = 2; // Can be '0', '1' or '2'
         return algo;
     }
-    )()
+)()
 ```
 
 Functions
@@ -89,7 +89,7 @@ When QLC+ calls this function, it wants to know the number of different RGB maps
 So, now we add this support function to the script:
 
 ```
-    (
+(
     function() {
         var algo = new Object;
         algo.apiVersion = 1;
@@ -103,7 +103,7 @@ So, now we add this support function to the script:
 
         return algo;
     }
-    )()
+)()
 ```
 
 ### rgbMap(width, height, rgb, step)
@@ -121,7 +121,7 @@ This function is the actual brains of the script. It produces two-dimensional ar
 Just like the previous function, we also add this other one to the script. Now we have a full and ready template for any RGB script for your indulgence.
 
 ```
-    (
+(
     function() {
         var algo = new Object;
         algo.apiVersion = 1;
@@ -140,7 +140,7 @@ Just like the previous function, we also add this other one to the script. Now w
 
         return algo;
     }
-    )()
+)()
 ```
 
 API version 2
