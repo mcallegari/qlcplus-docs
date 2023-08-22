@@ -6,7 +6,7 @@ date: '05:06 22-08-2023'
 Introduction
 ------------
 
-QLC+ supports the [Art-Net protocol](https://en.wikipedia.org/wiki/ArtNet) through an input/output plugin that receives and transmits packets on the network.  
+QLC+ supports the [Art-Net protocol](https://en.wikipedia.org/wiki/Art-Net) through an input/output plugin that receives and transmits packets on the network.  
 No extra requirements are needed, since QLC+ has a native implementation of the Art-Net protocol that works on Linux, Windows and macOS systems.  
 The Art-Net plugin can send and receive packets from multiple network cards, virtual addresses, the loopback device (127.0.0.1) and multiple universes per network interface.  
 By default, Art-Net packets are transmitted as UDP, using the default port 6454 and the broadcast address of the selected inteface (e.g. 192.168.0.255). When using the loopback device packets are always transmitted using address 127.0.0.1.  
