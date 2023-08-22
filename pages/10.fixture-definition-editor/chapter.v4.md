@@ -3,6 +3,7 @@ title: 'Fixture Definition Editor'
 date: '05:24 22-08-2023'
 taxonomy:
     category: docs
+media_order: 'fixtureeditor_physical.png,fixtureeditor_aliases.png,fixtureeditor_channel_color.png,fixtureeditor_channel_gobo.png,fixtureeditor_channel_preset.png,fixtureeditor_channel_shutter.png,fixtureeditor_channel_wizard.png,fixtureeditor_channels.png,fixtureeditor_general.png,fixtureeditor_mode_channels.png,fixtureeditor_mode_edit_head.png,fixtureeditor_mode_heads.png'
 ---
 
 ### Chapter 10
