@@ -28,8 +28,10 @@ It is displayed as following:
 ### Limiting the working area
 
 The XY Pad is basically a map of the whole range of degrees that the pan and tilt channels of your fixtures can manage.  
-Here's a picture representing how the main area normally represents degrees:  
+Here's a picture representing how the main area normally represents degrees:
+
 ![](xypad2.png)  
+
 There are cases though where you want to limit the degrees a moving head or a scanner could reach.  
 For example fixtures with a 540° Pan range, should be limited to work only in a range facing the audience, or you might want to avoid that moving heads mounted upside down on a truss will point to the ceiling or outside the stage.  
 With the XY Pad, there are 2 ways to achieve this:
@@ -109,7 +111,7 @@ Here you can add/remove the fixtures that the XY Pad will control in usage #1.
 
 |     |     |
 | --- | --- |
-| **Fixtures list** | Shows the fixtures that are currently controlled by the XY Pad.<br><br>* **Fixture**: The names of each fixture<br>* **X-Axis**: Shows the value range (and reversal if applicable) of the horizontal (Pan) axis for each fixture<br>* **Y-Axis**: Shows the value range (and reversal if applicable) of the vertical (Tilt) axis for each fixture |
+| **Fixtures list** | Shows the fixtures that are currently controlled by the XY Pad.<br><br>**Fixture**: The names of each fixture<br>**X-Axis**: Shows the value range (and reversal if applicable) of the horizontal (Pan) axis for each fixture<br>**Y-Axis**: Shows the value range (and reversal if applicable) of the vertical (Tilt) axis for each fixture |
 | ![](/basics/edit_add.png) | Add [Fixtures](/basics/glossary-and-concepts#fixture) to be controlled by the XY Pad, using the [Select Fixture](../function-manager/select-fixture) dialog.  <br>**NOTE**: Only those fixtures that have Pan and Tilt channels are shown in the dialog. |
 | ![](/basics/edit_remove.png) | Remove the selected fixtures from the XY Pad's control list. |
 | ![](/basics/edit.png) | Edit the selected fixture's behaviour as controlled by the XY Pad. |
@@ -121,8 +123,8 @@ You can change the extent of movement and reverse fixtures' movement with the XY
 
 |     |     |
 | --- | --- |
-| **Horizontal X-Axis** | * **Minimum**: Set the minimum pan limit for the fixture<br>* **Maximum**: Set the maximum pan limit for the fixture<br>* **Reverse**: Reverse fixture's movement on the horizontal (pan) axis |
-| **Vertical Y-Axis** | * **Minimum**: Set the minimum tilt limit for the fixture<br>* **Maximum**: Set the maximum tilt limit for the fixture<br>* **Reverse**: Reverse fixture's movement on the vertical (tilt) axis |
+| **Horizontal X-Axis** | **Minimum**: Set the minimum pan limit for the fixture<br>**Maximum**: Set the maximum pan limit for the fixture<br>**Reverse**: Reverse fixture's movement on the horizontal (pan) axis |
+| **Vertical Y-Axis** | **Minimum**: Set the minimum tilt limit for the fixture<br>**Maximum**: Set the maximum tilt limit for the fixture<br>**Reverse**: Reverse fixture's movement on the vertical (tilt) axis |
 
   
 **3\. Presets tab**
