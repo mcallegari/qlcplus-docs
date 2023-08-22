@@ -77,4 +77,4 @@ Just move a fader/knob on your external device, and if everything works fine, yo
 If your input device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as Behringer BCF2000 support this feature.  
 At the moment feedbacks are supported only through MIDI, OSC and loopback.
 
-To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [howto for input profiles](../input-profiles).
+To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [howto for input profiles](input-profiles).
