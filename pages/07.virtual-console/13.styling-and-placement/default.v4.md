@@ -5,7 +5,7 @@ date: '03:53 22-08-2023'
 
 The colors, font, frame style, stacking order, size and placement of widgets can be changed to better suit your vision of the perfect lighting console. Most of these options, except for moving and resizing, are available in the Virtual Console **Edit** menu, that is, they can be accessed from the menu bar as well as from a popup menu by right clicking a widget you wish to adjust.
 
-**NOTE:** The Virtual Console widgets' styling and placement options are available only when the application is in [Design Mode](concept.html#Modes).
+**NOTE:** The Virtual Console widgets' styling and placement options are available only when the application is in [Design Mode](/basics/glossary-and-concepts#modes).
 
 ### Moving Widgets
 
@@ -15,7 +15,7 @@ To move a widget from one frame to another frame, you need to move the widget th
 
 ### Resizing Widgets
 
-Each widget has a special resize handle ![](qrc:/resize.png) on their lower right hand corner that you can grab and then resize the widget as appropriate simply by dragging the handle.
+Each widget has a special resize handle ![](/basics/resize.png) on their lower right hand corner that you can grab and then resize the widget as appropriate simply by dragging the handle.
 
 ### Widget Background
 
