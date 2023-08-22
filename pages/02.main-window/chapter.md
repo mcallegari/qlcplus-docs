@@ -72,8 +72,8 @@ By double clicking on a tab, **a context can be detached on a separate window**.
 QLC+ contexts appear in the following order (from left to right):
 
 ![](../basics/fixture.png) View the [Fixture Manager](/fixture-manager)  
-![](../basics/function.png) View the [Function Manager](functionmanager.html)  
-![](../basics/show.png) View the [Show Manager](showmanager.html)  
-![](../basics/virtualconsole.png) View the [Virtual Console](virtualconsole.html)  
-![](../basics/slidermatrix.png) View the [Simple Desk](simpledesk.html)  
-![](../basics/input_output.png) View the [Input/Output](howto-input-output-mapping.html) configuration manager
+![](../basics/function.png) View the [Function Manager](/function-manager)  
+![](../basics/show.png) View the [Show Manager](/show-manager)  
+![](../basics/virtualconsole.png) View the [Virtual Console](/virtual-console)  
+![](../basics/slidermatrix.png) View the [Simple Desk](/simple-desk)  
+![](../basics/input_output.png) View the [Input/Output](/input-output) configuration manager
