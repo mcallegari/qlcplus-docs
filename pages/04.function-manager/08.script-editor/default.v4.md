@@ -77,10 +77,10 @@ If the path to an executable contains spaces, it must be written between quotes.
 _arg1 ... argN_ are the arguments to be used when executing _programPath_. If no arguments are needed, then the arg: keywords are not necessary.  <br>
 If an argument contans spaces it must be written between quotes.<br>
 **Examples**:
-`
+```
 systemcommand:/usr/bin/vlc arg:-f arg:/home/user/video.mp4 // plays my video with VLC in fullscreen
 systemcommand:"C:\\Program Files\\Tools\\My Tool.exe" arg:"D:\\My Files\\My file.txt"
-`
+```
 
 #### setfixture
 **Type**: keyword  <br>
@@ -98,9 +98,39 @@ _DMXValue_ is the actual DMX value to be set to the specified fixture channel. I
 setfixture:0 ch:1 val:135 // Generic RGB, Red. Sets the red channel of a Generic RGB fixture to DMX value 135
 ```
 
+#### wait
+**Type**: keyword  <br>
+**Description**: wait for the provided amount of time before executing the next line of code.  <br>Note that a wait time can be randomized too, following the _random_ syntax described below.  <br>
+**Syntax**: 
+```
+wait:time
+```
+_time_ can be either an integer number of milliseconds or a string representing the wait time in the QLC+ way: \*\*h\*\*m\*\*s.\*\*  <br>
+**Examples**:
+```
+wait:1800 // Waits for 1 second and 800 milliseconds
+wait:03s.20 // Waits for 3 seconds and 200 milliseconds
+```
 
-| wait | **Type**: keyword  <br>**Description**: wait for the provided amount of time before executing the next line of code.  <br>Note that a wait time can be randomized too, following the _random_ syntax described below.  <br>**Syntax**: wait:time  <br>  <br>_time_ can be either an integer number of milliseconds or a string representing the wait time in the QLC+ way: \*\*h\*\*m\*\*s.\*\*  <br>**Examples**:<br><br>```wait:1800 // Waits for 1 second and 800 milliseconds<br>wait:03s.20 // Waits for 3 seconds and 200 milliseconds``` |
-| comments | **Type**: Helper macro  <br>**Description**: comments can be inserted at any position in the script code and they do not affect the script execution. They are normally used to give a meaning to a line of code.  <br>QLC+ Scripts comment follow the C Language style rule of the "//" syntax. Basically everything written after "//" will be considered a comment until the end of the line of code.  <br>So pay a particular attention to not writing meaningful code after a "//" and expect it to be run, cause it won't.  <br>Comments can be added at the end of a Script line of code or they can take a whole line, for example to describe an entire block of code. |
-| random | **Type**: Helper macro  <br>**Description**: generates a random integer number between the provided minimum and maximum values  <br>**Syntax**: random(min,max)  <br>  <br>_min_ is the minimum value the randomization can reach. It can be either an integer number or a time string  <br>_max_ is the maximum value the randomization can reach. It can be either an integer number or a time string  <br>**Examples**:<br><br>```wait:random(02s.00,05s.00) // Waits a random time between 2 and 5 seconds 
+#### comments
+**Type**: Helper macro  <br>
+**Description**: comments can be inserted at any position in the script code and they do not affect the script execution. They are normally used to give a meaning to a line of code.  <br>
+QLC+ Scripts comment follow the C Language style rule of the "//" syntax. Basically everything written after "//" will be considered a comment until the end of the line of code.  <br>
+So pay a particular attention to not writing meaningful code after a "//" and expect it to be run, cause it won't.  <br>
+Comments can be added at the end of a Script line of code or they can take a whole line, for example to describe an entire block of code.
+
+#### random
+**Type**: Helper macro  <br>
+**Description**: generates a random integer number between the provided minimum and maximum values  <br>
+**Syntax**: 
+```
+random(min,max)
+```
+_min_ is the minimum value the randomization can reach. It can be either an integer number or a time string  <br>
+_max_ is the maximum value the randomization can reach. It can be either an integer number or a time string  <br>
+**Examples**:
+```
+wait:random(02s.00,05s.00) // Waits a random time between 2 and 5 seconds 
 // set channel 3 of fixture with ID:1 to a random DMX value between 20 and 235
-setfixture:1 ch:2 val:random(20,235)``` |
+setfixture:1 ch:2 val:random(20,235)
+```
