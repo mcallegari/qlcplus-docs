@@ -42,9 +42,9 @@ You can select one or more functions. Those functions are started when volume go
 
 You can select only **ONE** widget here, either a button, a slider or a speed dial. Depending on the type:
 
-**Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
-**Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
-**Speed dial** is tapped.
-**Cue List** "Next Cue" is pressed.
+* **Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
+* **Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
+* **Speed dial** is tapped.
+* **Cue List** "Next Cue" is pressed.
 
 For **Speed dials** and **Cue Lists**, the tap/button press happens when the volume goes above the Enable threshold, and won't happen again until the volume falls below the Disable threshold. This probably means you will have to set the thresholds a little closer to each other than for buttons.
