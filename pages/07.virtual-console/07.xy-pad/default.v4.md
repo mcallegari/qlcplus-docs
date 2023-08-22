@@ -1,6 +1,7 @@
 ---
 title: 'XY Pad'
 date: '03:22 22-08-2023'
+media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 ---
 
 XY Pad is a Virtual Console widget dedicated to fixtures positioning.  
@@ -59,12 +60,12 @@ The XY Pad allows 3 completely different usages, but all targeted to positioning
     It is also possible to define some position presets, so a number of buttons will be displayed in **(9)** to quickly recall an absolute position.  
     If a Fixture Group preset is activated, the XY Pad will control the absolute positions only of the Fixtures defined in the preset. (see Presets tab for more info)
   
-* **2- EFX**: In the Configuration window (Presets tab), it is possible to add some presets to recall existing ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#EFX) functions. When activating a EFX preset, the animated preview of the fixtures movements will be displayed like this:  
+* **2- EFX**: In the Configuration window (Presets tab), it is possible to add some presets to recall existing ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) functions. When activating a EFX preset, the animated preview of the fixtures movements will be displayed like this:  
     ![](xypad-efx.png)  
-    If no working window is set, the EFX will be be displayed exactly like it is previewed in the [EFX Editor](efxeditor.html). Otherwise, the EFX will be scaled to fit the defined working window.  
+    If no working window is set, the EFX will be be displayed exactly like it is previewed in the [EFX Editor](../function-manager/efx-editor). Otherwise, the EFX will be scaled to fit the defined working window.  
     If a working window is active, it will be shared between usage #1 and usage #2.
   
-* **3- Relative to a Scene**: In the Configuration window (Presets tab), it is also possible to add some presets to recall existing ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#Scene) functions  
+* **3- Relative to a Scene**: In the Configuration window (Presets tab), it is also possible to add some presets to recall existing ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) functions  
     XY Pad will detect which Pan/Tilt channels are present in the Scene and set them.  
     The Pad handle **(6)** will automatically position itself to the center of the main area **(8)**. Moving the handle, will produce relative values from the center of the Pad, that will be added/subtracted to the DMX values of the running Scene.  
     Moving up will add a negative offset to Tilt channels and moving down will add a positive offset.  
@@ -109,7 +110,7 @@ Here you can add/remove the fixtures that the XY Pad will control in usage #1.
 |     |     |
 | --- | --- |
 | **Fixtures list** | Shows the fixtures that are currently controlled by the XY Pad.<br><br>* **Fixture**: The names of each fixture<br>* **X-Axis**: Shows the value range (and reversal if applicable) of the horizontal (Pan) axis for each fixture<br>* **Y-Axis**: Shows the value range (and reversal if applicable) of the vertical (Tilt) axis for each fixture |
-| ![](/basics/edit_add.png) | Add [Fixtures](/basics/glossary-and-concepts#Fixture) to be controlled by the XY Pad, using the [Select Fixture](selectfixture.html) dialog.  <br>**NOTE**: Only those fixtures that have Pan and Tilt channels are shown in the dialog. |
+| ![](/basics/edit_add.png) | Add [Fixtures](/basics/glossary-and-concepts#fixture) to be controlled by the XY Pad, using the [Select Fixture](../function-manager/select-fixture) dialog.  <br>**NOTE**: Only those fixtures that have Pan and Tilt channels are shown in the dialog. |
 | ![](/basics/edit_remove.png) | Remove the selected fixtures from the XY Pad's control list. |
 | ![](/basics/edit.png) | Edit the selected fixture's behaviour as controlled by the XY Pad. |
 
@@ -132,9 +133,9 @@ Here you can add/remove presets to the XY Pad. Each preset is displayed as a but
 | --- | --- |
 | **Presets list** | Show the list of the presets currently added to the XY Pad |
 | ![](/basics/xypad.png) Add position | When clicking on this button, a new position preset is created and added to the XY Pad. By default the preset name are the X/Y coordinates at the moment of the creation |
-| ![](/basics/efx.png) Add EFX | When clicking on this button, the [Select Function](selectfunction.html) dialog is displayed, allowing you to choose an existing EFX from your workspace.  <br>When done, a new EFX preset is created and added to the XY Pad. By default the preset name is the EFX name |
-| ![](/basics/scene.png) Add Scene | When clicking on this button, the [Select Function](selectfunction.html) dialog is displayed, allowing you to choose an existing Scene from your workspace.  <br>When done, a new Scene preset is created and added to the XY Pad. By default the preset name is the Scene name.  <br>Note that if the selected Scene doesn't have any Pan or Tilt channels, an error is displayed and no preset is created. |
-| ![](/basics/group.png) Add Fixture Group | When clicking on this button, the [Select Fixture](selectfixture.html) dialog is displayed, allowing you to create a group of Fixtures as a subgroup of the Fixtures the XY Pad is controlling (defined in the Fixtures tab)  <br>When clicking on a Fixture Group preset in Operate mode, the XY Pad will control only the Fixture positions of the activated Fixture Group.  <br>**Note**: A Fixture Group preset has no effect on EFX and Scene presets. |
+| ![](/basics/efx.png) Add EFX | When clicking on this button, the [Select Function](../function-manager/select-function) dialog is displayed, allowing you to choose an existing EFX from your workspace.  <br>When done, a new EFX preset is created and added to the XY Pad. By default the preset name is the EFX name |
+| ![](/basics/scene.png) Add Scene | When clicking on this button, the [Select Function](../function-manager/select-function) dialog is displayed, allowing you to choose an existing Scene from your workspace.  <br>When done, a new Scene preset is created and added to the XY Pad. By default the preset name is the Scene name.  <br>Note that if the selected Scene doesn't have any Pan or Tilt channels, an error is displayed and no preset is created. |
+| ![](/basics/group.png) Add Fixture Group | When clicking on this button, the [Select Fixture](../function-manager/select-fixture) dialog is displayed, allowing you to create a group of Fixtures as a subgroup of the Fixtures the XY Pad is controlling (defined in the Fixtures tab)  <br>When clicking on a Fixture Group preset in Operate mode, the XY Pad will control only the Fixture positions of the activated Fixture Group.  <br>**Note**: A Fixture Group preset has no effect on EFX and Scene presets. |
 | ![](/basics/edit_remove.png) Remove | Removes the currently selected preset |
 | Preset name | Allows to enter an arbitrary name for the currently selected preset |
 | External input | Allows to select an external input control for the currently selected preset |
