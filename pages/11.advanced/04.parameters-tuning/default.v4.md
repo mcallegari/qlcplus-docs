@@ -9,7 +9,7 @@ Keep in mind that if you cannot change them from the UI, it means there is a goo
 Warning: DO NOT edit the configuration files manually unless you know what you're doing. Any misplaced change can cause program crashes or awkward instability.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-QLC+ configuration location
+## QLC+ configuration location
 =============================
 
 Linux
@@ -39,7 +39,7 @@ The solution is, after changing a .plist file, open a terminal and type this:
 `killall -u yourusername cfprefsd`  
 Where `yourusername` is the name of the user you use to access your Mac. The command forces OSX to reload the preferences, including your changes.
 
-2 Configuration Reset
+## Configuration Reset
 =====================
 
 Sometimes it might be necessary to reset the QLC+ configuration and bring QLC+ to a "Factory defaults" state.  
@@ -48,7 +48,7 @@ To do so, locate the configuration as explained in the first paragraph, then do 
 * On Linux and OSX use the `rm 'filename'` command to delete the configuration file
 * On Windows delete the whole 'qlcplus' KEY using regedit
 
-3 Parameters syntax
+## Parameters syntax
 ===================
 
 Due to Qt differences on different platforms, parameters are stored in different ways depending on your Operating System.
@@ -80,12 +80,12 @@ Parameters are stored in a plain text file that you can modify with a plain text
     or
     &lt;integer&gt;42&lt;/integer&gt;
 
-4 Parameters list
+## Parameters list
 =================
 
 Most likely you will not find the following parameters in a standard QLC+ configuration. To make them effective, you need to **add** them at the end of your configuration file.
 
-### 4.1 Simple Desk
+### 1. Simple Desk
 
 **Category:** simpledesk
 **Name:** channelsperpage
@@ -99,7 +99,7 @@ Most likely you will not find the following parameters in a standard QLC+ config
 **Description:** set the number of playback sliders displayed per page
 **Default:** 15
 
-### 4.2 DMX USB Enttec Open channels number
+### 2. DMX USB Enttec Open channels number
 
 **Category:** enttecdmxusbopen
 **Name:** channels
@@ -108,7 +108,7 @@ Most likely you will not find the following parameters in a standard QLC+ config
 In some cases this could solve flickering issues. For example you might try with 256.
 **Default:** 512
 
-### 4.3 uDMX frequency
+### 3. uDMX frequency
 
 **Category:** udmx
 **Name:** frequency
@@ -116,7 +116,7 @@ In some cases this could solve flickering issues. For example you might try with
 **Description:** Set the DMX frame frequency in Hertz for uDMX devices
 **Default:** 30
 
-### 4.4 uDMX channels number
+### 4. uDMX channels number
 
 **Category:** udmx
 **Name:** channels
@@ -125,7 +125,7 @@ In some cases this could solve flickering issues. For example you might try with
 In some cases this could solve flickering issues. For example you might try with 128.
 **Default:** 512
 
-### 4.5 Master Timer frequency
+### 5. Master Timer frequency
 
 **Category:** mastertimer
 **Name:** frequency
