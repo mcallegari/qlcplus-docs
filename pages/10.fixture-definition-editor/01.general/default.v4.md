@@ -3,9 +3,6 @@ title: General
 date: '05:28 22-08-2023'
 ---
 
-General Tab
------------
-
 This is the section where the Fixture general information is provided.
 
 ![](../fixtureeditor_general.png)
