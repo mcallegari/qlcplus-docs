@@ -27,6 +27,7 @@ Put your custom CSS in this file.
 }
 
 .version-chooser select {
+    font-weight: 700;
     color: #fff;
     background: #1383b3;
     border: 1px solid #19a5e1;
