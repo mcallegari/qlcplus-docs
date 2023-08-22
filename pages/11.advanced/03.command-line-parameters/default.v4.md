@@ -6,14 +6,14 @@ date: '08:19 22-08-2023'
 QLC+ supports a number of command line parameters to automate/extend some functionalities on startup.  
 Using command line parameters can be tricky depending on the operating system you're using:
 
-* **Linux**: just open a terminal and type "qlcplus" followed by the parameters you need
-* **Windows**: create a shortcut of qlcplus.exe (usually located in C:\\QLC+) on your desktop. Right click on the shortcut and select "Properties". In the "Target" field you will see something like "C:\\QLC+\\qlcplus.exe". There you can add command line parameters. When done click OK.  
+**Linux**: just open a terminal and type "qlcplus" followed by the parameters you need
+**Windows**: create a shortcut of qlcplus.exe (usually located in C:\\QLC+) on your desktop. Right click on the shortcut and select "Properties". In the "Target" field you will see something like "C:\\QLC+\\qlcplus.exe". There you can add command line parameters. When done click OK.  
       
     Example: Setting Czech locale:
     
     ![](../locale.png)
 
-* **OSX**: This is the most difficult case since QLC+ on OSX is bundled into a DMG package. You need to open a terminal and "cd" into the QLC+ DMG like this:  
+**OSX**: This is the most difficult case since QLC+ on OSX is bundled into a DMG package. You need to open a terminal and "cd" into the QLC+ DMG like this:  
     cd QLC+.app\\Contents\\MacOS  
     When done, type "qlcplus" followed by the parameters you need
 
@@ -21,7 +21,7 @@ Using command line parameters can be tricky depending on the operating system yo
 
 |     |
 | --- |
-| -c or --closebutton<br>-------------------<br><br>**Description:** Define a position for a close button in the virtual console. The button can be used to close QLC+. Only has an effect in kiosk mode (see -k) and is most useful when in fullscreen mode without a window manager.<br><br>**Parameters:** x,y,w,h<br><br>**Examples:**  <br>Create a button at (x400, y500) whose size is (w70, h50):  <br>qlcplus -c 400,500,70,50  <br>qlcplus --closebutton 400,500,70,50 |
+| **-c or --closebutton**<br><br>**Description:** Define a position for a close button in the virtual console. The button can be used to close QLC+. Only has an effect in kiosk mode (see -k) and is most useful when in fullscreen mode without a window manager.<br><br>**Parameters:** x,y,w,h<br><br>**Examples:**  <br>Create a button at (x400, y500) whose size is (w70, h50):  <br>qlcplus -c 400,500,70,50  <br>qlcplus --closebutton 400,500,70,50 |
 | -d or --debug<br>-------------<br><br>**Description:** Enable debug mode and optionally set the output level. Note that since 4.8.0 messages for level DEBUG (0) are not included in released binaries.<br><br>**Parameters:** Level (see [QtMsgType](https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum))<br><br>**Examples:**  <br>Enable debug mode and set debug level to 0:  <br>qlcplus -d  <br>qlcplus --debug  <br>  <br>Enable debug mode and set debug level to 3:  <br>qlcplus -d 3 |
 | -f or --fullscreen<br>------------------<br><br>**Description:** Start the application in fullscreen mode<br><br>**Parameters:** Method (either 'normal' or 'resize')<br><br>**Examples:**  <br>Tell the window manager to give the whole screen space to QLC+:  <br>qlcplus -f  <br>qlcplus --fullscreen  <br>qlcplus -f normal  <br>qlcplus --fullscreen normal  <br>  <br>Resize QLC+ to take up the whole screen space (useful in custom X11 sessions without a window manager):  <br>qlcplus -f resize  <br>qlcplus --fullscreen resize |
 | -g or --log<br>-----------<br><br>**Description:** Log debug messages to a file ($HOME/QLC+.log)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d 0 -g  <br>qlcplus --debug 0 --log |
