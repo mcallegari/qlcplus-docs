@@ -26,7 +26,7 @@ Foundation
 
 The scripts must be self-executing, i.e. when they are evaluated, the script itself is put inside an anonymous function that executes itself and returns an object that contains the required API functions:
 
-```
+```javascript
 (
     function() { // Anonymous function starts here
         var algo = new Object;
