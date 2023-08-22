@@ -26,4 +26,4 @@ This device is not yet supported on Windows.
 Tuning
 ------
 
-It is possible to change the DMX frame frequency for all uDMX devices with a hidden settings key on each platform. The key tells QLC+ how many times each DMX frame (512 channels) should be sent to the universe per second. A value of "30" means 30 times per second (30Hz). Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#udmx) uDMX section
+It is possible to change the DMX frame frequency for all uDMX devices with a hidden settings key on each platform. The key tells QLC+ how many times each DMX frame (512 channels) should be sent to the universe per second. A value of "30" means 30 times per second (30Hz). Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#3-udmx-frequency) uDMX section
