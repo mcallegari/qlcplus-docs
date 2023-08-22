@@ -22,4 +22,4 @@ Controls
 | ![](/basics/speed.png) | Show/Hide the Speed Dial widget, used to facilitate the audio fade in/out parameters tuning |
 | **Fade In** | Text box to enter a fade in time for the audio playback. Times can be entered in a QLC+ way (e.g. 3s.55) or in seconds (e.g. entering '2' and pressing Enter will turn into 02s.00) |
 | **Fade Out** | Text box to enter a fade out time for the audio playback. Times can be entered like in the Fade In box |
-| **Audio Device** | Select a specific audio output device to be used to play the attached audio file. This list is the same you can find in the [Audio Input/Output panel](audio-input-output.html) |
+| **Audio Device** | Select a specific audio output device to be used to play the attached audio file. This list is the same you can find in the [Audio Input/Output panel](/input-output/audio) |
