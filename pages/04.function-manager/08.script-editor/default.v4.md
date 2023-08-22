@@ -46,7 +46,7 @@ startfunction:2 // Green scene
 `functionID` is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description<br>
 **Example**:
 ```
-stopfunction:0 // Blue scene |
+stopfunction:0 // Blue scene
 ```
 
 #### blackout
