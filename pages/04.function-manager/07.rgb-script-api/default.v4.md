@@ -53,7 +53,7 @@ However, a script with nothing more than an empty object does nothing, no matter
 
 With this in mind we add declarations for these three properties to the script:
 
-```
+```javascript
 (
     function() {
         var algo = new Object;
@@ -88,7 +88,7 @@ When QLC+ calls this function, it wants to know the number of different RGB maps
 
 So, now we add this support function to the script:
 
-```
+```javascript
 (
     function() {
         var algo = new Object;
@@ -120,7 +120,7 @@ This function is the actual brains of the script. It produces two-dimensional ar
 
 Just like the previous function, we also add this other one to the script. Now we have a full and ready template for any RGB script for your indulgence.
 
-```
+```javascript
 (
     function() {
         var algo = new Object;
@@ -189,7 +189,7 @@ There is a development tool available in the QLC+ source repository that makes i
 Example Script: Full Columns
 ----------------------------
 
-```
+```javascript
  /*
       Q Light Controller Plus
       fullcolumns.js
