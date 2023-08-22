@@ -9,7 +9,7 @@ The modes tab contains all [modes](/basics/glossary-and-concepts#fixture-mode) t
 
 |     |     |
 | --- | --- |
-| **Mode list** | Displays all modes for the currently edited fixture. Each mode item can be opened to display the set and order of channels in that mode.* Name: The name of the mode (each name must be unique)<br>* Channels: Number of channels in each mode<br>* Heads: The number of light sources each mode supports |
+| **Mode list** | Displays all modes for the currently edited fixture. Each mode item can be opened to display the set and order of channels in that mode.<br>**Name**: The name of the mode (each name must be unique)<br>**Channels**: Number of channels in each mode<br>**Heads**: The number of light sources each mode supports |
 | ![](/basics/edit_add.png) | Create a new mode for the fixture, using the [Mode Editor](#mode-editor). |
 | ![](/basics/edit_remove.png) | Remove the currently selected mode from the fixture. Removing a mode does not destroy any channels or other modes. |
 | ![](/basics/edit.png) | Edit the currently selected mode, using the [Mode Editor](#mode-editor). |
@@ -49,9 +49,9 @@ Heads don't have names as they can be thought of as simple "sub-fixtures" inside
 |     |     |
 | --- | --- |
 | **Head list** | Displays the list of heads currently defined for the fixture. |
-| ![](/basics/edit_add.png) | Add a new head to the fixture, using the [Head Editor](#edit_head). |
+| ![](/basics/edit_add.png) | Add a new head to the fixture, using the [Head Editor](#head-editor). |
 | ![](/basics/edit_remove.png) | Remove the selected head from the fixture. |
-| ![](/basics/edit.png) | Edit the selected head using the [Head Editor](#edit_head). |
+| ![](/basics/edit.png) | Edit the selected head using the [Head Editor](#head-editor). |
 | ![](/basics/up.png) | Raise the selected head upwards by one. You can use this to change the order of the heads within the fixture. |
 | ![](/basics/down.png) | Lower the selected head downwards by one. You can use this to change the order of the heads within the fixture. |
 
