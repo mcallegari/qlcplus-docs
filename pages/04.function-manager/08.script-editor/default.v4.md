@@ -30,8 +30,9 @@ Here's a table describing each keyword accepted by the Script engine and its syn
 #### startfunction
 **Type**: keyword<br>
 **Description**: starts a QLC+ Function with the given ID<br>
-**Syntax**: ``startfunction:functionID``<br>
-_functionID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name. <br>
+**Syntax**: `startfunction:functionID`<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function.<br>
+Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name. <br>
 Eventually a user will learn the ID of a Function and therefore use it to manually add more code to the script.<br>
 **Example**:
 ```
@@ -42,21 +43,17 @@ startfunction:2 // Green scene
 **Type**: keyword<br>
 **Description**: stops a running QLC+ Function with the given ID<br>
 **Syntax**: `stopfunction:functionID`<br>
-_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description<br>
 **Example**:
 ```
 stopfunction:0 // Blue scene |
 ```
 
-
 #### blackout
 **Type**: keyword<br>
 **Description**: turns blackout on or off.  <br>
-**Syntax**: 
-```
-blackout:on|off 
-```
-_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description.<br>
+**Syntax**: `blackout:on|off `<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description.<br>
 **Examples**:
 ```
 blackout:on
@@ -65,13 +62,10 @@ blackout:off
 #### systemcommand
 **Type**: keyword  <br>
 **Description**: execute a program or a script at the provided absolute path with the (optional) provided arguments.  <br>
-**Syntax**: 
-```
-systemcommand:programPath arg:arg1 arg:arg2 ... arg:argN
-```
-_programPath_ is the absolute path of an executable program or script. For example `/usr/bin/vlc` or `C:\\Tools\\myTool.exe`<br>
+**Syntax**:`systemcommand:programPath arg:arg1 arg:arg2 ... arg:argN`<br>
+`programPath` is the absolute path of an executable program or script. For example `/usr/bin/vlc` or `C:\\Tools\\myTool.exe`<br>
 If the path to an executable contains spaces, it must be written between quotes.  <br>
-_arg1 ... argN_ are the arguments to be used when executing _programPath_. If no arguments are needed, then the arg: keywords are not necessary.  <br>
+`_arg1 ... argN` are the arguments to be used when executing _programPath_. If no arguments are needed, then the arg: keywords are not necessary.  <br>
 If an argument contans spaces it must be written between quotes.<br>
 **Examples**:
 ```
@@ -82,14 +76,12 @@ systemcommand:"C:\\Program Files\\Tools\\My Tool.exe" arg:"D:\\My Files\\My file
 #### setfixture
 **Type**: keyword  <br>
 **Description**: sets a QLC+ Fixture channel to the provided DMX value.  <br>
-**Syntax**: 
-```
-setfixture:fixtureID ch:channelIndex val:DMXValue
-```
-_fixtureID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the fixture and channel name.  <br>
+**Syntax**: `setfixture:fixtureID ch:channelIndex val:DMXValue`<br<
+`fixtureID` is an integer number of the ID assigned by QLC+ to a Function.<br>
+Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the fixture and channel name.  <br>
 Eventually a user will learn the ID of a fixture and the index of a channel and therefore use them to manually add more code to the script.  <br>
-_channelIndex_ is an integer number representing the fixture channel number. Channels indices here start from 0.  <br>
-_DMXValue_ is the actual DMX value to be set to the specified fixture channel. It ranges from 0 to 255  <br>
+`channelIndex` is an integer number representing the fixture channel number. Channels indices here start from 0.  <br>
+`DMXValue` is the actual DMX value to be set to the specified fixture channel. It ranges from 0 to 255  <br>
 **Example**:
 ```
 setfixture:0 ch:1 val:135 // Generic RGB, Red. Sets the red channel of a Generic RGB fixture to DMX value 135
@@ -98,11 +90,8 @@ setfixture:0 ch:1 val:135 // Generic RGB, Red. Sets the red channel of a Generic
 #### wait
 **Type**: keyword  <br>
 **Description**: wait for the provided amount of time before executing the next line of code.  <br>Note that a wait time can be randomized too, following the _random_ syntax described below.  <br>
-**Syntax**: 
-```
-wait:time
-```
-_time_ can be either an integer number of milliseconds or a string representing the wait time in the QLC+ way: \*\*h\*\*m\*\*s.\*\*  <br>
+**Syntax**: `wait:time`<br>
+`time` can be either an integer number of milliseconds or a string representing the wait time in the QLC+ way: \*\*h\*\*m\*\*s.\*\*  <br>
 **Examples**:
 ```
 wait:1800 // Waits for 1 second and 800 milliseconds
@@ -119,12 +108,9 @@ Comments can be added at the end of a Script line of code or they can take a who
 #### random
 **Type**: Helper macro  <br>
 **Description**: generates a random integer number between the provided minimum and maximum values  <br>
-**Syntax**: 
-```
-random(min,max)
-```
-_min_ is the minimum value the randomization can reach. It can be either an integer number or a time string  <br>
-_max_ is the maximum value the randomization can reach. It can be either an integer number or a time string  <br>
+**Syntax**: `random(min,max)`<br>
+`min` is the minimum value the randomization can reach. It can be either an integer number or a time string  <br>
+`max` is the maximum value the randomization can reach. It can be either an integer number or a time string  <br>
 **Examples**:
 ```
 wait:random(02s.00,05s.00) // Waits a random time between 2 and 5 seconds 
