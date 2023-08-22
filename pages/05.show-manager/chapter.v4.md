@@ -122,4 +122,4 @@ And finally...play! ![](/basics/player_play.png)
 ---------------------------------------------
 
 When a complete show has finally been created, it can be played just by clicking on the Play icon.  
-Playback always starts from the current cursor postion. The cursor position can be changed by clicking on the time line.
+Playback always starts from the current cursor position. The cursor position can be changed by clicking on the time line.
