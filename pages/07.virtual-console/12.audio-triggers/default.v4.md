@@ -23,7 +23,7 @@ Once the number of bars has been decided, you can proceed to assign a functional
 |     |     |
 | --- | --- |
 | **Name** | Can be "Volume Bar" or a spectrum bar shown as #number (start frequency - end frequency). Example: #5 (1250Hz - 1562Hz)> |
-| **Type** | Indicates the type of functionality the bar will control. It can be:<br><br>* ![](/basics/uncheck.png) None - No functionality assigned<br>* ![](/basics/intensity.png) DMX - Controls single DMX channels<br>* ![](/basics/function.png) Function - Controls a QLC+ function<br>* ![](/basics/virtualconsole.png) VC Widget - Controls a Virtual Console widget (at the moment only buttons, sliders, tapping of speed dials and next cue of cue lists) |
+| **Type** | Indicates the type of functionality the bar will control. It can be:<br><br>![](/basics/uncheck.png) **None** - No functionality assigned<br>![](/basics/intensity.png) **DMX** - Controls single DMX channels<br>![](/basics/function.png) **Function** - Controls a QLC+ function<br>![](/basics/virtualconsole.png) **VC Widget** - Controls a Virtual Console widget (at the moment only buttons, sliders, tapping of speed dials and next cue of cue lists) |
 | **Assign** | When a type is selected, a button with a ![](/basics/attach.png) icon is displayed to allow you to connect the bar to the desired functionality. Depending on which type you chose, clicking on this button will display the DMX channels, Functions or Virtual Console widgets selection dialogs. |
 | **Info** | This column displays some additional information about the bar--functionality association.  <br>Depending on the type you chose, you will find the number of DMX channels, the function name or the VC Widget name selected displayed here |
 | **Disable threshold** | When selecting a Function or a VC Widget button, this column allows you to set a deactivation threshold percentage. When the spectrum or volume bar goes below this value, the associated function/VC button will be stopped/deactivated. |
@@ -42,9 +42,9 @@ You can select one or more functions. Those functions are started when volume go
 
 You can select only **ONE** widget here, either a button, a slider or a speed dial. Depending on the type:
 
-* **Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
-* **Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
-* **Speed dial** is tapped.
-* **Cue List** "Next Cue" is pressed.
+**Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
+**Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
+**Speed dial** is tapped.
+**Cue List** "Next Cue" is pressed.
 
 For **Speed dials** and **Cue Lists**, the tap/button press happens when the volume goes above the Enable threshold, and won't happen again until the volume falls below the Disable threshold. This probably means you will have to set the thresholds a little closer to each other than for buttons.
