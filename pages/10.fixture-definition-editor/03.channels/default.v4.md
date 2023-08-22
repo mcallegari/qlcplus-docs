@@ -22,21 +22,21 @@ The Channel Editor is used to edit individual channels and the DMX value ranges 
 
 Here's a few screenshots showing the possible scenarios that can be encountered while editing a Fixture channel.
 
-![](../fixtureeditor_channel_preset.png)
-
 **Fig. 1**
 
-![](../fixtureeditor_channel_shutter.png)
+![](../fixtureeditor_channel_preset.png)
 
 **Fig. 2**
 
-![](../fixtureeditor_channel_color.png)
+![](../fixtureeditor_channel_shutter.png)
 
 **Fig. 3**
 
-![](../fixtureeditor_channel_gobo.png)
+![](../fixtureeditor_channel_color.png)
 
 **Fig. 4**
+
+![](../fixtureeditor_channel_gobo.png)
 
 Following, the description of the settings that appear in the Channel Editor. Reference to the above figures will be done to point you to a visual context.
 
@@ -48,7 +48,7 @@ Following, the description of the settings that appear in the Channel Editor. Re
 | **Default value** | Specify the DMX value (0 to 255) to which a channel is set on power up. For example, some moving heads position their Pan/Tilt motors half way, which means the initial DMX channel value is equal to 127. |
 | **Role** | Applicable to channel pairs that make 16 bit values, usually **Pan** or **Tilt** group, but some newer fixtures support 16 bit dimmer or even RGB, gobo or focus channels.  <br>For 8 bit values (e.g. when the fixture supports only 8bit movement, only one channel for each movement), assign the **Coarse (MSB)** control byte to the channel. If, however, the fixture supports 16bit (two channels for each feature), you should assign the **Coarse (MSB)** byte to the channels that provide coarse value and the **Fine (LSB)** byte to the channels that provide fine value adjustment. If you are not sure, use **Coarse MSB**. |
 | **Capabilities** | Displays the list of DMX value ranges for the currently edited channel. If a channel provides only one capability (for example pan or dimmer) you should use a channel preset (see above). For more elaborate capabilities, such as colors or gobos, you should create capability ranges for each of the colors (for example 0-15 white, 16-32 blue...).  <br>Specific ranges for each channel can be found in the product manual under the name "DMX chart".  <br>Entering DMX ranges is pretty straight forward. The entry area is organized as a spreadsheet where range values and descriptions can be entered continuously just by pressing the TAB key. |
-| **Preset** | Each capability can be enriched with a so called "preset", which tells the QLC+ engine more useful information about a range of DMX values.  <br>For example if the capability is "Shutter open", a preset called "ShutterOpen" is available so that QLC+ knows exactly how to treat the range.  <br>Depending on the preset type, one or more additional information could be entered:<br><br>* ColorMacro: allows to pick a single color used tyipically on color wheels<br>* ColorDoubleMacro: allows to pick two colors to represent an intermediate position of a color wheel (Fig. 3)<br>* GoboMacro: allows to select a gobo picture to be used when entering the capability range (Fig. 4)<br>* StrobeFrequency: allows to enter a precise frequency (in Hertz) for a strobe feature<br>* StrobeFreqRange: allows to enter 2 values (minimum and maximum) to represent the range of frequencies (in Hertz) to simulate a strobo effect (Fig. 2)<br>* Alias: This is a special capability preset to indicate that when in this range, an alias should be triggered. An alias is a replacement of a channel. See the [Aliases tab](#aliases) to understand how to define aliases |
+| **Preset** | Each capability can be enriched with a so called "preset", which tells the QLC+ engine more useful information about a range of DMX values.  <br>For example if the capability is "Shutter open", a preset called "ShutterOpen" is available so that QLC+ knows exactly how to treat the range.  <br>Depending on the preset type, one or more additional information could be entered:<br><br>**ColorMacro**: allows to pick a single color used tyipically on color wheels<br>**ColorDoubleMacro**: allows to pick two colors to represent an intermediate position of a color wheel (Fig. 3)<br>**GoboMacro**: allows to select a gobo picture to be used when entering the capability range (Fig. 4)<br>**StrobeFrequency**: allows to enter a precise frequency (in Hertz) for a strobe feature<br>**StrobeFreqRange**: allows to enter 2 values (minimum and maximum) to represent the range of frequencies (in Hertz) to simulate a strobo effect (Fig. 2)<br>**Alias**: This is a special capability preset to indicate that when in this range, an alias should be triggered. An alias is a replacement of a channel. See the [Aliases tab](#aliases) to understand how to define aliases |
 | ![](/basics/edit_remove.png) | Remove the selected capabilities from the channel. |
 | ![](/basics/wizard.png) | Create new capabilities quickly with the capability wizard. |
 
