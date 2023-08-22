@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 <style>
-    #chapter p {
+    #chapter p, h3 {
         text-align: left;
     }
 </style>
