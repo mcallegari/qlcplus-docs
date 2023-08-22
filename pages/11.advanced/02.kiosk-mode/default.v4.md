@@ -7,7 +7,7 @@ QLC+ has a special mode when your lighting needs to be operated by inexperienced
 
 When you want to start QLC+ in kiosk mode, run:
 
-> qlcplus -k -f -o workspace.qxw -p -c 500,10,32,32
+`qlcplus -k -f -o workspace.qxw -p -c 500,10,32,32`
 
 * **-k** enables the kiosk mode
 * **-f** puts QLC+ in fullscreen mode
