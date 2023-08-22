@@ -6,8 +6,8 @@ date: '11:41 22-08-2023'
 This section explains how to manually get at and tune some QLC+ parameters not available from the UI.  
 Keep in mind that if you cannot change them from the UI, it means there is a good reason for it.
 
-Warning: DO NOT edit the configuration files manually unless you know what you're doing. Any misplaced change can cause program crashes or awkward instability.
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Warning: DO NOT edit the configuration files manually unless you know what you're doing. Any misplaced change can cause program crashes or awkward instability.
+
 
 ## QLC+ configuration location
 <hr>
@@ -75,10 +75,10 @@ Mac OSX
 
 Parameters are stored in a plain text file that you can modify with a plain text editor like [TextWrangler](https://www.barebones.com/products/textwrangler/) or similar. They are presented as follows:
 
-    &lt;key&gt;category.name&lt;/key&gt;
-    &lt;string&gt;value&lt;/string&gt;
+    `<key>category.name</key>`<br>
+    `<string>value</string>`<br>
     or
-    &lt;integer&gt;42&lt;/integer&gt;
+    `<integer>42</integer>`<br>
 
 ## Parameters list
 <hr>
@@ -86,50 +86,49 @@ Parameters are stored in a plain text file that you can modify with a plain text
 Most likely you will not find the following parameters in a standard QLC+ configuration. To make them effective, you need to **add** them at the end of your configuration file.
 
 ### 1. Simple Desk
-```
-**Category:** simpledesk
-**Name:** channelsperpage
-**Type:** integer
-**Description:** Set the number of DMX channel sliders displayed per page
-**Default:** 32
-```
-```
-**Category:** simpledesk
-**Name:** playbacksperpage
-**Type:** integer
-**Description:** set the number of playback sliders displayed per page
-**Default:** 15
-```
+
+**Category:** simpledesk<br>
+**Name:** channelsperpage<br>
+**Type:** integer<br>
+**Description:** Set the number of DMX channel sliders displayed per page<br>
+**Default:** 32<br>
+<br>
+**Category:** simpledesk<br>
+**Name:** playbacksperpage<br>
+**Type:** integer<br>
+**Description:** set the number of playback sliders displayed per page<br>
+**Default:** 15<br>
+
 ### 2. DMX USB Enttec Open channels number
 
-**Category:** enttecdmxusbopen
-**Name:** channels
-**Type:** integer
-**Description:** Set the maximum number of DMX channels transmitted by Enttec Open (and similar) devices.
-In some cases this could solve flickering issues. For example you might try with 256.
-**Default:** 512
+**Category:** enttecdmxusbopen<br>
+**Name:** channels<br>
+**Type:** integer<br>
+**Description:** Set the maximum number of DMX channels transmitted by Enttec Open (and similar) devices.<br>
+In some cases this could solve flickering issues. For example you might try with 256.<br>
+**Default:** 512<br>
 
 ### 3. uDMX frequency
 
-**Category:** udmx
-**Name:** frequency
-**Type:** integer
-**Description:** Set the DMX frame frequency in Hertz for uDMX devices
-**Default:** 30
+**Category:** udmx<br>
+**Name:** frequency<br>
+**Type:** integer<br>
+**Description:** Set the DMX frame frequency in Hertz for uDMX devices<br>
+**Default:** 30<br>
 
 ### 4. uDMX channels number
 
-**Category:** udmx
-**Name:** channels
-**Type:** integer
-**Description:** Set the maximum number of DMX channels transmitted by uDMX devices.
-In some cases this could solve flickering issues. For example you might try with 128.
-**Default:** 512
+**Category:** udmx<br>
+**Name:** channels<br>
+**Type:** integer<br>
+**Description:** Set the maximum number of DMX channels transmitted by uDMX devices.<br>
+In some cases this could solve flickering issues. For example you might try with 128.<br>
+**Default:** 512<br>
 
 ### 5. Master Timer frequency
 
-**Category:** mastertimer
-**Name:** frequency
-**Type:** integer
-**Description:** Set the QLC+ core timer frequency in Hertz
-**Default:** 50
+**Category:** mastertimer<br>
+**Name:** frequency<br>
+**Type:** integer<br>
+**Description:** Set the QLC+ core timer frequency in Hertz<br>
+**Default:** 50<br>
