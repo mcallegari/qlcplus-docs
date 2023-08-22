@@ -104,7 +104,7 @@ Here's an example of how a template looks like:
 You can create the ones you need and place them in your MidiTemplates folder.  
 You are welcome to submit them in the QLC+ forum.
 
-QLC+ Channels map
+Channels map
 -----------------
 
 To handle a mix of various MIDI messages (Notes, PC, CC, etc..), QLC+ remaps them into a sequential order.  
