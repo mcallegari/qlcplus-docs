@@ -153,9 +153,9 @@ Adding properties to your script is fairly easy, but requires a specific syntax 
 Let's make an example:
 
 ```javascript
-    algo.orientation = 0;
-    algo.properties = new Array();
-    algo.properties.push("name:orientation|type:list|display:Orientation|values:Horizontal,Vertical|write:setOrientation|read:getOrientation");
+algo.orientation = 0;
+algo.properties = new Array();
+algo.properties.push("name:orientation|type:list|display:Orientation|values:Horizontal,Vertical|write:setOrientation|read:getOrientation");
 ```
 
 The three lines above specifies the following:
