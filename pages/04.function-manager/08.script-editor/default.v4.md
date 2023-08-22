@@ -28,21 +28,21 @@ Each line of code is parsed by the QLC+ engine and verified to detect the presen
 Here's a table describing each keyword accepted by the Script engine and its syntax.
 
 #### startfunction
-**Type**: keyword
-**Description**: starts a QLC+ Function with the given ID
-**Syntax**: startfunction:functionID
-functionID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name.  <br>
-Eventually a user will learn the ID of a Function and therefore use it to manually add more code to the script.
+**Type**: keyword<br>
+**Description**: starts a QLC+ Function with the given ID<br>
+**Syntax**: startfunction:functionID<br>
+functionID_ is an integer number of the ID assigned by QLC+ to a Function. Since IDs are not exposed to QLC+ users, in this case it is convenient to use the helper button on the rightmost side of the editor, which also add a comment with the Function name. <br>
+Eventually a user will learn the ID of a Function and therefore use it to manually add more code to the script.<br>
 **Example**:
 ```
 startfunction:2 // Green scene
 ```
 
 #### stopfunction
-**Type**: keyword
-**Description**: stops a running QLC+ Function with the given ID
-**Syntax**: stopfunction:functionID
-_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description
+**Type**: keyword<br>
+**Description**: stops a running QLC+ Function with the given ID<br>
+**Syntax**: stopfunction:functionID<br>
+_functionID_ is an integer number of the ID assigned by QLC+ to a Function. See _startfunction_ description<br>
 **Example**:
 ```
 stopfunction:0 // Blue scene |
