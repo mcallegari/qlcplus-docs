@@ -6,7 +6,7 @@ date: '03:39 22-08-2023'
 A Frame is a container that can hold a variety of widgets, including other frames, inside. In fact, the whole Virtual Console is already your bottom-most frame. Also, if you apply some [styling attributes](../styling-and-placement) to a frame, all of its children (which have not had their own non-default style settings applied) also inherit their parent's style properties.
 
 ## Configuration
-===
+<hr>
 
 Frames can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the frame itself.  
   
@@ -35,7 +35,7 @@ Following the options to configure this functionality:
     
 
 ## Header Controls
-===
+<hr>
 
 By default a Frame is displayed with a header. Following a brief description of the default and optional controls that can be used either in Operate or Design mode.
 
