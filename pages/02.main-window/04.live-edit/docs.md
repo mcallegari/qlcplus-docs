@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 Starting from version 4.5.0, QLC+ offers a functionality which allows the adjustment of your [Functions](/basics/glossary-and-concepts#functions) while in [Operate Mode](/basics/glossary-and-concepts#modes).  
-The Live Edit icon ![](/basics/liveedit.png) is located in the QLC+ top bar, beside the [DMX Dump](dmxdump.html) icon ![](/basics/add_dump.png) and it is activated only when the user has switched to Operate Mode.  
+The Live Edit icon ![](/basics/liveedit.png) is located in the QLC+ top bar, beside the [DMX Dump](../dmx-dump) icon ![](/basics/add_dump.png) and it is activated only when the user has switched to Operate Mode.  
 When clicking on the Live Edit icon, a [Function selection](/function-manager/function-selection) panel will be displayed, allowing the selection of the function you want to adjust.  
 When you press OK, the correct editor will be displayed for editing that function.  
 At the moment, the following functions are supported for live editing:
