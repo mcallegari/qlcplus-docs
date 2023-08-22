@@ -10,7 +10,7 @@ Warning: DO NOT edit the configuration files manually unless you know what you'r
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## QLC+ configuration location
-=============================
+<hr>
 
 Linux
 -----
@@ -40,7 +40,7 @@ The solution is, after changing a .plist file, open a terminal and type this:
 Where `yourusername` is the name of the user you use to access your Mac. The command forces OSX to reload the preferences, including your changes.
 
 ## Configuration Reset
-=====================
+<hr>
 
 Sometimes it might be necessary to reset the QLC+ configuration and bring QLC+ to a "Factory defaults" state.  
 To do so, locate the configuration as explained in the first paragraph, then do the following:
@@ -49,7 +49,7 @@ To do so, locate the configuration as explained in the first paragraph, then do 
 * On Windows delete the whole 'qlcplus' KEY using regedit
 
 ## Parameters syntax
-===================
+<hr>
 
 Due to Qt differences on different platforms, parameters are stored in different ways depending on your Operating System.
 
@@ -81,24 +81,25 @@ Parameters are stored in a plain text file that you can modify with a plain text
     &lt;integer&gt;42&lt;/integer&gt;
 
 ## Parameters list
-=================
+<hr>
 
 Most likely you will not find the following parameters in a standard QLC+ configuration. To make them effective, you need to **add** them at the end of your configuration file.
 
 ### 1. Simple Desk
-
+```
 **Category:** simpledesk
 **Name:** channelsperpage
 **Type:** integer
 **Description:** Set the number of DMX channel sliders displayed per page
 **Default:** 32
-
+```
+```
 **Category:** simpledesk
 **Name:** playbacksperpage
 **Type:** integer
 **Description:** set the number of playback sliders displayed per page
 **Default:** 15
-
+```
 ### 2. DMX USB Enttec Open channels number
 
 **Category:** enttecdmxusbopen
