@@ -3,7 +3,7 @@ title: 'Solo Frame'
 date: '03:43 22-08-2023'
 ---
 
-A Solo Frame is almost exactly the same kind of a container as a normal [Frame](../frame) in that can hold various widgets and other frames inside. However, the difference with Solo Frame is that it treats any [Buttons](vcbutton.html) inside it differently by allowing only one button to be enabled at a time. For example, consider you have **Button A** and **Button B** inside a Solo Frame with **Button A** currently enabled. Next, you click button **Button B** which automatically results in **Button A** being released, leaving now only **Button B** enabled.
+A Solo Frame is almost exactly the same kind of a container as a normal [Frame](../frame) in that can hold various widgets and other frames inside. However, the difference with Solo Frame is that it treats any [Buttons](../button) inside it differently by allowing only one button to be enabled at a time. For example, consider you have **Button A** and **Button B** inside a Solo Frame with **Button A** currently enabled. Next, you click button **Button B** which automatically results in **Button A** being released, leaving now only **Button B** enabled.
 
 ### Configuration
 
