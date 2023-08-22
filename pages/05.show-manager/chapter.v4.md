@@ -62,7 +62,7 @@ Show Manager toolbar controls
 | ![](/basics/audio.png) | CTRL+A | Create a new [Audio](/basics/glossary-and-concepts#audio) item. An audio item simply represents an audio file. Audio items can be added on any track, but if you want to to create a separate track for it, just create an new track.  <br>**Note:** It is possible to display the waveform preview of an audio item just by right clicking it and selecting the channels you want to display (mono, left channel, right channel, stereo)  <br>**Warning:** Even though QLC+ allows you to, it is not possible to play two audio files simultaneously. Especially on Windows, you might experience unwanted crashes. |
 | ![](/basics/editcopy.png) | CTRL+C | Copy the currently selected item into QLC+ clipboard |
 | ![](/basics/editpaste.png) | CTRL+V | Paste QLC+ clipboard content at the cursor position. When performing this operation two checks are performed:<br><br>**Overlapping**: checks if the item you're going to paste overlaps with an existing item in the selected track<br>**Validity**: If you're pasting a Sequence, QLC+ will verify that the Sequence contents are compatible with the currently selected track |
-| ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](functionmanager.html)** |
+| ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](/function-manager)** |
 | ![](/basics/color.png) | CTRL+R | Assign a custom color to the selected item |
 | ![](/basics/lock.png) | CTRL+K | Lock or unlock then selected item. Once an item is locked, it cannot be dragged on the timeline anymore |
 | ![](/basics/speed.png) | CTRL+T | Open a window where you can adjust the selected item start time and total duration. The behaviour of the latter will depend on the selected item.  <br>On Audio and Video items it does nothing.  <br>On Sequences and Chasers it will stretch all the steps timings to fit to the desired duration.  <br>On EFXs and RGB Matrices some extra options will be displayed, allowing to stretch the original function or loop the function until the desired duration is reached. |
@@ -81,7 +81,7 @@ The Show Manager has been set up to be used quickly and easily. Basically, with 
 #### 1. Add a new Show ![](/basics/show.png)
 
 First of all you need to add a new Show to the view. This creates an empty multitrack view with no tracks and no items, ready to be filled.  
-A popup will appear asking the name to assign to the Show. It is possible to change the name afterwards with the [Function Manager](functionmanager.html), using the [Show Editor](showeditor.html) panel.
+A popup will appear asking the name to assign to the Show. It is possible to change the name afterwards with the [Function Manager](/function-manager), using the [Show Editor](/function-manager/show-editor) panel.
 
 #### 2. Add a track ![](/basics/edit_add.png)
 
@@ -90,7 +90,7 @@ When done, a new track will be created. All the sequences created on this track 
 A newly created track will be set automatically as active. An active track has a green light on the left hand side.  
 A Track can be set to ![](../images/track-mute.png) mute and ![](../images/track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.  
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
-Once selected, a track will display its [Scene Editor](sceneeditor.html) on the bottom of the screen.
+Once selected, a track will display its [Scene Editor](/function-manager/scene-editor) on the bottom of the screen.
 
 #### 3. Add some [Functions](/basics/glossary-and-concepts#function)
 
