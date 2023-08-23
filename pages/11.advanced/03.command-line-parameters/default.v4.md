@@ -43,7 +43,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-l or --locale**<br><br>**Description:** Use the given locale for translation<br><br>**Parameters:** Locale name (currently supported: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Examples:**  <br>Use finnish language:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
+| **-l or --locale**<br><br>**Description:** Use the given language for translation<br><br>**Parameters:** Language code (currently supported: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Examples:**  <br>Use finnish language:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
 
 |     |
 | --- |
