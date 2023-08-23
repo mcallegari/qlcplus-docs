@@ -8,7 +8,7 @@ Using command line parameters can be tricky depending on the operating system yo
 
 **Linux**: just open a terminal and type "qlcplus" followed by the parameters you need<br>
 **Windows**: create a shortcut of qlcplus.exe (usually located in C:\\QLC+) on your desktop. Right click on the shortcut and select "Properties". In the "Target" field you will see something like `C:\\QLC+\\qlcplus.exe`. There you can add command line parameters. When done click OK.<br>
-Example: Setting Czech locale:
+For example, to force the German language at startup, modify your shortcut command line like this:
 
 ![](../commandline.png)
 
