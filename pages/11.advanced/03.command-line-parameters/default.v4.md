@@ -31,7 +31,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-g or --log**<br><br>**Description:** Log debug messages to a file ($HOME/QLC+.log)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d 0 -g  <br>qlcplus --debug 0 --log |
+| **-g or --log**<br><br>**Description:** Log debug messages to a file (`$HOME/QLC+.log`)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d 0 -g  <br>qlcplus --debug 0 --log |
 
 |     |
 | --- |
