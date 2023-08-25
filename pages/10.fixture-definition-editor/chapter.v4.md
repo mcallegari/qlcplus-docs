@@ -15,7 +15,7 @@ Fixture Definition Editor is a separate application bundled together with QLC+ f
 The main window in the Fixture Editor is just an empty workspace that contains the actual editor windows used to edit fixture definitions.
 
 **Important note: for many reasons, you SHOULD NOT save or copy your custom fixtures in the QLC+ system fixtures folder. The most important is that when you uninstall QLC+, the system fixtures folder gets deleted, so your fixtures.  
-You are recommended to save them in the user fixtures folder. To find it, please refer to the [Q & A section](basics/questions-and-answers) of this documentation.**
+You are recommended to save them in the user fixtures folder. To find it, please refer to the [Q & A section](/basics/questions-and-answers) of this documentation.**
 
 Main toolbar
 ------------
