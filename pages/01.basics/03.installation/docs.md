@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 Installing QLC+ is pretty straight forward.
-Just head to the [download page](https://www.qlcplus.org/downloads.php) and get the version you prefer for the Operating System you're using.
+Just head to the [download page](https://www.qlcplus.org/download) and get the version you prefer for the Operating System you're using.
 
 ## Windows
 
