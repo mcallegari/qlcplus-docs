@@ -78,4 +78,4 @@ Tuning
 
 **Note: Manual tuning should never be performed except for some very particular cases. Use it at your own risk!**  
 It is possible to change the DMX frame size for Enttec Open (and like) devices with a hidden settings key on each platform. The key tells QLC+ how many channels should be transmitted in each DMX frame, so for a DMX universe (by default 512).  
-Please refer to the [Manual parameters tuning](/advanced/parameters-tuning/) DMX USB Enttec Open section.
+Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#2-dmx-usb-enttec-open-channels-number) DMX USB Enttec Open section.
