@@ -55,8 +55,6 @@ So far, three types of widgets are available:
 *   RGB Color Picker. Controls values for selected RGB channels with a single click
 *   Gobo/Macro Picker. Access and display a Gobo/Macro defined in the Fixture definition
 
-An overview with screenshots is available [here](https://qlcplus.org/clickandgo.html)
-
 ### ![](../collection.png) Collection
 
 A collection [function](#functions) encapsulates multiple functions that are run simultaneously when the collection function is executed. Any number of functions can be inserted to a collection, but each function can be inserted only once and a collection cannot be a direct member of itself.
@@ -163,7 +161,7 @@ A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first 
 ### ![](../input_output.png) Input/Output plugins
 
 QLC+ supports a variety of plugins to send and receive data from/to the external world.  
-A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](/plugins/artnetplugin), [OSC](/plugins/oscplugin) or [E1.31](/plugins/e131plugin)).  
+A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](/plugins/art-net), [OSC](/plugins/osc) or [E1.31](/plugins/e1-31-sacn)).  
 Plugins support input, output or feedback capabilities depending on the device or the protocol they're controlling.  
 
 The primary input methods for QLC+ are naturally the keyboard and mouse. Users can assign keyboard keys to virtual console buttons and drag sliders and do pretty much everything with a mouse.
