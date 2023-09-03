@@ -48,7 +48,7 @@ The menu bar on the top of the workspace window contains the following buttons (
 
 ![](../basics/fullscreen.png) Toggle full screen mode (CTRL+F11)  
 ![](../basics/help.png) View this documentation (Shift+F1)  
-![](../basics/qlcplus.svg) View information about QLC+  
+![](../basics/qlcplus.svg?resize=32,32) View information about QLC+  
 
 * * *
 
