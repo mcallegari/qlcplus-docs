@@ -42,13 +42,13 @@ The menu bar on the top of the workspace window contains the following buttons (
 
 ![](../basics/monitor.png)[DMX Monitor](dmx-monitor) (CTRL+M)  
 ![](../basics/diptool.png)[DMX Address tool](dmx-address-tool)  
-![](../basics/audioinput.png)[Audio triggers](audiotriggers)  
+![](../basics/audioinput.png)[Audio triggers](/virtual-console/audio-triggers)  
 
 * * *
 
 ![](../basics/fullscreen.png) Toggle full screen mode (CTRL+F11)  
 ![](../basics/help.png) View this documentation (Shift+F1)  
-![](../basics/qlcplus.png) View information about QLC+  
+![](../basics/qlcplus.svg) View information about QLC+  
 
 * * *
 
