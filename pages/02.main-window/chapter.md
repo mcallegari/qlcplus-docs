@@ -3,7 +3,7 @@ title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
-media_order: mainwindow.png
+media_order: 'mainwindow.png,mainwindow.png'
 ---
 
 <style>
