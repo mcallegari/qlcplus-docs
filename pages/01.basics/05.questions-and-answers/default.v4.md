@@ -62,4 +62,4 @@ Here you can either find the answer directly or find help to point you in the ri
 | | |
 | - | - | - |
 | **8** | **Q:** | **My lights flicker. What can I do?** |
-| | **A:** | Sometimes an unbuffered USB DMX adapter or a noisy DMX line can cause some fixtures to flicker unexpectedly. QLC+ allows you to adjust the output frequency rate to mitigate the undesired effect. Here's an example showing an Open DMX clone settings panel. You can access it by double-clicking on the output line or by clicking on the ![](/basics/configure.png) icon. ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings") |
+| | **A:** | Sometimes an unbuffered USB DMX adapter or a noisy DMX line can cause some fixtures to flicker unexpectedly. QLC+ allows you to adjust the output frequency rate to mitigate the undesired effect. Here's an example showing an Open DMX clone settings panel. You can access it by double-clicking on the output line or by clicking on the ![](/basics/configure.png) icon.   ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings") |
