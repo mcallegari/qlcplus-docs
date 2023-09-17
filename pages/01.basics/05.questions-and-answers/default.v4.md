@@ -1,6 +1,7 @@
 ---
 title: 'Questions and Answers'
 date: '08:32 21-08-2023'
+media_order: dmx-usb-settings.png
 ---
 
 <style>
@@ -57,3 +58,8 @@ Here you can either find the answer directly or find help to point you in the ri
 | - | - | - |
 | **7** | **Q:** | **I have a 4k display and everything in the QLC+ interface is extremely small** |
 | | **A:** | You need to add an option to the QLC+ command line to tell the Qt libraries to autoscale the interface on a High DPI display. Examples:<br><br>**Linux (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`<br>**Windows shortcut**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`<br>**Mac OS (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`<br><br>In case, see the [command line parameters page](/advanced/command-line-parameters) for further information. |
+
+| | |
+| - | - | - |
+| **8** | **Q:** | **My lights flicker. What can I do?** |
+| | **A:** | Sometimes an unbuffered USB DMX adapter or a noisy DMX line can cause some fixtures to flicker unexpectedly. QLC+ allows you to adjust the output frequency rate to mitigate the undesired effect. Here's an example showing an Open DMX clone settings panel. You can access it by double-clicking on the output line or by clicking on the ![](/basics/configure.png) icon. ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings") |
