@@ -55,6 +55,8 @@ So far, three types of widgets are available:
 *   RGB Color Picker. Controls values for selected RGB channels with a single click
 *   Gobo/Macro Picker. Access and display a Gobo/Macro defined in the Fixture definition
 
+An overview with screenshots is available [here](https://qlcplus.org/old/clickandgo.html)
+
 ### ![](../collection.png) Collection
 
 A collection [function](#functions) encapsulates multiple functions that are run simultaneously when the collection function is executed. Any number of functions can be inserted to a collection, but each function can be inserted only once and a collection cannot be a direct member of itself.
