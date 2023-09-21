@@ -6,24 +6,9 @@ date: '05:08 22-08-2023'
 Introduction
 ------------
 
-The DMX USB plugin supports a variety of FTDI-based USB-to-DMX devices:
+The DMX USB plugin supports a variety of FTDI-based USB-to-DMX devices. 
 
-* DMXKing USB DMX512-A
-* [DMXKing ultraDMX micro](https://dmxking.com/usbdmx/ultradmxmicro)
-* [DMXKing ultraDMX Pro](https://dmxking.com/discontinued/ultradmx-pro)
-* [Enttec DMXUSB Open](https://www.enttec.com/products/controls/usb/open-dmx-usb/)
-* [Enttec DMXUSB Pro](https://www.enttec.com/products/controls/usb/2-universe-usb-computer-interface-dmx/)
-* [Enttec DMX USB PRO Mk2](https://www.enttec.com/products/controls/usb/dmx-usb-pro-mk2-2-universe-usb-computer-interface-dmx/)
-* [DMX4ALL USB-DMX STAGE-PROFI MK2](http://www.dmx4all.de/produkte_usb_dmx_interfaces.html)
-* [DMX4ALL NanoDMX](http://www.dmx4all.de/produkte_usb_dmx_interfaces.html)
-* [Gus Electronics USB-VL344](http://www.guselectronics.com/usb-dmx-interface-512)
-* [Vince DMX512 USB](http://www.dmx512-online.net/en-article58.html)
-* [ElectroTAS USB-DMX](http://www.electrotas.com/usbdmx.html)
-* [Eurolite USB-DMX512](https://www.steinigke.de/en/mpn51860118-eurolite-usb-dmx512-interface-update-adaptor.html)
-* [Eurolite USB DMX512 Pro](https://www.steinigke.de/en/mpn51860120-eurolite-usb-dmx512-pro-interface.html)
-* [Eurolite USB-DMX512 Pro Cable](https://www.steinigke.de/en/mpn51860122-eurolite-usb-dmx512-pro-cable-interface.html)
-* [Eurolite USB DMX512 Pro MK2](https://www.steinigke.de/en/mpn51860121-eurolite-usb-dmx512-pro-interface-mk2.html)
-* [FTDI USBCOM 485+](http://www.ftdichip.com/Products/Modules/USBRSxxx.htm)
+Supported USB DMX devices can be found on our [compatibility](https://www.qlcplus.org/discover/compatibility) page.
 
 Configuration
 -------------
@@ -93,4 +78,4 @@ Tuning
 
 **Note: Manual tuning should never be performed except for some very particular cases. Use it at your own risk!**  
 It is possible to change the DMX frame size for Enttec Open (and like) devices with a hidden settings key on each platform. The key tells QLC+ how many channels should be transmitted in each DMX frame, so for a DMX universe (by default 512).  
-Please refer to the [Manual parameters tuning](parameterstuning.html#EnttecOpen) DMX USB Enttec Open section
+Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#2-dmx-usb-enttec-open-channels-number) DMX USB Enttec Open section.
