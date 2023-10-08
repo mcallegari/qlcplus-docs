@@ -22,6 +22,8 @@ Since the style file is strictly related to the inner Qt objects, you might want
 [Qt Style Sheets Examples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
 It is up to your imagination how you prefer to customize the QLC+ GUI appearance! If you find a style worth sharing, don't forget to send in your contribution by posting it online in the [QLC+ forum](https://www.qlcplus.org/forum/viewforum.php?f=5)
 
+Please note: not all styles are available to be changed via the stylesheet as they are hardcoded in C++. 
+
 QLC+ dark blue style example
 ----------------------------
 
