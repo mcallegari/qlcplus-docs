@@ -33,31 +33,31 @@ Each Virtual Console widget's style can be configured (to some extent). Widgets 
 
 |     |     |
 | --- | --- |
-| ![](/basics/button.png) | Add a new [Button](button) to the currently selected frame. |
-| ![](/basics/buttonmatrix.png) | Add a new [Button Matrix](button-matrix) to the currently selected frame, using the dedicated dialog. |
-| ![](/basics/slider.png) | Add a new [Slider](slider) to the currently selected frame. |
-| ![](/basics/slidermatrix.png) | Add a new [Slider Matrix](slider-matrix) to the currently selected frame. |
-| ![](/basics/rgbmatrix.png) | Add a new [Animation](animation) to the currently selected frame. |
-| ![](/basics/knob.png) | Add a new [Knob](slider) to the currently selected frame. This is a convenient shortcut for adding a slider widget using the knob style. |
-| ![](/basics/speed.png) | Add a new [Speed Dial](speed-dial) to the currently selected frame. |
-| ![](/basics/xypad.png) | Add a new [XY Pad](xy-pad) to the currently selected frame. |
-| ![](/basics/cuelist.png) | Add a new [Cue List](cue-list) to the currently selected frame. |
-| ![](/basics/frame.png) | Add a new [Frame](frame) to the currently selected frame. |
-| ![](/basics/soloframe.png) | Add a new [Solo Frame](solo-frame) to the currently selected frame. |
-| ![](/basics/label.png) | Add a new [Label](label) to the currently selected frame. |
-| ![](/basics/audioinput.png) | Add a new [Audio triggers](audio-triggers) widget to the currently selected frame. |
-| ![](/basics/clock.png) | Add a new Clock widget to the currently selected frame. This widget can be used for 3 purposes: System clock, Stopwatch and Countdown.  <br>In the last two cases and when QLC+ is in operate mode, clicking with the mouse left button will pause the counter, while clicking with the mouse right button will reset the counter to the initial value.  <br>When in system clock mode, it is possible to schedule when to start a QLC+ function during the time of day. |
-| ![](/basics/editcut.png) | Cut the currently selected widget(s) to the clipboard. Note that the widget(s) will only disappear when pasted into the new location. |
-| ![](/basics/editcopy.png) | Copy the currently selected widget(s) to the clipboard. |
-| ![](/basics/editpaste.png) | Paste the widget(s) in clipboard to the currently selected frame. |
-| ![](/basics/editdelete.png) | Destroy the currently selected widget(s) completely. If a frame has been selected, this destroys everything inside it, including other frames. |
-| ![](/basics/edit.png) | Configure the currently selected widget using its own configuration dialog. |
+| ![](/basics/button.png) | Add a new [Button](button) to the currently selected frame (CTRL+SHIFT+B) |
+| ![](/basics/buttonmatrix.png) | Add a new [Button Matrix](button-matrix) to the currently selected frame, using the dedicated dialog (CTRL+SHIFT+M) |
+| ![](/basics/slider.png) | Add a new [Slider](slider) to the currently selected frame (CTRL+SHIFT+S) |
+| ![](/basics/slidermatrix.png) | Add a new [Slider Matrix](slider-matrix) to the currently selected frame (CTRL+SHIFT+I) |
+| ![](/basics/rgbmatrix.png) | Add a new [Animation](animation) to the currently selected frame (CTRL+SHIFT+R) |
+| ![](/basics/knob.png) | Add a new [Knob](slider) to the currently selected frame. This is a convenient shortcut for adding a slider widget using the knob style (CTRL+SHIFT+K) |
+| ![](/basics/speed.png) | Add a new [Speed Dial](speed-dial) to the currently selected frame (CTRL+SHIFT+D) |
+| ![](/basics/xypad.png) | Add a new [XY Pad](xy-pad) to the currently selected frame (CTRL+SHIFT+X) |
+| ![](/basics/cuelist.png) | Add a new [Cue List](cue-list) to the currently selected frame (CTRL+SHIFT+C) |
+| ![](/basics/frame.png) | Add a new [Frame](frame) to the currently selected frame (CTRL+SHIFT+F) |
+| ![](/basics/soloframe.png) | Add a new [Solo Frame](solo-frame) to the currently selected frame (CTRL+SHIFT+O) |
+| ![](/basics/label.png) | Add a new [Label](label) to the currently selected frame (CTRL+SHIFT+L) |
+| ![](/basics/audioinput.png) | Add a new [Audio triggers](audio-triggers) widget to the currently selected frame (CTRL+SHIFT+A) |
+| ![](/basics/clock.png) | Add a new Clock widget to the currently selected frame (CTRL+SHIFT+T). This widget can be used for 3 purposes: System clock, Stopwatch and Countdown.  <br>In the last two cases and when QLC+ is in operate mode, clicking with the mouse left button will pause the counter, while clicking with the mouse right button will reset the counter to the initial value.  <br>When in system clock mode, it is possible to schedule when to start a QLC+ function during the time of day. |
+| ![](/basics/editcut.png) | Cut the currently selected widget(s) to the clipboard. Note that the widget(s) will only disappear when pasted into the new location (CTRL+X) |
+| ![](/basics/editcopy.png) | Copy the currently selected widget(s) to the clipboard (CTRL+C) |
+| ![](/basics/editpaste.png) | Paste the widget(s) in clipboard to the currently selected frame (CTRL+V) |
+| ![](/basics/editdelete.png) | Destroy the currently selected widget(s) completely. If a frame has been selected, this destroys everything inside it, including other frames (Delete) |
+| ![](/basics/edit.png) | Configure the currently selected widget using its own configuration dialog (CTRL+E) |
 | ![](/basics/editclear.png) | Rename the currently selected widget(s). |
-| ![](/basics/up.png) | Bring the selected widget to front. |
-| ![](/basics/down.png) | Send the selected widget to back. |
-| ![](/basics/color.png) | Change the background color of the selected widget. |
-| ![](/basics/image.png) | Set a background picture for the selected widget. |
+| ![](/basics/up.png) | Bring the selected widget to front (SHIFT+UP) |
+| ![](/basics/down.png) | Send the selected widget to back (SHIFT+DOWN) |
+| ![](/basics/color.png) | Change the background color of the selected widget (SHIFT+B) |
+| ![](/basics/image.png) | Set a background picture for the selected widget (SHIFT+I) |
 | ![](/basics/fontcolor.png) | Change the font color of the selected widget. |
-| ![](/basics/fonts.png) | Set the font properties of the selected widget. |
+| ![](/basics/fonts.png) | Set the font properties of the selected widget (SHIFT+O) |
 | ![](/basics/configure.png) | Configure the Virtual Console properties such as the size workspace, the widgets' default properties and the Grand Master slider properties. |
 | ![](/basics/panic.png) | Stop all currently running functions. |
