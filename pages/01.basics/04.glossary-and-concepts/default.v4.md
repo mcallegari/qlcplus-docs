@@ -16,7 +16,7 @@ Like most of the QLC+ functions, Audio supports fade in and fade out times.
 
 ### ![](../blackout.png) Blackout
 
-Blackout is a special QLC+ function used to set all [HTP](#htp-highest-takes-precedence) channels in all universes to zero, this stops all light output from all fixtures. The channels will stay that way, regardless of which functions are currently being run or what values have been set to them manually. When the Blackout is switched off, all the channels will go back to being set by the functions which are running. 
+Blackout is a special QLC+ function used to set all [HTP](#htp-highest-takes-precedence) channels in all universes to zero. This will have the effect of stopping light output from all fixtures. The channels will remain at zero, regardless of currently running functions or values have been set to them manually. When the Blackout is switched off, all the channels will go back to being controlled by functions or their manually set value. 
 
 ### Capabilities
 
@@ -35,7 +35,7 @@ Channel groups can have a user defined name and can group together any user defi
 
 A chaser [function](#functions) is built up from multiple scenes that are run in sequence, one after the other, when the chaser function is started. The next function is run only after the previous has finished. Any number of [functions](#functions) can be inserted to a chaser.
 
-The Chaser function's direction can be reversed. The Chaser function can also be set to do an infinite loop, an infinite ping-pong-loop (direction is reversed after each pass) or it can run through just once, in a single-shot mode, after which it terminates by itself. If the function is set to loop infinitely, it must be stopped manually.
+The Chaser function's direction can be reversed or scene selection can be randomized. The Chaser function can also be set to do an infinite loop, an infinite ping-pong-loop (direction is reversed after each pass) or it can run through just once, in a single-shot mode, after which it terminates by itself. If the function is set to loop infinitely, it must be stopped manually.
 
 Each Chaser has its own speed settings:
 
