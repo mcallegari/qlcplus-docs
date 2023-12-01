@@ -16,7 +16,7 @@ Like most of the QLC+ functions, Audio supports fade in and fade out times.
 
 ### ![](../blackout.png) Blackout
 
-Blackout is used to set all channels in all universes to zero and keep them that way, regardless of which functions are currently being run or what values have been set to them manually. When blackout is turned off, the current values of all channels are sent to each universe.
+Blackout is a special QLC+ function used to set all [HTP](#htp-highest-takes-precedence) channels in all universes to zero, this stops all light output from all fixtures. The channels will stay that way, regardless of which functions are currently being run or what values have been set to them manually. When the Blackout is switched off, all the channels will go back to being set by the functions which are running. 
 
 ### Capabilities
 
