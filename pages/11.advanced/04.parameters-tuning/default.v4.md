@@ -24,9 +24,8 @@ Windows
 -------
 
 Configuration parameters are stored in the Windows registry.  
-To access it, run the "regedit" tool and search for the key named "qlcplus".
+To access it, run the "regedit" tool and search for the key named "qlcplus".  
 The key where user configuration is stored is named
-
 `Computer\HKEY_CURRENT_USER\Software\qlcplus\`
 
 Mac OSX
