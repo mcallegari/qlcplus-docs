@@ -36,7 +36,8 @@ Here's the quick command to access it from a terminal:
 `cd $HOME/Library/Preferences`  
 The QLC+ configuration file is called `net.sf.Q Light Controller Plus.plist` while the Fixture editor configuration file is called `net.sf.Fixture Definition Editor.plist`.  
   
-**Please note that preferences are cached!** Basically OSX loads all the plist files in memory at boot, and if you change them manually it will ignore the changes. Even worse, periodically it refreshes the files, so it overwrites your changes.  
+**Please note that preferences are cached!**  
+Basically OSX loads all the plist files in memory at boot, and if you change them manually it will ignore the changes. Even worse, periodically it refreshes the files, so it overwrites your changes.  
 The solution is, after changing a .plist file, open a terminal and type this:  
 `killall -u yourusername cfprefsd`  
 Where `yourusername` is the name of the user you use to access your Mac. The command forces OSX to reload the preferences, including your changes.
