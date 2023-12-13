@@ -15,7 +15,7 @@ QLC+ on Window comes as a self installing .exe package. Just double click on the
 Chose whether to install QLC+ in its standard location (C:\QLC+) or another folder like C:\Program Files.
 
 No admin priviledges are required to install QLC+ unless you want to associate .qxw (Project files) and .qxf (Fixture definition files) to the related application.
-In that case, left click on the installer file and run it as administrator.
+In that case, right click on the installer file and run it as administrator.
 
 ## macOS
 
