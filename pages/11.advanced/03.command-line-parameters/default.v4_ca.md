@@ -43,7 +43,7 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-l o** --locale<br><br>** Descripció:** Utilitza l'idioma indicat per a la traducció<br><br>**Paràmetres:** Codi d'idioma (actualment admès: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Exemples:**  <br>Utilitza l'idioma finès:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
+| **-l o** --locale<br><br>**Descripció:** Utilitza l'idioma indicat per a la traducció<br><br>**Paràmetres:** Codi d'idioma (actualment admès: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Exemples:**  <br>Utilitza l'idioma finès:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
 
 |     |
 | --- |
