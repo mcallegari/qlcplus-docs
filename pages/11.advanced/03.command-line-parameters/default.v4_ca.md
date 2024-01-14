@@ -55,7 +55,7 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-o o --open**<br><br>** Descripció:** Obre el fitxer de l'espai de treball donat<br><br>** Paràmetres:** Nom del fitxer<br><br>** Exemples:**  <br>Obre mydesk.qxw:<br> qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
+| **-o o --open**<br><br>** Descripció:** Obre el fitxer de l'espai de treball donat<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>Obre mydesk.qxw:<br> qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
 
 |     |
 | --- |
@@ -71,12 +71,12 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-wp o --web-port**<br><br>**Descripció:** Utilitzar un port específic per a l'accés web<br><br>** Paràmetres:** Número de port<br><br>** Exemples:**  <br>qlcplus -wp 12345  <br>qlcplus --web-port 12345 |
+| **-wp o --web-port**<br><br>**Descripció:** Utilitzar un port específic per a l'accés web<br><br>**Paràmetres:** Número de port<br><br>**Exemples:**  <br>qlcplus -wp 12345  <br>qlcplus --web-port 12345 |
 
 |     |
 | --- |
-| **-wa o --web-auth**<br><br>**Descripció:** Activa l'accés web remot amb l'autenticació dels usuaris<br><br>** Paràmetres:** Cap<br><br>**Exemples:**  <br>qlcplus -wa  <br>qlcplus --web-auth |
+| **-wa o --web-auth**<br><br>**Descripció:** Activa l'accés web remot amb l'autenticació dels usuaris<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>qlcplus -wa  <br>qlcplus --web-auth |
 
 |     |
 | --- |
-| **-a o --web-auth-file**<br><br>**Descripció:** Especifiqueu un fitxer on emmagatzemar les credencials d'autenticació bàsica d'accés web<br><br>** Paràmetres:** Nom del fitxer<br><br>** Exemples:**  <br>qlcplus -wa qlcplus_passwd  <br>qlcplus --web-auth-file qlcplus_passwd |
+| **-a o --web-auth-file**<br><br>**Descripció:** Especifiqueu un fitxer on emmagatzemar les credencials d'autenticació bàsica d'accés web<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>qlcplus -wa qlcplus_passwd  <br>qlcplus --web-auth-file qlcplus_passwd |
