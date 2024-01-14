@@ -55,7 +55,7 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-o o --open**<br><br>**Descripció:**Obre el fitxer de l'espai de treball donat<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>Obre mydesk.qxw:<br> qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
+| **-o o --open**<br><br>**Descripció:** Obre el fitxer de l'espai de treball donat<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>Obre mydesk.qxw:<br> qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
 
 |     |
 | --- |
