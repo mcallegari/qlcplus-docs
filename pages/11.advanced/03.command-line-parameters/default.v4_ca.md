@@ -27,11 +27,11 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-f o --fullscreen**<br><br>**Descripció:** Inicia l'aplicació en mode de pantalla completa<br><br>** Paràmetres:** Mètode (ja sigui 'normal' o 'redimensionar')<br><br>**Exemples:**  <br>Digues al gestor de finestres que doni espai a tota la pantalla a QLC+<br>: qlcplus  -f<br>qlcplus  --fullscreen<br>qlcplus -f normal  <br>qlcplus --fullscreen normal  <br>  <br>Redimensiona QLC+ per ocupar tot l'espai de la pantalla (útil en sessions X11 personalitzades sense un gestor de finestres): <br>qlcplus -f resize <br>qlcplus --fullscreen resize |
+| **-f o --fullscreen**<br><br>**Descripció:** Inicia l'aplicació en mode de pantalla completa<br><br>**Paràmetres:** Mètode (ja sigui 'normal' o 'redimensionar')<br><br>**Exemples:**  <br>Digues al gestor de finestres que doni espai a tota la pantalla a QLC+<br>: qlcplus  -f<br>qlcplus  --fullscreen<br>qlcplus -f normal  <br>qlcplus --fullscreen normal  <br>  <br>Redimensiona QLC+ per ocupar tot l'espai de la pantalla (útil en sessions X11 personalitzades sense un gestor de finestres): <br>qlcplus -f resize <br>qlcplus --fullscreen resize |
 
 |     |
 | --- |
-| **-g o --log**<br><br>**Descripció:** Registra els missatges de depuració a un fitxer (`$HOME/QLC+.log`)<br><br>**Paràmetres:**1 Cap<br><br>**Exemples:** <br>Habilita els missatges de depuració i emmagatzema'ls per registrar <br>qlcplus -d 0 -g <br>qlcplus --debug 0 --log |
+| **-g o --log**<br><br>**Descripció:** Registra els missatges de depuració a un fitxer (`$HOME/QLC+.log`)<br><br>**Paràmetres:** Cap<br><br>**Exemples:** <br>Habilita els missatges de depuració i emmagatzema'ls per registrar <br>qlcplus -d 0 -g <br>qlcplus --debug 0 --log |
 
 |     |
 | --- |
