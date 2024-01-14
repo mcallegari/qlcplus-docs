@@ -10,71 +10,71 @@ taxonomy:
         text-align: left;
     }
 </style>
-### Chapter 8
+### Capítol 8
 
-# Input/Output
+# Entrada/Sortida
 
-By default QLC+ provides 4 universes but you can add/remove them as needed.  
-The input/output mapping is saved in the currently loaded project. This allows you to port your project on another computer/OS without the need to reconfigure it every time.  
-If no project is loaded, QLC+ will keep the I/O mapping as a "fallback" configuration.
+Per defecte, QLC+ proporciona 4 universos, però podeu afegir-los/eliminar-los segons sigui necessari.  
+El mapeig d'entrada/sortida es desa al projecte actualment carregat. Això us permet portar el vostre projecte a un altre ordinador/SO sense necessitat de reconfigurar-lo cada vegada.  
+Si no es carrega cap projecte, QLC+ mantindrà el mapatge d'E/S com una configuració "alternativa".
 
-Input/Output Manager
+Gestor d'Entrada/Sortida
 --------------------
 
-To access the Input/Output Manager, just click on the tab with the ![](/basics/input_output.png) icon placed on the bottom of the QLC+ main screen.  
-The screen is composed in this way:
+Per accedir al Gestor d'Entrada/Sortida, només heu de fer clic a la pestanya amb la icona ![](/basics/input_output.png) col·locada a la part inferior de la pantalla principal de QLC+.  
+La pantalla està composta d'aquesta manera:
 
-* On the left hand side there is the list of internal universes that QLC+ can manage
-* On the right hand side there is the list of devices and their mapped inputs, outputs and feedback lines that QLC+ has detected
-* On the bottom right hand side there is a panel displaying brief information on the currently selected device
+* A l'esquerra hi ha la llista d'universos interns que QLC+ pot gestionar
+* A la dreta hi ha la llista de dispositius i les seves entrades, sortides i línies de retroalimentació mapejades que ha detectat QLC+
+* A la part inferior dreta hi ha un plafó que mostra informació breu sobre el dispositiu seleccionat actualment
 
-Every device has a checkbox whenever an input, output or feedback line is available.  
-Each QLC+ universe can map a single input, a single output and a single feedback line
+Cada dispositiu té una casella de selecció quan hi ha disponible una línia d'entrada, sortida o retroalimentació.  
+Cada univers QLC+ pot mapejar una sola entrada, una única sortida i una única línia de retroalimentació
 
-Some plugins might require configuration before they can be used' so you might not be able to see all inputs/outputs at first. The configuration button is place next to the information panel and it is enabled if the plugin allows any manual setting.  
-The button icon is: ![](/basics/configure.png)
+És possible que alguns connectors requereixin configuració abans que es puguin utilitzar, de manera que és possible que no pugueu veure totes les entrades/sortides al principi. El botó de configuració es col·loca al costat del plafó d'informació i està habilitat si el connector permet qualsevol configuració manual.  
+La icona del botó és: ![](/basics/configure.png)
 
-Adding/Removing universes
+Afegint/Suprimint universos
 -------------------------
 
-QLC+ supports any number of universes, depending on the CPU limit of the device controlling them.  
-On the left hand side of the Input/Output Manager there is a toolbar where you can add/remove, name and configure universes.
+QLC+ suporta qualsevol nombre d'universos, depenent del límit de CPU del dispositiu que els controla.  
+A l'esquerra del Gestor d'Entrada/Sortida hi ha una barra d'eines on podeu afegir/eliminar, anomenar i configurar universos.
 
 |     |     |
 | --- | --- |
-| ![](/basics/edit_add.png) | Add a new universe. The universe will have a name like "Universe X", where X is a progressive number assigned by QLC+ (and also the Universe ID). |
-| ![](/basics/edit_remove.png) | Remove the currently selected universe.  <br>**Please be careful with this operation as it can compromise your project and cannot be reverted.**  <br>When deleting a universe, if it is currently patched or some fixtures are mapped on it, a popup message will appear asking for confirmation if the operation should be completed or abandoned. |
-| **Universe name** | An arbitrary string that you can set to quickly identify the meaning of a Universe |
-| **Passthrough** | See [below](#universe-passthrough) |
+| ![](/basics/edit_add.png) | Afegeix un nou univers. L'univers tindrà un nom com "Univers X", on X és un nombre progressiu assignat per QLC+ (i també l'Univers ID). |
+| ![](/basics/edit_remove.png) | Elimina l'univers seleccionat actualment.  <br>**Aneu amb compte amb aquesta operació, ja que pot comprometre el vostre projecte i no es pot revertir.** <br>Quan suprimiu un univers, si està pedaçat actualment o hi ha alguns fixtures mapats, apareixerà un missatge emergent demanant confirmació si l'operació s'ha de completar o abandonar. |
+| **Nom de l'Univers** | Una cadena arbitrària que podeu establir per a identificar ràpidament el significat d'un Univers |
+| **Pas a través** | Vegeu [sota](#universe-passthrough) |
 
-Patching
+Pedaç
 --------
 
-To patch a plugin's input/output line to the selected universe, you need to place a checkmark on that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the checkmark will move from its previous position to the one you just checked.  
-If you don't see any line on a plugin, it means you don't have any device that QLC+ understands and you're left with the one and only (non-selectable) choice: None.
+Per a pedaçar la línia d'entrada/sortida d'un connector a l'univers seleccionat, heu de col·locar una marca de verificació a la línia d'entrada/sortida d'aquest connector en particular. Només podeu tenir una línia assignada a un univers alhora, de manera que quan marqueu una altra línia, la marca de selecció es mourà des de la seva posició anterior a la que acabeu de marcar.  
+Si no veieu cap línia en un connector, vol dir que no teniu cap dispositiu que QLC+ entengui i que us queda amb l'opció única (no seleccionable): Cap.
 
-When an input/output line is checked, the corresponding universe information on the left hand side of the screen will change and will display the new configuration set.  
-The plugin information on the bottom right hand side of the screen will change as well and will give you the new status of the plugin line.
+Quan es marca una línia d'entrada/sortida, la informació de l'univers corresponent a la part esquerra de la pantalla canviarà i mostrarà el nou conjunt de configuració.  
+La informació del connector a la part inferior dreta de la pantalla també canviarà i us donarà el nou estat de la línia del connector.
 
-Universe Passthrough
+Pas a través per l'Univers
 --------------------
 
-When passthrough is enabled, universe just forwards what it receives in its input line to its output line. This is useful for several things:
+Quan el pas a través està habilitat, l'univers només reenvia el que rep en la seva línia d'entrada a la seva línia de sortida. Això és útil per a diverses coses:
 
-* **Protocol converter**: when you want to use QLC+ to act as a "protocol" converter. For example you can use this feature to transparently map an ArtNet network to a DMX USB adapter or even MIDI.
-* **Monitor external data**: patch fixtures and watch the data in DMX monitor
-* **Merge data from external controller**: Have external lighting desk control some of the channels independently (for example conventionals) and QLC+ control intelligent lights on the same universe.
-* **Raspberry Pi**: forward data from QLC+ on PC while programming scenes; when the workspace is transferred, Raspberry becomes main controller; the devices are always connected to RPi
+* **Convertidor de Protocol**: quan voleu utilitzar QLC+ per actuar com a convertidor "protocol". Per exemple, podeu utilitzar aquesta característica per mapejar de manera transparent una xarxa ArtNet a un adaptador USB DMX o fins i tot MIDI.
+* **Monitoreja les dades externes**: pedaça els fixtures i mira les dades al monitor DMX
+* **Fusionar dades des d'un controlador extern**: Tenir un escriptori d'il·luminació extern controla alguns dels canals de forma independent (per exemple convencionals) i QLC+ controla llums intel·ligents en el mateix univers.
+* **Raspberry Pi**: reenvia les dades de QLC+ a PC mentre es programen escenes; quan es transfereix l'espai de treball, Raspberry es converteix en el controlador principal; els dispositius sempre estan connectats a RPi
 
-Passthrough data is not affected by QLC+ grandmaster or channel modifiers. It is merged in HTP fashion with QLC+ output if there are any fixtures patched at that channel (Note: it does not use LTP/HTP channel settings). Blackout affects passthrough data.
+Les dades de pas a través  no es veuen afectades pels modificadors de gran mestre o modificadors de canal de QLC+. Es fusiona a la manera de HTP amb la sortida de QLC+ si hi ha cap fixture pedaçada en aquest canal (Nota: no utilitza la configuració del canal LTP/HTP). L'apagada/Blackout afecta les dades de pas a través.
 
-Input and Feedbacks
+Entrades i Retroalimentacions
 -------------------
 
-When a plugin input line is checked, it gets enabled right away, so you can perform a basic test to double check if your hardware is working properly with QLC+.  
-Just move a fader/knob on your external device, and if everything works fine, you will see a ![](/basics/input.png) icon appearing beside the corresponding universe on the left side of the screen.
+Quan es marca una línia d'entrada de connectors, s'activa immediatament, de manera que podeu realitzar una prova bàsica per comprovar si el vostre maquinari funciona correctament amb QLC+.  
+Simplement moveu un fader/knob al dispositiu extern, i si tot funciona bé, veureu una icona ![](/basics/input.png) que apareix al costat de l'univers corresponent a la part esquerra de la pantalla.
 
-If your input device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as Behringer BCF2000 support this feature.  
-At the moment feedbacks are supported only through MIDI, OSC and loopback.
+Si el dispositiu d'entrada admet un canal de retorn, QLC+ pot enviar-li una retroalimentació visual/mecànica. Dispositius com Behringer BCF2000 admeten aquesta característica.  
+De moment, les retroalimentacions només són compatibles a través de MIDI, OSC i loopback.
 
-To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [howto for input profiles](input-profiles).
+Per saber com configurar el dispositiu d'entrada extern per al millor ús amb QLC+, continueu llegint amb el [howto per als perfils d'entrada](input-profiles).

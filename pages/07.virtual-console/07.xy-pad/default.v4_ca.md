@@ -4,141 +4,141 @@ date: '03:22 22-08-2023'
 media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 ---
 
-XY Pad is a Virtual Console widget dedicated to fixtures positioning.  
-It can handle the typical DMX movement channels (**pan** and **tilt**) of intelligent lighting fixtures, namely scanners and moving heads.  
-The pad is a resizable area, surrounded by several controls to cover the needs you might have during a live show.  
-It is displayed as following:
+El XY Pad és un giny de consola virtual dedicat al posicionament de fixtures.  
+Pot gestionar els canals de moviment DMX típics (**panoràmica** i **inclinació**) dels aparells d'il·luminació intel·ligents, és a dir, escàners i capçals mòbils.  
+El pad és una zona redimensionable, envoltada de diversos controls per cobrir les necessitats que puguis tenir durant un espectacle en directe.  
+Es mostra de la següent manera:
 
 ![](xypad.png)
 
-### Widget elements
+### Elements del Giny
 
 |     |     |
 | --- | --- |
-| **(1) Range sliders** | These sliders limit the working area. (7) |
-| **(2) XY Pad name** | The name can be changed in properties, see below. |
-| **(3) DMX Coordinates** | This part displays current DMX coordinates in format (Pan course.Pan fine : Tilt course.Tilt fine). |
-| **(4) Horizontal and vertical angle** | If the fixtures controlled have proper pan and tilt range filled in in their definitions, and the range is same for all fixtures, then this text will show the angle calculated from DMX coordinates.  <br>0° is in the middle of the range (DMX value 127.127). For example, if pan range for a fixture is 540°, the displayed angle will be between -270° and 270°.  <br>Note: this may not work properly, when a fixture has limited axis range in configuration, or reversed axis. |
-| **(5) Value sliders** | These sliders can be used to change value of the X/Y axes. |
-| **(6) Handle** | The blue point is the handle. You can move it either with the mouse, with the keyboard or an external controller. |
-| **(7) Working area** | This is the area that limits the possible positions. It can be equal or a portion of (8) |
-| **(8) Main area** | This is the area representing all the possible X/Y positions. |
-| **(9) Presets** | This is the area showing the preset buttons, if available. |
+| **(1) Controls lliscants d'interval** | Aquests controls lliscants limiten l'àrea de treball. (7) |
+| **(2) Nom del Pad X/Y** | El nom es pot canviar a les propietats, vegeu més avall. |
+| **(3) Coordenades DMX** | Aquesta part mostra les coordenades DMX actuals en format (Pan course.Pan fine : Tilt course.Tilt fine). |
+| **(4) Angle horitzontal i vertical** | Si els fixtures controlats tenen un rang d'inclinació i panoràmica adequat omplert en les seves definicions, i l'interval és el mateix per a tots els fixtures, llavors aquest text mostrarà l'angle calculat a partir de les coordenades DMX.  <br>0° està al mig del rang (valor DMX 127,127). Per exemple, si l'interval de la panoràmica per a un fixture és 540., l'angle mostrat serà entre -270. i 270..  <br>Nota: això pot no funcionar correctament, quan un fixture té un interval d'eix limitat a la configuració, o un eix invertit. |
+| **(5) Controls lliscants de Valor** | Aquests controls lliscants es poden utilitzar per a canviar el valor dels eixos X/Y. |
+| **(6) Manipulador** | El punt blau és el manipulador. Podeu moure'l amb el ratolí, amb el teclat o amb un controlador extern. |
+| **(7) Zona de Treball** | Aquest és l'àmbit que limita les possibles posicions. Pot ser igual o una porció de (8) |
+| **(8) Àrea Principal** | Aquesta és l'àrea que representa totes les possibles posicions X/Y. |
+| **(9) Predefinits** | Aquesta és l'àrea que mostra els botons de preselecció, si estan disponibles. |
 
-### Limiting the working area
+### Limitar l'àrea de treball
 
-The XY Pad is basically a map of the whole range of degrees that the pan and tilt channels of your fixtures can manage.  
-Here's a picture representing how the main area normally represents degrees:
+El XY Pad és bàsicament un mapa de tot el rang de graus que poden gestionar els canals de panoràmica i inclinació dels teus fixtures.  
+Aquesta és una imatge que representa com l'àrea principal normalment representa els graus:
 
 ![](xypad2.png)
 
-There are cases though where you want to limit the degrees a moving head or a scanner could reach.  
-For example fixtures with a 540° Pan range, should be limited to work only in a range facing the audience, or you might want to avoid that moving heads mounted upside down on a truss will point to the ceiling or outside the stage.  
-With the XY Pad, there are 2 ways to achieve this:
+No obstant això, hi ha casos en què es vol limitar els graus que pot assolir un cap en moviment o un escàner.  
+Per exemple, els fixtures amb un rang de 540° Pan, s'han de limitar a treballar només en un rang de cara a l'audiència, o potser vulguis evitar que els caps mòbils muntats al revés en una armadura apuntin al sostre o fora de l'escenari.  
+Amb el XY Pad, hi ha 2 maneres d'aconseguir-ho:
 
-**1\. Working window**
+**1\. Finestra de treball**
 
-With the top and left range sliders **(1)**, it is possible to limit the area where the XY Pad will work.  
-When reducing the range of those sliders, a semi transparent green area **(7)** will be highlighted on top of the main area, to mark the X/Y limits where your fixtures should operate.  
-Note that when using a mouse on the user interface, the movement of the handles will be limited to the working window, even if you drag the cursor outside of it, while when using an external controller all the values will be scaled to the window, so you will be able to use the full range of a physical fader, thus having more sensitivity when setting a position.
+Amb els controls lliscants de rang superior i esquerre **(1)**, és possible limitar l'àrea on funcionarà el XY Pad.  
+En reduir l'interval d'aquests controls lliscants, es ressaltarà una àrea verda semi transparent **(7)** a la part superior de l'àrea principal, per a marcar els límits X/Y on haurien d'operar els accessoris.  
+Tingueu en compte que quan utilitzeu un ratolí a la interfície d'usuari, el moviment de les nanses es limitarà a la finestra de treball, fins i tot si arrossegueu el cursor fora d'ella, mentre que quan utilitzeu un controlador extern, tots els valors s'escalaran a la finestra, de manera que podreu utilitzar tot el rang d'un fader físic, tenint així més sensibilitat quan establiu una posició.
 
-**2\. Individual fixture range**
+**2\. Rang de fixture individual**
 
-It is possible to set a specific range for each fixture in the properties dialog (see the **Configuration** paragraph). With this method, the whole main area **(8)** is used and every specified range of each fixture is scaled onto it.  
-This come very handy when you want to use a XY Pad with mixed fixtures, with different ranges of degrees.
+És possible establir un interval específic per a cada fixture en el diàleg de propietats (vegeu el paràgraf **Configuració**). Amb aquest mètode, s'utilitza tota l'àrea principal **(8)** i s'escala cada rang especificat de cada fixture.  
+Això és molt útil quan es vol utilitzar un pad XY amb fixtures mixtes, amb diferents rangs de graus.
 
-For example you can make a 540° degrees Pan to move exactly like a 360° degrees Pan.
+Per exemple, pots fer que una panoràmica de 540° graus es mogui exactament com una panoràmica de 360°.
 
-Another example: set fixture X Axis (Pan) minimum to 20% (DMX value 51), maximum to 80% (DMX value 204). When the handle is at the left edge (value 0), the actual DMX output is 51. Similarly, handle at the right edge will output 204 (=80%). For values in between, the DMX output is scaled proportionally.
+Un altre exemple: fixar l'eix X (Pan) mínim al 20% (valor DMX 51), màxim al 80% (valor DMX 204). Quan la nansa es troba a la vora esquerra (valor 0), la sortida real de DMX és 51. De la mateixa manera, la nansa a la vora dreta donarà 204 (=80%). Per als valors entremig, la sortida DMX s'escala proporcionalment.
 
-It is possible to have both limits enabled (using the range sliders and limits per fixtures).
+És possible tenir els dos límits habilitats (utilitzant els controls lliscants de rang i els límits per fixtures).
 
-### XY Pad usages
+### Usos del Pad XY
 
-The XY Pad allows 3 completely different usages, but all targeted to positioning. It's up to you to decide the best use of them depending on your needs. You also might want to consider the usage of multiple XY Pads with different purposes.
+El Pad XY permet 3 usos completament diferents, però tots orientats al posicionament. Depèn de tu decidir el millor ús d'ells en funció de les teves necessitats. També és possible que vulgueu considerar l'ús de múltiples XY Pads amb diferents propòsits.
 
-* **1- Absolute positioning**: this is the basic usage and it requires only to specify which fixtures you intend to control (added via Configuration window) and eventually their specific range of operation.  
-    As previosuly described all you need to do is to setup your fixtures once and start moving them with your favourite controller.  
-    It is also possible to define some position presets, so a number of buttons will be displayed in **(9)** to quickly recall an absolute position.  
-    If a Fixture Group preset is activated, the XY Pad will control the absolute positions only of the Fixtures defined in the preset. (see Presets tab for more info)
+* **1- Posicionament Absolut**: aquest és l'ús bàsic i només requereix especificar quins fixtures voleu controlar (afegits a través de la finestra de configuració) i finalment el seu rang específic d'operació.  
+    Com es descriu anteriorment, tot el que heu de fer és configurar els fixtures una vegada i començar a moure'ls amb el vostre controlador preferit.  
+    També és possible definir alguns preajustos de posició, de manera que es mostraran diversos botons a **(9)** per recuperar ràpidament una posició absoluta.  
+    Si s'activa un Grup Fixture predefinit, el XY Pad controlarà les posicions absolutes només dels Fixtures definits al predefinit. (vegeu la pestanya Predefinits per a més informació)
 
-* **2- EFX**: In the Configuration window (Presets tab), it is possible to add some presets to recall existing ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) functions. When activating a EFX preset, the animated preview of the fixtures movements will be displayed like this:  
+* **2- EFX**: A la finestra Configuració (pestanya Presets), és possible afegir alguns presets per recuperar les funcions ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) existents. En activar un valor predefinit EFX, la vista prèvia animada dels moviments de fixtures es mostrarà així:  
 ![](xypad-efx.png)  
-    If no working window is set, the EFX will be be displayed exactly like it is previewed in the [EFX Editor](../function-manager/efx-editor). Otherwise, the EFX will be scaled to fit the defined working window.  
-    If a working window is active, it will be shared between usage #1 and usage #2.
+    Si no s'ha definit cap finestra de treball, es mostrarà l'EFX exactament com es previsualitza a l'editor [EFX](../function-manager/efx-editor). Altrament, l'EFX s'escalarà per a ajustar-se a la finestra de treball definida.  
+    Si una finestra de treball està activa, es compartirà entre l'ús #1 i l'ús #2.
 
-* **3- Relative to a Scene**: In the Configuration window (Presets tab), it is also possible to add some presets to recall existing ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) functions  
-    XY Pad will detect which Pan/Tilt channels are present in the Scene and set them.  
-    The Pad handle **(6)** will automatically position itself to the center of the main area **(8)**. Moving the handle, will produce relative values from the center of the Pad, that will be added/subtracted to the DMX values of the running Scene.  
-    Moving up will add a negative offset to Tilt channels and moving down will add a positive offset.  
-    Moving left will add a negative offset to Pan channels and moving right will add a positive offset.  
-    When activating a Scene preset, is a working window is active, it will be hidden, as there's no absolute values involved in this usage. When switching back to usage #1 or #2, the working window will be restored.  
-    Please note that when a Scene preset is activated, the whole Scene will be actually started, with colors and everything. It is suggested in this case to create Scenes only with Pan/Tilt channels enabled, not to involve a XY Pad in other matters.
+* **3- Relatiu a una Escena**: A la finestra de Configuració (pestanya Presets), també és possible afegir alguns presets per recuperar les funcions d'![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#scene) existents  
+    El Pad XY detectarà quins canals de panoràmica/inclinació hi ha a l'escena i els configurarà.  
+    El manipulador del Pad **(6)** es col·locarà automàticament al centre de l'àrea principal **(8)**. En moure la nansa, es produiran valors relatius des del centre del Pad, que s'afegiran/substrauran als valors DMX de l'escena en execució.  
+    En moure cap amunt s'afegirà un desplaçament negatiu als canals d'inclinació i en baixar s'afegirà un desplaçament positiu.  
+    En moure a l'esquerra s'afegirà un desplaçament negatiu als canals Panoràmica i en moure a la dreta s'afegirà un desplaçament positiu.  
+    Quan s'activa una predefinició d'Escena, hi ha una finestra de treball activada, s'ocultarà, ja que no hi ha valors absoluts implicats en aquest ús. Quan tornis a l'ús #1 o #2, es restablirà la finestra de treball.  
+    Tingueu en compte que quan s'activa una predefinició d'Escena, s'iniciarà tota l'Escena, amb colors i tot. En aquest cas es suggereix crear escenes només amb els canals Pan/Tilt habilitats, no per implicar un XY Pad en altres assumptes.
 
-### Keyboard control
+### Control del Teclat
 
-It is possible to control head position with arrow keys on the keyboard. Each keypress increases/decreases coarse value by 1. With Shift key pressed, fine channel is changed by 1. With Ctrl, the step is 10 instead of 1.
+És possible controlar la posició del cap amb les fletxes del teclat. Cada pulsació de tecla augmenta/disminueix el valor aproximat en 1. Amb la tecla Maj premuda, el canal fi es canvia per 1. Amb Ctrl, el pas és 10 en lloc d'1.
 
 |     |     |     |
 | --- | --- | --- |
-| **Arrow keys** | Coarse | step=1 |
-| **Shift + Arrow keys** | Fine | step=1 |
-| **Ctrl + Arrow keys** | Coarse | step=10 |
-| **Shift + Ctrl + Arrow keys** | Fine | step=10 |
+| **Tecles de Fletxa** | Gruixut | Pas=1 |
+| **Majúscules + Tecles de fletxa** | Fi | Pas=1 |
+| **Ctrl + tecles de fletxa** | Gruixut | pas=10 |
+| **Maj + Ctrl + Tecles de fletxa** | Fi | pas=10 |
 
-### Configuration
+### Configuració
 
-XY Pads can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking on the XY pad itself.
+Els Pads XY es poden configurar amb el botó de propietats ![](/basics/edit.png) que es troba a la barra d'eines o fent doble clic al propi Pad XY.
 
-**1\. General tab**
+**1\. Pestanya General**
 
-Here you can set the basic XY Pad behaviour as well as the external input controls.  
-**Hint:** When assigning a XY pad from Touch OSC, you need to click the "Tilt / Vertical axis" auto detect button, otherwise the X and Y axes will be swapped.
-
-|     |     |
-| --- | --- |
-| **XY Pad name** | Set the name of the XY Pad. The name **(2)** is shown in the upper left hand corner of the widget on Virtual Console. |
-| **Y-Axis slider movement** | The behaviour of the vertical slider (the Y-Axis control) can be set to **Normal** or **Inverted**.  <br>In the first case the maximum value will be reached at the bottom of the pad, while in the second case it will be reached at the top. |
-| **Pan / Horizontal Axis** | Allow to select an external input to control the horizontal slider displayed at the bottom of the widget. When activating a EFX preset, this input will control the X position of the working window, so the X position of the EFX. |
-| **Tilt / Vertical Axis** | Allow to select an external input to control the vertical slider displayed at the right side of the widget. When activating a EFX preset, this input will control the Y position of the working window, so the Y position of the EFX. |
-| **Width** | Allow to select an external input to control the width of the working window. This has no effect in usage #1 and #3 |
-| **Height** | Allow to select an external input to control the height of the working window. This has no effect in usage #1 and #3 |
-
-
-**2\. Fixtures tab**
-
-Here you can add/remove the fixtures that the XY Pad will control in usage #1.
+Aquí podeu establir el comportament bàsic del Pad XY, així com els controls d'entrada externs.  
+**Consell:** Quan assigneu un pad XY des de Touch OSC, haureu de fer clic al botó de detecció automàtica "Eixos d'ajustament / Vertical", en cas contrari els eixos X i Y s'intercanviaran.
 
 |     |     |
 | --- | --- |
-| **Fixtures list** | Shows the fixtures that are currently controlled by the XY Pad.<br><br>**Fixture**: The names of each fixture<br>**X-Axis**: Shows the value range (and reversal if applicable) of the horizontal (Pan) axis for each fixture<br>**Y-Axis**: Shows the value range (and reversal if applicable) of the vertical (Tilt) axis for each fixture |
-| ![](/basics/edit_add.png) | Add [Fixtures](/basics/glossary-and-concepts#fixture) to be controlled by the XY Pad, using the [Select Fixture](/function-manager/fixture-selection) dialog.  <br>**NOTE**: Only those fixtures that have Pan and Tilt channels are shown in the dialog. |
-| ![](/basics/edit_remove.png) | Remove the selected fixtures from the XY Pad's control list. |
-| ![](/basics/edit.png) | Edit the selected fixture's behaviour as controlled by the XY Pad. |
+| **Nom del Pad XY** | Estableix el nom del Pad XY. El nom **(2)** es mostra a la cantonada superior esquerra del giny a la Consola Virtual. |
+| **Moviment del control lliscant de l'eix Y** | El comportament del control lliscant vertical (el control de l'eix Y) es pot establir a **Normal** o **Invertit**.  <br>En el primer cas s'arribarà al valor màxim a la part inferior del coixinet, mentre que en el segon cas s'arribarà a la part superior. |
+| **Eix Panoràmic/ Horitzontal** | Permet seleccionar una entrada externa per a controlar el control lliscant horitzontal que es mostra a la part inferior del giny. En activar un valor predefinit EFX, aquesta entrada controlarà la posició X de la finestra de treball, per tant la posició X de l'EFX. |
+| **Inclinació / Eix vertical** | Permet seleccionar una entrada externa per controlar el control lliscant vertical que es mostra al costat dret del giny. En activar un valor predefinit EFX, aquesta entrada controlarà la posició Y de la finestra de treball, per tant  la posició Y de l'EFX. |
+| **Amplada** | Permet seleccionar una entrada externa per a controlar l'amplada de la finestra de treball. Això no té cap efecte en l'ús #1 i #3 |
+| **Alçada** | Permet seleccionar una entrada externa per a controlar l'alçada de la finestra de treball. Això no té cap efecte en l'ús #1 i #3 |
 
 
-**![](/basics/edit.png) 2.1 Fixture movement configuration**
+**2\. Pestanya Fixtures**
 
-You can change the extent of movement and reverse fixtures' movement with the XY Pad Fixture Configuration dialog.
-
-|     |     |
-| --- | --- |
-| **Horizontal X-Axis** | **Minimum**: Set the minimum pan limit for the fixture<br>**Maximum**: Set the maximum pan limit for the fixture<br>**Reverse**: Reverse fixture's movement on the horizontal (pan) axis |
-| **Vertical Y-Axis** | **Minimum**: Set the minimum tilt limit for the fixture<br>**Maximum**: Set the maximum tilt limit for the fixture<br>**Reverse**: Reverse fixture's movement on the vertical (tilt) axis |
-
-
-**3\. Presets tab**
-
-Here you can add/remove presets to the XY Pad. Each preset is displayed as a button in the lower part of the XY Pad widget. EFX nad Scenes presets can be toggled, to start/stop a function, Fixture Groups presets can be toggled to activate/deactivate a Fxiture group, while Position presets can be clicked just once
+Aquí podeu afegir/eliminar els fixtures que el Pad XY controlarà en l'ús #1.
 
 |     |     |
 | --- | --- |
-| **Presets list** | Show the list of the presets currently added to the XY Pad |
-| ![](/basics/xypad.png) Add position | When clicking on this button, a new position preset is created and added to the XY Pad. By default the preset name are the X/Y coordinates at the moment of the creation |
-| ![](/basics/efx.png) Add EFX | When clicking on this button, the [Select Function](/function-manager/fixture-selection) dialog is displayed, allowing you to choose an existing EFX from your workspace.  <br>When done, a new EFX preset is created and added to the XY Pad. By default the preset name is the EFX name |
-| ![](/basics/scene.png) Add Scene | When clicking on this button, the [Select Function](../function-manager/function-selection) dialog is displayed, allowing you to choose an existing Scene from your workspace.  <br>When done, a new Scene preset is created and added to the XY Pad. By default the preset name is the Scene name.  <br>Note that if the selected Scene doesn't have any Pan or Tilt channels, an error is displayed and no preset is created. |
-| ![](/basics/group.png) Add Fixture Group | When clicking on this button, the [Select Fixture](/function-manager/fixture-selection) dialog is displayed, allowing you to create a group of Fixtures as a subgroup of the Fixtures the XY Pad is controlling (defined in the Fixtures tab)  <br>When clicking on a Fixture Group preset in Operate mode, the XY Pad will control only the Fixture positions of the activated Fixture Group.  <br>**Note**: A Fixture Group preset has no effect on EFX and Scene presets. |
-| ![](/basics/edit_remove.png) Remove | Removes the currently selected preset |
-| Preset name | Allows to enter an arbitrary name for the currently selected preset |
-| External input | Allows to select an external input control for the currently selected preset |
-| Key combination | Allows to select a keyboard combination for the currently selected preset |
+| **Llista de Fixtures** | Mostra els accessoris que controla actualment el Pad XY.<br><br>**Fixture**: Els noms de cada fixture<br>**Eix X**: Mostra el rang de valors (i la inversió si és aplicable) de l'eix horitzontal (Pan) per a cada fixture<br>**Eix Y**: Mostra el rang de valors (i la inversió si és aplicable) de l'eix vertical (Inclinació) per a cada fixture |
+| ![](/basics/edit_add.png) | Afegiu [Fixtures](/basics/glossary-and-concepts#fixture) per a ser controlat pel Pad XY, utilitzant el diàleg [Seleccioneu Fixture](/function-manager/fixture-selection).  <br>**NOTA**: Només es mostren els fixtures que tenen canals Panoràmica i Inclinació al diàleg. |
+| ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de la llista de control del Pad XY. |
+| ![](/basics/edit.png) | Edita el comportament del fixture seleccionat controlat pel Pad XY. |
+
+
+**![](/basics/edit.png) 2.1 Configuració del moviment del fixture**
+
+Podeu canviar l'extensió del moviment i el moviment inversos dels fixtures amb el diàleg de configuració del Fixture del Pad XY.
+
+|     |     |
+| --- | --- |
+| **Eix X horitzontal** | **Mínim**: Estableix el límit mínim per al fixture<br>**Màxim**: Estableix el límit màxim per al fixture<br>**Invers**: Inverteix el moviment del fixture a l'eix horitzontal (panoràmica) |
+| **Eix Y vertical** | **Mínim**: Estableix el límit mínim d'inclinació per al fixture<br>**Màxim**: Estableix el límit màxim d'inclinació per al fixture<br>**Invers**: Inverteix el moviment del fixture sobre l'eix vertical (inclinació) |
+
+
+**3\. Pestanya de predefinits**
+
+Aquí podeu afegir/eliminar predefinits al Pad XY. Cada predefinit es mostra com un botó a la part inferior del giny Pad XY. EFX i Escenas predefinides es poden alternar, per iniciar/aturar una funció, Grups de Fixtures predefinits es poden alternar per activar/desactivar un grup de Fixture, mentre que els predefinits de Posició es poden fer clic només una vegada
+
+|     |     |
+| --- | --- |
+| **Llista de valors predefinits** | Mostra la llista dels predefinits afegits actualment al Pad XY |
+| ![](/basics/xypad.png) Afegeix una posició | En fer clic en aquest botó, es crea una nova posició predefinida i s'afegeix al Pad XY. Per defecte el nom preestablert són les coordenades X/Y en el moment de la creació |
+| ![](/basics/efx.png) Afegeix EFX | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](/function-manager/fixture-selection), el qual us permetrà triar un EFX existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit EFX i s'afegeix al Pad XY. Per defecte el nom predefinit és el nom del EFX |
+| ![](/basics/scene.png) Afegeix una escena | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](../function-manager/function-selection), el qual us permetrà triar una escena existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit d'Escena i s'afegeix al Pad XY. Per defecte, el nom preestablert és el nom de l'Escena.  <br>Tingueu en compte que si l'escena seleccionada no té cap canal de panoràmica o inclinació, es mostrarà un error i no es crearà cap valor predefinit. |
+| ![](/basics/group.png) Afegeix un Grup de Fixtures | En fer clic en aquest botó, es mostra el diàleg [Selecciona Fixture](/function-manager/fixture-selection), el qual permet crear un grup de Fixtures com a subgrup de les Fixtures que el Pad XY controla (definit a la pestanya Fixtures) <br>En fer clic en un grup de Fixtures predefinit en el mode Operació, el Pad XY només controlarà les posicions de Fixture del Grup de Fixtures activat.  <br>**Nota**: Un preajustament de Grup de Fixtures no té cap efecte sobre els preajustaments d'EFX i Escena. |
+| ![](/basics/edit_remove.png) Elimina | Elimina el predefinit seleccionat |
+| Nom del predefinit | Permet introduir un nom arbitrari per al predefinit seleccionat |
+| Entrada externa | Permet seleccionar un control d'entrada extern per al predefinit seleccionat |
+| Combinació de tecles | Permet seleccionar una combinació de teclat per al predefinit seleccionat actualment |

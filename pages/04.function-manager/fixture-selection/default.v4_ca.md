@@ -3,8 +3,8 @@ title: 'Fixture Selection'
 date: '04:48 22-08-2023'
 ---
 
-Whenever a [Fixture](/basics/glossary-and-concepts#fixture) needs to be selected, for example when adding fixtures to a [Scene](/basics/glossary-and-concepts#scene) function, the **Select Fixture(s)** dialog is used.
+Sempre que cal seleccionar un ](/basics/glossary-and-concepts#fixture)Fixture[, per exemple quan s'afegeixen fixtures a una funció [Escena](/basics/glossary-and-concepts#scene), s'utilitza el diàleg **Selecionar Fixture(s)**.
 
-The dialog is very straightforward; there is only a list of fixtures that you can select from. In some cases you are allowed to select multiple fixtures, for example, when adding fixtures to a [Scene](/basics/glossary-and-concepts#scene) or an [EFX](/basics/glossary-and-concepts#efx). In these cases, the order in which the fixtures are selected will also be the order in which they are added to their destination.
+El diàleg és molt senzill; només hi ha una llista de fixtures des d'on podeu seleccionar. En alguns casos se us permet seleccionar múltiples fixtures, per exemple, quan s'afegeixen fixtures a una [Escena](/basics/glossary-and-concepts#scene) o a un [EFX](/basics/glossary-and-concepts#efx). En aquests casos, l'ordre en què se seleccionen els fixtures serà també l'ordre en què se sumen al seu destí.
 
-Refer to your operating system manual for documentation on how to select multiple items in a list.
+Consulteu el manual del sistema operatiu per a la documentació sobre com seleccionar diversos elements d'una llista.

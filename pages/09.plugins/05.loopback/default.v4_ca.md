@@ -6,27 +6,27 @@ date: '05:14 22-08-2023'
 Introducció
 ------------
 
-Loopback plugin provides a way to control [Virtual Console](/virtual-console) widgets from Scenes and other [Functions](/basics/glossary-and-concepts#functions). Data that QLC+ sends to the Output port is looped back to the Input port, where it can be used for external control. Obviously, the Output port and Input port may be attached to different universes.
+El connector Loopback proporciona una manera de controlar els ginys de la [Consola Virtual](/virtual-console) des d'escenes i altres [Funcions](/basics/glossary-and-concepts#functions). Les dades que QLC+ envia al port de sortida es retornen al port d'entrada, on es poden utilitzar per al control extern. Òbviament, el port de Sortida i el port d'Entrada poden estar connectats a diferents universos.
 
-The plugin provides 4 independent lines.
+El connector proporciona 4 línies independents.
 
-This plugin is mostly for advanced users -- unlike other input/output plugins, this plugin doesn't control any real device.
+Aquest connector és principalment per a usuaris avançats -- a diferència d'altres connectors d'entrada/sortida, aquest connector no controla cap dispositiu real.
 
-Configuration
+Configuració
 -------------
 
-Loopback plugin doesn't have any configuration. Simply attach Input and Output to desired universes.
+El connector Loopback no té cap configuració. Simplement adjunta l'Entrada i la Sortida als universos desitjats.
 
-Examples
+Exemples
 --------
 
-### Buttons that set a (submaster or regular) slider to a predefined value
+### Botons que estableixen un control lliscant (submestre o regular) a un valor predefinit
 
-These buttons can have a fade time attached, these changes may be gradual.
+Aquests botons poden tenir un temps d'esvaïment, aquests canvis poden ser graduals.
 
-Steps:
+Passos:
 
-1. Set one universe for Loopback output (U1), and set the slider's input universe to Loopback Input (U2). Let's say the sliders external control is set to channel 14.
-2. Add dimmer channel to U1 at address 14. In the channel modifiers dialog, set it to LTP (so that if the button goes off, the slider doesn't go to zero.
-3. Create scenes with desired slider values for channel 14 in the U1 universe. You may set fade times as well.
-4. Create buttons for the scenes
+1. Definiu un univers per a la sortida de Loopback (U1) i establiu l'univers d'entrada del control lliscant a Entrada de Loopback (U2). Diguem que el control extern dels controls lliscants està establert al canal 14.
+2. Afegeix un canal dimmer a U1 a l'adreça 14. En el diàleg de modificadors de canal, establiu-lo a LTP (de manera que si el botó es desactiva, el control lliscant no anirà a zero.
+3. Crea escenes amb els valors desitjats del control lliscant per al canal 14 de l'univers U1. També podeu establir temps d'esvaïment.
+4. Crea botons per a les escenes

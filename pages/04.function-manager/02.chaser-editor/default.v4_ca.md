@@ -3,39 +3,39 @@ title: 'Chaser Editor'
 date: '12:08 21-08-2023'
 ---
 
-The chaser editor, as its name suggests, is used to edit ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser) functions.  
-A Chaser is composed by steps and each step is represented by
+L'editor de chaser, com el seu nom indica, s'utilitza per editar ![](/basics/chaser.png) [funcions Chaser](/basics/glossary-and-concepts#chaser).  
+Un Chaser es compon de passos i cada pas està representat per
 
-* A progressive number
-* The related function name
-* Fade in time
-* Hold time
-* Fade out time
-* Step total duration time
-* A note field in case you need to write something to remember what the step does
+* Un nombre progressiu
+* El nom de la funció relacionada
+* Temps de Fade In/Esvaiment d'entrada
+* Temps d'espera
+* Temps de Fade Out/Esvaiment de sortida
+* Temps total de durada del pas
+* Un camp de nota en cas que necessiteu escriure alguna cosa per a recordar el que fa el pas
 
-The timings steps and the note field can be modified by double clicking on them. By default the times are taken in seconds (for example 135 means 2m15s), unless you use the same syntax QLC+ uses (for example 1m12s.80)
+Els passos de temps i el camp de nota es poden modificar fent doble clic sobre seu. Per defecte els temps es prenen en segons (per exemple 135 significa 2m15s), llevat que utilitzeu la mateixa sintaxi que utilitza QLC+ (per exemple 1m12s.80)
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| **Chaser name** | Change the name of the chaser. |
-| ![](/basics/speed.png) | Show/Hide the Speed Dial widget, used to facilitate the Chaser parameters tuning like Fade In, Fade Out and Hold |
-| ![](/basics/player_play.png) | Start to run the Chaser to test the playback beginning from the selected step |
-| ![](/basics/player_stop.png) | Stop a previously started playback |
-| ![](/basics/back.png) | When playback is active, go to the previous step in the Chaser |
-| ![](/basics/forward.png) | When playback is active, go to the next step in the Chaser |
-| ![](/basics/editcopy.png) | Copy the selected steps into the clipboard. |
-| ![](/basics/editpaste.png) | Paste the previously copied steps from clipboard to the current position selected. If none, the steps will be appended at the end of the list |
-| ![](/basics/editcut.png) | Remove the selected steps from the list and copy them into the clipboard. |
-| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the chaser, using the [Select Function](../function-selection) dialog. The function are inserted after the currently selected step. |
-| ![](/basics/edit_remove.png) | Remove the selected step from the chaser. |
-| ![](/basics/up.png) | Move the selected step above/before the previous step. |
-| ![](/basics/down.png) | Move the selected step below/after the next step. |
-| ![](/basics/random.png) | Reorder (shuffle) the selected scenes randomly. Main differences to "Run Order: Random" are that the shuffled scene order is static, predictable, can be modified manually and doesn't necessarily affect all scenes. |
-| **Run Order** | * Loop: Run through the steps over and over again.<br>* Single Shot: Run through the steps once and then stop.<br>* Ping Pong: Run through the steps over and over again, reversing direction at both ends.<br>* Random: Run through the steps over and over again in random order. |
-| **Direction** | * Forward: Run through the steps from start to end; 1, 2, 3...<br>* Backward: Run through the steps from end to start; ...3, 2, 1 |
-| **Fade In Speed** | * Common: Apply the same speed for all the steps in this Chaser<br>* Per step: Apply a user defined speed for each step in this Chaser<br>* Default: Apply the default speed for each step (0 seconds). |
-| **Fade Out Speed** | * Common: Apply the same speed for all the steps in this Chaser<br>* Per step: Apply a user defined speed for each step in this Chaser<br>* Default: Apply the default speed for each step (0 seconds). |
-| **Step Duration** | * Common: Apply the same duration for all the steps in this Chaser<br>* Per step: Apply a user defined duration for each step in this Chaser |
+| **Nom del Chaser** | Canvia el nom del chaser. |
+| ![](/basics/speed.png) | Mostra/Oculta el giny de Selector de Velocitat, utilitzat per a facilitar l'afinació dels paràmetres del Chaser com l'esvaïment d'entrada (Fade In), l'esvaïment de sortida (Fade Out) i la espera |
+| ![](/basics/player_play.png) | Inicia l'execució del Chaser per provar la reproducció començant des del pas seleccionat |
+| ![](/basics/player_stop.png) | Atura una reproducció iniciada prèviament |
+| ![](/basics/back.png) | Quan la reproducció estigui activa, ves al pas anterior al Chaser |
+| ![](/basics/forward.png) | Quan la reproducció estigui activa, ves al pas següent al Chaser |
+| ![](/basics/editcopy.png) | Copia els passos seleccionats al porta-retalls. |
+| ![](/basics/editpaste.png) | Enganxa els passos copiats prèviament des del porta-retalls a la posició seleccionada. Si no n'hi ha cap, els passos s'afegiran al final de la llista |
+| ![](/basics/editcut.png) | Suprimeix els passos seleccionats de la llista i copia'ls al porta-retalls. |
+| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#functions) existent al chaser mitjançant el diàleg [Selecciona Funció](../function-selection). La funció s'insereix després del pas seleccionat. |
+| ![](/basics/edit_remove.png) | Elimina el pas seleccionat del chaser. |
+| ![](/basics/up.png) | Mou el pas seleccionat per sobre/abans del pas anterior. |
+| ![](/basics/down.png) | Mou el pas seleccionat per sota/després del següent pas. |
+| ![](/basics/random.png) | Reordena (barrega) les escenes seleccionades aleatòriament. Les principals diferències amb "Ordre d'execució: aleatori" són que l'ordre de les escenes barrejades és estàtic, predictible, es pot modificar manualment i no afecta necessàriament a totes les escenes. |
+| **Ordre d'Execució** | * Bucle: recorre els passos una i altra vegada.<br>* Tret únic: recorre els passos una vegada i atura't.<br>* Ping Pong: Corre pels passos una i altra vegada, invertint la direcció en ambdós extrems.<br>* Aleatori: recorre els passos una i altra vegada en ordre aleatori. |
+| **Direcció** | * Endavant: recorre els passos de principi a fi; 1, 2, 3...<br>* Endarrere: recorre els passos de fi a principi; ...3, 2, 1 |
+| **Velocitat de Fade In** | * Comú: aplica la mateixa velocitat per a tots els passos d'aquest caçador<br>* Per pas: aplica una velocitat definida per l'usuari per a cada pas d'aquest caçador<br>* Per defecte: aplica la velocitat predeterminada per a cada pas (0 segons). |
+| **Velocitat Fade Out** | * Comú: aplica la mateixa velocitat per a tots els passos d'aquest caçador<br>* Per pas: aplica una velocitat definida per l'usuari per a cada pas d'aquest caçador<br>* Per defecte: aplica la velocitat predeterminada per a cada pas (0 segons). |
+| **Durada del pas** | * Comú: aplica la mateixa durada per a tots els passos d'aquest caçador<br>* Per pas: aplica una durada definida per l'usuari per a cada pas d'aquest caçador |

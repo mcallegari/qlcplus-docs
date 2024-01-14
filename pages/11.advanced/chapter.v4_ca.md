@@ -6,8 +6,8 @@ taxonomy:
 media_order: commandline.png
 ---
 
-### Chapter 11
+### Capítol 11
 
-# Advanced Topics
+# Temes avançats
 
-This chapter aims to cover those aspect considered "advanced", so for users knowing the basics concepts of QLC+ and working comfortably with it.
+Aquest capítol té com a objectiu cobrir aquells aspectes considerats "avançats", de manera que els usuaris coneixen els conceptes bàsics de QLC+ i treballen còmodament amb ell.

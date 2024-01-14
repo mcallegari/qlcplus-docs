@@ -6,18 +6,18 @@ date: '05:18 22-08-2023'
 Introducció
 ------------
 
-The OS2L plugin allows direct communication between QLC+ and an OS2L capable host.  
-OS2L specifications can be found at: [http://os2l.org](http://os2l.org/)  
-At the moment the only OS2L host supported is [Virtual DJ](https://www.virtualdj.com/).  
-QLC+ OS2L plugin will work either on the same host (127.0.0.1) or on a different host with an OS of your choice (Windows, macOS, Linux)
+El connector OS2L permet la comunicació directa entre QLC+ i un amfitrió compatible amb OS2L.  
+Les especificacions d'OS2L es poden trobar a: [http://os2l.org](http://os2l.org/)  
+De moment, l'únic amfitrió OS2L compatible és [Virtual DJ](https://www.virtualdj.com/).  
+El connector QLC+ OS2L funcionarà en el mateix amfitrió (127.0.0.1) o en un amfitrió diferent amb un sistema operatiu de la vostra elecció (Windows, macOS, Linux)
 
-Configuration - Virtual DJ
+Configuració - Virtual DJ
 --------------------------
 
-First and foremost, you need to tell VDJ where to send OS2L messages.  
-Open VDJ settings, go to the 'Options' panel and type 'os2l' in the top search box.  
-Modify the 'os2lDirectIp' field by setting the IP:port where VDJ can reach QLC+. For example, '127.0.0.1:9996' should work if QLC+ runs on the same (Windows) PC of VDJ.  
-Once done, restart VDJ.
+En primer lloc, has d'indicar a VDJ on enviar missatges OS2L.  
+Obriu la configuració del VDJ, aneu al tauler "Opcions" i escriviu "os2l" al quadre de cerca superior.  
+Modifiqueu el camp 'os2lDirectIp' configurant el port IP: on VDJ pot arribar a QLC+. Per exemple, '127.0.0.1:9996' hauria de funcionar si QLC+ s'executa en el mateix PC (Windows) de VDJ.  
+Un cop fet, reinicia el VDJ.
 
-Now go to QLC+, enable the OS2L plugin on any universe. If you have set a specific port in VDJ, open the OS2L configuration dialog and set the same port there.  
-Once done, QLC+ will start receiving signals from VDJ (joystick icon will blink beside the Universe box)
+Ara aneu a QLC+, activeu el connector OS2L en qualsevol univers. Si heu establert un port específic a VDJ, obriu el diàleg de configuració OS2L i establiu el mateix port allà.  
+Un cop fet, el QLC+ començarà a rebre senyals del VDJ (la icona del joystick parpellejarà al costat de la caixa de l'Univers)

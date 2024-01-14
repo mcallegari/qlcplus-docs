@@ -8,4 +8,4 @@ content:
         dir: desc
 ---
 
-Non-visible page for RSS feed page collection. RSS feed URL is ../feed.rss
+Pàgina no visible per a la col·lecció de pàgines del canal RSS. L'URL del canal RSS és ../feed.rss

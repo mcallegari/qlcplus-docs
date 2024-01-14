@@ -6,128 +6,128 @@ date: '05:15 22-08-2023'
 Introducció
 ------------
 
-This plugin gives input/output support for the [MIDI protocol](https://en.wikipedia.org/wiki/MIDI) and gives the user freedom to control typical parameters like channels, Notes, Program Change and Control Change.  
-The MIDI plugin can be quite powerful used in combination with MIDI devices such as keyboards, MIDI controllers (like Behringer BCF2000 or KORG nanoKONTROL) or a software audio sequencer like Cubase or Ardour 3.  
-The usage can vary from fader-to-fader control (the BCF2000 case) to sequence triggering for synchronized shows (metronome controlled gigs using an audio sequencer)
+Aquest connector dona suport d'entrada/sortida per al  [protocol MIDI](https://en.wikipedia.org/wiki/MIDI) i dona llibertat a l'usuari per controlar paràmetres típics com els canals, Notes, Canvi de programa i Canvi de Control.  
+El connector MIDI pot ser força potent utilitzat en combinació amb dispositius MIDI com teclats, controladors MIDI (com Behringer BCF2000 o KORG nanoKONTROL) o un seqüenciador d'àudio de programari com Cubase o Ardour 3.  
+L'ús pot variar des del control de fader-to-fader (el cas BCF2000) fins a l'activació de seqüències per a espectacles sincronitzats (concerts o espectacles controlats per metrònom utilitzant un seqüenciador d'àudio)
 
-Configuration
+Configuració
 -------------
 
-When you click on the configuration button ![](/basics/configure.png) a window will appear, showing all the MIDI input and output lines detected.  
-Each line has three options that can be changed depending on your needs:
+Quan feu clic al botó de configuració ![](/basics/configure.png) apareixerà una finestra, mostrant totes les línies d'entrada i sortida MIDI detectades.  
+Cada línia té tres opcions que es poden canviar en funció de les teves necessitats:
 
-* **MIDI Channel**: This is the channel where QLC+ will receive or send data through the MIDI system. MIDI channels can go from 1 to 16. The special "1-16" channel will tell QLC+ to receive or send data on any MIDI channel.
-* **Mode**: This is the MIDI mode that QLC+ will use to send data through the MIDI system. This parameter can assume three possible values:
-    * **Note velocity**: in this mode, QLC+ will send data using MIDI notes velocity. MIDI notes can go from 21 (A0) to 108 (C8) and each note can have a velocity going from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
-    * **Control Change**: this is one of the MIDI protocol messages (like Program Change) frequently used by MIDI controllers. Each device should list the supported CC messages in its user manual, so please consult it before using this mode. The CC range can go from 0 to 127 and can have values from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
-    * **Program Change**: this is one of the MIDI protocol messages (like Control Change) frequently used by MIDI controllers. Each device should list the supported PC messages in its user manual, so please consult it before using this mode. The PC range can go from 0 to 127 and can have values from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
-* **Initialization message**: This is a list of presets (templates) containing the intialization message that QLC+ will send when opening a MIDI device before using it. A detailed explanation of this functionality is written below.
+* **Canal MIDI**: Aquest és el canal on QLC+ rebrà o enviarà dades a través del sistema MIDI. Els canals MIDI poden anar de l'1 al 16. El canal especial "1-16" dirà a QLC+ que rebi o enviï dades en qualsevol canal MIDI.
+* **Mode**: Aquest és el mode MIDI que QLC+ utilitzarà per enviar dades a través del sistema MIDI. Aquest paràmetre pot assumir tres valors possibles:
+    * **Velocitat de Nota**: en aquest mode, QLC+ enviarà dades utilitzant la velocitat de les notes MIDI. Les notes MIDI poden anar de 21 (A0) a 108 (C8) i cada nota pot tenir una velocitat que va de 0 a 127, que es duplicarà dins de QLC+ perquè coincideixi amb el rang DMX (0-255).
+    * **Canvi de Control**: aquest és un dels missatges de protocol MIDI (com el Canvi de Programa) que utilitzen freqüentment els controladors MIDI. Cada dispositiu hauria de llistar els missatges CC compatibles en el seu manual d'usuari, per tant, consulteu-lo abans d'utilitzar aquest mode. L'interval CC pot anar de 0 a 127 i pot tenir valors de 0 a 127, que es duplicaran dins de QLC+ per a coincidir amb l'interval DMX (0-255).
+    * **Canvi de Programa**: aquest és un dels missatges de protocol MIDI (com Canvi de Control) que utilitzen freqüentment els controladors MIDI. Cada dispositiu hauria de llistar els missatges PC compatibles en el seu manual d'usuari, per tant, consulteu-lo abans d'utilitzar aquest mode. L'interval de PC pot anar de 0 a 127 i pot tenir valors de 0 a 127, que es duplicaran dins de QLC+ perquè coincideixi amb l'interval DMX (0-255).
+* **Missatge d'Inicialització**: Aquesta és una llista de predefinits (plantilles) que contenen el missatge d'inicialització que QLC+ enviarà en obrir un dispositiu MIDI abans d'utilitzar-lo. A continuació s'escriu una explicació detallada d'aquesta funcionalitat.
 
-Feedbacks
+Feedbacks/Retroalimentacions
 ---------
 
-The MIDI plugin is one of the QLC+ plugins supporting feedbacks. When QLC+ detects a MIDI device with an output line, it will enable the feedback check box in the [Input/Output panel](/input-output). Please note that output and feedback are exclusive, so they cannot both be used at the same time.  
-If your MIDI device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as the Behringer BCF2000 support this feature. This is very useful during live shows to have immediate knowledge of the current state of faders mapped in QLC+.
+El connector MIDI és un dels connectors QLC+ que admeten retroalimentació/feedback. Quan QLC+ detecti un dispositiu MIDI amb una línia de sortida, habilitarà la casella de selecció de retroalimentació en el panell d'Entrada/Sortida](/input-output). Tingueu en compte que la sortida i els feedback són exclusius, de manera que no es poden utilitzar tots dos alhora.  
+Si el dispositiu MIDI admet un canal de feedback, QLC+ pot enviar-li una retroalimentació visual/mecànica. Dispositius com el Behringer BCF2000 admeten aquesta característica. Això és molt útil durant els espectacles en directe per tenir coneixement immediat de l'estat actual dels faders mapejats al QLC+.
 
-A small trick that can be achieved with QLC+ is to use feedback as a generic MIDI output line to trigger external controllers/sequencers.  
-Let's look at some examples:
+Un petit truc que es pot aconseguir amb QLC+ és utilitzar retroalimentació com una línia de sortida MIDI genèrica per activar controladors/seqüenciadors externs.  
+Vegem alguns exemples:
 
-* Input: **OSC** ---\> Output: **DMX USB** --\> Feedback: **MIDI**
-* Input: **Enttec Wing** --\> Output: **ArtNet** --\> Feedback: **MIDI**
+* Entrada: **OSC** ---\: Sortida: **DMX USB** --\: Retroalimentació: **MIDI**
+* Entrada: **Ala Enttec** --\: Sortida: **ArtNet** --\: Retroalimentació: **MIDI**
 
-KORG nanoPAD X Axis
+Eix X del nanoPAD de KORG
 -------------------
 
-For unknown reasons, the nanoPAD factory defaults don't map the X Axis of the pad area. To have it fully working with QLC+, please download the KORG utility (Windows and macOS only) from [here](http://i.korg.com/SupportPage.aspx?productid=415) and set the X Axis to CC2 (Control Change #2).
+Per raons desconegudes, els valors per defecte de fàbrica del nanoPAD no mapegen l'eix X de l'àrea del pad. Per fer que funcioni plenament amb QLC+, descarrega l'utilitat KORG (només per a Windows i macOS) des d'[aquí](http://i.korg.com/SupportPage.aspx?productid=415) i configura l'Eix X a CC2 (Controla el canvi #2).
 
-AKAI APC LED Feedbacks
+Feedbacks LED dels APC de l'AKAI
 ----------------------
 
-When using one of the Akai APC family controller, there is one feature that could come very handy: LED color feedbacks.  
-The default behaviour with Virtual Console buttons is: value = 0: LED off, value = 255: LED green  
-This can be customized when selecting an input channel, by pressing the "Custom feedback" button.  
-A new area is displayed, showing the possibility to enter a lower and an upper value. This is basically translated in which values QLC+ should send for buttons on/off states.  
-Since the MIDI protocol works in a range of 0-127 values, and QLC+ works in the DMX range of 0-255, the following table points you directly to the values you should enter to obtain the desired color of an APC LED. Basically they are taken from APC manuals and doubled.
+Quan s'utilitza un controlador de la família APC d'Akai, hi ha una funció que pot ser molt útil: feedbacks de color LED.  
+El comportament per defecte amb els botons de la consola virtual és: valor = 0: LED apagat, valor = 255: LED verd  
+Això es pot personalitzar en seleccionar un canal d'entrada, prement el botó "Retroalimentació personalitzada".  
+Es mostra una nova àrea, que mostra la possibilitat d'introduir un valor inferior i un valor superior. Això es tradueix bàsicament en què els valors QLC+ haurien d'enviar per als botons d'estats activats/desactivats.  
+Atès que el protocol MIDI funciona en un rang de valors 0-127, i QLC+ funciona en el rang DMX de 0-255, la taula següent apunta directament als valors que heu d'introduir per obtenir el color desitjat d'un LED APC. Bàsicament es prenen de manuals d'APC i es dupliquen.
 
-| Value | LED color |
+| Valor | Color LED |
 | --- | --- |
-| 0 | Off |
-| 2 | Green |
-| 4 | Green Blinking |
-| 6 | Red |
-| 8 | Red Blinking |
-| 10 | Yellow |
-| 12 | Yellow Blinking |
-| 14-255 | Green |
+| 0 | Desactivat/Off |
+| 2 | Verd |
+| 4 | Parpelleig Verd |
+| 6 | Vermell |
+| 8 | Parpelleig Vermell |
+| 10 | Groc |
+| 12 | Parpelleig Groc |
+| 14-255 | Verd |
 
-It's interesting to notice that you don't necessarily need to keep 0 as lower value. For example with lower = 6 and upper = 2 the result will be: Function Off -> red LED, Function On -> green LED.
+És interessant observar que no cal mantenir el 0 com a valor inferior. Per exemple, amb inferior = 6 i superior = 2, el resultat serà: Funció desactivada -> LED vermell, Funció activada -> LED verd.
 
-MIDI beat clock
+Rellotge de ritme MIDI
 ---------------
 
-Starting from version 4.5.0, QLC+ supports the [MIDI beat clock](https://en.wikipedia.org/wiki/MIDI_beat_clock)  
-Not to be confused with the [MIDI timecode](https://en.wikipedia.org/wiki/MIDI_timecode), the MIDI beat clock is a useful signal to sync BPM-based devices such as a drum machine with your lights controlled by QLC+.  
-Two special MIDI channels have been mapped in QLC+ to control your [Virtual Console](/virtual-console) widgets with a beat clock.  
-Here's a brief explanation of the special channels:
+A partir de la versió 4.5.0, QLC+ és compatible amb el [rellotge de ritme MIDI](https://en.wikipedia.org/wiki/MIDI_beat_clock)  
+No s'ha de confondre amb el [codi de temps MIDI](https://en.wikipedia.org/wiki/MIDI_timecode), el rellotge de ritme MIDI és un senyal útil per sincronitzar dispositius basats en BPM, com ara una caixa de ritmes amb els llums controlats per QLC+.  
+S'han de mapejar dos canals MIDI especials en QLC+ per controlar els ginys de la [Consola Virtual](/virtual-console) amb un rellotge de ritme.  
+Aquí tens una breu explicació dels canals especials:
 
-* **Channel 530**: A signal is sent on this channel when a beat clock starts or stops.
-* **Channel 531**: This signal is sent every BPM. QLC+ doesn't take any notice of measures (e.g. 3/4, 4/4, 7/8), so when setting up your MIDI clock you need to consider how QLC+ will handle it.
+* **Canal 530**: S'envia un senyal en aquest canal quan s'inicia o s'atura un rellotge de ritme.
+* **Canal 531**: Aquest senyal s'envia cada BPM. QLC+ no pren cap avís de les mesures (p. ex. 3/4, 4/4, 7/8), de manera que quan configureu el rellotge MIDI haureu de considerar com ho manejarà QLC+.
 
 
-**Hint**: If your controller is set to work at high BPM (e.g. 180-200), you might find difficult to catch the start signal. One trick for doing this is to catch the stop signal. Example:
+**Consell**: Si el vostre controlador funciona amb un BPM alt (p. ex. 180-200), és possible que us resulti difícil agafar el senyal d'inici. Un truc per fer-ho és agafar el senyal de aturada. Exemple:
 
-1. Enable the QLC+ Virtual Console widget auto-detection
-2. Hit play on your device generating the MIDI beat clock. QLC+ will detect channel 530 and will switch very quickly to 531
-3. Stop the playback on your MIDI beat clock device. QLC+ will detect channel 530 again.
-4. Disable the QLC+ Virtual Console widget auto-detection
+1. Activa la detecció automàtica del Giny de la Consola Virtual QLC+
+2. Premeu reprodueix al dispositiu generant el rellotge de ritme MIDI. QLC+ detectarà el canal 530 i canviarà molt ràpidament al 531
+3. Atura la reproducció al dispositiu de rellotge de ritme MIDI. QLC+ detectarà de nou el canal 530.
+4. Desactiva la detecció automàtica del Giny de la Consola Virtual de QLC+
 
-In a similar way you can catch the beat signal as well. Just disable the auto-detection process before stopping the playback on your beat controller (invert steps 3 and 4).
+De manera similar també es pot agafar el senyal de ritme. Només has de desactivar el procés de detecció automàtica abans d'aturar la reproducció del controlador de ritme (inverteix els passos 3 i 4).
 
-MIDI initialization message
+Missatge d'inicialització MIDI
 ---------------------------
 
-There might be cases where your MIDI device needs some commands to turn into a specific operating mode  
-The MIDI protocol can handle this through SysEx. These are particular messages to instruct a MIDI device how to behave.  
-QLC+ can use a XML template to achieve this that can be selected in the MIDI configuration panel.  
-Here's an example of how a template looks like:
+Pot haver-hi casos en què el dispositiu MIDI necessiti algunes ordres per convertir-se en un mode operatiu específic  
+El protocol MIDI pot gestionar això a través de SysEx. Aquests són missatges particulars per a instruir a un dispositiu MIDI de com comportar-se.  
+QLC+ pot utilitzar una plantilla XML per aconseguir-ho que es pot seleccionar al panell de configuració MIDI.  
+Aquí teniu un exemple de com es veu una plantilla:
 
 <!DOCTYPE MidiTemplate>
 <MidiTemplate>
 <Creator>
-<Author>Your name</Author>
+<Author>El vostre nom</Author>
 </Creator>
-<Description>A brief description of what the template does.</Description>
-<Name>Template name to be displayed by QLC+</Name>
+<Description>Una breu descripció del que fa la plantilla.</Description>
+<Name>Nom de plantilla que es mostrarà amb QLC+</Name>
 <InitMessage>F0 47 00 7B 60 00 04 41 09 00 05 F7</InitMessage>
 </MidiTemplate>
 
-You can create the ones you need and place them in your MidiTemplates folder.  
-You are welcome to submit them in the QLC+ forum.
+Podeu crear les que necessiteu i col·locar-les a la carpeta MidiTemplates.  
+Us convidem a enviar-les al fòrum QLC+.
 
-Channels map
+Mapa de Canals
 -----------------
 
-To handle a mix of various MIDI messages (Notes, PC, CC, etc..), QLC+ remaps them into a sequential order.  
-Following, the channel numbers to be used in the [Input Profile editor](/input-output/input-profiles):
+Per gestionar una barreja de diversos missatges MIDI (Notes, PC, CC, etc.), QLC+ els reassigna a un ordre seqüencial.  
+A continuació, els números de canal que s'utilitzaran a l'[Editor del Perfil d'Entrada](/input-output/input-profiles):
 
-| Channel | MIDI message |
+| Canal | Missatge MIDI |
 | --- | --- |
-| 1 | Control Change 1 |
+| 1 | Canvi de Control 1 |
 | ... | ... |
-| 128 | Control Change 128 |
-| 129 | NOTE ON/NOTE OFF 1 |
+| 128 | Canvi de Control 128 |
+| 129 | NOTA ACTIVADA/NOTA DESACTIVADA 1 |
 | ... | ... |
-| 256 | NOTE ON/NOTE OFF 128 |
-| 257 | NOTE AFTERTOUCH 1 |
+| 256 | NOTA ACTIVADA/DESACTIVADA 128 |
+| 257 | NOTA DESPRÉS DE TOCAR 1 |
 | ... | ... |
-| 384 | NOTE AFTERTOUCH 128 |
-| 385 | Program Change 1 |
+| 384 | NOTA DESPRÈS DE TOCAR 128 |
+| 385 | Canvi de Programa 1 |
 | ... | ... |
-| 512 | Program Change 128 |
-| 513 | Channel Aftertouch |
-| 514 | Pitch Wheel |
-| 530 | MIDI Beat Clock: Start/Continue |
-| 531 | MIDI Beat Clock: Beat |
-| 532 | MIDI Beat Clock: Stop |
+| 512 | Canvi de Programa 128 |
+| 513 | Canal Desrprès de Tocar |
+| 514 | Roda de To |
+| 530 | Rellotge de tocs MIDI: Inici/Continuació |
+| 531 | Rellotge de tocs MIDI: ritme |
+| 532 | Rellotge de tocs MIDI: atura |
 
 In OMNI mode, add 4096 * Channel number

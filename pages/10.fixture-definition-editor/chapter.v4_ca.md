@@ -6,41 +6,41 @@ taxonomy:
 media_order: 'fixtureeditor_physical.png,fixtureeditor_aliases.png,fixtureeditor_channel_color.png,fixtureeditor_channel_gobo.png,fixtureeditor_channel_preset.png,fixtureeditor_channel_shutter.png,fixtureeditor_channel_wizard.png,fixtureeditor_channels.png,fixtureeditor_general.png,fixtureeditor_mode_channels.png,fixtureeditor_mode_edit_head.png,fixtureeditor_mode_heads.png'
 ---
 
-### Chapter 10
+### Capítol 10
 
-# Fixture Definition Editor
+# Editor de Definició de Fixture
 
-The Fixture Definition Editor is a separate application bundled together with QLC+ for creating and modifying [fixture definitions](/basics/glossary-and-concepts#fixtures). Having a fixture definition for each of your lights allows QLC+ to know how to control them.
+L'Editor de Definicions de Fixture és una aplicació separada empaquetada juntament amb QLC+ per crear i modificar [definicions de fixture](/basics/glossary-and-concepts#fixtures). Tenir una definició de fixture per a cada un dels teus llums permet a QLC+ saber com controlar-los.
 
-## Saving your fixture definitions
+## Desar les definicions del fixture
 
-To use your fixture definitions in QLC+, you must save them in a location where QLC+ expects to find them. There are two places where you can save your fixture definitions:
-1. In the same folder as your QLC+ workspace (Handy if you want to give your workspace to someone else)
-2. In the user fixtures folder found in the following locations:
-    * Linux: it is a hidden folder in your user home directory: $HOME/.qlcplus/Fixtures
-    * Windows: it is a folder in your user (e.g. MyUser) directory: C:\\Users\\MyUser\\QLC+\\Fixtures
-    * Mac OS: it is located in your user Library directory: $HOME/Library/Application\\ Support/QLC+/Fixtures
+Per utilitzar les definicions del vostre fixture a QLC+, heu de desar-les en una ubicació on QLC+ espera trobar-les. Hi ha dos llocs on podeu desar les definicions del fixture:
+1. A la mateixa carpeta que el teu espai de treball QLC+ (útil si vols donar el teu espai de treball a una altra persona)
+2. A la carpeta de fixtures d'usuari que es troba a les ubicacions següents:
+    * Linux: és una carpeta amagada al directori d'inici de l'usuari: $HOME/.qlcplus/Fixtures
+    * Windows: és una carpeta del vostre usuari (p. ex. MyUser) directori: C:\\Users\\MyUser\\QLC+\\Fixtures
+    * Mac OS: es troba al directori de la biblioteca d'usuaris: $HOME/Library/Application\\ Support/QLC+/Fixtures
 
-**Important note: you SHOULD NOT save or copy your custom fixtures into the QLC+ system fixtures folder. This is because when QLC+ is uninstalled, all the fixtures in this folder are deleted. It can also cause unintended conflicts between the system and your own fixture definitions.**
+**Nota important: NO heu de desar ni copiar els vostres fixtures personalitzats a la carpeta QLC+ de fixtures del sistema. Això és perquè quan QLC+ es desinstal·la, se suprimeixen tots els fixtures d'aquesta carpeta. També pot causar conflictes no desitjats entre el sistema i les pròpies definicions de fixture.**
 
-Main toolbar
+Barra d'eines Principal
 ------------
-The main window in the Fixture Editor is just an empty workspace that contains the actual editor windows used to edit fixture definitions. The following options are available to you:
+La finestra principal de l'Editor de Fixtures és només un espai de treball buit que conté les finestres d'editor reals utilitzades per a editar les definicions de fixture. Teniu a la vostra disposició les opcions següents:
 
 |     |     |
 | --- | --- |
-| ![](/basics/filenew.png) | Create a new fixture definition. Opens an empty Fixture Editor window. |
-| ![](/basics/fileopen.png) | Open an existing fixture definiton. Opens the fixture definition in a Fixture Editor window. |
-| ![](/basics/filesave.png) | Save the fixture definition in the currently active Fixture Editor window. |
-| ![](/basics/filesaveas.png) | Save the fixture definition with a given name in the currently active Fixture Editor window. |
+| ![](/basics/filenew.png) | Crea una nova definició de fixture. Obre una finestra buida de l'Editor del Fixture. |
+| ![](/basics/fileopen.png) | Obre una definició de fixture existent. Obre la definició del fixture en una finestra de l'Editor del Fixture. |
+| ![](/basics/filesave.png) | Desa la definició del fixture a la finestra de l'Editor de Fixture actualment activa. |
+| ![](/basics/filesaveas.png) | Desa la definició del fixture amb un nom donat a la finestra de l'Editor de Fixture actualment activa. |
 
-Fixture Editor
+Editor de Fixtures
 ==============
 
-Fixture Editor windows contain everything needed to edit one Fixture Definition at a time. The windows are separated in five tabs:
+Les finestres de l'Editor de Fixture contenen tot el necessari per editar una definició de Fixture alhora. Les finestres estan separades en cinc pestanyes:
 [**General**](general)<br>
-[**Physical**](physical)<br>
-[**Channels**](channels)<br>
+[**Física**](physical)<br>
+[**Canals**](channels)<br>
 [**Modes**](modes)<br>
-[**Aliases**](aliases)<br>
-Tabs are organized in a logical order that should be followed from left to right when creating a new fixture definition.
+[**Àlies**](aliases)<br>
+Les pestanyes s'organitzen en un ordre lògic que s'ha de seguir d'esquerra a dreta quan es crea una nova definició de fixture.

@@ -3,13 +3,13 @@ title: 'Function Wizard'
 date: '04:35 22-08-2023'
 ---
 
-The Function Wizard's purpose is to help users create some common functions for a quick start.
+El propòsit de l'Auxiliar de Funcions és ajudar els usuaris a crear algunes funcions comunes per a un inici ràpid.
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| **Fixture List** | List of fixtures that will be included in the functions created with the wizard. You can see each fixture's capabilities for Color-, Gobo- and Shutter- type scenes in the **Supported capabilities** column. |
-| ![](/basics/edit_add.png) | Include [Fixtures](/basics/glossary-and-concepts#fixtures) to the functions that will be created with the wizard. |
-| ![](/basics/edit_remove.png) | Remove the selected fixtures from the function to be created. |
-| **Scenes** | **Colors**: Create scenes for changing the color simultaneously on all currently included fixtures. For this to work, the fixtures must have at least one color channel that controls a fixed-color wheel.<br>**Gobos**: Create scenes for changing the gobo simultaneously on all currently included fixtures. For this to work, the fixtures must have at least one gobo channel.<br>**Shutter**: Create scenes for changing the shutter position simultaneously on all currently included fixtures. For this to work, the fixtures must have at least one shutter channel. |
+| **Llista de Fixtures** | Llista de Fixtures que s'inclouran en les funcions creades amb l'assistent. Podeu veure les capacitats de cada fixture per a escenes de tipus Color, Gobo i Shutter a la columna **Capacitats Suportades**. |
+| ![](/basics/edit_add.png) | Incloure [Fixtures](/basics/glossary-and-concepts#fixtures) a les funcions que es crearan amb l'assistent. |
+| ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de la funció a crear. |
+| **Escenes** | **Colors**: Crea escenes per canviar el color simultàniament en tots els fixtures inclosos actualment. Perquè això funcioni, els fixtures han de tenir almenys un canal de color que controli una roda de color fix.<br>**Gobos**: Crea escenes per canviar el gobo simultàniament en tots els fixtures inclosos actualment. Perquè això funcioni, els fixtures han de tenir almenys un canal gobo.<br>**Shutter**: Crea escenes per canviar la posició de l'obturador simultàniament en tots els fixtures inclosos actualment. Perquè això funcioni, els fixtures han de tenir almenys un canal d'obturador. |

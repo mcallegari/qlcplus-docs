@@ -3,25 +3,25 @@ title: 'Channel Groups Editor'
 date: '11:27 21-08-2023'
 ---
 
-The Channel Groups editor it activated by clicking on the "Channels Groups" tab in the [Fixture Manager](/fixture-manager) panel.  
-With this functionality (introduced in QLC+ version 4.0.0), it is possible to create groups of channels with the same functionality.  
-For example, if you have 20 PARs you might want to control the RED channel of all of them with a single fader.
+L'editor de Grups de Canals s'ha activat fent clic a la pestanya "Grups de Canals" al panell [Gestor de Fixtures](/fixture-manager).  
+Amb aquesta funcionalitat (introduïda en la versió 4.0.0) de QLC+, és possible crear grups de canals amb la mateixa funcionalitat.  
+Per exemple, si teniu 20 PARs potser voldreu controlar el canal VERMELL de tots ells amb un sol fader.
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| ![](/basics/edit_add.png) | Add a new channels group to the workspace with the Add/Edit Channels Group dialog. |
-| ![](/basics/edit_remove.png) | Remove the selected channels group from the workspace. |
-| ![](/basics/configure.png) | Edit an existing channels group in the workspace with the Add/Edit Channels Group dialog. |
-| ![](/basics/up.png) | Move the selected group up in the list to change the logical order. |
-| ![](/basics/down.png) | Move the selected group down in the list to change the logical order. |
+| ![](/basics/edit_add.png) | Afegeix un nou grup de canals a l'espai de treball amb el diàleg Afegeix/Edita grup de canals. |
+| ![](/basics/edit_remove.png) | Elimina el grup de canals seleccionats de l'espai de treball. |
+| ![](/basics/configure.png) | Edita un grup de canals existent a l'espai de treball amb el diàleg Afegeix/Edita el grup de canals. |
+| ![](/basics/up.png) | Mou el grup seleccionat cap amunt a la llista per a canviar l'ordre lògic. |
+| ![](/basics/down.png) | Mou el grup seleccionat cap avall a la llista per a canviar l'ordre lògic. |
 
-### Add/Edit Channel Groups
+### Afegeix/Edita Grups de Canals
 
 |     |     |
 | --- | --- |
-| **Group Name** | Set/change name of the channels group |
-| **Channels list** | Check channels that should be included in this channels group. Uncheck those that should not. |
-| **Apply changes to all fixtures of the same type** | When checked, clicking on a channel will select/deselect the same channel on all fixtures of the same type. Use it when you want to select e.g. all Red channels of all fixture of a particular LED PAR model |
-| **External input** | Select external input for this channels group for easier control in Function Manager. External input for channels groups will not work elsewhere. |
+| **Nom del Grup** | Estableix/canvia el nom del grup de canals |
+| **Llista de Canals** | Marca els canals que s'han d'incloure en aquest grup de canals. Desmarca els que no haurien de fer-ho. |
+| **Aplica els canvis a tots els fixtures del mateix tipus** | Quan està marcada, en fer clic en un canal se seleccionarà/desseleccionarà el mateix canal en tots els fixtures del mateix tipus. Utilitzeu-lo quan vulgueu seleccionar, per exemple, tots els canals vermells de tots els fixtures d'un model LED PAR en particular |
+| **Entrada Externa** | Seleccioneu l'entrada externa per a aquest grup de canals per a un control més fàcil al Gestor de Funcions. L'entrada externa per als grups de canals no funcionarà en cap altre lloc. |

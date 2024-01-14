@@ -3,23 +3,23 @@ title: 'Audio Editor'
 date: '04:32 22-08-2023'
 ---
 
-The audio editor, as its name suggests, is used to edit ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio) functions.  
-It offers basic controls and shows information about the attached audio file.
+L'editor d'àudio, com el seu nom indica, s'utilitza per editar ![](/basics/audio.png) [Funcions d'Àudio](/basics/glossary-and-concepts#audio).  
+Ofereix controls bàsics i mostra informació sobre el fitxer d'àudio adjunt.
 
 Controls
 --------
 
 |     |     |
 | --- | --- |
-| ![](/basics/player_play.png) | Start/stop the audio file playback. If the file doesn't exist, this button will have no effect |
-| **Audio name** | Change the name of the Audio function. By default this is set with the file name, until it is manually changed. |
-| **File name** | Displays the absolute path of the current file attached to this Audio function. The source file can be changed by clicking on the "..." button on the right side. |
-| **Duration** | Displays the audio file duration in the typical QLC+ way. For example: 04m14s.22. |
-| **Channels** | Displays the number of channels detected from the attached audio file. 2 means stereo and 1 means mono. |
-| **Sample Rate** | Displays the sample frequency of the attached audio file, in Hertz. For example: 44100Hz, 48000Hz, etc |
-| **Bitrate** | Displays the bitrate of the attached audio file, in Kb/s. Audio files can have a constant bitrate (CBR) or a variable bitrate (VBR). In the latter case, an average bitrate is displayed. |
-| **Loop** | Loop audio playback until explicitly stopped. |
-| ![](/basics/speed.png) | Show/Hide the Speed Dial widget, used to facilitate the audio fade in/out parameters tuning |
-| **Fade In** | Text box to enter a fade in time for the audio playback. Times can be entered in a QLC+ way (e.g. 3s.55) or in seconds (e.g. entering '2' and pressing Enter will turn into 02s.00) |
-| **Fade Out** | Text box to enter a fade out time for the audio playback. Times can be entered like in the Fade In box |
-| **Audio Device** | Select a specific audio output device to be used to play the attached audio file. This list is the same you can find in the [Audio Input/Output panel](/input-output/audio) |
+| ![](/basics/player_play.png) | Inicia/atura la reproducció del fitxer d'àudio. Si el fitxer no existeix, aquest botó no tindrà cap efecte |
+| **Nom de l'Àudio** | Canvia el nom de la funció Àudio. Per defecte, es defineix amb el nom del fitxer, fins que es canvia manualment. |
+| **Nom del Fitxer** | Mostra la ruta absoluta del fitxer actual adjunt a aquesta Funció d'Àudio. El fitxer d'origen es pot canviar fent clic al botó "..." botó del costat dret. |
+| **Durada** | Mostra la durada del fitxer d'àudio a la manera típica QLC+. Per exemple: 04m14s.22. |
+| **Canals** | Mostra el nombre de canals detectats al fitxer d'àudio adjunt. 2 significa estèreo i 1 significa mono. |
+| **Freqüència de Mostreig** | Mostra la freqüència de mostreig del fitxer d'àudio adjunt, en Hertz. Per exemple: 44100Hz, 48000Hz, etc |
+| **Taxa de Bits** | Mostra la taxa de bits del fitxer d'àudio adjunt, en Kb/s. Els fitxers d'àudio poden tenir una taxa de bits constant (CBR) o una taxa de bits variable (VBR). En aquest últim cas, es mostra una taxa de bits mitjana. |
+| **Bucle** | Repeteix la reproducció d'àudio fins que s'aturi explícitament. |
+| ![](/basics/speed.png) | Mostra/Oculta el giny Selector de Velocitat, utilitzat per a facilitar l'afinació dels paràmetres d'esvaiment d'entrada/sortida de l'àudio |
+| **Fade In** | Quadre de text per a introduir un temps d'esvaïment d'entrada (Fade In) per a la reproducció d'àudio. Els temps es poden introduir de forma QLC+ (p. ex. 3s.55) o en segons (p. ex. introduir '2' i prémer Retorn es convertirà en 02s.00) |
+| **Fade Out** | Quadre de text per a introduir un temps d'esvaïment de sortida (Fade Out) per a la reproducció d'àudio. Els temps es poden introduir com al quadre Esvaïment d'entrada (Fade In) |
+| **Dispositiu d'Àudio** | Seleccioneu un dispositiu de sortida d'àudio específic que s'utilitzarà per a reproduir el fitxer d'àudio adjunt. Aquesta llista és la mateixa que podeu trobar al [panell Entrada/Sortida d'Àudio](/input-output/audio) |

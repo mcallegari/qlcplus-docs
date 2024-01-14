@@ -4,32 +4,32 @@ date: '11:36 21-08-2023'
 media_order: fixremap.png
 ---
 
-Starting from version 4.4.1, QLC+ offers a functionality called fixtures remapping.  
-When performing live shows in different venues, you may only be able to find out at the last minute which [fixtures](/basics/glossary-and-concepts#fixtures) are installed there. Well, fixtures remapping helps you to use your existing projects in this and many other situations, such as when you need to replace a faulty fixture or when you want to use hired in equipment alongside your own.  
-For example, you can set up a project with just one PAR, one moving head and one scanner. When reaching the venue where the show is going to take place, you can remap your fixtures to those you find there, for example 50 PARs, 30 moving heads and 15 scanners.  
-With QLC+, it takes just a few minutes to do this operation!
+A partir de la versió 4.4.1, QLC+ ofereix una funcionalitat anomenada remapatge de fixtures.  
+Quan realitzis espectacles en directe en diferents llocs, és possible que només puguis esbrinar a última hora quins [fixtures](/basics/glossary-and-concepts#fixtures) hi ha instal·lats. Bé, el remapeig de fixtures t'ajuda a utilitzar els teus projectes existents en aquesta i moltes altres situacions, com ara quan necessites reemplaçar un fixture defectuos o quan vols utilitzar equips contractats al costat del teu.  
+Per exemple, podeu configurar un projecte amb només un PAR, un capçal mòbil i un escàner. En arribar al recinte on tindrà lloc l'espectacle, pots reassignar els teus fixtures als que hi trobaràs, per exemple 50 PAR, 30 caps mòbils i 15 escàners.  
+Amb QLC+, només calen uns minuts per fer aquesta operació!
 
-Fixtures remapping allows you to perform 1-to-1 or 1-to-many reassignments of entire fixtures or single channels. QLC+ will try as far as possible to reassign the original channels used in the project to new channels in the same category.  
-When you confirm the remapping operation, a new project will be automatically saved to preserve your original project.  
-All the fixtures, scenes, EFX, Virtual Console widgets and audio triggers found in the original project will be remapped so that they work on the new fixtures list.
+El remapeig de Fixtures permet realitzar reassignacions d'1 a 1 o d'1 a molts fixtures sencers o canals individuals. QLC+ intentarà, en la mesura que sigui possible, reassignar els canals originals utilitzats en el projecte a nous canals de la mateixa categoria.  
+Quan confirmeu l'operació de reassignació, es desarà automàticament un projecte nou per preservar el projecte original.  
+Tots els dispositius fixtures, escenes, EFX, ginys de la consola virtual i activadors d'àudio trobats en el projecte original seran remapats de manera que treballin en la llista de fixtures nous.
 
 
-Remapping window
+Finestra de remapeig
 ----------------
 
-Let's now explain how to use the fixture remapping window, starting from a screenshot of a complete example:
+A continuació, expliquem com utilitzar la finestra de remapeig de fixture, començant des d'una captura de pantalla d'un exemple complet:
 
 ![](fixremap.png)
 
-And now, here is a detailed explanation of each element of the remapping window.
+I ara, aquí teniu una explicació detallada de cada element de la finestra de remapeig
 
 |     |     |
 | --- | --- |
-| **Source fixtures** | On the left side of the window, there is a tree representing the universes, fixtures and channels used in your project. This list cannot be changed in this window. |
-| **Remapped fixtures** | On the right side of the window, there is a tree representing the universes, fixtures and channels where you are going to remap your source fixtures. |
-| ![](/basics/edit_add.png) | Add one or more fixtures to the Remapped fixtures list. Clicking this button will open the [Add/Edit Fixtures](/fixture-manager/add-edit-fixtures) window. Please note that once a fixture is added, it cannot be modified, so if you need specific names or quantity, remember to do it before adding the new fixtures |
-| ![](/basics/edit_remove.png) | Remove the selected [Fixture](/basics/glossary-and-concepts#fixtures) from the remapped fixtures list. |
-| ![](/basics/remap.png) | This is probably the most important button in the window. It allows you to determine the connection between a source ficture and a remapped fixture. The connections can be performed either between single channels or on whole fixtures.  <br>In the first case you will need to select the source channel from the source fixtures list and a target channel from the remapped fixtures list.  <br>In the second case you will need to select a fixture from the source fixtures list and a target fixture from the remapped fixtures list.  <br>Wrong selections will cause an error message to popup. For example you cannot remap a channel to a fixture and vice-versa.  <br>If the connection is valid, it will be represented as a line in the white area between the source list and the remapped list. |
-| ![](/basics/fileclose.png) | Remove a previously created remapping connection. Wrong selections will cause an error popup. |
-| **Remap fixtures names** | If this is checked, a new remapping connection between fixtures will also set the target fixture name be the same as the source fixture name. |
-| **Destination project name** | The absolute path and name of the remapped project. For convenience, QLC+ will automatically take the original project name and will add "(remapped)" at the end of it. |
+| **Fixtures d'Origen** | Al costat esquerre de la finestra hi ha un arbre que representa els universos, fixtures i canals utilitzats en el teu projecte. Aquesta llista no es pot canviar en aquesta finestra. |
+| **Fixtures remapats** | A la part dreta de la finestra, hi ha un arbre que representa els universos, fixtures i canals on vas a remapar els teus fixtures d'origen. |
+| ![](/basics/edit_add.png) | Afegiu un o més fixtures a la llista de fixtures remapats En fer clic en aquest botó s'obrirà la finestra [Afegeix/Edita Fixtures](/fixture-manager/add-edit-fixtures). Tingueu en compte que un cop s'afegeix un fixture, no es pot modificar, així que si necessiteu noms o quantitat específics, recordeu fer-ho abans d'afegir els nous fixtures |
+| ![](/basics/edit_remove.png) | Suprimiu el  [Fixture](/basics/glossary-and-concepts#fixtures) seleccionat de la llista de fixtures remapats. |
+| ![](/basics/remap.png) | Aquest és probablement el botó més important de la finestra. Permet determinar la connexió entre una fixture d'origen i un fixture remapat. Les connexions es poden realitzar tant entre canals individuals com en fixtures sencers.  <br>En el primer cas haureu de seleccionar el canal d'origen de la llista de fixtures d'origen i un canal de destinació de la llista de fixtures remapats.  <br>En el segon cas haureu de seleccionar un fixture de la llista de fixtures d'origen i un fixture de destinació de la llista de fixtures remapats.  <br>Seleccions incorrectes provocaran un missatge d'error a la finestra emergent. Per exemple, no podeu tornar a assignar un canal a un fixture i viceversa.  <br>Si la connexió és vàlida, es representarà com una línia a l'àrea blanca entre la llista d'origen i la llista de remapada |
+| ![](/basics/fileclose.png) | Elimina una connexió de remapatge creada prèviament. Seleccions incorrectes causaran un error emergent. |
+| **Remapa els noms dels fixtures** | Si està marcada, una nova connexió de remapatge entre fixtures també establirà el nom del fixture de destinació com el nom del fixture d'origen. |
+| **Nom del projecte de destinació** | El camí absolut i el nom del projecte remapejat. Per comoditat, QLC+ prendrà automàticament el nom del projecte original i afegirà "(remapped)" al final d'aquest. |

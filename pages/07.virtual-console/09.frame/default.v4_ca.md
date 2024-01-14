@@ -3,44 +3,44 @@ title: Frame
 date: '03:39 22-08-2023'
 ---
 
-A Frame is a container that can hold a variety of widgets, including other frames, inside. In fact, the whole Virtual Console is already your bottom-most frame. Also, if you apply some [styling attributes](../styling-and-placement) to a frame, all of its children (which have not had their own non-default style settings applied) also inherit their parent's style properties.
+Un Marc és un contenidor que pot contenir una varietat de ginys, inclosos altres marcs, a l'interior. De fet, tota la Consola Virtual ja és el teu marc de més avall. A més, si apliqueu alguns [atributs d'estil](../styling-and-placement) a un marc, tots els seus fills (que no han aplicat la seva pròpia configuració d'estil no predeterminada) també hereten les propietats d'estil del seu pare.
 
-## Configuration
+## Configuració
 <hr>
 
-Frames can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the frame itself.
+Els marcs es poden configurar amb el botó de propietats ![](/basics/edit.png) que es troba a la barra d'eines o fent doble clic al marc en si.
 
-Other than the standard [styling & placement options](../styling-and-placement), Frames have the following additional options, divided into 2 tabs:
+A part de les [opcions estàndard d'estil i col·locació](../styling-and-placement), els marcs tenen les següents opcions addicionals, dividides en 2 pestanyes:
 
-### Appearance tab
+### La pestanya Aparença
 
-* **Frame name**: Allow you to assign an arbitrary label to the Frame. This will be displayed only when the "Show header" option is enabled (see below).
-* **Accept child widgets**: Allow you to add widgets to the Frame.
-* **Allow resizing**: Allow the Frame height and width to be changed.
-* **Show header**: Display the frame header. By default it will display 3 elements: An expand/collapse button, the frame name and a enable/disable button. Some further optional controls are displayed when the Frame is in multipage mode. See next paragraph.
+* **Nom del Marc**: Permet assignar una etiqueta arbitrària al marc. Això només es mostrarà quan l'opció «Mostra la capçalera» estigui habilitada (vegeu més avall).
+* **Accepta ginys fills**: Permet afegir ginys al marc.
+* **Permet redimensionar**: Permet canviar l'alçada i l'amplada del marc.
+* **Mostra la capçalera**: Mostra la capçalera del marc. Per defecte mostrarà 3 elements: un botó d'expansió/reducció, el nom del marc i un botó d'activació/inhabilitació. Alguns altres controls opcionals es mostren quan el marc està en mode multipàgina. Vegeu el paràgraf següent.
 
-### Pages tab
+### La pestanya Pàgines
 
-Virtual Console Frames can be turned into multi-page widgets, useful when dealing with a lot of widgets or controllers supporting pages.  
-The multi-page functionality is disabled by default, but can be enabled in this tab.  
-Following the options to configure this functionality:
+Els Marcs de la Consola Virtual es poden convertir en ginys de diverses pàgines, útils quan es tracta de molts ginys o controladors que admeten pàgines.  
+La funcionalitat multipàgina està desactivada de manera predeterminada, però es pot activar en aquesta pestanya.  
+Seguint les opcions per configurar aquesta funcionalitat:
 
-* **Enable**: This check box enables/disables the multi-page functionality. When enabled, VC frames will display additional controls in the header bar (if the header bar is also enabled). These are: Previous page button, page name and next page button.
-* **Number of pages**: With this counter it is possible to determine the number of pages the frame is going to handle.
-* **Clone first page widgets**: When checked, QLC+ will clone the widgets of the frame's first page into all the other new pages defined by the "Number of pages" field. This is a very useful option to speed up the mapping of an external controller where all the pages have the same widgets.
-* **External input - Previous page**: You can set an external input signal or a keyboard combination here which will cause the previous page of the frame to be displayed.
-* **External input - Next page**: You can set an external input signal or a keyboard combination here which will cause the previous page of the frame to be displayed.
-* **Page shortcuts**: in the bottom section of the pages tab, it is possible to assign to each page a custom name, an external input signal or a keyboard combination.  
-    In this way a page can be accessed directly without going through the intermediate pages.
+* **Activa**: Aquesta casella de selecció activa/inhabilita la funcionalitat de múltiples pàgines. Quan està habilitat, els marcs VC mostraran controls addicionals a la barra de capçalera (si la barra de capçalera també està activada). Aquests són: botó de pàgina anterior, nom de pàgina i botó de pàgina següent.
+* **Nombre de pàgines**: Amb aquest comptador és possible determinar el nombre de pàgines que manejarà el marc.
+* **Clona els primers ginys de pàgina**: Quan està marcada, QLC+ clonarà els ginys de la primera pàgina del marc en totes les altres pàgines noves definides pel camp «Nombre de pàgines». Aquesta és una opció molt útil per accelerar el mapatge d'un controlador extern on totes les pàgines tenen els mateixos ginys.
+* **Entrada externa - Pàgina anterior**: Aquí podeu establir un senyal d'entrada externa o una combinació de teclat que farà que es mostri la pàgina anterior del marc.
+* **Entrada externa - Pàgina següent**: Aquí podeu establir un senyal d'entrada externa o una combinació de teclat que farà que es mostri la pàgina següent del marc.
+* **Dreceres de pàgina**: a la secció inferior de la pestanya de pàgines, és possible assignar a cada pàgina un nom personalitzat, un senyal d'entrada extern o una combinació de teclat.  
+    D'aquesta manera es pot accedir directament a una pàgina sense passar per les pàgines intermèdies.
 
 
-## Header Controls
+## Controls de Capçalera
 <hr>
 
-By default a Frame is displayed with a header. Following a brief description of the default and optional controls that can be used either in Operate or Design mode.
+De manera predeterminada, es mostra un marc amb una capçalera. Seguint una breu descripció dels controls predeterminats i opcionals que es poden utilitzar en mode Operar o Disseny.
 
-* ![](/basics/expand.png) **Expand/Collapse button**: when clicked, the Frame size will be dramaticaly reduced, to save space on your Virtual Console. The collapsed state is saved in your project.
-* **Frame name**: a label displaying the Frame name
-* ![](/basics/check.png) **Enable/Disable button**: when clicked, the Frame will go into a disable state. All the widgets inside the Frame will not respond anymore to input controls.  
-    This is useful, for example, to use the same input controls on widgets of different frames. For example if you bound the key "G" to a button in Frame A and also to a button on Frame B, you can enable one Frame at a time to use your key binding univocally.
-* ![](/basics/back.png) Page ![](/basics/forward.png) **Multipage controls** (Optional): when a Frame is configured in multipage mode, some extra buttons will be displayed on the header, allowing you to switch between the Frame pages and to keep track of the current page you're in.
+* ![](/basics/expand.png) **Botó Expandeix/Col·lapsa**: quan feu clic, la mida del marc es reduirà dramàticament, per estalviar espai a la vostra Consola Virtual. L'estat col·lapsat es desa al projecte.
+* **Nom del Marc**: una etiqueta que mostra el nom del Marc
+* ![](/basics/check.png) **Botó Activa/Desactiva**: quan feu clic, el Marc entrarà en un estat de desactivació. Tots els ginys dins del marc ja no respondran als controls d'entrada.  
+    Això és útil, per exemple, per utilitzar els mateixos controls d'entrada en ginys de diferents marcs. Per exemple, si heu lligat la tecla "G" a un botó del Marc A i també a un botó del Marc B, podeu habilitar un Marc alhora per a utilitzar la vinculació de la clau unívocament.
+* ![](/basics/back.png) Pàgina ![](/basics/forward.png) **Controls Multipàgina** (Opcional): quan es configura un marc en mode multipàgina, es mostraran alguns botons addicionals a la capçalera, la qual cosa us permetrà canviar entre les pàgines del marc i fer un seguiment de la pàgina actual.

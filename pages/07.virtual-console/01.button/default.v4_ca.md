@@ -3,31 +3,31 @@ title: Button
 date: '14:26 21-08-2023'
 ---
 
-A Button is one of the simplest and most powerful widgets in QLC+; with it, you can start, stop and flash your Functions.
+Un botó és un dels ginys més senzills i potents de QLC+; amb ell, podreu iniciar, aturar i fer flaixos a les vostres Funcions.
 
-### Configuration
+### Configuració
 
-Buttons can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the button itself.
+Els botons es poden configurar amb el botó de propietats ![](/basics/edit.png) trobat a la barra d'eines o fent doble clic al botó mateix.
 
 |     |     |
 | --- | --- |
-| **Button label** | Set the friendly name of the button. The name appears on the button in Virtual Console.<br>**NOTE:** If you set an icon to a button with the **Edit -> Icon -> Choose** menu, the icon will override this label. |
-| **Function** | Shows you the name of the [Function](/basics/glossary-and-concepts#functions) that is currently assigned to the button.<br><br>![](/basics/attach.png) Attach a Function to the button  <br>![](/basics/detach.png) Detach the current Function from the button |
-| **External input** | You can attach an external input channel from an input device (like a slider board) to buttons so that you don't always have to use the mouse, touch screen or keyboard to access the buttons.<br><br>**Input universe**: The input universe that you wish to provide input data to the button.<br>**Input channel**: The individual input channel within the selected input universe that you wish to use for controlling the button.<br>**Auto Detect**: When toggled, you can just press a button on your external input hardware and it will be automatically assigned to the button. The latest combination is shown in the text boxes when QLC+ receives input data. If you don't see anything in the boxes, your input connection might have a problem that you need to fix first.<br>**Choose...**: Shows the [Select Input Channel](../select-input-channel) dialog that you can use to select an input channel manually. |
-| **Key combination** | You can attach a keyboard key (or key combination) to the button, which then acts as if you clicked the button directly with your mouse.<br><br>![](/basics/key_bindings.png) Attach a keyboard key (or key combination) to the button  <br>![](/basics/fileclose.png) Detach the current key combination from the button |
-| **On button press...** | **Toggle Function on/off**: When you click the button, the attached Function is started. When you click the button a second time, the Function is stopped, unless it has already stopped by itself.<br>**Flash Function**: You can "flash" the attached [Scene](/basics/glossary-and-concepts#scene) when you keep the button pressed. If another type of Function is attached to the button, nothing happens when you click it.<br>**Toggle Blackout**: When you click the button, QLC+ will toggle the [blackout mode](/basics/glossary-and-concepts#blackout)<br>**Stop All Functions**: When you click the button, all the Functions that are running in QLC+ will be stopped immediately. It is possible to specify a fade out time to wait for all the intensity channels to reach a zero level |
-| **Adjust Function intensity** | If checked, this feature will adjust the intensity of the assigned Function just before playing it when the button is pressed. |
+| **Etiqueta del Botó** | Estableix el nom amigable del botó. El nom apareix al botó a la consola virtual.<br>**NOTA:** Si establiu una icona a un botó amb el menú **Edita -. Icona -. Trieu**, la icona substituirà aquesta etiqueta. |
+| **Funció** | Mostra el nom de la [Funció](/basics/glossary-and-concepts#functions) que està assignada al botó.<br><br>![](/basics/attach.png) Adjunteu una funció al botó <br>![](/basics/detach.png) Desacobla la funció actual des del botó |
+| **Entrada Externa** | Podeu adjuntar un canal d'entrada extern des d'un dispositiu d'entrada (com un tauler de control) als botons perquè no sempre hàgiu d'utilitzar el ratolí, la pantalla tàctil o el teclat per accedir als botons.<br><br>**Univers d'entrada**: L'univers d'entrada que voleu proporcionar dades d'entrada al botó.<br>**Canal d'entrada**: El canal d'entrada individual dins de l'univers d'entrada seleccionat que voleu utilitzar per controlar el botó.<br>**Detecta automàticament**: Quan està activat, només heu de prémer un botó al vostre maquinari d'entrada extern i s'assignarà automàticament al botó. L'última combinació es mostra als quadres de text quan QLC+ rep dades d'entrada. Si no veieu res en els quadres, la connexió d'entrada pot tenir un problema que primer heu de solucionar.<br>**Trieu...**: Mostra el diàleg [Seleccioneu el Canal d'Entrada](../select-input-channel) que podeu utilitzar per a seleccionar un canal d'entrada manualment. |
+| **Combinació de tecles** | Podeu adjuntar una tecla de teclat (o combinació de tecles) al botó, que després actua com si feu clic al botó directament amb el ratolí.<br><br>![![](/basics/key_bindings.png) Adjunteu una tecla de teclat (o combinació de tecles) al botó <br>![](/basics/fileclose.png) Desmarqueu la combinació de tecles actual des del botó |
+| **En prémer el botó...** | **Activa/desactiva la Funció**: Quan feu clic al botó, s'inicia la funció adjunta. Quan feu clic al botó una segona vegada, la Funció s'atura, tret que ja s'hagi aturat per si mateixa.<br>**Funció Flash**: Podeu  "flaixar" l'escena [adjunta](/basics/glossary-and-concepts#scene) quan manteniu premut el botó. Si s'adjunta un altre tipus de Funció al botó, no passa res quan feu clic.<br>**Commuta l'Apagada/Blackout**: Quan feu clic al botó, QLC+ commutarà el mode d'apagada/Blackout](/basics/glossary-and-concepts#blackout)<br>**Atura totes les Funcions**: Quan feu clic al botó, totes les funcions que s'estan executant a QLC+ s'aturaran immediatament. És possible especificar un temps d'esvaïment per esperar que tots els canals d'intensitat arribin a un nivell zero |
+| **Ajusta la Intensitat de la Funció** | Si està marcada, aquesta característica ajustarà la intensitat de la funció assignada just abans de reproduir-la quan es prem el botó. |
 
-### Button States
+### Estats del Botó
 
-A button can be in one of 3 states; these are Off, On and Monitoring. The state can be changed by clicking with your mouse, by the set external input or by using the set key combination.
+Un botó pot estar en un dels 3 estats; aquests són Desactivat, Activat i Monitorització. L'estat es pot canviar fent clic amb el ratolí, mitjançant l'entrada externa establerta o utilitzant la combinació de tecles establerta.
 
-| State | Button Appearance | State Description |
+| Estat | Aparença del Botó | Descripció de l'Estat |
 |-------------|-------------------|------------------------------------------------------------|
-| Off | No Border | The function associated with the button is not running. |
-| On | Green Border | The button has been activated and is running the function. |
-| Monitoring* | Orange Border | The function is running (but activated by another widget) |
+| Desactivat/Off | Sense Vora | La funció associada al botó no s'està executant. |
+| Activat/On | Vora Verda | S'ha activat el botó i s'està executant la funció. |
+| Monitoratge* | Vora Taronja | La funció s'està executant (però activada per un altre giny) |
 
-*Note: a button in monitoring mode does not currently send any feedback to an associated controller/feedback universe.
+*Nota: un botó en mode de monitorització no envia cap retroalimentació a un univers associat de controlador/feedback (retroalimentació).
 
-Pressing a Button while it is in the "monitoring" state will take control of the running Function and the Button border will turn to green. Another press and the attached Function will be stopped.
+Prement un Botó mentre estigui en l'estat de "monitorització" agafarà el control de la funció en execució i la vora del Botó es tornarà verda. Una altra premuda i la Funció adjunta s'aturarà.

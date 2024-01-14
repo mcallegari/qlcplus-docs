@@ -2,64 +2,64 @@
 title: 'Scene Editor'
 ---
 
-The scene editor, as its name suggests, is used to edit ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) functions. The editor is divided into tabs; with the first, **General** tab, you control the list of fixtures and [channel groups](/basics/glossary-and-concepts#channel-groups) that take part in the scene editing, together with the Scene name.  
-All subsequent tabs are used to control the individual channel values for each fixture and, if any are defined, the channels groups values.
+L'editor d'escenes, com el seu nom indica, s'utilitza per editar les funcions de ![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#scene). L'editor es divideix en pestanyes; amb la primera, pestanya **General**, controleu la llista de fixtures i [grups de canals](/basics/glossary-and-concepts#channel-groups) que participen en l'edició d'escena, juntament amb el nom de l'escena.  
+Totes les pestanyes posteriors s'utilitzen per controlar els valors individuals del canal per a cada fixture i, si n'hi ha, els valors dels grups de canals.
 
-General Tab Controls
+Controls Generals de les Pestanyes
 --------------------
 
-On the left hand part of the screen, the buttons to control the fixtures used in the scene are displayed.
+A la part esquerra de la pantalla es mostren els botons per controlar els fixtures utilitzats a l'escena.
 
 |     |     |
 | --- | --- |
-| **Scene name** | Change the name of the scene. |
-| ![](/basics/edit_add.png) | Add an existing [Fixture](/basics/glossary-and-concepts#fixtures) to the scene. |
-| ![](/basics/edit_remove.png) | Remove the selected [Fixture(s)](/basics/glossary-and-concepts#fixtures) from the scene. |
-| ![](/basics/check.png) | Enable all channels of the selected fixtures. |
-| ![](/basics/uncheck.png) | Disable all channels of the selected fixtures. |
+| **Nom de l'Escena** | Canvia el nom de l'escena. |
+| ![](/basics/edit_add.png) | Afegeix un  [Fixture](/basics/glossary-and-concepts#fixtures) existent a l'escena. |
+| ![](/basics/edit_remove.png) | Suprimiu de l'escena els [Fixture(s)](/basics/glossary-and-concepts#fixtures) seleccionats. |
+| ![](/basics/check.png) | Activa tots els canals dels fixtures seleccionats. |
+| ![](/basics/uncheck.png) | Desactiva tots els canals dels fixtures seleccionats. |
 
-On the right hand part of the screen, the buttons to control the [channel groups](/basics/glossary-and-concepts#channel-groups) used in the scene are displayed
+A la part dreta de la pantalla, es mostren els botons per controlar els [grups de canals](/basics/glossary-and-concepts#channel-groups) utilitzats a l'escena
 
 |     |     |
 | --- | --- |
-| ![](/basics/check.png) | Enable all the selected channel groups. |
-| ![](/basics/uncheck.png) | Disable all the selected channel groups. |
+| ![](/basics/check.png) | Activa tots els grups de canals seleccionats. |
+| ![](/basics/uncheck.png) | Desactiva tots els grups de canals seleccionats. |
 
 
-**Hint:** It's useful to know that when a channels group is checked/unchecked, the fixtures controlled by the group will be automatically added to the left panel. The channels controlled by the group will also be automatically enabled/disabled on each fixture.
+**Consell:** És útil saber que quan un grup de canals està marcat/desmarcat, els fixtures controlats pel grup s'afegiran automàticament al panell esquerre. Els canals controlats pel grup també s'habilitaran/inhabilitaran automàticament en cada fixture.
 
-Channel Groups Tabs
+Pestanyes de Grups de Canals
 -------------------
 
-This tab will be displayed only if one or more channel groups are selected in the General tab.  
-Each Channel Group will be displayed with a quick macro access button ([Click And Go](/basics/glossary-and-concepts#click-and-go) if supported), a label with the group value, a fader and the name of the group.
+Aquesta pestanya només es mostrarà si se seleccionen un o més grups de canals a la pestanya General.  
+Cada grup de canals es mostrarà amb un botó d'accés ràpid de macros ([Feu clic i aneu](/basics/glossary-and-concepts#click-and-go) si s'admet), una etiqueta amb el valor del grup, un fader i el nom del grup.
 
-Fixture Tabs
+Pestanyes de Fixtures
 ------------
 
-Each fixture is represented by its own tab that contains sliders for each of the fixture's channels. Each channel can be enabled or disabled with a check box at the top of the channel unit. The value of each channel can be set either by typing the value to the edit box at the top of the slider or by moving the slider. Channels that provide multiple functions such as gobos, colors, etc. also have a button above the channel slider - this button can be used to directly select a specific function or capability provided by that channel.  
-**Hint**: The keyboard shortcut to move between channels values edit boxes is '**Tab**' to move to the right and '**Shift + Tab**' to move to the left.
+Cada fixture es representa amb la seva pròpia pestanya que conté controls lliscants per a cadascun dels canals del fixture. Cada canal es pot activar o desactivar amb una casella de selecció a la part superior de la unitat de canal. El valor de cada canal es pot establir escrivint el valor al quadre d'edició a la part superior del control lliscant o movent el control lliscant. Els canals que proporcionen múltiples funcions com ara gobos, colors, etc. també tenen un botó a sobre del control lliscant del canal - aquest botó es pot utilitzar per seleccionar directament una funció o capacitat específica proporcionada per aquest canal.  
+**Consell**: La drecera de teclat per moure entre els quadres d'edició de valors dels canals és '**Tab**' per moure a la dreta i '**Maj + Tab**' per moure a l'esquerra.
 
-### Channel enabled/disabled status
+### Estat del canal habilitat/inhabilitat
 
-If a channel has not been enabled, the scene will not touch that particular channel's value, ever.
+Si no s'ha habilitat un canal, l'escena no tocarà mai el valor d'aquest canal en particular.
 
-If a channel has been enabled, the scene will change that channel's value to the value that is defined in the scene. This is useful, for example, when you wish to control only the dimmer channel of a scanner fixture - you wouldn't want the scene to touch the scanner's pan, tilt, color or gobo channels when you just want to fade in or fade out with the dimmer channel.
+Si s'ha habilitat un canal, l'escena canviarà el valor d'aquest canal al valor que es defineix a l'escena. Això és útil, per exemple, quan desitgeu controlar només el canal dimmer d'un fixture d'escàner -no voldríeu que l'escena toqui els canals panoràmica, inclinació, color o gobo de l'escàner quan només voleu esvair-lo o esvair-lo amb el canal dimmer.
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| ![](/basics/check.png) | Enable all channels from the current fixture. In all channels mode, select channels for all fixtures. |
-| ![](/basics/uncheck.png) | Disable all channels from the current fixture. In all channels mode, disable channels for all fixtures. |
-| ![](/basics/back.png) | Go to the previous tab in the view. If the first tab is selected, this will go to the last tab in the view. Keyboard shortcut: '**ALT+Left**' |
-| ![](/basics/forward.png) | Go to the next tab in the view. If the last tab is selected, this will go to the first tab in the view. Keyboard shortcut: '**ALT+Right**' |
-| ![](/basics/editcopy.png) | The Copy functionality has 2 modes:  <br><br>**Copy the values** (and enabled/disabled states) of all channels in the current fixture to the clipboard.<br>**Copy only the selected channels** (CTRL-clicked, yellow background) values into the clipboard. |
-| ![](/basics/editpaste.png) | Paste the values from clipboard to the current fixture. If no channels were selected during 'copy', then all the enabled/disabled states will be pasted along with the channel values. |
-| ![](/basics/editcopyall.png) | The 'Copy all' functionality has 2 modes:<br><br>**Copy all values** (and enabled/disabled states) of all channels to all other fixtures taking part in the scene.<br>**Copy only the selected channels** (CTRL-clicked, yellow background) values to all the other fixtures taking part in the scene. |
-| ![](/basics/color.png) | Launch a color tool to select a specific color and set that color to the current fixture; This feature is enabled only for fixtures that are capable of CMY/RGB color mixing. |
-| ![](/basics/xypad.png) | Launch a position tool (similar to [XYPad](/virtual-console/xy-pad) in Virtual console) to select a head/mirror position for the current fixture; This feature is enabled only for fixtures that have either pan or tilt channels. All heads of current fixture will be changed to the same value. |
-| ![](/basics/speed.png) | Show/Hide the Speed Dial widget, used to adjust the Scene parameters such as Fade In and Fade Out |
-| ![](/basics/tabview.png) | Switch between "tab view" and "all channels view". The first mode will display one tab for each fixture, while the second will display a single tab for all the fixtures |
-| ![](/basics/blind.png) | Toggle blind mode for the selected fixture. |
-| ![](/basics/record.png) | Clone the current scene and add a new step to the Chaser selected from the drop down list beside this button |
+| ![](/basics/check.png) | Activa tots els canals des del fixture actual. En el mode de tots els canals, seleccioneu canals per a tots els fixtures. |
+| ![](/basics/uncheck.png) | Desactiva tots els canals del fixture actual. En el mode de tots els canals, desactiveu els canals per a tots els fixtures. |
+| ![](/basics/back.png) | Va a la pestanya anterior a la vista. Si la primera pestanya està seleccionada, aquesta anirà a l'última pestanya a la vista. Drecera de teclat: '**ALT+Esquerra**' |
+| ![](/basics/forward.png) | Aneu a la pestanya següent a la vista. Si se selecciona l'última pestanya, aquesta anirà a la primera pestanya de la vista. Drecera de teclat: '**ALT+Dreta**' |
+| ![](/basics/editcopy.png) | La funcionalitat Copia té 2 modes: <br><br>**Copia els valors** (i estats habilitats/inhabilitats) de tots els canals del fixture actual al porta-retalls.<br>**Copia només els canals seleccionats** (feu clic a la tecla CTRL, fons groc) al porta-retalls. |
+| ![](/basics/editpaste.png) | Enganxa els valors des del porta-retalls al fixture actual. Si no s'ha seleccionat cap canal durant la «còpia», llavors tots els estats habilitats/inhabilitats s'enganxaran juntament amb els valors del canal. |
+| ![](/basics/editcopyall.png) | La funcionalitat «Copia tot» té 2 modes:<br><br>**Copia tots els valors** (i estats habilitats/inhabilitats) de tots els canals que participen a l'escena.<br>**Copia només els canals seleccionats** (feu clic a la tecla CTRL, fons groc) a tots els altres fixtures que participen a l'escena. |
+| ![](/basics/color.png) | Llança una eina de color per a seleccionar un color específic i establir aquest color al fixture actual; Aquesta característica només està habilitada per als fixtures que són capaços de barrejar el color CMY/RGB. |
+| ![](/basics/xypad.png) | Llança una eina de posició (similar a [XYPad](/virtual-console/xy-pad) a la consola virtual) per seleccionar una posició de capçal/mirall per al fixture actual; Aquesta característica només està habilitada per als fixtures que tenen canals panoràmica o inclinació. Tots els caps del fixture actual es canviaran al mateix valor. |
+| ![](/basics/speed.png) | Mostra/Oculta el giny selector de velocitat, utilitzat per ajustar els paràmetres de l'escena, com ara Fade In i Fade Out |
+| ![](/basics/tabview.png) | Canvia entre «visualització de la pestanya» i «visualització de tots els canals». El primer mode mostrarà una pestanya per a cada fixture, mentre que el segon mostrarà una sola pestanya per a tots els fixtures |
+| ![](/basics/blind.png) | Commuta el mode cec per al fixture seleccionat. |
+| ![](/basics/record.png) | Clona l'escena actual i afegeix un nou pas al Chaser seleccionat de la llista desplegable al costat d'aquest botó |

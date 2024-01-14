@@ -12,68 +12,68 @@ media_order: 'mainwindow.png,mainwindow.png'
     }
 </style>
 
-### Chapter 2
+### Capítol 2
 
-# Main Window
+# Finestra Principal
 
-The QLC+ Main Window consists of three main parts:
+La finestra principal de QLC+ consta de tres parts principals:
 
-1. A Menu bar containing buttons for global functions
-2. Active panels selected by their respective tabs
-3. Tabs that allow the selection of one of the QLC+ panels
+1. Una barra de Menús que conté botons per a funcions globals
+2. Panells actius seleccionats per les seves respectives pestanyes
+3. Pestanyes que permeten la selecció d'un dels panells QLC+
 
 ![](mainwindow.png)
 
-Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
+La majoria dels controls al llarg del programari tenen consells d'eina, que apareixen després de mantenir el cursor del ratolí sobre ells durant un temps curt.
 
-### Menu bar (1)
+### Barra de menús (1)
 ------------
 
-The menu bar on the top of the workspace window contains the following buttons (from left to right):
+La barra de menús de la part superior de la finestra de l'espai de treball conté els botons següents (d'esquerra a dreta):
 
 * * *
 
-![](../basics/filenew.png) New workspace (CTRL+N)  
-![](../basics/fileopen.png) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
-![](../basics/filesave.png) Save the current workspace (CTRL+S)  
-![](../basics/filesaveas.png) Save the current workspace with a new name
+![](../basics/filenew.png) Espai de treball nou (CTRL+N)  
+![](../basics/fileopen.png) Obre un espai de treball existent (manteniu el botó més llarg per a una llista de fitxers recents) (CTRL+O)  
+![](../basics/filesave.png) Desa l'espai de treball actual (CTRL+S)  
+![](../basics/filesaveas.png) Desa l'espai de treball actual amb un nom nou
 
 * * *
 
-![](../basics/monitor.png)[DMX Monitor](dmx-monitor) (CTRL+M)  
-![](../basics/diptool.png)[DMX Address tool](dmx-address-tool)  
-![](../basics/audioinput.png)[Audio triggers](/virtual-console/audio-triggers)
+![](../basics/monitor.png)[Monitor DMX](dmx-monitor) (CTRL+M)  
+![](../basics/diptool.png)[Eina d'adreça DMX](dmx-address-tool)  
+![](../basics/audioinput.png)[Activadors d'àudio](/virtual-console/audio-triggers)
 
 * * *
 
-![](../basics/fullscreen.png) Toggle full screen mode (CTRL+F11)  
-![](../basics/help.png) View this documentation (Shift+F1)  
-![](../basics/qlcplus.svg?resize=32,32) View information about QLC+
+![](../basics/fullscreen.png) Commuta el mode de pantalla completa (CTRL+F11)  
+![](../basics/help.png) Mostra aquesta documentació (Maj+F1)  
+![](../basics/qlcplus.svg?resize=32,32) Mostra informació sobre QLC+
 
 * * *
 
-![](../basics/add_dump.png)[DMX Dump](dmx-dump) (CTRL+D)  
-![](../basics/liveedit.png)[Live Edit](live-edit): allows you to modify a function while QLC+ is in Operate Mode  
-![](../basics/liveedit_vc.png) Live Edit Virtual Console: allows you to modify the Virtual Console while QLC+ is in Operate Mode. Click to Toggle  
-![](../basics/panic.png) Stop All Functions (CTRL+Shift+ESC)  
-![](../basics/blackout.png) Toggle Blackout  
-![](../basics/operate.png) Switch between Design Mode and Operate Mode (CTRL+F12)
+![](../basics/add_dump.png)[Bolcat DMX](dmx-dump) (CTRL+D)  
+![](../basics/liveedit.png)[Edició en Viu](live-edit): permet modificar una funció mentre QLC+ està en mode operatiu  
+![](../basics/liveedit_vc.png) L'Edició en Viu de la Consola Virtual: permet modificar la consola virtual mentre QLC+ està en mode operatiu. Feu clic per commutar  
+![](../basics/panic.png) Atura totes les funcions (CTRL+Maj+ESC)  
+![](../basics/blackout.png) Commuta el Blackout  
+![](../basics/operate.png) Canvia entre el Mode de Disseny i el Mode d'Operació (CTRL+F12)
 
-### Active Panel (2)
+### Plafó actiu (2)
 ----------------
 
-Everything happens here. Which panel is active depends on which tab is currently selected.
+Tot passa aquí. Quin plafó està actiu depèn de quina pestanya està seleccionada actualment.
 
-### Panel Tabs (3)
+### Pestanyes del panell (3)
 --------------
 
-At the bottom of main window you can find easy eye catching icons for switching between QLC+ contexts.  
-By double clicking on a tab, **a context can be detached on a separate window**. To reattach a detached context, just close the window.  
-QLC+ contexts appear in the following order (from left to right):
+A la part inferior de la finestra principal es poden trobar icones fàcils de captar l'ull per commutar entre contextos QLC+.  
+En fer doble clic en una pestanya, **un context es pot separar en una finestra separada**. Per tornar a adjuntar un context separat, tanqueu la finestra.  
+Els contextos QLC+ apareixen en el següent ordre (d'esquerra a dreta):
 
-![](../basics/fixture.png) View the [Fixture Manager](/fixture-manager)  
-![](../basics/function.png) View the [Function Manager](/function-manager)  
-![](../basics/show.png) View the [Show Manager](/show-manager)  
-![](../basics/virtualconsole.png) View the [Virtual Console](/virtual-console)  
-![](../basics/slidermatrix.png) View the [Simple Desk](/simple-desk)  
-![](../basics/input_output.png) View the [Input/Output](/input-output) configuration manager
+![](../basics/fixture.png) Mostra el [Gestor de fixtures](/fixture-manager)  
+![](../basics/function.png) Mostra el [Gestor de funcions](/function-manager)  
+![](../basics/show.png) Mostra el ](/show-manager)Gestor de Shows  
+![](../basics/virtualconsole.png) Mostra la  [Consola Virtual](/virtual-console)  
+![](../basics/slidermatrix.png) Mostra la [Taula Simple](/simple-desk)  
+![](../basics/input_output.png) Mostra  el gestor de configuració  [Entrada/Sortida](/input-output)

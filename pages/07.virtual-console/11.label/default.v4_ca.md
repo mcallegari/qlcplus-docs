@@ -3,8 +3,8 @@ title: Label
 date: '03:44 22-08-2023'
 ---
 
-A Label is simply text field that can be placed on the Virtual Console to give additional information, for example, as a heading for a group of buttons or the title of a frame.
+Una Etiqueta és simplement un camp de text que es pot col·locar a la consola virtual per a donar informació addicional, per exemple, com un encapçalament per a un grup de botons o el títol d'un marc.
 
-### Configuration
+### Configuració
 
-You can only set up the text to be displayed in a Label with the **Rename** ![](/basics/editclear.png) button. It does not have any other purpose nor configurable options, other than the standard [styling & placement options](../styling-and-placement) that all Virtual Console widgets have.
+Només podeu configurar el text que es mostrarà en una etiqueta amb el botó **Reanomena** ![](/basics/editclear.png). No té cap altra finalitat ni opcions configurables, a part de les [opcions estàndard d'estil i col·locació](../styling-and-placement) que tenen tots els ginys de la Consola Virtual.

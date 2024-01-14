@@ -3,19 +3,19 @@ title: 'Collection Editor'
 date: '12:21 21-08-2023'
 ---
 
-The collection editor, as its name suggests, is used to edit ![](/basics/collection.png) [Collection](/basics/glossary-and-concepts#collection) functions.  
-Collections are very helpful in a workflow where you create QLC+ functions dedicated to specific areas of your show. For example, you can create a number of Scenes to control only colors, some other Scenes to control only positions and so on. Then you can create a number of Chasers and EFX for automations.  
-When you have created all the basic elements of your show, you can then use Collections to build a sort of "shortcut" to compound scenes. For example a color Scene + a position Scene.
+L'editor de col·leccions, com el seu nom indica, s'utilitza per editar les funcions  ![](/basics/collection.png) [Col·lecció](/basics/glossary-and-concepts#collection).  
+Les col·leccions són molt útils en un flux de treball on creeu funcions QLC+ dedicades a àrees específiques del vostre espectacle. Per exemple, podeu crear un nombre d'Escenes per a controlar només els colors, algunes altres Escenes per a controlar només les posicions, etc. A continuació, podeu crear una sèrie de Chasers i EFX per a les automatitzacions.  
+Quan hàgiu creat tots els elements bàsics del vostre espectacle, podeu utilitzar Col·leccions per crear una mena de "drecera" a les escenes compostes. Per exemple, una escena de color + una escena de posició.
 
-**Note:** Collections don't have speed setting; each function you include in a collection follows its own speed settings.
+**Nota:** Les col·leccions no tenen paràmetres de velocitat; cada funció que incloeu en una col·lecció segueix els seus propis paràmetres de velocitat.
 
-**Important**: The order of the Functions in a Collection is fundamental when dealing with HTP/LTP usage or relative values. QLC+ will internally start the Functions of a Collection from the first to the last, so if they use the same channels, just keep this in mind because you might run into undesired effects.  
-For example a Scene setting Pan/Tilt channels + a EFX in relative mode must have a precise order: the Scene in the first position and the EFX in the second position.
+**Important**: L'ordre de les funcions en una col·lecció és fonamental quan es tracta de l'ús de l'HTP/LTP o de valors relatius. QLC+ iniciarà internament les funcions d'una col·lecció des de la primera fins a l'última, de manera que si utilitzen els mateixos canals, tingueu-ho en compte perquè podeu trobar-vos amb efectes no desitjats.  
+Per exemple, una configuració d'escena Canals de Panoràmica/Inclinació + un EFX en mode relatiu ha de tenir un ordre precís: l'escena en la primera posició i l'EFX en la segona posició.
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| **Collection name** | Change the name of the collection. |
-| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the collection, using the [Select Function](../function-selection) dialog. The order of the functions has no significance. |
-| ![](/basics/edit_remove.png) | Remove the selected functions from the collection. |
+| **Nom de la Col·lecció** | Canvia el nom de la col·lecció. |
+| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#functions) existent a la col·lecció mitjançant el diàleg [Selecciona funció](../function-selection). L'ordre de les funcions no té cap significat. |
+| ![](/basics/edit_remove.png) | Suprimeix les funcions seleccionades de la col·lecció. |

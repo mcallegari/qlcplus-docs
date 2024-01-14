@@ -3,19 +3,19 @@ title: 'Solo Frame'
 date: '03:43 22-08-2023'
 ---
 
-A Solo Frame is almost exactly the same kind of a container as a normal [Frame](../frame) in that can hold various widgets and other frames inside. However, the difference with Solo Frame is that it treats any [Buttons](../button) inside it differently by allowing only one button to be enabled at a time. For example, consider you have **Button A** and **Button B** inside a Solo Frame with **Button A** currently enabled. Next, you click button **Button B** which automatically results in **Button A** being released, leaving now only **Button B** enabled.
+Un Marc de Solo és gairebé exactament el mateix tipus de contenidor que un [Marc](../frame) normal  en el qual es poden mantenir diversos ginys i altres marcs dins. No obstant això, la diferència amb el Marc Solo és que tracta qualsevol [Botó](../button) dins d'ell de manera diferent, permetent només un botó activat a la vegada. Per exemple, considereu que teniu **Botó A** i **Botó B** dins d'un marc Solo amb **Botó A** actualment activat. A continuació, feu clic al botó **Botó B**, el qual automàticament dona lloc a la desactivació del **Botó A**, deixant ara només el **Botó B** activat.
 
-### Configuration
+### Configuració
 
-Solo Frames can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the solo frame itself.
+Els Marcs Solo es poden configurar amb el ![](/basics/edit.png) botó de propietats que es troba a la barra d'eines o fent doble clic al marc solo.
 
-Other than the standard [styling & placement options](../styling-and-placement), Solo Frames have every [frame](../frame) additional options:
+A part de les [opcions estàndard d'estil i col·locació](../styling-and-placement), els marcs solo tenen totes les opcions addicionals del [marc](../frame):
 
-* **Frame name**: Allow you to assign an arbitrary label to the Solo Frame. This will be displayed only when the "Show header" option is enabled (see below).
-* **Accept child widgets**: Allows you to add widgets to the Solo Frame.
-* **Allow resizing**: Allow the Solo Frame height and width to be changed.
-* **Show header**: Display a useful header composed of a button and a label. The button allows you to expand/collapse the Solo Frame, which can save a lot of Virtual Console space. The label will display the name of the Frame.
+* **Nom del Marc**: Permet assignar una etiqueta arbitrària al Marc Solo. Això només es mostrarà quan l'opció «Mostra la capçalera» estigui habilitada (vegeu més avall).
+* **Accepta ginys fills**: Permet afegir ginys al Marc Solo.
+* **Permet redimensionar**: Permet canviar l'alçada i l'amplada del Marc Solo.
+* **Mostra la capçalera**: Mostra una capçalera útil composta per un botó i una etiqueta. El botó permet expandir/col·lapsar el Marc Solo, el qual pot estalviar molt espai de la consola virtual. L'etiqueta mostrarà el nom del marc.
 
-And one other specific option:
+I una altra opció específica:
 
-* **Mix sliders in playback mode**: When this option is enabled, the [sliders](../slider) in **playback** mode are allowed to be enabled at the same time. When moving a slider up, instead of instantly cancelling the other running sliders, it will fade them out at the same speed you are fading it up.
+* **Barreja els controls lliscants en mode de reproducció**: Quan aquesta opció està activada, es permet activar els [controls lliscants](../slider) en mode de reproducció**** alhora. En moure un control lliscant cap amunt, en lloc de cancel·lar instantàniament els altres controls lliscants en execució, s'esvairan a la mateixa velocitat que l'esteu esvaint.

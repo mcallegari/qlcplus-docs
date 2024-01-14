@@ -3,22 +3,22 @@ title: 'Button Matrix'
 date: '14:30 21-08-2023'
 ---
 
-A Button Matrix is basically just a way for quickly creating multiple [Buttons](../button) at the same time inside a common container [Frame](../frame).
+Una matriu de Botons és bàsicament una manera de crear ràpidament múltiples [Botons](../button) al mateix temps dins d'un contenidor comú [Marc](../frame).
 
-When creating a new button matrix, you can assign functions to each of the buttons quite quickly with the dedicated dialog.
+Quan creeu una nova matriu de botons, podeu assignar funcions a cadascun dels botons amb bastant rapidesa amb el diàleg dedicat.
 
-### Add a Matrix of Buttons
+### Afegeix una Matriu de Botons
 
-When you want to create many buttons at the same time on the [Virtual Console](/virtual-console), you may do this by using the Add Button Matrix dialog.
+Quan vulgueu crear molts botons al mateix temps a la [Consola Virtual](/virtual-console), podeu fer-ho mitjançant el diàleg Afegeix Matriu de Botons.
 
 |     |     |
 | --- | --- |
-| **Function list** | Shows you a list of functions that will be assigned to the buttons, one function per button. |
-| ![](/basics/edit_add.png) | Add [Functions](/basics/glossary-and-concepts#functions) to the list. |
-| ![](/basics/edit_remove.png) | Remove the selected functions from the list. |
-| **Dimensions** | **Horizontal button count**: Number of buttons to create horizontally<br>**Vertical button count**: Number of buttons to create vertically<br>**Button size**: The size of each button<br>**Allocation**: Shows you the number of functions currently in the list and the number of buttons that will be created with the current parameters. If you have less buttons than functions, the remaining functions will NOT be allocated to any buttons. On the other hand, if you have more buttons than functions, some buttons are not assigned a function, leaving them empty. |
-| **Frame** | **Normal**: Place the buttons inside a [Normal Frame](../frame)<br>**Solo**: Place the buttons inside a [Solo Frame](../solo-frame) |
+| **Llista de Funcions** | Mostra una llista de funcions que s'assignaran als botons, una funció per botó. |
+| ![](/basics/edit_add.png) | Afegeix [Funcions](/basics/glossary-and-concepts#functions) a la llista. |
+| ![](/basics/edit_remove.png) | Suprimeix les funcions seleccionades de la llista. |
+| **Dimensions** | **Recompte horitzontal de botons**: Nombre de botons per crear horitzontalment<br>**Recompte vertical de botons**: Nombre de botons per crear verticalment<br>**Mida del botó**: La mida de cada botó<br>**Assignació****: Mostra el nombre de funcions actualment a la llista i el nombre de botons que es crearan amb els paràmetres actuals. Si teniu menys botons que funcions, les funcions restants NO s'assignaran a cap botó. D'altra banda, si teniu més botons que funcions, a alguns botons no se'ls assigna una funció, deixant-los buits. |
+| **Marc** | **Normal**: Col·loca els botons dins d'un marc normal [](../frame)<br>**Solo**: col·loca els botons dins d'un  [Marc Solo](../solo-frame) |
 
-### Configuration
+### Configuració
 
-Refer to [Frame](../frame) and [Button](../button) on how to configure them.
+Consulteu el [Marc](../frame) i el [Botó](../button) sobre com configurar-los.

@@ -7,61 +7,61 @@ media_order: e131_configuration.png
 Introducció
 ------------
 
-QLC+ supports the [E1.31 protocol](https://www.opendmx.net/index.php/E1.31) (also known as sACN) through an input/output plugin that receives and transmits packets on the network.  
-No extra requirements are needed, since QLC+ has a native implementation of the E1.31 protocol that works on Linux, Windows and OSX systems.  
-The E1.31 plugin can send and receive packets from multiple network cards, virtual addresses, the loopback device (127.0.0.1) and multiple universes per network interface.  
-By default, E1.31 packets will be sent as UDP on multicast addresses like 239.255.0.x, where 'x' is the universe number selected in QLC+. The port used is 5568.  
-When using the loopback device packets are always transmitted using address 127.0.0.1.  
-When transmitting multiple universes on the same interface, the packets will be sent by default with an E1.31 Universe ID equal to the QLC+ universe.
+QLC+ suporta el protocol [E1.31](https://www.opendmx.net/index.php/E1.31) (també conegut com a sACN) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
+No es necessiten requisits addicionals, ja que QLC+ té una implementació nativa del protocol E1.31 que funciona en sistemes Linux, Windows i OSX.  
+El connector E1.31 pot enviar i rebre paquets de múltiples targetes de xarxa, adreces virtuals, el dispositiu de bucle/loopback (127.0.0.1) i múltiples universos per interfície de xarxa.  
+Per defecte, els paquets E1.31 s'enviaran com UDP en adreces multicast com 239.255.0.x, on "x" és el número d'univers seleccionat a QLC+. El port utilitzat és 5568.  
+Quan s'utilitzen els paquets de dispositius de loopback sempre es transmeten utilitzant l'adreça 127.0.0.1.  
+Quan es transmeten múltiples universos en la mateixa interfície, els paquets s'enviaran per defecte amb un ID d'Univers E1.31 igual a l'univers QLC+.
 
-For example:  
-QLC+ Universe 1 --> E1.31 Universe 1 on 239.255.0.1  
-QLC+ Universe 2 --> E1.31 Universe 2 on 239.255.0.2  
+Per exemple:  
+QLC+ Univers 1 -- on E1.31 Univers 1 sobre 239.255.0.1  
+QLC+ Univers 2 -- -- E1.31 Univers 2 sobre 239.255.0.2  
 ...  
-QLC+ Universe 8 --> E1.31 Universe 8 on 239.255.0.8
+QLC+ Univers 8 -- -- E1.31 Univers 8 en 239.255.0.8
 
-If the above settings don't meet the requirements of your network, please read the following chapter.
+Si els paràmetres anteriors no compleixen els requisits de la vostra xarxa, llegiu el capítol següent.
 
-Configuration
+Configuració
 -------------
 
-When clicking on the ![](/basics/configure.png) configuration button, a small dialog will be displayed, showing the Universes Configuration panel.
+En fer clic al botó de configuració ![](/basics/configure.png), es mostrarà un petit diàleg que mostrarà el panell de Configuració de l'Univers.
 
-After a QLC+ universe is patched with an E1.31 input or output, an entry will be displayed in this list, allowing to manually configure the desired parameters to be used by the E1.31 plugin.  
-Input lines can be configured with the following parameters:
+Després que un univers QLC+ estigui apedaçat amb una entrada o sortida E1.31, es mostrarà una entrada en aquesta llista, permetent configurar manualment els paràmetres desitjats per ser utilitzats pel connector E1.31.  
+Les línies d'entrada es poden configurar amb els paràmetres següents:
 
 |     |     |
 | --- | --- |
-| **Multicast** | This checkbox enables you to select between multicast input and unicast input.  <br>When checked, this universe will received packets from the chosen multicast group on this interface.  <br>When unchecked, this universe will receive unicast packets on this IP address only.  <br>Selecting Unicast input will allow selecting a different input Port. |
-| **IP Address** | This is the input IP address the E1.31 plugin will listen to on the selected interface, for this QLC+ universe.  <br>When the input is set to multicast, you can select the multicast IP from 239.255.0.1 to 239.255.0.255.  <br>When the input is set to unicast, the IP address is locked on the IP address of the selected interface. |
-| **Port** | This is the input port the E1.31 plugin will listen to for this QLC+ universe.  <br>When the input is set to multicast, the port is locked on the default E1.31 multicast port: 5568  <br>When the input is set to unicast, you can select any port you want. |
-| **E1.31 Universe** | This is the input E1.31 universe the plugin will accept for this QLC+ universe.  <br>This allows mapping any E1.31 universe to any QLC+ universe. |
+| **Multidifusió/Multicast** | Aquesta casella de selecció permet seleccionar entre entrada multicast i unicast.  <br>Quan està marcada, aquest univers rebrà paquets del grup de multidifusió/multicast escollit en aquesta interfície.  <br>Quan no estigui marcat, aquest univers només rebrà paquets unicast en aquesta adreça IP.  <x3></x3>Si seleccioneu l'entrada Unicast, podreu seleccionar un Port d'entrada diferent. |
+| **Adreça IP** | Aquesta és l'adreça IP d'entrada que el connector E1.31 escoltarà a la interfície seleccionada, per a aquest univers QLC+.  <br>Quan l'entrada està configurada a multicast, podeu seleccionar la IP multicast de 239.255.0.1 a 239.255.0.255.  <br>Quan l'entrada està configurada a unicast, l'adreça IP està bloquejada a l'adreça IP de la interfície seleccionada. |
+| **Port** | Aquest és el port d'entrada que escoltarà el connector E1.31 per a aquest univers QLC+.  <br>Quan l'entrada està configurada com a multicast, el port està bloquejat al port multicast E1.31 per defecte: 5568 <br>Quan l'entrada està configurada com unicast, podeu seleccionar qualsevol port que vulgueu. |
+| **Univers E1.31** | Aquest és l'univers d'entrada E1.31 que el connector acceptarà per a aquest univers QLC+.  <br>Això permet mapejar qualsevol univers E1.31 a qualsevol univers QLC+. |
 
 
-Input configuration example:
+Exemple de configuració d'Entrada:
 
 ![](e131_configuration.png)
 
-In this example, when receiving E1.31 packets on the address 127.0.0.1 and port 8000, the packets operating on E1.31 universe 4 will affect QLC+ universe 1.  
-Also we're transmitting QLC+ universe 2 on the multicast address 239.255.0.2, E1.31 universe 1, and QLC+ universe 3 on the unicast address 13.0.0.175 port 7000, E1.31 universe 2.
+En aquest exemple, quan es reben paquets E1.31 a l'adreça 127.0.0.1 i al port 8000, els paquets que operen a l'univers E1.31 4 afectaran l'univers QLC+ 1.  
+També estem transmetent l'univers QLC+ 2 a l'adreça multicast 239.255.0.2, univers E1.31 1 i univers QLC+ 3 a l'adreça unicast 13.0.0.175 port 7000, univers E1.31 2.
 
-Output lines can be configured with the following parameters:
+Les línies de sortida es poden configurar amb els paràmetres següents:
 
 |     |     |
 | --- | --- |
-| **Multicast** | This checkbox enables you to select between multicast output and unicast output.  <br>When checked, this universe will send packets to the chosen multicast group on this interface.  <br>When unchecked, this universe will send unicast packets to the chosen unicast IP address.  <br>Selecting Unicast output will also allow you to select the outgoing port. |
-| **IP Address** | This is the destination IP address where the E1.31 plugin will transmit packets to.  <br>By default a multicast address is used as described above.  <br>When the output is set to multicast, you can set this parameter within the range 1-255.  <br>This allows sending packets to the multicast range 239.255.0.1 to 239.255.0.255.  <br>When the output is set to unicast, you can select any arbitrary IP address.  <br>When patching a QLC+ universe to the loopback device (127.0.0.1), unicast packets will be always transmitted to 127.0.0.1. |
-| **Port** | This is the port the outgoing packets will target.  <br>Multicast E1.31 port is always 5568.  <br>When the output is set to unicast, you can select any port you want. |
-| **E1.31 Universe** | This is the E1.31 universe that will be actually written in every packet transmitted.  <br>By setting this parameter, you can use any QLC+ universe to transmit to the desired E1.31 universe. |
-| **Transmission Mode** | Here you can select if QLC+ should transmit full or partial universes.  <br>'Full' means that all the 512 DMX channels of a universe are transmitted at the speed rate of the QLC+ internal clock (50Hz), producing a fixed bitrate of about 200Kbit/s.  <br>'Partial', instead, means that QLC+ will transmit only the DMX channel actually used in a universe, starting from channel 1. For example if you raise channel 3 of a fixture with address 50, the E1.31 plugin will transmit only 53 DMX channels, thus limiting the trasnmission bitrate.  <br>Use this setting only if the receiving E1.31 node supports partial transmission. |
-| **Priority** | E1.31 source priority.  <br>**0** is the minimum priority, **200** is the maximum, **100** is default priority.  <br>When E1.31 receiver gets data for a particular universe from multiple sources, it uses data from source with the highest priority.  <br>This allows various failover schemes. Note that QLC+ does not yet acknowledge priority on input. |
+| **Multidifusió/Multicast** | Aquesta casella de selecció us permet seleccionar entre la sortida multidifusió/multicast i la sortida unicast.  <br>Quan està marcada, aquest univers enviarà paquets al grup de multidifusió/multicast escollit en aquesta interfície.  <br>Quan no està marcat, aquest univers enviarà paquets unicast a l'adreça IP unicast triada.  <x3></x3>Si seleccioneu la sortida Unicast, també podreu seleccionar el port de sortida. |
+| **Adreça IP** | Aquesta és l'adreça IP de destinació a la qual el connector E1.31 transmetrà els paquets.  <br>Per defecte s'utilitza una adreça multidifusió/multicast com es descriu anteriorment.  <br>Quan la sortida s'estableix a multidifusió/multicast, podeu establir aquest paràmetre dins de l'interval 1-255.  <br>Això permet enviar paquets a l'interval multidifusió/multicast 239.255.0.1 a 239.255.0.255.  <br>Quan la sortida està establerta a unicast, podeu seleccionar qualsevol adreça IP arbitrària.  <x5></x5>Quan s'apedaça un univers QLC+ al dispositiu loopback (127.0.0.1), els paquets unicast es transmetran sempre a 127.0.0.1. |
+| **Port** | Aquest és el port al qual es dirigiran els paquets sortints.  <br>El port Multicast E1.31 sempre és 5568.  <br>Quan la sortida està establerta a unicast, podeu seleccionar qualsevol port que vulgueu. |
+| **Univers E1.31** | Aquest és l'univers E1.31 que s'escriurà realment en cada paquet transmès.  <br>En establir aquest paràmetre, podeu utilitzar qualsevol univers QLC+ per transmetre a l'univers E1.31 desitjat. |
+| **Mode de Transmissió** | Aquí podeu seleccionar si QLC+ ha de transmetre universos complets o parcials.  <br>'Complet' significa que tots els 512 canals DMX d'un univers es transmeten a la velocitat del rellotge intern QLC+ (50Hz), produint una taxa de bits fixa d'uns 200Kbit/s.  <br>'Parcial', en canvi, significa que QLC+ transmetrà només el canal DMX realment utilitzat en un univers, començant pel canal 1. Per exemple, si aixeques el canal 3 d'un fixture amb adreça 50, el connector E1.31 només transmetrà 53 canals DMX, limitant així la taxa de bits de la trasnmissió.  <br>Utilitzeu aquest paràmetre només si el node E1.31 receptor admet la transmissió parcial. |
+| **Prioritat** | Prioritat d'origen E1.31.  <br>**0** és la prioritat mínima, **200** és el màxim, **100** és la prioritat predeterminada.  <br>Quan el receptor E1.31 obté dades d'un univers particular de múltiples fonts, utilitza dades d'origen amb la prioritat més alta.  <br>Això permet diversos esquemes de commutació per error. Tingueu en compte que QLC+ encara no reconeix la prioritat a l'entrada. |
 
 
-Settings that are different from the plugin defaults, will be stored in your QLC+ workspace, to increase the portability of a project across different platforms, such as different operating systems or a PC and a Raspberry Pi.
+Els paràmetres que són diferents dels valors per defecte del connector, s'emmagatzemaran al vostre espai de treball QLC+, per augmentar la portabilitat d'un projecte a través de diferents plataformes, com ara diferents sistemes operatius o un PC i un Raspberry Pi.
 
-Compatibility
+Compatibilitat
 -------------
 
-QLC+ has been tested with the following E1.31 softwares/devices:
+QLC+ ha estat provat amb els següents programaris/dispositius E1.31:
 
-* [DMXking eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Output device
+* [DMXking eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Dispositiu de sortida

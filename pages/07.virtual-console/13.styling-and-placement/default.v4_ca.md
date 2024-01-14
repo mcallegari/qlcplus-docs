@@ -3,48 +3,48 @@ title: 'Styling And Placement'
 date: '03:53 22-08-2023'
 ---
 
-The colors, font, frame style, stacking order, size and placement of widgets can be changed to better suit your vision of the perfect lighting console. Most of these options, except for moving and resizing, are available in the Virtual Console **Edit** menu, that is, they can be accessed from the menu bar as well as from a popup menu by right clicking a widget you wish to adjust.
+Els colors, el tipus de lletra, l'estil del marc, l'ordre d'apilament, la mida i la col·locació dels ginys es poden canviar per a adaptar-se millor a la vostra visió de la consola d'il·luminació perfecta. La majoria d'aquestes opcions, excepte per moure i redimensionar, estan disponibles al menú de la consola virtual **Edita**, és a dir, s'hi pot accedir des de la barra de menús així com des d'un menú emergent fent clic dret a un giny que voleu ajustar.
 
-**NOTE:** The Virtual Console widgets' styling and placement options are available only when the application is in [Design Mode](/basics/glossary-and-concepts#modes).
+**NOTA:** L'estil dels ginys de la consola virtual i les opcions de col·locació només estan disponibles quan l'aplicació està en [Mode Disseny](/basics/glossary-and-concepts#modes).
 
-### Moving Widgets
+### Moure Ginys
 
-Widgets can be moved simply by dragging them as if you were dragging any icon on your desktop. Refer to your operating system manual on how to drag items.
+Els ginys es poden moure simplement arrossegant-los com si estiguéssiu arrossegant qualsevol icona a l'escriptori. Consulteu el manual del sistema operatiu sobre com arrossegar elements.
 
-To move a widget from one frame to another frame, you need to move the widget through the Virtual Console clipboard. Cut the widgets from the first frame, then select another frame and paste the widgets into that frame.
+Per a moure un giny d'un marc a un altre, heu de moure el giny a través del porta-retalls de la Consola Virtual. Retalla els ginys des del primer marc, després selecciona un altre marc i enganxa els ginys dins d'aquest marc.
 
-### Resizing Widgets
+### Canviar la mida dels Ginys
 
-Each widget has a special resize handle ![](/basics/resize.png) on their lower right hand corner that you can grab and then resize the widget as appropriate simply by dragging the handle.
+Cada giny té una maneta especial de redimensionament ![](/basics/resize.png) a la seva cantonada inferior dreta que podeu agafar i després canviar la mida del giny segons correspongui simplement arrossegant la nansa.
 
-### Widget Background
+### Fons del Giny
 
-To change a widget's background color, choose **Color** from the **Background** menu and select a color from the popup dialog. To set an image as the widget's background, choose **Image** from the **Background** menu and select an image file from the popup dialog.
+Per canviar el color de fons d'un giny, trieu **Color** des del menú **Fons** i seleccioneu un color des del diàleg emergent. Per definir una imatge com a fons del giny, trieu **Imatge** des del menú **Fons** i seleccioneu un fitxer d'imatge des del diàleg emergent.
 
-To restore the default background color (and to clear an image), choose **Default** from the **Background** menu.
+Per restaurar el color de fons predeterminat (i netejar una imatge), trieu **Predeterminat** des del menú **Fons**.
 
-**NOTE:** Some operating systems and/or visual themes do not allow manual setting of background colors or images. Try changing the desktop theme if you encounter this problem.
+**NOTA:** Alguns sistemes operatius i/o temes visuals no permeten la configuració manual de colors de fons o imatges de fons. Intenteu canviar el tema de l'escriptori si trobeu aquest problema.
 
-### Widget Foreground
+### Primer Pla del Giny
 
-To change a widget's foreground color, choose **Color** from the **Foreground** menu and select a color from the popup dialog.
+Per canviar el color de primer pla d'un giny, trieu **Color** des del menú **Primer pla** i seleccioneu un color des del diàleg emergent.
 
-Buttons can have an icon in the foreground, which will override any text set as their name. To change a button's icon, select **Choose...** from the **Icon** menu and select an image file from the popup dialog.
+Els botons poden tenir una icona en primer pla, que substituirà qualsevol conjunt de text com el seu nom. Per canviar la icona d'un botó, seleccioneu **Tria...** des del menú **Icona** i seleccioneu un fitxer d'imatge des del diàleg emergent.
 
-To restore the default background color (and to clear an icon if applicable), choose **Default** from the **Background** menu.
+Per restaurar el color de fons predeterminat (i per netejar una icona si és aplicable), trieu **Predeterminat** des del menú **Fons**.
 
-**NOTE:** Some operating systems and/or visual themes do not allow manual setting of foreground colors or images. Try changing the desktop theme if you encounter this problem.
+**NOTA:** Alguns sistemes operatius i/o temes visuals no permeten la configuració manual de colors de primer pla o imatges. Intenteu canviar el tema de l'escriptori si trobeu aquest problema.
 
-### Widget Borders
+### Vores del Giny
 
-To change the border style for a widget, you can choose either **Raised** or **Sunken** from the **Border** menu. To completely remove the borders of a widget, choose **None** from the **Border** menu.
+Per a canviar l'estil de vora d'un giny, podeu triar **Elevat** o **Enfonsat** des del menú **Marc**. Per eliminar completament les vores d'un giny, trieu **Cap** del menú **Marc**.
 
-**NOTE:** Some operating systems and/or visual themes do not allow manual setting of borders. Try changing the desktop theme if you encounter this problem.
+**NOTA:** Alguns sistemes operatius i/o temes visuals no permeten establir manualment les vores. Intenteu canviar el tema de l'escriptori si trobeu aquest problema.
 
-### Fonts
+### Tipus de Lletra
 
-You can change the font for all child widgets of a frame at the same time by changing the font of the frame itself. Alternatively, you can change the font for each widget separately. Fonts can be changed by selecting **Font...** from the **Font** menu. To restore the font back to the widget's parent frame's font, select **Default** from the **Font** menu.
+Podeu canviar el tipus de lletra per a tots els ginys fills d'un marc al mateix temps canviant el tipus de lletra del propi marc. Alternativament, podeu canviar el tipus de lletra per a cada giny per separat. Els tipus de lletra es poden canviar seleccionant **Font...** des del menú **Font**. Per a restaurar el tipus de lletra de nou al tipus de lletra del marc pare del giny, seleccioneu **Per defecte** des del menú **Tipus de Lletra**.
 
-### Widget Stacking Order
+### Ordre d'Apilament de Giny
 
-In addition to the normal 2-dimensions, vertical and horizontal, you can also adjust widgets' placement in the 3rd dimension: depth. If you see a widget going behind another control, you can **raise** the widget on top of all other widgets by selecting **Raise** from the **Stacking Order** menu. Likewise, if you wish to put a widget behind all other widgets, you can select **Lower** from the **Stacking Order** menu.
+A més de les 2 dimensions normals, verticals i horitzontals, també podeu ajustar la col·locació dels ginys a la 3a dimensió: profunditat. Si veieu un giny darrere d'un altre control, podeu **elevar** el giny a sobre de tots els altres ginys seleccionant **Apujar** des del menú **Ordre d'Apilament**. De la mateixa manera, si voleu posar un giny darrere de tots els altres ginys, podeu seleccionar **Inferior** des del menú **Ordre d'apilament**.

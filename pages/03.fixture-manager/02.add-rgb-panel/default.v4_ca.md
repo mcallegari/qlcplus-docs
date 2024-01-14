@@ -3,56 +3,56 @@ title: 'Add RGB Panel'
 date: '11:11 21-08-2023'
 ---
 
-On the market you can easily find LED strips that you can wire as you prefer to create a RGB Panel (or matrix). This dialog allows you to quickly create and setup a RGB Panel. It is a dedicated dialog to help you with the most annoying process of creating fixtures manually depending on the desiderd layout.  
-Please note that once the panel is created, the only way to modify the layout is manually.
+Al mercat pots trobar fàcilment tires LED que pots cablejar com prefereixis per crear un Panell RGB (o matriu). Aquest diàleg permet crear i configurar ràpidament un panell RGB. És un diàleg dedicat per ajudar-vos amb el procés més molest de crear fixtures manualment depenent de la disposició desitjada.  
+Tingueu en compte que una vegada creat el panell, l'única manera de modificar la disposició és manualment.
 
-Panel creation
+Creació del Panell
 --------------
 
-When clicking OK on this dialog two things will happen:
+En fer clic a D'acord en aquest diàleg, succeiran dues coses:
 
-* QLC+ will create a fixture for each row of the panel. They can be considered like if the panel is composed by individual RGB bars.
-* QLC+ will create a fixture group representing the panel with heads already in the right displacement
+* QLC+ crearà un fixture per a cada fila del panell. Es pot considerar com si el panell estigués compost per barres RGB individuals.
+* QLC+ crearà un grup de fixture que representarà el panell amb els capçals ja en el desplaçament correcte
 
-Once a RGB panel is created, it is straight forward to go to the [Function Manager](/function-manager), create a new [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix) and start using the panel very quickly.
+Una vegada que es crea un panell RGB, és senzill anar al [Gestor de funcions](/function-manager), crear una nova [matriu RGB](/basics/glossary-and-concepts#rgb-matrix) i començar a utilitzar el panell molt ràpidament.
 
-Let's have a look at every option in this panel:
+Fem un cop d'ull a totes les opcions d'aquest panell:
 
-#### Panel Properties
+#### Propietats del Panell
 |     |     |
 | --- | --- |
-| **Name** | An arbitrary string that can be used to name the RGB panel |
-| **Universe** | The universe where the RGB Panel is going to start. If the panel requires a number of channels that don't fit in a single universe, it will span across multiple universes, starting from the one selected with this option. |
-| **Address** | The DMX start address where the RGB Panel has to be mapped |
+| **Nom** | Una cadena arbitrària que es pot utilitzar per anomenar el panell RGB |
+| **Univers** | L'univers on començarà el Panell RGB. Si el panell requereix una sèrie de canals que no encaixen en un sol univers, s'estendrà a través de múltiples universos, a partir del seleccionat amb aquesta opció. |
+| **Adreça** | L'adreça d'inici DMX on s'ha de mapejar el panell RGB |
 
-#### Size
+#### Mida
 |     |     |
 | --- | --- |
-| **Columns** | The RGB Panel number of columns (or the number of pixels per row) |
-| **Rows** | The RGB Panel number of rows (or the number of pixels per column) |
+| **Columnes** | El nombre de columnes del panell RGB (o el nombre de píxels per fila) |
+| **Files** | El nombre de files del plafó RGB (o el nombre de píxels per columna) |
 
-#### Physical
+#### Física
 |     |     |
 | --- | --- |
-| **Width** | The physical width in millimeters of the RGB Panel |
-| **Height** | The physical height in millimeters of the RGB Panel |
+| **Amplada** | L'amplada física en mil·límetres del panell RGB |
+| **Alçada** | L'alçada física en mil·límetres del Panell RGB |
 
-#### Orientation
+#### Orientació
 |     |     |
 | --- | --- |
-| **Top-Left** | The first pixel will be located on the top-left corner of the panel |
-| **Top-Right** | The first pixel will be located on the top-right corner of the panel |
-| **Bottom-Left** | The first pixel will be located on the bottom-left corner of the panel |
-| **Bottom-Right** | The first pixel will be located on the bottom-right corner of the panel |
+| **Superior-Esquerra** | El primer píxel se situarà a la cantonada superior esquerra del panell |
+| **Dalt-Dreta** | El primer píxel es trobarà a la cantonada superior dreta del panell |
+| **Inferior-Esquerra** | El primer píxel es trobarà a la cantonada inferior esquerra del panell |
+| **Inferior-Dreta** | El primer píxel se situarà a la cantonada inferior dreta del panell |
 
-#### Displacement
+#### Desplaçament
 |     |     |
 | --- | --- |
-| **Snake** | The panel displacement follows a "snake" logic. It means the next pixel of the end of a row is on the same column of the next row. Then the other pixels follow in the opposite direction. |
-| **Zig-Zag** | The panel displacement follows a "zig-zag" logic. It means the next pixel of the end of a row is on the first column of the next row. |
+| **Serp** | El desplaçament del panell segueix una lògica de serp. Significa que el següent píxel del final d'una fila està a la mateixa columna de la fila següent. Llavors els altres píxels segueixen en la direcció oposada. |
+| **Zig-Zag** | El desplaçament del panell segueix una lògica de "zig-zag". Significa que el següent píxel del final d'una fila es troba a la primera columna de la fila següent. |
 
-#### Direction
+#### Direcció
 |     |     |
 | --- | --- |
-| **Horizontal** | Pixel addresses are incremented horizontally. |
-| **Vertical** | Pixel addresses are incremented vertically. |
+| **Horitzontal** | Les adreces dels píxels s'incrementen horitzontalment. |
+| **Vertical** | Les adreces dels píxels s'incrementen verticalment. |

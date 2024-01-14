@@ -28,7 +28,7 @@ Alguns canals en fixtures o dispositius intel·ligents proporcionen molts tipus 
 
 ### Grups de Canals
 
-Els grups de canals es poden afegir i definir al panell [Fixture Manager](/fixture-manager) utilitzant [l'editor de grups de canals ](/fixture-manager/channel-groups-editor).  
+Els grups de canals es poden afegir i definir al panell [Fixture Manager](/fixture-manager) utilitzant [l'editor de grups de canals](/fixture-manager/channel-groups-editor).  
 Els grups de canals poden tenir un nom definit per l'usuari i poden agrupar tots els canals definits per l'usuari seleccionats d'una llista de Fixtures existent.
 
 ### ![](../chaser.png) Chaser
