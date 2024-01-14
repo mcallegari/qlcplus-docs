@@ -31,7 +31,7 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-g o --log**<br><br>**Descripció:** Registra els missatges de depuració a un fitxer (`$HOME/QLC+.log`)<br><br>**0 Paràmetres: **1 Cap<br><br>**Exemples:** <br>Habilita els missatges de depuració i emmagatzema'ls per registrar <br>qlcplus -d 0 -g <br>qlcplus --debug 0 --log |
+| **-g o --log**<br><br>**Descripció:** Registra els missatges de depuració a un fitxer (`$HOME/QLC+.log`)<br><br>**Paràmetres:**1 Cap<br><br>**Exemples:** <br>Habilita els missatges de depuració i emmagatzema'ls per registrar <br>qlcplus -d 0 -g <br>qlcplus --debug 0 --log |
 
 |     |
 | --- |
