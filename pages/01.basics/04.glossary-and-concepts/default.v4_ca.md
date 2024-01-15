@@ -9,7 +9,7 @@ Aquesta pàgina s'ha ordenat alfabèticament per facilitar la cerca d'un tema co
 
 ### ![](../audio.png) Àudio
 
-Una [funció](#functions) d'àudio és un objecte que representa un fitxer d'àudio emmagatzemat en un disc.  
+Una [funció](#funcions) d'àudio és un objecte que representa un fitxer d'àudio emmagatzemat en un disc.  
 QLC+ és compatible amb els formats d'àudio més comuns, com ara Wave, MP3, M4A, Ogg i Flac. Suporta canals mono o estèreo i diverses taxes de mostreig com 44.1KHz, 48KHz, etc...  
 Les funcions d'àudio es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).  
 Com la majoria de les funcions QLC+, l'àudio suporta temps d'esvaiment d'entrada i d'esvaiment de sortida.
