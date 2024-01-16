@@ -17,7 +17,7 @@ taxonomy:
 El Gestor de Shows s'ha introduït a QLC+ a partir de la versió 4.0.0, després del fork o bifurcació del codi original de QLC el 5 de novembre de 2012.
 
 Aquesta funció està destinada a donar als usuaris la possibilitat de configurar un espectacle en funció del temps d'una manera amigable i completament gràfica.  
-La interfície gràfica mostra una vista multipista, típica dels seqüenciadors d'àudio o programaris d'edició de vídeo, i amb ella els usuaris poden col·locar les [Funcions](/basics/glossary-and-concepts#functions) QLC+ en el lloc i el temps desitjats a la vista.  
+La interfície gràfica mostra una vista multipista, típica dels seqüenciadors d'àudio o programaris d'edició de vídeo, i amb ella els usuaris poden col·locar les [Funcions](/basics/glossary-and-concepts#funcions) QLC+ en el lloc i el temps desitjats a la vista.  
 Show Manager ofereix molta flexibilitat durant la creació d'un [Show](/basics/glossary-and-concepts#show) gràcies al seu enfocament visual. Un cop entesos els elements bàsics, és molt fàcil crear, moure o editar les funcions existents i millorar un Show afegint-hi noves pistes.
 
 Casos típics d'ús dels Shows són aquells concerts on una banda toca cançons seguint un metrònom i l'espectacle de llum sempre ha de ser el mateix, seguint la música.  
