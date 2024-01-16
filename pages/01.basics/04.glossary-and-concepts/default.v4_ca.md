@@ -75,7 +75,7 @@ QLC+ admet universos il·limitats (hi ha 4 inicials, però es poden afegir-ne m�
 
 Una [funció](#funcions) EFX s'utilitza principalment per automatitzar llums mòbils (per exemple, escàners i caps mòbils). L'EFX pot crear camins matemàtics complexos en un pla X-Y que es converteixen en valors DMX per als canals de desplaçament i inclinació del fixture. **Només els accessoris que continguin canals de panoràmica i inclinació vàlids poden participar en una funció EFX.** Últimament EFX també pot controlar altres canals com Dimmer o RGB.
 
-### ![](../fixture.png) Fixtures
+### ![](../fixture.png)Fixtures
 
 Un fixture és essencialment un dispositiu d'il·luminació. Pot ser, per exemple, un capçal mòbil, un escàner, un làser, etc. No obstant això, per simplicitat, els PAR individuals (i similars) que normalment es controlen a través d'un canal dimmer per dispositiu, es poden agrupar juntes per formar un únic fixture.
 
