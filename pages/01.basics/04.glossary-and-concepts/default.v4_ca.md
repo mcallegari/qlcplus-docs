@@ -14,7 +14,7 @@ QLC+ és compatible amb els formats d'àudio més comuns, com ara Wave, MP3, M4A
 Les funcions d'àudio es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).  
 Com la majoria de les funcions QLC+, l'àudio suporta temps d'esvaiment d'entrada i d'esvaiment de sortida.
 
-### ![](../blackout.png) Blackout
+### ![](../blackout.png)Blackout
 
 Blackout és una funció QLC+ especial que s'utilitza per posar a zero tots els canals [HTP](#htp-highest-takes-precedence) de tots els universos. Això tindrà l'efecte d'aturar la sortida de llum de tots els fixtures. Els canals es mantindran a zero, independentment de les funcions o valors que s'estiguin executant manualment (des de la taula simple [](/simple-desk), per exemple). Quan s'apagui el Blackout, tots els canals tornaran a ser controlats per les funcions o el seu valor establert manualment.
 
