@@ -33,7 +33,7 @@ Els grups de canals poden tenir un nom definit per l'usuari i poden agrupar tots
 
 ### ![](../chaser.png) Chaser
 
-Una [funció](#functions) chaser es construeix a partir de múltiples escenes que s'executen en seqüència, una darrere l'altra, quan s'inicia la funció chaser. La següent funció s'executa només després que hagi finalitzat l'anterior. Qualsevol nombre de [funcions](#functions) es pot inserir a un chaser.
+Una [funció](#funcions) chaser es construeix a partir de múltiples escenes que s'executen en seqüència, una darrere l'altra, quan s'inicia la funció chaser. La següent funció s'executa només després que hagi finalitzat l'anterior. Qualsevol nombre de [funcions](#functions) es pot inserir a un chaser.
 
 La direcció de la funció Chaser es pot invertir o la selecció d'escena es pot aleatoritzar. La funció Chaser també es pot configurar per fer un bucle infinit, un bucle de ping-pong infinit (la direcció s'inverteix després de cada passada) o es pot executar només una vegada, en un mode d'un sol tir, després del qual acaba per si mateix. Si la funció s'estableix a bucle infinitament, s'ha d'aturar manualment.
 
