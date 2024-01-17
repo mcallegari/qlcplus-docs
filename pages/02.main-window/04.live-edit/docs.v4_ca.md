@@ -1,5 +1,5 @@
 ---
-title: 'Live Edit'
+title: 'Edició en Viu'
 taxonomy:
     category:
         - docs
