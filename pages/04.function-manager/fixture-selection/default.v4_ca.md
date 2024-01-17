@@ -1,5 +1,5 @@
 ---
-title: 'Selector de Fixtures'
+title: 'Selecció de Fixtures'
 date: '04:48 22-08-2023'
 ---
 
