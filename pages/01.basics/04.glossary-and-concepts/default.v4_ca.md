@@ -11,12 +11,12 @@ Aquesta pàgina s'ha ordenat alfabèticament per facilitar la cerca d'un tema co
 
 Una [funció](#-funcions) d'àudio és un objecte que representa un fitxer d'àudio emmagatzemat en un disc.  
 QLC+ és compatible amb els formats d'àudio més comuns, com ara Wave, MP3, M4A, Ogg i Flac. Suporta canals mono o estèreo i diverses taxes de mostreig com 44.1KHz, 48KHz, etc...  
-Les funcions d'àudio es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).  
+Les funcions d'àudio es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/gestor-de-shows).  
 Com la majoria de les funcions QLC+, l'àudio suporta temps d'esvaiment d'entrada i d'esvaiment de sortida.
 
 ### ![](../blackout.png)Blackout
 
-Blackout és una funció QLC+ especial que s'utilitza per posar a zero tots els canals [HTP](#htp-highest-takes-precedence) de tots els universos. Això tindrà l'efecte d'aturar la sortida de llum de tots els fixtures. Els canals es mantindran a zero, independentment de les funcions o valors que s'estiguin executant manualment (des de la taula simple [](/simple-desk), per exemple). Quan s'apagui el Blackout, tots els canals tornaran a ser controlats per les funcions o el seu valor establert manualment.
+Blackout és una funció QLC+ especial que s'utilitza per posar a zero tots els canals [HTP](#htp-highest-takes-precedence) de tots els universos. Això tindrà l'efecte d'aturar la sortida de llum de tots els fixtures. Els canals es mantindran a zero, independentment de les funcions o valors que s'estiguin executant manualment (des de la taula simple [](/taula-simple), per exemple). Quan s'apagui el Blackout, tots els canals tornaran a ser controlats per les funcions o el seu valor establert manualment.
 
 ### Capacitats
 
@@ -28,7 +28,7 @@ Alguns canals en fixtures o dispositius intel·ligents proporcionen molts tipus 
 
 ### Grups de Canals
 
-Els grups de canals es poden afegir i definir al panell [Fixture Manager](/fixture-manager) utilitzant [l'editor de grups de canals](/fixture-manager/channel-groups-editor).  
+Els grups de canals es poden afegir i definir al panell [Fixture Manager](/gestos-de-fixtures) utilitzant [l'editor de grups de canals](/fixture-manager/editor-de-grups-de-canal).  
 Els grups de canals poden tenir un nom definit per l'usuari i poden agrupar tots els canals definits per l'usuari seleccionats d'una llista de Fixtures existent.
 
 ### ![](../chaser.png) Chaser
@@ -44,7 +44,7 @@ Cada Chaser té la seva pròpia configuració de velocitat:
 * **Fade Out:** La velocitat d'esvaïment de sortida d'un pas
 * **Durada:** La durada d'un pas
 
-Es poden crear còpies de les funcions del caçador amb el [Gestor de funcions](/function-manager). Les escenes dins d'un chaser no es dupliquen quan es copia un chaser. Només es copia l'ordre i la direcció al nou.
+Es poden crear còpies de les funcions del caçador amb el [Gestor de funcions](/gestor-de-funcions). Les escenes dins d'un chaser no es dupliquen quan es copia un chaser. Només es copia l'ordre i la direcció al nou.
 
 ### Feu clic i aneu
 
@@ -63,13 +63,13 @@ Una [funció](#funcions) col·lecció encapsula múltiples funcions que s'execut
 
 Les col·leccions no tenen paràmetres de velocitat. La velocitat de cada funció membre s'estableix individualment utilitzant els seus propis editors.
 
-Es poden crear còpies de funcions de col·lecció amb el [Gestor de funcions](/function-manager). Les funcions contingudes en una col·lecció no es dupliquen; només es copia la llista de funcions.
+Es poden crear còpies de funcions de col·lecció amb el [Gestor de funcions](/gestor-de-funcions). Les funcions contingudes en una col·lecció no es dupliquen; només es copia la llista de funcions.
 
 ### DMX
 
 [DMX](https://en.wikipedia.org/wiki/DMX512) és l'abreviatura de **D**igital **M**ultiple**X**. Bàsicament defineix tot un conjunt de propietats, protocol, cablejat, etc. En el cas del programari d'il·luminació, defineix el nombre màxim de canals (512) per univers i el rang de valors de cada canal (0-255).
 
-QLC+ admet universos il·limitats (hi ha 4 inicials, però es poden afegir-ne més si cal). No necessàriament han d'estar connectats al maquinari DMX; més aviat, DMX acaba de ser seleccionat com l'estàndard d'il·luminació de facto. L'abstracció real del maquinari (ja sigui analògic 0-10V, DMX o algun altre mètode) s'aconsegueix mitjançant [connectors de sortida](#outputplugins).
+QLC+ admet universos il·limitats (hi ha 4 inicials, però es poden afegir-ne més si cal). No necessàriament han d'estar connectats al maquinari DMX; més aviat, DMX acaba de ser seleccionat com l'estàndard d'il·luminació de facto. L'abstracció real del maquinari (ja sigui analògic 0-10V, DMX o algun altre mètode) s'aconsegueix mitjançant [connectors de sortida](#connectors-de-sortida).
 
 ### ![](../efx.png) EFX
 
@@ -148,7 +148,7 @@ Un capçal representa un dispositiu de sortida de llum individual en un fixture.
 
 Per exemple, podeu tenir un fixture de barra LED RGB que es munta sobre un sol xassís i, com a tal, apareix com un únic fixture amb una entrada DMX i una sortida DMX. No obstant això, en realitat es compon de quatre "fixtures" LED RGB separades. Aquests fixtures separats es tracten en QLC+ com a caps; comparteixen algunes propietats amb els seus caps germans, poden ser controlats individualment, però també poden tenir un control d'intensitat mestre que controla la sortida de llum de tots els caps junts.
 
-Cada capçal pertany a un [mode de fixture](#fixture-mode) perquè en un mode, un fixture pot proporcionar suficients canals per controlar cadascun dels seus capçals individualment, mentre que en un altre mode, només es poden proporcionar un grapat de canals per controlar tots els capçals simultàniament.
+Cada capçal pertany a un [mode de fixture](#mode-de-fixture) perquè en un mode, un fixture pot proporcionar suficients canals per controlar cadascun dels seus capçals individualment, mentre que en un altre mode, només es poden proporcionar un grapat de canals per controlar tots els capçals simultàniament.
 
 ### HTP (El més alt té prioritat)
 
@@ -184,7 +184,7 @@ LTP és una regla que decideix quin nivell s'envia a un univers DMX per un canal
 
 La regla LTP és senzilla: l'últim nivell establert per una funció o un giny de consola virtual s'envia a l'univers DMX.
 
-Durant un esvaïment creuat entre [Escenes](#escena), sovint es canviaran els nivells de LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells de LTP han de saltar immediatament a un nou nivell, per exemple, canviant d'un gobo a un altre. No obstant això, els grups LTP com la panoràmica i la inclinació, poden haver de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir diferents temps combinant escenes en una [col·lecció](#collection). Vegeu també [HTP](#htp).
+Durant un esvaïment creuat entre [Escenes](#escena), sovint es canviaran els nivells de LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells de LTP han de saltar immediatament a un nou nivell, per exemple, canviant d'un gobo a un altre. No obstant això, els grups LTP com la panoràmica i la inclinació, poden haver de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir diferents temps combinant escenes en una [col·lecció](#collecio). Vegeu també [HTP](#htp).
 
 ### ![](../operate.png) Modes
 
@@ -216,26 +216,26 @@ Cada funció té els seus propis paràmetres de velocitat:
 * **Fade In:** El temps utilitzat per esvair tots els canals als seus valors objectius, des de qualsevol valor que tinguin
 * **Fade Out:** el temps utilitzat per esvair els canals de HTP/intensitat de nou a zero. Tingueu en compte que NOMÉS els canals [HTP](#htp) es veuen afectats per aquesta configuració.
 
-Es poden crear còpies de funcions d'escena amb el [Gestor de funcions](/function-manager). Tots els continguts de l'escena es copien al duplicat.
+Es poden crear còpies de funcions d'escena amb el [Gestor de funcions](/gestor-de-funcions). Tots els continguts de l'escena es copien al duplicat.
 
 ### ![](../sequence.png) Seqüència
 
 Una seqüència té algunes de les funcionalitats d'un [Chaser](#chaser).  
 És equivalent a un chaser en el qual cada pas és una sola [escena](#escena) i cadascuna d'aquestes escenes controla el mateix conjunt de canals. Una seqüència està lligada a una escena específica, el que significa que tots els passos de la seqüència només poden controlar els canals habilitats d'aquesta escena.  
 Quan es creen nous passos en una seqüència, no apareixerà cap emergent de selecció de Funcions, ja que un pas de Seqüència no pot incloure altres Funcions, a diferència d'un pas de Chaser.  
-Quan es crea una seqüència, apareixerà una icona de seqüència especial al [Gestor de funcions](/function-manager) com a fill de l'escena a la qual està vinculada.  
-Per entendre la diferència entre una seqüència i un Chaser, se us convida a llegir el segon paràgraf de la documentació [Show Manager](/show-manager).
+Quan es crea una seqüència, apareixerà una icona de seqüència especial al [Gestor de funcions](/gestor-de-funcions) com a fill de l'escena a la qual està vinculada.  
+Per entendre la diferència entre una seqüència i un Chaser, se us convida a llegir el segon paràgraf de la documentació [Show Manager](/gestor-de-shows).
 
 ### ![](../script.png) Script
 
-La [funció](#funcions) Script funciona en un llenguatge de scripting senzill però potent per automatitzar les funcionalitats de QLC+ en un ordre seqüencial. Un script es pot modificar amb l'[editor de scripts](/function-manager/script-editor).
+La [funció](#funcions) Script funciona en un llenguatge de scripting senzill però potent per automatitzar les funcionalitats de QLC+ en un ordre seqüencial. Un script es pot modificar amb l'[editor de scripts](/function-manager/editor-de-scripts).
 
 ### ![](../show.png) Show
 
-Un Show és una [funció](#funcions) avançada que encapsula la majoria de les funcions QLC+ per crear un espectacle de llums impulsat pel temps. Només es pot crear un Show amb el [gestor de Shows](/show-manager) i es pot inspeccionar i canviar el nom amb l'[editor de Shows](/function-manager/show-editor).
+Un Show és una [funció](#funcions) avançada que encapsula la majoria de les funcions QLC+ per crear un espectacle de llums impulsat pel temps. Només es pot crear un Show amb el [gestor de Shows](/gestor-de-shows) i es pot inspeccionar i canviar el nom amb l'[editor de Shows](/function-manager/editor-de-shows).
 
 ### ![](../video.png) Vídeo
 
 Una [funció](#funcions) de vídeo és un objecte que representa un fitxer de vídeo emmagatzemat en un disc o en un URL de xarxa.  
 Els formats de vídeo admesos depenen del vostre sistema operatiu. Per exemple, Mac OSX es limita a fitxers MOV/MP4 i no molt més.  
-Les funcions de vídeo es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).
+Les funcions de vídeo es poden col·locar en el [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/gestor-de-shows).
