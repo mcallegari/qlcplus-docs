@@ -40,8 +40,8 @@ La barra de menús de la part superior de la finestra de l'espai de treball cont
 
 * * *
 
-![](../basics/monitor.png)[Monitor DMX](dmx-monitor) (CTRL+M)  
-![](../basics/diptool.png)[Eina d'adreça DMX](dmx-address-tool)  
+![](../basics/monitor.png)[Monitor DMX](monitor-dmx) (CTRL+M)  
+![](../basics/diptool.png)[Eina d'adreça DMX](eina-de-adreças-dmx)  
 ![](../basics/audioinput.png)[Activadors d'àudio](/virtual-console/audio-triggers)
 
 * * *
@@ -52,8 +52,8 @@ La barra de menús de la part superior de la finestra de l'espai de treball cont
 
 * * *
 
-![](../basics/add_dump.png)[Bolcat DMX](dmx-dump) (CTRL+D)  
-![](../basics/liveedit.png)[Edició en Viu](live-edit): permet modificar una funció mentre QLC+ està en mode operatiu  
+![](../basics/add_dump.png)[Bolcat DMX](bolcat-dmx) (CTRL+D)  
+![](../basics/liveedit.png)[Edició en Viu](edicio-en-viu): permet modificar una funció mentre QLC+ està en mode operatiu  
 ![](../basics/liveedit_vc.png) L'Edició en Viu de la Consola Virtual: permet modificar la consola virtual mentre QLC+ està en mode operatiu. Feu clic per commutar  
 ![](../basics/panic.png) Atura totes les funcions (CTRL+Maj+ESC)  
 ![](../basics/blackout.png) Commuta el Blackout  
@@ -71,9 +71,9 @@ A la part inferior de la finestra principal es poden trobar icones fàcils de ca
 En fer doble clic en una pestanya, **un context es pot separar en una finestra separada**. Per tornar a adjuntar un context separat, tanqueu la finestra.  
 Els contextos QLC+ apareixen en el següent ordre (d'esquerra a dreta):
 
-![](../basics/fixture.png) Mostra el [Gestor de fixtures](/fixture-manager)  
-![](../basics/function.png) Mostra el [Gestor de funcions](/function-manager)  
-![](../basics/show.png) Mostra el ](/show-manager)Gestor de Shows  
-![](../basics/virtualconsole.png) Mostra la  [Consola Virtual](/virtual-console)  
-![](../basics/slidermatrix.png) Mostra la [Taula Simple](/simple-desk)  
-![](../basics/input_output.png) Mostra  el gestor de configuració  [Entrada/Sortida](/input-output)
+![](../basics/fixture.png) Mostra el [Gestor de fixtures](/gestor-de-fixtures)  
+![](../basics/function.png) Mostra el [Gestor de funcions](/gestor-de-funcions)  
+![](../basics/show.png) Mostra el [Gestor de Shows](/gestor-de-shows)  
+![](../basics/virtualconsole.png) Mostra la  [Consola Virtual](/consola-virtual)  
+![](../basics/slidermatrix.png) Mostra la [Taula Simple](/taula-simple)  
+![](../basics/input_output.png) Mostra  el gestor de configuració  [Entrada/Sortida](/entrada-sortida)
