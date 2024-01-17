@@ -1,5 +1,5 @@
 ---
-title: 'Fixture Group Editor'
+title: 'Editor de Grups de Fixtures'
 taxonomy:
     category:
         - docs
