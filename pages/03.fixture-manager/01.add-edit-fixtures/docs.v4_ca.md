@@ -1,5 +1,5 @@
 ---
-title: 'Add/Edit Fixtures'
+title: 'Afegir/Editar Fixtures'
 taxonomy:
     category:
         - docs
