@@ -1,5 +1,5 @@
 ---
-title: 'DMX Monitor'
+title: 'Monitor DMX'
 taxonomy:
     category:
         - docs
