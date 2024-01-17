@@ -1,9 +1,9 @@
 ---
-title: 'Auxiliar de Funcions'
+title: 'Assistent de Funcions'
 date: '04:35 22-08-2023'
 ---
 
-El propòsit de l'Auxiliar de Funcions és ajudar els usuaris a crear algunes funcions comunes per a un inici ràpid.
+El propòsit de l'Assistent de Funcions és ajudar els usuaris a crear algunes funcions comunes per a un inici ràpid.
 
 ### Controls
 
