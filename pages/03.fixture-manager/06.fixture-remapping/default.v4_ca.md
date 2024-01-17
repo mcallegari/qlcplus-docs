@@ -1,5 +1,5 @@
 ---
-title: 'Fixture Remapping'
+title: 'Remapatge de Fixtures'
 date: '11:36 21-08-2023'
 media_order: fixremap.png
 ---
@@ -27,7 +27,7 @@ I ara, aquí teniu una explicació detallada de cada element de la finestra de r
 | --- | --- |
 | **Fixtures d'Origen** | Al costat esquerre de la finestra hi ha un arbre que representa els universos, fixtures i canals utilitzats en el teu projecte. Aquesta llista no es pot canviar en aquesta finestra. |
 | **Fixtures remapats** | A la part dreta de la finestra, hi ha un arbre que representa els universos, fixtures i canals on vas a remapar els teus fixtures d'origen. |
-| ![](/basics/edit_add.png) | Afegiu un o més fixtures a la llista de fixtures remapats En fer clic en aquest botó s'obrirà la finestra [Afegeix/Edita Fixtures](/fixture-manager/add-edit-fixtures). Tingueu en compte que un cop s'afegeix un fixture, no es pot modificar, així que si necessiteu noms o quantitat específics, recordeu fer-ho abans d'afegir els nous fixtures |
+| ![](/basics/edit_add.png) | Afegiu un o més fixtures a la llista de fixtures remapats En fer clic en aquest botó s'obrirà la finestra [Afegeix/Edita Fixtures](/fixture-manager/afegir-editar-fixtures). Tingueu en compte que un cop s'afegeix un fixture, no es pot modificar, així que si necessiteu noms o quantitat específics, recordeu fer-ho abans d'afegir els nous fixtures |
 | ![](/basics/edit_remove.png) | Suprimiu el  [Fixture](/basics/glossary-and-concepts#fixtures) seleccionat de la llista de fixtures remapats. |
 | ![](/basics/remap.png) | Aquest és probablement el botó més important de la finestra. Permet determinar la connexió entre una fixture d'origen i un fixture remapat. Les connexions es poden realitzar tant entre canals individuals com en fixtures sencers.  <br>En el primer cas haureu de seleccionar el canal d'origen de la llista de fixtures d'origen i un canal de destinació de la llista de fixtures remapats.  <br>En el segon cas haureu de seleccionar un fixture de la llista de fixtures d'origen i un fixture de destinació de la llista de fixtures remapats.  <br>Seleccions incorrectes provocaran un missatge d'error a la finestra emergent. Per exemple, no podeu tornar a assignar un canal a un fixture i viceversa.  <br>Si la connexió és vàlida, es representarà com una línia a l'àrea blanca entre la llista d'origen i la llista de remapada |
 | ![](/basics/fileclose.png) | Elimina una connexió de remapatge creada prèviament. Seleccions incorrectes causaran un error emergent. |
