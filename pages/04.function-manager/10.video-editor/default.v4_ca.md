@@ -1,5 +1,5 @@
 ---
-title: 'Video Editor'
+title: 'Editor de Vídeo'
 date: '04:33 22-08-2023'
 ---
 
