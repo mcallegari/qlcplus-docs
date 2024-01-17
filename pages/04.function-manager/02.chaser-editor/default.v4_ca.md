@@ -1,5 +1,5 @@
 ---
-title: 'Chaser Editor'
+title: 'Editor de Chasers'
 date: '12:08 21-08-2023'
 ---
 
@@ -29,7 +29,7 @@ Els passos de temps i el camp de nota es poden modificar fent doble clic sobre s
 | ![](/basics/editcopy.png) | Copia els passos seleccionats al porta-retalls. |
 | ![](/basics/editpaste.png) | Enganxa els passos copiats prèviament des del porta-retalls a la posició seleccionada. Si no n'hi ha cap, els passos s'afegiran al final de la llista |
 | ![](/basics/editcut.png) | Suprimeix els passos seleccionats de la llista i copia'ls al porta-retalls. |
-| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#functions) existent al chaser mitjançant el diàleg [Selecciona Funció](../function-selection). La funció s'insereix després del pas seleccionat. |
+| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#funcions) existent al chaser mitjançant el diàleg [Selecciona Funció](../selector-de-funcions). La funció s'insereix després del pas seleccionat. |
 | ![](/basics/edit_remove.png) | Elimina el pas seleccionat del chaser. |
 | ![](/basics/up.png) | Mou el pas seleccionat per sobre/abans del pas anterior. |
 | ![](/basics/down.png) | Mou el pas seleccionat per sota/després del següent pas. |
