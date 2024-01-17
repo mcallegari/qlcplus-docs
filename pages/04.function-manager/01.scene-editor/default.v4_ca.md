@@ -1,8 +1,8 @@
 ---
-title: 'Scene Editor'
+title: 'Editor de Escenes'
 ---
 
-L'editor d'escenes, com el seu nom indica, s'utilitza per editar les funcions de ![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#scene). L'editor es divideix en pestanyes; amb la primera, pestanya **General**, controleu la llista de fixtures i [grups de canals](/basics/glossary-and-concepts#channel-groups) que participen en l'edició d'escena, juntament amb el nom de l'escena.  
+L'editor d'escenes, com el seu nom indica, s'utilitza per editar les funcions de ![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#escena). L'editor es divideix en pestanyes; amb la primera, pestanya **General**, controleu la llista de fixtures i [grups de canals](/basics/glossary-and-concepts#grups-de-canals) que participen en l'edició d'escena, juntament amb el nom de l'escena.  
 Totes les pestanyes posteriors s'utilitzen per controlar els valors individuals del canal per a cada fixture i, si n'hi ha, els valors dels grups de canals.
 
 Controls Generals de les Pestanyes
@@ -18,7 +18,7 @@ A la part esquerra de la pantalla es mostren els botons per controlar els fixtur
 | ![](/basics/check.png) | Activa tots els canals dels fixtures seleccionats. |
 | ![](/basics/uncheck.png) | Desactiva tots els canals dels fixtures seleccionats. |
 
-A la part dreta de la pantalla, es mostren els botons per controlar els [grups de canals](/basics/glossary-and-concepts#channel-groups) utilitzats a l'escena
+A la part dreta de la pantalla, es mostren els botons per controlar els [grups de canals](/basics/glossary-and-concepts#grups-de-canals) utilitzats a l'escena
 
 |     |     |
 | --- | --- |
@@ -58,7 +58,7 @@ Si s'ha habilitat un canal, l'escena canviarà el valor d'aquest canal al valor 
 | ![](/basics/editpaste.png) | Enganxa els valors des del porta-retalls al fixture actual. Si no s'ha seleccionat cap canal durant la «còpia», llavors tots els estats habilitats/inhabilitats s'enganxaran juntament amb els valors del canal. |
 | ![](/basics/editcopyall.png) | La funcionalitat «Copia tot» té 2 modes:<br><br>**Copia tots els valors** (i estats habilitats/inhabilitats) de tots els canals que participen a l'escena.<br>**Copia només els canals seleccionats** (feu clic a la tecla CTRL, fons groc) a tots els altres fixtures que participen a l'escena. |
 | ![](/basics/color.png) | Llança una eina de color per a seleccionar un color específic i establir aquest color al fixture actual; Aquesta característica només està habilitada per als fixtures que són capaços de barrejar el color CMY/RGB. |
-| ![](/basics/xypad.png) | Llança una eina de posició (similar a [XYPad](/virtual-console/xy-pad) a la consola virtual) per seleccionar una posició de capçal/mirall per al fixture actual; Aquesta característica només està habilitada per als fixtures que tenen canals panoràmica o inclinació. Tots els caps del fixture actual es canviaran al mateix valor. |
+| ![](/basics/xypad.png) | Llança una eina de posició (similar a [XYPad](/virtual-console/pad-xy) a la consola virtual) per seleccionar una posició de capçal/mirall per al fixture actual; Aquesta característica només està habilitada per als fixtures que tenen canals panoràmica o inclinació. Tots els caps del fixture actual es canviaran al mateix valor. |
 | ![](/basics/speed.png) | Mostra/Oculta el giny selector de velocitat, utilitzat per ajustar els paràmetres de l'escena, com ara Fade In i Fade Out |
 | ![](/basics/tabview.png) | Canvia entre «visualització de la pestanya» i «visualització de tots els canals». El primer mode mostrarà una pestanya per a cada fixture, mentre que el segon mostrarà una sola pestanya per a tots els fixtures |
 | ![](/basics/blind.png) | Commuta el mode cec per al fixture seleccionat. |
