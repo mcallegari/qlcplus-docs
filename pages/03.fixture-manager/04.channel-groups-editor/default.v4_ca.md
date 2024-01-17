@@ -1,5 +1,5 @@
 ---
-title: 'Channel Groups Editor'
+title: 'Editor de Grups de Canals'
 date: '11:27 21-08-2023'
 ---
 
