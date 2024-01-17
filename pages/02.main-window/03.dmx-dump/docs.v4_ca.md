@@ -1,5 +1,5 @@
 ---
-title: 'DMX Dump'
+title: 'Bolcat DMX'
 taxonomy:
     category:
         - docs
