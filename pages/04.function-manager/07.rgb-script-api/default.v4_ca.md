@@ -1,9 +1,9 @@
 ---
-title: 'RGB Script API'
+title: 'API Scripts RGB'
 date: '03:56 22-08-2023'
 ---
 
-Els usuaris poden escriure els seus propis scripts RGB per produir una projecció gràfica personalitzada amb la funció [Matriu RGB](/basics/glossary-and-concepts#rgb-matrix). El principi d'operació dels scripts és produir un nombre de mapes RGB que cada un representa un pas en l'animació gràfica. El principi és bàsicament el mateix que en les pel·lícules: el públic observa una imatge en moviment, que en realitat només és un flux seqüencial d'imatges estàtiques que produeixen una il·lusió de moviment.
+Els usuaris poden escriure els seus propis scripts RGB per produir una projecció gràfica personalitzada amb la funció [Matriu RGB](/basics/glossary-and-concepts#matriu-rgb). El principi d'operació dels scripts és produir un nombre de mapes RGB que cada un representa un pas en l'animació gràfica. El principi és bàsicament el mateix que en les pel·lícules: el públic observa una imatge en moviment, que en realitat només és un flux seqüencial d'imatges estàtiques que produeixen una il·lusió de moviment.
 
 Els scripts estan escrits en [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript), que també es coneix com [JavaScript](https://en.wikipedia.org/wiki/JavaScript). Tingueu en compte que llenguatge és [sensible a les majúscules i minúscules](https://en.wikipedia.org/wiki/Case_sensitivity) i com a estàndard de-facto segueix les [regles de cas de camell](https://en.wikipedia.org/wiki/Naming_convention_%28programming%29#JavaScript), assegureu-vos que ho escriviu tot correctament i presteu especial atenció a les característiques de l'API requerides.
 
@@ -21,7 +21,7 @@ Els fitxers d'script s'han de nomenar amb el nom de l'script i han de tenir una 
 Sintaxi de l'Script RGB
 ==============
 
-Fundació
+Fonaments
 ----------
 
 Els scripts s'han d'autoexecutar, és a dir, quan s'avaluen, el propi script es posa dins d'una funció anònima que s'executa i retorna un objecte que conté les funcions API requerides:
