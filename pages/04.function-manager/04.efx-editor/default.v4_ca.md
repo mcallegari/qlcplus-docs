@@ -1,5 +1,5 @@
 ---
-title: 'EFX Editor'
+title: 'Editor EFX'
 date: '12:13 21-08-2023'
 media_order: 'efx-general.png,efx-movement.png'
 ---
