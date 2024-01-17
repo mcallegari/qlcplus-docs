@@ -1,5 +1,5 @@
 ---
-title: 'Editor d\'Àudio'
+title: 'Editor de Àudio'
 date: '04:32 22-08-2023'
 ---
 
