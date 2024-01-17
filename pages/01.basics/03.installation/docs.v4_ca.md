@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Instal·lació
 taxonomy:
     category:
         - docs
