@@ -1,5 +1,5 @@
 ---
-title: 'Simple Desk'
+title: 'Taula Simple'
 date: '14:16 21-08-2023'
 taxonomy:
     category: docs
@@ -21,12 +21,12 @@ Quan es carrega un projecte, en canvi, moure un canal de la Taula Simple substit
 Això és molt útil en algunes circumstàncies en directe on una funció en execució necessita algun ajust manual.  
 Per a "desvincular" la Taula Simple dels canals anul·lants, simplement feu clic al botó de reinicialització. El restabliment de canals els retornarà a zero o al valor prèviament establert per una funció.
 
-Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins de la pila cue no són visibles al [Gestor de Funcions](/function-manager) i les [Escenes](/basics/glossary-and-concepts#scene) no són visibles a la pila cue.
+Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins de la pila cue no són visibles al [Gestor de Funcions](/gestor-de-funcions) i les [Escenes](/basics/glossary-and-concepts#escena) no són visibles a la pila cue.
 
 Controls - Univers
 -------------------
 
-La caixa de l'univers conté els controls lliscants que s'utilitzen per controlar canals individuals DMX en el primer univers DMX. Atès que 512 controls lliscants no poden encaixar bé a la pantalla al mateix temps, s'han dividit en pàgines. Per defecte, cada pàgina conté 32 controls lliscants però això pot ser [configurat](#tuning).
+La caixa de l'univers conté els controls lliscants que s'utilitzen per controlar canals individuals DMX en el primer univers DMX. Atès que 512 controls lliscants no poden encaixar bé a la pantalla al mateix temps, s'han dividit en pàgines. Per defecte, cada pàgina conté 32 controls lliscants però això pot ser [configurat](#configurat).
 
 |     |     |
 | --- | --- |
@@ -35,7 +35,7 @@ La caixa de l'univers conté els controls lliscants que s'utilitzen per controla
 | **Quadre de pàgina de l'Univers** | Mostra la pàgina DMX actual. Podeu saltar a una pàgina escrivint el número de pàgina directament en aquest quadre o utilitzant la roda del ratolí per saltar entre pàgines ràpidament. |
 | ![](/basics/forward.png) | Salta a la pàgina DMX següent. |
 | ![](/basics/fileclose.png) | Restableix tots els controls lliscants DMX de nou a zero o al valor prèviament establert per una funció. |
-| **GM** | El [Gran Mestre](/basics/glossary-and-concepts#grand-master) |
+| **GM** | El [Gran Mestre](/basics/glossary-and-concepts#gran-mestre) |
 
 Controls - Reproducció
 -------------------
