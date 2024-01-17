@@ -1,5 +1,5 @@
 ---
-title: 'Add RGB Panel'
+title: 'Afegir Panell RGB'
 date: '11:11 21-08-2023'
 ---
 
