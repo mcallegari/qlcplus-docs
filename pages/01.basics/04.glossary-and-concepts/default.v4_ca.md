@@ -1,5 +1,5 @@
 ---
-title: 'Glossary and Concepts'
+title: 'Glossari i Conceptes'
 date: '07:32 21-08-2023'
 ---
 
