@@ -1,5 +1,5 @@
 ---
-title: 'Function Wizard'
+title: 'Auxiliar de Funcions'
 date: '04:35 22-08-2023'
 ---
 
