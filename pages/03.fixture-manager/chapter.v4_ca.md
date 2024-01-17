@@ -1,5 +1,5 @@
 ---
-title: 'Fixture Manager'
+title: 'Gestor de Fixtures'
 taxonomy:
     category: docs
 child_type: docs
