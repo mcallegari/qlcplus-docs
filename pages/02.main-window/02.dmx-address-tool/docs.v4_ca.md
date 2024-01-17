@@ -1,5 +1,5 @@
 ---
-title: 'Eina d'Adreces DMX'
+title: 'Eina de Adreces DMX'
 taxonomy:
     category:
         - docs
