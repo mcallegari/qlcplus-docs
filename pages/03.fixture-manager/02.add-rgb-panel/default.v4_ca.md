@@ -14,7 +14,7 @@ En fer clic a D'acord en aquest diàleg, succeiran dues coses:
 * QLC+ crearà un fixture per a cada fila del panell. Es pot considerar com si el panell estigués compost per barres RGB individuals.
 * QLC+ crearà un grup de fixture que representarà el panell amb els capçals ja en el desplaçament correcte
 
-Una vegada que es crea un panell RGB, és senzill anar al [Gestor de funcions](/function-manager), crear una nova [matriu RGB](/basics/glossary-and-concepts#rgb-matrix) i començar a utilitzar el panell molt ràpidament.
+Una vegada que es crea un panell RGB, és senzill anar al [Gestor de funcions](/gestor-de-funcions), crear una nova [matriu RGB](/basics/glossary-and-concepts#matriu-rgb) i començar a utilitzar el panell molt ràpidament.
 
 Fem un cop d'ull a totes les opcions d'aquest panell:
 
