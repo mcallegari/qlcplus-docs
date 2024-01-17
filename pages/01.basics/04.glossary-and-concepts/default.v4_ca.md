@@ -120,7 +120,7 @@ Els tipus de funcions són:
 * [Seqüència](#seqüència)
 * [EFX](#efx)
 * [Matriu RGB](#matriu-rgb)
-* [Col·lecció](#collecio)
+* [Col·lecció](#colleccio)
 * [Show](#show)
 * [Àudio](#audio)
 * [Vídeo](#video)
@@ -184,7 +184,7 @@ LTP és una regla que decideix quin nivell s'envia a un univers DMX per un canal
 
 La regla LTP és senzilla: l'últim nivell establert per una funció o un giny de consola virtual s'envia a l'univers DMX.
 
-Durant un esvaïment creuat entre [Escenes](#escena), sovint es canviaran els nivells de LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells de LTP han de saltar immediatament a un nou nivell, per exemple, canviant d'un gobo a un altre. No obstant això, els grups LTP com la panoràmica i la inclinació, poden haver de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir diferents temps combinant escenes en una [col·lecció](#collecio). Vegeu també [HTP](#htp).
+Durant un esvaïment creuat entre [Escenes](#escena), sovint es canviaran els nivells de LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells de LTP han de saltar immediatament a un nou nivell, per exemple, canviant d'un gobo a un altre. No obstant això, els grups LTP com la panoràmica i la inclinació, poden haver de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir diferents temps combinant escenes en una [col·lecció](#colleccio). Vegeu també [HTP](#htp).
 
 ### ![](../operate.png) Modes
 
