@@ -1,9 +1,9 @@
 ---
-title: 'Collection Editor'
+title: 'Editor de Col·leccions'
 date: '12:21 21-08-2023'
 ---
 
-L'editor de col·leccions, com el seu nom indica, s'utilitza per editar les funcions  ![](/basics/collection.png) [Col·lecció](/basics/glossary-and-concepts#collection).  
+L'editor de col·leccions, com el seu nom indica, s'utilitza per editar les funcions  ![](/basics/collection.png) [Col·lecció](/basics/glossary-and-concepts#colleccions).  
 Les col·leccions són molt útils en un flux de treball on creeu funcions QLC+ dedicades a àrees específiques del vostre espectacle. Per exemple, podeu crear un nombre d'Escenes per a controlar només els colors, algunes altres Escenes per a controlar només les posicions, etc. A continuació, podeu crear una sèrie de Chasers i EFX per a les automatitzacions.  
 Quan hàgiu creat tots els elements bàsics del vostre espectacle, podeu utilitzar Col·leccions per crear una mena de "drecera" a les escenes compostes. Per exemple, una escena de color + una escena de posició.
 
@@ -17,5 +17,5 @@ Per exemple, una configuració d'escena Canals de Panoràmica/Inclinació + un E
 |     |     |
 | --- | --- |
 | **Nom de la Col·lecció** | Canvia el nom de la col·lecció. |
-| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#functions) existent a la col·lecció mitjançant el diàleg [Selecciona funció](../function-selection). L'ordre de les funcions no té cap significat. |
+| ![](/basics/edit_add.png) | Afegeix una [Funció](/basics/glossary-and-concepts#functions) existent a la col·lecció mitjançant el diàleg [Selecciona funció](../selector-de-funcions). L'ordre de les funcions no té cap significat. |
 | ![](/basics/edit_remove.png) | Suprimeix les funcions seleccionades de la col·lecció. |
