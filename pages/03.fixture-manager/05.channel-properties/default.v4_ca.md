@@ -1,5 +1,5 @@
 ---
-title: 'Channel Properties'
+title: 'Propietats dels Canals'
 date: '11:32 21-08-2023'
 media_order: channelmodifier.png
 ---
