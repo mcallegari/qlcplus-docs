@@ -64,7 +64,7 @@ El Pad XY permet 3 usos completament diferents, però tots orientats al posicion
 
 * **2- EFX**: A la finestra Configuració (pestanya Presets), és possible afegir alguns presets per recuperar les funcions ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) existents. En activar un valor predefinit EFX, la vista prèvia animada dels moviments de fixtures es mostrarà així:  
 ![](xypad-efx.png)  
-    Si no s'ha definit cap finestra de treball, es mostrarà l'EFX exactament com es previsualitza a l'editor [EFX](../function-manager/editor-efx). Altrament, l'EFX s'escalarà per a ajustar-se a la finestra de treball definida.  
+    Si no s'ha definit cap finestra de treball, es mostrarà l'EFX exactament com es previsualitza a l'editor [EFX](../function-manager/efx-editor). Altrament, l'EFX s'escalarà per a ajustar-se a la finestra de treball definida.  
     Si una finestra de treball està activa, es compartirà entre l'ús #1 i l'ús #2.
 
 * **3- Relatiu a una Escena**: A la finestra de Configuració (pestanya Presets), també és possible afegir alguns presets per recuperar les funcions d'![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#escena) existents  
@@ -112,7 +112,7 @@ Aquí podeu afegir/eliminar els fixtures que el Pad XY controlarà en l'ús #1.
 |     |     |
 | --- | --- |
 | **Llista de Fixtures** | Mostra els accessoris que controla actualment el Pad XY.<br><br>**Fixture**: Els noms de cada fixture<br>**Eix X**: Mostra el rang de valors (i la inversió si és aplicable) de l'eix horitzontal (Pan) per a cada fixture<br>**Eix Y**: Mostra el rang de valors (i la inversió si és aplicable) de l'eix vertical (Inclinació) per a cada fixture |
-| ![](/basics/edit_add.png) | Afegiu [Fixtures](/basics/glossary-and-concepts#fixture) per a ser controlat pel Pad XY, utilitzant el diàleg [Seleccioneu Fixture](/function-manager/seleccio-de-fixtures).  <br>**NOTA**: Només es mostren els fixtures que tenen canals Panoràmica i Inclinació al diàleg. |
+| ![](/basics/edit_add.png) | Afegiu [Fixtures](/basics/glossary-and-concepts#fixture) per a ser controlat pel Pad XY, utilitzant el diàleg [Seleccioneu Fixture](/function-manager/fixture-selection).  <br>**NOTA**: Només es mostren els fixtures que tenen canals Panoràmica i Inclinació al diàleg. |
 | ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de la llista de control del Pad XY. |
 | ![](/basics/edit.png) | Edita el comportament del fixture seleccionat controlat pel Pad XY. |
 
@@ -135,9 +135,9 @@ Aquí podeu afegir/eliminar predefinits al Pad XY. Cada predefinit es mostra com
 | --- | --- |
 | **Llista de valors predefinits** | Mostra la llista dels predefinits afegits actualment al Pad XY |
 | ![](/basics/xypad.png) Afegeix una posició | En fer clic en aquest botó, es crea una nova posició predefinida i s'afegeix al Pad XY. Per defecte el nom preestablert són les coordenades X/Y en el moment de la creació |
-| ![](/basics/efx.png) Afegeix EFX | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](/function-manager/seleccio-de-fixtures), el qual us permetrà triar un EFX existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit EFX i s'afegeix al Pad XY. Per defecte el nom predefinit és el nom del EFX |
-| ![](/basics/scene.png) Afegeix una escena | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](../function-manager/seleccio-de-fixtures), el qual us permetrà triar una escena existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit d'Escena i s'afegeix al Pad XY. Per defecte, el nom preestablert és el nom de l'Escena.  <br>Tingueu en compte que si l'escena seleccionada no té cap canal de panoràmica o inclinació, es mostrarà un error i no es crearà cap valor predefinit. |
-| ![](/basics/group.png) Afegeix un Grup de Fixtures | En fer clic en aquest botó, es mostra el diàleg [Selecciona Fixture](/function-manager/seleccio-de-fixtures), el qual permet crear un grup de Fixtures com a subgrup de les Fixtures que el Pad XY controla (definit a la pestanya Fixtures) <br>En fer clic en un grup de Fixtures predefinit en el mode Operació, el Pad XY només controlarà les posicions de Fixture del Grup de Fixtures activat.  <br>**Nota**: Un preajustament de Grup de Fixtures no té cap efecte sobre els preajustaments d'EFX i Escena. |
+| ![](/basics/efx.png) Afegeix EFX | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](/function-manager/fixture-selection), el qual us permetrà triar un EFX existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit EFX i s'afegeix al Pad XY. Per defecte el nom predefinit és el nom del EFX |
+| ![](/basics/scene.png) Afegeix una escena | En fer clic en aquest botó, es mostrarà el diàleg [Selecciona la funció](../function-manager/fixture-selection), el qual us permetrà triar una escena existent des de l'espai de treball.  <br>Quan s'acaba, es crea un nou predefinit d'Escena i s'afegeix al Pad XY. Per defecte, el nom preestablert és el nom de l'Escena.  <br>Tingueu en compte que si l'escena seleccionada no té cap canal de panoràmica o inclinació, es mostrarà un error i no es crearà cap valor predefinit. |
+| ![](/basics/group.png) Afegeix un Grup de Fixtures | En fer clic en aquest botó, es mostra el diàleg [Selecciona Fixture](/function-manager/fixture-selection), el qual permet crear un grup de Fixtures com a subgrup de les Fixtures que el Pad XY controla (definit a la pestanya Fixtures) <br>En fer clic en un grup de Fixtures predefinit en el mode Operació, el Pad XY només controlarà les posicions de Fixture del Grup de Fixtures activat.  <br>**Nota**: Un preajustament de Grup de Fixtures no té cap efecte sobre els preajustaments d'EFX i Escena. |
 | ![](/basics/edit_remove.png) Elimina | Elimina el predefinit seleccionat |
 | Nom del predefinit | Permet introduir un nom arbitrari per al predefinit seleccionat |
 | Entrada externa | Permet seleccionar un control d'entrada extern per al predefinit seleccionat |
