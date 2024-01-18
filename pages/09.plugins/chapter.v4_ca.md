@@ -1,5 +1,5 @@
 ---
-title: Plugins
+title: Connectors
 date: '05:03 22-08-2023'
 taxonomy:
     category: docs
