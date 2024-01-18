@@ -3,7 +3,7 @@ title: 'Matriu de Botons'
 date: '14:30 21-08-2023'
 ---
 
-Una matriu de Botons és bàsicament una manera de crear ràpidament múltiples [Botons](../boto) al mateix temps dins d'un contenidor comú [Marc](../marc).
+Una matriu de Botons és bàsicament una manera de crear ràpidament múltiples [Botons](../button) al mateix temps dins d'un contenidor comú [Marc](../marc).
 
 Quan creeu una nova matriu de botons, podeu assignar funcions a cadascun dels botons amb bastant rapidesa amb el diàleg dedicat.
 
