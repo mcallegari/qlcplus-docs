@@ -1,5 +1,5 @@
 ---
-title: 'Solo Frame'
+title: Marc Solo
 date: '03:43 22-08-2023'
 ---
 
