@@ -62,6 +62,6 @@ Després que el fader s'hagi mogut a l'extrem oposat del seu recorregut, es prod
 
 ### Consell
 
-Quan s'afegeix un cue a un Chaser mitjançant l'[Editor de Chaser](/function-manager/editor-de-chaser), la durada predeterminada s'estableix en 0.  
+Quan s'afegeix un cue a un Chaser mitjançant l'[Editor de Chaser](/function-manager/chaser-editor), la durada predeterminada s'estableix en 0.  
 Per evitar que els cues de la llista de cues es reprodueixin frenèticament sense cap resultat, estableix la durada dels cues, ja sigui fent doble clic al camp de durada o utilitzant el Giny Selector de Velocitat![](/basics/speed.png)  
-Tingueu en compte que si necessiteu escenes que s'esvaeixin manualment amb el giny Llista de Cues, probablement vulgueu establir la durada de els cues a "infinit" (∞) mitjançant el [Giny Selector de Velocitat](../selector-de-velocitat). Això es pot activar a l'editor de Chasers fent clic al botó ![](/basics/speed.png).
+Tingueu en compte que si necessiteu escenes que s'esvaeixin manualment amb el giny Llista de Cues, probablement vulgueu establir la durada de els cues a "infinit" (∞) mitjançant el [Giny Selector de Velocitat](../speed-dial). Això es pot activar a l'editor de Chasers fent clic al botó ![](/basics/speed.png).
