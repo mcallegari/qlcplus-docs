@@ -45,7 +45,7 @@ A l'esquerra del Gestor d'Entrada/Sortida hi ha una barra d'eines on podeu afegi
 | ![](/basics/edit_add.png) | Afegeix un nou univers. L'univers tindrà un nom com "Univers X", on X és un nombre progressiu assignat per QLC+ (i també l'Univers ID). |
 | ![](/basics/edit_remove.png) | Elimina l'univers seleccionat actualment.  <br>**Aneu amb compte amb aquesta operació, ja que pot comprometre el vostre projecte i no es pot revertir.** <br>Quan suprimiu un univers, si està pedaçat actualment o hi ha alguns fixtures mapats, apareixerà un missatge emergent demanant confirmació si l'operació s'ha de completar o abandonar. |
 | **Nom de l'Univers** | Una cadena arbitrària que podeu establir per a identificar ràpidament el significat d'un Univers |
-| **Pas a través** | Vegeu [sota](#universe-passthrough) |
+| **Pas a través** | Vegeu [sota](#pas-a-través-per-lunivers) |
 
 Pedaç
 --------
