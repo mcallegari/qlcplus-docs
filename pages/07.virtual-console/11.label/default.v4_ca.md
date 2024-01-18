@@ -1,5 +1,5 @@
 ---
-title: Label
+title: Etiqueta
 date: '03:44 22-08-2023'
 ---
 
