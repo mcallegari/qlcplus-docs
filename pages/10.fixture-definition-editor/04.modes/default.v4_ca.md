@@ -3,7 +3,7 @@ title: Modes
 date: '07:07 22-08-2023'
 ---
 
-La pestanya modes conté tots els [modes](/basics/glossary-and-concepts#fixture-mode) al qual es pot configurar el fixture.
+La pestanya modes conté tots els [modes](/basics/glossary-and-concepts#mode-del-fixture) al qual es pot configurar el fixture.
 
 ![](../fixtureeditor_modes.png)
 
@@ -40,7 +40,7 @@ A la pestanya Canals podeu posar els canals del fixture en un ordre que forma un
 Pestanya Caps
 ---------
 
-A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-concepts#head) per a un únic fix, de manera que QLC+ sàpiga tractar cadascun d'ells individualment en determinades situacions (com ara [Grups de Fixtures](/basics/glossary-and-concepts#fixture-group)). Si un fixture només conté un capçal quan està configurat per utilitzar el mode editat (és a dir, tots els canals del mode controlen un capçal alhora) no cal definir el capçal. No obstant això, si el dispositiu té múltiples capçals que voleu poder controlar, heu de definir aquí cada capçal.
+A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-concepts#capçal) per a un únic fix, de manera que QLC+ sàpiga tractar cadascun d'ells individualment en determinades situacions (com ara [Grups de Fixtures](/basics/glossary-and-concepts#grup-de-fixture)). Si un fixture només conté un capçal quan està configurat per utilitzar el mode editat (és a dir, tots els canals del mode controlen un capçal alhora) no cal definir el capçal. No obstant això, si el dispositiu té múltiples capçals que voleu poder controlar, heu de definir aquí cada capçal.
 
 Els caps no tenen noms, ja que es poden considerar com a simples "sub-fixtures" dins d'un fixture. En canvi, se'ls donen automàticament números d'índex. L'ordenació dels caps ha de seguir la configuració del fixture físic el més a prop possible. Així que, si els caps van 1, 2, 3, 4 en el món real, no els definiu com 4, 2, 1, 3 o alguna cosa igual de molesta.
 
@@ -49,15 +49,15 @@ Els caps no tenen noms, ja que es poden considerar com a simples "sub-fixtures" 
 |     |     |
 | --- | --- |
 | **Llista de Capçals** | Mostra la llista de capçals definits actualment per al fixture. |
-| ![](/basics/edit_add.png) | Afegeix un nou capçal a l'aparell mitjançant l'[Editor de Capçals](#head-editor). |
+| ![](/basics/edit_add.png) | Afegeix un nou capçal a l'aparell mitjançant l'[Editor de Capçals](#editor-de-capçals). |
 | ![](/basics/edit_remove.png) | Elimina el capçal seleccionat del fixture. |
-| ![](/basics/edit.png) | Edita el capçal seleccionat mitjançant l'[Editor de Capçals](#head-editor). |
+| ![](/basics/edit.png) | Edita el capçal seleccionat mitjançant l'[Editor de Capçals](#editor-de-capçals). |
 | ![](/basics/up.png) | Apuja el capçal seleccionat cap amunt per un. Podeu utilitzar això per canviar l'ordre dels caps dins del fixture. |
 | ![](/basics/down.png) | Abaixa el capçal seleccionat cap avall per un. Podeu utilitzar això per canviar l'ordre dels caps dins del fixture. |
 
 ### Editor de Capçals
 
-L'Editor de Capçals s'utilitza per crear i editar [caps](/basics/glossary-and-concepts#head) triant conjunts de **Canals** que estan dedicats a un únic capçal (tal com defineix el fabricant del fixture).
+L'Editor de Capçals s'utilitza per crear i editar [caps](/basics/glossary-and-concepts#capçal) triant conjunts de **Canals** que estan dedicats a un únic capçal (tal com defineix el fabricant del fixture).
 
 Editar un capçal és molt senzill: col·loca una marca de control a cada canal que només l'utilitzi el capçal que estàs editant. Tingueu en compte que hauríeu de comprovar els canals específics d'un cap, i res més. Per exemple, si hi ha 3 caps cadascun amb un control dimmer dedicat, llavors també hauríeu d'incloure el canal dimmer. Si, en canvi, el fixture té un únic canal dimmer per controlar la intensitat de tots els caps junts, llavors no l'inclueixis en la definició del cap.
 
