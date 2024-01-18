@@ -38,7 +38,6 @@ Editor de Fixtures
 ==============
 
 Les finestres de l'Editor de Fixture contenen tot el necessari per editar una definició de Fixture alhora. Les finestres estan separades en cinc pestanyes:
-
 [**General**](general)<br>
 [**Física**](physical)<br>
 [**Canals**](channels)<br>
