@@ -1,6 +1,6 @@
 ---
-title: 'Matriu Botons'
-date: '14:30 21-08-2023'1
+title: 'Matriu de Botons'
+date: '14:30 21-08-2023'
 ---
 
 Una matriu de Botons és bàsicament una manera de crear ràpidament múltiples [Botons](../boto) al mateix temps dins d'un contenidor comú [Marc](../marc).
