@@ -37,7 +37,7 @@ La finestra principal de l'Editor de Fixtures és només un espai de treball bui
 Editor de Fixtures
 ==============
 
-Les finestres de l'Editor de Fixture contenen tot el necessari per editar una definició de Fixture alhora. Les finestres estan separades en cinc pestanyes:
+Les finestres de l'Editor de Fixture contenen tot el necessari per editar una definició de Fixture alhora. Les finestres estan separades en cinc pestanyes:<br>
 [**General**](general)<br>
 [**Física**](physical)<br>
 [**Canals**](channels)<br>
