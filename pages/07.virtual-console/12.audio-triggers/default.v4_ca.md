@@ -1,5 +1,5 @@
 ---
-title: 'Audio Triggers'
+title: Activadors d'Àudio
 date: '03:46 22-08-2023'
 ---
 
