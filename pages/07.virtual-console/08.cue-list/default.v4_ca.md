@@ -1,13 +1,13 @@
 ---
-title: 'Cue List'
+title: Llista de Cues
 date: '03:34 22-08-2023'
 ---
 
-Una Llista Cue proporciona una llista de [Funcions](/basics/glossary-and-concepts#functions) que podeu passar amb una sola tecla de teclat. La Llista Cue està dissenyada per a representacions teatrals on l'operador d'il·luminació només ha de seguir el guió i commutar el següent punt a mesura que l'actuació continua.
+Una Llista Cue proporciona una llista de [Funcions](/basics/glossary-and-concepts#funcions) que podeu passar amb una sola tecla de teclat. La Llista Cue està dissenyada per a representacions teatrals on l'operador d'il·luminació només ha de seguir el guió i commutar el següent punt a mesura que l'actuació continua.
 
-La primera columna de la Llista Cue mostra el número de cue que va de l'1 a l'infinit i més enllà de[*](https://en.wikipedia.org/wiki/Buzz_Lightyear). La segona columna mostra el nom de la [Funció](/basics/glossary-and-concepts#functions) individual que s'ha assignat a aquesta cue en particular.
+La primera columna de la Llista Cue mostra el número de cue que va de l'1 a l'infinit i més enllà de[*](https://en.wikipedia.org/wiki/Buzz_Lightyear). La segona columna mostra el nom de la [Funció](/basics/glossary-and-concepts#funcions) individual que s'ha assignat a aquesta cue en particular.
 
-**Tingueu en compte** que només els [Chasers](/basics/glossary-and-concepts#chaser) es poden assignar a una llista de Cue, per la senzilla raó que el Chaser és l'única funció amb una durada. Com que qualsevol altra funció es pot afegir com a pas a un Chaser amb l'editor de Chaser [](/function-manager/chaser-editor), és senzill crear els Cues desitjats barrejant [Escenes](/basics/glossary-and-concepts#scene), [Col·leccions](/basics/glossary-and-concepts#collection), i així successivament...
+**Tingueu en compte** que només els [Chasers](/basics/glossary-and-concepts#chaser) es poden assignar a una llista de Cue, per la senzilla raó que el Chaser és l'única funció amb una durada. Com que qualsevol altra funció es pot afegir com a pas a un Chaser amb l'editor de Chaser [](/function-manager/chaser-editor), és senzill crear els Cues desitjats barrejant [Escenes](/basics/glossary-and-concepts#escena), [Col·leccions](/basics/glossary-and-concepts#colleccio), i així successivament...
 
 ### Configuració
 
@@ -62,6 +62,6 @@ Després que el fader s'hagi mogut a l'extrem oposat del seu recorregut, es prod
 
 ### Consell
 
-Quan s'afegeix un cue a un Chaser mitjançant l'[Editor de Chaser](/function-manager/chaser-editor), la durada predeterminada s'estableix en 0.  
+Quan s'afegeix un cue a un Chaser mitjançant l'[Editor de Chaser](/function-manager/editor-de-chaser), la durada predeterminada s'estableix en 0.  
 Per evitar que els cues de la llista de cues es reprodueixin frenèticament sense cap resultat, estableix la durada dels cues, ja sigui fent doble clic al camp de durada o utilitzant el Giny Selector de Velocitat![](/basics/speed.png)  
-Tingueu en compte que si necessiteu escenes que s'esvaeixin manualment amb el giny Llista de Cues, probablement vulgueu establir la durada de els cues a "infinit" (∞) mitjançant el [Giny Selector de Velocitat](../speed-dial). Això es pot activar a l'editor de Chasers fent clic al botó ![](/basics/speed.png).
+Tingueu en compte que si necessiteu escenes que s'esvaeixin manualment amb el giny Llista de Cues, probablement vulgueu establir la durada de els cues a "infinit" (∞) mitjançant el [Giny Selector de Velocitat](../selector-de-velocitat). Això es pot activar a l'editor de Chasers fent clic al botó ![](/basics/speed.png).
