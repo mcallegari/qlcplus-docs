@@ -10,16 +10,16 @@ La pestanya modes conté tots els [modes](/basics/glossary-and-concepts#mode-del
 |     |     |
 | --- | --- |
 | **Llista de Modes** | Mostra tots els modes del fixture editat actualment. Cada element de mode es pot obrir per mostrar el conjunt i l'ordre dels canals en aquest mode.<br>**Nom**: El nom del mode (cada nom ha de ser únic)<br>**Canals**: Nombre de canals en cada mode<br>**Caps**: El nombre de fonts de llum que admet cada mode |
-| ![](/basics/edit_add.png) | Crea un nou mode per a l'aparell mitjançant l'[Editor de Modes](#mode-editor). |
+| ![](/basics/edit_add.png) | Crea un nou mode per a l'aparell mitjançant l'[Editor de Modes](#editor-de-modes). |
 | ![](/basics/edit_remove.png) | Suprimeix el mode seleccionat actualment del fixture. L'eliminació d'un mode no destrueix cap canal ni cap altre mode. |
-| ![](/basics/edit.png) | Edita el mode seleccionat actualment mitjançant l'[Editor de Modes](#mode-editor). |
+| ![](/basics/edit.png) | Edita el mode seleccionat actualment mitjançant l'[Editor de Modes](#editor-de-modes). |
 | ![](/basics/editcopy.png) | Crea una còpia del mode seleccionat actualment al mateix fixture. Atès que els modes estan estretament acoblats als canals d'un determinat fixture, els modes no es poden copiar entre fixtures. |
 | ![](/basics/check.png) | Obre o tanca tots els elements del mode. |
 
 Editor de Modes
 ===========
 
-L'Editor de Modes s'utilitza per crear i editar [modes](/basics/glossary-and-concepts#fixture-mode) triant conjunts de **Canals** en cert ordre (tal com es defineix pel fabricant del fixture). Cada finestra de l'editor es divideix en tres pestanyes: Canals, Caps i Física.
+L'Editor de Modes s'utilitza per crear i editar [modes](/basics/glossary-and-concepts#mode-del-fixture) triant conjunts de **Canals** en cert ordre (tal com es defineix pel fabricant del fixture). Cada finestra de l'editor es divideix en tres pestanyes: Canals, Caps i Física.
 
 Pestanya Canals
 ------------
@@ -40,7 +40,7 @@ A la pestanya Canals podeu posar els canals del fixture en un ordre que forma un
 Pestanya Caps
 ---------
 
-A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-concepts#capçal) per a un únic fix, de manera que QLC+ sàpiga tractar cadascun d'ells individualment en determinades situacions (com ara [Grups de Fixtures](/basics/glossary-and-concepts#grup-de-fixture)). Si un fixture només conté un capçal quan està configurat per utilitzar el mode editat (és a dir, tots els canals del mode controlen un capçal alhora) no cal definir el capçal. No obstant això, si el dispositiu té múltiples capçals que voleu poder controlar, heu de definir aquí cada capçal.
+A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-concepts#capçal) per a un únic fix, de manera que QLC+ sàpiga tractar cadascun d'ells individualment en determinades situacions (com ara [Grups de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures)). Si un fixture només conté un capçal quan està configurat per utilitzar el mode editat (és a dir, tots els canals del mode controlen un capçal alhora) no cal definir el capçal. No obstant això, si el dispositiu té múltiples capçals que voleu poder controlar, heu de definir aquí cada capçal.
 
 Els caps no tenen noms, ja que es poden considerar com a simples "sub-fixtures" dins d'un fixture. En canvi, se'ls donen automàticament números d'índex. L'ordenació dels caps ha de seguir la configuració del fixture físic el més a prop possible. Així que, si els caps van 1, 2, 3, 4 en el món real, no els definiu com 4, 2, 1, 3 o alguna cosa igual de molesta.
 
