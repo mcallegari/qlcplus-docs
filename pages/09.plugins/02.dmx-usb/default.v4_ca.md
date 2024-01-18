@@ -78,4 +78,4 @@ Ajustament
 
 **Nota: L'ajustament manual no s'hauria de realitzar mai excepte en alguns casos molt particulars. Utilitzeu-lo sota el vostre propi risc!**  
 És possible canviar la mida del marc DMX per als dispositius Enttec Open (i similars) amb una clau de configuració oculta a cada plataforma. La clau indica a QLC+ quants canals s'han de transmetre en cada marc DMX, de manera que per a un univers DMX (per defecte 512).  
-Consulteu la secció [Afinació de paràmetres manuals](/advanced/parameters-tuning#2-dmx-usb-enttec-open-channels-number) DMX USB Enttec Open.
+Consulteu la secció [Afinació de paràmetres manuals](/advanced/parameters-tuning#2-numero-de-canals-dmx-usb-enttec-open) DMX USB Enttec Open.
