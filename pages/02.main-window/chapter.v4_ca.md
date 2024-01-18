@@ -1,5 +1,5 @@
 ---
-title: 'Main Window'
+title: Finestre Principal
 taxonomy:
     category: docs
 child_type: docs
