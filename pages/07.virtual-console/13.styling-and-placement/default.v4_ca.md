@@ -1,5 +1,5 @@
 ---
-title: 'Styling And Placement'
+title: Estil i Col·locació
 date: '03:53 22-08-2023'
 ---
 
