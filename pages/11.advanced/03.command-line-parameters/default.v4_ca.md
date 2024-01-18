@@ -23,7 +23,7 @@ Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 |     |
 | --- |
-| **-d o --debug**<br><br>**Descripció:** Activa el mode de depuració i opcionalment estableix el nivell de sortida. Tingueu en compte que, des de la versió 4.8.0, els missatges per a la DEPURACIÓ de nivell (0) no s'inclouen en els binaris llançats.<br><br>**Paràmetres:** Nivell (vegeu [QtMsgType](https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum)<br><br>**Exemples:**  <br>Habilita el mode de depuració i estableix el nivell de depuració a 0<br>  qlcplus -d  <br>qlcplus --debug  <br>  <br>Activa el mode de depuració i estableix el nivell de depuració a 3: <br>qlcplus -d 3 |
+| **-d o --debug**<br><br>**Descripció:** Activa el mode de depuració i opcionalment estableix el nivell de sortida. Tingueu en compte que, des de la versió 4.8.0, els missatges per a la DEPURACIÓ de nivell (0) no s'inclouen en els binaris llançats.<br><br>**Paràmetres:** Nivell (vegeu [QtMsgType])(https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum)<br><br>**Exemples:**  <br>Habilita el mode de depuració i estableix el nivell de depuració a 0<br>  qlcplus -d  <br>qlcplus --debug  <br>  <br>Activa el mode de depuració i estableix el nivell de depuració a 3: <br>qlcplus -d 3 |
 
 |     |
 | --- |
