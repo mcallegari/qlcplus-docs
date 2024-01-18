@@ -1,5 +1,5 @@
 ---
-title: 'Fixture Definition Editor'
+title: 'Editor de Definicions de Fixture'
 date: '05:24 22-08-2023'
 taxonomy:
     category: docs
@@ -8,7 +8,7 @@ media_order: 'fixtureeditor_physical.png,fixtureeditor_aliases.png,fixtureeditor
 
 ### Capítol 10
 
-# Editor de Definició de Fixture
+# Editor de Definicions de Fixture
 
 L'Editor de Definicions de Fixture és una aplicació separada empaquetada juntament amb QLC+ per crear i modificar [definicions de fixture](/basics/glossary-and-concepts#fixtures). Tenir una definició de fixture per a cada un dels teus llums permet a QLC+ saber com controlar-los.
 
