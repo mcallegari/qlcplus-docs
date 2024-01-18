@@ -6,7 +6,7 @@ date: '05:14 22-08-2023'
 Introducció
 ------------
 
-El connector Loopback proporciona una manera de controlar els ginys de la [Consola Virtual](/virtual-console) des d'escenes i altres [Funcions](/basics/glossary-and-concepts#functions). Les dades que QLC+ envia al port de sortida es retornen al port d'entrada, on es poden utilitzar per al control extern. Òbviament, el port de Sortida i el port d'Entrada poden estar connectats a diferents universos.
+El connector Loopback proporciona una manera de controlar els ginys de la [Consola Virtual](/virtual-console) des d'escenes i altres [Funcions](/basics/glossary-and-concepts#funcions). Les dades que QLC+ envia al port de sortida es retornen al port d'entrada, on es poden utilitzar per al control extern. Òbviament, el port de Sortida i el port d'Entrada poden estar connectats a diferents universos.
 
 El connector proporciona 4 línies independents.
 
