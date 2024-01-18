@@ -1,5 +1,5 @@
 ---
-title: 'Parameters Tuning'
+title: Paràmetres d'Ajustament
 date: '11:41 22-08-2023'
 ---
 
