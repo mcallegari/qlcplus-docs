@@ -1,9 +1,9 @@
 ---
-title: Animation
+title: Animació
 date: '03:09 22-08-2023'
 ---
 
-Un giny d'Animació és una eina completa per funcionar amb les [Matrius RGB](/basics/glossary-and-concepts#rgb-matrix) del vostre projecte.  
+Un giny d'Animació és una eina completa per funcionar amb les [Matrius RGB](/basics/glossary-and-concepts#matriu-rgb) del vostre projecte.  
 Mostra diversos elements gràfics per controlar completament una matriu durant els espectacles en directe.  
 El més important és que permet definir una sèrie d'anomenats "controls personalitzats" per recordar ràpidament els predefinits, colors i propietats i aplicar-los immediatament a una matriu en execució.
 
@@ -32,14 +32,14 @@ Es pot configurar un giny d'animació amb el botó de propietats ![](/basics/edi
 |     |     |
 | --- | --- |
 | **Nom del Giny** | Defineix el nom amigable del giny, que es mostra a sobre dels dos botons Click & Go |
-| **Funció Matriu** | Mostra el nom de la Funció  [Matriu RGB](/basics/glossary-and-concepts#rgb-matrix) que està assignada al giny.<br><br>![](/basics/attach.png) Assigna una funció Matriu RGB al giny <br>![](/basics/detach.png) Desacobla la funció actual del giny |
+| **Funció Matriu** | Mostra el nom de la Funció  [Matriu RGB](/basics/glossary-and-concepts#matriu-rgb) que està assignada al giny.<br><br>![](/basics/attach.png) Assigna una funció Matriu RGB al giny <br>![](/basics/detach.png) Desacobla la funció actual del giny |
 | **Aplica canvis de color i predefinits immediatament** | Seleccioneu si els canvis a la Matriu s'han d'aplicar immediatament o al següent bucle de la Matriu |
-| **Entrada Externa** | Podeu adjuntar un canal d'entrada extern des d'un dispositiu d'entrada (com un tauler lliscador) al control lliscant del giny de manera que no sempre hàgiu d'utilitzar el ratolí o la pantalla tàctil per controlar la reproducció o la intensitat de la matriu.<br><br>**Univers d'entrada**: L'univers d'entrada des del qual voleu obtenir dades d'entrada per al control lliscant.<br>**Canal d'entrada**: El canal d'entrada individual dins de l'univers d'entrada seleccionat que voleu utilitzar per controlar el control.<br>**Detecta automàticament**: Quan s'activa, podeu moure/premeu un botó/controlador/knob al vostre maquinari d'entrada extern i s'assignarà automàticament al control lliscant. L'última combinació es mostra als quadres de text quan QLC+ rep dades d'entrada. Si no veieu res en els quadres, la connexió d'entrada pot tenir un problema que primer heu de solucionar.<br>**Trieu...**: Mostra el diàleg [Seleccioneu el Canal d'Entrada](../select-input-channel) que podeu utilitzar per a seleccionar un canal d'entrada manualment. |
+| **Entrada Externa** | Podeu adjuntar un canal d'entrada extern des d'un dispositiu d'entrada (com un tauler lliscador) al control lliscant del giny de manera que no sempre hàgiu d'utilitzar el ratolí o la pantalla tàctil per controlar la reproducció o la intensitat de la matriu.<br><br>**Univers d'entrada**: L'univers d'entrada des del qual voleu obtenir dades d'entrada per al control lliscant.<br>**Canal d'entrada**: El canal d'entrada individual dins de l'univers d'entrada seleccionat que voleu utilitzar per controlar el control.<br>**Detecta automàticament**: Quan s'activa, podeu moure/premeu un botó/controlador/knob al vostre maquinari d'entrada extern i s'assignarà automàticament al control lliscant. L'última combinació es mostra als quadres de text quan QLC+ rep dades d'entrada. Si no veieu res en els quadres, la connexió d'entrada pot tenir un problema que primer heu de solucionar.<br>**Trieu...**: Mostra el diàleg [Seleccioneu el Canal d'Entrada](../seleccio-canal-entrada) que podeu utilitzar per a seleccionar un canal d'entrada manualment. |
 
 ### Pàgina de Controls Personalitzats
 
 Un control personalitzat és una "drecera" a una funcionalitat d'una Matriu RGB.  
-Bàsicament podeu controlar totes les opcions que s'utilitzen normalment a l'[Editor de Matrius RGB](/function-manager/rgb-matrix-editor) durant la fase de disseny d'un espectacle. L'única opció que no podeu controlar és el grup Fixture que utilitza una funció Matrix RGB.  
+Bàsicament podeu controlar totes les opcions que s'utilitzen normalment a l'[Editor de Matrius RGB](/function-manager/editor-matriu-rgb) durant la fase de disseny d'un espectacle. L'única opció que no podeu controlar és el grup Fixture que utilitza una funció Matrix RGB.  
 En aquesta pàgina de configuració l'usuari pot definir qualsevol nombre de controls personalitzats en funció de les necessitats durant una actuació en directe.  
 Cada control personalitzat es representa com un botó a la disposició del giny d'animació i es pot fer clic amb el ratolí o prémer en una pantalla tàctil, o associar-se a una combinació de tecles o a una línia d'entrada de controlador extern.
 
