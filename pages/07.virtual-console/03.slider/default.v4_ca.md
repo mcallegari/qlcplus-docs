@@ -3,7 +3,7 @@ title: Slider
 date: '03:02 22-08-2023'
 ---
 
-Els controls lliscants s'utilitzen per a dos propòsits diferents: [Fixture](/basics/glossary-and-concepts#fixtures) ajust del nivell del canal i [Funció](/basics/glossary-and-concepts#funcions) reproducció i ajust de la intensitat. Qualsevol control lliscant pot operar en qualsevol d'aquests modes i cada mode té les seves pròpies opcions de configuració.
+Els slider o controls lliscants s'utilitzen per a dos propòsits diferents: [Fixture](/basics/glossary-and-concepts#fixtures) ajust del nivell del canal i [Funció](/basics/glossary-and-concepts#funcions) reproducció i ajust de la intensitat. Qualsevol control lliscant pot operar en qualsevol d'aquests modes i cada mode té les seves pròpies opcions de configuració.
 
 ### Configuració
 
