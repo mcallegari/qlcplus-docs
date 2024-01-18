@@ -1,5 +1,5 @@
 ---
-title: 'Speed Dial'
+title: Selector de Velocitat
 date: '03:18 22-08-2023'
 media_order: speeddial.png
 ---
