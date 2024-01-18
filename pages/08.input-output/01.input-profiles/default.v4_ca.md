@@ -1,5 +1,5 @@
 ---
-title: 'Input Profiles'
+title: Perfils d'Entrada
 date: '04:57 22-08-2023'
 ---
 
