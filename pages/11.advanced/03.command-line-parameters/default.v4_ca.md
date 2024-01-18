@@ -1,5 +1,5 @@
 ---
-title: 'Command Line Parameters'
+title: Paràmetres de Línia d'Ordres
 date: '08:19 22-08-2023'
 ---
 
