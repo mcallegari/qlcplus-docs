@@ -1,5 +1,5 @@
 ---
-title: Control Lliscant - Slider 
+title: Slider 
 date: '03:02 22-08-2023'
 ---
 
