@@ -26,4 +26,4 @@ Aquest dispositiu encara no està admès al Windows.
 Ajustaments
 ------
 
-És possible canviar la freqüència de marc DMX per a tots els dispositius uDMX amb una clau de configuració oculta a cada plataforma. La clau indica a QLC+ quantes vegades s'hauria d'enviar cada marc DMX (512 canals) a l'univers per segon. Un valor de "30" significa 30 vegades per segon (30Hz). Consulteu la secció [Afinació de paràmetres manuals](/advanced/parameters-tuning#3-freqüència-udmx) uDMX
+És possible canviar la freqüència de marc DMX per a tots els dispositius uDMX amb una clau de configuració oculta a cada plataforma. La clau indica a QLC+ quantes vegades s'hauria d'enviar cada marc DMX (512 canals) a l'univers per segon. Un valor de "30" significa 30 vegades per segon (30Hz). Consulteu la secció [Ajustament de paràmetres manuals](/advanced/parameters-tuning#3-freqüència-udmx) uDMX
