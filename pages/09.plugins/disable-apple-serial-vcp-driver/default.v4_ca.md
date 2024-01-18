@@ -1,5 +1,5 @@
 ---
-title: 'Disable Apple Serial VCP Driver'
+title: 'Desactiva el Controlador Apple Serial VCP'
 date: '08:06 22-08-2023'
 ---
 
