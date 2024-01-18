@@ -26,7 +26,7 @@ Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins d
 Controls - Univers
 -------------------
 
-La caixa de l'univers conté els controls lliscants que s'utilitzen per controlar canals individuals DMX en el primer univers DMX. Atès que 512 controls lliscants no poden encaixar bé a la pantalla al mateix temps, s'han dividit en pàgines. Per defecte, cada pàgina conté 32 controls lliscants però això pot ser [configurat](#configurat).
+La caixa de l'univers conté els controls lliscants que s'utilitzen per controlar canals individuals DMX en el primer univers DMX. Atès que 512 controls lliscants no poden encaixar bé a la pantalla al mateix temps, s'han dividit en pàgines. Per defecte, cada pàgina conté 32 controls lliscants però això pot ser [configurat](#ajustaments).
 
 |     |     |
 | --- | --- |
@@ -64,7 +64,7 @@ El quadre de la pila cue mostra el contingut de la reproducció seleccionada.
 
 [](#Tuning)
 
-Afinació
+Ajustaments
 ------
 
-Consulteu la secció de [Afinació de paràmetres manuals](/advanced/parameters-tuning#1-simple-desk) de la secció Taula Simple
+Consulteu la secció de [Ajustament de paràmetres manuals](/advanced/parameters-tuning#1-taula-simple) de la secció Taula Simple
