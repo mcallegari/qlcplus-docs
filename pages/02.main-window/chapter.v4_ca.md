@@ -1,5 +1,5 @@
 ---
-title: Finestre Principal
+title: Finestra Principal
 taxonomy:
     category: docs
 child_type: docs
