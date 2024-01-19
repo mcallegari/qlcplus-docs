@@ -39,7 +39,7 @@ Es pot configurar un giny d'animació amb el botó de propietats ![](/basics/edi
 ### Pàgina de Controls Personalitzats
 
 Un control personalitzat és una "drecera" a una funcionalitat d'una Matriu RGB.  
-Bàsicament podeu controlar totes les opcions que s'utilitzen normalment a l'[Editor de Matrius RGB](/function-manager/editor-matriu-rgb) durant la fase de disseny d'un espectacle. L'única opció que no podeu controlar és el grup Fixture que utilitza una funció Matrix RGB.  
+Bàsicament podeu controlar totes les opcions que s'utilitzen normalment a l'[Editor de Matrius RGB](/function-manager/rgb-matrix-editor) durant la fase de disseny d'un espectacle. L'única opció que no podeu controlar és el grup Fixture que utilitza una funció Matrix RGB.  
 En aquesta pàgina de configuració l'usuari pot definir qualsevol nombre de controls personalitzats en funció de les necessitats durant una actuació en directe.  
 Cada control personalitzat es representa com un botó a la disposició del giny d'animació i es pot fer clic amb el ratolí o prémer en una pantalla tàctil, o associar-se a una combinació de tecles o a una línia d'entrada de controlador extern.
 
