@@ -45,7 +45,7 @@ Cada estil de Giny de la Consola Virtual es pot configurar (fins a cert punt). E
 | ![](/basics/frame.png) | Afegeix un nou [Marc](frame) al marc seleccionat (CTRL+MAJ+F) |
 | ![](/basics/soloframe.png) | Afegeix un nou [Marc de Solo](solo-frame) al marc seleccionat (CTRL+MAJ+O) |
 | ![](/basics/label.png) | Afegeix una [Etiqueta](label) nova al marc seleccionat actualment (CTRL+MAJ+L) |
-| ![](/basics/audioinput.png) | Afegeix un nou [Giny Activador d'Àudio](audio-tiggers) al marc seleccionat (CTRL+MAJ+A) |
+| ![](/basics/audioinput.png) | Afegeix un nou [Giny Activador d'Àudio](audio-triggers) al marc seleccionat (CTRL+MAJ+A) |
 | ![](/basics/clock.png) | Afegeix un Giny de Rellotge nou al marc seleccionat (CTRL+MAJ+T). Aquest giny es pot utilitzar per a 3 propòsits: Rellotge del Sistema, Cronòmetre i Compte Enrere.  <br>En els dos últims casos i quan QLC+ estigui en mode d'operació, fer clic amb el botó esquerre del ratolí farà pausa al comptador, mentre que fer clic amb el botó dret del ratolí reiniciarà el comptador al valor inicial.  <br>Quan està en mode rellotge del sistema, és possible programar quan iniciar una funció QLC+ durant l'hora del dia. |
 | ![](/basics/editcut.png) | Retalla els ginys seleccionats al porta-retalls. Tingueu en compte que els ginys només desapareixeran quan s'enganxin a la nova ubicació (CTRL+X) |
 | ![](/basics/editcopy.png) | Copia els ginys seleccionats al porta-retalls (CTRL+C) |
