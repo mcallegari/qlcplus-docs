@@ -19,7 +19,7 @@ El gestor de fixtures és el cor de l'arquitectura orientada a fixtures de QLC+.
 | ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de l'espai de treball. Això també elimina els fixtures de tots els grups als quals han estat assignats. |
 | ![](/basics/configure.png) | Editeu les propietats del fixture seleccionat amb el diàleg [Afegeix/Edita Fixture](add-edit-fixtures). |
 | ![](/basics/fade.png) | Obre la finestra [Configuració de les Propietats del Canal](channel-properties). |
-| ![](/basics/group.png) | Assigna els fixtures seleccionats a un  [Grup de Fixtures](/basics/glossary-and-concepts#fixture-group) mostrat en un menú emergent. Si encara no teniu grups definits, podeu triar crear-ne un de nou des del menú que s'obre quan es fa clic en aquest botó. |
+| ![](/basics/group.png) | Assigna els fixtures seleccionats a un  [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures) mostrat en un menú emergent. Si encara no teniu grups definits, podeu triar crear-ne un de nou des del menú que s'obre quan es fa clic en aquest botó. |
 | ![](/basics/ungroup.png) | Renuncia (elimina) els fixtures seleccionats del grup en què es troben actualment. Tingueu en compte que eliminar fixtures d'un grup NO destruirà completament els fixtures. A més, l'eliminació d'un grup no afectarà les pertinences dels fixtures a altres grups. |
 | ![](/basics/up.png) | Mou el Grup de Canals seleccionat cap amunt |
 | ![](/basics/down.png) | Mou el Grup de Canals seleccionat cap avall |
