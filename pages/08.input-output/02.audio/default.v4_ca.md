@@ -13,6 +13,6 @@ La primera entrada de la llista és sempre **"Default device"**, i està selecci
 El dispositiu predeterminat és el que utilitzeu actualment per escoltar música o enregistrar àudio amb un micròfon.
 
 Si en el vostre sistema hi ha targetes d'àudio addicionals (PCI o USB), és possible seleccionar-les en aquest panell com a dispositiu d'entrada o sortida QLC+ preferit.  
-Bàsicament, els [Activadors d'Àudio de la Consola Virtual](/virtual-console/audio-triggers) utilitzen un dispositiu d'entrada, mentre que les [funcions d'àudio](/basics/glossary-and-concepts#audio) utilitzen un dispositiu de sortida.
+Bàsicament, els [Activadors d'Àudio de la Consola Virtual](/virtual-console/audio-triggers) utilitzen un dispositiu d'entrada, mentre que les [funcions d'àudio](/basics/glossary-and-concepts#àudio) utilitzen un dispositiu de sortida.
 
 La selecció d'una línia d'entrada/sortida d'àudio ha de tenir efecte immediat en QLC+. Si no és així, se us convida a reiniciar QLC+ per permetre una inicialització completa del motor d'àudio intern.
