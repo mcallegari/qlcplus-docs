@@ -8,7 +8,7 @@ child_type: docs
 ### Capítol 3
 
 # Gestor de Fixtures
-El gestor de fixtures és el cor de l'arquitectura orientada a fixtures de QLC+. Com ja diu el seu nom, pots gestionar (afegir, eliminar i editar) els teus accessoris d'il·luminació des del gestor de fixtures. A la part esquerra del gestor hi ha una llista que mostra tots els fixtures de l'espai de treball actual. Quan se selecciona un fixture, el costat dret de la finestra mostra els detalls del fixture seleccionat. Quan se selecciona un [Grup de Fixtures](/basics/glossary-and-concepts#fixture-group), el costat dret de la finestra està ocupat per l'editor de grups de Fixtures](fixture-group-editor).
+El gestor de fixtures és el cor de l'arquitectura orientada a fixtures de QLC+. Com ja diu el seu nom, pots gestionar (afegir, eliminar i editar) els teus accessoris d'il·luminació des del gestor de fixtures. A la part esquerra del gestor hi ha una llista que mostra tots els fixtures de l'espai de treball actual. Quan se selecciona un fixture, el costat dret de la finestra mostra els detalls del fixture seleccionat. Quan se selecciona un [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures), el costat dret de la finestra està ocupat per l'editor de grups de Fixtures](fixture-group-editor).
 
 ### Controls
 
