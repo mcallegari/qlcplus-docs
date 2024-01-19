@@ -71,11 +71,11 @@ Si un mode no està llistat aquí, vol dir que no està suportat per QLC+ o el p
 
 
 (1) DMX2 OUT només està disponible en DMX USB Mk2 Pro  
-(2) MIDI IN i MIDI OUT estan disponibles només en DMX USB Mk2 Pro amb un cable de ruptura de 5 vies. Els senyals MIDI OUT s'envien de l'1 al 512 com es descriu en el mapa](../midi#channels-map) dels canals del connector MIDI [
+(2) MIDI IN i MIDI OUT estan disponibles només en DMX USB Mk2 Pro amb un cable de ruptura de 5 vies. Els senyals MIDI OUT s'envien de l'1 al 512 com es descriu en el [mapa de canals del connector MIDI](../midi#mapa-de-canals) dels canals del connector MIDI 
 
 Ajustament
 ------
 
 **Nota: L'ajustament manual no s'hauria de realitzar mai excepte en alguns casos molt particulars. Utilitzeu-lo sota el vostre propi risc!**  
 És possible canviar la mida del marc DMX per als dispositius Enttec Open (i similars) amb una clau de configuració oculta a cada plataforma. La clau indica a QLC+ quants canals s'han de transmetre en cada marc DMX, de manera que per a un univers DMX (per defecte 512).  
-Consulteu la secció [Ajustament de paràmetres manuals](/advanced/parameters-tuning#2-numero-de-canals-dmx-usb-enttec-open) DMX USB Enttec Open.
+Consulteu la secció [Ajustament de paràmetres manuals](/advanced/parameters-tuning#2-número-de-canals-dmx-usb-enttec-open) DMX USB Enttec Open.
