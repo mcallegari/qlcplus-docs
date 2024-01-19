@@ -6,7 +6,7 @@ date: '05:13 22-08-2023'
 Introducció
 ------------
 
-El connector HID admet el  [sistema HID](https://en.wikipedia.org/wiki/Human_interface_device) a Windows i Linux.  
+El connector HID admet el  [sistema HID](https://ca.wikipedia.org/wiki/Dispositiu_d%27interf%C3%ADcie_humana) a Windows i Linux.  
 HID és una forma genèrica de mapejar dispositius d'entrada/sortida com joysticks/palanques de control, ratolí tàctil, teclats, ratolins, etc.  
 El connector QLC+ HID té com a objectiu admetre només joysticks i l'adaptador FX5 USB DMX.
 
