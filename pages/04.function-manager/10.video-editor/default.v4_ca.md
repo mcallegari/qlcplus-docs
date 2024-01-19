@@ -3,7 +3,7 @@ title: 'Editor de Vídeo'
 date: '04:33 22-08-2023'
 ---
 
-L'editor de vídeo, com el seu nom indica, s'utilitza per editar les funcions ![](/basics/video.png) [Video](/basics/glossary-and-concepts#video).
+L'editor de vídeo, com el seu nom indica, s'utilitza per editar les funcions ![](/basics/video.png) [Video](/basics/glossary-and-concepts#vídeo).
 
 Controls
 --------
