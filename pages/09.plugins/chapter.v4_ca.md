@@ -1,12 +1,12 @@
 ---
-title: Plugins
+title: Connectors
 date: '05:03 22-08-2023'
 taxonomy:
     category: docs
 ---
 
-### Chapter 9
+### Capítol 9
 
-# Plugins
+# Connectors
 
-Plugins are those components that allow QLC+ to perform input and output to physical devices or network protocols.
+Els connectors són aquells components que permeten a QLC+ realitzar entrada i sortida a dispositius físics o protocols de xarxa.

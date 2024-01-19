@@ -1,20 +1,20 @@
 ---
-title: Aliases
+title: Àlies
 date: '07:10 22-08-2023'
 ---
 
-In this tab it is possible to define the rules of replacement triggered by capabilities set as "Alias" preset.  
-Let's make an example. A fixture has channel 5 named "Effects" which controls the behavior of channel 6. Channel 5 has 2 capabilities: "Speed on channel 6" and "Sound sensitivity on channel 6". The latter have been set to the "Alias" preset. By default, when DMX value of channel 5 is 0, channel 6 acts as speed control. When DMX value of channel 5 enters the "sound sensitivity" capability, channel 6 becomes a sound sensitivity adjustment.  
-To cope with this case, you need to define 2 channels: "Speed" and "Sound sensitivity". In the fixture mode add only "Speed", since it will the default behavior when DMX value of channel 5 is equal to 0.  
-Then you need to define just one alias: the one that will replace the default channel "Speed" with "Sound sensitivity". QLC+ will then know what to do when the DMX value of channel 5 enters or exits the alias.
+En aquesta pestanya és possible definir les regles de substitució activades per capacitats establertes com a "Àlies" predefinits.  
+Fem un exemple. Un fixture té el canal 5 anomenat "Efectes" que controla el comportament del canal 6. El canal 5 té 2 capacitats: "Speed on channel 6" i "Sound sensitivity on channel 6". Aquest últim s'ha establert al predefinit d'"Àlies". Per defecte, quan el valor DMX del canal 5 és 0, el canal 6 actua com a control de velocitat. Quan el valor DMX del canal 5 entra en la capacitat de "sensibilitat sonora", el canal 6 es converteix en un ajust de sensibilitat sonora.  
+Per fer front a aquest cas, cal definir 2 canals: "Velocitat" i "Sensibilitat sonora". En el mode fixació afegir només “Velocitat”, ja que serà el comportament per defecte quan el valor DMX del canal 5 sigui igual a 0.  
+Després cal definir només un àlies: el que substituirà el canal per defecte “Velocitat” per “Sensibilitat sonora”. QLC+ llavors sabrà què fer quan el valor DMX del canal 5 entri o surti de l'àlies.
 
 ![](../fixtureeditor_aliases.png)
 
 |     |     |
 | --- | --- |
-| **Alias** | Shows the list of all capabilities of all channels set as "Alias" preset. The string is in the form \[Channel name\] - \[Capability name\] \[DMX value range\] |
-| **In mode** | Select the mode where the alias must have effect |
-| **replace** | Select the mode channel to be replaced when the alias is triggered |
-| **with** | Select the channel that will substitute the "replace" channel when the alias is triggered |
-| ![](/basics/edit_add.png) | Add the triplet _In mode_ X, _replace_ Y _with_ Z to the known aliases list |
-| ![](/basics/edit_remove.png) | Remove the selected alias from the aliases list |
+| **Àlies** | Mostra la llista de totes les capacitats de tots els canals establerts com a «Àlies» predefinits. La cadena està en la forma \[Nom del canal\] - \[Nom de la capacitat\] \[Rang de valors DMX\] |
+| **En mode** | Seleccioneu el mode on l'àlies ha de tenir efecte |
+| **substitueix** | Seleccioneu el canal de mode a substituir quan s'activi l'àlies |
+| **amb** | Seleccioneu el canal que substituirà el canal «substitueix» quan s'activi l'àlies |
+| ![](/basics/edit_add.png) | Afegeix el triplet _En mode_ X, _substitueix_ Y _per_ Z a la llista d'àlies coneguts |
+| ![](/basics/edit_remove.png) | Suprimeix l'àlies seleccionat de la llista d'àlies |

@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Instal·lació
 taxonomy:
     category:
         - docs
@@ -10,7 +10,7 @@ Només has de dirigir-te a la [pàgina de descàrrega](https://www.qlcplus.org/d
 
 ## Windows
 
-QLC+ on Window es presenta com un paquet .exe d'instal·lació automàtica. Només cal fer doble clic sobre el fitxer i seguir les instruccions que es mostren.
+QLC+ a Window es presenta com un paquet .exe d'instal·lació automàtica. Només cal fer doble clic sobre el fitxer i seguir les instruccions que es mostren.
 
 Escollir si s'ha d'instal·lar QLC+ a la seva ubicació estàndard (C:\QLC+) o una altra carpeta com C:\Program Files.
 

@@ -1,28 +1,28 @@
 ---
-title: 'Fixture Manager'
+title: 'Gestor de Fixtures'
 taxonomy:
     category: docs
 child_type: docs
 ---
 
-### Chapter 3
+### Capítol 3
 
-# Fixture Manager
-The fixture manager is the heart of QLC+'s fixture-oriented architecture. As its name already says, you can manage (add, remove and edit) your lighting fixtures from the fixture manager. On the left side of the manager there is a list that displays all of the fixtures in the current workspace. When a fixture is selected, the right side of the window displays the details of the selected fixture. When a [Fixture Group](/basics/glossary-and-concepts#fixture-group) is selected, the right side of the window is occupied by the [Fixture Group Editor](fixture-group-editor).
+# Gestor de Fixtures
+El gestor de fixtures és el cor de l'arquitectura orientada a fixtures de QLC+. Com ja diu el seu nom, pots gestionar (afegir, eliminar i editar) els teus accessoris d'il·luminació des del gestor de fixtures. A la part esquerra del gestor hi ha una llista que mostra tots els fixtures de l'espai de treball actual. Quan se selecciona un fixture, el costat dret de la finestra mostra els detalls del fixture seleccionat. Quan se selecciona un [Grup de Fixtures](/basics/glossary-and-concepts#fixture-group), el costat dret de la finestra està ocupat per l'editor de grups de Fixtures](fixture-group-editor).
 
 ### Controls
 
 |     |     |
 | --- | --- |
-| ![](/basics/edit_add.png) | Add new [Fixture](/basics/glossary-and-concepts#fixtures)(s) to the workspace with the [Add/Edit Fixture](add-edit-fixtures) dialog. |
-| ![](/basics/rgbpanel.png) | Add a RGB panel to the workspace with with the [Add RGB Panel](add-rgb-panel) dialog. |
-| ![](/basics/edit_remove.png) | Remove the selected fixtures from the workspace. This also removes the fixtures from ALL groups they have been assigned to. |
-| ![](/basics/configure.png) | Edit the currently selected fixture's properties with the [Add/Edit Fixture](add-edit-fixtures) dialog. |
-| ![](/basics/fade.png) | Opens the [Channel Properties Configuration](channel-properties) window. |
-| ![](/basics/group.png) | Assign the selected fixtures to a [Fixture Group](/basics/glossary-and-concepts#fixture-group) displayed in a popup menu. If you have no groups defined yet, you can choose to create a new one from the menu that opens when this button is clicked. |
-| ![](/basics/ungroup.png) | Resign (remove) the selected fixtures from the group they are currently in. Note that removing fixtures from a group will NOT destroy the fixtures completely. Also, removal from one group will not affect the fixtures' memberships to other groups. |
-| ![](/basics/up.png) | Move the selected Channel Group up |
-| ![](/basics/down.png) | Move the selected Channel Group down |
-| ![](/basics/fileimport.png) | Imports a fixture list file (.qxfl) into QLC+. Please note that fixture addresses conflicts are not handled, so it is suggested to use this functionality on an empty project. |
-| ![](/basics/fileexport.png) | Exports the list of fixtures currently available on a QLC+ project into a file with extension .qxfl. This file can be used afterward with the import functionality. |
-| ![](/basics/remap.png) | Opens the [Fixtures remapping](fixture-remapping) window. |
+| ![](/basics/edit_add.png) | Afegeix un nou [Fixture](/basics/glossary-and-concepts#fixtures)(s) a l'espai de treball amb el diàleg [Afegeix/Edita Fixture](add-edit-fixtures). |
+| ![](/basics/rgbpanel.png) | Afegeix un panell RGB a l'espai de treball amb el diàleg [Afegeix un panell RGB](add-rgb-panel). |
+| ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de l'espai de treball. Això també elimina els fixtures de tots els grups als quals han estat assignats. |
+| ![](/basics/configure.png) | Editeu les propietats del fixture seleccionat amb el diàleg [Afegeix/Edita Fixture](add-edit-fixtures). |
+| ![](/basics/fade.png) | Obre la finestra [Configuració de les Propietats del Canal](channel-properties). |
+| ![](/basics/group.png) | Assigna els fixtures seleccionats a un  [Grup de Fixtures](/basics/glossary-and-concepts#fixture-group) mostrat en un menú emergent. Si encara no teniu grups definits, podeu triar crear-ne un de nou des del menú que s'obre quan es fa clic en aquest botó. |
+| ![](/basics/ungroup.png) | Renuncia (elimina) els fixtures seleccionats del grup en què es troben actualment. Tingueu en compte que eliminar fixtures d'un grup NO destruirà completament els fixtures. A més, l'eliminació d'un grup no afectarà les pertinences dels fixtures a altres grups. |
+| ![](/basics/up.png) | Mou el Grup de Canals seleccionat cap amunt |
+| ![](/basics/down.png) | Mou el Grup de Canals seleccionat cap avall |
+| ![](/basics/fileimport.png) | Importa un fitxer de llista de fixture (.qxfl) a QLC+. Tingueu en compte que els conflictes d'adreces fixture no es gestionen, per la qual cosa se suggereix utilitzar aquesta funcionalitat en un projecte buit. |
+| ![](/basics/fileexport.png) | Exporta la llista de fixtures disponibles actualment en un projecte QLC+ a un fitxer amb l'extensió .qxfl. Aquest fitxer es pot utilitzar després amb la funcionalitat d'importació. |
+| ![](/basics/remap.png) | Obre la finestra de [remapeig de Fixtures](fixture-remapping). |

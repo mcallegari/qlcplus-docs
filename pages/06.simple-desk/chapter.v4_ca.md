@@ -1,5 +1,5 @@
 ---
-title: 'Simple Desk'
+title: 'Taula Simple'
 date: '14:16 21-08-2023'
 taxonomy:
     category: docs
@@ -10,61 +10,61 @@ taxonomy:
         text-align: left;
     }
 </style>
-### Chapter 6
+### Capítol 6
 
-# Simple Desk
+# Taula Simple
 
-The simple desk emulates a typical lighting console that is able to control a full 512-channel DMX universe with a multiple cue stacks operated with playback sliders.  
-Simple desk is divided into two main areas: **channels** (top area) and **cues** (bottom area).  
-The channels area reflects exactly the current status of each DMX channel of each universe. If channels are controlled with no project loaded, users have a completely manual control of them.  
-When a project is loaded, instead, moving a Simple desk channel will override any other QLC+ function trying to control that channel. A visual indication will turn the channel background to red, informing the user that Simple desk now has the total control of it.  
-This is very useful in some live circumstances where a running function needs some manual adjustment.  
-To "disengage" Simple desk from overriding channels, just click on the reset button. Resetting channels will either bring them back to zero or to the value previously set by a function.
+La Taula simple emula una consola d'il·luminació típica que és capaç de controlar un univers DMX complet de 512 canals amb diverses piles de cues operades amb controls lliscants de reproducció.  
+La Taula simple es divideix en dues àrees principals: **canals** (àrea superior) i **cues** (àrea inferior).  
+L'àrea dels canals reflecteix exactament l'estat actual de cada canal DMX de cada univers. Si els canals es controlen sense cap projecte carregat, els usuaris tenen un control completament manual d'ells.  
+Quan es carrega un projecte, en canvi, moure un canal de la Taula Simple substituirà qualsevol altra funció QLC+ que intenti controlar aquest canal. Una indicació visual convertirà el fons del canal en vermell, informant l'usuari que la Taula Simple ara té el control total d'aquest.  
+Això és molt útil en algunes circumstàncies en directe on una funció en execució necessita algun ajust manual.  
+Per a "desvincular" la Taula Simple dels canals anul·lants, simplement feu clic al botó de reinicialització. El restabliment de canals els retornarà a zero o al valor prèviament establert per una funció.
 
-Cues operates separately from other QLC+ components. For example, cues within the cue stack are not visible in the [Function Manager](/function-manager) and [Scenes](/basics/glossary-and-concepts#scene) are not visible in the cue stack.
+Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins de la pila cue no són visibles al [Gestor de Funcions](/gestor-de-funcions) i les [Escenes](/basics/glossary-and-concepts#escena) no són visibles a la pila cue.
 
-Controls - Universe
+Controls - Univers
 -------------------
 
-The universe box contains the sliders that are used to control individual DMX channels in the first DMX universe. Since 512 sliders cannot fit nicely on the screen at the same time, they have been divided into pages. By default, each page contains 32 sliders but that can be [tuned](#tuning).
+La caixa de l'univers conté els controls lliscants que s'utilitzen per controlar canals individuals DMX en el primer univers DMX. Atès que 512 controls lliscants no poden encaixar bé a la pantalla al mateix temps, s'han dividit en pàgines. Per defecte, cada pàgina conté 32 controls lliscants però això pot ser [configurat](#ajustaments).
 
 |     |     |
 | --- | --- |
-| ![](/basics/tabview.png) | Switch the view mode from all channels to fixture channels. Please note that if no fixtures has been defined, the second mode will produce an empty result |
-| ![](/basics/back.png) | Skip to the previous DMX page. |
-| **Universe page box** | Displays the current DMX page. You can skip to a page by writing the page number directly into this box or use the mouse wheel to skip between pages quickly. |
-| ![](/basics/forward.png) | Skip to the next DMX page. |
-| ![](/basics/fileclose.png) | Reset all DMX sliders back to zero or to the value previously set by a function. |
-| **GM** | The [Grand Master](/basics/glossary-and-concepts#grand-master) |
+| ![](/basics/tabview.png) | Canvieu el mode de vista de tots els canals als canals de fixture. Tingueu en compte que si no s'ha definit cap fixtures, el segon mode produirà un resultat buit |
+| ![](/basics/back.png) | Salta a la pàgina DMX anterior. |
+| **Quadre de pàgina de l'Univers** | Mostra la pàgina DMX actual. Podeu saltar a una pàgina escrivint el número de pàgina directament en aquest quadre o utilitzant la roda del ratolí per saltar entre pàgines ràpidament. |
+| ![](/basics/forward.png) | Salta a la pàgina DMX següent. |
+| ![](/basics/fileclose.png) | Restableix tots els controls lliscants DMX de nou a zero o al valor prèviament establert per una funció. |
+| **GM** | El [Gran Mestre](/basics/glossary-and-concepts#gran-mestre) |
 
-Controls - Playback
+Controls - Reproducció
 -------------------
 
-The playback box contains a bunch of playback sliders each of which may contain a cue stack. The playbacks can be used to "play back" the contents of their cue stacks and they can also be used to adjust their overall intensity of the cue.
+La caixa de reproducció conté un munt de controls lliscants de reproducció cadascun dels quals pot contenir una pila de cues. Les reproduccions es poden utilitzar per a "reproduir" el contingut de les seves piles de cues i també es poden utilitzar per a ajustar la seva intensitat general de la cue.
 
 |     |     |
 | --- | --- |
-| ![](/basics/check.png) | Select the currently-active playback, whose cue stack is shown on the right side of the screen. |
-| **Playback slider** | Adjust the intensity of playback's cue stack. When the slider is drawn all the way to zero, the cue stack is stopped. Any value above zero will start replaying the playbacks' cue stack. |
-| ![](/basics/flash.png) | Flash the playback's first cue. |
+| ![](/basics/check.png) | Seleccioneu la reproducció actualment activa, la pila cue es mostra a la part dreta de la pantalla. |
+| **Control lliscant de reproducció** | Ajusta la intensitat de la pila de cues de la reproducció. Quan es baixa el control lliscant fins a zero, s'atura la pila de cues. Qualsevol valor per sobre de zero començarà a reproduir la pila de cues. |
+| ![](/basics/flash.png) | Fes flaix el primer cue de la reproducció. |
 
-Controls - Cue Stack
+Controls - Pila Cues
 --------------------
 
-The cue stack box shows the contents of the currently selected playback.
+El quadre de la pila cue mostra el contingut de la reproducció seleccionada.
 
 |     |     |
 | --- | --- |
-| ![](/basics/back.png) | Skip to the previous cue (or start playback on the last cue in the cue stack with full intensity). |
-| ![](/basics/player_stop.png) | Stop the currently active cue stack. |
-| ![](/basics/forward.png) | Skip to the next cue (or start playback on the first cue in the cue stack with full intensity). |
-| ![](/basics/edit.png) | Switch to/from cue edit mode. When this button is pressed, you can edit the contents of individual cues; the currently active cue's contents are shown on the DMX sliders.<br><br>The Fade In speed, Fade Out speed and Duration as well as the name of individual cues can be adjusted with the speed dials that are displayed in a separate tool window. You can also select multiple cues to adjust their speeds all at the same time, but then the DMX sliders are disabled to prevent you from accidentally overwriting all cue contents with the same values. |
-| ![](/basics/record.png) | Record a new cue, taking its contents from the current DMX slider values. |
-| **Cue Stack** | This box displays the contents of the currently selected playback's cue stack, along with the index number (1, 2, 3...), Fade In speed, Fade Out speed, Duration and an optional name for each cue.<br><br>You can change the cue order by dragging the cues on top of each other, either one at a time or multiple cues at the same time. |
+| ![](/basics/back.png) | Salta al punt cue anterior (o comença la reproducció a l'últim punt cue de la pila cue amb tota la intensitat). |
+| ![](/basics/player_stop.png) | Atura la pila cue activa. |
+| ![](/basics/forward.png) | Salta al següent cue (o comença la reproducció del primer cue de la pila de cues amb tota la intensitat). |
+| ![](/basics/edit.png) | Canvia al/des del mode d'edició cue. Quan es prem aquest botó, podreu editar el contingut de les pistes individuals; el contingut de les pistes actualment actives es mostra als controls lliscants DMX.<br><br>La velocitat d'entrada de l'esvaïment, la velocitat de sortida de l'esvaïment i la durada, així com el nom de les pistes individuals es poden ajustar amb els marcadors de velocitat que es mostren en una finestra d'eina separada. També pots seleccionar diverses cues per ajustar les seves velocitats al mateix temps, però després es desactiven els lliscadors DMX per evitar que sobreescriguis accidentalment tots els continguts de les indicacions amb els mateixos valors. |
+| ![](/basics/record.png) | Enregistra una cue nova, prenent el seu contingut dels valors actuals del control lliscant DMX. |
+| **Pila de Cues** | Aquest quadre mostra el contingut de la pila cue de la reproducció seleccionada, juntament amb el número d'índex (1, 2, 3...), la velocitat d'entrada de l'esvaïment, la velocitat de sortida de l'esvaïment, la durada i un nom opcional per a cada cue.<br><br>Podeu canviar l'ordre de les cues arrossegant les cues una sobre l'altra, una a la vegada o múltiples cues a la vegada. |
 
 [](#Tuning)
 
-Tuning
+Ajustaments
 ------
 
-Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#1-simple-desk) Simple Desk section
+Consulteu la secció de [Ajustament de paràmetres manuals](/advanced/parameters-tuning#1-taula-simple) de la secció Taula Simple

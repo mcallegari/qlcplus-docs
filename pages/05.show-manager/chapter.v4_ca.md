@@ -1,5 +1,5 @@
 ---
-title: 'Show Manager'
+title: 'Gestor de Shows'
 date: '14:07 21-08-2023'
 taxonomy:
     category: docs
@@ -10,116 +10,116 @@ taxonomy:
         text-align: left;
     }
 </style>
-### Chapter 5
+### Capítol 5
 
-# Show Manager
+# Gestor de Shows
 
-The Show Manager has been introduced in QLC+ starting from version 4.0.0, after forking the original QLC code on November 5th, 2012.
+El Gestor de Shows s'ha introduït a QLC+ a partir de la versió 4.0.0, després del fork o bifurcació del codi original de QLC el 5 de novembre de 2012.
 
-This feature is meant to give users the possibility of setting up a time driven show in a friendly and completely graphical way.  
-The graphic interface shows a multitrack view, typical of audio sequencers or video editing softwares, and with it users are allowed to place QLC+ [Functions](/basics/glossary-and-concepts#functions) at the desired place and time in the view.  
-Show Manager gives a lot of flexibility during a [Show](/basics/glossary-and-concepts#show) creation thanks to its visual-oriented approach. Once understood the basic elements, it is very easy to create, move or edit the existing functions and improve a Show by adding new tracks to it.
+Aquesta funció està destinada a donar als usuaris la possibilitat de configurar un espectacle en funció del temps d'una manera amigable i completament gràfica.  
+La interfície gràfica mostra una vista multipista, típica dels seqüenciadors d'àudio o programaris d'edició de vídeo, i amb ella els usuaris poden col·locar les [Funcions](/basics/glossary-and-concepts#funcions) QLC+ en el lloc i el temps desitjats a la vista.  
+Show Manager ofereix molta flexibilitat durant la creació d'un [Show](/basics/glossary-and-concepts#show) gràcies al seu enfocament visual. Un cop entesos els elements bàsics, és molt fàcil crear, moure o editar les funcions existents i millorar un Show afegint-hi noves pistes.
 
-Typical use cases of Shows are those gigs where a band plays songs following a metronome and the light show has always to be the same, following the music.  
-Another case are visual entertainment shows, where dancers or singers follow some music and lights create the atmosphere at the right time.
+Casos típics d'ús dels Shows són aquells concerts on una banda toca cançons seguint un metrònom i l'espectacle de llum sempre ha de ser el mateix, seguint la música.  
+Un altre cas són els espectacles d'entreteniment visual, on ballarins o cantants segueixen alguna música i les llums creen l'atmosfera en el moment adequat.
 
-The Show Manager drives users to make large use of the Sequence function. Here's the explanation of the difference between a Chaser and a Sequence.
+El Gestor de Shows impulsa els usuaris a fer un gran ús de la funció Seqüència. Aquesta és l'explicació de la diferència entre un Chaser i una Seqüència.
 
-Sequences vs Chasers
+Seqüències vs Chasers
 --------------------
 
-Even if the [Sequence](/basics/glossary-and-concepts#sequence) and the [Chaser](/basics/glossary-and-concepts#chaser) functions have some common ground, they're not the same thing.  
-If not done yet, you are invited to read once again their definitions in the [Basic Concepts & Glossary](/basics/glossary-and-concepts) page of this documentation.  
-The main differences are:
+Encara que les funcions [Sequence](/basics/glossary-and-concepts#seqüència) i [Chaser](/basics/glossary-and-concepts#chaser) tinguin algun punt en comú, no són el mateix.  
+Si encara no ho has fet, et convidem a tornar a llegir les seves definicions a la pàgina [Conceptes bàsics i glossari](/basics/glossary-and-concepts) d'aquesta documentació.  
+Les principals diferències són:
 
-**Steps**: The steps of a Chaser can represent any QLC+ Function, while the steps of a Sequence represents different values of the same [Scene](/basics/glossary-and-concepts#scene).  
-    In other words, a Chaser is an independent function, while a Sequence can exist only on top of a Scene.
-The reason for this is, as mentioned before, the visual approach of the Show Manager. If a track of a Show is the graphical representation of a Scene, then it's more intuitive to think that each Sequence created on that track is a function controlling the values of that Scene.
+**Pasos**: Els passos d'un Chaser poden representar qualsevol funció QLC+, mentre que els passos d'una seqüència representen valors diferents del la mateixa [Escena](/basics/glossary-and-concepts#escena).  
+    En altres paraules, un Chaser és una funció independent, mentre que una Seqüència només pot existir a sobre d'una Escena.
+La raó d'això és, com s'ha esmentat abans, l'enfocament visual del Show Manager. Si una pista d'un Show és la representació gràfica d'una escena, llavors és més intuïtiu pensar que cada seqüència creada en aquesta pista és una funció que controla els valors d'aquesta escena.
 
-**Order**: Chasers can be reproduced in any order (Forward, Backward, Ping-Pong, Random) while in the Show Manager, Sequences are always reproduced from the beginning to the end (Forward). Again, this is related to the visual aspect of the Show Manager, where the playback has a natural time forward direction.  
-    On the other hand, Sequences created with the Function Manager can have the same order properties of Chasers.
+**Ordre**: Els chasers es poden reproduir en qualsevol ordre (Endavant, Endarrera, Ping-Pong, Aleatori) mentre que al Gestor de Show, les seqüències sempre es reprodueixen des del principi fins al final (Endavant). De nou, això està relacionat amb l'aspecte visual del Gestor de Shows, on la reproducció té una direcció natural de temps cap endavant.  
+    D'altra banda, les Seqüències creades amb el Gestor de funcions poden tenir les mateixes propietats d'ordre dels Chasers.
 
-**Editing**: The editing approach between Sequences and Chaser is different too.  
-    Normally the workflow of a Chaser is: create a Function, then add it to the Chaser as a step.  
-    The workflow of a Sequence is: create a Scene, create a Sequence on top of it, add steps to it.  
-    The Sequence approach might be very effective when you design a light show if you can pre-determine which fixtures you're going to use. Another major advantage of Sequence editing is that when you create a new step, the values of the previous step are copied in the new one. So the user is simply required to adjust the differences between them.  
-    If you are going to create 500 steps and they're all different, then Sequences and Chasers will take almost the same time to be created.
+**Edició**: L'enfocament d'edició entre Seqüències i Chaser també és diferent.  
+    Normalment el flux de treball d'un Chaser és: creeu una funció i afegiu-la al Chaser com a pas.  
+    El flux de treball d'una Seqüència és: creeu una escena, creeu una Seqüència a sobre, afegiu-hi passos.  
+    L'enfocament de Seqüència pot ser molt eficaç quan dissenyes un espectacle de llums si pots predeterminar quins accessoris utilitzaràs. Un altre avantatge important de l'edició de Seqüències és que quan creeu un nou pas, els valors del pas anterior es copien en el nou. Per tant, l'usuari només ha d'ajustar les diferències entre ells.  
+    Si creareu 500 passos i tots són diferents, llavors les Seqüències i els Chasers trigaran gairebé el mateix temps a ser creats.
 
-**Synchronization**: another major advantage of using Sequences in a Show is that a Show can easily be extended (or reduced) while with a Chaser you will have a hard time to synchronize the new functions to the existing ones.  
-    An example. Let's say your project controls 50 fixtures that are a mixture of moving heads, PARs and scanners. At some point you buy a couple of lasers and you want them to become active in existing scenes at precise moments in time. The Show Manager allows you to do that in a few minutes! You just need to add the 2 new fixtures to the project, add a track to the Shows affected by the change and create a few Sequences to control the lasers.  
-    The Show Manager resume functionality will also save you a lot of time when testing the new changes.  
-    With Chasers you'd probably have to deal with complex [Collections](/basics/glossary-and-concepts#collection) and review the timings of a few steps before finding the right combination.
+**Sincronització**: un altre avantatge important d'utilitzar Seqüències en un Show és que un Show es pot estendre fàcilment (o reduir) mentre que amb un Chaser tindreu dificultats per a sincronitzar les noves funcions amb les existents.  
+    Un exemple. Diguem que el teu projecte controla 50 fixtures que són una barreja de caps mòbils, PARs i escàners. En algun moment compreu un parell de làsers i voleu que s'activin en escenes existents en moments precisos. El Gestor de Shows et permet fer-ho en pocs minuts! Només cal afegir els 2 nous fixtures al projecte, afegir una pista als Shows afectats pel canvi i crear unes Seqüències per controlar els làsers.  
+    La funcionalitat de represa del Gestor de Shows també us estalviarà molt temps en provar els canvis nous.  
+    Amb Chasers probablement hauries de fer front a [Col·leccions](/basics/glossary-and-concepts#colleccions) complexes i revisar els temps d'uns quants passos abans de trobar la combinació adequada.
 
-Show Manager toolbar controls
+Mostra els controls de la barra d'eines del Gestor de Shows
 -----------------------------
 
 |     |     |     |
 | --- | --- | --- |
-| ![](/basics/show.png) | CTRL+H | Create a new [Show](/basics/glossary-and-concepts#show). A Show is represented as a multitrack workspace where tracks, sequences and audio elements can be added |
-| **Shows list** |     | This drop down box lists the currently created Shows. Clicking on a Show will display it. |
-| ![](/basics/edit_add.png) | CTRL+N | Create a new track or add existing functions to the Show. When clicking on this button a window is displayed, allowing you to perform the following operations:<br><br>**Create a new track**: This creates a new empty track that will serve as a container for Sequences and Audio functions.<br>**Import an existing Scene**: This will create a new track and a 10 seconds Sequence with one single step representing the selected Scene.<br>**Import an existing Sequence**: this operation scans the existing tracks and if it finds a track already bound to the Sequence's bound Scene, then add the Sequence to that track at the cursor position.  <br>    If no compatible track is found, a new track will be created and bound to the Sequence's bound Scene.<br>**Import an existing [Chaser](/basics/glossary-and-concepts#chaser)**: add a Chaser function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [Audio](/basics/glossary-and-concepts#audio)**: add an Audio function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [EFX](/basics/glossary-and-concepts#efx)**: add an EFX function at the cursor position on the selected track. If no track is available, it will create a new one.<br>**Import an existing [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix)**: add a RGB Matrix function at the cursor position on the selected track. If no track is available, it will create a new one.<br><br>A Show can have a virtually infinite number of tracks. |
-| ![](/basics/sequence.png) | CTRL+E | Create a new [Sequence](/basics/glossary-and-concepts#sequence) item and bind it to the selected track. |
-| ![](/basics/audio.png) | CTRL+A | Create a new [Audio](/basics/glossary-and-concepts#audio) item. An audio item simply represents an audio file. Audio items can be added on any track, but if you want to to create a separate track for it, just create an new track.  <br>**Note:** It is possible to display the waveform preview of an audio item just by right clicking it and selecting the channels you want to display (mono, left channel, right channel, stereo)  <br>**Warning:** Even though QLC+ allows you to, it is not possible to play two audio files simultaneously. Especially on Windows, you might experience unwanted crashes. |
-| ![](/basics/editcopy.png) | CTRL+C | Copy the currently selected item into QLC+ clipboard |
-| ![](/basics/editpaste.png) | CTRL+V | Paste QLC+ clipboard content at the cursor position. When performing this operation two checks are performed:<br><br>**Overlapping**: checks if the item you're going to paste overlaps with an existing item in the selected track<br>**Validity**: If you're pasting a Sequence, QLC+ will verify that the Sequence contents are compatible with the currently selected track |
-| ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](/function-manager)** |
-| ![](/basics/color.png) | CTRL+R | Assign a custom color to the selected item |
-| ![](/basics/lock.png) | CTRL+K | Lock or unlock then selected item. Once an item is locked, it cannot be dragged on the timeline anymore |
-| ![](/basics/speed.png) | CTRL+T | Open a window where you can adjust the selected item start time and total duration. The behaviour of the latter will depend on the selected item.  <br>On Audio and Video items it does nothing.  <br>On Sequences and Chasers it will stretch all the steps timings to fit to the desired duration.  <br>On EFXs and RGB Matrices some extra options will be displayed, allowing to stretch the original function or loop the function until the desired duration is reached. |
-| ![](/basics/grid.png) | CTRL+G | Enable/disable the "Snap to grid" functionality. The view will be filled with vertical bars corresponding to the header markers (time or BPM)  <br>Snapping to grid will correct your items by dragging them to the nearest reference bar |
-| **00:00:00.000** |     | This field displays the cursor time position both if the playback is stopped or activated |
-| ![](/basics/player_play.png)![](/basics/player_pause.png) | Space | Start the current Show playback from the cursor position, or pause it and leave the lights on. |
-| ![](/basics/player_stop.png) | CTRL+Space | Stop the current Show playback. Clicking once will stop the cursor at the current position for resuming later. Clicking twice will restore the cursor to 0 seconds.  <br>**Hint:** When resuming a show with audio tracks, please keep in mind that audio accuracy depends on the file formats you are using. For example MP3 files resume is not particularly accurate, while wave files resume is. |
-| **Time markers** |     | This drop down menu lets you to choose the desired time division to display for your Show.  <br>This can be either 'Time'. 'BPM 4/4', 'BPM 3/4' or 'BPM 2/2' |
-| **BPMs** |     | When a BPM time division mode is selected, this field lets you decide the appropriate BPM to set for you Show. This ranges from 20 to 240.  <br>This can be quite useful when dealing with electronic music or BPM synchronized shows |
+| ![](/basics/show.png) | CTRL+H | Creeu un nou [Show](/basics/glossary-and-concepts#show). Un Show es representa com un espai de treball multipista on es poden afegir pistes, seqüències i elements d'àudio |
+| **Llista de Shows** |     | Aquesta llista desplegable llista els Shows creats actualment. En fer clic en un Show es mostrarà. |
+| ![](/basics/edit_add.png) | CTRL+N | Creeu una pista nova o afegiu funcions existents al Show. En fer clic en aquest botó es mostra una finestra, la qual permet realitzar les següents operacions:<br><br>**Crea una pista nova**: Això crea una pista buida nova que servirà com a contenidor per a les seqüències i les funcions d'àudio.<br>**Importa una escena existent**: Això crearà una pista nova i una seqüència de 10 segons amb un sol pas que representarà l'escena seleccionada.<br>**Importa una seqüència existent**: aquesta operació escaneja les pistes existents i si troba una pista ja vinculada a l'escena lligada de la seqüència, després afegeix la seqüència a aquesta pista a la posició del cursor.  <br> Si no es troba cap pista compatible, es crearà una pista nova i estarà vinculada a l'escena lligada de la seqüència.<br>**Importa un  [Chaser existent](/basics/glossary-and-concepts#chaser)**: afegeix una funció de Chaser a la posició del cursor a la pista seleccionada. Si no hi ha cap pista disponible, en crearà una de nova.<br>**Importa un [Àudio](/basics/glossary-and-concepts#audio) existent**: afegeix una funció d'àudio a la posició del cursor a la pista seleccionada. Si no hi ha cap pista disponible, en crearà una de nova.<br>**Importa un [EFX](/basics/glossary-and-concepts#efx) existent**: afegeix una funció EFX a la posició del cursor a la pista seleccionada. Si no hi ha cap pista disponible, en crearà una de nova.<br>**Importa una matriu RGB existent [](/basics/glossary-and-concepts#matriu-rgb)**: afegeix una funció Matriu RGB a la posició del cursor a la pista seleccionada. Si no hi ha cap pista disponible, en crearà una de nova.<br><br>Un Show pot tenir un nombre pràcticament infinit de pistes. |
+| ![](/basics/sequence.png) | CTRL+E | Creeu un element nou [Seqüència](/basics/glossary-and-concepts#seqüència) i enllaceu-lo a la pista seleccionada. |
+| ![](/basics/audio.png) | CTRL+A | Crea un element d'[Àudio](/basics/glossary-and-concepts#audio) nou. Un element d'àudio simplement representa un fitxer d'àudio. Es poden afegir elements d'àudio a qualsevol pista, però si voleu crear una pista separada per a ells, simplement creeu una pista nova.  <br>**Nota:** És possible mostrar la previsualització de la forma d'ona d'un element d'àudio simplement fent clic dret i seleccionant els canals que voleu mostrar (mono, canal esquerre, canal dret, estèreo) <br>**Avís:** Tot i que QLC+ us ho permet, no és possible reproduir dos fitxers d'àudio simultàniament. Especialment al Windows, és possible que experimenteu fallades no desitjades. |
+| ![](/basics/editcopy.png) | CTRL+C | Copia l'element seleccionat al porta-retalls del QLC+ |
+| ![](/basics/editpaste.png) | CTRL+V | Enganxa el contingut del porta-retalls del QLC+ a la posició del cursor. En realitzar aquesta operació es realitzen dues comprovacions:<br><br>**Superposició**: comprova si l'element que enganxareu es superposa amb un element existent a la pista seleccionada<br>**Validesa**: Si esteu enganxant una seqüència, QLC+ verificarà que el contingut de la seqüència sigui compatible amb la pista seleccionada actualment |
+| ![](/basics/editdelete.png) | Suprimeix | Suprimeix l'element seleccionat. Això pot ser una seqüència, un element d'àudio o una pista. Tingueu en compte que suprimir una pista també suprimirà totes les seves seqüències/àudios fills.  <br>**Nota: El Gestor de Shows només realitzarà una "eliminació visual" de les funcions. Per eliminar-los permanentment, utilitzeu el [Gestor de Funcions](/gestor-de-funcions)** |
+| ![](/basics/color.png) | CTRL+R | Assigna un color personalitzat a l'element seleccionat |
+| ![](/basics/lock.png) | CTRL+K | Bloqueja o desbloqueja l'element seleccionat. Un cop bloquejat un element, ja no es pot arrossegar a la línia de temps |
+| ![](/basics/speed.png) | CTRL+T | Obriu una finestra on podreu ajustar el temps d'inici i la durada total de l'element seleccionat. El comportament d'aquest últim dependrà de l'element seleccionat.  <br>En ítems d'àudio i vídeo no fa res.  <br>A Seqüències i Chasers estirarà tots els temps dels passos per adaptar-los a la durada desitjada.  <br>A les EFX i Matrius RGB es mostraran algunes opcions addicionals, que permeten estirar la funció original o fer un bucle de la funció fins que s'assoleixi la durada desitjada. |
+| ![](/basics/grid.png) | CTRL+G | Activa/desactiva la funcionalitat "Ajusta a la quadrícula". La vista s'omplirà amb barres verticals corresponents als marcadors de capçalera (temps o BPM) <br>Ajustar a la quadrícula corregirà els elements arrossegant-los a la barra de referència més propera |
+| **00:00:00.000** |     | Aquest camp mostra la posició del temps del cursor tant si s'atura o s'activa la reproducció |
+| ![](/basics/player_play.png)![](/basics/player_pause.png) | Espai | Inicia l'actual Show la reproducció des de la posició del cursor, o fes-hi una pausa i deixa les llums enceses. |
+| ![](/basics/player_stop.png) | CTRL+Espai | Atura la reproducció del Show actual. En fer clic una vegada s'aturarà el cursor a la posició actual per a reprendre'l més tard. En fer clic dues vegades es restaurarà el cursor a 0 segons.  <br>**Consell:** En reprendre un espectacle amb pistes d'àudio, tingueu en compte que la precisió de l'àudio depèn dels formats de fitxer que utilitzeu. Per exemple, el resum d'arxius MP3 no és especialment precís, mentre que el resum d'arxius Wave sí. |
+| **Marcadors de Temps** |     | Aquest menú desplegable us permet triar la divisió de temps desitjada a mostrar per al vostre Show.  <br>Això pot ser 'Temps'. 'BPM 4/4', 'BPM 3/4' or 'BPM 2/2' |
+| **BPMs** |     | Quan se selecciona un mode de divisió de temps de BPM, aquest camp us permet decidir el BPM adequat per a establir-lo al Show. Això oscil·la entre 20 i 240.  <br>Això pot ser molt útil quan es tracta de música electrònica o programes sincronitzats amb BPM |
 
-Just 4 steps
+Només 4 passos
 ------------
 
-The Show Manager has been set up to be used quickly and easily. Basically, with just 4 steps a complete [Show](/basics/glossary-and-concepts#show) can be created:
+El Gestor de Shows s'ha configurat per a ser utilitzat de manera ràpida i senzilla. Bàsicament, amb només 4 passos es pot crear un [Show](/basics/glossary-and-concepts#show):
 
-#### 1. Add a new Show ![](/basics/show.png)
+#### 1. Afegeix un Show nou ![](/basics/show.png)
 
-First of all you need to add a new Show to the view. This creates an empty multitrack view with no tracks and no items, ready to be filled.  
-A popup will appear asking the name to assign to the Show. It is possible to change the name afterwards with the [Function Manager](/function-manager), using the [Show Editor](/function-manager/show-editor) panel.
+En primer lloc, heu d'afegir un nou Show a la vista. Això crea una vista multipista buida sense pistes i sense elements, a punt per omplir.  
+Apareixerà una finestra emergent que demanarà un nom per a assignar-lo al Show. Posteriorment es pot canviar el nom amb el [Gestor de Funcions](/gestor-de-funcions), mitjançant el panell [Editor de Shows](/function-manager/editor-de-shows).
 
-#### 2. Add a track ![](/basics/edit_add.png)
+#### 2. Afegeix una pista ![](/basics/edit_add.png)
 
-When you add a track, a popup will ask you to select an existing function or to create a new one with a default name.  
-When done, a new track will be created. All the sequences created on this track will act only on the associated Scene, not affecting any of the other tracks.  
-A newly created track will be set automatically as active. An active track has a green light on the left hand side.  
-A Track can be set to ![](../images/track-mute.png) mute and ![](../images/track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.  
-When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
-Once selected, a track will display its [Scene Editor](/function-manager/scene-editor) on the bottom of the screen.
+Quan afegiu una pista, una finestra emergent us demanarà que seleccioneu una funció existent o que en creeu una de nova amb un nom predeterminat.  
+En acabar, es crearà una pista nova. Totes les seqüències creades en aquesta pista actuaran només en l'escena associada, no afectant cap de les altres pistes.  
+Una pista de nova creació s'establirà automàticament com a activa. Una pista activa té una llum verda al costat esquerre.  
+Es pot establir una pista en els estats de ![](../images/track-mute.png) silenci i ![](../images/track-solo.png) solo. L'estat silenci exclourà la pista de la reproducció, mentre que l'estat solo silenciarà totes les altres pistes del Show.  
+En fer clic dret sobre una pista, és possible moure-la cap amunt ![](/basics/up.png) o cap avall ![](/basics/down.png) per a l'ordenació lògica.  
+Un cop seleccionada, una pista mostrarà el seu [Editor d'Escenes](/function-manager/editor-de-escenes) a la part inferior de la pantalla.
 
-#### 3. Add some [Functions](/basics/glossary-and-concepts#function)
+#### 3. Afegeix algunes [Funcions](/basics/glossary-and-concepts#function)
 
-When a track has been activated, you can quickly add a ![](/basics/sequence.png) [Sequence](/basics/glossary-and-concepts#sequence) or an ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio) function to it by pressing the toolbar buttons.  
-Otherwise, by clicking on the ![](/basics/edit_add.png) button, it is possible to import existing QLC+ Functions and add them to the Show timeline.  
-A new item will be placed at the cursor position, but it is always possible to move it to the desired time just by dragging it along the timeline.  
-An item cannot be moved to another track, since it is bound to the track where it has originally been created.  
-An item can be copied ![](/basics/editcopy.png), pasted ![](/basics/editpaste.png) or deleted ![](/basics/editdelete.png) with the toolbar icons. The pasted item will be placed at the current cursor position.  
-The item background color can be changed with the toolbar icon ![](/basics/color.png). The assigned color will be saved in your project file.  
-Once selected, an item will display its specific Function Editor on the right hand side of the screen. When right clicking an item a contextual menu will be displayed, showing the following options:
+Quan s'ha activat una pista, podeu afegir ràpidament una funció ![](/basics/sequence.png) [Seqüència](/basics/glossary-and-concepts#seqüència) o una funció d'![](/basics/audio.png) [Àudio](/basics/glossary-and-concepts#audio) prement els botons de la barra d'eines.  
+Altrament, fent clic al botó ![](/basics/edit_add.png), és possible importar funcions QLC+ existents i afegir-les a la línia de temps del Show.  
+Es col·locarà un element nou a la posició del cursor, però sempre és possible moure'l al temps desitjat simplement arrossegant-lo al llarg de la línia de temps.  
+Un element no es pot moure a una altra pista, ja que està lligat a la pista on s'ha creat originalment.  
+Un element es pot copiar ![](/basics/editcopy.png), enganxar ![](/basics/editpaste.png) o suprimir ![](/basics/editdelete.png) amb les icones de la barra d'eines. L'element enganxat es col·locarà a la posició actual del cursor.  
+El color de fons de l'element es pot canviar amb la icona de la barra d'eines ![](/basics/color.png). El color assignat es desarà al fitxer del projecte.  
+Un cop seleccionat, un element mostrarà el seu Editor de Funcions específic a la part dreta de la pantalla. En fer clic dret a un element es mostrarà un menú contextual, mostrant les següents opcions:
 
-* **Preview**: This option is available only on audio items. It will display the waveform preview for right, left or stereo channels when available
-* **Align to cursor**: This option will move the selected item to the cursor position
-* ![](/basics/lock.png)**Lock/Unlock**: Once an item is locked, it cannot be dragged on the timeline anymore
+* **Previsualització**: Aquesta opció només està disponible en elements d'àudio. Mostrarà la previsualització de la forma d'ona per als canals dret, esquerre o estèreo quan estigui disponible
+* **Alinea al cursor**: Aquesta opció mourà l'element seleccionat a la posició del cursor
+* ![](/basics/lock.png)**Bloqueja/Desbloqueja**: Un cop bloquejat un element, ja no es pot arrossegar a la línia de temps
 
-Follow step 4 to understand how to fill a Sequence
+Seguiu el pas 4 per entendre com omplir una Seqüència
 
-#### 4. Edit your Functions
+#### 4. Editeu les Funcions
 
-Once an item has been created, it is now the time to edit it.  
-**Please note** that the difference between a Chaser and a Sequence is that a Sequence is bound to the Track (so the Scene) where it has been created. So, when adding a step, QLC+ will not ask to select a particular function, but will always use the channels of the same Scene.  
-When editing a Function, you will see the item changing on the multitrack view, giving an immediate feedback for aligning to other items or particular points in time.  
-Fade In and Fade Out times will be displayed as diagonal lines over the items on the multitrack view, while different steps/loops will be divided by vertical lines.
+Un cop s'hagi creat un element, ara és el moment d'editar-lo.  
+**Tingueu en compte** que la diferència entre un Chaser i una Seqüència és que una Seqüència està lligada a la pista (per tant, a l'escena) on s'ha creat. Per tant, en afegir un pas, QLC+ no demanarà seleccionar una funció en particular, sinó que sempre utilitzarà els canals de la mateixa Escena.  
+Quan editeu una funció, veureu que l'element canvia a la vista multipista, donant una retroalimentació immediata per alinear-se a altres elements o punts particulars en el temps.  
+Els temps d'entrada (Fade In) i sortida(Fade Out) de l'esvaïment es mostraran com a línies diagonals sobre els elements a la vista multipista, mentre que els diferents passos/pistes es dividiran per línies verticals.
 
 
-To increase the complexity of the Show, more Functions can be added. Just repeat the above steps depending on your needs.
+Per augmentar la complexitat de l'espectacle, es poden afegir més funcions. Només has de repetir els passos anteriors en funció de les teves necessitats.
 
-And finally...play! ![](/basics/player_play.png)
+I finalment... reproduir! ![](/basics/player_play.png)
 ---------------------------------------------
 
-When a complete show has finally been created, it can be played just by clicking on the Play icon.  
-Playback always starts from the current cursor position. The cursor position can be changed by clicking on the time line.
+Quan finalment s'ha creat un espectacle complet, només es pot reproduir fent clic a la icona de Reproduir.  
+La reproducció sempre comença des de la posició actual del cursor. La posició del cursor es pot canviar fent clic a la línia de temps.

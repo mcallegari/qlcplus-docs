@@ -1,12 +1,12 @@
 ---
-title: 'DMX Dump'
+title: 'Bolcat DMX'
 taxonomy:
     category:
         - docs
 ---
 
 La funcionalitat Bolcat DMX permet desar els valors DMX actuals que s'envien als universos de sortida en un moment determinat. Bàsicament, pren una "instantània" dels canals DMX i els guarda per a un ús posterior.  
-El Bolcat DMX pot desar valors a una [Escena](/basics/glossary-and-concepts#scene) nova o sobreescriure els valors d'una Escena existent. L'escena "bolcada" també es pot afegir a un  [Chaser](/basics/glossary-and-concepts#chaser) existent, a un  [botó](/virtual-console/button) de la Consola Virtual o a un [control lliscant](/virtual-console/slider)
+El Bolcat DMX pot desar valors a una [Escena](/basics/glossary-and-concepts#escena) nova o sobreescriure els valors d'una Escena existent. L'escena "bolcada" també es pot afegir a un  [Chaser](/basics/glossary-and-concepts#chaser) existent, a un  [botó](/virtual-console/button) de la Consola Virtual o a un [control lliscant](/virtual-console/slider)
 
 Tingueu en compte que:
 

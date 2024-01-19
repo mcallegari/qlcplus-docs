@@ -1,14 +1,14 @@
 ---
-title: 'Show Editor'
+title: 'Editor de Shows'
 date: '12:10 21-08-2023'
 ---
 
-The Show Editor is a panel to display the current structure of a ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show) created with the [Show Manager](/show-manager).  
-At the moment the Show Editor can only rename a Show, which is not possible in the Show Manager.
+L'Editor de Shows és un panell per mostrar l'estructura actual d'un ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show) creat amb el [Gestor de Shows](/gestor-de-shows).  
+De moment, l'editor de Shows només pot canviar el nom d'un Show, cosa que no és possible al Gestor de Shows.
 
-The tree view of this panel shows useful information regarding the displayed Show such as:
+La vista en arbre d'aquest panell mostra informació útil respecte al Show que es mostra, com ara:
 
-* **Function:** the function name
-* **Steps:** the number of steps that compose a [Sequence](/basics/glossary-and-concepts#sequence)
-* **Start Time:** the time at which a sequence is going to be reproduced
-* **Duration:** the duration of the sequence
+* **Funció:** el nom de la funció
+* **Pasos:** el nombre de passos que componen una seqüència [](/basics/glossary-and-concepts#seqüència)
+* **Temps d'inici:** el temps al qual es reproduirà una seqüència
+* **Durada:** la durada de la seqüència

@@ -3,73 +3,73 @@ title: Modes
 date: '07:07 22-08-2023'
 ---
 
-The modes tab contains all [modes](/basics/glossary-and-concepts#fixture-mode) the fixture can be configured to.
+La pestanya modes conté tots els [modes](/basics/glossary-and-concepts#mode-del-fixture) al qual es pot configurar el fixture.
 
 ![](../fixtureeditor_modes.png)
 
 |     |     |
 | --- | --- |
-| **Mode list** | Displays all modes for the currently edited fixture. Each mode item can be opened to display the set and order of channels in that mode.<br>**Name**: The name of the mode (each name must be unique)<br>**Channels**: Number of channels in each mode<br>**Heads**: The number of light sources each mode supports |
-| ![](/basics/edit_add.png) | Create a new mode for the fixture, using the [Mode Editor](#mode-editor). |
-| ![](/basics/edit_remove.png) | Remove the currently selected mode from the fixture. Removing a mode does not destroy any channels or other modes. |
-| ![](/basics/edit.png) | Edit the currently selected mode, using the [Mode Editor](#mode-editor). |
-| ![](/basics/editcopy.png) | Create a copy of the currently selected mode to the same fixture. Since modes are tightly coupled to a certain fixture's channels, modes cannot be copied across fixtures. |
-| ![](/basics/check.png) | Open or close all mode items. |
+| **Llista de Modes** | Mostra tots els modes del fixture editat actualment. Cada element de mode es pot obrir per mostrar el conjunt i l'ordre dels canals en aquest mode.<br>**Nom**: El nom del mode (cada nom ha de ser únic)<br>**Canals**: Nombre de canals en cada mode<br>**Caps**: El nombre de fonts de llum que admet cada mode |
+| ![](/basics/edit_add.png) | Crea un nou mode per a l'aparell mitjançant l'[Editor de Modes](#editor-de-modes). |
+| ![](/basics/edit_remove.png) | Suprimeix el mode seleccionat actualment del fixture. L'eliminació d'un mode no destrueix cap canal ni cap altre mode. |
+| ![](/basics/edit.png) | Edita el mode seleccionat actualment mitjançant l'[Editor de Modes](#editor-de-modes). |
+| ![](/basics/editcopy.png) | Crea una còpia del mode seleccionat actualment al mateix fixture. Atès que els modes estan estretament acoblats als canals d'un determinat fixture, els modes no es poden copiar entre fixtures. |
+| ![](/basics/check.png) | Obre o tanca tots els elements del mode. |
 
-Mode Editor
+Editor de Modes
 ===========
 
-The Mode Editor is used to create and edit [modes](/basics/glossary-and-concepts#fixture-mode) by picking sets of **Channels** in certain order (as defined by the fixture's manufacturer). Each editor window is divided into three tabs: Channels, Heads and Physical.
+L'Editor de Modes s'utilitza per crear i editar [modes](/basics/glossary-and-concepts#mode-del-fixture) triant conjunts de **Canals** en cert ordre (tal com es defineix pel fabricant del fixture). Cada finestra de l'editor es divideix en tres pestanyes: Canals, Caps i Física.
 
-Channels Tab
+Pestanya Canals
 ------------
 
-In the Channels tab you can place the fixture's channels in an order that forms an actual representation of the DMX channels that the fixture understands when it has been configured in that particular mode.
+A la pestanya Canals podeu posar els canals del fixture en un ordre que forma una representació real dels canals DMX que el fixture entén quan s'ha configurat en aquest mode en particular.
 
 ![](../fixtureeditor_mode_channels.png)
 
 |     |     |
 | --- | --- |
-| **Mode Name** | The name of the mode (must be unique for each mode). |
-| **Channel list** | Displays all channels present in the current mode in their proper order.  <br>The "Acts on" column is used to bind a channel to another. For example a channel that controls the speed of a rotating gobo. |
-| ![](/basics/edit_add.png) | Add channels from the fixture's channel collection to the mode. You can create/edit channels in the [Fixture Definition Editor's](/fixture-definition-editor/channels) **Channels** tab.  <br>When you click on this button a new window will be displayed, showing two lists:<br><br>The list on the **left** shows the channels that have not yet been added to this mode. If you're creating a new mode, this list will show all the channels you created in the Fixture Editor's channels tab<br>The list on the **right** shows the channels that define the mode you're editing. If you're creating a new mode, this list will be empty.  <br>    Please note that the order of the channels in this list is fundamental to the fixture mode definition.<br><br>To move items from one list to another either use the central buttons or simply drag and drop them.  <br>When done, press OK to update the mode channel list. |
-| ![](/basics/edit_remove.png) | Remove the selected channels from the mode. Other modes' channel selections are left untouched. |
-| ![](/basics/up.png) | Raise the selected channel up by one position. |
-| ![](/basics/down.png) | Lower the selected channel down by one position. |
+| **Nom del Mode** | El nom del mode (ha de ser únic per a cada mode). |
+| **Llista de Canals** | Mostra tots els canals presents en el mode actual en el seu ordre adequat.  <br>La columna "Actua sobre" s'utilitza per enllaçar un canal a un altre. Per exemple, un canal que controla la velocitat d'un gobo giratori. |
+| ![](/basics/edit_add.png) | Afegeix canals des de la col·lecció de canals del fixture al mode. Podeu crear/editar canals a la pestanya **Canals** de l'[Editor de Definicions de Fixtures](/fixture-definition-editor/channels).  <br>Quan feu clic en aquest botó es mostrarà una finestra nova, que mostrarà dues llistes:<br><br>La llista a la **esquerra** mostra els canals que encara no s'han afegit a aquest mode. Si esteu creant un mode nou, aquesta llista mostrarà tots els canals que heu creat a la pestanya de canals de l'editor de Fixtures<br>La llista a la dreta **** mostra els canals que defineixen el mode que esteu editant. Si esteu creant un nou mode, aquesta llista estarà buida.  <br> Tingueu en compte que l'ordre dels canals d'aquesta llista és fonamental per a la definició del mode del fixture.<br><br>Per a moure elements d'una llista a una altra utilitzeu els botons centrals o simplement arrossegueu-los i deixeu-los anar.  <br>Quan hàgiu acabat, premeu D'acord per actualitzar la llista de canals del mode. |
+| ![](/basics/edit_remove.png) | Suprimeix els canals seleccionats del mode. Les seleccions de canals d'altres modes es deixen intactes. |
+| ![](/basics/up.png) | Apuja el canal seleccionat una posició. |
+| ![](/basics/down.png) | Abaixa el canal seleccionat una posició. |
 
-Heads Tab
+Pestanya Caps
 ---------
 
-In the Heads tab you can define multiple [heads](/basics/glossary-and-concepts#head) for a single fixture, so that QLC+ knows to treat each of them individually in certain situations (such as [Fixture Groups](/basics/glossary-and-concepts#fixture-group)). If a fixture contains only one head when it's configured to use the currently edited mode (i.e. all of the mode's channels control one head at a time) there is no need to define the head. If, however, the fixture has multiple heads that you wish to be able to control, you must define each head here.
+A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-concepts#capçal) per a un únic fix, de manera que QLC+ sàpiga tractar cadascun d'ells individualment en determinades situacions (com ara [Grups de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures)). Si un fixture només conté un capçal quan està configurat per utilitzar el mode editat (és a dir, tots els canals del mode controlen un capçal alhora) no cal definir el capçal. No obstant això, si el dispositiu té múltiples capçals que voleu poder controlar, heu de definir aquí cada capçal.
 
-Heads don't have names as they can be thought of as simple "sub-fixtures" inside a fixture. Instead, they are automatically given index numbers. The ordering of the Heads should follow the physical fixture's configuration as closely as possible. So, if the heads go 1, 2, 3, 4 in the real world, don't define them as 4, 2, 1, 3 or something equally annoying.
+Els caps no tenen noms, ja que es poden considerar com a simples "sub-fixtures" dins d'un fixture. En canvi, se'ls donen automàticament números d'índex. L'ordenació dels caps ha de seguir la configuració del fixture físic el més a prop possible. Així que, si els caps van 1, 2, 3, 4 en el món real, no els definiu com 4, 2, 1, 3 o alguna cosa igual de molesta.
 
 ![](../fixtureeditor_mode_heads.png)
 
 |     |     |
 | --- | --- |
-| **Head list** | Displays the list of heads currently defined for the fixture. |
-| ![](/basics/edit_add.png) | Add a new head to the fixture, using the [Head Editor](#head-editor). |
-| ![](/basics/edit_remove.png) | Remove the selected head from the fixture. |
-| ![](/basics/edit.png) | Edit the selected head using the [Head Editor](#head-editor). |
-| ![](/basics/up.png) | Raise the selected head upwards by one. You can use this to change the order of the heads within the fixture. |
-| ![](/basics/down.png) | Lower the selected head downwards by one. You can use this to change the order of the heads within the fixture. |
+| **Llista de Capçals** | Mostra la llista de capçals definits actualment per al fixture. |
+| ![](/basics/edit_add.png) | Afegeix un nou capçal a l'aparell mitjançant l'[Editor de Capçals](#editor-de-capçals). |
+| ![](/basics/edit_remove.png) | Elimina el capçal seleccionat del fixture. |
+| ![](/basics/edit.png) | Edita el capçal seleccionat mitjançant l'[Editor de Capçals](#editor-de-capçals). |
+| ![](/basics/up.png) | Apuja el capçal seleccionat cap amunt per un. Podeu utilitzar això per canviar l'ordre dels caps dins del fixture. |
+| ![](/basics/down.png) | Abaixa el capçal seleccionat cap avall per un. Podeu utilitzar això per canviar l'ordre dels caps dins del fixture. |
 
-### Head Editor
+### Editor de Capçals
 
-The Head Editor is used to create and edit [heads](/basics/glossary-and-concepts#head) by picking sets of **Channels** that are dedicated to a single head (as defined by the fixture's manufacturer).
+L'Editor de Capçals s'utilitza per crear i editar [caps](/basics/glossary-and-concepts#capçal) triant conjunts de **Canals** que estan dedicats a un únic capçal (tal com defineix el fabricant del fixture).
 
-Editing a head is very simple: place a checkmark on each channel that is used ONLY by the head you are currently editing. Note that you should check the channels specific to a head, and nothing more. For example if there are 3 heads each with a dedicated dimmer control, then you should include the dimmer channel too. If, instead, the fixture has a single dimmer channel to control the intensity of all the heads together, then do not incude it in the head definition.
+Editar un capçal és molt senzill: col·loca una marca de control a cada canal que només l'utilitzi el capçal que estàs editant. Tingueu en compte que hauríeu de comprovar els canals específics d'un cap, i res més. Per exemple, si hi ha 3 caps cadascun amb un control dimmer dedicat, llavors també hauríeu d'incloure el canal dimmer. Si, en canvi, el fixture té un únic canal dimmer per controlar la intensitat de tots els caps junts, llavors no l'inclueixis en la definició del cap.
 
 ![](../fixtureeditor_mode_edit_head.png)
 
 |     |     |
 | --- | --- |
-| **Channel list** | Displays the list of all fixture channels available in the current mode. Channels that have been assigned to another head are disabled and cannot be selected because each channel can only belong to one head at a time. |
+| **Llista de Canals** | Mostra la llista de tots els canals fixture disponibles en el mode actual. Els canals que s'han assignat a un altre capçal estan desactivats i no es poden seleccionar perquè cada canal només pot pertànyer a un cap alhora. |
 
-Physical Tab
+Pestanya Física
 ------------
 
-This tab is identical to the _global_ [physical tab](/fixture-definition-editor/physical) found in the main Fixture editor windows.  
-The only difference is that here you can choose if the mode you're editing has the same physical information or different ones.  
-In the first case just leave the **"Use global settings"** option checked. If the mode exposes different properties, then check the **"Override global settings"** option and fill in all the information required.
+Aquesta pestanya és idèntica a la _global_ [pestanya física](/fixture-definition-editor/physical) trobada a les finestres principals de l'editor de Fixture.  
+L'única diferència és que aquí podeu triar si el mode que esteu editant té la mateixa informació física o de diferents.  
+En el primer cas, deixeu l'opció **"Utilitza la configuració global"** marcada. Si el mode exposa propietats diferents, aleshores marqueu l'opció **"Sobreescriure la configuració global"** i ompliu tota la informació requerida.

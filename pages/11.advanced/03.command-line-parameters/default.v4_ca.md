@@ -1,82 +1,82 @@
 ---
-title: 'Command Line Parameters'
+title: Paràmetres de Línia d'Ordres
 date: '08:19 22-08-2023'
 ---
 
-QLC+ supports a number of command line parameters to automate/extend some functionalities on startup.  
-Using command line parameters can be tricky depending on the operating system you're using:
+QLC+ suporta una sèrie de paràmetres de línia d'ordres per automatitzar/ampliar algunes funcionalitats en iniciar.  
+L'ús dels paràmetres de la línia d'ordres pot ser complicat depenent del sistema operatiu que utilitzeu:
 
-**Linux**: just open a terminal and type "qlcplus" followed by the parameters you need<br>
-**Windows**: create a shortcut of qlcplus.exe (usually located in C:\\QLC+) on your desktop. Right click on the shortcut and select "Properties". In the "Target" field you will see something like `C:\\QLC+\\qlcplus.exe`. There you can add command line parameters. When done click OK.<br>
-For example, to force the German language at startup, modify your shortcut command line like this:
+**Linux**: simplement obriu un terminal i escriviu «qlcplus» seguit dels paràmetres que necessiteu<br>
+**Windows**: creeu una drecera de qlcplus.exe (normalment ubicat a C:\\QLC+) a l'escriptori. Feu clic dret a la drecera i seleccioneu «Propietats». Al camp "Objectiu" veuràs una cosa així com `C:\\QLC+\\qlcplus.exe`. Aquí podeu afegir paràmetres de la línia d'ordres. En acabar feu clic a D'acord.<br>
+Per exemple, per forçar l'idioma alemany a l'inici, modifiqueu la línia d'ordres de drecera com aquesta:
 
 ![](../commandline.png)
 
-**OSX**: This is the most difficult case since QLC+ on OSX is bundled into a DMG package. You need to open a terminal and "cd" into the QLC+ DMG like this: `cd QLC+.app\\Contents\\MacOS`<br>
-When done, type "qlcplus" followed by the parameters you need
+**OSX**: Aquest és el cas més difícil, ja que QLC+ a OSX s'inclou en un paquet DMG. Necessites obrir un terminal i executar "cd" al QLC+ DMG com aquest: `cd QLC+.app\\Contents\\MacOS`<br>
+Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
 
 
 
 |     |
 | --- |
-| **-c or --closebutton**<br><br>**Description:** Define a position for a close button in the virtual console. The button can be used to close QLC+. Only has an effect in kiosk mode (see -k) and is most useful when in fullscreen mode without a window manager.<br><br>**Parameters:** x,y,w,h<br><br>**Examples:**  <br>Create a button at (x400, y500) whose size is (w70, h50):  <br>qlcplus -c 400,500,70,50  <br>qlcplus --closebutton 400,500,70,50 |
+| **-c o --closebutton**<br><br>**Descripció:** Defineix una posició per a un botó de tancament a la consola virtual. El botó es pot utilitzar per tancar QLC+. Només té efecte en mode quiosc (vegeu -k) i és més útil quan està en mode de pantalla completa sense un gestor de finestres.<br><br>**Paràmetres:** x,y,w,h<br><br>**Exemples:**  <br>Crea un botó a (x400, y500) la mida del qual sigui (w70, h50):  <br>qlcplus -c 400,500,70,50  <br>qlcplus --closebutton 400,500,70,50 |
 
 |     |
 | --- |
-| **-d or --debug**<br><br>**Description:** Enable debug mode and optionally set the output level. Note that since 4.8.0 messages for level DEBUG (0) are not included in released binaries.<br><br>**Parameters:** Level (see [QtMsgType](https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum))<br><br>**Examples:**  <br>Enable debug mode and set debug level to 0:  <br>qlcplus -d  <br>qlcplus --debug  <br>  <br>Enable debug mode and set debug level to 3:  <br>qlcplus -d 3 |
+| **-d o --debug**<br><br>**Descripció:** Activa el mode de depuració i opcionalment estableix el nivell de sortida. Tingueu en compte que, des de la versió 4.8.0, els missatges per a la DEPURACIÓ de nivell (0) no s'inclouen en els binaris llançats.<br><br>**Paràmetres:** Nivell (vegeu [QtMsgType])(https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum)<br><br>**Exemples:**  <br>Habilita el mode de depuració i estableix el nivell de depuració a 0<br>  qlcplus -d  <br>qlcplus --debug  <br>  <br>Activa el mode de depuració i estableix el nivell de depuració a 3: <br>qlcplus -d 3 |
 
 |     |
 | --- |
-| **-f or --fullscreen**<br><br>**Description:** Start the application in fullscreen mode<br><br>**Parameters:** Method (either 'normal' or 'resize')<br><br>**Examples:**  <br>Tell the window manager to give the whole screen space to QLC+:  <br>qlcplus -f  <br>qlcplus --fullscreen  <br>qlcplus -f normal  <br>qlcplus --fullscreen normal  <br>  <br>Resize QLC+ to take up the whole screen space (useful in custom X11 sessions without a window manager):  <br>qlcplus -f resize  <br>qlcplus --fullscreen resize |
+| **-f o --fullscreen**<br><br>**Descripció:** Inicia l'aplicació en mode de pantalla completa<br><br>**Paràmetres:** Mètode (ja sigui 'normal' o 'redimensionar')<br><br>**Exemples:**  <br>Digues al gestor de finestres que doni espai a tota la pantalla a QLC+<br>qlcplus  -f<br>qlcplus  --fullscreen<br>qlcplus -f normal  <br>qlcplus --fullscreen normal  <br>  <br>Redimensiona QLC+ per ocupar tot l'espai de la pantalla (útil en sessions X11 personalitzades sense un gestor de finestres): <br>qlcplus -f resize <br>qlcplus --fullscreen resize |
 
 |     |
 | --- |
-| **-g or --log**<br><br>**Description:** Log debug messages to a file (`$HOME/QLC+.log`)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d 0 -g  <br>qlcplus --debug 0 --log |
+| **-g o --log**<br><br>**Descripció:** Registra els missatges de depuració a un fitxer (`$HOME/QLC+.log`)<br><br>**Paràmetres:** Cap<br><br>**Exemples:** <br>Habilita els missatges de depuració i emmagatzema'ls per registrar <br>qlcplus -d 0 -g <br>qlcplus --debug 0 --log |
 
 |     |
 | --- |
-| **-h or --help**<br><br>**Description:** Display command-line help (only in Linux & OS X)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Display the command-line help:  <br>qlcplus -h  <br>qlcplus --help |
+| **-h o --help**<br><br>**Descripció:** Mostra l'ajuda de la línia d'ordres (només en Linux i OS X)<br><br>**Paràmetres:** Cap**0 **1**Exemples:** <br>Mostra l'ajuda de la línia d'ordres: <br>qlcplus -h <br>qlcplus --help |
 
 |     |
 | --- |
-| **-k or --kiosk**<br><br>**Description:** Enable kiosk-mode (only [virtual console](/virtual-console) is visible and the application is locked in [operate mode](/basics/glossary-and-concepts#modes))<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start the application in kiosk mode:  <br>qlcplus -k  <br>qlcplus --kiosk |
+| **-k o --kiosk**<br><br>**Descripció:** Activa el mode quiosc (només és visible la [consola virtual](/virtual-console) i l'aplicació està bloquejada en [mode d'operació](/basics/glossary-and-concepts#modes))<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>Inicia l'aplicació en mode quiosc:  <br>qlcplus -k  <br>qlcplus --kiosk |
 
 |     |
 | --- |
-| **-l or --locale**<br><br>**Description:** Use the given language for translation<br><br>**Parameters:** Language code (currently supported: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Examples:**  <br>Use finnish language:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
+| **-l o** --locale<br><br>**Descripció:** Utilitza l'idioma indicat per a la traducció<br><br>**Paràmetres:** Codi d'idioma (actualment admès: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Exemples:**  <br>Utilitza l'idioma finès:  <br>qlcplus -l fi_FI  <br>qlcplus --locale fi_FI |
 
 |     |
 | --- |
-| **-m or --nowm**<br><br>**Description:** Inform the application that the system doesn't provide a window manager. QLC+ will therefore add some extra controls to close the windows.<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start QLC+ with no window manager:  <br>qlcplus -m  <br>qlcplus --nowm |
+| **-m o --nowm**<br><br>**Descripció:** Informa l'aplicació que el sistema no proporciona un gestor de finestres. Per tant, QLC+ afegirà alguns controls addicionals per tancar les finestres.<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>Iniciar QLC+ sense gestor de finestres:  <br>qlcplus -m  <br>qlcplus --nowm |
 
 |     |
 | --- |
-| **-n or --nogui**<br><br>**Description:** Start the application with the GUI hidden (Raspberry Pi only)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start QLC+ with no visible GUI:  <br>qlcplus -n  <br>qlcplus --nogui |
+| **-n o --nogui**<br><br>**Descripció:** Inicia l'aplicació amb la interfície gràfica oculta (només Raspberry Pi)<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>Inicia QLC+ sense interfície gràfica visible:  <br>qlcplus -n  <br>qlcplus --nogui |
 
 |     |
 | --- |
-| **-o or --open**<br><br>**Description:** Open the given workspace file<br><br>**Parameters:** File name<br><br>**Examples:**  <br>Open mydesk.qxw:  <br>qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
+| **-o o --open**<br><br>**Descripció:** Obre el fitxer de l'espai de treball donat<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>Obre mydesk.qxw:<br> qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
 
 |     |
 | --- |
-| **-p or --operate**<br><br>**Description:** Start the application in [Operate](/basics/glossary-and-concepts#modes) mode.<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start QLC+ in operate mode:  <br>qlcplus -p  <br>qlcplus --operate |
+| **-p o --operate**<br><br>**Descripció:** Inicia l'aplicació en mode [Operate](/basics/glossary-and-concepts#modes).<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>Iniciar QLC+ en mode d'operació:  <br>qlcplus -p  <br>qlcplus --operate |
 
 |     |
 | --- |
-| **-v or --version**<br><br>**Description:** Display the current application version number<br><br>**Parameters:** None<br><br>**Examples:**  <br>qlcplus -v  <br>qlcplus --version |
+| **-v o --version**<br><br>**Descripció:** Mostra el número de versió actual de l'aplicació<br><br>**Paràmetres:** Cap**0 **1**Exemples:** <br>qlcplus -v <br>qlcplus --version |
 
 |     |
 | --- |
-| **-w or --web**<br><br>**Description:** Enable remote web access on port 9999<br><br>**Parameters:** None<br><br>**Examples:**  <br>qlcplus -w  <br>qlcplus --web |
+| **-w o --web**<br><br>**Descripció:** Activa l'accés remot a la web al port 9999<br><br>**Paràmetres:** Cap**0 **1**Exemples:** <br>qlcplus -w <br>qlcplus --web |
 
 |     |
 | --- |
-| **-wp or --web-port**<br><br>**Description:** Use a specific port for web access<br><br>**Parameters:** Port number<br><br>**Examples:**  <br>qlcplus -wp 12345  <br>qlcplus --web-port 12345 |
+| **-wp o --web-port**<br><br>**Descripció:** Utilitzar un port específic per a l'accés web<br><br>**Paràmetres:** Número de port<br><br>**Exemples:**  <br>qlcplus -wp 12345  <br>qlcplus --web-port 12345 |
 
 |     |
 | --- |
-| **-wa or --web-auth**<br><br>**Description:** Enable remote web access with users authentication<br><br>**Parameters:** None<br><br>**Examples:**  <br>qlcplus -wa  <br>qlcplus --web-auth |
+| **-wa o --web-auth**<br><br>**Descripció:** Activa l'accés web remot amb l'autenticació dels usuaris<br><br>**Paràmetres:** Cap<br><br>**Exemples:**  <br>qlcplus -wa  <br>qlcplus --web-auth |
 
 |     |
 | --- |
-| **-a or --web-auth-file**<br><br>**Description:** Specify a file where to store web access basic authentication credentials<br><br>**Parameters:** File name<br><br>**Examples:**  <br>qlcplus -wa qlcplus_passwd  <br>qlcplus --web-auth-file qlcplus_passwd |
+| **-a o --web-auth-file**<br><br>**Descripció:** Especifiqueu un fitxer on emmagatzemar les credencials d'autenticació bàsica d'accés web<br><br>**Paràmetres:** Nom del fitxer<br><br>**Exemples:**  <br>qlcplus -wa qlcplus_passwd  <br>qlcplus --web-auth-file qlcplus_passwd |

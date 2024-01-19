@@ -3,32 +3,32 @@ title: 'Custom UI Style'
 date: '11:59 22-08-2023'
 ---
 
-Starting from version 4.5.0, QLC+ can read a user custom file to change the GUI appearance in a very accessible way.  
-If no file is found, QLC+ will start with the default style.
+A partir de la versió 4.5.0, QLC+ pot llegir un fitxer personalitzat de l'usuari per canviar l'aparença de la interfície gràfica d'una manera molt accessible.  
+Si no es troba cap fitxer, QLC+ començarà amb l'estil predeterminat.
 
-The GUI style file
+El fitxer d'estil GUI
 ------------------
 
-The file name is hardcoded into QLC+ and must be: `qlcplusStyle.qss`  
-The style file must also be placed in a specific path which is:
+El nom del fitxer està codificat a QLC+ i ha de ser: `qlcplusStyle.qss`  
+El fitxer d'estil també s'ha de col·locar en un camí específic que és:
 
 * **Linux**: `$HOME/.qlcplus`
 * **Windows**: `<your user folder>/QLC+`
 * **OSX**: `Library/Application Support/QLC+`
 
-The style file must have a CSS syntax. If you're comfortable with web designing, you should find the creation of this file very easy!  
-Since the style file is strictly related to the inner Qt objects, you might want to read the following articles to find out the elements' names and the additional CSS properties the Qt team added to the default CSS syntax.  
-[Qt Style Sheets](https://doc.qt.io/qt-5/stylesheet-syntax.html)  
-[Qt Style Sheets Examples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
-It is up to your imagination how you prefer to customize the QLC+ GUI appearance! If you find a style worth sharing, don't forget to send in your contribution by posting it online in the [QLC+ forum](https://www.qlcplus.org/forum/viewforum.php?f=5)
+El fitxer d'estil ha de tenir una sintaxi CSS. Si esteu còmode amb el disseny web, heu de trobar la creació d'aquest fitxer molt fàcil!  
+Atès que el fitxer d'estil està estrictament relacionat amb els objectes interiors de les Qt, és possible que vulgueu llegir els articles següents per a esbrinar els noms dels elements i les propietats CSS addicionals que l'equip de les Qt ha afegit a la sintaxi CSS predeterminada.  
+[Fulls d'estil de les Qt](https://doc.qt.io/qt-5/stylesheet-syntax.html)  
+[Fulls d'estil de les Qt Exemples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
+Depèn de la teva imaginació com prefereixis personalitzar l'aparença de la IGU QLC+! Si trobeu un estil digne de compartir, no oblideu enviar la vostra contribució publicant-lo en línia al [Fòrum QLC+](https://www.qlcplus.org/forum/viewforum.php?f=5)
 
-Please note: not all styles are available to be changed via the stylesheet as they are hardcoded in C++.
+Nota: no tots els estils estan disponibles per a ser canviats a través del full d'estil, ja que estan codificats en C++.
 
-QLC+ dark blue style example
+Exemple d'estil blau fosc QLC+
 ----------------------------
 
-Just to give you an example of how easy this process is, here's a blue-ish dark style for QLC+.  
-If you copy the following lines into `qlcplusStyle.qss` in the right location as explained above, you will see it applied to QLC+ at the next startup.
+Només per donar-te un exemple de com de fàcil és aquest procés, aquí tens un estil fosc de color blau per a QLC+.  
+Si copieu les línies següents a `qlcplusStyle.qss` a la ubicació correcta, tal com s'ha explicat anteriorment, veureu que s'aplica a QLC+ en la propera posada en marxa.
 ```CSS
 QMainWindow, QDialog
 {

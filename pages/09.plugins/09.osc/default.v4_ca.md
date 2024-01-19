@@ -6,42 +6,42 @@ date: '05:18 22-08-2023'
 Introducció
 ------------
 
-QLC+ supports the [OSC protocol](https://en.wikipedia.org/wiki/Open_Sound_Control) through an input/output plugin that receives and transmits packets on the network.  
-No extra requirements are needed, since QLC+ has a native implementation of the OSC protocol that works on Linux, Windows and OSX systems.  
-The OSC plugin can send and receive packets from multiple network cards, virtual addresses, the loopback device (127.0.0.1) and multiple universes per network interface.  
-By default the OSC plugin will listen on ports starting from 7700, plus the QLC+ universe minus one.  
-The output, instead, will use ports starting from 9000, plus the QLC+ universe minus one.
+QLC+ suporta el protocol [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
+No es necessiten requisits addicionals, ja que QLC+ té una implementació nativa del protocol OSC que funciona en sistemes Linux, Windows i OSX.  
+El connector OSC pot enviar i rebre paquets de múltiples targetes de xarxa, adreces virtuals, el dispositiu de loopback (127.0.0.1) i múltiples universos per interfície de xarxa.  
+De manera predeterminada, el connector OSC escoltarà els ports que comencen a partir de 7700, més l'univers QLC+ menys un.  
+La sortida, en canvi, utilitzarà ports a partir de 9000, més l'univers QLC+ menys un.
 
-For example:  
-QLC+ Universe 1 --> OSC input port 7700, output port 9000  
-QLC+ Universe 2 --> OSC input port 7701, output port 9001  
+Per exemple:  
+QLC+ Univers 1 --, Port d'entrada OSC 7700, port de sortida 9000  
+QLC+ Univers 2 --, Port d'entrada OSC 7701, port de sortida 9001  
 ...  
-QLC+ Universe 8 --> OSC input port 7707, output port 9007
+QLC+ Univers 8 --, Port d'entrada OSC 7707, port de sortida 9007
 
 
-Configuration
+Configuració
 -------------
 
-When clicking on the ![](/basics/configure.png) configuration button, a small dialog will be displayed, showing the Universes Configuration panel.
+En fer clic al botó de configuració ![](/basics/configure.png), es mostrarà un petit diàleg que mostrarà el panell de Configuració de l'Univers.
 
-After a QLC+ universe is patched with an OSC input or output, an entry will be displayed in this list, allowing to manually configure the desired parameters to be used by the OSC plugin.
+Després que un univers QLC+ sigui pedaçat amb una entrada o sortida OSC, es mostrarà una entrada en aquesta llista, permetent configurar manualment els paràmetres desitjats per ser utilitzats pel connector OSC.
 
-For each OSC input or output the following parameters can be set:
+Per a cada entrada o sortida OSC es poden establir els següents paràmetres:
 
-* **Input Port:** If the patched line is opened for input, this parameters defines the port QLC+ will listen to in order to receive OSC data from your external controller.
-* **Output address:** If the patched line is opened for input, this is the destination IP address used to send feedbacks to your external controller.  
-    If the patched line is opened for output, this is the destination IP address used to send OSC data on the network.  
-    OSC output packets are composed to obtain an OSC path like the following: /QLC+ universe - 1/dmx/DMX channel - 1  
-    For example channel 12 of QLC+ universe 4 will have the following path: /3/dmx/11  
-    All the values transmitted by the OSC plugin use the float type.
-* **Output port:** If the patched line is opened for input, this is the destination port used to send feedbacks to your external controller.  
-    If the patched line is opened for output, this is the destination port used to send OSC data on the network.
+* **Port d'Entrada:** Si la línia apedaçada s'obre per a l'entrada, aquests paràmetres defineixen el port al qual QLC+ escoltarà per tal de rebre dades OSC del vostre controlador extern.
+* **Adreça de Sortida:** Si s'obre la línia pedaçada per a l'entrada, aquesta és l'adreça IP de destinació utilitzada per a enviar feedbacks al vostre controlador extern.  
+    Si s'obre la línia apedaçada per a la sortida, aquesta és l'adreça IP de destinació utilitzada per a enviar dades OSC a la xarxa.  
+    Els paquets de sortida OSC es componen per obtenir un camí OSC com el següent: /QLC+ univers - 1/dmx/DMX canal - 1  
+    Per exemple, el canal 12 de l'univers QLC+ 4 tindrà el següent camí: /3/dmx/11  
+    Tots els valors transmesos pel connector OSC utilitzen el tipus float.
+* **Port de Sortida:** Si s'obre la línia apedaçada per a l'entrada, aquest és el port de destinació que s'utilitza per enviar feedbacks al vostre controlador extern.  
+    Si s'obre la línia apedaçada per a la sortida, aquest és el port de destinació que s'utilitza per a enviar dades OSC a la xarxa.
 
-**Note:** When patching a Input+Feedback line, the output IP/port you need to change are the ones in the 'Inputs' section. Just leave the 'Outputs' section as default.
+**Nota:** En apedaçar una línia Input+Feedback, la IP/port de sortida que heu de canviar són les de la secció 'Inputs'. Simplement deixeu la secció 'Outputs' com a predeterminada.
 
-Controllers
+Controladors
 -----------
 
-QLC+ has been tested with the following OSC controllers:
+QLC+ s'ha provat amb els següents controladors OSC:
 
-* [TouchOSC](https://hexler.net/software/touchosc). A pre-defined input profile is ready to use for the Mix16 layout.
+* [TouchOSC](https://hexler.net/software/touchosc). Un perfil d'entrada predefinit està a punt per utilitzar per a la disposició Mix16.

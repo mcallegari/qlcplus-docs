@@ -1,23 +1,23 @@
 ---
-title: 'Live Edit'
+title: 'Edició en Viu'
 taxonomy:
     category:
         - docs
 ---
 
-Starting from version 4.5.0, QLC+ offers a functionality which allows the adjustment of your [Functions](/basics/glossary-and-concepts#functions) while in [Operate Mode](/basics/glossary-and-concepts#modes).  
-The Live Edit icon ![](/basics/liveedit.png) is located in the QLC+ top bar, beside the [DMX Dump](../dmx-dump) icon ![](/basics/add_dump.png) and it is activated only when the user has switched to Operate Mode.  
-When clicking on the Live Edit icon, a [Function selection](/function-manager/function-selection) panel will be displayed, allowing the selection of the function you want to adjust.  
-When you press OK, the correct editor will be displayed for editing that function.  
-At the moment, the following functions are supported for live editing:
+A partir de la versió 4.5.0, QLC + ofereix una funcionalitat que permet l'ajust de les seves [Funcions](/basics/glossary-and-concepts#funcions) mentre està en [Mode d'Operació](/basics/glossary-and-concepts#modes).<x3></x3>
+La icona Edició en Viu es troba a la barra superior QLC+, al costat de la icona ![](/basics/liveedit.png) ![](/basics/add_dump.png) [Bolcat DMX](../bolcat-dmx) i només s'activa quan l'usuari ha canviat al mode d'operació.<x7></x7>
+En fer clic a la icona Edició en Viu, es mostrarà un panell de [selecció de Funcions](/function-manager/seleccio-de-funcions) que permetrà seleccionar la funció que voleu ajustar.<x9></x9>
+Quan premeu D'acord, es mostrarà l'editor correcte per editar aquesta funció.<x10></x10>
+De moment, s'admeten les funcions següents per a l'edició en directe:
 
-* ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) will open a [Scene Editor](/function-manager/scene-editor)  
-    Note that by default the editor will be set in "Blind mode" when you edit a Scene that is not currently running, in case you want to make the changes effective only when the Scene is being replayed the next time it is selected. For a currently running Scene the editor will open in live mode by default.
-* ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser) will open a [Chaser Editor](/function-manager/chaser-editor)
-* ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) will open an [EFX Editor](/function-manager/efx-editor)
-* ![](/basics/rgbmatrix.png) [RGB Matrix](/basics/glossary-and-concepts#rgbmatrix) will open an [RGB Matrix Editor](/function-manager/rgb-matrix-editor)
+* ![](/basics/scene.png) [Escena](/basics/glossary-and-concepts#escena) obrirà un [Editor d'Escenes](/function-manager/editor-de-escenes)  
+    Tingueu en compte que, per defecte, l'editor s'establirà en el «Mode Cec» quan editeu una escena que no s'està executant actualment, en cas que vulgueu fer efectius els canvis només quan l'Escena es reprodueixi la propera vegada que se seleccioni. Per a una escena en execució, l'editor s'obrirà en mode viu de manera predeterminada.
+* ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser) obrirà un  [Editor de Chaser](/function-manager/editor-de-chasers)
+* ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) obrirà un  [Editor EFX](/function-manager/editor-efx)
+* ![](/basics/rgbmatrix.png) [Matriu RGB](/basics/glossary-and-concepts#rgbmatrix) obrirà un  [Editor de Matriu RGB](/function-manager/editor-de-matriu-rgb)
 
-    The types of functions listed in the [Function selection](/function-manager/function-selection) can be selected by using the filter check boxes at the bottom of the panel.  
-    There is an option at the top of the panel to list currently running functions only.
+    Els tipus de funcions llistats a la [Selecció de funcions](/function-manager/seleccio-de-funcions) es poden seleccionar utilitzant les caselles de selecció de filtres a la part inferior del plafó.  
+    Hi ha una opció a la part superior del plafó per a llistar només les funcions en execució.
 
-    Note that if another function is running when performing a live edit, HTP channels in the other function may prevent some adjustments from being seen on the stage.
+    Tingueu en compte que si una altra funció s'està executant en realitzar una edició en viu, els canals HTP en l'altra funció poden evitar que es vegin alguns ajustos a l'escenari.

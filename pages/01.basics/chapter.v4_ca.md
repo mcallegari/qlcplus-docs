@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: Introducció
 taxonomy:
     category: docs
 child_type: docs

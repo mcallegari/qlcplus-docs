@@ -6,24 +6,24 @@ date: '05:20 22-08-2023'
 Introducció
 ------------
 
-The uDMX Output plugin supports the [Anyma uDMX](https://www.anyma.ch/research/udmx/) USB-DMX interface on Linux and macOS.
+El connector de sortida uDMX admet la interfície [Anyma uDMX](https://www.anyma.ch/research/udmx/) USB-DMX a Linux i macOS.
 
-Requirements
+Requisits
 ------------
 
 ### Linux
 
-On all Linux distributions, you need to install libusb. If you install QLC+ with the Ubuntu Software Center or some other automatic installer tool, this library will be installed automatically for you.
+A totes les distribucions de Linux, heu d'instal·lar el libusb. Si instal·leu QLC+ amb l'Ubuntu Software Center o alguna altra eina d'instal·lació automàtica, aquesta biblioteca s'instal·larà automàticament.
 
 ### macOS
 
-On Apple macOS, you don't need any drivers at all since QLC+ uses the macOS native USB interface.
+A l'Apple macOS, no necessites cap controlador, ja que QLC+ utilitza la interfície USB nativa del macOS.
 
 ### Windows
 
-This device is not yet supported on Windows.
+Aquest dispositiu encara no està admès al Windows.
 
-Tuning
+Ajustaments
 ------
 
-It is possible to change the DMX frame frequency for all uDMX devices with a hidden settings key on each platform. The key tells QLC+ how many times each DMX frame (512 channels) should be sent to the universe per second. A value of "30" means 30 times per second (30Hz). Please refer to the [Manual parameters tuning](/advanced/parameters-tuning#3-udmx-frequency) uDMX section
+És possible canviar la freqüència de marc DMX per a tots els dispositius uDMX amb una clau de configuració oculta a cada plataforma. La clau indica a QLC+ quantes vegades s'hauria d'enviar cada marc DMX (512 canals) a l'univers per segon. Un valor de "30" significa 30 vegades per segon (30Hz). Consulteu la secció [Ajustament de paràmetres manuals](/advanced/parameters-tuning#3-freqüència-udmx) uDMX

@@ -1,105 +1,105 @@
 ---
-title: 'Web Interface'
+title: Interfície Web
 date: '08:15 22-08-2023'
 ---
 
-By default, QLC+ includes a native web server to expose on traditional web browsers some of the software features.  
-It comes very handy when you need to run QLC+ on a device without a display (headless system) either to work standalone or for remote controlling.  
-The web interface is not enabled by default but can be easily activated by running QLC+ with "-w" or "--web" option. Please refer to the [command line parameters](../command-line-parameters) page of this documentation to learn how to do it.
+Per defecte, QLC+ inclou un servidor web natiu per exposar en els navegadors web tradicionals algunes de les característiques del programari.  
+És molt útil quan cal executar QLC+ en un dispositiu sense pantalla (sistema sense cap) ja sigui per treballar de forma independent o per al control remot.  
+La interfície web no està habilitada per defecte, però es pot activar fàcilment executant QLC+ amb l'opció "-w" o "--web". Consulteu la pàgina [paràmetres de línia d'ordres](../command-line-parameters) d'aquesta documentació per aprendre com fer-ho.
 
-The web interface can be accessed from any modern web browser running on any device, such as a computer, a tablet or a smartphone. Your browser needs to support the web sockets technology to communicate with QLC+, and it is recommended to use Google Chrome.  
-It is also possible to design custom web pages and access QLC+ functionalities via web API which are basically strings formatted in a specific way and sent to QLC+ via websocket.  
-A test page with the available APIs can be found [here](https://www.qlcplus.org/Test_Web_API.html).
+Es pot accedir a la interfície web des de qualsevol navegador web modern que s'executi en qualsevol dispositiu, com ara un ordinador, una tauleta o un telèfon intel·ligent. El vostre navegador ha de suportar la tecnologia de sòcols web per comunicar-se amb QLC+, i es recomana utilitzar Google Chrome.  
+També és possible dissenyar pàgines web personalitzades i accedir a les funcionalitats de QLC+ a través de l'API web que són bàsicament cadenes formatades de manera específica i enviades a QLC+ a través de websocket.  
+Podeu trobar una pàgina de prova amb les API disponibles [aquí](https://www.qlcplus.org/Test_Web_API.html).
 
-To access the QLC+ web interface simply connect to this address:  
-**http://\[IP address\]:9999**
+Per accedir a la interfície web QLC+ simplement connecteu-vos a aquesta adreça:  
+**http://\[adreça IP\]:9999**
 
-Where \[IP address\] is the IP address of the device you want to access via web. For example: http://192.168.0.100:9999  
-The web interface consists in three pages:
+On \[adreça IP\] és l'adreça IP del dispositiu al qual voleu accedir via web. Per exemple: http://192.168.0.100:9999  
+La interfície web consta de tres pàgines:
 
-* Virtual Console
-* Simple Desk
-* Configuration
+* Consola Virtual
+* Taula Simple
+* Configuració
 
-Virtual Console page
+Pàgina de la Consola Virtual
 --------------------
 
-This page is displayed by default when accessing the web interface address and it represents the QLC+ Virtual Console.  
-If a project is loaded, this page will display the widgets previously created with QLC+, otherwise it will just show an empty page.  
-It is possible to load a project with the **Load project** button placed on the top left corner of the page. A window will show up, allowing you to choose a file from the device you're using to control the device where QLC+ is running.  
-The project file will be transferred via web and loaded by QLC+.  
-To access the QLC+ configuration page, just click on the **Configuration** button.
+Aquesta pàgina es mostra per defecte en accedir a l'adreça de la interfície web i representa la consola virtual QLC+.  
+Si es carrega un projecte, aquesta pàgina mostrarà els ginys creats prèviament amb QLC+, en cas contrari només mostrarà una pàgina buida.  
+És possible carregar un projecte amb el botó **Carrega el projecte** col·locat a la cantonada superior esquerra de la pàgina. Apareixerà una finestra que us permetrà triar un fitxer del dispositiu que esteu utilitzant per controlar el dispositiu on s'està executant QLC+.  
+El fitxer del projecte es transferirà via web i el carregarà QLC+.  
+Per accedir a la pàgina de configuració de QLC+, simplement feu clic al botó **Configuració**.
 
-Simple Desk page
+Pàgina Taula Simple
 ----------------
 
-This page is a simplified version of the Simple Desk that you can find in the QLC+ desktop version. It displays DMX universes divided by pages, where each page shows 32 channels. You can switch between pages with the left/right arrow buttons and select the current displayed universe with the drop down menu on the top right of the page.  
-It is also possible to reset a universe at once by pressing the reset button (gray X)
+Aquesta pàgina és una versió simplificada de la Taula Simple que podeu trobar a la versió d'escriptori de QLC+. Mostra universos DMX dividits per pàgines, on cada pàgina mostra 32 canals. Podeu canviar entre pàgines amb els botons de fletxa esquerra/dreta i seleccionar l'univers mostrat actual amb el menú desplegable a la part superior dreta de la pàgina.  
+També és possible restablir un univers alhora prement el botó de reinici (gris X)
 
-### DMX Keypad
+### Teclat DMX
 
-When clicking on the "DMX Keypad" button in the Simple Desk top bar, you can jump to a new page where a traditional DMX keypad is displayed.  
-The keypad is useful to set a batch of channel values with a single command. Following a table explaining the key commands that you can find on the right side of the pad.
+Quan feu clic al botó "Teclat DMX" a la barra superior de Taula Simple, podeu saltar a una nova pàgina on es mostra un Teclat DMX tradicional.  
+El teclat numèric és útil per establir un lot de valors de canal amb una sola ordre. A continuació una taula on s'expliquen les ordres clau que trobareu al costat dret del bloc.
 
 
 |     |     |
 | --- | --- |
-| **Key** | **Description** |
-| AT | sets a value for a specified DMX channel or group of channels (range).  <br>Example: **13 AT 148** (sets channel 13 to value 148) |
-| THRU | selects a range of DMX channels  <br>Example: **3 THRU 15 AT 133** (sets channels 3 to 15 to value 133) |
-| FULL | sets the maximum value (255) to the selected DMX channels or group of channels  <br>Example: **18 FULL** (sets channel 18 to 255)  <br>**1 THRU 10 FULL** (sets channels 1 to 10 to 255) |
-| ZERO | sets the minimum value (0) to the selected DMX channels or group of channels  <br>Example: **4 ZERO** (sets channel 4 to 0) |
-| BY | sets a channels gap within a range  <br>Example: **1 THRU 10 BY 2 AT 100** (sets channels 1, 3, 5, 7, and 9 to value 100) |
-| +% | increases by given percent the current values of the channels  <br>Example: **1 THRU 10 BY 2 +% 20** (increases by 20% the current values of the channels 1, 3, 5, 7, and 9) |
-| -% | reduces by given percent the current values of the channels  <br>Example: **1 THRU 10 BY 2 -% 20** (reduces by 20% the current values of the channels 1, 3, 5, 7, and 9) |
+| **Clau** | **Descripció** |
+| AT | estableix un valor per a un canal DMX especificat o un grup de canals (interval).  <br>Exemple: **13 AT 148** (estableix el canal 13 al valor 148) |
+| THRU | selecciona un rang de canals DMX <br>Exemple: **3 THRU 15 AT 133** (estableix els canals 3 a 15 al valor 133) |
+| FULL | estableix el valor màxim (255) als canals DMX seleccionats o al grup de canals <br>Exemple: **18 FULL** (estableix el canal 18 a 255) <br>**1 THRU 10 FULL** (estableix els canals 1 a 10 a 255) |
+| ZERO | estableix el valor mínim (0) als canals DMX seleccionats o al grup de canals <br>Exemple: **4 ZERO** (estableix el canal 4 a 0) |
+| BY | estableix un espai entre els canals dins d'un interval <br>Exemple: **1 THRU 10 BY 2 AT 100** (estableix els canals 1, 3, 5, 7 i 9 al valor 100) |
+| +% | augmenta en un percentatge donat els valors actuals dels canals <br>Exemple: **1 THRU 10 BY 2 +% 20** (augmenta en un 20% els valors actuals dels canals 1, 3, 5, 7 i 9) |
+| -% | redueix en un percentatge donat els valors actuals dels canals <br>Exemple: **1 THRU 10 BY 2 -% 20** (redueix en un 20% els valors actuals dels canals 1, 3, 5, 7 i 9) |
 
 
-Please keep in mind that:
+Tingueu en compte que:
 
-* Every command is sent to QLC+ only when pressing the ENTER button
-* DMX addresses are contiguous between universes, so Universe 1 ranges from 1 to 512, Universe 2 from 513 to 1024 and so on
-* You can manually write commands in the top text box once you learn the keypad commands syntax
+* Cada ordre s'envia a QLC+ només quan es prem el botó RETORN
+* Les adreces DMX són contigües entre universos, de manera que l'Univers 1 varia d'1 a 512, l'Univers 2 de 513 a 1024 i així successivament
+* Podeu escriure ordres manualment al quadre de text superior una vegada apreneu la sintaxi de les ordres del teclat
 
-Configuration page
+Pàgina de Configuració
 ------------------
 
-This page allows to remotely set the QLC+ configuration, divided in four areas:
+Aquesta pàgina permet definir remotament la configuració de QLC+, dividida en quatre àrees:
 
-* **Universes configuration**: Allows to set the inputs, outputs, feedback, profiles and passthrough mode for each QLC+ universe. This is basically the same functionality of the QLC+ input/output panel.  
-    Since a QLC+ project contains also the I/O information, most likely you won't have to manually configure it on this page, but just check if everything is correct.
+* **Configuració d'Universos**: Permet establir les entrades, sortides, retroalimentació, perfils i mode de pas per a cada univers QLC+. Aquesta és bàsicament la mateixa funcionalitat del panell d'entrada/sortida de QLC+.  
+    Atès que un projecte QLC+ conté també la informació d'E/S, el més probable és que no hàgiu de configurar-la manualment en aquesta pàgina, però podeu comprovar si tot és correcte.
 
-* **Audio configuration**: Allows to select the audio devices used for audio playback or audio input.
+* **Configuració d'Àudio**: Permet seleccionar els dispositius d'àudio utilitzats per a la reproducció d'àudio o l'entrada d'àudio.
 
-* **User loaded fixtures**: Allows to remotely load a custom fixture to QLC+.  
-    When clicking on the **Load fixture** button, a window will show up, allowing you to choose a file from the device you're using to control the device where QLC+ is running.  
-    The fixture file will be transferred via web and loaded by QLC+.  
-    When adding new custom fixtures it is recommended to reload a project or either restart QLC+ on the target device.
+* **Fixtures carregats per l'usuari**: Permet carregar remotament un fixture personalitzat a QLC+.  
+    Quan feu clic al botó **Carrega el fixture**, es mostrarà una finestra que us permetrà triar un fitxer del dispositiu que esteu utilitzant per a controlar el dispositiu on s'està executant QLC+.  
+    El fitxer fixture es transferirà via web i es carregarà a QLC+.  
+    Quan s'afegeixen nous fixtures personalitzats, es recomana recarregar un projecte o bé reiniciar QLC+ al dispositiu de destinació.
 
-* **Authorized users**: This section is available only when starting QLC+ with the "-wa" or "--web-auth" option. It enables basic HTTP authentication (no HTTPS or certificates involved).  
-    When enabling this feature for the first time, you need to add at least an administrator, otherwise you will not be asked for any password when accessing the web interface.  
-    Users can have the following access levels:
+* **Usuaris Autoritzats**: Aquesta secció només està disponible quan s'inicia QLC+ amb l'opció "-wa" o "--web-auth". Activa l'autenticació HTTP bàsica (no hi ha HTTPS ni certificats implicats).  
+    En activar aquesta característica per primera vegada, heu d'afegir almenys un administrador, en cas contrari no se us demanarà cap contrasenya en accedir a la interfície web.  
+    Els usuaris poden tenir els nivells d'accés següents:
 
-    * **Everything**: This is the access level for administrators. They can access every functionality of the web interface and add more authenticated users
-    * **Virtual Console and Simple Desk**: a user with this access level can view the Virtual Console and Simple Desk page, but cannot access the Configuration page
-    * **Only Virtual Console**: a user with this access level can view only the Virtual Console page, but cannot access the Simple Desk and the Configuration page
+    * **Tot**: Aquest és el nivell d'accés per als administradors. Poden accedir a totes les funcionalitats de la interfície web i afegir més usuaris autenticats
+    * **Consola Virtual i Taula Simple**: un usuari amb aquest nivell d'accés pot veure la pàgina de Consola Virtual i Taula Simple, però no pot accedir a la pàgina de Configuració
+    * **Només la Consola Virtual**: un usuari amb aquest nivell d'accés només pot veure la pàgina de la consola virtual, però no pot accedir a la Taula Simple i a la Pàgina de Configuració
 
-    An administrator can:
-    * Add more users by filling the Username and Password fields and then clicking on the "Add user" button
-    * Delete an existing user by clicking on the "Delete user" button
-    * Change the access level or password of an existing user and then click on the "Change" button
+    Un administrador pot:
+    * Afegeix més usuaris omplint els camps Nom d'usuari i Contrasenya i després fent clic al botó "Afegeix usuari"
+    * Suprimeix un usuari existent fent clic al botó "Suprimir usuari"
+    * Canviar el nivell d'accés o la contrasenya d'un usuari existent i després fer clic al botó "Canviar"
 
-Once the configuration has been set, it is possible to go back to the web interface main page by clicking on the **Back** button, placed at the top left corner of the page.
+Una vegada establerta la configuració, és possible tornar a la pàgina principal de la interfície web fent clic al botó **Enrere**, situat a la cantonada superior esquerra de la pàgina.
 
-Known limitations
+Limitacions Conegudes
 -----------------
 
-The QLC+ web interface is still a work in progress feature and it has some known limitations you should be aware of if you intend to use it.
+La interfície web QLC+ és encara una funcionalitat de treball en curs i té algunes limitacions conegudes de les quals hauríeu de ser conscients si teniu intenció d'utilitzar-la.
 
-* Speed Dial, XY Pad, and Animation widgets are not supported yet
-* Sliders with a Knob appearance are not supported yet
-* Sliders Click & Go button is not supported yet
-* Frame enable state is not handled yet
-* Cue List crossfade sliders not supported yet
-* Cue List "Play/Stop + Pause" layout not supported yet
-* Cue List notes live editing is not handled yet
-* Virtual Console Grand Master is not handled yet
+* Encara no s'admeten els ginys Selector de Velocitat, Pad XY i Animacions
+* Els lliscadors amb aparença de pom o perilla encara no són compatibles
+* El botó Click & Go dels controls lliscants encara no està admès
+* Encara no s'ha implementat l'estat d'habilitació del marc
+* Els controls lliscants d'esvaïment creuat de la Llista de Cues encara no estan suportats
+* Encara no s'admet la disposició «Reprodueix/Atura + Pausa» de la Llista Cue
+* Encara no es gestiona l'edició en directe de les notes de la Llista de Cues
+* El Gran Mestre de la Consola Virtual encara no es gestiona

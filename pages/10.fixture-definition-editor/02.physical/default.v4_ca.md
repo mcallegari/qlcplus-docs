@@ -3,15 +3,15 @@ title: Physical
 date: '05:31 22-08-2023'
 ---
 
-This is the section where the _global_ physical information of the fixture is provided.  
-An identical section is also present in each mode, in case the fixture allows its physical properties (e.g. pan/tilt range) to be altered depending on the mode. In that case, the global physical information can be overridden by _per-mode_ physical information.
+Aquesta és la secció on es proporciona la informació física _global_ de l'aparell.  
+També hi ha una secció idèntica en cada mode, en cas que l'aparell permeti alterar les seves propietats físiques (per exemple, el rang de panoràmica/inclinació) en funció del mode. En aquest cas, la informació física global pot ser anul·lada per _per mode_ informació física.
 
 ![](../fixtureeditor_physical.png)
 
 |     |     |
 | --- | --- |
-| **Bulb** | * Type: The type of the actual light source within the fixture.<br>* Lumens: The light source's total luminous output in lumens.<br>* Color Temperature (K): The light source's color temperature in [Kelvins](https://en.wikipedia.org/wiki/Kelvin) |
-| **Lens** | * Name: The type/name of the lens, if applicable.<br>* Min. degrees: The fixture's minimum beam angle in [degrees](https://en.wikipedia.org/wiki/Degree_(angle)).<br>* Max. degrees: The fixture's maximum beam angle in [degrees](https://en.wikipedia.org/wiki/Degree_(angle)). |
-| **Electrical** | * Power Consumption: The fixture's total power consumption in [Watts](https://en.wikipedia.org/wiki/Watt).<br>* DMX Connector: The type of the fixture's DMX connector. |
-| **Dimensions** | * Weight: The fixture's total weight in [Kilograms](https://en.wikipedia.org/wiki/Kilogram).<br>* Width: The fixture's total horizontal width in [millimeters](https://en.wikipedia.org/wiki/Millimeter).<br>* Height: The fixture's total vertical height in [millimeters](https://en.wikipedia.org/wiki/Millimeter).<br>* Depth: The fixture's total depth in [millimeters](https://en.wikipedia.org/wiki/Millimeter). |
-| **Head(s)** | * Type: The method of focusing the beam on different areas. For stationary fixtures this can be set to Fixed.<br>* Pan Max Degrees: The maximum pan width in [degrees](https://en.wikipedia.org/wiki/Degree_(angle)).<br>* Tilt Max Degrees: The maximum tilt height in [degrees](https://en.wikipedia.org/wiki/Degree_(angle)). |
+| **Bombeta** | * Tipus: El tipus de la font de llum real dins del fixture.<br>* Lúmens: La sortida lluminosa total de la font de llum en lúmens.<br>* Temperatura del color (K): La temperatura de color de la font de llum en [Kelvins](https://ca.wikipedia.org/wiki/Temperatura_de_color) |
+| **Lent** | * Nom: El tipus/nom de la lent, si s'escau.<br>* Min. graus: L'angle mínim del feix del fixture en [graus](https://ca.wikipedia.org/wiki/Grau_sexagesimal).<br>* Max. graus: l'angle màxim del feix del fixture en [graus](https://ca.wikipedia.org/wiki/Grau_sexagesimal). |
+| **Elèctric** | * Consum d'energia: El consum total d'energia del fixture en [Watts](https://ca.wikipedia.org/wiki/Watt).<br>* Connector DMX: El tipus del connector DMX del fixture. |
+| **Dimensions** | * Pes: El pes total del fixture en [Kilograms](https://ca.wikipedia.org/wiki/Kilogram).<br>* Amplada: L'amplada horitzontal total del fixture en [mil·límetres](https://ca.wikipedia.org/wiki/Metre#M%C3%BAltiples_i_subm%C3%BAltiples).<br>* Alçada: L'alçada vertical total del fixture en [mil·límetres](https://ca.wikipedia.org/wiki/Metre#M%C3%BAltiples_i_subm%C3%BAltiples).<br>* Profunditat: La profunditat total del fixture en [mil·límetres](https://ca.wikipedia.org/wiki/Metre#M%C3%BAltiples_i_subm%C3%BAltiples). |
+| **Cap(s)** | * Tipus: El mètode d'enfocar el feix en diferents àrees. Per a fixtures estacionàries, això es pot establir a Fixa.<br>* Graus Max. Panoràmica: L'amplada màxima de la panoràmica en [graus](https://ca.wikipedia.org/wiki/Grau_sexagesimal).<br>* Graus Max. Inclinació: L'alçada màxima de la inclinació en [graus](https://ca.wikipedia.org/wiki/Grau_sexagesimal). |

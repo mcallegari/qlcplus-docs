@@ -12,6 +12,6 @@ media_order: 'qlcplus.svg,qlcplus-2023.svg'
 
 # Introducció
 
-Us donem la benvinguda a la  documentació de**Q Light Controller+**
+Us donem la benvinguda a la  documentació de **Q Light Controller+**
 
 Aquí podràs trobar tots els conceptes, fluxos de treball i consells i trucs per treballar amb QLC+ en el millor dels casos

@@ -1,68 +1,68 @@
 ---
-title: 'EFX Editor'
+title: 'Editor EFX'
 date: '12:13 21-08-2023'
 media_order: 'efx-general.png,efx-movement.png'
 ---
 
-The EFX editor, as its name suggests, is used to edit ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) functions. The view is split into two tabs:
+L'editor EFX, com el seu nom indica, s'utilitza per editar funcions ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx). La vista es divideix en dues pestanyes:
 
-* **General** tab is for selecting [Fixtures](/basics/glossary-and-concepts#fixtures), speed and fixture order.
-* **Movement** tab is for selecting details on how the fixtures should move their beams.
+* La pestanya **General** és per a seleccionar [Fixtures](/basics/glossary-and-concepts#fixtures), velocitat i ordre de fixture.
+* La pestanya **Moviment** és per a seleccionar detalls sobre com els fixtures han de moure els seus feixos de llum.
 
-### General Tab Controls
+### Controls Generals de les Pestanyes
 
 ![](efx-general.png)
 
 |     |     |
 | --- | --- |
-| ![](/basics/speed.png) | Adjust the EFX speed settings:<br><br>**Fade In:** Fade the EFX startup to target size<br>**Fade Out:** Currently not used<br>**Duration:** The duration of one full round using the selected pattern |
-| ![](/basics/player_play.png) | Enable the output and run the EFX to test how it looks like |
-| **EFX name** | Change the name of the EFX. |
-| **Fixture list** | **Step**: Shows the order in which the fixtures start their movement in serial/asymmetric order<br>**Fixture**: The name of each fixture that has been added to the EFX<br>**Mode**: The channels the EFX should control. They can be **Position**, **Dimmer** or **RGB**  <br>*Note*: when selecting RGB, you might want to enable the "Color Background" described below.<br>**Reverse**: When checked, the fixture reverses its movement as opposed to non-reversed fixtures. The "normal" direction is set by direction in the "Movement" page.<br>**Start Offset**: Value in degrees, where on the movement path this fixture should start |
-| ![](/basics/edit_add.png) | Add a [Fixture](/basics/glossary-and-concepts#fixtures) to the EFX, after the currently selected position. Since EFX is used for moving the head or mirror of an intelligent fixture, only fixtures with **pan and tilt** capability (8bit or 16bit) can be added to an EFX. |
-| ![](/basics/edit_remove.png) | Remove the selected fixtures from the EFX. |
-| ![](/basics/up.png) | Raise the selected fixture upwards (earlier) in serial order. |
-| ![](/basics/down.png) | Lower the selected fixture downwards (later) in serial order. |
-| **Fixture order** | Change the EFX's fixture order—see below. |
+| ![](/basics/speed.png) | Ajustar la configuració de velocitat d'EFX:<br><br>**Esvaïment:** Fade In d'EFX a la mida objectiu<br>** Fade Out:** Actualment no s'utilitza<br>**Durada:** La durada d'una ronda completa utilitzant el patró seleccionat |
+| ![](/basics/player_play.png) | Activa la sortida i executa l'EFX per provar com es veu |
+| **Nom del EFX** | Canvia el nom de l'EFX. |
+| **Llista de Fixtures** | **Pas**: Mostra l'ordre en què els fixtures inicien el seu moviment en ordre sèrie/asimètric<br>** Fixture**: El nom de cada fixture que s'ha afegit al<br>** mode** EFX: Els canals que l'EFX ha de controlar. Poden ser **Posició**, **Dimmer** o **RGB** <br>*Nota*: en seleccionar RGB, és possible que vulgueu habilitar el "Color de Fons" descrit a sota.<br>**Invers **: Quan està marcada, el fixture inverteix el seu moviment al contrari dels fixtures no invertits. La direcció «normal» s'estableix per la direcció a la pàgina «Moviment».<br>**Desplaçament Inicial**: Valor en graus, on en el camí del moviment aquest fixture hauria de començar |
+| ![](/basics/edit_add.png) | Afegeix un  [Fixture](/basics/glossary-and-concepts#fixtures) a l'EFX, després de la posició seleccionada. Com que l'EFX s'utilitza per moure el cap o el mirall d'un fixture intel·ligent, només es poden afegir a un EFX fixtures amb capacitat de **panoràmica i inclinació** (8 bits o 16 bits). |
+| ![](/basics/edit_remove.png) | Elimina els fixtures seleccionats de l'EFX. |
+| ![](/basics/up.png) | Apuja el fixture seleccionat cap amunt (anterior) en ordre de sèrie. |
+| ![](/basics/down.png) | Abaixa el fixture seleccionat cap avall (més tard) en ordre de sèrie. |
+| **Ordre del Fixture** | Canvieu l'ordre dels fixtures de l'EFX, vegeu més avall. |
 
-### Movement Tab Controls
+### Controls de la Pestanya Moviment
 
 ![](efx-movement.png)
 
 |     |     |
 | --- | --- |
-| **Pattern area** | Shows a 2D-projection of the fixtures' head/mirror movement. Every time you change a parameter, one small dot for each fixture travels the complete path in its selected direction from its start offset.<br><br>The speed of the movement reflects selected speed settings. |
-| **Direction** | Default direction of the fixtures (can be altered individually for each fixture by the checkbox in the **Reverse** column)<br><br>**Forward**: The fixtures move forwards along the pattern path<br>**Backward**: The fixtures move backwards along the pattern path |
-| **Run order** | **Loop**: Run thru the steps over and over again.<br>**Single Shot**: Run thru the steps once and then stop.<br>**Ping Pong**: Run thru the steps over and over again, reversing direction at both ends. |
-| **Pattern** | Select the movement pattern algorithm.<br><br>**Circle**<br>**Eight**<br>**Line**: goes from one end to the other and back; faster in the middle, slower at the ends<br>**Line2**: goes in one direction only; speed is always the same<br>**Diamond**<br>**Square**<br>**SquareChoppy**<br>**Leaf**<br>**Lissajous** |
-| **Parameters** | **Width**: Choose the pan width (0-255)<br>**Height**: Choose the tilt height (0-255)<br>**X Offset**: Move the pattern's horizontal (pan) centerpoint (0-255)<br>**Y Offset**: Move the pattern's vertical (tilt) centerpoint (0-255)<br>**Rotation**: Rotate the pattern along its axis (0-360 degrees)<br>**Start Offset**: Where along the path the movement should start (0-360 degrees)<br>**X Frequency**: Change the **Lissajous** pattern's X (horizontal) frequency (0-32)<br>**Y Frequency**: Change the **Lissajous** pattern's Y (vertical) frequency (0-32)<br>**X Phase**: Change the **Lissajous** pattern's X (horizontal) phase (0-360 degrees)<br>**Y Phase**: Change the **Lissajous** pattern's Y (vertical) phase (0-360 degrees) |
-| **Color Bacground** | When enabled, the EFX preview background will display a RGB palette, to show what the EFX does when controlling RGB channels |
-| **Relative** | See below. |
+| **Àrea del Patró** | Mostra una projecció 2D del moviment de capçal/mirall dels fixtures. Cada vegada que canvieu un paràmetre, un punt petit per a cada fixture recorre el camí complet en la seva direcció seleccionada des del seu desplaçament inicial.<br><br>La velocitat del moviment reflecteix els paràmetres de velocitat seleccionats. |
+| **Direcció** | Direcció per defecte dels fixtures (es pot alterar individualment per a cada fixture mitjançant la casella de selecció a la **Invers** columna)<br><br>**Endavant**: Els fixtures es mouen cap endavant al llarg del camí del patró<br>**Enrere**: Els fixtures es mouen cap enrere al llarg del camí del patró |
+| **Ordre d'Execució** | **Bucle**: recorre els passos una i altra vegada.** Tret únic**<br>: recorre els passos una vegada i atura't.<br>**Ping Pong**: Recorre pels passos una i altra vegada, invertint la direcció en ambdós extrems. |
+| **Patró** | Seleccioneu l'algorisme del patró de moviment.<br><br>**Cercle**<br>**Vui**<br>**Línia**: va d'un extrem a l'altre i cap enrere; més ràpid al mig, més lent als extrems<br>**Line2**: va en una sola direcció; la velocitat és sempre la mateixa<br>**Diamant**<br>**Quadrat**<br>**Quadrat Picat**<br>**Fulla**<br>**Lissajous** |
+| **Paràmetres** | **Amplada**: Tria l'amplada de panoràmica (0-255)<br>**Alçada**: Tria l'alçada d'inclinació (0-255)** Desplaçament X**<br>: Mou el punt central horitzontal (panoràmica) del patró (0-255)** Desplaçament Y**<br>: Mou el punt central vertical (inclinació) del patró (0-255)<br>**Rotació**: Gira el patró al llarg del seu eix (0-360 graus)<br>**Desplaçament inicial**: On al llarg del camí hauria de començar el moviment (0-360 graus)** Freqüència X**<br>: Canvia **** la freqüència X (horitzontal) del patró de **Lissajous** (0-32)** Freqüència Y**<br>: Canvia la freqüència Y (vertical) del patró de Lissajous (0-32)** Fase X**<br>: Canvia la fase X (horitzontal) del patró de **Lissajous** (0-360 graus)** Fase Y**<br>: Canvia la fase Y (vertical) del patró de **Lissajous** (0-360 graus) |
+| **Color de Fons** | Quan està habilitat, el fons de vista prèvia EFX mostrarà una paleta RGB, per a mostrar el que fa EFX en controlar els canals RGB |
+| **Relatiu** | Veure més avall. |
 
-### Fixture Order
+### Ordre dels Fixtures
 
-Fixtures taking part in an EFX function can be set to follow the algorithm in certain order:
+Els fixtures que participen en una funció EFX es poden establir per a seguir l'algorisme en cert ordre:
 
-* **Parallel:** all fixtures follow the same pattern synchronously
-* **Serial:** fixtures start following the pattern one after the other, with a little delay between each of them.
-* **Asymmetric:** all fixtures start moving simultaneously, but with similar offset as in the Serial mode.
+* **Paral·lel:** tots els fixtures segueixen el mateix patró de forma sincronitzada
+* **Sèriel:** els fixtures comencen a seguir el patró un darrere l'altre, amb un petit retard entre cadascun d'ells.
+* **Asimètric:** tots els fixtures comencen a moure's simultàniament, però amb un desplaçament similar al del mode sèrie.
 
-### Direction
+### Direcció
 
-EFX functions' direction can be reversed for all fixtures at once or on a per-fixture basis. The function can also be set to do an infinite loop, an infinite ping-pong-loop (direction is reversed after each pass) or it can run through just once, in a single-shot mode, after which it terminates by itself. If the function is set to do an infinite loop, it must be stopped manually.
+La direcció de les funcions EFX es pot invertir per a tots els fixtures a la vegada o per fixture. La funció també es pot establir per fer un bucle infinit, un bucle infinit de ping-pong (la direcció s'inverteix després de cada pas) o pot córrer només una vegada, en un mode d'una sola captura, després del qual acaba per si mateix. Si la funció està configurada per fer un bucle infinit, s'ha d'aturar manualment.
 
-### Relative Mode
+### Mode Relatiu
 
-EFX position is absolute by default-in other words, the selected EFX will exclusively control the X/Y position of the specified heads. When the Relative Mode checkbox is enabled, the EFX position acts as a layer on top of any position that has already been set (e.g. by a scene or even another EFX). In other words, the EFX is relative to current fixture position.
+La posició EFX és absoluta per defecte, en altres paraules, l'EFX seleccionat controlarà exclusivament la posició X/Y dels caps especificats. Quan la casella de selecció Mode relatiu està activada, la posició EFX actua com una capa sobre qualsevol posició que ja s'hagi establert (per exemple, per una escena o fins i tot un altre EFX). En altres paraules, l'EFX és relatiu a la posició actual del fixture.
 
-In absolute mode. the EFX can be set to run at specific head position (e. g. do circle downstage center, stage left, etc.)
+En mode absolut. El EFX es pot configurar per a executar-se a una posició específica del cap (e. g. fes un cercle al centre de l'escenari, a l'esquerra, etc.)
 
-In relative mode, the center of the preview window (offset x=127, offset y=127) will be applied to current head position.
+En mode relatiu, el centre de la finestra de vista prèvia (desplaçament x1127, desplaçament y.127) s'aplicarà a la posició actual del capçal.
 
-It is useful to reduce number of EFX presets: let's say we want to have 3 types of EFX (pan saw, tilt saw, circle) at 4 places (e.g. 4 stage corners). In absolute mode that means 3x4 = 12 presets. If we want to change something, we have to edit many functions. We most probably need also one VC button for each. In relative mode, we create one EFX preset for each EFX type (pan saw, tilt saw, circle), and we set offset to neutral (x=127, y=127). Then, we create scenes with PAN & TILT channels for each position. Now we have only 3+4 presets (and 3+4 VC buttons, preferably in 2 solo frames).
+És útil per reduir el nombre de predefinicions d'EFX: diguem que volem tenir 3 tipus d'EFX (serra de panoràmica, serra d'inclinació, cercle) a 4 llocs (per exemple, 4 cantonades del escenari). En mode absolut això vol dir 3x4 = 12 predefinits. Si volem canviar alguna cosa, hem d'editar moltes funcions. Probablement necessitem també un botó VC per a cadascun. En mode relatiu, creem un valor predefinit EFX per a cada tipus EFX (serra panoràmmica, serra inclinació, cercle), i establim el desplaçament a neutre (x1127, y.127). A continuació, creem escenes amb canals de Panoràmica i Inclinació per a cada posició. Ara només tenim 3+4 predefinicions (i 3+4 botons VC, preferiblement en 2 marcs individuals).
 
-**Tips&Tricks**
+**Consells i Trucs**
 
-In relative mode, it is also possible to fade between positions (set fade time in scenes) while the EFX is running.
+En mode relatiu, també és possible esvair entre posicions (estableix temps d'esvaïment en escenes) mentre l'EFX s'està executant.
 
-Using XYPad and relative mode, it is possible to move EFX to any place during the show.
+Utilitzant XYPad i mode relatiu, és possible moure EFX a qualsevol lloc durant l'espectacle.

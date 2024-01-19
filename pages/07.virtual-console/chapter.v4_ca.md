@@ -1,5 +1,5 @@
 ---
-title: 'Virtual Console'
+title: Consola Virtual
 date: '14:21 21-08-2023'
 taxonomy:
     category: docs
@@ -10,54 +10,54 @@ taxonomy:
         text-align: left;
     }
 </style>
-### Chapter 7
+### Capítol 7
 
-# Virtual Console
+# Consola Virtual
 
-The purpose of the Virtual Console is to act as a blank canvas on which the user can create a lighting desk layout of his choice. Users can place various GUI (Graphical User Interface) elements, called widgets, onto the console surface:
+L'objectiu de la Consola Virtual és actuar com un llenç en blanc sobre el qual l'usuari pot crear un disseny de taula d'il·luminació de la seva elecció. Els usuaris poden col·locar diversos elements de la interfície gràfica d'usuari, anomenats ginys, a la superfície de la consola:
 
-* Buttons for starting and stopping functions
-* Sliders for adjusting channel values or function intensity
-* Speed dials for adjusting function speeds
-* XY Pads for manually moving intelligent light beams
-* Cue lists for theatrical performance purposes
-* Frames for grouping various widgets together
-* Solo Frames for keeping only one button/function active at a time
-* Labels to act as static information banners for other widgets
+* Botons per a iniciar i aturar funcions
+* Controls Lliscants per ajustar els valors del canals o la intensitat de les funcions
+* Selectors de Velocitat per ajustar les velocitats de les funcions
+* Pads XY per moure manualment feixos de llum intel·ligents
+* Llistes Cue amb finalitats teatrals
+* Marcs per a agrupar diversos ginys junts
+* Marcs de Solo per mantenir només un botó/funció actiu alhora
+* Etiquetes per actuar com a bàners d'informació estàtica per a altres ginys
 
-The topmost part of the Virtual Console is dedicated to a tool bar that provides quick access to the most common actions: adding new widgets, copying them to/from the clipboard, configuring the widgets and, in case of emergencies, a panic button for stopping all currently running functions.
+La part superior de la Consola Virtual està dedicada a una barra d'eines que proporciona un accés ràpid a les accions més habituals: afegir ginys nous, copiar-los al/des del porta-retalls, configurar els ginys i, en cas d'emergències, un botó de pànic per aturar totes les funcions actualment en execució.
 
-Each Virtual Console widget's style can be configured (to some extent). Widgets can be moved anywhere and resized to any size on the Virtual Console canvas. See the article on [Virtual Console Widget Styling & Placement](styling-and-placement).
+Cada estil de Giny de la Consola Virtual es pot configurar (fins a cert punt). Els Ginys es poden moure a qualsevol lloc i redimensionar a qualsevol mida en el llenç de la consola virtual. Consulta l'article sobre l'[Estil i Col·locació dels Ginys de la Consola Virtual](styling-and-placement).
 
-### Tool Bar Controls
+### Controls de la Barra d'Eines
 
 |     |     |
 | --- | --- |
-| ![](/basics/button.png) | Add a new [Button](button) to the currently selected frame (CTRL+SHIFT+B) |
-| ![](/basics/buttonmatrix.png) | Add a new [Button Matrix](button-matrix) to the currently selected frame, using the dedicated dialog (CTRL+SHIFT+M) |
-| ![](/basics/slider.png) | Add a new [Slider](slider) to the currently selected frame (CTRL+SHIFT+S) |
-| ![](/basics/slidermatrix.png) | Add a new [Slider Matrix](slider-matrix) to the currently selected frame (CTRL+SHIFT+I) |
-| ![](/basics/rgbmatrix.png) | Add a new [Animation](animation) to the currently selected frame (CTRL+SHIFT+R) |
-| ![](/basics/knob.png) | Add a new [Knob](slider) to the currently selected frame. This is a convenient shortcut for adding a slider widget using the knob style (CTRL+SHIFT+K) |
-| ![](/basics/speed.png) | Add a new [Speed Dial](speed-dial) to the currently selected frame (CTRL+SHIFT+D) |
-| ![](/basics/xypad.png) | Add a new [XY Pad](xy-pad) to the currently selected frame (CTRL+SHIFT+X) |
-| ![](/basics/cuelist.png) | Add a new [Cue List](cue-list) to the currently selected frame (CTRL+SHIFT+C) |
-| ![](/basics/frame.png) | Add a new [Frame](frame) to the currently selected frame (CTRL+SHIFT+F) |
-| ![](/basics/soloframe.png) | Add a new [Solo Frame](solo-frame) to the currently selected frame (CTRL+SHIFT+O) |
-| ![](/basics/label.png) | Add a new [Label](label) to the currently selected frame (CTRL+SHIFT+L) |
-| ![](/basics/audioinput.png) | Add a new [Audio triggers](audio-triggers) widget to the currently selected frame (CTRL+SHIFT+A) |
-| ![](/basics/clock.png) | Add a new Clock widget to the currently selected frame (CTRL+SHIFT+T). This widget can be used for 3 purposes: System clock, Stopwatch and Countdown.  <br>In the last two cases and when QLC+ is in operate mode, clicking with the mouse left button will pause the counter, while clicking with the mouse right button will reset the counter to the initial value.  <br>When in system clock mode, it is possible to schedule when to start a QLC+ function during the time of day. |
-| ![](/basics/editcut.png) | Cut the currently selected widget(s) to the clipboard. Note that the widget(s) will only disappear when pasted into the new location (CTRL+X) |
-| ![](/basics/editcopy.png) | Copy the currently selected widget(s) to the clipboard (CTRL+C) |
-| ![](/basics/editpaste.png) | Paste the widget(s) in clipboard to the currently selected frame (CTRL+V) |
-| ![](/basics/editdelete.png) | Destroy the currently selected widget(s) completely. If a frame has been selected, this destroys everything inside it, including other frames (Delete) |
-| ![](/basics/edit.png) | Configure the currently selected widget using its own configuration dialog (CTRL+E) |
-| ![](/basics/editclear.png) | Rename the currently selected widget(s). |
-| ![](/basics/up.png) | Bring the selected widget to front (SHIFT+UP) |
-| ![](/basics/down.png) | Send the selected widget to back (SHIFT+DOWN) |
-| ![](/basics/color.png) | Change the background color of the selected widget (SHIFT+B) |
-| ![](/basics/image.png) | Set a background picture for the selected widget (SHIFT+I) |
-| ![](/basics/fontcolor.png) | Change the font color of the selected widget. |
-| ![](/basics/fonts.png) | Set the font properties of the selected widget (SHIFT+O) |
-| ![](/basics/configure.png) | Configure the Virtual Console properties such as the size workspace, the widgets' default properties and the Grand Master slider properties. |
-| ![](/basics/panic.png) | Stop all currently running functions. |
+| ![](/basics/button.png) | Afegeix un [Botó](boto) nou al marc seleccionat actualment (CTRL+MAJ+B) |
+| ![](/basics/buttonmatrix.png) | Afegeix una nova [Matriu de Botons](matriu-de-botons) al marc seleccionat actualment, utilitzant el diàleg dedicat (CTRL+MAJ+M) |
+| ![](/basics/slider.png) | Afegeix un nou [Slider/Control Lliscant](slider) al marc seleccionat (CTRL+MAJ+S) |
+| ![](/basics/slidermatrix.png) | Afegeix una nova [Matriu de Sliders/Controls Lliscants](matriu-de-sliders) al marc seleccionat actualment (CTRL+MAJ+I) |
+| ![](/basics/rgbmatrix.png) | Afegeix una nova [Animació](animacio) al marc seleccionat (CTRL+MAJ+R) |
+| ![](/basics/knob.png) | Afegeix una nova [Perilla/Knob](slider) al marc seleccionat. Aquesta és una drecera convenient per a afegir un giny de control lliscant utilitzant l'estil de perilla/knob (CTRL+MAJ+K) |
+| ![](/basics/speed.png) | Afegeix un nou [Selector de Velocitat](selector-de-velocitat) al marc seleccionat (CTRL+MAJ+D) |
+| ![](/basics/xypad.png) | Afegeix un nou [Pad XY](pad-xy) al marc seleccionat (CTRL+MAJ+X) |
+| ![](/basics/cuelist.png) | Afegeix una nova [Llista de Cues](llista-de-cues) al marc seleccionat (CTRL+MAJ+C) |
+| ![](/basics/frame.png) | Afegeix un nou [Marc](marc) al marc seleccionat (CTRL+MAJ+F) |
+| ![](/basics/soloframe.png) | Afegeix un nou [Marc de Solo](marc-solo) al marc seleccionat (CTRL+MAJ+O) |
+| ![](/basics/label.png) | Afegeix una [Etiqueta](etiqueta) nova al marc seleccionat actualment (CTRL+MAJ+L) |
+| ![](/basics/audioinput.png) | Afegeix un nou [Giny Activador d'Àudio](activador-audio) al marc seleccionat (CTRL+MAJ+A) |
+| ![](/basics/clock.png) | Afegeix un Giny de Rellotge nou al marc seleccionat (CTRL+MAJ+T). Aquest giny es pot utilitzar per a 3 propòsits: Rellotge del Sistema, Cronòmetre i Compte Enrere.  <br>En els dos últims casos i quan QLC+ estigui en mode d'operació, fer clic amb el botó esquerre del ratolí farà pausa al comptador, mentre que fer clic amb el botó dret del ratolí reiniciarà el comptador al valor inicial.  <br>Quan està en mode rellotge del sistema, és possible programar quan iniciar una funció QLC+ durant l'hora del dia. |
+| ![](/basics/editcut.png) | Retalla els ginys seleccionats al porta-retalls. Tingueu en compte que els ginys només desapareixeran quan s'enganxin a la nova ubicació (CTRL+X) |
+| ![](/basics/editcopy.png) | Copia els ginys seleccionats al porta-retalls (CTRL+C) |
+| ![](/basics/editpaste.png) | Enganxa els ginys del porta-retalls al marc seleccionat (CTRL+V) |
+| ![](/basics/editdelete.png) | Destrueix completament el/s giny/s seleccionat/s. Si s'ha seleccionat un marc, això destruirà tot el que hi ha dins, inclosos altres marcs (Suprimir) |
+| ![](/basics/edit.png) | Configura el giny seleccionat utilitzant el seu propi diàleg de configuració (CTRL+E) |
+| ![](/basics/editclear.png) | Canvia el nom del/s giny/s seleccionat/s. |
+| ![](/basics/up.png) | Porta el giny seleccionat al davant (MAJ+UP) |
+| ![](/basics/down.png) | Envia el giny seleccionat cap enrere (MAJ+AVALL) |
+| ![](/basics/color.png) | Canvia el color de fons del giny seleccionat (MAJ+B) |
+| ![](/basics/image.png) | Estableix una imatge de fons per al giny seleccionat (MAJ+I) |
+| ![](/basics/fontcolor.png) | Canvia el color del tipus de lletra del giny seleccionat. |
+| ![](/basics/fonts.png) | Estableix les propietats del tipus de lletra del giny seleccionat (MAJ+O) |
+| ![](/basics/configure.png) | Configureu les propietats de la Consola Virtual, com ara la mida de l'espai de treball, les propietats predeterminades dels ginys i les propietats del control lliscant del Grand Master. |
+| ![](/basics/panic.png) | Atura totes les funcions en execució. |

@@ -1,50 +1,50 @@
 ---
-title: 'Audio Triggers'
+title: Activadors d'Àudio
 date: '03:46 22-08-2023'
 ---
 
-Starting from QLC+ version 4.4.0, this functionality allows you to use an audio input source such as a microphone, to add more life to your light shows.
+A partir de la versió 4.4.0 de QLC+, aquesta funcionalitat us permet utilitzar una font d'entrada d'àudio, com ara un micròfon, per donar més vida als teus espectacles de llums.
 
 Introducció
 ------------
 
-When clicking on the ![](/basics/audioinput.png) icon, an audio trigger widget will be added to your Virtual Console.  
-The widget's graphics area shows live monitoring of the captured audio, displaying a number of spectrum bars and a volume bar.  
-On the bottom you can see the range of frequencies analyzed by QLC+
+En fer clic a la icona ![](/basics/audioinput.png), s'afegirà un giny d'activador d'àudio a la vostra consola virtual.  
+L'àrea de gràfics del giny mostra el seguiment en directe de l'àudio capturat, mostrant un nombre de barres d'espectre i una barra de volum.  
+A la part inferior es pot veure el rang de freqüències analitzades per QLC+
 
-Configuration
+Configuració
 -------------
 
-When double clicking on the widget in design mode, a panel is displayed showing a complete set of options to tune the audio trigger's functionality.  
-The first thing you can configure is the number of spectrum bars that you want to display and that you will need during your live show. The number accepted is between 5 and 32.  
-Once the number of bars has been decided, you can proceed to assign a functionality to each bar. There is a list showing the following options for the volume and spectrum bars:
+En fer doble clic al giny en mode de disseny, es mostra un plafó que mostra un conjunt complet d'opcions per afinar la funcionalitat de l'activador d'àudio.  
+El primer que pots configurar és el nombre de barres d'espectre que vols mostrar i que necessitaràs durant el teu directe. El nombre acceptat és d'entre 5 i 32.  
+Un cop decidit el nombre de barres, podeu procedir a assignar una funcionalitat a cada barra. Hi ha una llista que mostra les opcions següents per a les barres de volum i espectre:
 
 
 |     |     |
 | --- | --- |
-| **Name** | Can be "Volume Bar" or a spectrum bar shown as #number (start frequency - end frequency). Example: #5 (1250Hz - 1562Hz) |
-| **Type** | Indicates the type of functionality the bar will control. It can be:<br><br>![](/basics/uncheck.png) **None** - No functionality assigned<br>![](/basics/intensity.png) **DMX** - Controls single DMX channels<br>![](/basics/function.png) **Function** - Controls a QLC+ function<br>![](/basics/virtualconsole.png) **VC Widget** - Controls a Virtual Console widget (at the moment only buttons, sliders, tapping of speed dials and next cue of cue lists) |
-| **Assign** | When a type is selected, a button with a ![](/basics/attach.png) icon is displayed to allow you to connect the bar to the desired functionality. Depending on which type you chose, clicking on this button will display the DMX channels, Functions or Virtual Console widgets selection dialogs. |
-| **Info** | This column displays some additional information about the bar--functionality association.  <br>Depending on the type you chose, you will find the number of DMX channels, the function name or the VC Widget name selected displayed here |
-| **Disable threshold** | When selecting a Function or a VC Widget button, this column allows you to set a deactivation threshold percentage. When the spectrum or volume bar goes below this value, the associated function/VC button will be stopped/deactivated. |
-| **Enable threshold** | When selecting a Function or a VC Widget button, this column allows you to set an activation threshold percentage. When the spectrum or volume bar goes above this value, the associated function/VC button will be started/activated. |
-| **Divisor** | For speed dials and cue lists, this will divide the taps by the selected number - only every n-th tap will be actually sent to the speed dial. In other words, the tap happens only on every n-th beat. If you want the tap on every beat, enter 1, for every other beat enter 2. For once in a 4/4 measure, enter 4. For once in 3 4/4 measures, enter 12. Maximum is 64. |
+| **Nom** | Pot ser "Barra de Volum" o una barra d'espectre mostrada com a #nombre (freqüència inicial - freqüència final). Exemple: #5 (1250Hz - 1562Hz) |
+| **Tipus** | Indica el tipus de funcionalitat que controlarà la barra. Pot ser:<br><br>![](/basics/uncheck.png) **Cap** - Sense funcionalitat assignada<br>![](/basics/intensity.png) **DMX** - Controla canals DMX individuals<br>![](/basics/function.png) **Funció** - Controla una funció QLC+<br>![](/basics/virtualconsole.png) **Giny VC** - Controla un giny de Consola Virtual (de moment només botons, lliscadors, tocs de selectors de velocitat i següent cue de llistes de cues) |
+| **Assigna** | Quan se selecciona un tipus, es mostra un botó amb una icona ![](/basics/attach.png) per a permetre connectar la barra a la funcionalitat desitjada. Depenent del tipus que trieu, en fer clic en aquest botó es mostraran els diàlegs de selecció de canals DMX, Funcions o ginys de la consola virtual. |
+| **Informació** | Aquesta columna mostra informació addicional sobre l'associació barra-funcionalitat.  <br>Depenent del tipus que trieu, trobareu aquí el nombre de canals DMX, el nom de la funció o el nom del Giny VC seleccionat |
+| **Llindar Desactiva** | En seleccionar una Funció o un Botó de la Consola Virtual, aquesta columna permet establir un percentatge de llindar de desactivació. Quan la barra d'espectre o volum es trobi per sota d'aquest valor, el botó de funció/VC associada s'aturarà/desactivarà. |
+| **Llindar Activa** | En seleccionar una Funció o un Botó de la Consola Virtual, aquesta columna permet establir un percentatge del llindar d'activació. Quan la barra d'espectre o volum va per sobre d'aquest valor, s'iniciarà/activarà la funció/Botó VC associada. |
+| **Divisor** | Per als selectors de velocitat i les llistes de cues, això dividirà les tocs pel nombre seleccionat - només cada toc n-èsim s'enviarà realment al selector de velocitat. En altres paraules, el toc només es produeix cada enèsima pulsació. Si voleu tocar cada toc, introduïu 1, per a cada altre batec introduïu 2. Per una vegada en un compàs 4/4, introduïu 4. Per una vegada en 3 compassos 4/4, introduïu 12. El màxim és de 64. |
 
-### DMX channels
+### Canals DMX
 
-You can choose one or more channels of the currently patched fixtures. Those channels will be set proportionally to total volume, or volume in a particular frequency band.
+Podeu triar un o més canals dels fixtures pedaçats actualment. Aquests canals s'establiran proporcionalment al volum total, o volum en una banda de freqüència particular.
 
-### Functions
+### Funcions
 
-You can select one or more functions. Those functions are started when volume goes above the Enable threshold in respective band, and stopped when it goes below the Disable threshold.
+Podeu seleccionar una o més funcions. Aquestes funcions s'inicien quan el volum va per sobre del llindar Activa en la banda respectiva, i s'aturen quan va per sota del llindar Inhabilita.
 
-### VC Widgets
+### Ginys VC
 
-You can select only **ONE** widget here, either a button, a slider or a speed dial. Depending on the type:
+Aquí només pots seleccionar **UN** giny, ja sigui un botó, un control lliscant o un selector de velocitat. Depenent del tipus:
 
-* **Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
-* **Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
-* **Speed dial** is tapped.
-* **Cue List** "Next Cue" is pressed.
+* El **Botó** es prem quan el volum supera el llindar Habilita i s'allibera quan el volum està per sota del llindar Deshabilita (similar a les funcions).
+* **Slider** es mou en proporció al volum (similar als canals DMX). Per a un control lliscant els llindars no s'apliquen.
+* **Selector Velocitat** s'ha tocat.
+* **Llista de Cues** es prem "Següent Cue".
 
-For **Speed dials** and **Cue Lists**, the tap/button press happens when the volume goes above the Enable threshold, and won't happen again until the volume falls below the Disable threshold. This probably means you will have to set the thresholds a little closer to each other than for buttons.
+Per a **Selectors de Velocitat** i **Llistes de Cues**, la premuda de toc/botó passa quan el volum va per sobre del llindar d'Activació, i no tornarà a passar fins que el volum caigui per sota del llindar Desactivació. Això probablement significa que haureu d'establir els llindars una mica més a prop l'un de l'altre que per als botons.

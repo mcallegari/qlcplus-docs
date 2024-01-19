@@ -1,12 +1,12 @@
 ---
-title: 'Select Input Channel'
+title: 'Selecció Canal de Entrada'
 date: '03:50 22-08-2023'
 ---
 
-Whenever an Input Channel needs to be selected, for example when manually attaching a channel from an [Input Plugin](/basics/glossary-and-concepts#input-output-plugins) to a [Virtual Console](/virtual-console) widget, the Select Input Channel dialog is used.
+Sempre que cal seleccionar un Canal d'Entrada, per exemple, quan s'adjunta manualment un canal des de un [Connector d'Entrada](/basics/glossary-and-concepts#connectors-entrada-sortida) a un giny de la [Consola Virtual](/virtual-console), s'utilitza el diàleg Seleccionar Canal d'Entrada.
 
-The dialog is very straightforward; there is a list of input universes and each universe that has an [Input Line](/basics/glossary-and-concepts#input-output-plugins) attached to it, displays the line's (or the attached device's) name after the universe number. Under each operational universe, there is a list of channels provided by that universe. You can choose from these channels or select one manually.
+El diàleg és molt senzill; hi ha una llista d'universos d'entrada i cada univers que té una [Línia d'Entrada](/basics/glossary-and-concepts#connectors-entrada-sortida) adjunta, mostra el nom de la línia (o del dispositiu adjunt) després del número d'univers. Sota cada univers operatiu, hi ha una llista de canals proporcionats per aquest univers. Podeu triar entre aquests canals o seleccionar-ne un manualment.
 
-If you have an [Input Profile](/basics/glossary-and-concepts#input-profiles) attached to the universe, you see the individual channel names and numbers for the device. If there isn't a Profile attached to an input universe, you will need to type the channel number manually, by double-clicking the item that tells you to do that and then type in the channel number manually. See also the [tutorial on input profiles](howto-input-profiles)
+Si teniu un [Perfil d'Entrada](/basics/glossary-and-concepts#perfils-de-entrada) adjunt a l'univers, veureu els noms i números de canals individuals del dispositiu. Si no hi ha un perfil adjunt a un univers d'entrada, haureu d'escriure el número del canal manualment, fent doble clic a l'element que us indica que ho feu i després escriure el número del canal manualment. Vegeu també el [tutorial sobre perfils d'entrada](howto-input-profiles)
 
-**NOTE:** All [Virtual Console](/virtual-console) widgets that have been made _external-input-aware_, provide an option for automatically detecting the input channel as well, so that you don't need do this selection manually.
+**NOTA:** Tots els ginys de la [Consola Virtual](/virtual-console) que s'han _convertit_ en coneixedores d'entrades externes també ofereixen una opció per detectar automàticament el canal d'entrada, de manera que no cal que feu aquesta selecció manualment.

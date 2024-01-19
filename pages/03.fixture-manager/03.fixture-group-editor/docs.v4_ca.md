@@ -1,22 +1,22 @@
 ---
-title: 'Fixture Group Editor'
+title: 'Editor de Grups de Fixtures'
 taxonomy:
     category:
         - docs
 ---
 
-The Fixture Group Editor is used when you select a [Fixture Group](/basics/glossary-and-concepts#fixture-group) in the [Fixture Manager](/fixture-manager). This editor can be used to describe the physical arrangement of the [fixtures](/basics/glossary-and-concepts#fixtures) and their [heads](/basics/glossary-and-concepts#head) that are assigned to the group.
+L'editor de grups de Fixture s'utilitza quan seleccioneu un [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures) en el [Gestor de Fixtures](/gestor-de-fixtures). Aquest editor es pot utilitzar per descriure la disposició física dels [fixtures](/basics/glossary-and-concepts#fixtures) i els seus [capçals](/basics/glossary-and-concepts#capçals) que s'assignen al grup.
 
 ### Controls
 
-Each Fixture Group has a name (for your convenience) and the fixture configuration in an unlimited \[X,Y\] grid. You can adjust the size of the grid as well as the placement of individual fixture heads on the grid.
+Cada Grup de Fixtures té un nom (per a la vostra comoditat) i la configuració del fixture en una graella \[X,Y\] il·limitada. Podeu ajustar la mida de la quadrícula així com la col·locació de caps de fixture individuals a la graella
 
 |     |     |
 | --- | --- |
-| **Fixture Group Name** | Change the name of the group. |
-| ![](/basics/forward.png) | Add fixture heads to the currently selected row, filling each subsequent column on that row with the selected fixture heads. You can select individual fixture heads or complete fixtures to be added on the selected row. |
-| ![](/basics/down.png) | Add fixture heads to the currently selected column, filling each subsequent row on that column with the selected fixture heads. You can select individual fixture heads or complete fixtures to be added on the selected column. |
-| ![](/basics/edit_remove.png) | Remove the selected fixture head from the grid (and the group). |
-| **Fixture grid** | The fixture grid displays the current fixture/head arrangement in the selected group. You can switch places between two heads as well as fill up spaces or create empty spaces between heads simply by dragging the heads on top of each other in the grid.<br><br>When using fixture groups in RGB Matrices, each cell in the grid represents one colored (or monochrome) pixel in a graphic scene rendered by the RGB Matrix.<br><br>Each cell is displayed with an info text that contains the following information:<br><br>* The name of the fixture as well as an icon<br>* **H:** represents the head number<br>* **A:** represents the fixture's address<br>* **U:** represents the fixture's universe |
-| **Width** | Adjusts the grid width (number of columns on the X-axis). |
-| **Height** | Adjusts the grid height (number of rows on the Y-axis). |
+| **Nom del Grup de Fixtures** | Canvia el nom del grup. |
+| ![](/basics/forward.png) | Afegeix capçals de fixture a la fila seleccionada, omplint cada columna posterior d'aquesta fila amb els caps de fixture seleccionats. Podeu seleccionar capçals de fixture individuals o fixtures complets que s'afegiran a la fila seleccionada. |
+| ![](/basics/down.png) | Afegeix capçals de fixture a la columna seleccionada, omplint cada fila posterior d'aquesta columna amb els caps de fixture seleccionats. Podeu seleccionar capçals de fixture individuals o fixtures complets que s'afegiran a la columna seleccionada. |
+| ![](/basics/edit_remove.png) | Elimina el capçal del fixture seleccionat de la graella (i del grup). |
+| **Graella de Fixture** | La graella de fixtures mostra la disposició actual de fixture/capçals en el grup seleccionat. Podeu canviar de lloc entre dos caps així com omplir espais o crear espais buits entre capçals simplement arrossegant els capçals un sobre l'altre a la graella.<br><br>Quan s'utilitzen grups de fixture a les matrius RGB, cada cel·la a la graella representa un píxel de color (o monocrom) en una escena gràfica renderitzada per la matriu RGB.<br><br>Cada cel·la es mostra amb un text informatiu que conté la següent informació:<br><br>* El nom del fixture així com una icona<br>*** representa el número de cap<br>*<br>0 A: <br>1 representa l'adreça del fixture<br>* **U:** representa l'univers del fixture |
+| **Amplada** | Ajusta l'amplada de la graella (nombre de columnes a l'eix X). |
+| **Alçada** | Ajusta l'alçada de la graella (nombre de files a l'eix Y). |

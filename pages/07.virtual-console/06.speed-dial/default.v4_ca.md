@@ -1,108 +1,108 @@
 ---
-title: 'Speed Dial'
+title: Selector de Velocitat
 date: '03:18 22-08-2023'
 media_order: speeddial.png
 ---
 
-Speed dials are meant for adjusting the speed of a set of functions from virtual console, much like bus-mode sliders in the previous versions of QLC+. While the bus concept relied on assigning functions and a slider to the same bus, the speed dial's method is a simpler and more straightforward one: The user directly selects a set of functions whose speed properties are controlled with the dial, thus removing the need for buses in the middle.
+Els Selectors de Velocitat estan dissenyats per ajustar la velocitat d'un conjunt de funcions des de la consola virtual, igual que els controls lliscants en mode bus en les versions anteriors de QLC+. Mentre que el concepte de bus es basava en l'assignació de funcions i un control lliscant al mateix bus, el mètode del Selector de Valocitat és més senzill i directa: L'usuari selecciona directament un conjunt de funcions les propietats de velocitat de les quals es controlen amb el selector, eliminant així la necessitat de busos al mig.
 
 
-The widget is displayed as following:
+El giny es mostra de la següent manera:
 
 ![](speeddial.png)
 
-### Widget elements
+### Elements del Giny
 
 |     |     |
 | --- | --- |
-| **(1) Time control buttons** | The plus and minus buttons increment or decrement by one the currently focused time field of **(4)**. By default the focused field is milliseconds |
-| **(2) Dial** | The dial can be manually rotated indefinitely to adjust the current focused time field of **(4)**. By default the focused field is milliseconds |
-| **(3) Tap Button** | The tap button sets the Speed Dial time value to the interval between the button press/release actions. The faster it will be pressed, the lower the time value will be |
-| **(4) Time fields** | The 4 time fields display the current time value of the Speed Dial and they can be adjusted individually either by entering a number with a keyboard, or by using the time controls buttons **(1)**, the dial **(2)**, the tap button **(3)** or presets **(11)**. |
-| **(5) Divider button** | Divide the current time factor by 2 and apply it to the current Speed Dial time.  <br>A factor lower than 1x will become a fraction like 1/2x, 1/4x, etc |
-| **(6) Time factor** | Displays the current factor multiplied by the time currently displayed in **(4)**.  <br>A factor lower than 1x is a divider. Example: time = 8s.28, factor = 1/4x, result = 02s.07 |
-| **(7) Multiplier button** | Multiply the current time factor by 2 and apply it to the current Speed Dial time. |
-| **(8) Reset button** | Reset the current time factor to 1x and apply it to the current Speed Dial time. |
-| **(9) Factored time** | Displays the result of the Speed Dial time multiplied by the current time factor **(6)** |
-| **(10) Apply button** | Applies the current Speed Dial time to the Functions associated. This is useful when multiple Speed Dials are present in a Virtual Console |
-| **(11) Preset buttons** | This area displays the time presets, if present, added by the user |
+| **(1) Botons de control de temps** | Els botons més i menys incrementen o disminueixen en un el camp de temps actualment enfocat de **(4)**. Per defecte, el camp enfocat és mil·lisegons |
+| **(2) Selector** | El selector es pot girar manualment indefinidament per ajustar el camp de temps enfocat actualment **(4)**. Per defecte, el camp enfocat és mil·lisegons |
+| **(3) Botó Toc** | El botó de toc estableix el valor de temps del  selector de velocitat a l'interval entre les accions de prémer/deixar anar el botó. Com més ràpid es prem, menor serà el valor del temps |
+| **(4) Camps de Temps** | Els 4 camps de temps mostren el valor de temps actual del Selector de Velocitat i es poden ajustar individualment introduint un número amb un teclat, o utilitzant els botons de control de temps **(1)**, el selector **(2)**, el botó de toc **(3)** o els predefinits **(11)**. |
+| **(5) Botó Divisor** | Divideix el factor de temps actual per 2 i l'aplica al temps del selector de velocitat actual.  <br>Un factor inferior a 1x es convertirà en una fracció com 1/2x, 1/4x, etc |
+| **(6) Factor de Temps** | Mostra el factor actual multiplicat per el temps que es mostra actualment a **(4)**.  <br>Un factor inferior a 1x és un divisor. Exemple: temps  8 8s.28, factor , 1/4x, resultat , 02s.07 |
+| **(7) Botó Multiplicador** | Multiplica el factor de temps actual per 2 i l'aplica al temps del selector de velocitat actual. |
+| **(8) Botó de Reinici** | Restableix el factor de temps actual a 1x i l'aplica al temps del selector de velocitat actual. |
+| **(9) Temps Factoritzat** | Mostra el resultat del temps del selector de velocitat multiplicat pel factor de temps actual **(6)** |
+| **(10) Botó Aplica** | Aplica el temps del selector de velocitat actual a les funcions associades. Això és útil quan hi ha múltiples Selectors de Velocitat en una consola virtual |
+| **(11) Botons de Preselecció** | Aquesta àrea mostra els valors predefinits de temps, si estan presents, afegits per l'usuari |
 
-### Operation
+### Operació
 
-The speed dial itself looks and works just as the same as the speed dials in various function editors: There is a **big dial (2)** in the middle that increases the time when rotated clockwise and decreases it when rotated counter-clockwise. The plus ![](/basics/edit_add.png) and minus ![](/basics/edit_remove.png) buttons **(1)** are an alternative way of adjusting the speed.
+El selector de velocitat en si sembla i funciona igual que els selectors de velocitat en diversos editors de funcions: Hi ha un selector gran **(2)** al mig que augmenta el temps quan es gira en sentit horari i el disminueix quan es gira en sentit antihorari. Els botons més ![](/basics/edit_add.png) i menys ![](/basics/edit_remove.png) **(1)** són una forma alternativa d'ajustar la velocitat.
 
-The **current time** value **(4)** is displayed in four parts. When any of these fields is clicked, the dial and the plus/minus buttons will increase/decrease that unit of time. The mouse wheel can also be used instead of the dial/buttons and the fields also accept values entered on the numeric keypad.
+El valor **temps actual** **(4)** es mostra en quatre parts. Quan es fa clic en qualsevol d'aquests camps, el selector/dial i els botons més/menys augmentaran/disminuiran aquesta unitat de temps. La roda del ratolí també es pot utilitzar en lloc dels botons de marcatge i els camps també accepten valors introduïts al teclat numèric.
 
-* **h**: Hours
-* **m**: Minutes
-* **s**: Seconds
-* **.xx**: Centiseconds (100ths of a second)
+* **h**: Hores
+* **m**: Minuts
+* **s**: Segons
+* **.xx**: Centisegons (100 de segon)
 
-The **tap** button **(3)** can be used to match the time to a beat. The elapsed time between clicks is measured and this time is set for the controlled functions, just as if the dial had been adjusted to that particular time.
+El botó de  **toc** **(3)** es pot utilitzar per fer coincidir el temps amb un temps de ritme. El temps transcorregut entre clics es mesura i aquest temps s'estableix per a les funcions controlades, igual que si el selector/dial s'hagués ajustat a aquest temps en particular.
 
-For cuelists/chasers and RGB Matrices, the tap button advances the function to next step/position when speed dial is set to adjust duration. The tapped tempo must be more than 1/4 of the original duration.
+Per a cuelists/chasers i matrius RGB, el botó de prémer avança la funció al següent pas/posició quan es selecciona la velocitat per a ajustar la durada. El tempo marcat ha de ser més de 1/4 de la durada original.
 
-### Configuration - Functions tab
+### La pestanya Configuració - Funcions
 
-Speed dials can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the speed dial itself.
+Els selectors de velocitat es poden configurar amb el botó de propietats ![](/basics/edit.png) que es troba a la barra d'eines o fent doble clic al marcatge de velocitat.
 
-**Speed Dial Name**Change the dial's name.**Function table**
+**Nom del Selector de Velocitat** Canvia el nom del Selector.** Taula de funcions**
 
-Displays the list of functions, whose speed value(s) are being controlled by the dial.
+Mostra la llista de funcions, els valors de velocitat de les quals s'estan controlant mitjançant el selector.
 
-For each speed value (fade in, fade out, duration), it is possible to set a multiplier.
+Per a cada valor de velocitat (esvaïment d'entrada, esvaïment de sortida, durada), és possible establir un multiplicador.
 
 |     |     |
 | --- | --- |
-| **Fade In factor** | Select a multiplier to adjust the functions' [fade in speed](/basics/glossary-and-concepts#functions) |
-| **Fade Out factor** | Select a multiplier to adjust the functions' [fade out speed](/basics/glossary-and-concepts#functions) |
-| **Duration factor (+tap)** | Select a multiplier to adjust the functions' [duration](/basics/glossary-and-concepts#functions) |
+| **Factor d'Esvaïment d'Entrada/Fade In** | Selecciona un multiplicador per ajustar la [velocitat d'esvaïment d'entrada/Fade In](/basics/glossary-and-concepts#functions) de les funcions |
+| **Factor d'esvaïment de sortida/Fade Out** | Selecciona un multiplicador per ajustar la [velocitat d'esvaïment de sortida/Fade Out](/basics/glossary-and-concepts#functions) de les funcions |
+| **Factor de Durada (+toc)** | Selecciona un multiplicador per ajustar la [durada](/basics/glossary-and-concepts#functions) de les funcions |
 
-This multiplier will be applied to the speed dial value before adjusting the functions' speed value.
+Aquest multiplicador s'aplicarà al valor del selector abans d'ajustar el valor de la velocitat de les funcions.
 
-Select **(Not Sent)** so the functions' speed value will not be affected by this speed dial.
+Seleccioneu **(No enviat)** de manera que el valor de velocitat de les funcions no es veurà afectat per aquest selector.
 
-![](/basics/edit_add.png)Add function(s) to be controlled by the speed dial.![](/basics/edit_remove.png)Remove the selected functions from the speed dial's list of controlled functions.
+![](/basics/edit_add.png)Afegeix les funcions a controlar pel selector.![](/basics/edit_remove.png)Elimina les funcions seleccionades de la llista de funcions controlades del selector.
 
-### Configuration - Input tab
+### Configuració - Pestanya Entrada
 
-Input from an external controller can be configured here
+L'entrada d'un controlador extern es pot configurar aquí
 
-* **Absolute Value**: Select an absolute time range (and precision) that an external signal will control
-* **Tap**: Connect a signal or a key combination to the Speed Dial Tap button **(3)**
-* **Apply**: Connect a signal or a key combination to the Speed Dial apply button **(10)**
+* **Valor absolut**: Seleccioneu un interval de temps absolut (i precisió) que controlarà un senyal extern
+* **Toc**: Connecta un senyal o una combinació de tecles al botó Toc del Selector de Velocitat **(3)**
+* **Aplica**: Connecta un senyal o una combinació de tecles al botó d'aplicació del selector **(10)**
 
-one for value with minimum and maximum and another for tap button.
+un per al valor amb mínim i màxim i un altre per al botó de toc.
 
-### Configuration - Appearance tab
+### Configuració - Pestanya Aparença
 
-Individual visibility of the widget's layout elements can be switched on or off here. This way it is possible to save some screen real estate if some of the fields are not needed (e.g. when controlled by an external controller, the big dial is not needed).
+La visibilitat individual dels elements de disposició del giny es pot activar o desactivar aquí. D'aquesta manera és possible estalviar espai a la pantalla si alguns dels camps no són necessaris (per exemple, quan es controla per un controlador extern, no es necessita la gran esfera del selector).
 
 |     |
 | --- |
-| **Show the plus and minus buttons** |
-| **Show the central dial** |
-| **Show the tap button** |
-| **Show the hours field** |
-| **Show the minutes field** |
-| **Show the seconds field** |
-| **Show the milliseconds field** |
-| **Show multiplier and divider buttons** |
-| **Show the apply button** |
+| **Mostra els botons més i menys** |
+| **Mostra el selector central** |
+| **Mostra el botó de toc** |
+| **Mostra el camp d'hores** |
+| **Mostra el camp de minuts** |
+| **Mostra el camp de segons** |
+| **Mostra el camp de mil·lisegons** |
+| **Mostra els botons multiplicador i divisor** |
+| **Mostra el botó d'aplicació** |
 
-### Configuration - Mutliplier tab
+### Configuració - Pestanya de Multiplicador
 
-Here it is possible to select if the multiply factor should be reset when the dial **(2)** is manually adjusted and individual external controls for the multiplier button **(5)**, the divider button **(7)** and the reset factor button **(8)**
+Aquí és possible seleccionar si el factor multiplicador s'ha de restablir quan el selector **(2)** s'ajusta manualment i els controls externs individuals per al botó multiplicador **(5)**, el botó divisor **(7)** i el botó factor de reinici **(8)**
 
-### Configuration - Presets tab
+### Configuració - Pestanya Preajustos
 
-A preset is a way to have a quick access to a predifined value for a speed dial.  
-Each preset is represented as a button in the speed dial widget layout, and can be either clicked with the mouse or pressed on a touchscreen, or associated to a key combination or an external controller input line.  
-On the left of the preset tab, there is the list of presets. When selecting a preset in this list, the button on the right will be able to edit its properties.
+Un valor predefinit és una manera de tenir un accés ràpid a un valor predifinit per a un selector de velocitat.  
+Cada predefinit es representa com un botó en la disposició del giny de selector de velocitat, i es pot fer clic amb el ratolí o prémer en una pantalla tàctil, o associar-se a una combinació de tecles o a una línia d'entrada de controlador extern.  
+A l'esquerra de la pestanya predefinit, hi ha la llista de predefinits. En seleccionar un predefinit d'aquesta llista, el botó de la dreta podrà editar les seves propietats.
 
 |     |     |
 | --- | --- |
-| **![](/basics/edit_add.png) Add preset** | Add a preset |
-| **![](/basics/edit_remove.png) Remove preset** | Remove selected preset |
-| **![](/basics/editclear.png) Preset name** | Edit the selected preset's name. By the default the name is the dial time. |
-| ![](/basics/speed.png)**Speed dial** | Edit the selected preset's time value |
+| **![](/basics/edit_add.png) Afegeix un predefinit** | Afegeix un predefinit |
+| **![](/basics/edit_remove.png) Elimina el predefinit** | Elimina el predefinit seleccionat |
+| **![](/basics/editclear.png) Nom del predefinit** | Edita el nom del predefinit seleccionat. Per defecte, el nom és el temps del selector. |
+| ![](/basics/speed.png)**Selector de Velocitat** | Edita el valor de temps del predefinit seleccionat |
