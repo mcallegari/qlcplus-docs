@@ -32,7 +32,7 @@ Pestanyes de Grups de Canals
 -------------------
 
 Aquesta pestanya només es mostrarà si se seleccionen un o més grups de canals a la pestanya General.  
-Cada grup de canals es mostrarà amb un botó d'accés ràpid de macros ([Feu clic i aneu](/basics/glossary-and-concepts#click-and-go) si s'admet), una etiqueta amb el valor del grup, un fader i el nom del grup.
+Cada grup de canals es mostrarà amb un botó d'accés ràpid de macros ([Feu clic i aneu](/basics/glossary-and-concepts#feu-clic-i-aneu) si s'admet), una etiqueta amb el valor del grup, un fader i el nom del grup.
 
 Pestanyes de Fixtures
 ------------
@@ -58,7 +58,7 @@ Si s'ha habilitat un canal, l'escena canviarà el valor d'aquest canal al valor 
 | ![](/basics/editpaste.png) | Enganxa els valors des del porta-retalls al fixture actual. Si no s'ha seleccionat cap canal durant la «còpia», llavors tots els estats habilitats/inhabilitats s'enganxaran juntament amb els valors del canal. |
 | ![](/basics/editcopyall.png) | La funcionalitat «Copia tot» té 2 modes:<br><br>**Copia tots els valors** (i estats habilitats/inhabilitats) de tots els canals que participen a l'escena.<br>**Copia només els canals seleccionats** (feu clic a la tecla CTRL, fons groc) a tots els altres fixtures que participen a l'escena. |
 | ![](/basics/color.png) | Llança una eina de color per a seleccionar un color específic i establir aquest color al fixture actual; Aquesta característica només està habilitada per als fixtures que són capaços de barrejar el color CMY/RGB. |
-| ![](/basics/xypad.png) | Llança una eina de posició (similar a [XYPad](/virtual-console/pad-xy) a la consola virtual) per seleccionar una posició de capçal/mirall per al fixture actual; Aquesta característica només està habilitada per als fixtures que tenen canals panoràmica o inclinació. Tots els caps del fixture actual es canviaran al mateix valor. |
+| ![](/basics/xypad.png) | Llança una eina de posició (similar a [XYPad](/virtual-console/xy-pad) a la consola virtual) per seleccionar una posició de capçal/mirall per al fixture actual; Aquesta característica només està habilitada per als fixtures que tenen canals panoràmica o inclinació. Tots els caps del fixture actual es canviaran al mateix valor. |
 | ![](/basics/speed.png) | Mostra/Oculta el giny selector de velocitat, utilitzat per ajustar els paràmetres de l'escena, com ara Fade In i Fade Out |
 | ![](/basics/tabview.png) | Canvia entre «visualització de la pestanya» i «visualització de tots els canals». El primer mode mostrarà una pestanya per a cada fixture, mentre que el segon mostrarà una sola pestanya per a tots els fixtures |
 | ![](/basics/blind.png) | Commuta el mode cec per al fixture seleccionat. |
