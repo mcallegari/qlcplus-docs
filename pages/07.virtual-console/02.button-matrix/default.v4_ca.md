@@ -9,7 +9,7 @@ Quan creeu una nova matriu de botons, podeu assignar funcions a cadascun dels bo
 
 ### Afegeix una Matriu de Botons
 
-Quan vulgueu crear molts botons al mateix temps a la [Consola Virtual](/consola-virtual), podeu fer-ho mitjançant el diàleg Afegeix Matriu de Botons.
+Quan vulgueu crear molts botons al mateix temps a la [Consola Virtual](/virtual-console), podeu fer-ho mitjançant el diàleg Afegeix Matriu de Botons.
 
 |     |     |
 | --- | --- |

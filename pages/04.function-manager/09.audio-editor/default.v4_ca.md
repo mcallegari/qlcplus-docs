@@ -3,7 +3,7 @@ title: 'Editor de Àudio'
 date: '04:32 22-08-2023'
 ---
 
-L'editor d'àudio, com el seu nom indica, s'utilitza per editar ![](/basics/audio.png) [Funcions d'Àudio](/basics/glossary-and-concepts#audio).  
+L'editor d'àudio, com el seu nom indica, s'utilitza per editar ![](/basics/audio.png) [Funcions d'Àudio](/basics/glossary-and-concepts#àudio).  
 Ofereix controls bàsics i mostra informació sobre el fitxer d'àudio adjunt.
 
 Controls

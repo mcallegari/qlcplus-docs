@@ -1,5 +1,5 @@
 ---
-title: Physical
+title: Físic
 date: '05:31 22-08-2023'
 ---
 

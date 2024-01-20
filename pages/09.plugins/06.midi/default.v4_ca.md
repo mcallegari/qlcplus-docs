@@ -6,7 +6,7 @@ date: '05:15 22-08-2023'
 Introducció
 ------------
 
-Aquest connector dona suport d'entrada/sortida per al  [protocol MIDI](https://en.wikipedia.org/wiki/MIDI) i dona llibertat a l'usuari per controlar paràmetres típics com els canals, Notes, Canvi de programa i Canvi de Control.  
+Aquest connector dona suport d'entrada/sortida per al  [protocol MIDI](https://ca.wikipedia.org/wiki/MIDI) i dona llibertat a l'usuari per controlar paràmetres típics com els canals, Notes, Canvi de programa i Canvi de Control.  
 El connector MIDI pot ser força potent utilitzat en combinació amb dispositius MIDI com teclats, controladors MIDI (com Behringer BCF2000 o KORG nanoKONTROL) o un seqüenciador d'àudio de programari com Cubase o Ardour 3.  
 L'ús pot variar des del control de fader-to-fader (el cas BCF2000) fins a l'activació de seqüències per a espectacles sincronitzats (concerts o espectacles controlats per metrònom utilitzant un seqüenciador d'àudio)
 

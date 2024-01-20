@@ -21,7 +21,7 @@ Quan es carrega un projecte, en canvi, moure un canal de la Taula Simple substit
 Això és molt útil en algunes circumstàncies en directe on una funció en execució necessita algun ajust manual.  
 Per a "desvincular" la Taula Simple dels canals anul·lants, simplement feu clic al botó de reinicialització. El restabliment de canals els retornarà a zero o al valor prèviament establert per una funció.
 
-Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins de la pila cue no són visibles al [Gestor de Funcions](/gestor-de-funcions) i les [Escenes](/basics/glossary-and-concepts#escena) no són visibles a la pila cue.
+Cues opera per separat d'altres components de QLC+. Per exemple, els cues dins de la pila cue no són visibles al [Gestor de Funcions](/function-selection) i les [Escenes](/basics/glossary-and-concepts#escena) no són visibles a la pila cue.
 
 Controls - Univers
 -------------------

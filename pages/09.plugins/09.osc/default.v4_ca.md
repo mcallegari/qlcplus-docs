@@ -6,7 +6,7 @@ date: '05:18 22-08-2023'
 Introducció
 ------------
 
-QLC+ suporta el protocol [OSC](https://en.wikipedia.org/wiki/Open_Sound_Control) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
+QLC+ suporta el protocol [OSC](https://ca.wikipedia.org/wiki/Open_Sound_Control) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
 No es necessiten requisits addicionals, ja que QLC+ té una implementació nativa del protocol OSC que funciona en sistemes Linux, Windows i OSX.  
 El connector OSC pot enviar i rebre paquets de múltiples targetes de xarxa, adreces virtuals, el dispositiu de loopback (127.0.0.1) i múltiples universos per interfície de xarxa.  
 De manera predeterminada, el connector OSC escoltarà els ports que comencen a partir de 7700, més l'univers QLC+ menys un.  

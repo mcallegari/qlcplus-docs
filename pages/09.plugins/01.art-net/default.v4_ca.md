@@ -6,7 +6,7 @@ date: '05:06 22-08-2023'
 Introducció
 ------------
 
-QLC+ suporta el protocol [Art-Net](https://en.wikipedia.org/wiki/Art-Net) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
+QLC+ suporta el protocol [Art-Net](https://ca.wikipedia.org/wiki/Art-Net) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
 No es necessiten requisits addicionals, ja que QLC+ té una implementació nativa del protocol Art-Net que funciona en sistemes Linux, Windows i macOS.  
 El connector Art-Net pot enviar i rebre paquets des de múltiples targetes de xarxa, adreces virtuals, el dispositiu de loopback (127.0.0.1) i múltiples universos per interfície de xarxa.  
 Per defecte, els paquets Art-Net es transmeten com a UDP, utilitzant el port per defecte 6454 i l'adreça de difusió de l'interfície  seleccionada (p. ex. 192.168.0.255). Quan s'utilitzen els paquets de dispositius de loopback sempre es transmeten utilitzant l'adreça 127.0.0.1.  

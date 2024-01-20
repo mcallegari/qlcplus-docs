@@ -3,7 +3,7 @@ title: 'Editor de Grups de Canals'
 date: '11:27 21-08-2023'
 ---
 
-L'editor de Grups de Canals s'ha activat fent clic a la pestanya "Grups de Canals" al panell [Gestor de Fixtures](/gestor-de-fixtures).  
+L'editor de Grups de Canals s'ha activat fent clic a la pestanya "Grups de Canals" al panell [Gestor de Fixtures](/fixture-manager).  
 Amb aquesta funcionalitat (introduïda en la versió 4.0.0) de QLC+, és possible crear grups de canals amb la mateixa funcionalitat.  
 Per exemple, si teniu 20 PARs potser voldreu controlar el canal VERMELL de tots ells amb un sol fader.
 

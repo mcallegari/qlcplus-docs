@@ -41,7 +41,7 @@ Propietats
 No obstant això, un script amb res més que un objecte buit no fa res, per molt que s'autoexecuti. També heu de declarar **propietats** per a l'objecte retornat perquè QLC+ sàpiga com utilitzar l'script i mostrar-lo a l'usuari (vostè). Per tant, heu de declarar les propietats següents per a l'objecte script retornat:
 
 * **apiVersion:** La versió de l'API que segueix l'script. Actualment, els valors acceptats són '1' o '2'.  
-    apiVersion 1 permet un scripting senzill i una codificació més fàcil, mentre que apiVersion 2 ofereix funcions avançades que [es descriuen a continuació](#apiv2).  
+    apiVersion 1 permet un scripting senzill i una codificació més fàcil, mentre que apiVersion 2 ofereix funcions avançades que [es descriuen a continuació](#versió-2-de-la-api).  
     Qualsevol altre valor farà que l'script es tracti com a no vàlid.
 * **name:** El nom del vostre script. Aquest nom apareix al quadre de selecció de patrons de l'editor de matrius RGB](../rgb-matrix-editor) [
 * **author:** El nom de la persona que ha escrit el guió. **Tu.**

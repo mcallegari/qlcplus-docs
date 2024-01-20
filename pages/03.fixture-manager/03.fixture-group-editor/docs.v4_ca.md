@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-L'editor de grups de Fixture s'utilitza quan seleccioneu un [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures) en el [Gestor de Fixtures](/gestor-de-fixtures). Aquest editor es pot utilitzar per descriure la disposició física dels [fixtures](/basics/glossary-and-concepts#fixtures) i els seus [capçals](/basics/glossary-and-concepts#capçals) que s'assignen al grup.
+L'editor de grups de Fixture s'utilitza quan seleccioneu un [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures) en el [Gestor de Fixtures](/fixture-manager). Aquest editor es pot utilitzar per descriure la disposició física dels [fixtures](/basics/glossary-and-concepts#fixtures) i els seus [capçals](/basics/glossary-and-concepts#capçals) que s'assignen al grup.
 
 ### Controls
 
