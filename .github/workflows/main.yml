@@ -1,14 +1,15 @@
-## GitHub Actions Workflow YAML
-name: qlcplus-docs checks and build
-
-on: push
+name: spellcheck
+on:
+  push:
+  pull_request:
 jobs:
-  spellcheck:
+  check-spelling:
     runs-on: ubuntu-latest
-    name: Spellcheck
     steps:
-      - uses: actions/checkout@v3
-      - uses: tbroadley/spellchecker-cli-action@v1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@0.23.0
         with:
-            files: "**/*EN.md !build/*.md"
-            quiet: true
+          config_path: .spellcheck.yml
+          task_name: Markdown
