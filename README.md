@@ -6,7 +6,7 @@ Welcome to the official documentation repository for [qlcplus.org](https://qlcpl
 
 The [qlcplus.org](qlcplus.org) website uses the [Grav](https://getgrav.org/) content management system (CMS). Using a customized version of the Grav Learn2 theme, Learn2 with Git Sync is designed to help collaboratively edit Markdown-based documentation.
 
-When changes are made to this repo the [docs.qlcplus.org](https://docs.qlcplus.org/) site automatically updates with the changes.
+When changes are made to this git repository the [docs.qlcplus.org](https://docs.qlcplus.org/) site automatically updates with the changes.
 
 ## How to Contribute
 
