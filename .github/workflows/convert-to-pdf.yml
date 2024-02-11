@@ -14,6 +14,7 @@ jobs:
         with:
           input_dir: pages/01.basics
           images_dir: pages
+          image_import: images
           output_dir: pdfs
           # Default is true, can set to false to only get PDF files
           build_html: false
