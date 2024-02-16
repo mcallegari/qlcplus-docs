@@ -7,7 +7,7 @@ media_order: dmx-usb-settings.png
 En aquesta pàgina trobaràs les preguntes més freqüents que et poden venir al cap a l'hora de començar amb QLC+.  
 Aquí pots trobar la resposta directament o trobar ajuda per orientar-te en la direcció correcta.
 
-## P1: QLC+ no pot detectar el meu dispositiu USB
+#### Pregunta #1: QLC+ no pot detectar el meu dispositiu USB
 
 **R:** QLC+ és compatible amb una àmplia varietat de dispositius USB. En primer lloc, hauríeu de comprovar si la
 connexió física és correcta. Normalment, un LED del dispositiu ha d'indicar si està encès i funciona correctament.
@@ -18,11 +18,11 @@ addicional per funcionar. Comproveu el connector de sortida [Peperoni](/plugins/
 [connector de sortida de Velleman](/plugins/velleman)Si utilitzeu Linux, comproveu si la vostra distribució ha detectat
 el dispositiu quan està connectat. Bàsicament, l'ordre `dmesg` us hauria de dir alguna cosa.
 
-## P2: Tinc diversos [botons](/virtual-console/button) a la meva Consola Virtual. Necessito una manera de desactivar el botó actualment actiu quan n'habilito un altre. Com ho faig?
+#### Pregunta #2: Tinc diversos [botons](/virtual-console/button) a la meva Consola Virtual. Necessito una manera de desactivar el botó actualment actiu quan n'habilito un altre. Com ho faig?
 
 **R:** Simplement col·loqueu els botons dins d'un [marc Solo](/virtual-console/solo-frame). Fa exactament això.
 
-## P3: Acabo d'actualitzar el meu Mac a Mavericks (o posterior) i el meu adaptador DMX USB no transmet cap dada.
+#### Pregunta #3: Acabo d'actualitzar el meu Mac a Mavericks (o posterior) i el meu adaptador DMX USB no transmet cap dada.
 
 **R:** El problema està en un controlador d'Apple anomenat AppleUSBFTDI, que pren el control de tots
 els dispositius basats en FTDI detectats al sistema.Hi ha algunes maneres de resoldre el problema,
@@ -37,7 +37,7 @@ i intentar activar/[desactivar el controlador](/plugins/disable-apple-serial-vcp
 
 **Nota 3: El més probable és que, quan desactiveu / activeu el controlador d'Apple, hàgiu de reiniciar el vostre Mac**
 
-## P4: On es troba la carpeta d'usuari QLC+ al meu sistema?
+#### Pregunta #4: On es troba la carpeta d'usuari QLC+ al meu sistema?
 
 **R:** La carpeta d'usuari és on van els accessoris d'usuari, els perfils d'entrada, els scripts RGB
 i les plantilles MIDI.Canvia en funció del vostre sistema operatiu:
@@ -51,7 +51,7 @@ i les plantilles MIDI.Canvia en funció del vostre sistema operatiu:
   [definicions de Fixture](/basics/glossary-and-concepts#fixtures) i [Perfils d'entrada](/input-output/input-profiles)
   a la mateixa carpeta que el vostre projecte, QLC+ els trobarà quan obriu aquest projecte.
 
-## P5: On es troba la carpeta del sistema QLC+ al meu sistema?
+#### Pregunta #5: On es troba la carpeta del sistema QLC+ al meu sistema?
 
 **R:** La carpeta del sistema és on s'instal·len els recursos QLC+ (fixtures, perfils d'entrada, scripts RGB, etc) i canvia depenent del vostre sistema operatiu:
 
@@ -63,14 +63,14 @@ i les plantilles MIDI.Canvia en funció del vostre sistema operatiu:
   un terminal però depèn d'on heu instal·lat QLC+.<br>Per exemple si heu arrossegat QLC+ a les aplicacions
   serà: `/Applications/QLC+.app/Contents/Resources` s
 
-## P6: QLC+ no pot reproduir alguns vídeos al Windows
+#### Pregunta #6: QLC+ no pot reproduir alguns vídeos al Windows
 
 **R:** QLC+ es basa en les biblioteques Qt que es basen en els filtres DirectShow instal·lats en el sistema.
 
 Malauradament els còdecs bàsics suportats per Windows són bastant pobres, per la qual cosa heu d'instal·lar
 algun paquet de còdecs addicionals com K-Lite, [disponible aquí](https://www.codecguide.com/download_kl.htm).
 
-## P7: Tinc una pantalla de 4k i tot en la interfície QLC+ és extremadament petit
+#### Pregunta #7: Tinc una pantalla de 4k i tot en la interfície QLC+ és extremadament petit
 
 **R:** Heu d'afegir una opció a la línia d'ordres de QLC+ per a indicar a les biblioteques de
 les Qt que a escala automàtica la interfície en una pantalla de PPP alt. Exemples:
@@ -80,7 +80,7 @@ les Qt que a escala automàtica la interfície en una pantalla de PPP alt. Exemp
 * **Mac OS**: `QT.AUTO.SCREEN.SCALE.1 QLC+.app\\Contents\\MacOS\\qlcplus`
   [Per a més informació.](/advanced/command-line-parameters) 
 
-## P8: Les meves llums parpellegen. Què puc fer?
+#### Pregunta #8: Les meves llums parpellegen. Què puc fer?
 
 **R:** De vegades un adaptador USB DMX sense memòria intermèdia o una línia DMX sorollosa pot
 fer que alguns fixtures parpellegin inesperadament. QLC+ permet ajustar la freqüència de sortida
