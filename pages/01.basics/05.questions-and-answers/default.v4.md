@@ -7,7 +7,7 @@ media_order: dmx-usb-settings.png
 In this page you will find the common questions that may come to mind when starting with QLC+.  
 Here you can either find the answer directly or find help to point you in the right direction.  
 
-#### Q1: QLC+ cannot detect my USB device
+#### Question #1: QLC+ cannot detect my USB device
 
 **A:** QLC+ supports a wide variety of USB devices. First of all you should check if the physical 
 connection is OK. Usually a LED on your device should indicate if it is powered up and working correctly.
