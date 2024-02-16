@@ -19,13 +19,9 @@ DLL file to work. Please check [Peperoni output plugin](/plugins/peperoni) or [V
 If you're using Linux, please check if your distribution detected the device when plugged in. Basically,
 the `dmesg` command should tell you something.
 
-===
-
 #### Q2: I've got several [buttons](/virtual-console/button) in my Virtual Console. I need a way to disable the currently active button when I enable another one. How do I do that?
 
 **A:** Simply place your buttons inside a [Solo Frame](/virtual-console/solo-frame). It does exactly that.
-
-===
 
 #### Q3: I just upgraded my Mac to Mavericks (or later) and my USB DMX adapter doesn't transmit any data.
 
@@ -44,8 +40,6 @@ and try to enable/disable the Apple driver with it.
 **Note 2: every time Mac OS receives an update, you need to perform this procedure again!**
 
 **Note 3: Most likely, when you disable/enable the Apple driver, you need to reboot your Mac**
-
-===
 
 #### Q4: Where is the QLC+ user folder located in my system?
 
@@ -68,8 +62,6 @@ You can also save custom [Fixture Definitions](/basics/glossary-and-concepts#fix
 [Input Profiles](/input-output/input-profiles) in the same folder as your project, QLC+ will find
 them when you open that project.
 
-===
-
 #### Q5: Where is the QLC+ system folder located in my system?
 
 **A:** The system folder is where QLC+ resources (fixtures, input profiles, RGB scripts, etc) are installed
@@ -83,16 +75,12 @@ and it changes depending on your operating system:
   but it depends on where you installed QLC+. For example if you dragged QLC+ into
   Applications it will be: `/Applications/QLC+.app/Contents/Resources`
 
-===
-
 #### Q6: QLC+ cannot play some videos on Windows
 
 **A:** QLC+ relies on the Qt libraries which relies on the DirectShow filters installed in the system.
 
 Unfortunately the basic codecs supported by Windows are quite poor, so you need to install some extra
 codecs package like K-Lite, [available here](https://www.codecguide.com/download_kl.htm).
-
-===
 
 #### Q7: I have a 4k display and everything in the QLC+ interface is extremely small
 
@@ -105,8 +93,6 @@ the interface on a High DPI display. Examples:
 
 In case, see the [command line parameters page](/advanced/command-line-parameters) for further information.
 
-===
-
 #### Q8: My lights flicker. What can I do?
 
 **A:** Sometimes an unbuffered USB DMX adapter or a noisy DMX line can cause some fixtures to
@@ -117,4 +103,3 @@ an output line and by clicking on the ![](/basics/configure.png) icon.
 
 ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings")
 
-===
