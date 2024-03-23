@@ -24,4 +24,4 @@ Controls
 | **Offset** | Available only when **Text** or **Image** is the selected pattern.<br><br>**X:** Used to shift the pattern along the horizontal x-axis (negative values go to the left, positive values go to the right)<br>**Y:** Used to shift the pattern along the vertical y-axis (negative values go up, positive values go down) |
 | **Run Order** | **Loop:** Run through the steps over and over again.<br>**Single Shot:** Run through the steps once and then stop.<br>**Ping Pong:** Run through the steps over and over again, reversing direction at both ends. |
 | **Direction** | **Forward:** Run through the steps from start to end; 1, 2, 3...<br>**Backward:** Run through the steps from end to start; ...3, 2, 1 |
-| **Other Controls** | **Dimmer control:** When enabled, dimmer channel of include fixtures will be set to 100% when the matrix is running. Uncheck if you want independent intensity control. |
+| **Control Mode** | This selects the channels which the RGB Matrix uses as output. For example: You can use the "Dimmer" option to allow the matrix to control dimmer channels for the fixtures in the group.  |
