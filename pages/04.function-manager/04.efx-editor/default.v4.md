@@ -66,3 +66,12 @@ It is useful to reduce number of EFX presets: let's say we want to have 3 types 
 In relative mode, it is also possible to fade between positions (set fade time in scenes) while the EFX is running.
 
 Using XYPad and relative mode, it is possible to move EFX to any place during the show.
+
+When driving RGB channels:
+* To see what you are doing, set the **Back Ground Color** box to checked.
+* **X-Offset** will set a Base Color (e.g. Blue = 167).
+* **Height** will set the Color Range (e.g. 40 sets the range from Cyan over Blue to Magenta).
+* **Y-Offset** will set the Base Intensity.
+* **Width** will set the Intensity Range.
+The Top Half of the Y-axis varies the Color from Black (Top) to Base Color (Mid, e.g. Blue).
+The Bottom Half of the Y-axis varies the Color from Base Color (Mid, e.g. Blue) to White (Bottom).
