@@ -73,5 +73,6 @@ When driving RGB channels:
 * **Height** will set the Color Range (e.g. 40 sets the range from Cyan over Blue to Magenta).
 * **Y-Offset** will set the Base Intensity.
 * **Width** will set the Intensity Range.
+
 The Top Half of the Y-axis varies the Color from Black (Top) to Base Color (Mid, e.g. Blue).
 The Bottom Half of the Y-axis varies the Color from Base Color (Mid, e.g. Blue) to White (Bottom).
