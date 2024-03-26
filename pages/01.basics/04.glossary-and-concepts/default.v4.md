@@ -73,7 +73,7 @@ QLC+ supports unlimited universes (there are 4 initial, but more can be added if
 
 ### ![](../efx.png) EFX
 
-An EFX [function](#functions) is mainly used to automate moving lights (e.g. scanners & moving heads). The EFX can create complex mathematical paths on an X-Y plane that are converted to DMX values for the fixture's pan and tilt channels. **Only fixtures that contain valid pan & tilt channels can take part in an EFX function.** Lately EFX can control also other channels like Dimmer or RGB.
+An EFX [function](#functions) is mainly used to automate moving lights (e.g. scanners & moving heads), though it can also automate RGB or Dimmer values of non-moving lights. The EFX can create complex mathematical paths on an X-Y plane that are converted to DMX values for the fixture's pan and tilt, or RGB or Dimmer channels.
 
 ### ![](../fixture.png) Fixtures
 
