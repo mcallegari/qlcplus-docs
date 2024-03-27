@@ -6,7 +6,7 @@ date: '11:59 22-08-2023'
 Starting from version 4.5.0, QLC+ can read a custom file to change the GUI appearance in a very accessible way.  
 If no file is found, QLC+ will start with the default style.
 
-The GUI style file
+The theme style file
 ------------------
 
 The file name is hardcoded into QLC+ and must be: `qlcplusStyle.qss`  
@@ -47,6 +47,7 @@ QLC+ dark blue style example
 Just to give you an example of how easy this process is, here's a blue-ish dark style for QLC+.  
 If you copy the following lines into `qlcplusStyle.qss` in the right location as explained above, you will see it applied to QLC+ at the next startup.
 ```CSS
+============== MAIN
 QMainWindow, QDialog
 {
     background-color: #404B57;
