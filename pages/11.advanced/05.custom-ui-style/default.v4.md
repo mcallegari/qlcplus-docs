@@ -16,11 +16,9 @@ The style file must also be placed in a specific path which is:
 * **Windows**: `C:\\Users\\<YourUser>\\QLC+`
 * **OSX**: `$HOME/Library/Application\\ Support/QLC+`
 
-The theme file is divided in sections. Each section represents the UI items that will be modified when running QLC+. Unchanged sections can be omitted.
-
-Sections start with a bunch of ```===``` characters and the section name.
-
-At the moment, supported section keywords are:
+The theme file is divided in sections. Each section represents the UI items that will be modified when running QLC+. Unchanged sections can be omitted.  
+Sections start with a bunch of ```===``` characters and the section name.  
+At the moment, supported section keywords are:  
 ```
 ============== MAIN
 ============== SIMPLE_DESK_NONE
