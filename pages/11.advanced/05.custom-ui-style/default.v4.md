@@ -46,7 +46,7 @@ QLC+ dark blue style example
 
 Just to give you an example of how easy this process is, here's a blue-ish dark style for QLC+.  
 If you copy the following lines into `qlcplusStyle.qss` in the right location as explained above, you will see it applied to QLC+ at the next startup.
-```CSS
+```
 ============== MAIN
 QMainWindow, QDialog
 {
