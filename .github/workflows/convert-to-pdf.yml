@@ -34,8 +34,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_path: combined_documentation.md
-          image_import: images
+          input_path: .github/workflows/combined_documentation.md
+          #image_import: images
           output_dir: pdfs
           # Default is true, can set to false to only get PDF files
           build_html: true
