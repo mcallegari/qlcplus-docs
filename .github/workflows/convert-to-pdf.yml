@@ -26,7 +26,7 @@ jobs:
       uses: baileyjm02/markdown-to-pdf@v1
       with:
           input_dir: ./.github/workflows/
-          image_import: ./.github/workflows/images
+          images_dir: ./.github/workflows/images/
           output_dir: pdfs
           # Default is true, can set to false to only get PDF files
           build_html: true
