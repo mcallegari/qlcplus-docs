@@ -15,6 +15,12 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y powershell
+
+    - name: Check actions Dir
+      shell: pwsh
+      run: |
+        # Replace 'path/to/your/script.ps1' with the actual path to your PowerShell script
+        ls
       
     - name: Run PowerShell script
       shell: pwsh
