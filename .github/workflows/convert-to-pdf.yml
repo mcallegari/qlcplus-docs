@@ -1,25 +1,26 @@
-name: Docs to PDF
-# This workflow is triggered on pushes to the repository.
+name: Run PowerShell script
 on:
   push:
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
-  converttopdf:
-    name: Build PDF
+  run_powershell_script:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
-        with:
-          input_dir: pages/02.main-window
-          images_dir: pages/
-          image_import: images
-          output_dir: pdfs
-          # Default is true, can set to false to only get PDF files
-          build_html: true
-      - uses: actions/upload-artifact@v3
-        with:
-          name: pages
-          path: pdfs
-
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install PowerShell
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y powershell
+      
+    - name: Run PowerShell script
+      shell: pwsh
+      run: | 
+            "./combineMarkdown.ps1"
