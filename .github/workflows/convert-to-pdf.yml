@@ -1,11 +1,7 @@
 name: Run PowerShell script
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
 
 jobs:
   run_powershell_script:
