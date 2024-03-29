@@ -22,5 +22,6 @@ jobs:
       
     - name: Run PowerShell script
       shell: pwsh
-      run: | 
-            "./combineMarkdown.ps1"
+      run: |
+        # Replace 'path/to/your/script.ps1' with the actual path to your PowerShell script
+        ./path/to/your/script.ps1
