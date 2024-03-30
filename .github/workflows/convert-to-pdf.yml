@@ -25,13 +25,17 @@ jobs:
     - name: Build PDF
       uses: baileyjm02/markdown-to-pdf@v1
       with:
-          input_dir: ./.github/workflows/
-          images_dir: ./.github/workflows/images/
-          output_dir: pdfs
-          # Default is true, can set to false to only get PDF files
+          input_path: ./.github/workflows/bin/
+          # Specify images dir
+          images_dir: ./.github/workflows/bin/images/
+          image_import: images
+          # Build HTML version
           build_html: true
+          
+          # Path to output (this should be the same as the Upload Artifiact path)
+          output_dir: ./.github/workflows/bin/
     - name: Upload-Artifact
       uses: actions/upload-artifact@v3
       with:
-          name: pages
-          path: pdfs
+          name: qlcplus-docs-build
+          path: ./.github/workflows/bin/

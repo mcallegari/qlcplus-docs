@@ -1,4 +1,4 @@
-function Increment-Headings {
+function Update-MarkdownHeadingLevels {
     param (
         [string]$markdown
     )
@@ -13,7 +13,6 @@ function Increment-Headings {
         # Check if the line is a heading
         if ($line -match '^(#+)(.*)$') {
             $prefix = $matches[0]
-            $text = $matches[1]
             
             # Increment the heading level
             $newPrefix = '#' + $prefix
@@ -29,7 +28,7 @@ function Increment-Headings {
     return $newMarkdown
 }
 
-function Clean-Metadata {
+function Remove-Metadata {
     Param (
         [string]$Content,
         [string]$BasePath
@@ -40,22 +39,22 @@ function Clean-Metadata {
     $cleanContent = $Content -replace '(?s)---.*?---\s*', ''
 
     # Find and replace relative image paths with absolute paths
-    $pattern = '!\[.*?\]\((\.\./.*?\.(png|jpg|jpeg|gif))\)'
-    $matches = Select-String -InputObject $cleanContent -Pattern $pattern -AllMatches
-    if ($matches.Matches) {
-        foreach ($match in $matches.Matches) {
+    $pattern = '!\[(?:.*?)\]\((?:\.\.?\/)?(.*?\.(png|jpg|svg|webp|webm|jpeg|gif))\s*(?:".*?")?\)'
+    $imagePaths = Select-String -InputObject $cleanContent -Pattern $pattern -AllMatches
+    
+    if ($imagePaths.Matches) {
+        foreach ($match in $imagePaths.Matches) {
             $relativePath = $match.Groups[1].Value
-            # Use regex to extract the filename
-            $relativePath = $relativePath -replace "../", ""
-            
-            $absolutePath = "images/" + $relativePath
+            # Normalize the path
+            $absolutePath = "images/" + (Split-Path -Path $relativePath -Leaf)
+            # Replace the markdown image syntax with the new path
             $imageMarkdown = "![]($absolutePath)"
             $cleanContent = $cleanContent.Replace($match.Value, $imageMarkdown)
         }
     }
 
     # Increment headings.
-    $cleanContent = Increment-Headings($cleanContent)
+    $cleanContent = Update-MarkdownHeadingLevels($cleanContent)
     # Add the title back in H1 style if it was found
     if ($title) {
         $cleanContent = "## $title`n`n" + $cleanContent
@@ -71,7 +70,7 @@ function Get-MarkdownFiles {
     )
     Write-Host "Getting all markdown files from the $path directory..."
     if (Test-Path $Path -PathType Container) {
-        # Get the list of folders in the directory
+        # Get the list of folders in the directory (feed is excluded as it's a stub for RSS)
         $folders = Get-ChildItem -Path $Path -Directory -Exclude feed
         $markdownFiles = @()
 
@@ -91,7 +90,7 @@ function Get-MarkdownFiles {
     $cleanMarkdownFiles = @()
     foreach ($file in $markdownFiles) {
         $content = Get-Content $file.FullName -Raw
-        $cleanContent = Clean-Metadata $content
+        $cleanContent = Remove-Metadata $content
         if(-not [string]::IsNullOrWhiteSpace($cleanContent)) {
             $cleanMarkdownFiles += [PSCustomObject]@{
                 Path    = $file.FullName
@@ -105,7 +104,7 @@ function Get-MarkdownFiles {
     return $cleanMarkdownFiles
 }
 
-function Combine-MarkdownFiles {
+function Merge-MarkdownFiles {
     Param ( [Array] $MarkdownFiles, 
             [string] $OutputPath,
             [string] $directoryPath 
@@ -117,18 +116,18 @@ function Combine-MarkdownFiles {
     # Fix Chapters to make them H1
     $combinedContent = $combinedContent -replace '####\sChapter', '# Chapter'
 
-    # Replace Headings "Chapter 1" with "01. Basics"
-    $combinedContent = Replace-Headings -MarkdownContent $combinedContent -FolderPath $directoryPath
+    # Replace Headings like "Chapter 1" with "01. Basics"
+    $combinedContent = Set-ChapterTitles -MarkdownContent $combinedContent -FolderPath $directoryPath
 
     # Generate Table of contents
-    $combinedContent = Generate-ToC -MarkdownContent $combinedContent
+    $combinedContent = Add-TableOfContents -MarkdownContent $combinedContent
 
     #Write combined markdown
     $combinedContent | Out-File -FilePath $OutputPath -Encoding UTF8
     Write-Host "Combined markdown written to $OutputPath"
 }
 
-function Generate-ToC {
+function Add-TableOfContents {
     Param (
         $MarkdownContent
     )
@@ -149,7 +148,8 @@ function Generate-ToC {
             $headingText = $Matches[2]
             # Create a linkable anchor name by lowercasing, removing special characters and replacing spaces with hyphens
             $anchorName = $headingText.ToLower() -replace '[^\w-]', '' -replace ' ', '-'
-            $anchorName = $headingText.ToLower() -replace ' ', '-'
+            $anchorName = $anchorName.ToLower() -replace ' ', '-'
+
             # Add the TOC line with the correct indentation
             $TableOfContents += ("  " * $level) + "- [$headingText](#$anchorName)"
         }
@@ -160,13 +160,13 @@ function Generate-ToC {
     return $NewMarkdownContent
 }
 
-function Replace-Headings {
+function Set-ChapterTitles {
     Param (
         [string]$MarkdownContent,
         [string]$FolderPath
     )
     Write-Host "Replacing '# Chapter x' headings with directory names..."
-    # Get the list of subfolders
+    # Get the list of subfolders (feed is excluded as it's a stub for RSS)
     $subfolders = Get-ChildItem -Path $FolderPath -Directory -Exclude feed | Sort-Object Name
 
     # Split the markdown content into an array of lines
@@ -246,9 +246,9 @@ function Copy-ImagesToDirectory {
 }
 
 
-$directoryPath = ".\pages\" # Path To Grav Documentation
-$imageDir      = ".\.github\workflows\images\"
-$outputFile = ".\.github\workflows\combined_documentation.md" # Path to where you want your damn markdown ;)
+$directoryPath  = "./pages/"                                            # Path To Grav Documentation
+$imageDir       = "./.github/workflows/bin/images/"                     # Path to where images should go
+$outputFile     = "./.github/workflows/bin/combined_documentation.md"   # Path to where you want your damn markdown ;)
 
 
 # Move all image files into ./images so they can be found
@@ -256,4 +256,4 @@ Copy-ImagesToDirectory -sourceDirectory $directoryPath -destinationDirectory $im
 
 # Process and combine markdown files
 $markdownFiles = Get-MarkdownFiles -Path $directoryPath -Lang "EN"
-Combine-MarkdownFiles -MarkdownFiles $markdownFiles -OutputPath $outputFile -directoryPath $directoryPath
+Merge-MarkdownFiles -MarkdownFiles $markdownFiles -OutputPath $outputFile -directoryPath $directoryPath
