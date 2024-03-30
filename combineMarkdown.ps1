@@ -148,7 +148,8 @@ function Generate-ToC {
             # Extract the heading text
             $headingText = $Matches[2]
             # Create a linkable anchor name by lowercasing, removing special characters and replacing spaces with hyphens
-            $anchorName = $headingText.ToLower() -replace '[^\w-]', '' -replace '\s', '-'
+            $anchorName = $headingText.ToLower() -replace '[^\w-]', '' -replace ' ', '-'
+            $anchorName = $headingText.ToLower() -replace ' ', '-'
             # Add the TOC line with the correct indentation
             $TableOfContents += ("  " * $level) + "- [$headingText](#$anchorName)"
         }
