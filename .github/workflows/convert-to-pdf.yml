@@ -15,31 +15,23 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y powershell
-
-    - name: Check actions Dir
-      shell: pwsh
-      run: |
-        # Replace 'path/to/your/script.ps1' with the actual path to your PowerShell script
-        ls
-      
+  
     - name: Run PowerShell script
       shell: pwsh
       run: |
         # Replace 'path/to/your/script.ps1' with the actual path to your PowerShell script
         ./combineMarkdown.ps1
-  converttopdf:
-    name: Build PDF
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: baileyjm02/markdown-to-pdf@v1
-        with:
-          input_path: ../combined_documentation.md
-          image_import: ../images/
+
+    - name: Build PDF
+      uses: baileyjm02/markdown-to-pdf@v1
+      with:
+          input_dir: ./.github/workflows/
+          images_dir: ./.github/workflows/images/
           output_dir: pdfs
           # Default is true, can set to false to only get PDF files
           build_html: true
-      - uses: actions/upload-artifact@v3
-        with:
+    - name: Upload-Artifact
+      uses: actions/upload-artifact@v3
+      with:
           name: pages
           path: pdfs
