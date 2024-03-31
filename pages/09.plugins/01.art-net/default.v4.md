@@ -36,8 +36,9 @@ Input lines do not have particular parameters, while an output line can be confi
     **Note**: Do not set the output IP address with the same IP address of your transmitting node (e.g. the PC where QLC+ is running) as it is just wrong and can cause a network loop. If you need to communicate with an Art-Net node running in the same machine where QLC+ is running, use the loopback device instead (127.0.0.1).
 * **Art-Net Universe**: This is the Art-Net universe that will be actually written in every packet transmitted. By setting this parameter, you can use any QLC+ universe to transmit to the desired Art-Net universe.
 * **Transmission Mode**: Here you can select if QLC+ should transmit full or partial universes.  
-    'Full' means that all the 512 DMX channels of a universe are transmitted at the speed rate of the QLC+ internal clock (50Hz), producing a fixed bitrate of about 200Kbit/s.  
-    'Partial', instead, means that QLC+ will transmit only the DMX channel actually used in a universe, starting from channel 1. For example if you raise channel 3 of a fixture with address 50, the Art-Net plugin will transmit only 53 DMX channels, thus limiting the trasnmission bitrate. Use this setting only if the receiving Art-Net node supports partial transmission.
+    '_Standard_' means that DMX universes are transmitted only when at least one channel changes or every 2 seconds.  
+    '_Full_' means that all the 512 DMX channels of a universe are transmitted at the speed rate of the QLC+ internal clock (50Hz), producing a fixed bitrate of about 250Kbit/s.  
+    '_Partial_', instead, means that QLC+ will transmit only the DMX channel actually used in a universe, starting from channel 1. For example if you raise channel 3 of a fixture with address 50, the Art-Net plugin will transmit only 53 DMX channels, thus limiting the transmission bitrate. Use this setting only if the receiving Art-Net node supports partial transmission.
 
 Settings that are different from the plugin defaults, will be stored in your QLC+ workspace, to increase the portability of a project across different platforms, such as different operating systems or a PC and a Raspberry Pi.  
   
