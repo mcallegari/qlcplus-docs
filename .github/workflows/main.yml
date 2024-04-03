@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       
     - name: Install PowerShell
       run: |
@@ -40,11 +40,12 @@ jobs:
           image_import: images
           # Build HTML version
           build_html: true
-          
+          # Build Table of Contents
+          table_of_contents: true
           # Path to output (this should be the same as the Upload Artifiact path)
           output_dir: ./.github/workflows/bin/
     - name: Upload-Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: qlcplus-docs-build
           path: ./.github/workflows/bin/
