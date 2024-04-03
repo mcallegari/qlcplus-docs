@@ -34,7 +34,7 @@ function Remove-Metadata {
         [string]$BasePath
     )
     # Extract the title before cleaning
-    $title = if ($Content -match "title:\s*'(.+?)'") {$matches[1]}
+    # $title = if ($Content -match "title:\s*'(.+?)'") {$matches[1]}
     # Correctly remove YAML metadata from markdown content
     $cleanContent = $Content -replace '^---[\s\S]*?---', ''
 
