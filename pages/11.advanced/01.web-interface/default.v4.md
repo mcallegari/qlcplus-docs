@@ -95,11 +95,6 @@ Known limitations
 
 The QLC+ web interface is still a work in progress feature and it has some known limitations you should be aware of if you intend to use it.
 
-* Speed Dial, XY Pad, and Animation widgets are not supported yet
-* Sliders with a Knob appearance are not supported yet
+* Speed Dial and XY Pad widgets are not supported yet
 * Sliders Click & Go button is not supported yet
-* Frame enable state is not handled yet
-* Cue List crossfade sliders not supported yet
-* Cue List "Play/Stop + Pause" layout not supported yet
-* Cue List notes live editing is not handled yet
-* Virtual Console Grand Master is not handled yet
+
