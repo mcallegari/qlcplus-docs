@@ -119,45 +119,9 @@ function Merge-MarkdownFiles {
     # Replace Headings like "Chapter 1" with "01. Basics"
     $combinedContent = Set-ChapterTitles -MarkdownContent $combinedContent -FolderPath $directoryPath
 
-    # Generate Table of contents
-    $combinedContent = Add-TableOfContents -MarkdownContent $combinedContent
-
     #Write combined markdown
     $combinedContent | Out-File -FilePath $OutputPath -Encoding UTF8
     Write-Host "Combined markdown written to $OutputPath"
-}
-
-function Add-TableOfContents {
-    Param (
-        $MarkdownContent
-    )
-    Write-Host "Generating Table of Contents..."
-
-    # Split the markdown content into an array of lines
-    $markdownLines = $MarkdownContent -split "\r?\n"
-
-    # Initialize an empty array to hold the TOC lines
-    $TableOfContents = @()
-    # Add a title for the TOC
-    $TableOfContents += "# Table of Contents"
-    foreach ($line in $markdownLines) {
-        if ($line -match '^(##?)\s+(.*)') {
-            # Count the number of '#' to determine the level of indentation (0 for H1, 1 for H2)
-            $level = $Matches[1].Length - 1
-            # Extract the heading text
-            $headingText = $Matches[2]
-            # Create a linkable anchor name by lowercasing, removing special characters and replacing spaces with hyphens
-            $anchorName = $headingText.ToLower() -replace '[^\w-]', '' -replace ' ', '-'
-            $anchorName = $anchorName.ToLower() -replace ' ', '-'
-
-            # Add the TOC line with the correct indentation
-            $TableOfContents += ("  " * $level) + "- [$headingText](#$anchorName)"
-        }
-    }
-
-    # Combine the TOC and the original Markdown content
-    $NewMarkdownContent = $TableOfContents + "" + $MarkdownContent
-    return $NewMarkdownContent
 }
 
 function Set-ChapterTitles {
