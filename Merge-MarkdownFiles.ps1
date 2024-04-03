@@ -36,7 +36,7 @@ function Remove-Metadata {
     # Extract the title before cleaning
     $title = if ($Content -match "title:\s*'(.+?)'") {$matches[1]}
     # Correctly remove YAML metadata from markdown content
-    $cleanContent = $Content -replace '(?s)---.*?---\s*', ''
+    $cleanContent = $Content -replace '(?m)^---\s.*\n.*?\n---\s*$', ''
 
     # Find and replace relative image paths with absolute paths
     $pattern = '!\[(?:.*?)\]\((?:\.\.?\/)?(.*?\.(png|jpg|svg|webp|webm|jpeg|gif))\s*(?:".*?")?\)'
