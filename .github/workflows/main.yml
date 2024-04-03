@@ -1,0 +1,15 @@
+name: spellcheck
+on:
+  push:
+  pull_request:
+jobs:
+  check-spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check Spelling
+        uses: rojopolis/spellcheck-github-actions@0.23.0
+        with:
+          config_path: .spellcheck.yml
+          task_name: Markdown
