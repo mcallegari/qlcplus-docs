@@ -29,7 +29,7 @@ jobs:
     - name: Run PowerShell script
       shell: pwsh
       run: |
-        ./Merge-MarkdownFiles.ps1
+        ./scripts/Merge-MarkdownFiles.ps1
 
     - name: Build PDF
       uses: baileyjm02/markdown-to-pdf@v1
