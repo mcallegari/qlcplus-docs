@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 The DMX Dump functionality allows you to save the current DMX values that are being sent to the output universes at a particular moment. Basically it takes a "snapshot" of DMX channels and saves them for a later use.  
-DMX Dump can save values to a new [Scene](/basics/glossary-and-concepts#scene) or overwite the values of an existing Scene. The "dumped" Scene can also be added to an existing [Chaser](/basics/glossary-and-concepts#chaser), Virtual Console [button](/virtual-console/button) or [slider](/virtual-console/slider)  
+DMX Dump can save values to a new [Scene](/basics/glossary-and-concepts#scene) or overwrite the values of an existing Scene. The "dumped" Scene can also be added to an existing [Chaser](/basics/glossary-and-concepts#chaser), Virtual Console [button](/virtual-console/button) or [slider](/virtual-console/slider)  
   
 Please note that:
 
