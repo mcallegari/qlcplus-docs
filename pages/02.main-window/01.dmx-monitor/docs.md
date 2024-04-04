@@ -79,6 +79,6 @@ Following, the possible parameters that it is possible to tune:
 
 PAN/TILT display is schematically displayed using colored rings/arcs around fixture. **P**urple arc shows **P**AN angle, and **T**urquoise arc shows **T**ILT angle. Gray dots show PAN/TILT ranges. Zero (middle of the range) is at the bottom.
 
-In the folowing picture PAN range is 660 degrees and tilt range is 300 degrees. Pan is at counter-clockwise end (-330 deg) and tilt is at -150 deg.
+In the following picture PAN range is 660 degrees and tilt range is 300 degrees. Pan is at counter-clockwise end (-330 deg) and tilt is at -150 deg.
 
 ![](pan-tilt.png)
