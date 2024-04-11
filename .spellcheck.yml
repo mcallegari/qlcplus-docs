@@ -22,4 +22,9 @@ matrix:
       - 'pre'
       - 'blockquote'
   sources:
+  - "pages/**/*chapter.v4.md"
+  - "pages/**/*chapter.v5.md"
   - "pages/**/*docs.md"
+  - "pages/**/*default.v4.md"
+  - "pages/**/*default.v5.md"
+
