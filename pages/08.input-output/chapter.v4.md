@@ -50,7 +50,7 @@ On the left hand side of the Input/Output Manager there is a toolbar where you c
 Patching
 --------
 
-To patch a plugin's input/output line to the selected universe, you need to place a checkmark on that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the checkmark will move from its previous position to the one you just checked.  
+To patch a plugin's input/output line to the selected universe, you need to place a tick in that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the tick will move from its previous position to the one you just checked.  
 If you don't see any line on a plugin, it means you don't have any device that QLC+ understands and you're left with the one and only (non-selectable) choice: None.
 
 When an input/output line is checked, the corresponding universe information on the left hand side of the screen will change and will display the new configuration set.  
