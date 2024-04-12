@@ -77,4 +77,4 @@ Simplement moveu un fader/knob al dispositiu extern, i si tot funciona bé, veur
 Si el dispositiu d'entrada admet un canal de retorn, QLC+ pot enviar-li una retroalimentació visual/mecànica. Dispositius com Behringer BCF2000 admeten aquesta característica.  
 De moment, les retroalimentacions només són compatibles a través de MIDI, OSC i loopback.
 
-Per saber com configurar el dispositiu d'entrada extern per al millor ús amb QLC+, continueu llegint amb el [howto per als perfils d'entrada](input-profiles).
+Per saber com configurar el dispositiu d'entrada extern per al millor ús amb QLC+, continueu llegint amb el [how-to per als perfils d'entrada](input-profiles).
