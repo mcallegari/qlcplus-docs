@@ -10,7 +10,7 @@ L'ús dels paràmetres de la línia d'ordres pot ser complicat depenent del sist
 **Windows**: creeu una drecera de qlcplus.exe (normalment ubicat a C:\\QLC+) a l'escriptori. Feu clic dret a la drecera i seleccioneu «Propietats». Al camp "Objectiu" veuràs una cosa així com `C:\\QLC+\\qlcplus.exe`. Aquí podeu afegir paràmetres de la línia d'ordres. En acabar feu clic a D'acord.<br>
 Per exemple, per forçar l'idioma alemany a l'inici, modifiqueu la línia d'ordres de drecera com aquesta:
 
-![](../commandline.png)
+![](../command-line.png)
 
 **OSX**: Aquest és el cas més difícil, ja que QLC+ a OSX s'inclou en un paquet DMG. Necessites obrir un terminal i executar "cd" al QLC+ DMG com aquest: `cd QLC+.app\\Contents\\MacOS`<br>
 Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
