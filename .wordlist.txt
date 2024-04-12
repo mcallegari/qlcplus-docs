@@ -7,9 +7,11 @@ Junnila
 Grav
 CMS
 DMX
+OSC
 RSS
 exe
 DMG
+BCF
 qxf
 qxw
 RGB
@@ -26,3 +28,7 @@ www
 macOS
 passthrough
 selectable
+ArtNet
+grandmaster
+fader
+Behringer
