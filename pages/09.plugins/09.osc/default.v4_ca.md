@@ -29,12 +29,12 @@ Després que un univers QLC+ sigui pedaçat amb una entrada o sortida OSC, es mo
 Per a cada entrada o sortida OSC es poden establir els següents paràmetres:
 
 * **Port d'Entrada:** Si la línia apedaçada s'obre per a l'entrada, aquests paràmetres defineixen el port al qual QLC+ escoltarà per tal de rebre dades OSC del vostre controlador extern.
-* **Adreça de Sortida:** Si s'obre la línia pedaçada per a l'entrada, aquesta és l'adreça IP de destinació utilitzada per a enviar feedbacks al vostre controlador extern.  
+* **Adreça de Sortida:** Si s'obre la línia pedaçada per a l'entrada, aquesta és l'adreça IP de destinació utilitzada per a enviar feedback al vostre controlador extern.  
     Si s'obre la línia apedaçada per a la sortida, aquesta és l'adreça IP de destinació utilitzada per a enviar dades OSC a la xarxa.  
     Els paquets de sortida OSC es componen per obtenir un camí OSC com el següent: /QLC+ univers - 1/dmx/DMX canal - 1  
     Per exemple, el canal 12 de l'univers QLC+ 4 tindrà el següent camí: /3/dmx/11  
     Tots els valors transmesos pel connector OSC utilitzen el tipus float.
-* **Port de Sortida:** Si s'obre la línia apedaçada per a l'entrada, aquest és el port de destinació que s'utilitza per enviar feedbacks al vostre controlador extern.  
+* **Port de Sortida:** Si s'obre la línia apedaçada per a l'entrada, aquest és el port de destinació que s'utilitza per enviar feedback al vostre controlador extern.  
     Si s'obre la línia apedaçada per a la sortida, aquest és el port de destinació que s'utilitza per a enviar dades OSC a la xarxa.
 
 **Nota:** En apedaçar una línia Input+Feedback, la IP/port de sortida que heu de canviar són les de la secció 'Inputs'. Simplement deixeu la secció 'Outputs' com a predeterminada.
