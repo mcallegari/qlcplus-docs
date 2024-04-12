@@ -24,3 +24,5 @@ dir
 rss
 www
 macOS
+passthrough
+selectable
