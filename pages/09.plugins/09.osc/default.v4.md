@@ -29,12 +29,12 @@ After a QLC+ universe is patched with an OSC input or output, an entry will be d
 For each OSC input or output the following parameters can be set:
 
 * **Input Port:** If the patched line is opened for input, this parameters defines the port QLC+ will listen to in order to receive OSC data from your external controller.
-* **Output address:** If the patched line is opened for input, this is the destination IP address used to send feedbacks to your external controller.  
+* **Output address:** If the patched line is opened for input, this is the destination IP address used to send feedback to your external controller.  
     If the patched line is opened for output, this is the destination IP address used to send OSC data on the network.  
     OSC output packets are composed to obtain an OSC path like the following: /QLC+ universe - 1/dmx/DMX channel - 1  
     For example channel 12 of QLC+ universe 4 will have the following path: /3/dmx/11  
     All the values transmitted by the OSC plugin use the float type.
-* **Output port:** If the patched line is opened for input, this is the destination port used to send feedbacks to your external controller.  
+* **Output port:** If the patched line is opened for input, this is the destination port used to send feedback to your external controller.  
     If the patched line is opened for output, this is the destination port used to send OSC data on the network.
 
 **Note:** When patching a Input+Feedback line, the output IP/port you need to change are the ones in the 'Inputs' section. Just leave the 'Outputs' section as default.

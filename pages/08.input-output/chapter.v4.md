@@ -50,7 +50,7 @@ On the left hand side of the Input/Output Manager there is a toolbar where you c
 Patching
 --------
 
-To patch a plugin's input/output line to the selected universe, you need to place a checkmark on that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the checkmark will move from its previous position to the one you just checked.  
+To patch a plugin's input/output line to the selected universe, you need to place a tick in that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the tick will move from its previous position to the one you just checked.  
 If you don't see any line on a plugin, it means you don't have any device that QLC+ understands and you're left with the one and only (non-selectable) choice: None.
 
 When an input/output line is checked, the corresponding universe information on the left hand side of the screen will change and will display the new configuration set.  
@@ -63,18 +63,18 @@ When passthrough is enabled, universe just forwards what it receives in its inpu
 
 * **Protocol converter**: when you want to use QLC+ to act as a "protocol" converter. For example you can use this feature to transparently map an ArtNet network to a DMX USB adapter or even MIDI.
 * **Monitor external data**: patch fixtures and watch the data in DMX monitor
-* **Merge data from external controller**: Have external lighting desk control some of the channels independently (for example conventionals) and QLC+ control intelligent lights on the same universe.
-* **Raspberry Pi**: forward data from QLC+ on PC while programming scenes; when the workspace is transferred, Raspberry becomes main controller; the devices are always connected to RPi
+* **Merge data from external controller**: Have external lighting desk control some of the channels independently and QLC+ control intelligent lights on the same universe.
+* **Raspberry Pi**: forward data from QLC+ on PC while programming scenes; when the workspace is transferred, Raspberry becomes main controller; the devices are always connected to Raspberry Pi
 
 Passthrough data is not affected by QLC+ grandmaster or channel modifiers. It is merged in HTP fashion with QLC+ output if there are any fixtures patched at that channel (Note: it does not use LTP/HTP channel settings). Blackout affects passthrough data.
 
-Input and Feedbacks
+Input and Feedback
 -------------------
 
 When a plugin input line is checked, it gets enabled right away, so you can perform a basic test to double check if your hardware is working properly with QLC+.  
 Just move a fader/knob on your external device, and if everything works fine, you will see a ![](/basics/input.png) icon appearing beside the corresponding universe on the left side of the screen.
 
 If your input device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as Behringer BCF2000 support this feature.  
-At the moment feedbacks are supported only through MIDI, OSC and loopback.
+At the moment feedback is only supported through MIDI, OSC and loopback.
 
-To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [howto for input profiles](input-profiles).
+To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [how-to for input profiles](input-profiles).

@@ -23,10 +23,10 @@ Each line has three options that can be changed depending on your needs:
     * **Program Change**: this is one of the MIDI protocol messages (like Control Change) frequently used by MIDI controllers. Each device should list the supported PC messages in its user manual, so please consult it before using this mode. The PC range can go from 0 to 127 and can have values from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
 * **Initialization message**: This is a list of presets (templates) containing the intialization message that QLC+ will send when opening a MIDI device before using it. A detailed explanation of this functionality is written below.
 
-Feedbacks
+Feedback
 ---------
 
-The MIDI plugin is one of the QLC+ plugins supporting feedbacks. When QLC+ detects a MIDI device with an output line, it will enable the feedback check box in the [Input/Output panel](/input-output). Please note that output and feedback are exclusive, so they cannot both be used at the same time.  
+The MIDI plugin is one of the QLC+ plugins supporting feedback. When QLC+ detects a MIDI device with an output line, it will enable the feedback check box in the [Input/Output panel](/input-output). Please note that output and feedback are exclusive, so they cannot both be used at the same time.  
 If your MIDI device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as the Behringer BCF2000 support this feature. This is very useful during live shows to have immediate knowledge of the current state of faders mapped in QLC+.  
   
 A small trick that can be achieved with QLC+ is to use feedback as a generic MIDI output line to trigger external controllers/sequencers.  
@@ -40,10 +40,10 @@ KORG nanoPAD X Axis
 
 For unknown reasons, the nanoPAD factory defaults don't map the X Axis of the pad area. To have it fully working with QLC+, please download the KORG utility (Windows and macOS only) from [here](http://i.korg.com/SupportPage.aspx?productid=415) and set the X Axis to CC2 (Control Change #2).
 
-AKAI APC LED Feedbacks
+AKAI APC LED Feedback
 ----------------------
 
-When using one of the Akai APC family controller, there is one feature that could come very handy: LED color feedbacks.  
+When using one of the Akai APC family controller, there is one feature that could come very handy: LED color feedback.  
 The default behaviour with Virtual Console buttons is: value = 0: LED off, value = 255: LED green  
 This can be customized when selecting an input channel, by pressing the "Custom feedback" button.  
 A new area is displayed, showing the possibility to enter a lower and an upper value. This is basically translated in which values QLC+ should send for buttons on/off states.  

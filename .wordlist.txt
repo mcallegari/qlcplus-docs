@@ -7,9 +7,11 @@ Junnila
 Grav
 CMS
 DMX
+OSC
 RSS
 exe
 DMG
+BCF
 qxf
 qxw
 RGB
@@ -24,3 +26,13 @@ dir
 rss
 www
 macOS
+passthrough
+selectable
+ArtNet
+grandmaster
+fader
+Behringer
+Andale
+ILT
+urple
+urquoise

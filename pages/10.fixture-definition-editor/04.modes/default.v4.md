@@ -59,7 +59,7 @@ Heads don't have names as they can be thought of as simple "sub-fixtures" inside
 
 The Head Editor is used to create and edit [heads](/basics/glossary-and-concepts#head) by picking sets of **Channels** that are dedicated to a single head (as defined by the fixture's manufacturer).
 
-Editing a head is very simple: place a checkmark on each channel that is used ONLY by the head you are currently editing. Note that you should check the channels specific to a head, and nothing more. For example if there are 3 heads each with a dedicated dimmer control, then you should include the dimmer channel too. If, instead, the fixture has a single dimmer channel to control the intensity of all the heads together, then do not incude it in the head definition.
+Editing a head is very simple: place a tick on each channel that is used ONLY by the head you are currently editing. Note that you should check the channels specific to a head, and nothing more. For example if there are 3 heads each with a dedicated dimmer control, then you should include the dimmer channel too. If, instead, the fixture has a single dimmer channel to control the intensity of all the heads together, then do not incude it in the head definition.
 
 ![](../fixtureeditor_mode_edit_head.png)
 
