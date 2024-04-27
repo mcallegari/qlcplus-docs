@@ -5,7 +5,7 @@ date: '07:07 22-08-2023'
 
 The modes tab contains all [modes](/basics/glossary-and-concepts#fixture-mode) the fixture can be configured to.
 
-![](../fixtureeditor_modes.png)
+![](../fixture_editor_modes.png)
 
 |     |     |
 | --- | --- |
@@ -26,7 +26,7 @@ Channels Tab
 
 In the Channels tab you can place the fixture's channels in an order that forms an actual representation of the DMX channels that the fixture understands when it has been configured in that particular mode.
 
-![](../fixtureeditor_mode_channels.png)  
+![](../fixture_editor_mode_channels.png)  
 
 |     |     |
 | --- | --- |
@@ -44,7 +44,7 @@ In the Heads tab you can define multiple [heads](/basics/glossary-and-concepts#h
 
 Heads don't have names as they can be thought of as simple "sub-fixtures" inside a fixture. Instead, they are automatically given index numbers. The ordering of the Heads should follow the physical fixture's configuration as closely as possible. So, if the heads go 1, 2, 3, 4 in the real world, don't define them as 4, 2, 1, 3 or something equally annoying.
 
-![](../fixtureeditor_mode_heads.png)  
+![](../fixture_editor_mode_heads.png)  
 
 |     |     |
 | --- | --- |
@@ -61,7 +61,7 @@ The Head Editor is used to create and edit [heads](/basics/glossary-and-concepts
 
 Editing a head is very simple: place a tick on each channel that is used ONLY by the head you are currently editing. Note that you should check the channels specific to a head, and nothing more. For example if there are 3 heads each with a dedicated dimmer control, then you should include the dimmer channel too. If, instead, the fixture has a single dimmer channel to control the intensity of all the heads together, then do not incude it in the head definition.
 
-![](../fixtureeditor_mode_edit_head.png)
+![](../fixture_editor_mode_edit_head.png)
 
 |     |     |
 | --- | --- |

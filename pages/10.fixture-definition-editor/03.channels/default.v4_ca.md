@@ -5,7 +5,7 @@ date: '05:33 22-08-2023'
 
 La pestanya canals conté tots els canals possibles que el fixture entén en tots els seus modes. L'ordre del canal no importa en aquesta pestanya. En canvi, els canals estan ordenats en cert ordre en cada mode a la pestanya **Mode**. A la pestanya **Canal**, només els noms dels canals, les seves **capacitats** (és a dir, els intervals de valors i el seu propòsit) importen.
 
-![](../fixtureeditor_channels.png)
+![](../fixture_editor_channels.png)
 
 |     |     |
 | --- | --- |
@@ -24,19 +24,19 @@ Aquí hi ha unes quantes captures de pantalla que mostren els possibles escenari
 
 **Fig. 1**
 
-![](../fixtureeditor_channel_preset.png)
+![](../fixture_editor_channel_preset.png)
 
 **Fig. 2**
 
-![](../fixtureeditor_channel_shutter.png)
+![](../fixture_editor_channel_shutter.png)
 
 **Fig. 3**
 
-![](../fixtureeditor_channel_color.png)
+![](../fixture_editor_channel_color.png)
 
 **Fig. 4**
 
-![](../fixtureeditor_channel_gobo.png)
+![](../fixture_editor_channel_gobo.png)
 
 A continuació, la descripció de la configuració que apareix a l'Editor de Canals. Es farà referència a les figures anteriors per apuntar-vos a un context visual.
 
@@ -56,7 +56,7 @@ A continuació, la descripció de la configuració que apareix a l'Editor de Can
 
 L'Assistent de capacitats és una eina pràctica per a crear múltiples intervals de valors de capacitats de la mateixa mida. Normalment això s'aplica als colors fixos, índexs de gobo i diversos canals de macro.
 
-![](../fixtureeditor_channel_wizard.png)
+![](../fixture_editor_channel_wizard.png)
 
 |     |     |
 | --- | --- |

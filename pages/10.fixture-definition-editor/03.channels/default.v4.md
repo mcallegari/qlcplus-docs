@@ -5,7 +5,7 @@ date: '05:33 22-08-2023'
 
 The channels tab contains all possible channels that the fixture understands in all of its modes. The channel order doesn't matter in this tab at all. Instead, channels are arranged in certain order in each mode in the **Mode** tab. On the **Channel** tab, only the channel names, their **capabilities** (i.e. value ranges and their purpose) matters.
 
-![](../fixtureeditor_channels.png)
+![](../fixture_editor_channels.png)
 
 |     |     |
 | --- | --- |
@@ -24,19 +24,19 @@ Here's a few screenshots showing the possible scenarios that can be encountered 
 
 **Fig. 1**
 
-![](../fixtureeditor_channel_preset.png)
+![](../fixture_editor_channel_preset.png)
 
 **Fig. 2**
 
-![](../fixtureeditor_channel_shutter.png)
+![](../fixture_editor_channel_shutter.png)
 
 **Fig. 3**
 
-![](../fixtureeditor_channel_color.png)
+![](../fixture_editor_channel_color.png)
 
 **Fig. 4**
 
-![](../fixtureeditor_channel_gobo.png)
+![](../fixture_editor_channel_gobo.png)
 
 Following, the description of the settings that appear in the Channel Editor. Reference to the above figures will be done to point you to a visual context.
 
@@ -56,7 +56,7 @@ Following, the description of the settings that appear in the Channel Editor. Re
 
 Capability Wizard is a handy tool for creating multiple capability value ranges of the same size. Usually this applies to fixed colors, gobo indices and various macro channels.
 
-![](../fixtureeditor_channel_wizard.png)
+![](../fixture_editor_channel_wizard.png)
 
 |     |     |
 | --- | --- |

@@ -6,7 +6,7 @@ date: '05:31 22-08-2023'
 This is the section where the _global_ physical information of the fixture is provided.  
 An identical section is also present in each mode, in case the fixture allows its physical properties (e.g. pan/tilt range) to be altered depending on the mode. In that case, the global physical information can be overridden by _per-mode_ physical information.
 
-![](../fixtureeditor_physical.png)
+![](../fixture_editor_physical.png)
 
 |     |     |
 | --- | --- |

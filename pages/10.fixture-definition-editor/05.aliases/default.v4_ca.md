@@ -8,7 +8,7 @@ Fem un exemple. Un fixture té el canal 5 anomenat "Efectes" que controla el com
 Per fer front a aquest cas, cal definir 2 canals: "Velocitat" i "Sensibilitat sonora". En el mode fixació afegir només “Velocitat”, ja que serà el comportament per defecte quan el valor DMX del canal 5 sigui igual a 0.  
 Després cal definir només un àlies: el que substituirà el canal per defecte “Velocitat” per “Sensibilitat sonora”. QLC+ llavors sabrà què fer quan el valor DMX del canal 5 entri o surti de l'àlies.
 
-![](../fixtureeditor_aliases.png)
+![](../fixture_editor_aliases.png)
 
 |     |     |
 | --- | --- |
