@@ -23,7 +23,7 @@ Cada línia té tres opcions que es poden canviar en funció de les teves necess
     * **Canvi de Programa**: aquest és un dels missatges de protocol MIDI (com Canvi de Control) que utilitzen freqüentment els controladors MIDI. Cada dispositiu hauria de llistar els missatges PC compatibles en el seu manual d'usuari, per tant, consulteu-lo abans d'utilitzar aquest mode. L'interval de PC pot anar de 0 a 127 i pot tenir valors de 0 a 127, que es duplicaran dins de QLC+ perquè coincideixi amb l'interval DMX (0-255).
 * **Missatge d'Inicialització**: Aquesta és una llista de predefinits (plantilles) que contenen el missatge d'inicialització que QLC+ enviarà en obrir un dispositiu MIDI abans d'utilitzar-lo. A continuació s'escriu una explicació detallada d'aquesta funcionalitat.
 
-Feedbacks/Retroalimentacions
+Feedback/Retroalimentacions
 ---------
 
 El connector MIDI és un dels connectors QLC+ que admeten retroalimentació/feedback. Quan QLC+ detecti un dispositiu MIDI amb una línia de sortida, habilitarà la casella de selecció de retroalimentació en el panell d'Entrada/Sortida](/input-output). Tingueu en compte que la sortida i els feedback són exclusius, de manera que no es poden utilitzar tots dos alhora.  
@@ -40,10 +40,10 @@ Eix X del nanoPAD de KORG
 
 Per raons desconegudes, els valors per defecte de fàbrica del nanoPAD no mapegen l'eix X de l'àrea del pad. Per fer que funcioni plenament amb QLC+, descarrega l'utilitat KORG (només per a Windows i macOS) des d'[aquí](http://i.korg.com/SupportPage.aspx?productid=415) i configura l'Eix X a CC2 (Controla el canvi #2).
 
-Feedbacks LED dels APC de l'AKAI
+Feedback LED dels APC de l'AKAI
 ----------------------
 
-Quan s'utilitza un controlador de la família APC d'Akai, hi ha una funció que pot ser molt útil: feedbacks de color LED.  
+Quan s'utilitza un controlador de la família APC d'Akai, hi ha una funció que pot ser molt útil: feedback de color LED.  
 El comportament per defecte amb els botons de la consola virtual és: valor = 0: LED apagat, valor = 255: LED verd  
 Això es pot personalitzar en seleccionar un canal d'entrada, prement el botó "Retroalimentació personalitzada".  
 Es mostra una nova àrea, que mostra la possibilitat d'introduir un valor inferior i un valor superior. Això es tradueix bàsicament en què els valors QLC+ haurien d'enviar per als botons d'estats activats/desactivats.  

@@ -3,7 +3,7 @@ title: 'Input Profiles'
 date: '04:57 22-08-2023'
 ---
 
-This howto document tells you how to associate input profiles to input universes and how to edit these profiles. You should first read the [input/output mapping](/input-output) page so that you can access the input/output manager and know how to edit input universes.
+This how-to document tells you how to associate input profiles to input universes and how to edit these profiles. You should first read the [input/output mapping](/input-output) page so that you can access the input/output manager and know how to edit input universes.
 
 Input Profile Manager
 ---------------------
