@@ -30,7 +30,7 @@ The main window in the Fixture Editor is just an empty workspace that contains t
 |     |     |
 | --- | --- |
 | ![](/basics/filenew.png) | Create a new fixture definition. Opens an empty Fixture Editor window. |
-| ![](/basics/fileopen.png) | Open an existing fixture definiton. Opens the fixture definition in a Fixture Editor window. |
+| ![](/basics/fileopen.png) | Open an existing fixture definition. Opens the fixture definition in a Fixture Editor window. |
 | ![](/basics/filesave.png) | Save the fixture definition in the currently active Fixture Editor window. |
 | ![](/basics/filesaveas.png) | Save the fixture definition with a given name in the currently active Fixture Editor window. |
 
