@@ -43,7 +43,7 @@ i intentar activar/[desactivar el controlador](/plugins/disable-apple-serial-vcp
 i les plantilles MIDI.Canvia en funció del vostre sistema operatiu:
 
 * **Linux**: és una carpeta oculta al directori d'inici de l'usuari: $HOME/.`qlcplus`
-* **Windows**: és una carpeta del vostre directori d'usuari (per exemple, MyUser): C:\\Users\\MyUser\\QLC+
+* **Windows**: és una carpeta del vostre directori d'usuari (per exemple, <Username>): C:\\Users\\<Username>\\QLC+
 * **Mac OS**: es troba al vostre usuari `Directori de biblioteques`: `$HOME/Biblioteca/Aplicació\\ Suport/QLC+`
   Podeu arribar a qualsevol d'aquestes carpetes des d'un terminal amb l'ordre `cd`. Per exemple:`cd $HOME/Biblioteca/Aplicació\\ Suport/`
   QLC+ Tingueu en compte que els fixtures i els perfils d'entrada que es troben a la carpeta d'usuari

@@ -21,7 +21,7 @@ Each line has three options that can be changed depending on your needs:
     * **Note velocity**: in this mode, QLC+ will send data using MIDI notes velocity. MIDI notes can go from 21 (A0) to 108 (C8) and each note can have a velocity going from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
     * **Control Change**: this is one of the MIDI protocol messages (like Program Change) frequently used by MIDI controllers. Each device should list the supported CC messages in its user manual, so please consult it before using this mode. The CC range can go from 0 to 127 and can have values from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
     * **Program Change**: this is one of the MIDI protocol messages (like Control Change) frequently used by MIDI controllers. Each device should list the supported PC messages in its user manual, so please consult it before using this mode. The PC range can go from 0 to 127 and can have values from 0 to 127, which will be doubled inside QLC+ to match the DMX range (0-255).
-* **Initialization message**: This is a list of presets (templates) containing the intialization message that QLC+ will send when opening a MIDI device before using it. A detailed explanation of this functionality is written below.
+* **Initialization message**: This is a list of presets (templates) containing the initialization message that QLC+ will send when opening a MIDI device before using it. A detailed explanation of this functionality is written below.
 
 Feedback
 ---------

@@ -67,9 +67,9 @@ Copies of collection functions can be created with the [Function Manager](/funct
 
 ### DMX
 
-[DMX](https://en.wikipedia.org/wiki/DMX512) is short for **D**igital **M**ultiple**X**. It basically defines a whole bunch of properties, protocol, wiring etc. In the case of lighting software, it defines the maximum number of channels (512) per universe and the value range of each channel (0-255).
+[DMX](https://en.wikipedia.org/wiki/DMX512) is short for Digital MultipleX. It basically defines a whole bunch of properties, protocol, wiring etc. In the case of lighting software, it defines the maximum number of channels (512) per universe and the value range of each channel (0-255).
 
-QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware; rather, DMX has just been selected as the de facto lighting standard. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#outputplugins).
+QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#outputplugins).
 
 ### ![](../efx.png) EFX
 
@@ -176,7 +176,7 @@ An output line is a connection provided by a hardware or network which is access
 
 ### Input profiles
 
-Input profiles can be thought of as [fixtures'](#fixtures) cousins; they contain information on specific devices that produce input data. An input device can be, for example, a slider board like the Behringer BCF-2000, Korg nanoKONTROL, an Enttec Playback Wing...
+Input profiles can be thought of as [fixtures'](#fixtures) cousins; they contain information on specific devices that produce input data. An input device can be, for example, a slider board like the Behringer BCF-2000, KORG nanoKONTROL, an Enttec Playback Wing...
 
 ### LTP (Latest Takes Precedence)
 

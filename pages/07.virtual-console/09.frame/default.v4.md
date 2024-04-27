@@ -39,8 +39,8 @@ Following the options to configure this functionality:
 
 By default a Frame is displayed with a header. Following a brief description of the default and optional controls that can be used either in Operate or Design mode.
 
-* ![](/basics/expand.png) **Expand/Collapse button**: when clicked, the Frame size will be dramaticaly reduced, to save space on your Virtual Console. The collapsed state is saved in your project.
+* ![](/basics/expand.png) **Expand/Collapse button**: when clicked, the Frame size will be dramatically reduced, to save space on your Virtual Console. The collapsed state is saved in your project.
 * **Frame name**: a label displaying the Frame name
 * ![](/basics/check.png) **Enable/Disable button**: when clicked, the Frame will go into a disable state. All the widgets inside the Frame will not respond anymore to input controls.  
-    This is useful, for example, to use the same input controls on widgets of different frames. For example if you bound the key "G" to a button in Frame A and also to a button on Frame B, you can enable one Frame at a time to use your key binding univocally.
+    This is useful, for example, to use the same input controls on widgets of different frames. For example if you bound the key "G" to a button in Frame A and also to a button on Frame B, you can enable one Frame at a time to use your key binding universally.
 * ![](/basics/back.png) Page ![](/basics/forward.png) **Multipage controls** (Optional): when a Frame is configured in multipage mode, some extra buttons will be displayed on the header, allowing you to switch between the Frame pages and to keep track of the current page you're in.

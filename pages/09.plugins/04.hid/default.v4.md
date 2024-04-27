@@ -19,7 +19,7 @@ Joysticks
 ---------
 
 QLC+ tries to detect the specific joystick functionalities, such as axes and buttons, as individual channels that can be mapped to your Virtual Console widgets.  
-Axes and buttons are mapped by QLC+ in sequential order, so for example if your joystick supports 2 axes and 4 buttons, they will appear in the input mapping dialogs like this:  
+Axes and buttons are mapped by QLC+ in sequential order, so for example if your joystick supports 2 axes and 4 buttons, they will appear in the input mapping dialogues like this:  
 
 * channel 1: X-axis
 * channel 2: Y-axis

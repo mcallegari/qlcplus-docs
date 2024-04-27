@@ -5,7 +5,7 @@ date: '03:56 22-08-2023'
 
 Users can write their own RGB scripts to produce custom graphics projection with the [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix) function. The scripts' operation principle is to produce a number of RGB maps that each represent one step in the graphics animation. The principle is basically the same as in movies: the audience observes a moving picture, which in reality is only a sequentially-played stream of static images that produce an illusion of movement.
 
-The scripts themselves are written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript), which is also known as [JavaScript](https://en.wikipedia.org/wiki/JavaScript). Note that the language is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity) and as a de-facto standard follows [camel case rules](https://en.wikipedia.org/wiki/Naming_convention_%28programming%29#JavaScript), so make sure you write everything correctly and pay special attention to the required API features.
+The scripts themselves are written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript), which is also known as [JavaScript](https://en.wikipedia.org/wiki/JavaScript). Note that the language is [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity) and a as standard follows [camel case rules](https://en.wikipedia.org/wiki/Naming_convention_%28programming%29#JavaScript), so make sure you write everything correctly and pay special attention to the required API features.
 
 Script files should be named after the script's name and must have a **.js** extension. Depending on platform, the files should be placed either in the QLC+ system script directory or, preferably, the user script directory:
 

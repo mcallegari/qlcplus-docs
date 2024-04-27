@@ -40,7 +40,7 @@ The **current time** value **(4)** is displayed in four parts. When any of these
 
 The **tap** button **(3)** can be used to match the time to a beat. The elapsed time between clicks is measured and this time is set for the controlled functions, just as if the dial had been adjusted to that particular time.
 
-For cuelists/chasers and RGB Matrices, the tap button advances the function to next step/position when speed dial is set to adjust duration. The tapped tempo must be more than 1/4 of the original duration.
+For a cuelist, chaser or RGB Matrix, the tap button advances the function to next step/position when speed dial is set to adjust duration. The tapped tempo must be more than 1/4 of the original duration.
 
 ### Configuration - Functions tab
 
@@ -90,7 +90,7 @@ Individual visibility of the widget's layout elements can be switched on or off 
 | **Show multiplier and divider buttons** |
 | **Show the apply button** |
 
-### Configuration - Mutliplier tab
+### Configuration - Multiplier tab
 
 Here it is possible to select if the multiply factor should be reset when the dial **(2)** is manually adjusted and individual external controls for the multiplier button **(5)**, the divider button **(7)** and the reset factor button **(8)**
 

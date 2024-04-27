@@ -53,7 +53,7 @@ Output lines can be configured with the following parameters:
 | **IP Address** | This is the destination IP address where the E1.31 plugin will transmit packets to.  <br>By default a multicast address is used as described above.  <br>When the output is set to multicast, you can set this parameter within the range 1-255.  <br>This allows sending packets to the multicast range 239.255.0.1 to 239.255.0.255.  <br>When the output is set to unicast, you can select any arbitrary IP address.  <br>When patching a QLC+ universe to the loopback device (127.0.0.1), unicast packets will be always transmitted to 127.0.0.1. |
 | **Port** | This is the port the outgoing packets will target.  <br>Multicast E1.31 port is always 5568.  <br>When the output is set to unicast, you can select any port you want. |
 | **E1.31 Universe** | This is the E1.31 universe that will be actually written in every packet transmitted.  <br>By setting this parameter, you can use any QLC+ universe to transmit to the desired E1.31 universe. |
-| **Transmission Mode** | Here you can select if QLC+ should transmit full or partial universes.  <br>'Full' means that all the 512 DMX channels of a universe are transmitted at the speed rate of the QLC+ internal clock (50Hz), producing a fixed bitrate of about 200Kbit/s.  <br>'Partial', instead, means that QLC+ will transmit only the DMX channel actually used in a universe, starting from channel 1. For example if you raise channel 3 of a fixture with address 50, the E1.31 plugin will transmit only 53 DMX channels, thus limiting the trasnmission bitrate.  <br>Use this setting only if the receiving E1.31 node supports partial transmission. |
+| **Transmission Mode** | Here you can select if QLC+ should transmit full or partial universes.  <br>'Full' means that all the 512 DMX channels of a universe are transmitted at the speed rate of the QLC+ internal clock (50Hz), producing a fixed bitrate of about 200kbps.  <br>'Partial', instead, means that QLC+ will transmit only the DMX channel actually used in a universe, starting from channel 1. For example if you raise channel 3 of a fixture with address 50, the E1.31 plugin will transmit only 53 DMX channels, thus limiting the transmission bitrate.  <br>Use this setting only if the receiving E1.31 node supports partial transmission. |
 | **Priority** | E1.31 source priority.  <br>**0** is the minimum priority, **200** is the maximum, **100** is default priority.  <br>When E1.31 receiver gets data for a particular universe from multiple sources, it uses data from source with the highest priority.  <br>This allows various failover schemes. Note that QLC+ does not yet acknowledge priority on input. |
 
   
@@ -62,6 +62,6 @@ Settings that are different from the plugin defaults, will be stored in your QLC
 Compatibility
 -------------
 
-QLC+ has been tested with the following E1.31 softwares/devices:
+QLC+ has been tested with the following E1.31 software and devices:
 
-* [DMXking eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Output device
+* [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Output device

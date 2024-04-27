@@ -36,7 +36,7 @@ Les línies d'entrada no tenen paràmetres particulars, mentre que es pot config
 **Nota**: No establiu l'adreça IP de sortida amb la mateixa adreça IP del node transmissor (per exemple, l'ordinador on s'executa QLC+), ja que és incorrecta i pot provocar un bucle de xarxa. Si necessiteu comunicar-vos amb un node Art-Net que s'executa a la mateixa màquina on s'està executant QLC+, utilitzeu el dispositiu de loopback en el seu lloc (127.0.0.1).
 * **Univers Art-Net**: Aquest és l'univers Art-Net que s'escriurà realment en cada paquet transmès. Si establiu aquest paràmetre, podeu utilitzar qualsevol univers QLC+ per a transmetre a l'univers Art-Net desitjat.
 * **Mode de Transmissió**: Aquí podeu seleccionar si QLC+ ha de transmetre universos complets o parcials.  
-    "Complet" significa que tots els 512 canals DMX d'un univers es transmeten a la velocitat del rellotge intern QLC+ (50Hz), produint una taxa de bits fixa d'uns 200Kbit/s.<x3></x3>
+    "Complet" significa que tots els 512 canals DMX d'un univers es transmeten a la velocitat del rellotge intern QLC+ (50Hz), produint una taxa de bits fixa d'uns 200kbps.<x3></x3>
     "Parcial", en canvi, significa que QLC+ transmetrà només el canal DMX realment utilitzat en un univers, a partir del canal 1. Per exemple, si eleveu el canal 3 d'un aparell amb l'adreça 50, el connector Art-Net transmetrà només 53 canals DMX, limitant així la taxa de bits de trasnmissió. Utilitzeu aquest paràmetre només si el node Art-Net receptor admet la transmissió parcial.
 
 Els paràmetres que són diferents dels valors per defecte del connector, s'emmagatzemaran al vostre espai de treball QLC+, per augmentar la portabilitat d'un projecte a través de diferents plataformes, com ara diferents sistemes operatius o un PC i un Raspberry Pi.
@@ -60,8 +60,8 @@ Compatibilitat
 
 QLC+ ha estat provat amb els següents programaris/dispositius Art-Net:
 
-* [DMXking eDMX1 TX](https://dmxking.com/artnetsacn/edmx1-max) \- 1 Dispositiu de sortida
-* [DMXking eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-max) \- 2 Dispositiu de sortida
+* [DMXKing eDMX1 TX](https://dmxking.com/artnetsacn/edmx1-max) \- 1 Dispositiu de sortida
+* [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-max) \- 2 Dispositiu de sortida
 * [Enttec Open DMX Ethernet (ODE)](https://www.enttec.com/index.php?main_menu=Products&pn=70305) \- Dispositiu d'entrada/sortida
 * [OLA - Open Lighting Architecture](https://www.opendmx.net/index.php/Open_Lighting_Architecture) \- Node de programari d'entrada/sortida
 * [Art-Net Controller LITE](https://sites.google.com/site/artnetcontroller/) \- Controlador d'entrada per a Android

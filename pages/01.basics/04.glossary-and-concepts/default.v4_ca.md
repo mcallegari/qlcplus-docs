@@ -176,7 +176,7 @@ Una línia de sortida és una connexió proporcionada per un maquinari o xarxa a
 
 ### Perfils d'entrada
 
-Els perfils d'entrada es poden considerar com a cosins [dels fixtures](#fixtures); contenen informació sobre dispositius específics que produeixen dades d'entrada. Un dispositiu d'entrada pot ser, per exemple, un tauler lliscant com el Behringer BCF-2000, el Korg nanoKONTROL, un Enttec Playback Wing...
+Els perfils d'entrada es poden considerar com a cosins [dels fixtures](#fixtures); contenen informació sobre dispositius específics que produeixen dades d'entrada. Un dispositiu d'entrada pot ser, per exemple, un tauler lliscant com el Behringer BCF-2000, el KORG nanoKONTROL, un Enttec Playback Wing...
 
 ### LTP (l'últim té prioritat)
 

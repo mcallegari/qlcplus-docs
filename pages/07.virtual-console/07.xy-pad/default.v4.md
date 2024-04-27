@@ -6,7 +6,7 @@ media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 
 XY Pad is a Virtual Console widget dedicated to fixtures positioning.  
 It can handle the typical DMX movement channels (**pan** and **tilt**) of intelligent lighting fixtures, namely scanners and moving heads.  
-The pad is a resizable area, surrounded by several controls to cover the needs you might have during a live show.  
+The pad is a resizeable area, surrounded by several controls to cover the needs you might have during a live show.  
 It is displayed as following:
 
 ![](xypad.png)
@@ -129,7 +129,7 @@ You can change the extent of movement and reverse fixtures' movement with the XY
   
 **3\. Presets tab**
 
-Here you can add/remove presets to the XY Pad. Each preset is displayed as a button in the lower part of the XY Pad widget. EFX nad Scenes presets can be toggled, to start/stop a function, Fixture Groups presets can be toggled to activate/deactivate a Fxiture group, while Position presets can be clicked just once
+Here you can add/remove presets to the XY Pad. Each preset is displayed as a button in the lower part of the XY Pad widget. EFX nad Scenes presets can be toggled, to start/stop a function, Fixture Groups presets can be toggled to activate/deactivate a fixture group, while Position presets can be clicked just once
 
 |     |     |
 | --- | --- |
