@@ -2,7 +2,9 @@ matrix:
 - name: Markdown
   expect_match: false
   apsell:
-    mode: en
+    lang: en
+    d: en_GB
+
   dictionary:
     wordlists:
     - .wordlist.txt
@@ -25,6 +27,8 @@ matrix:
   - "pages/**/*chapter.v4.md"
   - "pages/**/*chapter.v5.md"
   - "pages/**/*docs.md"
+  - "pages/**/*docs.v4.md"
+  - "pages/**/*docs.v5.md"
   - "pages/**/*default.v4.md"
   - "pages/**/*default.v5.md"
 
