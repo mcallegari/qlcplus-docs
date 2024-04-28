@@ -36,7 +36,7 @@ The EFX editor, as its name suggests, is used to edit ![](/basics/efx.png) [EFX]
 | **Run order** | **Loop**: Run thru the steps over and over again.<br>**Single Shot**: Run thru the steps once and then stop.<br>**Ping Pong**: Run thru the steps over and over again, reversing direction at both ends. |
 | **Pattern** | Select the movement pattern algorithm.<br><br>**Circle**<br>**Eight**<br>**Line**: goes from one end to the other and back; faster in the middle, slower at the ends<br>**Line2**: goes in one direction only; speed is always the same<br>**Diamond**<br>**Square**<br>**SquareChoppy**<br>**Leaf**<br>**Lissajous** |
 | **Parameters** | **Width**: Choose the pan width (0-255)<br>**Height**: Choose the tilt height (0-255)<br>**X Offset**: Move the pattern's horizontal (pan) centerpoint (0-255)<br>**Y Offset**: Move the pattern's vertical (tilt) centerpoint (0-255)<br>**Rotation**: Rotate the pattern along its axis (0-360 degrees)<br>**Start Offset**: Where along the path the movement should start (0-360 degrees)<br>**X Frequency**: Change the **Lissajous** pattern's X (horizontal) frequency (0-32)<br>**Y Frequency**: Change the **Lissajous** pattern's Y (vertical) frequency (0-32)<br>**X Phase**: Change the **Lissajous** pattern's X (horizontal) phase (0-360 degrees)<br>**Y Phase**: Change the **Lissajous** pattern's Y (vertical) phase (0-360 degrees) |
-| **Color Bacground** | When enabled, the EFX preview background will display a RGB palette, to show what the EFX does when controlling RGB channels |
+| **Color Background** | When enabled, the EFX preview background will display a RGB palette, to show what the EFX does when controlling RGB channels |
 | **Relative** | See below. |
 
 ### Fixture Order

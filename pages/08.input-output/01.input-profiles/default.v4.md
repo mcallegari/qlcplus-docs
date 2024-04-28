@@ -88,7 +88,7 @@ There are two behaviours: Absolute and Relative.
   
 **Relative** is a more advanced behaviour that comes handy when using a HID Joystick with a QLC+ [XY Pad widget](/virtual-console/xy-pad) or a [Slider widget](/virtual-console/slider). Values received from an external controller are treated as relative movement starting from the current position of a Virtual Console widget.  
 Let's make an example. Suppose you have a XY Pad in your Virtual Console, controlling and monitoring a group of moving heads. During your show you will have a number of scenes moving the heads pan and tilt. At some point you want to slightly adjust the position of the heads of just a few degrees. Here is when the relative movement kicks in. When you move your joystick (or external slider) QLC+ will adjust the heads from their current positions. The direction will depend directly from your external controller. The relative movement will stop when the external controller will return to its origin. Joysticks have a spring for that.  
-In addition to this, the Input Profile Editor Relative setting allows you to set a **Sensitivity** parameter that will instruct QLC+ about the strenght of your external controller movements. The higher this value is, the slower the movements will occur. The lower, the faster.
+In addition to this, the Input Profile Editor Relative setting allows you to set a **Sensitivity** parameter that will instruct QLC+ about the strength of your external controller movements. The higher this value is, the slower the movements will occur. The lower, the faster.
 
 * * *
 
@@ -104,11 +104,11 @@ It is possible to change the behaviour of individual buttons from an input profi
   
 **Generate an extra Press/Release when toggled**: this is a quite specific option used for example when dealing with TouchOSC or the Behringer BCF2000.  
 QLC+ toggle events are triggered when a high+low sequence is received. This means that QLC+ expects a non zero value (typically 255) followed by a zero value to toggle, for example, a button.  
-Devices like BCF2000 or softwares like TouchOSC, instead, send just a non zero value when activating a button, and a zero value when deactivating it.  
+Devices like BCF2000 or software like TouchOSC, instead, send just a non zero value when activating a button, and a zero value when deactivating it.  
 When checking this option, QLC+ will generate the "missing" events to standardize the way some controller work. So, for example, the BCF2000 will look like sending 255+0 when pressing a button, and another 255+0 when pressing it again.  
   
 **Custom feedback**: with the "Lower value" and "Upper value" boxes, it is possible to force custom values to be sent when the selected button sends a non-zero and a zero value.  
-For example, with this option it is possible to set globally how Akai APC devices LEDs should be colored when activated/deactivated.  
+For example, with this option it is possible to set globally how AKAI APC devices LEDs should be colored when activated/deactivated.  
 Note that this option is global in QLC+, but it can be overridden if needed by a specific Virtual Console widget, through its configuration page.
 
 * * *
@@ -122,4 +122,4 @@ Now you should see the profile you just defined in the list of available input p
 To remove any existing input profiles, click the ![](/basics/edit_remove.png) remove button. Note that some profiles are so-called system profiles and cannot be removed unless you're the administrator.
 
 That's all!  
-Now you can start using your preferred profile. When assigining an input channel to a QLC+ element (like Virtual Console sliders, channel groups, etc..) you will see that your Input profile mapping will be used.
+Now you can start using your preferred profile. When assigning an input channel to a QLC+ element (like Virtual Console sliders, channel groups, etc..) you will see that your Input profile mapping will be used.

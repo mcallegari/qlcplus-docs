@@ -81,7 +81,7 @@ Un fixture és essencialment un dispositiu d'il·luminació. Pot ser, per exempl
 
 Amb l'editor de definició de Fixture, els usuaris poden editar la informació del fixture compartit emmagatzemada en una biblioteca de fixtures que conté les propietats següents per a cada fixture:
 
-* Fabricant (p. ex. Martin)
+* Fabricant (p. ex. ClayPaky)
 * Model (p. ex. MAC250)
 * Tipus (canviador de color, escàner, capçal mòbil, fum, nebulosa, ventilador...)
 * Propietats físiques (tipus de bombeta, angle de feix, dimensions...)

@@ -81,7 +81,7 @@ A fixture is essentially one lighting device. It can be, for example, one moving
 
 With the Fixture Definition Editor, users can edit shared fixture information stored in a fixture library that contains the following properties for each fixture:
 
-*   Manufacturer (e.g. Martin)
+*   Manufacturer (e.g. ClayPaky)
 *   Model (e.g. MAC250)
 *   Type (Color Changer, Scanner, Moving Head, Smoke, Haze, Fan...)
 *   Physical properties (bulb type, beam angle, dimensions...)

@@ -43,7 +43,7 @@ For unknown reasons, the nanoPAD factory defaults don't map the X Axis of the pa
 AKAI APC LED Feedback
 ----------------------
 
-When using one of the Akai APC family controller, there is one feature that could come very handy: LED color feedback.  
+When using one of the AKAI APC controllers, there is a feature that could be very handy: LED color feedback.  
 The default behaviour with Virtual Console buttons is: value = 0: LED off, value = 255: LED green  
 This can be customized when selecting an input channel, by pressing the "Custom feedback" button.  
 A new area is displayed, showing the possibility to enter a lower and an upper value. This is basically translated in which values QLC+ should send for buttons on/off states.  

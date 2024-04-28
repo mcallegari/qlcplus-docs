@@ -12,12 +12,10 @@ taxonomy:
 </style>
 ### Chapter 5
 
-# Show Manager
-
-The Show Manager has been introduced in QLC+ starting from version 4.0.0, after forking the original QLC code on November 5th, 2012.  
+# Show Manager 
   
 This feature is meant to give users the possibility of setting up a time driven show in a friendly and completely graphical way.  
-The graphic interface shows a multitrack view, typical of audio sequencers or video editing softwares, and with it users are allowed to place QLC+ [Functions](/basics/glossary-and-concepts#functions) at the desired place and time in the view.  
+The graphic interface shows a multitrack view, typical of audio sequencers or video editing software, and with it users are allowed to place QLC+ [Functions](/basics/glossary-and-concepts#functions) at the desired place and time in the view.  
 Show Manager gives a lot of flexibility during a [Show](/basics/glossary-and-concepts#show) creation thanks to its visual-oriented approach. Once understood the basic elements, it is very easy to create, move or edit the existing functions and improve a Show by adding new tracks to it.  
   
 Typical use cases of Shows are those gigs where a band plays songs following a metronome and the light show has always to be the same, following the music.  
@@ -42,7 +40,7 @@ The main differences are:
 **Editing**: The editing approach between Sequences and Chaser is different too.  
     Normally the workflow of a Chaser is: create a Function, then add it to the Chaser as a step.  
     The workflow of a Sequence is: create a Scene, create a Sequence on top of it, add steps to it.  
-    The Sequence approach might be very effective when you design a light show if you can pre-determine which fixtures you're going to use. Another major advantage of Sequence editing is that when you create a new step, the values of the previous step are copied in the new one. So the user is simply required to adjust the differences between them.  
+    The Sequence approach might be very effective when you design a light show if you know which fixtures you're going to use. Another major advantage of Sequence editing is that when you create a new step, the values of the previous step are copied in the new one. So the user is simply required to adjust the differences between them.  
     If you are going to create 500 steps and they're all different, then Sequences and Chasers will take almost the same time to be created.  
     
 **Synchronization**: another major advantage of using Sequences in a Show is that a Show can easily be extended (or reduced) while with a Chaser you will have a hard time to synchronize the new functions to the existing ones.  
@@ -65,7 +63,7 @@ Show Manager toolbar controls
 | ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](/function-manager)** |
 | ![](/basics/color.png) | CTRL+R | Assign a custom color to the selected item |
 | ![](/basics/lock.png) | CTRL+K | Lock or unlock then selected item. Once an item is locked, it cannot be dragged on the timeline anymore |
-| ![](/basics/speed.png) | CTRL+T | Open a window where you can adjust the selected item start time and total duration. The behaviour of the latter will depend on the selected item.  <br>On Audio and Video items it does nothing.  <br>On Sequences and Chasers it will stretch all the steps timings to fit to the desired duration.  <br>On EFXs and RGB Matrices some extra options will be displayed, allowing to stretch the original function or loop the function until the desired duration is reached. |
+| ![](/basics/speed.png) | CTRL+T | Open a window where you can adjust the selected item start time and total duration. The behaviour of the latter will depend on the selected item.  <br>On Audio and Video items it does nothing.  <br>On Sequences and Chasers it will stretch all the steps timings to fit to the desired duration.  <br>On EFX and RGB Matrices some extra options will be displayed, allowing to stretch the original function or loop the function until the desired duration is reached. |
 | ![](/basics/grid.png) | CTRL+G | Enable/disable the "Snap to grid" functionality. The view will be filled with vertical bars corresponding to the header markers (time or BPM)  <br>Snapping to grid will correct your items by dragging them to the nearest reference bar |
 | **00:00:00.000** |     | This field displays the cursor time position both if the playback is stopped or activated |
 | ![](/basics/player_play.png)![](/basics/player_pause.png) | Space | Start the current Show playback from the cursor position, or pause it and leave the lights on. |
