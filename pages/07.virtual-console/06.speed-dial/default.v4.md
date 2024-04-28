@@ -96,7 +96,7 @@ Here it is possible to select if the multiply factor should be reset when the di
 
 ### Configuration - Presets tab
 
-A preset is a way to have a quick access to a predifined value for a speed dial.  
+A preset is a way to have a quick access to a predefined value for a speed dial.  
 Each preset is represented as a button in the speed dial widget layout, and can be either clicked with the mouse or pressed on a touchscreen, or associated to a key combination or an external controller input line.  
 On the left of the preset tab, there is the list of presets. When selecting a preset in this list, the button on the right will be able to edit its properties.
 

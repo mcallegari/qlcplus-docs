@@ -20,7 +20,7 @@ namespace TeamTNT\TNTSearch\Stemmer;
 /**
  * This is a reimplementation of the Porter Stemmer Algorithm for Portuguese.
  * This script is based on the implementation found on <https://github.com/wamania/php-stemmer>
- * and has been rewriten to work with TNTSearch by Lucas Padilha <https://github.com/LucasPadilha>
+ * and has been rewritten to work with TNTSearch by Lucas Padilha <https://github.com/LucasPadilha>
  *
  * Takes a word and reduces it to its Portuguese stem using the Porter stemmer algorithm.
  *

@@ -17,6 +17,6 @@ When you want to start QLC+ in kiosk mode, run:
 
 You can of course specify your own workspace file for **-o**, and size/position for **-c**.
 
-You can omit any of the paramteres if you need to - for example, omit **-c 500,10,32,32** if you don't want close button, and omit **-f** if you don't want fullscreen.
+You can omit any of the parameters if you need to - for example, omit **-c 500,10,32,32** if you don't want close button, and omit **-f** if you don't want fullscreen.
 
 All command-line parameters are described [here](../command-line-parameters).
