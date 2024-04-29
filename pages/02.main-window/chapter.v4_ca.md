@@ -3,7 +3,7 @@ title: Finestra Principal
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'mainwindow.png,mainwindow.png'
+media_order: 'MainWindow.png,MainWindow.png'
 ---
 
 <style>
@@ -22,7 +22,7 @@ La finestra principal de QLC+ consta de tres parts principals:
 2. Panells actius seleccionats per les seves respectives pestanyes
 3. Pestanyes que permeten la selecció d'un dels panells QLC+
 
-![](mainwindow.png)
+![](MainWindow.png)
 
 La majoria dels controls al llarg del programari tenen consells d'eina, que apareixen després de mantenir el cursor del ratolí sobre ells durant un temps curt.
 

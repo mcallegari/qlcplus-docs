@@ -26,7 +26,7 @@ Editor de Modificadors de Canals
 
 L'editor modificadors de canal es presenta així:
 
-![](channelmodifier.png)
+![](channel_modifier.png)
 
 A la part dreta de la finestra, es mostra una llista de les plantilles modificadores disponibles.  
 En fer clic en una plantilla de la llista, es mostrarà la previsualització de la corba a la part esquerra de la finestra.  

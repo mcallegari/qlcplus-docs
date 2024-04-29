@@ -3,7 +3,7 @@ title: 'Editor de Definicions de Fixture'
 date: '05:24 22-08-2023'
 taxonomy:
     category: docs
-media_order: 'fixtureeditor_physical.png,fixtureeditor_aliases.png,fixtureeditor_channel_color.png,fixtureeditor_channel_gobo.png,fixtureeditor_channel_preset.png,fixtureeditor_channel_shutter.png,fixtureeditor_channel_wizard.png,fixtureeditor_channels.png,fixtureeditor_general.png,fixtureeditor_mode_channels.png,fixtureeditor_mode_edit_head.png,fixtureeditor_mode_heads.png'
+media_order: 'fixture_editor_physical.png,fixture_editor_aliases.png,fixture_editor_channel_color.png,fixture_editor_channel_gobo.png,fixture_editor_channel_preset.png,fixture_editor_channel_shutter.png,fixture_editor_channel_wizard.png,fixture_editor_channels.png,fixture_editor_general.png,fixture_editor_mode_channels.png,fixture_editor_mode_edit_head.png,fixture_editor_mode_heads.png'
 ---
 
 ### Capítol 10
@@ -18,7 +18,7 @@ Per utilitzar les definicions del vostre fixture a QLC+, heu de desar-les en una
 1. A la mateixa carpeta que el teu espai de treball QLC+ (útil si vols donar el teu espai de treball a una altra persona)
 2. A la carpeta de fixtures d'usuari que es troba a les ubicacions següents:
     * Linux: és una carpeta amagada al directori d'inici de l'usuari: $HOME/.qlcplus/Fixtures
-    * Windows: és una carpeta del vostre usuari (p. ex. MyUser) directori: C:\\Users\\MyUser\\QLC+\\Fixtures
+    * Windows: és una carpeta del vostre usuari (p. ex. <Username>) directori: C:\\Users\\<Username>\\QLC+\\Fixtures
     * Mac OS: es troba al directori de la biblioteca d'usuaris: $HOME/Library/Application\\ Support/QLC+/Fixtures
 
 **Nota important: NO heu de desar ni copiar els vostres fixtures personalitzats a la carpeta QLC+ de fixtures del sistema. Això és perquè quan QLC+ es desinstal·la, se suprimeixen tots els fixtures d'aquesta carpeta. També pot causar conflictes no desitjats entre el sistema i les pròpies definicions de fixture.**

@@ -40,7 +40,7 @@ The **current time** value **(4)** is displayed in four parts. When any of these
 
 The **tap** button **(3)** can be used to match the time to a beat. The elapsed time between clicks is measured and this time is set for the controlled functions, just as if the dial had been adjusted to that particular time.
 
-For cuelists/chasers and RGB Matrices, the tap button advances the function to next step/position when speed dial is set to adjust duration. The tapped tempo must be more than 1/4 of the original duration.
+For a cuelist, chaser or RGB Matrix, the tap button advances the function to next step/position when speed dial is set to adjust duration. The tapped tempo must be more than 1/4 of the original duration.
 
 ### Configuration - Functions tab
 
@@ -90,13 +90,13 @@ Individual visibility of the widget's layout elements can be switched on or off 
 | **Show multiplier and divider buttons** |
 | **Show the apply button** |
 
-### Configuration - Mutliplier tab
+### Configuration - Multiplier tab
 
 Here it is possible to select if the multiply factor should be reset when the dial **(2)** is manually adjusted and individual external controls for the multiplier button **(5)**, the divider button **(7)** and the reset factor button **(8)**
 
 ### Configuration - Presets tab
 
-A preset is a way to have a quick access to a predifined value for a speed dial.  
+A preset is a way to have a quick access to a predefined value for a speed dial.  
 Each preset is represented as a button in the speed dial widget layout, and can be either clicked with the mouse or pressed on a touchscreen, or associated to a key combination or an external controller input line.  
 On the left of the preset tab, there is the list of presets. When selecting a preset in this list, the button on the right will be able to edit its properties.
 

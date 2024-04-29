@@ -8,7 +8,7 @@ Let's make an example. A fixture has channel 5 named "Effects" which controls th
 To cope with this case, you need to define 2 channels: "Speed" and "Sound sensitivity". In the fixture mode add only "Speed", since it will the default behavior when DMX value of channel 5 is equal to 0.  
 Then you need to define just one alias: the one that will replace the default channel "Speed" with "Sound sensitivity". QLC+ will then know what to do when the DMX value of channel 5 enters or exits the alias.
 
-![](../fixtureeditor_aliases.png)
+![](../fixture_editor_aliases.png)
 
 |     |     |
 | --- | --- |

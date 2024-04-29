@@ -1,7 +1,7 @@
 ---
 title: 'Remapatge de Fixtures'
 date: '11:36 21-08-2023'
-media_order: fixremap.png
+media_order: fixture_remap.png
 ---
 
 A partir de la versió 4.4.1, QLC+ ofereix una funcionalitat anomenada remapatge de fixtures.  
@@ -19,7 +19,7 @@ Finestra de remapeig
 
 A continuació, expliquem com utilitzar la finestra de remapeig de fixture, començant des d'una captura de pantalla d'un exemple complet:
 
-![](fixremap.png)
+![](fixture_remap.png)
 
 I ara, aquí teniu una explicació detallada de cada element de la finestra de remapeig
 

@@ -9,7 +9,7 @@ If no file is found, QLC+ will start with the default style.
 The theme style file
 ------------------
 
-The file name is hardcoded into QLC+ and must be: `qlcplusStyle.qss`  
+The file name is  hard-coded into QLC+ and must be: `qlcplusStyle.qss`  
 The style file must also be placed in a specific path which is:  
 
 * **Linux**: `$HOME/.qlcplus`
@@ -39,12 +39,12 @@ Since the style file is strictly related to the inner Qt objects, you might want
 [Qt Style Sheets Examples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
 It is up to your imagination how you prefer to customize the QLC+ GUI appearance! If you find a style worth sharing, don't forget to send in your contribution by posting it online in the [QLC+ forum](https://www.qlcplus.org/forum/viewforum.php?f=5)
 
-Please note: not all styles are available to be changed via the stylesheet as they are hardcoded in C++. 
+Please note: not all styles are available to be changed via the stylesheet as they are  hard-coded in C++. 
 
 QLC+ dark blue style example
 ----------------------------
 
-Just to give you an example of how easy this process is, here's a blue-ish dark style for QLC+.  
+Just to give you an example of how easy this process is, here's a bluish dark style for QLC+.  
 If you copy the following lines into `qlcplusStyle.qss` in the right location as explained above, you will see it applied to QLC+ at the next startup.
 ```
 ============== MAIN

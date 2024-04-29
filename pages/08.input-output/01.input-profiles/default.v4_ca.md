@@ -108,7 +108,7 @@ Dispositius com BCF2000 o programaris com TouchOSC, en canvi, només envien un v
 Quan es marca aquesta opció, QLC+ generarà els esdeveniments "absents" per estandarditzar la manera en què funciona algun controlador. Així, per exemple, el BCF2000 semblarà enviar 255+0 quan es prem un botó, i un altre 255+0 quan es torna a prémer.
 
 **Retroalimentació personalitzada**: amb els quadres "Valor Inferior" i "Valor Superior", és possible forçar l'enviament de valors personalitzats quan el botó seleccionat envia un valor no nul i zero.  
-Per exemple, amb aquesta opció és possible establir globalment com s'han de acolorir els LED dels dispositius APC de l'Akai quan s'activen/desactiven.  
+Per exemple, amb aquesta opció és possible establir globalment com s'han de acolorir els LED dels dispositius APC de l'AKAI quan s'activen/desactiven.  
 Tingueu en compte que aquesta opció és global a QLC+, però pot ser anul·lada si és necessari per un giny específic de la consola virtual, a través de la seva pàgina de configuració.
 
 * * *

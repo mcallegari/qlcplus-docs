@@ -5,7 +5,7 @@ date: '07:07 22-08-2023'
 
 La pestanya modes conté tots els [modes](/basics/glossary-and-concepts#mode-del-fixture) al qual es pot configurar el fixture.
 
-![](../fixtureeditor_modes.png)
+![](../fixture_editor_modes.png)
 
 |     |     |
 | --- | --- |
@@ -26,7 +26,7 @@ Pestanya Canals
 
 A la pestanya Canals podeu posar els canals del fixture en un ordre que forma una representació real dels canals DMX que el fixture entén quan s'ha configurat en aquest mode en particular.
 
-![](../fixtureeditor_mode_channels.png)
+![](../fixture_editor_mode_channels.png)
 
 |     |     |
 | --- | --- |
@@ -44,7 +44,7 @@ A la pestanya Capçals podeu definir múltiples [capçals](/basics/glossary-and-
 
 Els caps no tenen noms, ja que es poden considerar com a simples "sub-fixtures" dins d'un fixture. En canvi, se'ls donen automàticament números d'índex. L'ordenació dels caps ha de seguir la configuració del fixture físic el més a prop possible. Així que, si els caps van 1, 2, 3, 4 en el món real, no els definiu com 4, 2, 1, 3 o alguna cosa igual de molesta.
 
-![](../fixtureeditor_mode_heads.png)
+![](../fixture_editor_mode_heads.png)
 
 |     |     |
 | --- | --- |
@@ -61,7 +61,7 @@ L'Editor de Capçals s'utilitza per crear i editar [caps](/basics/glossary-and-c
 
 Editar un capçal és molt senzill: col·loca una marca de control a cada canal que només l'utilitzi el capçal que estàs editant. Tingueu en compte que hauríeu de comprovar els canals específics d'un cap, i res més. Per exemple, si hi ha 3 caps cadascun amb un control dimmer dedicat, llavors també hauríeu d'incloure el canal dimmer. Si, en canvi, el fixture té un únic canal dimmer per controlar la intensitat de tots els caps junts, llavors no l'inclueixis en la definició del cap.
 
-![](../fixtureeditor_mode_edit_head.png)
+![](../fixture_editor_mode_edit_head.png)
 
 |     |     |
 | --- | --- |

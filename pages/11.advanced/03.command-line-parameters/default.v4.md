@@ -55,7 +55,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-o or --open**<br><br>**Description:** Open the given workspace file<br><br>**Parameters:** File name<br><br>**Examples:**  <br>Open mydesk.qxw:  <br>qlcplus -o mydesk.qxw  <br>qlcplus --open mydesk.qxw |
+| **-o or --open**<br><br>**Description:** Open the given workspace file<br><br>**Parameters:** File name<br><br>**Examples:**  <br>Open sample.qxw:  <br>qlcplus -o sample.qxw  <br>qlcplus --open sample.qxw |
 
 |     |
 | --- |
@@ -79,4 +79,4 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-a or --web-auth-file**<br><br>**Description:** Specify a file where to store web access basic authentication credentials<br><br>**Parameters:** File name<br><br>**Examples:**  <br>qlcplus -wa qlcplus_passwd  <br>qlcplus --web-auth-file qlcplus_passwd |
+| **-a or --web-auth-file**<br><br>**Description:** Specify a file where to store web access basic authentication credentials<br><br>**Parameters:** File name<br><br>**Examples:**  <br>qlcplus -wa qlcplus_password  <br>qlcplus --web-auth-file qlcplus_password |

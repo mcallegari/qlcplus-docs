@@ -5,7 +5,7 @@ date: '05:28 22-08-2023'
 
 Aquesta és la secció on es proporciona la informació general del Fixture.
 
-![](../fixtureeditor_general.png)
+![](../fixture_editor_general.png)
 
 |     |     |
 | --- | --- |

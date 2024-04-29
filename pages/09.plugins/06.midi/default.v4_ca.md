@@ -43,7 +43,7 @@ Per raons desconegudes, els valors per defecte de fàbrica del nanoPAD no mapege
 Feedback LED dels APC de l'AKAI
 ----------------------
 
-Quan s'utilitza un controlador de la família APC d'Akai, hi ha una funció que pot ser molt útil: feedback de color LED.  
+Quan s'utilitza un controlador de la família APC d'AKAI, hi ha una funció que pot ser molt útil: feedback de color LED.  
 El comportament per defecte amb els botons de la consola virtual és: valor = 0: LED apagat, valor = 255: LED verd  
 Això es pot personalitzar en seleccionar un canal d'entrada, prement el botó "Retroalimentació personalitzada".  
 Es mostra una nova àrea, que mostra la possibilitat d'introduir un valor inferior i un valor superior. Això es tradueix bàsicament en què els valors QLC+ haurien d'enviar per als botons d'estats activats/desactivats.  

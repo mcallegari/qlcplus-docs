@@ -81,7 +81,7 @@ Un fixture és essencialment un dispositiu d'il·luminació. Pot ser, per exempl
 
 Amb l'editor de definició de Fixture, els usuaris poden editar la informació del fixture compartit emmagatzemada en una biblioteca de fixtures que conté les propietats següents per a cada fixture:
 
-* Fabricant (p. ex. Martin)
+* Fabricant (p. ex. ClayPaky)
 * Model (p. ex. MAC250)
 * Tipus (canviador de color, escàner, capçal mòbil, fum, nebulosa, ventilador...)
 * Propietats físiques (tipus de bombeta, angle de feix, dimensions...)
@@ -176,7 +176,7 @@ Una línia de sortida és una connexió proporcionada per un maquinari o xarxa a
 
 ### Perfils d'entrada
 
-Els perfils d'entrada es poden considerar com a cosins [dels fixtures](#fixtures); contenen informació sobre dispositius específics que produeixen dades d'entrada. Un dispositiu d'entrada pot ser, per exemple, un tauler lliscant com el Behringer BCF-2000, el Korg nanoKONTROL, un Enttec Playback Wing...
+Els perfils d'entrada es poden considerar com a cosins [dels fixtures](#fixtures); contenen informació sobre dispositius específics que produeixen dades d'entrada. Un dispositiu d'entrada pot ser, per exemple, un tauler lliscant com el Behringer BCF-2000, el KORG nanoKONTROL, un Enttec Playback Wing...
 
 ### LTP (l'últim té prioritat)
 

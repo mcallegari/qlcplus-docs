@@ -22,6 +22,6 @@ For example, if you have 20 PARs you might want to control the RED channel of al
 |     |     |
 | --- | --- |
 | **Group Name** | Set/change name of the channels group |
-| **Channels list** | Check channels that should be included in this channels group. Uncheck those that should not. |
+| **Channels list** | Select channels that should be included in this channels group. |
 | **Apply changes to all fixtures of the same type** | When checked, clicking on a channel will select/deselect the same channel on all fixtures of the same type. Use it when you want to select e.g. all Red channels of all fixture of a particular LED PAR model |
 | **External input** | Select external input for this channels group for easier control in Function Manager. External input for channels groups will not work elsewhere. |

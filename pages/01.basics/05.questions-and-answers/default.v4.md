@@ -48,14 +48,14 @@ and try to enable/disable the Apple driver with it.
 It changes depending on your operating system:
 
 * **Linux**: it is a hidden folder in your user home directory: `$HOME/.qlcplus`
-* **Windows**: it is a folder in your user (e.g. MyUser) directory: `C:\\Users\\MyUser\\QLC+`
+* **Windows**: it is a folder in your user (e.g. <Username>) directory: `C:\\Users\\<Username>\\QLC+`
 * **Mac OS**: it is located in your user `Library` directory: `$HOME/Library/Application\\ Support/QLC+`
 
 You can reach any of these folders from a terminal with the `cd` command. For example:
 
 `cd $HOME/Library/Application\\ Support/QLC+`
 
-Please keep in mind that fixures and input profiles found in the user folder will have precedence over
+Please keep in mind that fixtures and input profiles found in the user folder will have precedence over
 the same files in the QLC+ system folder. 
 
 You can also save custom [Fixture Definitions](/basics/glossary-and-concepts#fixtures) and

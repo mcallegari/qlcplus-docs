@@ -6,7 +6,7 @@ date: '05:31 22-08-2023'
 Aquesta és la secció on es proporciona la informació física _global_ de l'aparell.  
 També hi ha una secció idèntica en cada mode, en cas que l'aparell permeti alterar les seves propietats físiques (per exemple, el rang de panoràmica/inclinació) en funció del mode. En aquest cas, la informació física global pot ser anul·lada per _per mode_ informació física.
 
-![](../fixtureeditor_physical.png)
+![](../fixture_editor_physical.png)
 
 |     |     |
 | --- | --- |
