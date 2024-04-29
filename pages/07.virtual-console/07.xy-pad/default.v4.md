@@ -6,7 +6,7 @@ media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 
 XY Pad is a Virtual Console widget dedicated to fixtures positioning.  
 It can handle the typical DMX movement channels (**pan** and **tilt**) of intelligent lighting fixtures, namely scanners and moving heads.  
-The pad is a resizeable area, surrounded by several controls to cover the needs you might have during a live show.  
+The pad is a resizable area, surrounded by several controls to cover the needs you might have during a live show.  
 It is displayed as following:
 
 ![](xypad.png)
@@ -58,7 +58,7 @@ It is possible to have both limits enabled (using the range sliders and limits p
 The XY Pad allows 3 completely different usages, but all targeted to positioning. It's up to you to decide the best use of them depending on your needs. You also might want to consider the usage of multiple XY Pads with different purposes.  
 
 * **1- Absolute positioning**: this is the basic usage and it requires only to specify which fixtures you intend to control (added via Configuration window) and eventually their specific range of operation.  
-    As previosuly described all you need to do is to setup your fixtures once and start moving them with your favourite controller.  
+    As previously described all you need to do is to setup your fixtures once and start moving them with your favourite controller.  
     It is also possible to define some position presets, so a number of buttons will be displayed in **(9)** to quickly recall an absolute position.  
     If a Fixture Group preset is activated, the XY Pad will control the absolute positions only of the Fixtures defined in the preset. (see Presets tab for more info)
   
@@ -129,7 +129,7 @@ You can change the extent of movement and reverse fixtures' movement with the XY
   
 **3\. Presets tab**
 
-Here you can add/remove presets to the XY Pad. Each preset is displayed as a button in the lower part of the XY Pad widget. EFX nad Scenes presets can be toggled, to start/stop a function, Fixture Groups presets can be toggled to activate/deactivate a fixture group, while Position presets can be clicked just once
+Here you can add/remove presets to the XY Pad. Each preset is displayed as a button in the lower part of the XY Pad widget. EFX and Scene presets can be toggled, to start/stop a function, Fixture Groups presets can be toggled to activate/deactivate a fixture group, while Position presets can be clicked just once
 
 |     |     |
 | --- | --- |

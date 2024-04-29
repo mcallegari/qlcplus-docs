@@ -44,4 +44,4 @@ Controllers
 
 QLC+ has been tested with the following OSC controllers:
 
-* [TouchOSC](https://hexler.net/software/touchosc). A pre-defined input profile is ready to use for the Mix16 layout.
+* [TouchOSC](https://hexler.net/software/touchosc). A predefined input profile is ready to use for the Mix16 layout.
