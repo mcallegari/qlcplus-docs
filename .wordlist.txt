@@ -140,6 +140,10 @@ behaviour
 behaviours
 Behaviours
 theatres
+centre
+Centre
+resizable
+Resizable
 favourite
 cancelling
 crossfade
@@ -287,5 +291,6 @@ Param
 wa
 wp
 xxHelper
-ia64
+ia
 localhost
+lDirectIp
