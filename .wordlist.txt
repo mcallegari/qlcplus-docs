@@ -25,6 +25,7 @@ jpeg
 JPEG
 GIF
 GIFs
+XPM
 HTP
 LTP
 png
@@ -262,3 +263,7 @@ failover
 speeddial
 Centiseconds
 autoscale
+setOrientation
+gedit
+kwrite
+nano
