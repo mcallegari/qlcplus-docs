@@ -18,7 +18,7 @@ To use your fixture definitions in QLC+, you must save them in a location where 
 1. In the same folder as your QLC+ workspace (Handy if you want to give your workspace to someone else)
 2. In the user fixtures folder found in the following locations:
     * Linux: it is a hidden folder in your user home directory: `$HOME/.qlcplus/Fixtures`
-    * Windows: it is a folder in your user directory: `C:\\\\Users\\{Username}\\QLC+\Fixtures`
+    * Windows: it is a folder in your user directory: `C:\\Users\{Username}\QLC+\Fixtures`
     * Mac OS: it is located in your user Library directory: `$HOME/Library/Application\\ Support/QLC+/Fixtures`
 
 **Important note: you SHOULD NOT save or copy your custom fixtures into the QLC+ system fixtures folder. This is because when QLC+ is uninstalled, all the fixtures in this folder are deleted. It can also cause unintended conflicts between the system and your own fixture definitions.**
