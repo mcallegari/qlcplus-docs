@@ -32,7 +32,7 @@ Nodle USB DMX interface
 -----------------------
 
 The Nodle USB DMX interface is available in two versions: For the self-built kit version it is called:
-[Nodle U1](https://www.dmxcontrol-projects.org/en/projects/nodle-u1.html) and the pre-built it is called [Nodle R4S](https://www.dmxcontrol-projects.org/en/projects/nodle-r4s.html) (ready for show).
+[Nodle U1](https://www.dmxcontrol-projects.org/en/projects/nodle-u1.html) and the prebuilt it is called [Nodle R4S](https://www.dmxcontrol-projects.org/en/projects/nodle-r4s.html) (ready for show).
 
 Both can input and output DMX data like normal, but can also merge dmx internally. When activated via the configuration
 dialog, the device merges any DMX data coming from QLC+ (if selected as output) with all
@@ -41,7 +41,7 @@ DMX data coming from the device's input in an HTP (Highest Takes Precedence) man
 If set, the merger mode persists even when QLC+ is closed as long as the device is powered.
 This way the device is transparent to incoming DMX data and just forwards them.
 
-The device buffers incoming DMX data. So when the incomming DMX connection is interrupted, the last
+The device buffers incoming DMX data. So when the incoming DMX connection is interrupted, the last
 DMX frame is repeated until more DMX data arrives or the device is reset.
 
 Check the product manual for further information or troubleshooting.
