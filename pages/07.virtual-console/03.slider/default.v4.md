@@ -3,7 +3,12 @@ title: Slider
 date: '03:02 22-08-2023'
 ---
 
-Sliders are used for two distinct purposes: [Fixture](/basics/glossary-and-concepts#fixtures) channel level setting and [Function](/basics/glossary-and-concepts#functions) playback and intensity adjustment. Any slider can operate on either of these modes and each mode has its own configuration options.
+Sliders are used for three distinct purposes: 
+* [Fixture](/basics/glossary-and-concepts#fixtures) channel level setting
+* [Function](/basics/glossary-and-concepts#functions) playback and intensity adjustment
+* Submaster functionality<br>
+
+Any slider can operate on either of these modes and each mode has its own configuration options.
 
 ### Configuration
 
@@ -51,6 +56,7 @@ If you need fade in/out automations together with the control of the Function in
 | **Function** | Displays the function that is currently attached to the slider. |
 | ![](/basics/attach.png) | Attach a function to the slider. |
 | ![](/basics/detach.png) | Detach the currently attached function. |
+| **Flash button** | Shows an additional button ![](/basics/flash.png) underneath the slider cursor. Pressing it will flash the attached Function (any type of it) |
 
 ### Configuration - Submaster Tab
 
