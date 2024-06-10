@@ -52,7 +52,7 @@ If you're pretty savvy with MIDI codes or have good knowledge of the plugins and
 ![](/basics/edit_remove.png) Click to remove an existing channel  
 
 #### Automatic mode
-Most of the time, you're better off pressing buttons on your controller to automatically detect and asign them.
+Most of the time, you're better off pressing buttons on your controller to automatically detect and assign them.
 
 ![](/basics/wizard.png) Click the automatic wizard button to attempt automatic channel detection. You'll receive further instructions from QLC+. You must have an [input plugin](/input-output) assigned to the current universe for this feature to work. Also, you must first stop the wizard to be able to navigate away from this dialog page.
 
