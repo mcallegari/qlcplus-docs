@@ -13,7 +13,7 @@ QLC+ Is bundled with many input profiles ready for you to use. If your device is
  1. Selecting the ![](/basics/input_output.png) Inputs/Outputs tab
  2. Select the desired universe on the left part of the screen
  3. Click the Profile tab placed beside the Mapping tab on the top right part of the screen.
- 4. Find the input profile and click the acompanying check mark to select it. 
+ 4. Find the input profile and click the accompanying check mark to select it. 
 
 
 ## Add/Edit a Profile
@@ -25,7 +25,7 @@ If the device you want to use isn't in the list of bundled input profiles, you a
 ## Input Profile Editor
 
 ### General
-The general tab is the place to enter general information about the fixture (How elequently named). 
+The general tab is the place to enter general information about the fixture (How eloquently named). 
 
 #### Manufacturer
 If your manufacturer is already listed, use the same spelling and capitalisation.
@@ -46,7 +46,7 @@ So far, the only difference is that MIDI profiles show MIDI message parameters i
 **Now click the Input Mapping tab to edit the profile's channels.** You have two choices for adding channel definitions: Manual and Automatic:
 
 #### Manual mode
-If you're pretty savy with MIDI codes or have good knowledge of the plugins and how they work, you can enter the parameters manually.
+If you're pretty savvy with MIDI codes or have good knowledge of the plugins and how they work, you can enter the parameters manually.
 
 ![](/basics/edit_add.png) Click the add button to enter individual channel information by hand for each channel.  
 ![](/basics/edit_remove.png) Click to remove an existing channel  
@@ -111,7 +111,7 @@ Note that this option is global in QLC+, but it can be overridden if needed by a
 
 ### Colours
 Some controllers allow colours to be specified when the button is activated. Input Profiles allow a set of colours to be defined so they can be selected more easily when editing Virtual Console widget feedback. 
-![](/basics/edit_add.png) Click the add button to add a feedback value and corrisponding colour.
+![](/basics/edit_add.png) Click the add button to add a feedback value and corresponding colour.
 #### Feedback Value
 This is the value which QLC+ needs to send the controller in order to generate the colour.
 
