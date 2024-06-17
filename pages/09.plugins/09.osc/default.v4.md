@@ -43,7 +43,7 @@ Channel calculator
 -------------
 
 If there is no possibility to perform auto-detection via input profile editor of an OSC controller, this tool might help you.  
-You can enter the **OSC path** and QLC+ will calculate the channel number for you. It is basically an hash of the path that QLC+ uses to represent a OSC input.  
+You can enter the **OSC path** and QLC+ will calculate the channel number for you. It is basically a hash of the path that QLC+ uses to represent a OSC input.  
 **Note:** There is an offset of 1 between the calculator and what you see in the Input Profile Editor. This is OK as channels in QLC+ start from 1 and not from 0. What the calculator shows is the channel number you actually need to write in a input profile or in your custom OSC controller.
 
 Controllers
