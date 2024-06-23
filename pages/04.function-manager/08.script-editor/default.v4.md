@@ -98,6 +98,26 @@ wait:1800 // Waits for 1 second and 800 milliseconds
 wait:03s.20 // Waits for 3 seconds and 200 milliseconds
 ```
 
+#### waitfunctionstart
+**Type**: keyword  <br>
+**Description**: wait until a specified function starts running.<br> This command takes one argument, which is the ID of the function you want to wait for. Once the specified function starts running or if it is already running, the script will continue executing from the next line.<br>
+**Syntax**: `waitfunctionstart:functionID`<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function.  See _startfunction_ description.<br>
+**Examples**:
+```
+waitfunctionstart:2 // Wait for green scene to start
+```
+
+#### waitfunctionstop
+**Type**: keyword  <br>
+**Description**: wait until a specified function stops running.<br> This command takes one argument, which is the ID of the function you want to wait for. Once the specified function stops running or if it is not already running, the script will continue executing from the next line.<br>
+**Syntax**: `waitfunctionstart:functionID`<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function.  See _startfunction_ description.<br>
+**Examples**:
+```
+waitfunctionstop:0 // Wait for blue scene to stop
+```
+
 #### comments
 **Type**: Helper macro  <br>
 **Description**: comments can be inserted at any position in the script code and they do not affect the script execution. They are normally used to give a meaning to a line of code.  <br>
@@ -116,4 +136,25 @@ Comments can be added at the end of a Script line of code or they can take a who
 wait:random(02s.00,05s.00) // Waits a random time between 2 and 5 seconds 
 // set channel 3 of fixture with ID:1 to a random DMX value between 20 and 235
 setfixture:1 ch:2 val:random(20,235)
+```
+
+#### stoponexit
+**Type**: keyword<br>
+**Description**: controls whether functions started during the script should be stopped at the end.<br>
+**Syntax**: `stoponexit:[true|false]`<br>
+`true`: all functions started afterward will be stopped when the script finishes (default behaviour).<br>
+`false`: all functions started afterward will continue running when the script finishes.<br>
+**Example**:<br>
+In this script example, functions 1 and 3 will be stopped at the end, but functions 2 and 4 will continue running.
+```
+startfunction:1 // default behaviour: funciton 1 will be stopped
+
+stoponexit:false
+startfunction:2 // function 2 will continue running
+
+stoponexit:true
+startfunction:3 // function 3 will be stopped
+
+stoponexit:false
+startfunction:4 // function 4 will continue running
 ```
