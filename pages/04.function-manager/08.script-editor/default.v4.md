@@ -98,6 +98,26 @@ wait:1800 // Waits for 1 second and 800 milliseconds
 wait:03s.20 // Waits for 3 seconds and 200 milliseconds
 ```
 
+#### waitfunctionstart
+**Type**: keyword  <br>
+**Description**: wait until a specified function starts running.<br> This command takes one argument, which is the ID of the function you want to wait for. Once the specified function starts running or if it is already running, the script will continue executing from the next line.<br>
+**Syntax**: `waitfunctionstart:functionID`<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function.  See _startfunction_ description.<br>
+**Examples**:
+```
+waitfunctionstart:2 // Wait for green scene to start
+```
+
+#### waitfunctionstop
+**Type**: keyword  <br>
+**Description**: wait until a specified function stops running.<br> This command takes one argument, which is the ID of the function you want to wait for. Once the specified function stops running or if it is not already running, the script will continue executing from the next line.<br>
+**Syntax**: `waitfunctionstart:functionID`<br>
+`functionID` is an integer number of the ID assigned by QLC+ to a Function.  See _startfunction_ description.<br>
+**Examples**:
+```
+waitfunctionstop:0 // Wait for blue scene to stop
+```
+
 #### comments
 **Type**: Helper macro  <br>
 **Description**: comments can be inserted at any position in the script code and they do not affect the script execution. They are normally used to give a meaning to a line of code.  <br>
