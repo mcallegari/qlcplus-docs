@@ -117,3 +117,24 @@ wait:random(02s.00,05s.00) // Waits a random time between 2 and 5 seconds
 // set channel 3 of fixture with ID:1 to a random DMX value between 20 and 235
 setfixture:1 ch:2 val:random(20,235)
 ```
+
+#### stoponexit
+**Type**: keyword<br>
+**Description**: controls whether functions started during the script should be stopped at the end.<br>
+**Syntax**: `stoponexit:[true|false]`<br>
+`true`: all functions started afterward will be stopped when the script finishes (default behaviour).<br>
+`false`: all functions started afterward will continue running when the script finishes.<br>
+**Example**:<br>
+In this script example, functions 1 and 3 will be stopped at the end, but functions 2 and 4 will continue running.
+```
+startfunction:1 // default behaviour: funciton 1 will be stopped
+
+stoponexit:false
+startfunction:2 // function 2 will continue running
+
+stoponexit:true
+startfunction:3 // function 3 will be stopped
+
+stoponexit:false
+startfunction:4 // function 4 will continue running
+```
