@@ -298,3 +298,4 @@ Nodle
 capitalisation
 colour
 colours
+Automat
