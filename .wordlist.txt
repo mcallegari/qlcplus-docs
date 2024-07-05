@@ -295,4 +295,7 @@ ia
 localhost
 lDirectIp
 Nodle
+capitalisation
+colour
+colours
 Automat
