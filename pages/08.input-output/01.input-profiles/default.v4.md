@@ -123,7 +123,7 @@ A name for the created colour. E.g "Blue"
 
 ### MIDI Channels
 Some controllers allow different channels to map to different display modes for feedback colours. For example, the AKAI APC Mini MK2 allows for the following channels/modes:
-![image](https://github.com/mcallegari/qlcplus-docs/assets/42596763/8189db67-bbd6-49b9-b58f-53ccca19b71e)
+![](/input-output/input-profile-midi-channels.png)
 
 # Back to the input profile definitions panel
 
