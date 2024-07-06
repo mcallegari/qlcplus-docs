@@ -19,6 +19,9 @@
         <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" /></a>
 </p>
 
+<!-- BEGIN LATEST DOWNLOAD BUTTON -->
+<!-- END LATEST DOWNLOAD BUTTON -->
+
 ## Introduction
 Welcome to the official documentation repository for [qlcplus](https://qlcplus.org/)!
 
