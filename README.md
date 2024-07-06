@@ -15,6 +15,8 @@
         <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800" /></a>
     <a href="https://github.com/mcallegari/qlcplus-docs/issues" alt="Issues">
         <img src="https://img.shields.io/github/issues/mcallegari/qlcplus-docs" /></a>
+    <a href="http://creativecommons.org/publicdomain/zero/1.0/" alt="License: CC0-1.0">
+        <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" /></a>
 </p>
 
 ## Introduction
@@ -62,6 +64,10 @@ Engage with the QLC+ community in the [forums](https://www.qlcplus.org/forum/) o
 
 By contributing to the documentation, you're not only helping yourself but also supporting the QLC+ community. Together, we can create a comprehensive and reliable resource for lighting enthusiasts using QLC+.
 
+---
+<p align="center" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://docs.qlcplus.org">QLC+ Offiical Documentation</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://qlcplus.org">Massimo Callegari</a> is marked with <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a></p>
+
+
 <p align="center">
     <a href="https://www.instagram.com/qlcplus/" alt="Instagram">
         <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=flat&logo=Instagram&logoColor=white" /></a>
@@ -71,13 +77,6 @@ By contributing to the documentation, you're not only helping yourself but also 
         <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=flat&logo=Facebook&logoColor=white" /></a>
 </p>
 
-## CC0
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
-
-You can copy, modify, distribute and perform these docs, even for commercial purposes, all without asking permission.
-
-Any person who publishes work to this repo dedicates the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
-
-
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://docs.qlcplus.org">QLC+ Offiical Documentation</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://qlcplus.org">Massimo Callegari</a>, <a href="https://github.com/yestalgia/">Lachlan Hicks</a> is marked with <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a></p>
-
+<p align="center">
+    
+</p>
