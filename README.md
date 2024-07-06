@@ -70,3 +70,14 @@ By contributing to the documentation, you're not only helping yourself but also 
     <a href="https://www.facebook.com/qlcplus" alt="Facebook">
         <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=flat&logo=Facebook&logoColor=white" /></a>
 </p>
+
+## CC0
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+
+You can copy, modify, distribute and perform these docs, even for commercial purposes, all without asking permission.
+
+Any person who publishes work to this repo dedicates the work to the public domain by waiving all of his or her rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law.
+
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://docs.qlcplus.org">QLC+ Offiical Documentation</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://qlcplus.org">Massimo Callegari</a>, <a href="https://github.com/yestalgia/">Lachlan Hicks</a> is marked with <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a></p>
+
