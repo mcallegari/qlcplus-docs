@@ -55,6 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./.github/workflows/bin/combined_documentation.md
+          asset_path: ./.github/workflows/bin/combined_documentation.pdf
           asset_name: combined_documentation.pdf
           asset_content_type: application/pdf
