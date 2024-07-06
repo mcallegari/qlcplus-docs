@@ -1,20 +1,24 @@
-<a href="https://www.qlcplus.org/">
-    <img src="pages/01.basics/qlcplus.svg" alt="QLC Logo" title="qlcplus.png" align="right" height="60" />
-</a>
+<a href="https://www.qlcplus.org/"><img src="pages/01.basics/qlcplus.svg" alt="QLC+ Logo" title="qlcplus.png" align="center" height="60" /></a>
 
-# QLC+ Official Documentation
-![example workflow](https://github.com/mcallegari/qlcplus-docs/actions/workflows/main.yml/badge.svg)  [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/docs.qlcplus.org?publish)](https://observatory.mozilla.org/analyze/docs.qlcplus.org)
-[![Beacon](https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800)](https://digitalbeacon.co/report/docs-qlcplus-org) 
+<h1 align="center">QLC+ Official Documentation</h1>
+
+<p align="center">
+    <a href="https://github.com/mcallegari/qlcplus-docs/actions" alt="Workflow">
+        <img src="https://github.com/mcallegari/qlcplus-docs/actions/workflows/main.yml/badge.svg" /></a>
+    <a href="https://observatory.mozilla.org/analyze/docs.qlcplus.org" alt="Mozilla HTTP Observatory Grade">
+        <img src="https://img.shields.io/mozilla-observatory/grade-score/docs.qlcplus.org?publish" /></a>
+    <a href="https://digitalbeacon.co/report/docs-qlcplus-org" alt="Beacon">
+        <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800" /></a>
+    <a href="https://github.com/mcallegari/qlcplus-docs/issues" alt="Issues">
+        <img src="https://img.shields.io/github/issues/mcallegari/qlcplus-docs" /></a>
+</p>
+
 
 Welcome to the official documentation repository for [qlcplus](https://qlcplus.org/)!
 
 The [docs.qlcplus.org](https://docs.qlcplus.org/) website uses the [Grav](https://getgrav.org/) content management system (CMS) and Learn2 with Git Sync plugin. This helps us to collaboratively edit our Markdown-based documentation. When changes are made to this repo the website automatically reflects the changes.
 
-
-
-
 ## Contributing
-[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/mcallegari/qlcplus-docs)](https://github.com/mcallegari/qlcplus-docs/issues)
 
 If you find a problem but don't have the time to fix it, you can [open an issue](https://github.com/mcallegari/qlcplus-docs/issues) to let us know about it. Otherwise expand the below instructions to edit a page right here in GitHub:
 <details>
@@ -55,8 +59,7 @@ Engage with the QLC+ community in the [forums](https://www.qlcplus.org/forum/) o
 By contributing to the documentation, you're not only helping yourself but also supporting the QLC+ community. Together, we can create a comprehensive and reliable resource for lighting enthusiasts using QLC+.
 
 <p align="center">
-
-<a href="https://www.instagram.com/qlcplus/" alt="Instagram">
+    <a href="https://www.instagram.com/qlcplus/" alt="Instagram">
         <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=flat&logo=Instagram&logoColor=white" /></a>
     <a href="https://www.youtube.com/watch?v=I9bccwcYQpM&" alt="YouTube">
         <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white" /></a>
