@@ -1,4 +1,8 @@
-<a href="https://www.qlcplus.org/"><img src="pages/01.basics/qlcplus.svg" alt="QLC+ Logo" title="qlcplus.png" align="center" height="60" /></a>
+<p align="center">
+<a href="https://www.qlcplus.org/" >
+<img src="pages/01.basics/qlcplus.svg" alt="QLC+ Logo" title="qlcplus.png"  height="60" />
+</a>
+</p>
 
 <h1 align="center">QLC+ Official Documentation</h1>
 
