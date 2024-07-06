@@ -54,8 +54,8 @@ Engage with the QLC+ community in the [forums](https://www.qlcplus.org/forum/) o
 
 By contributing to the documentation, you're not only helping yourself but also supporting the QLC+ community. Together, we can create a comprehensive and reliable resource for lighting enthusiasts using QLC+.
 
-<center>
+<p align="center">
 
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=flat&logo=Instagram&logoColor=white)](https://www.instagram.com/qlcplus/) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=I9bccwcYQpM&list=PLHT-wIriuitDiW4A9oKSDr__Z_jcmMVdi) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=flat&logo=Facebook&logoColor=white)](https://www.facebook.com/qlcplus)
 
-</center>
+</p>
