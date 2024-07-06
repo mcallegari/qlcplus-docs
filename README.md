@@ -20,12 +20,12 @@ If you find a problem but don't have the time to fix it, you can [open an issue]
 <details>
 <summary>Edit a page directly</summary>
 
-1. Click the ![edit this page](image.png) link on the page of documentation you wish to improve. You'll be redirected to a preview in the GitHub editor. 
+1. Click the ![edit this page](pages/01.basics/edit-this-page.png) link on the page of documentation you wish to improve. You'll be redirected to a preview in the GitHub editor. 
 2. Click the pencil icon (Edit this file) on the top right of the preview. 
 3. Edit the page
 4. Click Commit Changes...
 5. Give a quick summary of your proposed improvement through the commit message. The bellow is an example:
-![alt text](image-1.png)
+![Example commit message](pages/01.basics/commit-message.png)
 6. Your changes will be reviewed and merged if they meet our guidelines.
 
 </details>
