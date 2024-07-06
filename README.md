@@ -3,8 +3,8 @@
 </a>
 
 # QLC+ Official Documentation
-[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/docs.qlcplus.org?publish)](https://observatory.mozilla.org/analyze/open-fixture-library.org)
-[![Beacon](https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800)](https://digitalbeacon.co/report/docs-qlcplus-org) ![example workflow](https://github.com/mcallegari/qlcplus-docs/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/mcallegari/qlcplus-docs/actions/workflows/main.yml/badge.svg) [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/mcallegari/qlcplus-docs)](https://github.com/mcallegari/qlcplus-docs/issues) [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade-score/docs.qlcplus.org?publish)](https://observatory.mozilla.org/analyze/open-fixture-library.org)
+[![Beacon](https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800)](https://digitalbeacon.co/report/docs-qlcplus-org) 
 
 Welcome to the official documentation repository for [qlcplus](https://qlcplus.org/)!
 
@@ -12,31 +12,27 @@ The [docs.qlcplus.org](https://docs.qlcplus.org/) website uses the [Grav](https:
 
 When changes are made to this repo the [docs.qlcplus.org](https://docs.qlcplus.org/) site automatically updates with the changes.
 
-## How to Contribute
-Contributing to the QLC+ documentation is easy!
+## Contributing
+Contributing to the QLC+ documentation is easy! If you find a problem but don't have the time to fix it, you can [open an issue](https://github.com/mcallegari/qlcplus-docs/issues) to let us know about it. Otherwise expand the below instructions to edit a page right here in GitHub:
 <details>
-    <summary>Edit a page directly</summary>
-    1. Click the ![edit this page](image.png) link on the page of documentation you wish to improve. You'll be redirected to a preview in the GitHub editor. 
-    2. Click the pencil icon (Edit this file) on the top right of the preview. 
-    3. Edit the page
-    4. Click Commit Changes...
-    5. Give a quick summary of your proposed improvement through the commit message. The bellow is an example:
-    ![alt text](image-1.png)
-    6. Your changes will be reviewed and merged if they meet our guidelines.
-</details>
+<summary>Edit a page directly</summary>
 
-<details>
-<summary>Open an issue</summary>
-     Open an Issue: If you find a problem but don't have the time to fix it, you can [open an issue](https://github.com/mcallegari/qlcplus-docs/issues) to let us know about it. 
+1. Click the ![edit this page](image.png) link on the page of documentation you wish to improve. You'll be redirected to a preview in the GitHub editor. 
+2. Click the pencil icon (Edit this file) on the top right of the preview. 
+3. Edit the page
+4. Click Commit Changes...
+5. Give a quick summary of your proposed improvement through the commit message. The bellow is an example:
+![alt text](image-1.png)
+6. Your changes will be reviewed and merged if they meet our guidelines.
+
 </details>
 
 ### Help wanted
-Click the badge below to see the currently confirmed issues with QLC+. Perhaps you can find a solution?
+Click the badge below to see the currently confirmed issues with the documentation.
 
-[![GitHub issues by-label](https://img.shields.io/github/issues/mcallegari/qlcplus-docs/issue%20confirmed?logo=github&color=red)](https://github.com/mcallegari/qlcplus/issues?q=is%3Aopen+is%3Aissue+label%3A%22issue+confirmed%22)
-### QLC+ Social Media
 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/qlcplus/) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=I9bccwcYQpM&list=PLHT-wIriuitDiW4A9oKSDr__Z_jcmMVdi) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/qlcplus)
+
+
 
 ## Support QLC+ Development
 
@@ -48,3 +44,7 @@ Click the badge below to see the currently confirmed issues with QLC+. Perhaps y
 Engage with the QLC+ community in the [forums](https://www.qlcplus.org/forum/) or on social media to share your knowledge, ask questions, and collaborate with other users.
 
 By contributing to the documentation, you're not only helping yourself but also supporting the QLC+ community. Together, we can create a comprehensive and reliable resource for lighting enthusiasts using QLC+.
+
+### QLC+ Social Media
+
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/qlcplus/) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/watch?v=I9bccwcYQpM&list=PLHT-wIriuitDiW4A9oKSDr__Z_jcmMVdi) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/qlcplus)
