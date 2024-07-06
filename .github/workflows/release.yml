@@ -1,0 +1,67 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build_release:
+    name: build_release
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # Extract the version from the tag
+      - name: Set version from tag
+        id: set_version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          echo "::set-output name=version::$VERSION"
+
+      - name: Install PowerShell
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y powershell
+
+      - name: Run PowerShell script
+        shell: pwsh
+        run: |
+            ./scripts/Merge-MarkdownFiles.ps1
+    
+      - name: Build PDF
+        uses: baileyjm02/markdown-to-pdf@v1
+        with:
+              input_path: ./.github/workflows/bin/
+              # Specify images dir
+              images_dir: ./.github/workflows/bin/images/
+              image_import: images
+              # Build HTML version
+              build_html: true
+              # Build Table of Contents
+              table_of_contents: true
+              # Path to output (this should be the same as the Upload Artifiact path)
+              output_dir: ./.github/workflows/bin/
+
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: upload pdf artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./.github/workflows/bin/combined_documentation.pdf
+          asset_name: combined_documentation.pdf
+          asset_content_type: application/pdf
