@@ -20,6 +20,30 @@ jobs:
         run: |
           VERSION=${GITHUB_REF#refs/tags/}
           echo "::set-output name=version::$VERSION"
+      - name: Get previous tag
+        id: prev_tag
+        run: |
+          PREV_TAG=$(git describe --tags --abbrev=0 HEAD^1)
+          echo "::set-output name=prev_tag::$PREV_TAG"
+    
+      - name: Get closed PRs
+        id: closed_prs
+        uses: actions/github-script@v6
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            script: |
+              const { data: pulls } = await github.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'closed',
+                base: 'main',
+                sort: 'updated',
+                direction: 'desc',
+                per_page: 100,
+              });
+              const closedPRs = pulls.filter(pr => pr.merged_at && new Date(pr.merged_at) > new Date(context.payload.release.created_at));
+              const prList = closedPRs.map(pr => `- ${pr.title} (#${pr.number})`).join("\n");
+              core.setOutput("pr_list", prList);
 
       - name: Install PowerShell
         run: |
@@ -53,7 +77,9 @@ jobs:
           prerelease: false
           release_name: ${{ steps.version.outputs.version }}
           tag_name: ${{ github.ref }}
-          body_path: CHANGELOG.md
+          body: |
+            ## Closed Pull Requests
+            ${{ steps.closed_prs.outputs.pr_list }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
       - name: upload pdf artifact
