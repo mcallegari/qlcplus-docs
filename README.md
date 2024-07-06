@@ -19,8 +19,17 @@
         <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" /></a>
 </p>
 
-<!-- BEGIN LATEST DOWNLOAD BUTTON -->
-<!-- END LATEST DOWNLOAD BUTTON -->
+
+<p align="center">
+    <a href="https://docs.qlcplus.org/" alt="docs.qlcplus.org">
+        <img src="https://img.shields.io/badge/View_Online-grey?style=for-the-badge&logo=aiohttp
+        " /></a>
+    <!-- BEGIN LATEST DOWNLOAD BUTTON -->
+    <a href="https://www.qlcplus.org/downloads/4.13.1/QLC+_4.13.1_user_manual.pdf" alt="offline-pdf">
+        <img src="https://custom-icon-badges.demolab.com/badge/-Download_PDF-blue?style=for-the-badge&logo=download&logoColor=white" /></a>
+    <!-- END LATEST DOWNLOAD BUTTON -->
+</p>
+
 
 ## Introduction
 Welcome to the official documentation repository for [qlcplus](https://qlcplus.org/)!
