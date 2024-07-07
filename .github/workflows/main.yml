@@ -44,6 +44,13 @@ jobs:
           table_of_contents: true
           # Path to output (this should be the same as the Upload Artifiact path)
           output_dir: ./.github/workflows/bin/
+
+    - name: Build PDF-V2
+      uses: docker://pandoc/core:2.9
+      with:
+          args: '-s -o ./.github/workflows/bin/output.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" ' # gets appended to pandoc command
+
+
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
       with:
