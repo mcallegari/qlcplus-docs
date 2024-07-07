@@ -51,7 +51,7 @@ jobs:
       uses: docker://pandoc/extra
       with:
           working-directory: ./.github/workflows/bin/
-          args: '-s -o ./.github/workflows/bin/QLCplusDocumentation.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" -f markdown-raw_tex ' # gets appended to pandoc command
+          args: '-s -o ./.github/workflows/bin/QLCplusDocumentation.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" -f markdown-raw_tex --pdf-engine=lualatex' # gets appended to pandoc command
         
 
     - name: Upload-Artifact
