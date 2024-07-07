@@ -18,7 +18,7 @@ It is displayed as following:
 | **(1) Range sliders** | These sliders limit the working area. (7) |
 | **(2) XY Pad name** | The name can be changed in properties, see below. |
 | **(3) DMX Coordinates** | This part displays current DMX coordinates in format (Pan course.Pan fine : Tilt course.Tilt fine). |
-| **(4) Horizontal and vertical angle** | If the fixtures controlled have proper pan and tilt range filled in in their definitions, and the range is same for all fixtures, then this text will show the angle calculated from DMX coordinates.  <br>0° is in the middle of the range (DMX value 127.127). For example, if pan range for a fixture is 540°, the displayed angle will be between -270° and 270°.  <br>Note: this may not work properly, when a fixture has limited axis range in configuration, or reversed axis. |
+| **(4) Horizontal and vertical angle** | If the fixtures controlled have proper pan and tilt range filled in in their definitions, and the range is same for all fixtures, then this text will show the angle calculated from DMX coordinates.  <br>0 degrees is in the middle of the range (DMX value 127.127). For example, if pan range for a fixture is 540 degrees, the displayed angle will be between -270 and 270 degrees.  <br>Note: this may not work properly, when a fixture has limited axis range in configuration, or reversed axis. |
 | **(5) Value sliders** | These sliders can be used to change value of the X/Y axes. |
 | **(6) Handle** | The blue point is the handle. You can move it either with the mouse, with the keyboard or an external controller. |
 | **(7) Working area** | This is the area that limits the possible positions. It can be equal or a portion of (8) |
@@ -33,7 +33,7 @@ Here's a picture representing how the main area normally represents degrees:
 ![](xypad2.png)  
 
 There are cases though where you want to limit the degrees a moving head or a scanner could reach.  
-For example fixtures with a 540° Pan range, should be limited to work only in a range facing the audience, or you might want to avoid that moving heads mounted upside down on a truss will point to the ceiling or outside the stage.  
+For example fixtures with a 540 degree pan range, should be limited to work only in a range facing the audience, or you might want to avoid that moving heads mounted upside down on a truss will point to the ceiling or outside the stage.  
 With the XY Pad, there are 2 ways to achieve this:
 
 **1\. Working window**
@@ -47,7 +47,7 @@ Note that when using a mouse on the user interface, the movement of the handles 
 It is possible to set a specific range for each fixture in the properties dialog (see the **Configuration** paragraph). With this method, the whole main area **(8)** is used and every specified range of each fixture is scaled onto it.  
 This come very handy when you want to use a XY Pad with mixed fixtures, with different ranges of degrees.  
 
-For example you can make a 540° degrees Pan to move exactly like a 360° degrees Pan.
+For example you can make a fixture with 540 degrees of pan move exactly like one with 360 degrees Pan.
 
 Another example: set fixture X Axis (Pan) minimum to 20% (DMX value 51), maximum to 80% (DMX value 204). When the handle is at the left edge (value 0), the actual DMX output is 51. Similarly, handle at the right edge will output 204 (=80%). For values in between, the DMX output is scaled proportionally.
 
