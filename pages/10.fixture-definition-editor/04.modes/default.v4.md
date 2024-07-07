@@ -16,13 +16,13 @@ The modes tab contains all [modes](/basics/glossary-and-concepts#fixture-mode) t
 | ![](/basics/editcopy.png) | Create a copy of the currently selected mode to the same fixture. Since modes are tightly coupled to a certain fixture's channels, modes cannot be copied across fixtures. |
 | ![](/basics/check.png) | Open or close all mode items. |
 
-Mode Editor
-===========
+## Mode Editor
+
 
 The Mode Editor is used to create and edit [modes](/basics/glossary-and-concepts#fixture-mode) by picking sets of **Channels** in certain order (as defined by the fixture's manufacturer). Each editor window is divided into three tabs: Channels, Heads and Physical.
 
-Channels Tab
-------------
+## Channels Tab
+
 
 In the Channels tab you can place the fixture's channels in an order that forms an actual representation of the DMX channels that the fixture understands when it has been configured in that particular mode.
 
@@ -37,8 +37,7 @@ In the Channels tab you can place the fixture's channels in an order that forms 
 | ![](/basics/up.png) | Raise the selected channel up by one position. |
 | ![](/basics/down.png) | Lower the selected channel down by one position. |
 
-Heads Tab
----------
+## Heads Tab
 
 In the Heads tab you can define multiple [heads](/basics/glossary-and-concepts#head) for a single fixture, so that QLC+ knows to treat each of them individually in certain situations (such as [Fixture Groups](/basics/glossary-and-concepts#fixture-group)). If a fixture contains only one head when it's configured to use the currently edited mode (i.e. all of the mode's channels control one head at a time) there is no need to define the head. If, however, the fixture has multiple heads that you wish to be able to control, you must define each head here.
 
@@ -67,8 +66,7 @@ Editing a head is very simple: place a tick on each channel that is used ONLY by
 | --- | --- |
 | **Channel list** | Displays the list of all fixture channels available in the current mode. Channels that have been assigned to another head are disabled and cannot be selected because each channel can only belong to one head at a time. |
 
-Physical Tab
-------------
+## Physical Tab
 
 This tab is identical to the _global_ [physical tab](/fixture-definition-editor/physical) found in the main Fixture editor windows.  
 The only difference is that here you can choose if the mode you're editing has the same physical information or different ones.  

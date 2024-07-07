@@ -6,8 +6,7 @@ date: '11:11 21-08-2023'
 On the market you can easily find LED strips that you can wire as you prefer to create a RGB Panel (or matrix). This dialog allows you to quickly create and setup a RGB Panel. It is a dedicated dialog to help you with the most annoying process of creating fixtures manually depending on the desired layout.  
 Please note that once the panel is created, the only way to modify the layout is manually.
 
-Panel creation
---------------
+## Panel creation
 
 When clicking OK on this dialog two things will happen:  
 

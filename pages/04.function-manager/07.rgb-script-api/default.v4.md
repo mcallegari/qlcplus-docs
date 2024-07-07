@@ -18,11 +18,10 @@ Script files should be named after the script's name and must have a **.js** ext
 * **Windows user dir:** %HOMEPATH%\\QLC+\\RGBScripts
 * **Windows system dir:** C:\\QLC+\\RGBScripts
 
-RGB Script Syntax
-==============
+## RGB Script Syntax
 
-Foundation
-----------
+### Foundation
+
 
 The scripts must be self-executing, i.e. when they are evaluated, the script itself is put inside an anonymous function that executes itself and returns an object that contains the required API functions:
 
@@ -35,8 +34,8 @@ The scripts must be self-executing, i.e. when they are evaluated, the script its
 )() // Anonymous function is executed here upon evaluation
 ```
 
-Properties
-----------
+### Properties
+
 
 However, a script with nothing more than an empty object does nothing, no matter how self-executing it might be. You must also declare some **properties** for the returned object so that QLC+ knows how to use the script and to show it to the user (you). So, you need to declare the following properties for the returned script object:
 
@@ -66,8 +65,7 @@ With this in mind we add declarations for these three properties to the script:
 )()
 ```
 
-Functions
----------
+### Functions
 
 Now we are getting to the actual business of producing data for the [RGB Matrix](/basics/glossary-and-concepts#rgb-matrix). The current API version uses two functions to achieve this:
 
@@ -143,8 +141,7 @@ Just like the previous function, we also add this other one to the script. Now w
 )()
 ```
 
-API version 2
--------------
+### API version 2
 
 RGB Script API version 2 introduces the concept of **Properties**. With properties, a Script can interact with the QLC+ engine by exchanging parameters, thus extending the possibilities of a RGB Script.  
 Examples of such properties can be the animation orientation, the number of objects to be rendered, etc..  
@@ -178,8 +175,7 @@ Following a table of the accepted attributes and the meaning of their values.
 | **write** | Defines the name of the Script function that QLC+ should call to write the property value.  <br>In this function the Script's writer should implement all the necessary actions to apply the property change.  <br>The write method of the example above is the following:  <br><br>    algo.setOrientation = **function**(_orientation) {<br>	if (_orientation == "Vertical")<br>	  algo.orientation = 1;<br>	else<br>	  algo.orientation = 0;<br>    } |
 | **read** | Defines the name of the Script function that QLC+ should call to read the property value.  <br>The read method of the example above is the following:  <br><br>    algo.getOrientation = **function**() {<br>        if (algo.orientation == 1)<br>	  return "Vertical";<br>	else<br>	  return "Horizontal";<br>    } |
 
-Development Tool
-----------------
+### Development Tool
 
 There is a development tool available in the QLC+ source repository that makes it easier to debug and test your custom scripts with a web browser. To use the tool, you must download the following two files to a directory on your hard disk, open the **devtool.html** file with your browser and follow its instructions:
 
@@ -188,8 +184,7 @@ There is a development tool available in the QLC+ source repository that makes i
 
 (Right-click and "Copy Link Location" works probably best)
 
-Example Script: Full Columns
-----------------------------
+### Example Script: Full Columns
 
 ```javascript
  /*
