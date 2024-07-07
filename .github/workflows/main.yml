@@ -48,7 +48,7 @@ jobs:
       run: mv ./.github/workflows/bin/images ./images
 
     - name: Build PDF-V2
-      uses: docker://pandoc/core:2.9
+      uses: docker://pandoc/extra
       with:
           working-directory: ./.github/workflows/bin/
           args: '-s -o ./.github/workflows/bin/QLCplusDocumentation.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" ' # gets appended to pandoc command
