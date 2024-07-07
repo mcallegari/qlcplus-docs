@@ -44,12 +44,18 @@ jobs:
             --metadata subtitle="Comprehensive Guide" 
             --metadata author="QLC+ Team" 
             --metadata date="2024-07-07" 
-            --metadata cover-image=./images/qt.png
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
             -V geometry:margin=1in 
             -V classoption=oneside 
+            -V toc=true
+            -V toc-title="Table of Contents"
+            -V titlepage=true
+            -V titlepage-color="FFFFFF"
+            -V titlepage-text-color="000000"
+            -V titlepage-rule-color="000000"
+            -V titlepage-rule-height=2
             -f markdown-raw_tex 
             
         
