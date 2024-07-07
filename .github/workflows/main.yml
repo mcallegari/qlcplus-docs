@@ -31,25 +31,25 @@ jobs:
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
-    - name: Build PDF
-      uses: baileyjm02/markdown-to-pdf@v1
-      with:
-          input_path: ./.github/workflows/bin/
-          # Specify images dir
-          images_dir: ./.github/workflows/bin/images/
-          image_import: images
-          # Build HTML version
-          build_html: true
-          # Build Table of Contents
-          table_of_contents: true
-          # Path to output (this should be the same as the Upload Artifiact path)
-          output_dir: ./.github/workflows/bin/
+    ##- name: Build PDF
+    ##  uses: baileyjm02/markdown-to-pdf@v1
+    ##  with:
+    ##      input_path: ./.github/workflows/bin/
+    ##      # Specify images dir
+    ##      images_dir: ./.github/workflows/bin/images/
+    ##      image_import: images
+    ##      # Build HTML version
+    ##      build_html: true
+    ##      # Build Table of Contents
+    ##      table_of_contents: true
+    ##      # Path to output (this should be the same as the Upload Artifiact path)
+    ##      output_dir: ./.github/workflows/bin/
 
     - name: Build PDF-V2
       uses: docker://pandoc/core:2.9
       with:
           working-directory: ./.github/workflows/bin/
-          args: '-s -o output.pdf combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" ' # gets appended to pandoc command
+          args: '-s -o output.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata author="QLC+ Team" --metadata date="2024-07-07" ' # gets appended to pandoc command
         
 
     - name: Upload-Artifact
