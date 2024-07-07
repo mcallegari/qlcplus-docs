@@ -22,7 +22,7 @@ The QLC+ Main Window consists of three main parts:
 2.  Active panels selected by their respective tabs
 3.  Tabs that allow the selection of one of the QLC+ panels
 
-![](MainWindow.png)
+![](/main-window/MainWindow.png)
 
 Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
 
