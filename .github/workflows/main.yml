@@ -14,7 +14,6 @@ jobs:
           config_path: .spellcheck.yml
           task_name: Markdown
 
-
   build-pdf:
     runs-on: ubuntu-latest
     steps:
@@ -31,19 +30,6 @@ jobs:
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
-    ##- name: Build PDF
-    ##  uses: baileyjm02/markdown-to-pdf@v1
-    ##  with:
-    ##      input_path: ./.github/workflows/bin/
-    ##      # Specify images dir
-    ##      images_dir: ./.github/workflows/bin/images/
-    ##      image_import: images
-    ##      # Build HTML version
-    ##      build_html: true
-    ##      # Build Table of Contents
-    ##      table_of_contents: true
-    ##      # Path to output (this should be the same as the Upload Artifiact path)
-    ##      output_dir: ./.github/workflows/bin/
     - name: Move images folder to root directory
       run: mv ./.github/workflows/bin/images ./images
 
@@ -51,7 +37,21 @@ jobs:
       uses: docker://pandoc/extra
       with:
           working-directory: ./.github/workflows/bin/
-          args: '-s -o ./.github/workflows/bin/QLCplusDocumentation.pdf ./.github/workflows/bin/combined_documentation.md --metadata title="QLC+ Documentation" --metadata subtitle="Comprehensive Guide" --metadata author="QLC+ Team" --metadata date="2024-07-07" --listings -V papersize=a4 -V geometry:margin=1in -V classoption=oneside -f markdown-raw_tex --pdf-engine=lualatex' # gets appended to pandoc command
+          args: >
+            -s -o ./.github/workflows/bin/QLCplusDocumentation.pdf 
+            ./.github/workflows/bin/combined_documentation.md 
+            --metadata title="QLC+ Documentation" 
+            --metadata subtitle="Comprehensive Guide" 
+            --metadata author="QLC+ Team" 
+            --metadata date="2024-07-07" 
+            --metadata cover-image=./images/qt.png
+            --listings 
+            --pdf-engine=lualatex
+            -V papersize=a4 
+            -V geometry:margin=1in 
+            -V classoption=oneside 
+            -f markdown-raw_tex 
+            
         
 
     - name: Upload-Artifact
