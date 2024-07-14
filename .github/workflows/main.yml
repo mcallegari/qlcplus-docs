@@ -56,6 +56,8 @@ jobs:
             -V titlepage-text-color="000000"
             -V titlepage-rule-color="000000"
             -V titlepage-rule-height=2
+            -V mainfont="DejaVu Sans"
+            -V sansfont="DejaVu Sans"
             -f markdown-raw_tex 
             
         
