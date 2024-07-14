@@ -36,7 +36,6 @@ jobs:
     - name: Build PDF-V2
       uses: docker://pandoc/extra
       with:
-          working-directory: ./.github/workflows/bin/
           args: >
             -s -o ./.github/workflows/bin/QLCplusDocumentation.pdf 
             ./.github/workflows/bin/combined_documentation.md 
@@ -58,10 +57,9 @@ jobs:
             -V titlepage-rule-height=2
             -V mainfont="Source Sans Pro"
             -V sansfont="Source Sans Pro"
-            -V template=./.github/workflows/bin/template.tex
+            -V template="./.github/workflows/bin/template.tex"
             -f markdown-raw_tex 
             
-        
 
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
