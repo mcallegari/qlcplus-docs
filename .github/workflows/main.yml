@@ -57,7 +57,6 @@ jobs:
             -V titlepage-rule-height=2
             -V mainfont="Source Sans Pro"
             -V sansfont="Source Sans Pro"
-            -V template="./.github/workflows/bin/template.tex"
             -f markdown-raw_tex 
             
 
