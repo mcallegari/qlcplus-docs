@@ -58,7 +58,32 @@ jobs:
             -V mainfont="Source Sans Pro"
             -V sansfont="Source Sans Pro"
             -f markdown-raw_tex 
-            
+
+    - name: Create Title Page Markdown
+      run: |
+              echo "# QLC+ Documentation" > ./.github/workflows/bin/titlepage.md
+              echo "## Comprehensive Guide" >> ./.github/workflows/bin/titlepage.md
+              echo "### QLC+ Team" >> ./.github/workflows/bin/titlepage.md
+              echo "#### 2024-07-07" >> ./.github/workflows/bin/titlepage.md
+              
+    - name: Convert Title Page to PDF
+      uses: docker://pandoc/extra
+      with:
+          args: >
+                  -s -o ./.github/workflows/bin/titlepage.pdf 
+                  ./.github/workflows/bin/titlepage.md 
+                  --pdf-engine=lualatex
+                  -V papersize=a4 
+                  -V geometry:margin=1in 
+                  -V mainfont="Source Sans Pro"
+                  -V sansfont="Source Sans Pro"  
+                  
+    - name: Combine Title Page and Documentation PDF
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ghostscript
+        gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/QLCplusDocumentation_with_titlepage.pdf ./.github/workflows/bin/titlepage.pdf ./.github/workflows/bin/QLCplusDocumentation.pdf
+     
 
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
