@@ -42,7 +42,7 @@ jobs:
             --metadata title="QLC+ Documentation" 
             --metadata subtitle="Comprehensive Guide" 
             --metadata author="QLC+ Team" 
-            --metadata date="2024-07-07" 
+            --metadata date="`date +%D`" 
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
@@ -50,21 +50,16 @@ jobs:
             -V classoption=oneside 
             -V toc=true
             -V toc-title="Table of Contents"
-            -V titlepage=true
-            -V titlepage-color="364e5e"
-            -V titlepage-text-color="000000"
-            -V titlepage-rule-color="000000"
-            -V titlepage-rule-height=2
             -V mainfont="Source Sans Pro"
             -V sansfont="Source Sans Pro"
             -f markdown-raw_tex 
 
     - name: Create Title Page Markdown
       run: |
-              echo "# QLC+ Documentation" > ./.github/workflows/bin/titlepage.md
-              echo "## Comprehensive Guide" >> ./.github/workflows/bin/titlepage.md
-              echo "### QLC+ Team" >> ./.github/workflows/bin/titlepage.md
-              echo "#### 2024-07-07" >> ./.github/workflows/bin/titlepage.md
+              echo " " > ./.github/workflows/bin/titlepage.md
+              echo " " >> ./.github/workflows/bin/titlepage.md
+              echo " " >> ./.github/workflows/bin/titlepage.md
+              echo "![](images/qlcplus.svg)" >> ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
@@ -73,11 +68,20 @@ jobs:
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
                   --pdf-engine=lualatex
+                  --metadata title="QLC+ Documentation" 
+                  --metadata subtitle="Comprehensive Guide" 
+                  --metadata author="QLC+ Team" 
+                  --metadata date="`date +%D`" 
                   -V papersize=a4 
+                  -V titlepage=true
+                  -V titlepage-color="364e5e"
+                  -V titlepage-text-color="000000"
+                  -V titlepage-rule-color="000000"
+                  -V titlepage-rule-height=2
                   -V geometry:margin=1in 
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
-                  
+
     - name: Combine Title Page and Documentation PDF
       run: |
         sudo apt-get update
