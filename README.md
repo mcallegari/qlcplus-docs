@@ -61,7 +61,7 @@ If QLC+ helps you to make your lights shine, please consider donating or buying 
 </tr>
 <tr>
 <td style="text-align:right">Donate via PayPal:</td>
-<td style="text-align:left"><a href="https://github.com/sponsors/mcallegari"><img alt="Static Badge" src="https://img.shields.io/badge/PayPal-blue?logo=paypal">
+<td style="text-align:left"><a href="https://www.paypal.me/mcallegariqlcplus"><img alt="Static Badge" src="https://img.shields.io/badge/PayPal-blue?logo=paypal">
 </a></td>
 </tr>
 <tr>
