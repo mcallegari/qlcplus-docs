@@ -32,6 +32,9 @@ jobs:
 
     - name: Copy images folder to root directory
       run: cp -r ./.github/workflows/bin/images ./images
+    - name: Get Date
+      run: |
+        CURRENT_DATE=$(date +'%Y-%m-%d')
 
     - name: Build PDF-V2
       uses: docker://pandoc/extra
@@ -42,7 +45,7 @@ jobs:
             --metadata title="QLC+ Documentation" 
             --metadata subtitle="Comprehensive Guide" 
             --metadata author="QLC+ Team" 
-            --metadata date="$(date +'%Y-%m-%d')" 
+            --metadata date="${CURRENT_DATE}" 
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
@@ -71,7 +74,7 @@ jobs:
                   --metadata title="QLC+ Documentation" 
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="QLC+ Team" 
-                  --metadata date="$(date +'%Y-%m-%d')" 
+                  --metadata date="${CURRENT_DATE}" 
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
