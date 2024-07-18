@@ -51,7 +51,7 @@ jobs:
             -V toc=true
             -V toc-title="Table of Contents"
             -V titlepage=true
-            -V titlepage-color="FFFFFF"
+            -V titlepage-color="364e5e"
             -V titlepage-text-color="000000"
             -V titlepage-rule-color="000000"
             -V titlepage-rule-height=2
