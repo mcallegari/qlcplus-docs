@@ -31,7 +31,7 @@ jobs:
         ./scripts/Merge-MarkdownFiles.ps1
 
     - name: Copy images folder to root directory
-      run: cp ./.github/workflows/bin/images ./images
+      run: cp -r ./.github/workflows/bin/images ./images
 
     - name: Build PDF-V2
       uses: docker://pandoc/extra
