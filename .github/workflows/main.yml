@@ -45,7 +45,7 @@ jobs:
             --metadata title="QLC+ Documentation" 
             --metadata subtitle="Comprehensive Guide" 
             --metadata author="QLC+ Team" 
-            --metadata date="${CURRENT_DATE}" 
+            --metadata date=${CURRENT_DATE} 
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
@@ -74,7 +74,7 @@ jobs:
                   --metadata title="QLC+ Documentation" 
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="QLC+ Team" 
-                  --metadata date="${CURRENT_DATE}" 
+                  --metadata date=${CURRENT_DATE} 
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
