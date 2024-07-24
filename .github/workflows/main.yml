@@ -36,11 +36,8 @@ jobs:
     - name: Put current date into a variable
       run: |
         echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
-    - name: Use variable
-      run: |
-        echo "${{env.EXPORT_DATE}}"
 
-    - name: Build PDF-V2
+    - name: Build PDF
       uses: docker://pandoc/extra
       with:
           args: >
@@ -71,6 +68,7 @@ jobs:
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="QLC+ Team" 
                   --metadata date=${{env.EXPORT_DATE}} 
+                  --pdf-engine=lualatex
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
