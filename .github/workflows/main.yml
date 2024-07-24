@@ -59,7 +59,7 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo '![​](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >  ./.github/workflows/bin/titlepage.md
+              echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
@@ -68,7 +68,19 @@ jobs:
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
                   -fmarkdown-implicit_figures
-
+                  --metadata title="QLC+ Documentation" 
+                  --metadata subtitle="Comprehensive Guide" 
+                  --metadata author="QLC+ Team" 
+                  --metadata date=${{env.EXPORT_DATE}} 
+                  -V papersize=a4 
+                  -V titlepage=true
+                  -V titlepage-color="364e5e"
+                  -V titlepage-text-color="000000"
+                  -V titlepage-rule-color="000000"
+                  -V titlepage-rule-height=2
+                  -V geometry:margin=1in 
+                  -V mainfont="Source Sans Pro"
+                  -V sansfont="Source Sans Pro"  
     - name: Combine Title Page and Documentation PDF
       run: |
         sudo apt-get update
