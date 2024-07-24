@@ -58,15 +58,15 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo '​' >  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
-              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
               echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
