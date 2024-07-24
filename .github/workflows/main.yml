@@ -60,12 +60,12 @@ jobs:
     - name: Create Title Page Markdown
       run: |
               echo " " > ./.github/workflows/bin/titlepage.md
-              echo " " > ./.github/workflows/bin/titlepage.md
-              echo " " > ./.github/workflows/bin/titlepage.md
-              echo '<p align="center">'                                 > ./.github/workflows/bin/titlepage.md
-              echo '  <img src="images/qlcplus.svg">'                   > ./.github/workflows/bin/titlepage.md
-              echo '<em>"An open-source lighting control solution for everyone."</em>' > ./.github/workflows/bin/titlepage.md
-              echo '</p>'                                               > ./.github/workflows/bin/titlepage.md
+              echo " " >> ./.github/workflows/bin/titlepage.md
+              echo " " >> ./.github/workflows/bin/titlepage.md
+              echo '<p align="center">'                                 >> ./.github/workflows/bin/titlepage.md
+              echo '  <img src="images/qlcplus.svg">'                   >> ./.github/workflows/bin/titlepage.md
+              echo '<em>"An open-source lighting control solution for everyone."</em>' >> ./.github/workflows/bin/titlepage.md
+              echo '</p>'                                               >> ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
