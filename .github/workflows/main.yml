@@ -74,7 +74,7 @@ jobs:
                   ./.github/workflows/bin/titlepage.md 
                   --pdf-engine=lualatex
                   --metadata title="QLC+ Documentation" 
-                  --metadata subtitle="Comprehensive Guide" 
+                  --metadata subtitle="An open-source lighting control solution for everyone." 
                   --metadata author="QLC+ Team" 
                   --metadata date=${{env.NOW}} 
                   -V papersize=a4 
