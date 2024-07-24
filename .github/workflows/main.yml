@@ -31,7 +31,9 @@ jobs:
         ./scripts/Merge-MarkdownFiles.ps1
 
     - name: Copy images folder to root directory
-      run: cp -r ./.github/workflows/bin/images ./images
+      run: |
+        cp -r ./.github/workflows/bin/images ./images
+        sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/combined_documentation.md 
 
     - name: Put current date into a variable
       run: |
@@ -56,11 +58,15 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo ' ' >  ./.github/workflows/bin/titlepage.md
-              echo ' ' >>  ./.github/workflows/bin/titlepage.md
-              echo ' ' >>  ./.github/workflows/bin/titlepage.md
-              echo ' ' >>  ./.github/workflows/bin/titlepage.md
-              echo ' ' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
+              echo '​' >>  ./.github/workflows/bin/titlepage.md
               echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
@@ -84,7 +90,7 @@ jobs:
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
-                  
+
     - name: Combine Title Page and Documentation PDF
       run: |
         sudo apt-get update
