@@ -59,19 +59,31 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo " " >  ./.github/workflows/bin/titlepage.md
-              echo " " >> ./.github/workflows/bin/titlepage.md
-              echo " " >> ./.github/workflows/bin/titlepage.md
-              echo '<div style="text-align: center;">'                                                 >> ./.github/workflows/bin/titlepage.md
-              echo '  <p>Test</p>'                                   >> ./.github/workflows/bin/titlepage.md
-              echo '</div>'                                                               >> ./.github/workflows/bin/titlepage.md
+              echo '<!DOCTYPE html>'                                                          >  ./.github/workflows/bin/titlepage.html
+              echo '<html lang="en">'                                                         >>  ./.github/workflows/bin/titlepage.html
+              echo '<meta charset="UTF-8">'                                                   >>  ./.github/workflows/bin/titlepage.html
+              echo '<title>Page Title</title>'                                                >>  ./.github/workflows/bin/titlepage.html
+              echo '<meta name="viewport" content="width=device-width,initial-scale=1">'      >>  ./.github/workflows/bin/titlepage.html
+              echo '<link rel="stylesheet" href="">'                                          >>  ./.github/workflows/bin/titlepage.html
+              echo '<style>'                                                                  >>  ./.github/workflows/bin/titlepage.html
+              echo '</style>'                                                                 >>  ./.github/workflows/bin/titlepage.html
+              echo '<script src=""></script>'                                                 >>  ./.github/workflows/bin/titlepage.html
+              echo '<body>'                                                                   >>  ./.github/workflows/bin/titlepage.html
+              echo '<img src="img_la.jpg" alt="LA" style="width:100%">'                       >>  ./.github/workflows/bin/titlepage.html
+              echo '<div class="">'                                                           >>  ./.github/workflows/bin/titlepage.html
+              echo '<h1>This is a Heading</h1>'                                               >>  ./.github/workflows/bin/titlepage.html
+              echo '<p>This is a paragraph.</p>'                                              >>  ./.github/workflows/bin/titlepage.html
+              echo '<p>This is another paragraph.</p>'                                        >>  ./.github/workflows/bin/titlepage.html
+              echo '</div>'                                                                   >>  ./.github/workflows/bin/titlepage.html
+              echo '</body>'                                                                  >>  ./.github/workflows/bin/titlepage.html
+              echo '</html>'                                                                  >>  ./.github/workflows/bin/titlepage.html
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
       with:
           args: >
                   -s -o ./.github/workflows/bin/titlepage.pdf 
-                  ./.github/workflows/bin/titlepage.md 
+                  ./.github/workflows/bin/titlepage.html 
 
     - name: Combine Title Page and Documentation PDF
       run: |
