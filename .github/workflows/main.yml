@@ -63,7 +63,7 @@ jobs:
               echo " " >> ./.github/workflows/bin/titlepage.md
               echo " " >> ./.github/workflows/bin/titlepage.md
               echo '<div style="text-align: center;">'                                                 >> ./.github/workflows/bin/titlepage.md
-              echo '  <img src="images/qlcplus.svg" alt="QLC+ Logo" style="width: 200px;">'                                   >> ./.github/workflows/bin/titlepage.md
+              echo '  <p>Test</p>'                                   >> ./.github/workflows/bin/titlepage.md
               echo '</div>'                                                               >> ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
