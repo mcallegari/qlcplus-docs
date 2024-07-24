@@ -61,7 +61,7 @@ jobs:
       run: |
               echo " " > ./.github/workflows/bin/titlepage.md
               echo " " >> ./.github/workflows/bin/titlepage.md
-              echo " " >> ./.github/workflows/bin/titlepage.md
+              echo " CC0 " >> ./.github/workflows/bin/titlepage.md
               echo "![](images/qlcplus.svg)" >> ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
