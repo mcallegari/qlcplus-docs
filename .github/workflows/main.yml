@@ -35,6 +35,24 @@ jobs:
         cp -r ./.github/workflows/bin/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/combined_documentation.md 
 
+      env:
+        IMAGES_TO_PROCESS: "label.png attach.png detach.pngk filesave.png editclear.png key_bindings.png fan.png knob.png player_play.png player_stop.png"  # List of images to process
+
+    - name: Set up ImageMagick
+      run: sudo apt-get install -y imagemagick
+
+    - name: Adjust DPI of Specified Images
+      run: |
+        TARGET_DPI=72  # Set your desired DPI here
+        for img in ${IMAGES_TO_PROCESS}; do
+          if [ -f "$img" ]; then
+            echo "Adjusting DPI of $img to $TARGET_DPI"
+            mogrify -density $TARGET_DPI "$img"
+          else
+            echo "File $img does not exist, skipping..."
+          fi
+        done
+
     - name: Put current date into a variable
       run: |
         echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
