@@ -57,10 +57,10 @@ jobs:
     - name: Create Title Page Markdown
       run: |
               echo ' ' >  ./.github/workflows/bin/titlepage.md
-              echo ' ' >  ./.github/workflows/bin/titlepage.md
-              echo ' ' >  ./.github/workflows/bin/titlepage.md
-              echo ' ' >  ./.github/workflows/bin/titlepage.md
-              echo ' ' >  ./.github/workflows/bin/titlepage.md
+              echo ' ' >>  ./.github/workflows/bin/titlepage.md
+              echo ' ' >>  ./.github/workflows/bin/titlepage.md
+              echo ' ' >>  ./.github/workflows/bin/titlepage.md
+              echo ' ' >>  ./.github/workflows/bin/titlepage.md
               echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
@@ -69,9 +69,9 @@ jobs:
           args: >
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
-                  --metadata title="QLC+ Documentation" 
+                  --metadata title="Q Light Controller + Documentation" 
                   --metadata subtitle="Comprehensive Guide" 
-                  --metadata author="QLC+ Team" 
+                  --metadata author="docs.qlcplus.org" 
                   --metadata date=${{env.EXPORT_DATE}} 
                   --pdf-engine=lualatex
                   -V papersize=a4 
@@ -84,6 +84,7 @@ jobs:
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
+                  
     - name: Combine Title Page and Documentation PDF
       run: |
         sudo apt-get update
