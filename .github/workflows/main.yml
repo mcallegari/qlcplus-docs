@@ -32,9 +32,14 @@ jobs:
 
     - name: Copy images folder to root directory
       run: cp -r ./.github/workflows/bin/images ./images
-    - name: Get Date
+
+    - name: Put current date into a variable
       run: |
-        CURRENT_DATE=$(date +'%Y-%m-%d')
+        $NOW=& Get-Date -format yyyy-MM-dd
+        echo "NOW=$NOW" >> $env:GITHUB_ENV
+    - name: Use variable
+      run: |
+        echo "${{env.NOW}}"
 
     - name: Build PDF-V2
       uses: docker://pandoc/extra
@@ -45,7 +50,7 @@ jobs:
             --metadata title="QLC+ Documentation" 
             --metadata subtitle="Comprehensive Guide" 
             --metadata author="QLC+ Team" 
-            --metadata date=${CURRENT_DATE} 
+            --metadata date=${{env.NOW}}
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
@@ -74,7 +79,7 @@ jobs:
                   --metadata title="QLC+ Documentation" 
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="QLC+ Team" 
-                  --metadata date=${CURRENT_DATE} 
+                  --metadata date=${{env.NOW}} 
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
