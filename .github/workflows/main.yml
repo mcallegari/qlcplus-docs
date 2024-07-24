@@ -67,7 +67,6 @@ jobs:
           args: >
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
-                  -fmarkdown-implicit_figures
                   --metadata title="QLC+ Documentation" 
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="QLC+ Team" 
