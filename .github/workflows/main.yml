@@ -67,7 +67,7 @@ jobs:
           args: >
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
-
+                  -fmarkdown-implicit_figures
 
     - name: Combine Title Page and Documentation PDF
       run: |
