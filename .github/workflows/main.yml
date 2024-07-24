@@ -59,7 +59,7 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo '![Caption](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >  ./.github/workflows/bin/titlepage.md
+              echo '![​](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
@@ -67,7 +67,6 @@ jobs:
           args: >
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
-                  -fmarkdown-implicit_figures
 
 
     - name: Combine Title Page and Documentation PDF
