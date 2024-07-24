@@ -68,20 +68,7 @@ jobs:
                   -s -o ./.github/workflows/bin/titlepage.pdf 
                   ./.github/workflows/bin/titlepage.md 
                   -fmarkdown-implicit_figures
-                  --pdf-engine=lualatex
-                  --metadata title="QLC+ Documentation" 
-                  --metadata subtitle="Comprehensive Guide" 
-                  --metadata author="QLC+ Team" 
-                  --metadata date=${{env.NOW}} 
-                  -V papersize=a4 
-                  -V titlepage=true
-                  -V titlepage-color="364e5e"
-                  -V titlepage-text-color="000000"
-                  -V titlepage-rule-color="000000"
-                  -V titlepage-rule-height=2
-                  -V geometry:margin=1in 
-                  -V mainfont="Source Sans Pro"
-                  -V sansfont="Source Sans Pro"  
+
 
     - name: Combine Title Page and Documentation PDF
       run: |
