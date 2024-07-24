@@ -44,7 +44,7 @@ jobs:
     - name: Adjust DPI of Specified Images
       run: |
         TARGET_DPI=72  # Set your desired DPI here
-        for img in ${IMAGES_TO_PROCESS}; do
+        for img in ${{env.IMAGES_TO_PROCESS}}; do
           if [ -f "$img" ]; then
             echo "Adjusting DPI of $img to $TARGET_DPI"
             mogrify -density $TARGET_DPI "$img"
