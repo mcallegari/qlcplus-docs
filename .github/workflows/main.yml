@@ -78,6 +78,7 @@ jobs:
                   -V geometry:margin=1in 
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
+                  -V pagestyle=empty
     - name: Combine Title Page and Documentation PDF
       run: |
         sudo apt-get update
