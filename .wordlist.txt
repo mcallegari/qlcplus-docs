@@ -299,3 +299,6 @@ capitalisation
 colour
 colours
 Automat
+stoponexit
+waitfunctionstop
+waitfunctionstart
