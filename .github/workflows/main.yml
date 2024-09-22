@@ -60,19 +60,6 @@ jobs:
     - name: Create Title Page Markdown
       run: |
               echo "---" >  ./.github/workflows/bin/titlepage.md
-              echo "title: 'Q Light Controller + Documentation'" >  ./.github/workflows/bin/titlepage.md
-              echo "subtitle: 'Comprehensive Guide'" >  ./.github/workflows/bin/titlepage.md
-              echo "author: 'docs.qlcplus.org'" >  ./.github/workflows/bin/titlepage.md
-              echo "date: '${{ env.EXPORT_DATE }}'" >  ./.github/workflows/bin/titlepage.md
-              echo "papersize: a4" >  ./.github/workflows/bin/titlepage.md
-              echo "titlepage: true" >  ./.github/workflows/bin/titlepage.md
-              echo "titlepage-color: '364e5e'" >  ./.github/workflows/bin/titlepage.md
-              echo "titlepage-text-color: '000000'" >  ./.github/workflows/bin/titlepage.md
-              echo "titlepage-rule-color: '000000'" >  ./.github/workflows/bin/titlepage.md
-              echo "titlepage-rule-height: 2" >  ./.github/workflows/bin/titlepage.md
-              echo "geometry: margin=1in" >  ./.github/workflows/bin/titlepage.md
-              echo "mainfont: 'Source Sans Pro'" >  ./.github/workflows/bin/titlepage.md
-              echo "sansfont: 'Source Sans Pro'" >  ./.github/workflows/bin/titlepage.md
               echo "pagestyle: empty" >  ./.github/workflows/bin/titlepage.md
               echo "header-includes:" >  ./.github/workflows/bin/titlepage.md
               echo "  - \pagenumbering{gobble}" >  ./.github/workflows/bin/titlepage.md
