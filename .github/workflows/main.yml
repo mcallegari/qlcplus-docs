@@ -60,7 +60,6 @@ jobs:
     - name: Create Title Page Markdown
       run: |
               echo "---" >  ./.github/workflows/bin/titlepage.md
-              echo "pagestyle: empty" >  ./.github/workflows/bin/titlepage.md
               echo "header-includes:" >  ./.github/workflows/bin/titlepage.md
               echo "  - \pagenumbering{gobble}" >  ./.github/workflows/bin/titlepage.md
               echo "---" >  ./.github/workflows/bin/titlepage.md
@@ -113,7 +112,6 @@ jobs:
                   -V titlepage-text-color="000000"
                   -V titlepage-rule-color="000000"
                   -V titlepage-rule-height=2
-                  -V geometry:margin=1in 
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
