@@ -102,8 +102,8 @@ jobs:
                   --metadata author="docs.qlcplus.org" 
                   --metadata date=${{env.EXPORT_DATE}} 
                   --listings 
-                  --pagenumbering=[color=white]
                   --pdf-engine=lualatex
+                  -V pagenumbering=[color=white]
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
