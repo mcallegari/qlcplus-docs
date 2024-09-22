@@ -56,6 +56,19 @@ jobs:
     - name: Put current date into a variable
       run: |
         echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
+    
+    - name: Create Title Page Markdown
+      run: |
+              echo "   " >  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
 
     - name: Build PDF
       uses: docker://pandoc/extra
@@ -69,25 +82,14 @@ jobs:
             -V geometry:margin=1.5cm
             -V classoption=oneside 
             -V indent=false
-            -V include-before=HelloWorld
+            -V include-before=./.github/workflows/bin/titlepage.md
             -V toc=true
             -V toc-title="Table of Contents"
             -V mainfont="Source Sans Pro"
             -V sansfont="Source Sans Pro"
             -f markdown-raw_tex 
 
-    - name: Create Title Page Markdown
-      run: |
-              echo "   " >  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
+    
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
