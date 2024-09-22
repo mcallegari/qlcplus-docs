@@ -78,11 +78,11 @@ jobs:
             ./.github/workflows/bin/combined_documentation.md 
             --listings 
             --pdf-engine=lualatex
+            --include-before-body=./.github/workflows/bin/titlepage.md
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
             -V indent=false
-            -V include-before=./.github/workflows/bin/titlepage.md
             -V toc=true
             -V toc-title="Table of Contents"
             -V mainfont="Source Sans Pro"
