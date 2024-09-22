@@ -101,6 +101,8 @@ jobs:
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="docs.qlcplus.org" 
                   --metadata date=${{env.EXPORT_DATE}} 
+                  --listings 
+                  --pagenumbering=[color=white]
                   --pdf-engine=lualatex
                   -V papersize=a4 
                   -V titlepage=true
