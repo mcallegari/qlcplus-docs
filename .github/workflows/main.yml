@@ -112,7 +112,7 @@ jobs:
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
-                  -V header-includes: - \pgenumbering{gobble}
+                  --header-includes= \pgenumbering{gobble}
 
     - name: Combine Title Page and Documentation PDF
       run: |
