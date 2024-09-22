@@ -68,7 +68,7 @@ jobs:
               echo "   " >>  ./.github/workflows/bin/titlepage.md
               echo "   " >>  ./.github/workflows/bin/titlepage.md
               echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo '![QLC+ Logo](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
+              echo '![](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
 
     - name: Build PDF
       uses: docker://pandoc/extra
@@ -78,7 +78,6 @@ jobs:
             ./.github/workflows/bin/combined_documentation.md 
             --listings 
             --pdf-engine=lualatex
-            --include-before-body=./.github/workflows/bin/titlepage.md
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
@@ -103,7 +102,6 @@ jobs:
                   --metadata date=${{env.EXPORT_DATE}} 
                   --listings 
                   --pdf-engine=lualatex
-                  -V pagenumbering=[color=white]
                   -V papersize=a4 
                   -V titlepage=true
                   -V titlepage-color="364e5e"
@@ -114,6 +112,7 @@ jobs:
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
+                  -V header-includes: - \pgenumbering{gobble}
 
     - name: Combine Title Page and Documentation PDF
       run: |
