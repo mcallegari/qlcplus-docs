@@ -68,7 +68,8 @@ jobs:
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
-            -V indent=true
+            -V indent=false
+            -V include-before=HelloWorld
             -V toc=true
             -V toc-title="Table of Contents"
             -V mainfont="Source Sans Pro"
