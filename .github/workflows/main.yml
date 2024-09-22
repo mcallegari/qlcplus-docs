@@ -66,7 +66,7 @@ jobs:
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
-            -V geometry:margin=1in 
+            -V geometry:margin=1cm
             -V classoption=oneside 
             -V toc=true
             -V toc-title="Table of Contents"
