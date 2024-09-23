@@ -3,6 +3,10 @@
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{caption}
+
+% Remove captions from images
+\captionsetup[figure]{labelformat=empty}
 
 % Define \pandocbounded to be a no-op (do nothing)
 \newcommand{\pandocbounded}[1]{#1}
@@ -29,6 +33,14 @@
         
         \vfill
         
+        % Conditional release rendering
+        \ifx\release\empty
+        \else
+            {\Large \textit{Release: $release$}} \\
+        \fi
+        
+        \vfill
+        
         % Conditional author rendering
         \ifx\author\empty
         \else
@@ -48,6 +60,7 @@
         % Horizontal rule with custom thickness
         \noindent\rule{\textwidth}{2pt}
     \end{center}
+    
     $body$
 \end{titlepage}
 
