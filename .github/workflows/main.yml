@@ -100,7 +100,6 @@ jobs:
                   --metadata subtitle="Comprehensive Guide" 
                   --metadata author="docs.qlcplus.org" 
                   --metadata date=${{env.EXPORT_DATE}} 
-                  --listings 
                   --pdf-engine=lualatex
                   -V papersize=a4 
                   -V titlepage=true
@@ -108,6 +107,7 @@ jobs:
                   -V titlepage-text-color="000000"
                   -V titlepage-rule-color="000000"
                   -V titlepage-rule-height=2
+                  -V geometry:margin=1in 
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
