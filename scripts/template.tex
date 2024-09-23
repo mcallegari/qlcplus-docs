@@ -11,12 +11,21 @@
 \begin{titlepage}
     \begin{center}
         \vfill
-        {\Huge \textcolor[HTML]{364e5e}{$title$}} \\  % Title in color
-        {\LARGE $subtitle$} \\
+        {\Huge \textcolor[HTML]{364e5e}{$title$}} \\
+        \ifx\subtitle\empty
+        \else
+            {\LARGE $subtitle$} \\
+        \fi
         \vfill
-        {\Large $author$} \\
+        \ifx\author\empty
+        \else
+            {\Large $author$} \\
+        \fi
         \vfill
-        {\Large $date$}  % Auto-inserts date
+        \ifx\date\empty
+        \else
+            {\Large $date$} \\
+        \fi
         \vfill
         \noindent\rule{\textwidth}{2pt}  % Custom rule height/color
     \end{center}
