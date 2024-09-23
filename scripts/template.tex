@@ -1,16 +1,24 @@
-\documentclass[11pt]{article}
-
-\usepackage{sectsty}
-\usepackage{graphicx}
-
-% Margins
-\topmargin=-0.45in
-\evensidemargin=0in
-\oddsidemargin=0in
-\textwidth=6.5in
-\textheight=9.0in
-\headsep=0.25in
-
+\documentclass{article}
+\usepackage{graphicx}  % For handling images
+\pagenumbering{gobble} % Disable page numbering
 \begin{document}
+
+\begin{titlepage}
+    \pagestyle{empty}
+    \protect\thispagestyle{empty}
+
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{./pages/01.basics/qlcplus.svg}  % Your logo or image
+        \vfill
+        {\Huge Q Light Controller + Documentation} \\
+        {\LARGE Comprehensive Guide} \\
+        \vfill
+        {\Large docs.qlcplus.org} \\
+        \vfill
+        {\Large \today}  % Auto-inserts date
+    \end{center}
+\end{titlepage}
+
+$body$
 
 \end{document}
