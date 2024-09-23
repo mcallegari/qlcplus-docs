@@ -109,6 +109,7 @@ jobs:
                   -V mainfont="Source Sans Pro"
                   -V sansfont="Source Sans Pro"  
                   -V pagestyle=empty
+                  --template=./scripts/template.tex
 
     - name: Combine Title Page and Documentation PDF
       run: |
