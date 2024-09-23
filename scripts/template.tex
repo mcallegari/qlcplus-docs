@@ -9,28 +9,44 @@
 
 \pagestyle{empty}  % Disable headers/footers
 
+% Set the main font for the document
+\setmainfont{Source Sans Pro}
+
 \begin{document}
 
 \begin{titlepage}
     \begin{center}
         \vfill
+        
+        % Title in large font with custom color
         {\Huge \textcolor[HTML]{364e5e}{$title$}} \\
+        
+        % Conditional subtitle rendering
         \ifx\subtitle\empty
         \else
             {\LARGE $subtitle$} \\
         \fi
+        
         \vfill
+        
+        % Conditional author rendering
         \ifx\author\empty
         \else
             {\Large $author$} \\
         \fi
+        
         \vfill
+        
+        % Conditional date rendering
         \ifx\date\empty
         \else
             {\Large $date$} \\
         \fi
+        
         \vfill
-        \noindent\rule{\textwidth}{2pt}  % Custom rule height/color
+        
+        % Horizontal rule with custom thickness
+        \noindent\rule{\textwidth}{2pt}
     \end{center}
     $body$
 \end{titlepage}
