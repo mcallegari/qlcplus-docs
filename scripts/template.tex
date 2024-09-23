@@ -4,6 +4,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{background}  % For setting the background image
 
 % Remove captions from images
 \captionsetup[figure]{labelformat=empty}
@@ -18,6 +19,15 @@
 
 \begin{document}
 
+% Background setup for the title page only
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.2,
+  position=current page.center,
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{images/background.pdf}}
+}
+
 \begin{titlepage}
     \begin{center}
         \vfill
@@ -31,7 +41,6 @@
             {\LARGE $subtitle$} \\
         \fi
         
-        \vfill
         
         % Conditional release rendering
         \ifx\release\empty
@@ -39,15 +48,12 @@
             {\Large \textit{Release: $release$}} \\
         \fi
         
-        \vfill
-        
-        % Conditional author rendering
+        % Custom "Written by..." message above the author
         \ifx\author\empty
         \else
-            {\Large $author$} \\
+            {\Large \textit{Written by... you!}} \\[0.5cm]  % Custom message
+            {\Large $author$} \\  % Author's name
         \fi
-        
-        \vfill
         
         % Conditional date rendering
         \ifx\date\empty
