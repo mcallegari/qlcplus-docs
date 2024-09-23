@@ -1,24 +1,26 @@
-\documentclass[11pt]{article}
-\usepackage{graphicx}  % Required for image support
-\pagenumbering{gobble} % Disable page numbering
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\setmainfont{Source Sans Pro}
+\setsansfont{Source Sans Pro}
 
-% Define \pandocbounded to be a no-op (do nothing)
-\newcommand{\pandocbounded}[1]{#1}
+\pagestyle{empty}  % Disable headers/footers
 
 \begin{document}
 
 \begin{titlepage}
-    \pagestyle{empty}
-    \protect\thispagestyle{empty}
-
     \begin{center}
         \vfill
-        {\Huge Q Light Controller + Documentation} \\
-        {\LARGE Comprehensive Guide} \\
+        {\Huge \textcolor[HTML]{364e5e}{$title$}} \\  % Title in color
+        {\LARGE $subtitle$} \\
         \vfill
-        {\Large docs.qlcplus.org} \\
+        {\Large $author$} \\
         \vfill
-        {\Large \today}  % Auto-inserts date
+        {\Large $date$}  % Auto-inserts date
+        \vfill
+        \noindent\rule{\textwidth}{2pt}  % Custom rule height/color
     \end{center}
 \end{titlepage}
 

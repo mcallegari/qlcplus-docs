@@ -92,25 +92,11 @@ jobs:
       uses: docker://pandoc/extra
       with:
           args: >
-                  -s -o ./.github/workflows/bin/titlepage.pdf 
-                  ./.github/workflows/bin/titlepage.md 
-                  --metadata title="Q Light Controller + Documentation" 
-                  --metadata subtitle="Comprehensive Guide" 
-                  --metadata author="docs.qlcplus.org" 
-                  --metadata date=${{env.EXPORT_DATE}} 
-                  --pdf-engine=lualatex
-                  --template=./scripts/template.tex
-                  --verbose
-                  -V papersize=a4 
-                  -V titlepage=true
-                  -V titlepage-color="364e5e"
-                  -V titlepage-text-color="000000"
-                  -V titlepage-rule-color="000000"
-                  -V titlepage-rule-height=2
-                  -V geometry:margin=1in 
-                  -V mainfont="Source Sans Pro"
-                  -V sansfont="Source Sans Pro"  
-                  -V pagestyle=empty
+                -s -o ./.github/workflows/bin/titlepage.pdf 
+                ./.github/workflows/bin/titlepage.md 
+                --pdf-engine=lualatex
+                --template=./scripts/template.tex
+                --verbose
                   
 
     - name: Combine Title Page and Documentation PDF
