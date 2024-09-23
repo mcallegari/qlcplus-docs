@@ -46,13 +46,13 @@
         % Conditional release rendering
         \ifx\release\empty
         \else
-            {\Large \textit{Release: $release$}} \\
+            {\HUGE \textit{Release: $release$}} \\
         \fi
         \vfill
         % Custom "Written by..." message above the author
         \ifx\author\empty
         \else
-            {\Large \textit{Written by... you!}} \\  % Custom message
+            {\Medium \textit{Written by... you!}} \\[0.2cm]  % Custom message
             {\Large $author$} \\  % Author's name
         \fi
         \vfill
@@ -60,7 +60,7 @@
         % Conditional date rendering
         \ifx\date\empty
         \else
-            {\Large $date$} \\
+            {\Small $date$} \\
         \fi
         
         \vfill
