@@ -57,19 +57,6 @@ jobs:
       run: |
         echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
     
-    - name: Create Title Page Markdown
-      run: |
-              echo "   " >  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo '![​](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
-
     - name: Build PDF
       uses: docker://pandoc/extra
       with:
@@ -88,7 +75,18 @@ jobs:
             -V sansfont="Source Sans Pro"
             -f markdown-raw_tex 
 
-    
+    - name: Create Title Page Markdown
+      run: |
+              echo "   " >  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo "   " >>  ./.github/workflows/bin/titlepage.md
+              echo '![​](images/qlcplus.svg){ style="width: 70%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
