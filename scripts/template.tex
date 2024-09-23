@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[14pt,a4paper,spanish,english]{book}
 
 \usepackage{sectsty}
 \usepackage{graphicx}
@@ -11,29 +11,18 @@
 \textheight=9.0in
 \headsep=0.25in
 
-\title{ Title}
-\author{ Author }
-\date{\today}
-
 \begin{document}
-\maketitle	
-\pagebreak
-
-% Optional TOC
-% \tableofcontents
-% \pagebreak
-
-%--Paper--
-
-\section{Section 1}
-
-Lorem Impsum
-
-
-\pagebreak
-\section{Section 2}
-Lorem Ipsum \\
-
-%--/Paper--
+\begin{titlepage}
+	
+	\pagestyle{empty}
+	\protect\thispagestyle{empty}
+	
+	\ifx\printableimages\trueValue
+		\input{utils/cover_bw}
+	\else
+        \input{utils/cover_colour_alternative_rainbow}
+	\fi
+	
+\end{titlepage}
 
 \end{document}
