@@ -1,5 +1,10 @@
 \documentclass[11pt]{article}
+\usepackage{graphicx}  % Required for image support
 \pagenumbering{gobble} % Disable page numbering
+
+% Define \pandocbounded to be a no-op (do nothing)
+\newcommand{\pandocbounded}[1]{#1}
+
 \begin{document}
 
 \begin{titlepage}
