@@ -99,6 +99,10 @@ jobs:
                 --verbose
                 -V mainfont="Source Sans Pro"
                 -V sansfont="Source Sans Pro"
+                -V title="Q Light Controller + Documentation"
+                -V subtitle="Comprehensive Guide"
+                -V author="docs.qlcplus.org"
+                -V date="${{env.EXPORT_DATE}}"
                   
 
     - name: Combine Title Page and Documentation PDF
