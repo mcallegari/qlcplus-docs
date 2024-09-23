@@ -97,6 +97,8 @@ jobs:
                 --pdf-engine=lualatex
                 --template=./scripts/template.tex
                 --verbose
+                -V mainfont="Source Sans Pro"
+                -V sansfont="Source Sans Pro"
                   
 
     - name: Combine Title Page and Documentation PDF
