@@ -58,7 +58,7 @@ jobs:
             ./.github/workflows/bin/combined_documentation.md 
             --listings 
             --pdf-engine=lualatex
-            --dpi=96
+            --dpi=72
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
