@@ -57,8 +57,7 @@ jobs:
             -s -o ./.github/workflows/bin/QLCplusDocumentation.pdf
             ./.github/workflows/bin/combined_documentation.md 
             --listings 
-            --pdf-engine=xelatex
-            --dpi=72
+            --pdf-engine=lualatex
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
