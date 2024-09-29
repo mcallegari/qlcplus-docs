@@ -58,6 +58,7 @@ jobs:
             ./.github/workflows/bin/combined_documentation.md 
             --listings 
             --pdf-engine=lualatex
+            --dpi=96
             -V papersize=a4 
             -V geometry:margin=1.5cm
             -V classoption=oneside 
@@ -70,15 +71,6 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo "   " >  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
-              echo "   " >>  ./.github/workflows/bin/titlepage.md
               echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
               
     - name: Convert Title Page to PDF
@@ -99,7 +91,7 @@ jobs:
                 -V release="${{env.LATEST_RELEASE}}"
                   
 
-    - name: Combine Title Page and Documentation PDF
+    - name: Combine Title Page and Documentation PDFs
       run: |
         sudo apt-get update
         sudo apt-get install -y ghostscript

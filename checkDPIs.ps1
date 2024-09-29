@@ -1,5 +1,5 @@
 # Define the folder path
-$folderPath = "C:\Development\qlcplus-docs\pages"
+#$folderPath = "..\pages"
 
 # Load the System.Drawing assembly
 Add-Type -AssemblyName System.Drawing
