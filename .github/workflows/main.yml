@@ -35,6 +35,18 @@ jobs:
         cp -r ./.github/workflows/bin/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/combined_documentation.md 
 
+    - name: Install ImageMagick for image normalization
+      run: sudo apt-get install -y imagemagick
+
+    - name: Normalize image DPI
+      run: |
+        for file in ./images/*.{jpg,jpeg,png,tiff,bmp}; do
+          if [[ -f "$file" ]]; then
+            convert "$file" -units PixelsPerInch -density 96 "$file"
+            echo "Processed $file"
+          fi
+        done
+
     - name: Install GitHub CLI
       run: sudo apt-get install gh
 
