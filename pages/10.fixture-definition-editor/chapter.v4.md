@@ -23,8 +23,7 @@ To use your fixture definitions in QLC+, you must save them in a location where 
 
 **Important note: you SHOULD NOT save or copy your custom fixtures into the QLC+ system fixtures folder. This is because when QLC+ is uninstalled, all the fixtures in this folder are deleted. It can also cause unintended conflicts between the system and your own fixture definitions.**
 
-Main toolbar
-------------
+## Main toolbar
 The main window in the Fixture Editor is just an empty workspace that contains the actual editor windows used to edit fixture definitions. The following options are available to you:
 
 |     |     |
@@ -34,8 +33,7 @@ The main window in the Fixture Editor is just an empty workspace that contains t
 | ![](/basics/filesave.png) | Save the fixture definition in the currently active Fixture Editor window. |
 | ![](/basics/filesaveas.png) | Save the fixture definition with a given name in the currently active Fixture Editor window. |
 
-Fixture Editor
-==============
+## Fixture Editor
 
 Fixture Editor windows contain everything needed to edit one Fixture Definition at a time. The windows are separated in five tabs: 
 [**General**](general)<br>

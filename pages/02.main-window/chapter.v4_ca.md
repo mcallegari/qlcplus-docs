@@ -27,7 +27,6 @@ La finestra principal de QLC+ consta de tres parts principals:
 La majoria dels controls al llarg del programari tenen consells d'eina, que apareixen després de mantenir el cursor del ratolí sobre ells durant un temps curt.
 
 ### Barra de menús (1)
-------------
 
 La barra de menús de la part superior de la finestra de l'espai de treball conté els botons següents (d'esquerra a dreta):
 
@@ -60,12 +59,10 @@ La barra de menús de la part superior de la finestra de l'espai de treball cont
 ![](../basics/operate.png) Canvia entre el Mode de Disseny i el Mode d'Operació (CTRL+F12)
 
 ### Plafó actiu (2)
-----------------
 
 Tot passa aquí. Quin plafó està actiu depèn de quina pestanya està seleccionada actualment.
 
 ### Pestanyes del panell (3)
---------------
 
 A la part inferior de la finestra principal es poden trobar icones fàcils de captar l'ull per commutar entre contextos QLC+.  
 En fer doble clic en una pestanya, **un context es pot separar en una finestra separada**. Per tornar a adjuntar un context separat, tanqueu la finestra.  

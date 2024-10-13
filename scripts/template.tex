@@ -1,0 +1,75 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{background}  % For setting the background image
+
+% Remove captions from images
+\captionsetup[figure]{labelformat=empty}
+
+% Define \pandocbounded to be a no-op (do nothing)
+\newcommand{\pandocbounded}[1]{#1}
+
+\pagestyle{empty}  % Disable headers/footers
+
+% Set the main font for the document
+\setmainfont{Source Sans Pro}
+
+\begin{document}
+
+% Background setup for the title page only
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.4,
+  position=current page.center,
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{image/titlepage.pdf}}
+}
+
+\begin{titlepage}
+    \begin{center}
+        \vfill
+        
+        % Title in large font with custom color
+        {\Huge \textcolor[HTML]{364e5e}{$title$}} \\
+        
+        % Conditional subtitle rendering
+        \ifx\subtitle\empty
+        \else
+            {\LARGE $subtitle$} \\
+        \fi
+        
+        \vfill
+        
+        % Conditional release rendering
+        \ifx\release\empty
+        \else
+            {\Huge \textit{Release: $release$}} \\
+        \fi
+        \vfill
+        % Custom "Written by..." message above the author
+        \ifx\author\empty
+        \else
+            {\Large \textit{Written by... you!}} \\  % Custom message
+            {\Large $author$} \\  % Author's name
+        \fi
+        \vfill
+
+        % Conditional date rendering
+        \ifx\date\empty
+        \else
+            {\Large $date$} \\
+        \fi
+        
+        \vfill
+        
+        % Horizontal rule with custom thickness
+        \noindent\rule{\textwidth}{2pt}
+    \end{center}
+    
+    $body$
+\end{titlepage}
+
+\end{document}

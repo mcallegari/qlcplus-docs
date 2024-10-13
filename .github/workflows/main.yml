@@ -14,7 +14,6 @@ jobs:
           config_path: .spellcheck.yml
           task_name: Markdown
 
-
   build-pdf:
     runs-on: ubuntu-latest
     steps:
@@ -31,19 +30,85 @@ jobs:
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
+    - name: Copy images folder to root directory
+      run: |
+        cp -r ./.github/workflows/bin/images ./images
+        sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/combined_documentation.md 
+
+    - name: Install ImageMagick for image normalization
+      run: sudo apt-get install -y imagemagick
+
+    - name: Normalize image DPI
+      run: |
+        for file in ./images/*.{jpg,jpeg,png,tiff,bmp}; do
+          if [[ -f "$file" ]]; then
+            convert "$file" -units PixelsPerInch -density 96 "$file"
+            echo "Processed $file"
+          fi
+        done
+
+    - name: Install GitHub CLI
+      run: sudo apt-get install gh
+
+    - name: Fetch Latest Release
+      id: get_release
+      env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the token for GitHub CLI authentication
+      run: |
+          RELEASE=$(gh release view --json tagName --jq .tagName)
+          echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
+
+    - name: Put current date into a variable
+      run: |
+        echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
+    
     - name: Build PDF
-      uses: baileyjm02/markdown-to-pdf@v1
+      uses: docker://pandoc/extra
       with:
-          input_path: ./.github/workflows/bin/
-          # Specify images dir
-          images_dir: ./.github/workflows/bin/images/
-          image_import: images
-          # Build HTML version
-          build_html: true
-          # Build Table of Contents
-          table_of_contents: true
-          # Path to output (this should be the same as the Upload Artifiact path)
-          output_dir: ./.github/workflows/bin/
+          args: >
+            -s -o ./.github/workflows/bin/QLCplusDocumentation.pdf
+            ./.github/workflows/bin/combined_documentation.md 
+            --listings 
+            --pdf-engine=lualatex
+            -V papersize=a4 
+            -V geometry:margin=1.5cm
+            -V classoption=oneside 
+            -V indent=false
+            -V toc=true
+            -V toc-title="Table of Contents"
+            -V mainfont="Source Sans Pro"
+            -V sansfont="Source Sans Pro"
+            -f markdown-raw_tex 
+
+    - name: Create Title Page Markdown
+      run: |
+              echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
+              
+    - name: Convert Title Page to PDF
+      uses: docker://pandoc/extra
+      with:
+          args: >
+                -s -o ./.github/workflows/bin/titlepage.pdf 
+                ./.github/workflows/bin/titlepage.md 
+                --pdf-engine=lualatex
+                --template=./scripts/template.tex
+                --verbose
+                -V mainfont="Source Sans Pro"
+                -V sansfont="Source Sans Pro"
+                -V title="Q Light Controller + Documentation"
+                -V subtitle="Comprehensive Guide"
+                -V author="docs.qlcplus.org"
+                -V date="${{env.EXPORT_DATE}}"
+                -V release="${{env.LATEST_RELEASE}}"
+                  
+
+    - name: Combine Title Page and Documentation PDFs
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ghostscript
+        gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/QLCplusDocumentation_with_titlepage.pdf ./.github/workflows/bin/titlepage.pdf ./.github/workflows/bin/QLCplusDocumentation.pdf
+     
+
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
       with:

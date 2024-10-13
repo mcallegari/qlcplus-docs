@@ -3,7 +3,7 @@ title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'MainWindow.png,MainWindow.png'
+media_order: 'main-window.png'
 ---
 
 <style>
@@ -22,12 +22,11 @@ The QLC+ Main Window consists of three main parts:
 2.  Active panels selected by their respective tabs
 3.  Tabs that allow the selection of one of the QLC+ panels
 
-![](MainWindow.png)
+![](/main-window/main-window.png)
 
 Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
 
 ### Menu bar (1)
-------------
 
 The menu bar on the top of the workspace window contains the following buttons (from left to right):
 
@@ -60,12 +59,10 @@ The menu bar on the top of the workspace window contains the following buttons (
 ![](../basics/operate.png) Switch between Design Mode and Operate Mode (CTRL+F12)
 
 ### Active Panel (2)
-----------------
 
 Everything happens here. Which panel is active depends on which tab is currently selected.
 
 ### Panel Tabs (3)
---------------
 
 At the bottom of main window you can find easy eye catching icons for switching between QLC+ contexts.  
 By double clicking on a tab, **a context can be detached on a separate window**. To reattach a detached context, just close the window.  

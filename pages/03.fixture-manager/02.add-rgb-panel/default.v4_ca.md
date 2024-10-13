@@ -6,8 +6,7 @@ date: '11:11 21-08-2023'
 Al mercat pots trobar fàcilment tires LED que pots cablejar com prefereixis per crear un Panell RGB (o matriu). Aquest diàleg permet crear i configurar ràpidament un panell RGB. És un diàleg dedicat per ajudar-vos amb el procés més molest de crear fixtures manualment depenent de la disposició desitjada.  
 Tingueu en compte que una vegada creat el panell, l'única manera de modificar la disposició és manualment.
 
-Creació del Panell
---------------
+### Creació del Panell
 
 En fer clic a D'acord en aquest diàleg, succeiran dues coses:
 

@@ -23,7 +23,7 @@ The EFX editor, as its name suggests, is used to edit ![](/basics/efx.png) [EFX]
 | ![](/basics/edit_remove.png) | Remove the selected fixtures from the EFX. |
 | ![](/basics/up.png) | Raise the selected fixture upwards (earlier) in serial order. |
 | ![](/basics/down.png) | Lower the selected fixture downwards (later) in serial order. |
-| **Fixture order** | Change the EFX's fixture order—see below. |
+| **Fixture order** | Change the EFX's fixture order - see below. |
 
 ### Movement Tab Controls
 
