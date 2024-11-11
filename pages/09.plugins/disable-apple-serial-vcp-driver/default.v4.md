@@ -5,13 +5,11 @@ date: '08:06 22-08-2023'
 
 Considered all the issues that have been raised by QLC+ users around this topic, here's an extract of the official [FTDI Application Note 134](https://www.ftdichip.com/Support/Documents/AppNotes/AN_134_FTDI_Drivers_Installation_Guide_for_MAC_OSX.pdf)
 
-Disabling the Apple-provided VCP on OS X 10.9 and later
-=======================================================
+## Disabling the Apple-provided VCP on OS X 10.9 and later
 
 A VCP driver for most FTDI USB to serial converters is provided as part of the kernel in OS X 10.9 and later. OS X loads this driver (AppleUSBFTDI.kext) when a device with standard FTDI vendor and product identifiers is connected. To use FTDI's own VCP instead, or to use D2XX programs, AppleUSBFTDI must be disabled, unloaded or blocked, as follows.
 
-Disable by Renaming (OS X 10.9 and 10.10 only)
-----------------------------------------------
+### Disable by Renaming (OS X 10.9 and 10.10 only)
 
 Note: this method works **only on 10.9 Mavericks and 10.10 Yosemite.**  
   
@@ -34,8 +32,7 @@ sudo touch /System/Library/Extensions
 
 then reboot.
 
-Temporarily Unload (all versions of OS X)
------------------------------------------
+### Temporarily Unload (all versions of OS X)
 
 Note: this method works on all versions of OS X.  
   
@@ -53,8 +50,7 @@ sudo kextload -b com.apple.driver.AppleUSBFTDI
 
 The kextunload and kextload commands can be run in any directory.
 
-Block with D2xxHelper (OS X 10.9 and later)
--------------------------------------------
+### Block with D2xxHelper (OS X 10.9 and later)
 
 Note: this is the only non-temporary method which works on **10.11 El Capitan**.  
   
