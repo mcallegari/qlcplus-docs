@@ -35,7 +35,7 @@ jobs:
             ./scripts/Merge-MarkdownFiles.ps1
     
       - name: Build PDF
-        uses: baileyjm02/markdown-to-pdf@v1
+        uses: baileyjm02/markdown-to-pdf@v2
         with:
               input_path: ./.github/workflows/bin/
               # Specify images dir
