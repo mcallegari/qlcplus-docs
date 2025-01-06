@@ -26,10 +26,9 @@ jobs:
         sudo apt-get install -y powershell
 
     - name: Create output paths
-       run: |
+      run: |
         mkdir -p ./.github/workflows/bin/temp
         mkdir -p ./.github/workflows/bin/markdown
-        mkdir -p ./.github/workflows/bin/html
         mkdir -p ./.github/workflows/bin/pdf
 
     - name: Run PowerShell script
@@ -37,9 +36,8 @@ jobs:
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
-    - name: Copy images folder to root directory
+    - name: Fix logo
       run: |
-        cp -r ./.github/workflows/bin/html/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/markdown/qlcplus-docs.md 
 
     - name: Install ImageMagick for image normalization

@@ -211,7 +211,7 @@ function Copy-ImagesToDirectory {
 
 
 $directoryPath  = "./pages/"                                                    # Path To Grav Documentation
-$imageDir       = "./.github/workflows/bin/html/images/"                        # Path to where images should go
+$imageDir       = "./.github/workflows/bin/markdown/images/"                        # Path to where images should go
 $outputFile     = "./.github/workflows/bin/markdown/qlcplus-docs.md"  # Path to where you want your damn markdown ;)
 
 
