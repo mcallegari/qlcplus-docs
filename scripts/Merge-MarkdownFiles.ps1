@@ -210,9 +210,9 @@ function Copy-ImagesToDirectory {
 }
 
 
-$directoryPath  = "./pages/"                                            # Path To Grav Documentation
-$imageDir       = "./.github/workflows/bin/images/"                     # Path to where images should go
-$outputFile     = "./.github/workflows/bin/combined_documentation.md"   # Path to where you want your damn markdown ;)
+$directoryPath  = "./pages/"                                                    # Path To Grav Documentation
+$imageDir       = "./.github/workflows/bin/html/images/"                        # Path to where images should go
+$outputFile     = "./.github/workflows/bin/markdown/combined_documentation.md"  # Path to where you want your damn markdown ;)
 
 
 # Move all image files into ./images so they can be found
