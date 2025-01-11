@@ -36,8 +36,9 @@ jobs:
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
-    - name: Fix logo
+    - name: Fix logo and copy images to root directory for pandoc # images directory is deleted in "Cleanup temporary items" step
       run: |
+        cp -r ./.github/workflows/bin/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/markdown/qlcplus-docs.md 
 
     - name: Install ImageMagick for image normalization
@@ -113,9 +114,10 @@ jobs:
         sudo apt-get install -y ghostscript
         gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/temp/titlepage.pdf ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
      
-    - name: Cleanup temp folder
+    - name: Cleanup temporary items
       run: |
         rm -rf ./.github/workflows/bin/temp/
+        rm -rf ./.github/workflows/bin/images/
 
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
