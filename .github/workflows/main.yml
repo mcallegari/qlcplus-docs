@@ -38,7 +38,7 @@ jobs:
 
     - name: Fix logo and copy images to root directory for pandoc # images directory is deleted in "Cleanup temporary items" step
       run: |
-        cp -r ./.github/workflows/bin/images ./images
+        cp -r ./.github/workflows/bin/markdown/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/markdown/qlcplus-docs.md 
 
     - name: Install ImageMagick for image normalization
