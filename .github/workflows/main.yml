@@ -112,11 +112,13 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y ghostscript
         gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/temp/titlepage.pdf ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
-        echo "rm -d /.github/workflows/bin/temp/"
      
+    - name: Cleanup temp folder
+      run: |
+        rm -d ./.github/workflows/bin/temp/
 
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
       with:
-          name: qlcplus-docs-build
+          name: qlcplus-docs-en
           path: ./.github/workflows/bin/
