@@ -115,7 +115,7 @@ jobs:
      
     - name: Cleanup temp folder
       run: |
-        rm -d ./.github/workflows/bin/temp/
+        rm -rf ./.github/workflows/bin/temp/
 
     - name: Upload-Artifact
       uses: actions/upload-artifact@v4
