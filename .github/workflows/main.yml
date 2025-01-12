@@ -119,8 +119,14 @@ jobs:
         rm -rf ./.github/workflows/bin/temp/
         rm -rf ./.github/workflows/bin/images/
 
-    - name: Upload-Artifact
+    - name: Upload-PDF
       uses: actions/upload-artifact@v4
       with:
-          name: qlcplus-docs-en
-          path: ./.github/workflows/bin/
+          name: qlcplus-docs-en-pdf
+          path: ./.github/workflows/bin/pdf/
+
+    - name: Upload-Markdown
+      uses: actions/upload-artifact@v4
+      with:
+          name: qlcplus-docs-en-markdown
+          path: ./.github/workflows/bin/markdown/
