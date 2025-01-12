@@ -29,24 +29,95 @@ jobs:
             sudo apt-get update
             sudo apt-get install -y powershell
 
+      - name: Create output paths
+        run: |
+          mkdir -p ./.github/workflows/bin/temp
+          mkdir -p ./.github/workflows/bin/markdown
+          mkdir -p ./.github/workflows/bin/html
+          mkdir -p ./.github/workflows/bin/pdf
+
       - name: Run PowerShell script
         shell: pwsh
         run: |
             ./scripts/Merge-MarkdownFiles.ps1
+
+      - name: Fix logo
+        run: |
+          sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/markdown/qlcplus-docs.md 
+
+      - name: Install ImageMagick for image normalization
+        run: sudo apt-get install -y imagemagick
+  
+      - name: Normalize image DPI
+        run: |
+          for file in ./images/*.{jpg,jpeg,png,tiff,bmp}; do
+            if [[ -f "$file" ]]; then
+              convert "$file" -units PixelsPerInch -density 96 "$file"
+              echo "Processed $file"
+            fi
+          done
+
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+
+      - name: Fetch Latest Release
+        id: get_release
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set the token for GitHub CLI authentication
+        run: |
+            RELEASE=$(gh release view --json tagName --jq .tagName)
+            echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
+
+      - name: Put current date into a variable
+        run: |
+          echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
     
       - name: Build PDF
-        uses: baileyjm02/markdown-to-pdf@v2
+        uses: docker://pandoc/extra
         with:
-              input_path: ./.github/workflows/bin/
-              # Specify images dir
-              images_dir: ./.github/workflows/bin/images/
-              image_import: images
-              # Build HTML version
-              build_html: true
-              # Build Table of Contents
-              table_of_contents: true
-              # Path to output (this should be the same as the Upload Artifiact path)
-              output_dir: ./.github/workflows/bin/
+            args: >
+              -s -o ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
+              ./.github/workflows/bin/markdown/qlcplus-docs.md 
+              --listings 
+              --pdf-engine=lualatex
+              -V papersize=a4 
+              -V geometry:margin=1.5cm
+              -V classoption=oneside 
+              -V indent=false
+              -V toc=true
+              -V toc-title="Table of Contents"
+              -V mainfont="Source Sans Pro"
+              -V sansfont="Source Sans Pro"
+              -f markdown-raw_tex 
+  
+      - name: Create Title Page Markdown
+        run: |
+                echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }'  >>  ./.github/workflows/bin/temp/titlepage.md
+              
+      - name: Convert Title Page to PDF
+        uses: docker://pandoc/extra
+        with:
+            args: >
+                  -s -o ./.github/workflows/bin/temp/titlepage.pdf 
+                  ./.github/workflows/bin/temp/titlepage.md 
+                  --pdf-engine=lualatex
+                  --template=./scripts/template.tex
+                  --verbose
+                  -V mainfont="Source Sans Pro"
+                  -V sansfont="Source Sans Pro"
+                  -V title="Q Light Controller + Documentation"
+                  -V subtitle="Comprehensive Guide"
+                  -V author="docs.qlcplus.org"
+                  -V date="${{env.EXPORT_DATE}}"
+                  -V release="${{env.LATEST_RELEASE}}"
+                
+      - name: Combine Title Page and Documentation PDFs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ghostscript
+          gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/temp/titlepage.pdf ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
+          echo "rm -d /.github/workflows/bin/temp/"
+    
 
       - name: release
         uses: actions/create-release@v1
@@ -67,6 +138,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./.github/workflows/bin/combined_documentation.pdf
-          asset_name: combined_documentation.pdf
+          asset_path: ./.github/workflows/bin/pdf/qlcplus-docs.pdf
+          asset_name: qlcplus-docs.pdf
           asset_content_type: application/pdf

@@ -25,15 +25,21 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y powershell
 
+    - name: Create output paths
+      run: |
+        mkdir -p ./.github/workflows/bin/temp
+        mkdir -p ./.github/workflows/bin/markdown
+        mkdir -p ./.github/workflows/bin/pdf
+
     - name: Run PowerShell script
       shell: pwsh
       run: |
         ./scripts/Merge-MarkdownFiles.ps1
 
-    - name: Copy images folder to root directory
+    - name: Fix logo and copy images to root directory for pandoc # images directory is deleted in "Cleanup temporary items" step
       run: |
-        cp -r ./.github/workflows/bin/images ./images
-        sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/combined_documentation.md 
+        cp -r ./.github/workflows/bin/markdown/images ./images
+        sed -i '/!\[\](images\/qlcplus\.svg)/d'  ./.github/workflows/bin/markdown/qlcplus-docs.md 
 
     - name: Install ImageMagick for image normalization
       run: sudo apt-get install -y imagemagick
@@ -66,8 +72,8 @@ jobs:
       uses: docker://pandoc/extra
       with:
           args: >
-            -s -o ./.github/workflows/bin/QLCplusDocumentation.pdf
-            ./.github/workflows/bin/combined_documentation.md 
+            -s -o ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
+            ./.github/workflows/bin/markdown/qlcplus-docs.md 
             --listings 
             --pdf-engine=lualatex
             -V papersize=a4 
@@ -82,14 +88,14 @@ jobs:
 
     - name: Create Title Page Markdown
       run: |
-              echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }'  >>  ./.github/workflows/bin/titlepage.md
+              echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }'  >>  ./.github/workflows/bin/temp/titlepage.md
               
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
       with:
           args: >
-                -s -o ./.github/workflows/bin/titlepage.pdf 
-                ./.github/workflows/bin/titlepage.md 
+                -s -o ./.github/workflows/bin/temp/titlepage.pdf 
+                ./.github/workflows/bin/temp/titlepage.md 
                 --pdf-engine=lualatex
                 --template=./scripts/template.tex
                 --verbose
@@ -106,11 +112,21 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y ghostscript
-        gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/QLCplusDocumentation_with_titlepage.pdf ./.github/workflows/bin/titlepage.pdf ./.github/workflows/bin/QLCplusDocumentation.pdf
+        gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/temp/titlepage.pdf ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
      
+    - name: Cleanup temporary items
+      run: |
+        rm -rf ./.github/workflows/bin/temp/
+        rm -rf ./.github/workflows/bin/images/
 
-    - name: Upload-Artifact
+    - name: Upload-PDF
       uses: actions/upload-artifact@v4
       with:
-          name: qlcplus-docs-build
-          path: ./.github/workflows/bin/
+          name: qlcplus-docs-en-pdf
+          path: ./.github/workflows/bin/pdf/
+
+    - name: Upload-Markdown
+      uses: actions/upload-artifact@v4
+      with:
+          name: qlcplus-docs-en-markdown
+          path: ./.github/workflows/bin/markdown/
