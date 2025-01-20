@@ -57,10 +57,10 @@ If you find a problem but don't have the time to fix it, you can [open an issue]
 <summary>Steps to Add a New Translation</summary>
 
 ### 1. Prepare the Translation Files
-1. Navigate to the [`user/pages`](https://github.com/mcallegari/qlcplus-docs/tree/main/pages) directory of your the repo.
+1. Navigate to the [`main/pages`](https://github.com/mcallegari/qlcplus-docs/tree/main/pages) directory of the repo.
 2. Find the documentation you wish to translate
 3. Duplicate the `.md` files (e.g., `chapter.v4.md`) for the new language.
-- Append the language code to the file names (e.g., `chapter.v4_es.md`).
+4. Append the language code to the file names using an underscore (e.g., `chapter.v4_es.md`).
 
 ### 2. Translate the Content
 1. Open the newly created language-specific `.md` files.
