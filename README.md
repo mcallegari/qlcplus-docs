@@ -52,6 +52,22 @@ If you find a problem but don't have the time to fix it, you can [open an issue]
 
 </details>
 
+## Translations
+<details>
+<summary>Steps to Add a New Translation</summary>
+
+### 1. Prepare the Translation Files
+1. Navigate to the [`user/pages`](https://github.com/mcallegari/qlcplus-docs/tree/main/pages) directory of your the repo.
+2. Find the documentation you wish to translate
+3. Duplicate the `.md` files (e.g., `chapter.v4.md`) for the new language.
+- Append the language code to the file names (e.g., `chapter.v4_es.md`).
+
+### 2. Translate the Content
+1. Open the newly created language-specific `.md` files.
+2. Replace the content with the translated text
+
+</details>
+
 ## Support QLC+
 If QLC+ helps you to make your lights shine, please consider donating or buying merch. Use these links to find out more:
 <table>
