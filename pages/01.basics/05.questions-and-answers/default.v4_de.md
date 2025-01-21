@@ -63,42 +63,42 @@ sie, wenn Sie das Projekt öffnen.
 
 #### Frage #5: Wo befindet sich der QLC+-Systemordner in meinem System?
 
-**A:** The system folder is where QLC+ resources (fixtures, input profiles, RGB scripts, etc) are installed
-and it changes depending on your operating system:
+**A:** Im Systemordner werden QLC+-Ressourcen (Geräte, Eingabeprofile, RGB-Skripte usw.) installiert
+und es ändert sich je nach Betriebssystem:
 
-* **Linux**: it's a fixed folder named `/usr/share/qlcplus`
-* **Windows**: it is the folder where you actually installed QLC+. By default: `C:\\QLC+`
-* **Mac OS**: it is a folder inside the QLC+ bundle (.app file). It is possible to browse
-  the QLC+.app bundle contents simply with Finder. Just right click on the file and select
-  "Show Package Contents".<br>Otherwise, the system folder can be reached with a terminal
-  but it depends on where you installed QLC+. For example if you dragged QLC+ into
-  Applications it will be: `/Applications/QLC+.app/Contents/Resources`
+* **Linux**: ein immer gleicher Ordner: `/usr/share/qlcplus`
+* **Windows**: Es ist der Ordner, in dem Sie QLC+ installiert haben. Standartmäßig: `C:\\QLC+`
+* **Mac OS**: Es handelt sich um einen Ordner im QLC+-Bundle (.app-Datei). Es ist möglich zu stöbern
+  Die QLC+ .app-Bundle-Inhalte einfach mit Finder. Klicken Sie einfach mit der rechten Maustaste auf die Datei und wählen Sie sie aus
+  „Paketinhalt anzeigen“.<br>Andernfalls ist der Systemordner über ein Terminal erreichbar
+  aber es hängt davon ab, wo Sie QLC+ installiert haben. Zum Beispiel, wenn Sie QLC+ hineingezogen haben
+  Anwendungen lauten: „/Applications/QLC+.app/Contents/Resources“.
 
-#### Question #6: QLC+ cannot play some videos on Windows
+#### Question #6: QLC+ kann in Windws manche Videos nicht abspielen.
 
-**A:** QLC+ relies on the Qt libraries which relies on the DirectShow filters installed in the system.
+**A:** QLC+ basiert auf den Qt-Bibliotheken, die auf den im System installierten DirectShow-Filtern basieren.
 
-Unfortunately the basic codecs supported by Windows are quite poor, so you need to install some extra
-codecs package like K-Lite, [available here](https://www.codecguide.com/download_kl.htm).
+Leider sind die von Windows unterstützten grundlegenden Codecs ziemlich dürftig, sodass Sie einige zusätzliche installieren müssen
+Codecs-Paket wie K-Lite, [available here](https://www.codecguide.com/download_kl.htm).
 
-#### Question #7: I have a 4k display and everything in the QLC+ interface is extremely small
+#### Question #7: Ich habe ein 4K-Display und alles in der QLC+-Schnittstelle ist extrem klein
 
-**A:** You need to add an option to the QLC+ command line to tell the Qt libraries to autoscale
-the interface on a High DPI display. Examples:
+**A:** Sie müssen der QLC+-Befehlszeile eine Option hinzufügen, um die Qt-Bibliotheken anzuweisen, automatisch zu skalieren
+die Schnittstelle auf einem High-DPI-Display. Beispiele:
 
 * **Linux (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`
 * **Windows shortcut**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`
 * **Mac OS (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`
 
-In case, see the [command line parameters page](/advanced/command-line-parameters) for further information.
+Im Falle, schaue nach den [command line parameters page](/advanced/command-line-parameters) für weitere Informationen.
 
-#### Question #8: My lights flicker. What can I do?
+#### Question #8: Meine Lichteffekte flackern, was kann ich tun?
 
-**A:** Sometimes an unbuffered USB DMX adapter or a noisy DMX line can cause some fixtures to
-flicker unexpectedly. QLC+ allows you to adjust the output frequency rate to mitigate the undesired effect.
-Please consider that a good DMX refresh rate should be around 44Hz.<br>Here's an example showing an
-Open DMX clone settings panel. You can access it by double-clicking on the output line or by selecting
-an output line and by clicking on the ![](/basics/configure.png) icon.
+**A:** Manchmal kann ein ungepufferter USB-DMX-Adapter oder eine verrauschte DMX-Leitung dazu führen, dass einige Geräte Probleme haben
+und flackern unerwartet. Mit QLC+ können Sie die Ausgangsfrequenz anpassen, um den unerwünschten Effekt abzuschwächen.
+Bitte beachten Sie, dass eine gute DMX-Bildwiederholfrequenz bei etwa 44 Hz liegen sollte. Hier ist ein Beispiel, das eine zeigt:
+Öffnen Sie das DMX-Klon-Einstellungsfeld. Sie können darauf zugreifen, indem Sie auf die Ausgabezeile doppelklicken oder auswählen
+eine Ausgabezeile und klicken Sie auf das Symbol ![](/basics/configure.png).
 
 ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings")
 
