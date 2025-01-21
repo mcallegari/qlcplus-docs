@@ -61,7 +61,7 @@ Sie können auch benutzerdefinierte [Fixture-Definitionen] (/basics/glossary-and
 [Eingabeprofile](/input-output/input-profiles) im selben Ordner wie Ihr Projekt, findet QLC+
 sie, wenn Sie das Projekt öffnen.
 
-#### Frage #5: Where is the QLC+ system folder located in my system?
+#### Frage #5: Wo befindet sich der QLC+-Systemordner in meinem System?
 
 **A:** The system folder is where QLC+ resources (fixtures, input profiles, RGB scripts, etc) are installed
 and it changes depending on your operating system:
