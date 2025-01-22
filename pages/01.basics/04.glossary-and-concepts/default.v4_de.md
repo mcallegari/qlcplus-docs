@@ -16,10 +16,11 @@ Wie die meisten QLC+ Funktionen unterstützt Audio Ein- und Ausblendzeiten.
 
 ### ![](../blackout.png) Blackout
 
-Blackout ist eine spezielle QLC+ Funktion, mit der alle [HTP](#htp-highest-takes-precedence)-Kanäle in allen Universen auf Null gesetzt werden. Dadurch wird die Lichtquelle aller Leuchtmittel geschlossen. Die Kanäle bleiben auf Null, unabhängig von aktuell ausgeführten Funktionen oder manuell zugewiesenen Werten (z. B. über den [Simple Desk](/simple-desk)). Wenn der Blackout ausgeschaltet wird, werden alle Kanäle wieder durch Funktionen oder ihren manuell eingestellten Wert gesteuert.
+Der Blackout ist eine spezielle QLC+ Funktion, mit der alle [HTP](#htp-highest-takes-precedence)-Kanäle in allen Universen auf Null gesetzt werden. Dadurch wird die Lichtquelle aller Leuchtmittel geschlossen. Die Kanäle bleiben auf Null, unabhängig von aktuell ausgeführten Funktionen oder manuell zugewiesenen Werten (z. B. über den [Simple Desk](/simple-desk)). Wenn der Blackout ausgeschaltet wird, werden alle Kanäle wieder durch Funktionen oder ihren manuell eingestellten Wert gesteuert.
+
 ### Capabilities
 
-Einige Kanäle in intelligenten Geräten bieten viele Arten von Funktionen oder Fähigkeiten wie das Einschalten der Lampe, wenn der Kanalwert \[240-255\] beträgt Das Einstellen einer roten Farbe mit einem Farbrad, wenn der Wert genau \[15\] ist, oder einfach die Dimmerintensität des Geräts mit den Werten \[0-255\] steuern. Jede dieser einzelnen Funktionen wird als Fähigkeit bezeichnet und jede von ihnen hat diese drei Eigenschaften:
+Einige Kanäle in intelligenten Geräten bieten viele Arten von Funktionen oder Fähigkeiten, wie das Einschalten der Lampe, wenn der Kanalwert \[240-255\] beträgt. Das Einstellen einer roten Farbe mit einem Farbrad wenn der Wert genau \[15\] ist, oder einfach die Dimmerintensität des Geräts mit den Werten \[0-255\] steuern. Jede dieser einzelnen Funktionen wird als Fähigkeit bezeichnet und jede von ihnen hat diese drei Eigenschaften:
 
 * Mindestwert: Der minimale Kanalwert, der eine Funktion bereitstellt.
 * Maximalwert: Der maximale Kanalwert, der eine Funktion bereitstellt.
@@ -103,9 +104,11 @@ Generische Dimmergeräte benötigen keine eigenen Gerätedefinitionen, da normal
 ### ![](../group.png) Fixture Group
 
 Eine Gerätegruppe ist, wie der Name schon sagt, eine Gruppe von [Geräten](#Geräte). Sie definieren auch (auf einer eher grundlegenden Ebene) die tatsächliche physische Anordnung dieser Geräte in der realen Welt. Dieses Wissen kann beispielsweise in der RGB-Matrix genutzt werden, um eine Wand aus RGB-mischbaren Lichtern zu erzeugen, die als einzelne Pixel in einem grafischen Muster oder Lauftext fungieren können.
+
 ### Fixture Mode
 
 Viele Hersteller entwerfen ihre Lichteffekte so, dass sie so konfiguriert werden können, dass sie verschiedene Kanalsätze verstehen. Beispielsweise könnte ein Scanner zwei Konfigurationsoptionen haben: eine für nur 8-Bit-Bewegungskanäle (1x Schwenken, 1x Neigen) und eine andere für 16-Bit-Bewegungskanäle (2x Schwenken, 2x Neigen). Anstatt für jede Variation eine komplett neue Fixture-Definition zu erstellen, wurden sie in den Fixture-Definitionen von QLC+ in Fixture-Modi gebündelt.
+
 ### ![](../function.png) Functions
 
 Die Anzahl der Funktionen ist faktisch unbegrenzt. Funktionen werden verwendet, um die Einstellung von Werten für DMX-Kanäle zu automatisieren. Jeder Funktionstyp hat seine eigene Art, Lichter zu automatisieren.
@@ -139,7 +142,7 @@ Der Masterregler verfügt außerdem über zwei **Wertmodi**, die steuern wie der
 
 ### Head
 
-Ein Head stellt ein einzelnes Lichteffekt dar. Normalerweise enthält eine einzelne Leuchte genau einen Ausgang, z. B. die Linse, die Glühbirne oder einen Satz LEDs. Es gibt jedoch immer mehr Leuchten auf dem Markt, die zwar als einzelne Leuchte behandelt werden, aber über mehrere Lichtaustrittsgeräte, d. h. Heads, verfügen.
+Ein Head stellt ein einzelnes Lichteffekt dar. Normalerweise enthält eine einzelne Leuchte genau einen Ausgang, z. B. die Linse, die Glühbirne oder einen Satz LEDs. Es gibt jedoch immer mehr Leuchten auf dem Markt, die zwar als einzelne Leuchte betitelt werden, aber über mehrere Lichtaustrittspunkte, d. h. Heads, verfügen.
 
 Beispielsweise könnten Sie über eine RGB-LED-Leuchte verfügen, die auf einem einzelnen Körper montiert ist und als solche wie eine einzelne Leuchte mit einem DMX-Eingang und einem DMX-Ausgang erscheint. Tatsächlich besteht es jedoch aus vier separaten RGB-LED-Leuchtmitteln. Diese separaten Geräte werden in QLC+ als Köpfe behandelt;
 Sie haben einige Eigenschaften mit ihren Geschwisterköpfen gemeinsam, sie können einzeln gesteuert werden, verfügen aber möglicherweise auch über eine Master-Intensitätssteuerung, die die Lichtleistung aller Heads zusammen steuert.

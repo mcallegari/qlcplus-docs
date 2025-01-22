@@ -10,7 +10,7 @@ Gehen Sie einfach zur Download-Seite(https://www.qlcplus.org/download) und laden
 
 ## Windows
 
-QLC+ wird in Windows als selbstinstallierendes .exe-Paket heruntergeladen. klicken sie doppelt auf die Datei und führen Sie den Installationsprozess durch.
+QLC+ wird in Windows als selbstinstallierendes .exe-Paket heruntergeladen. Klicken sie doppelt auf die Datei und führen Sie den Installationsprozess durch.
 
 Wählen Sie aus, ob QLC+ am Standardspeicherort (C:\QLC+) oder in einem anderen Ordner wie C:\Programme installiert werden soll.
 
