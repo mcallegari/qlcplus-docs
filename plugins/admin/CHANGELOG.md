@@ -1,3 +1,53 @@
+# v1.10.48
+## 10/28/2024
+
+1. [](#improved)
+  * Treat AVIF as image when inserting / drag & dropping 
+  * PHP 8.4 fixes - Implicitly nullable parameter declarations deprecate
+
+# v1.10.47
+## 10/22/2024
+
+1. [](#improved)
+  * Added missing `show_label` logic in list field 
+  * Use plugin's selected icon when in plugin properties
+
+# v1.10.46
+## 05/15/2024
+
+1. [](#improved)
+  * Used Login's new `site_host` security setting for Admin password reset. Requires Login version `3.7.8+`
+
+# v1.10.45
+## 03/18/2024
+
+1. [](#improved)
+   * Improved class assignment for form fields [#2399](https://github.com/getgrav/grav-plugin-admin/pull/2379)
+   * Added label, sublabel, and icon help to list field [#2384](https://github.com/getgrav/grav-plugin-admin/pull/2384)
+   * Set admin language to user preference [#2369](https://github.com/getgrav/grav-plugin-admin/pull/2369)
+   * Updated language files to [latest translations](https://crowdin.com/project/grav-admin)
+
+# v1.10.44
+## 01/05/2024
+
+1. [](#improved)
+  * Updated language files for Image Decoding [getgrav/grav#3796](https://github.com/getgrav/grav/pull/3796)
+
+# v1.10.44
+## 01/05/2024
+
+1. [](#improved)
+   * Updated languages with fresh **Crowdin.com** builds
+   * Updated copyright date
+1. [](#bugfix)
+   * fixed `medium` tags in select fields [#2376]((https://github.com/getgrav/grav-plugin-admin/pull/2376)
+
+# v1.10.43
+## 10/02/2023
+
+1. [](#improved)
+   * Updated vendor libraries
+
 # v1.10.42
 ## 06/14/2023
 
@@ -370,7 +420,7 @@
     * Shorten forgot password link lifetime from 7 days to 1 hour
     * Updated with latest language translations from Crowdin.com
 1. [](#bugfix)
-    * Fixed issue where Adding a new page and cancelling from within Editing would alter the Parent location of the edited page [#2067](https://github.com/getgrav/grav-plugin-admin/issues/2067)
+    * Fixed issue where Adding a new page and canceling from within Editing would alter the Parent location of the edited page [#2067](https://github.com/getgrav/grav-plugin-admin/issues/2067)
     * Fixed and enhanced Range field to be Lists compatible [#2062](https://github.com/getgrav/grav-plugin-admin/issues/2062)
     * Fixed ERR_TOO_MANY_REDIRECTS with HTTPS = 'On' [#2100](https://github.com/getgrav/grav-plugin-admin/issues/2100)
     * Prevent expert editing mode from anyone else than super users [#2094](https://github.com/getgrav/grav-plugin-admin/issues/2094)

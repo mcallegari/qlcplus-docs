@@ -1,3 +1,15 @@
+# v1.3.7
+## 10/28/2023
+
+1. [](#improved)
+   * PHP 8.4 fixes - Implicitly nullable parameter declarations deprecate
+
+# v1.3.6
+## 10/11/2023
+
+1. [](#new)
+   * Added a new `onAdminObjectGet()` event to allow for manipulation of flex objects
+
 # v1.3.5
 ## 05/09/2023
 

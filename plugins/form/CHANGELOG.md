@@ -1,3 +1,41 @@
+# v7.4.2
+## 10/28/2024
+
+1. [](#improved)
+  * Enhanced the `input` tag to include a disabled attribute [$601](https://github.com/getgrav/grav-plugin-form/pull/601)
+  * Updated logging methods to support Monolog2+
+
+# v7.4.1
+## 10/22/2024
+
+1. [](#improved)
+  * `honeypot` field tweaks
+
+# v7.4.0
+## 03/29/2024
+
+1. [](#improved)
+   * Better modular form support
+   * Support for multiple Ajax/XHR forms on a single page either modular-based or manually injected
+   * Yarn libraries updated
+1. [](#bugfix)
+   * Fixed an issue with cache being tied to `core` cache_id rather than the more appropriate `pages` cache_id, which could lead to form properties being cached even when modified.
+
+# v7.3.0
+## 12/14/2023
+
+1. [](#new)
+   * Added XHR/Ajax form submission as an option in the form blueprint. See [Learn Forms](https://learn.getgrav.org/17/forms/forms/how-to-ajax-submission) for details.
+
+# v7.2.2
+## 12/13/2023
+
+1. [](#improved)
+   * Add _inline errors_ for `file` field.  Useful in combination with `form: no-validate: true` form setting.
+   * Validate filename against `uploads_dangerous_extensions` when using the `save:` action
+1. [](#bugfix)
+   * Cleared 'basic captcha' value when invalid
+
 # v7.2.1
 ## 06/27/2023
 

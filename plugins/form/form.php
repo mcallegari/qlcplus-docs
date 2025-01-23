@@ -506,7 +506,7 @@ class FormPlugin extends Plugin
                         'message' => $message
                     ]));
 
-                    $this->grav['log']->addWarning('Form reCAPTCHA Errors: [' . $uri->route() . '] ' . json_encode($errors));
+                    $this->grav['log']->warning('Form reCAPTCHA Errors: [' . $uri->route() . '] ' . json_encode($errors));
 
                     $event->stopPropagation();
 
@@ -518,7 +518,7 @@ class FormPlugin extends Plugin
                 $captcha_value = trim($form->value('basic-captcha'));
                 if (!$captcha->validateCaptcha($captcha_value)) {
                     $message = $params['message'] ?? $this->grav['language']->translate('PLUGIN_FORM.ERROR_BASIC_CAPTCHA');
-
+                    $form->setData('basic-captcha', '');
                     $this->grav->fireEvent('onFormValidationError', new Event([
                         'form' => $form,
                         'message' => $message
@@ -556,7 +556,7 @@ class FormPlugin extends Plugin
                         'message' => $message
                     ]));
 
-                    $this->grav['log']->addWarning('Form Turnstile invalid: [' . $uri->route() . '] ' . json_encode($content));
+                    $this->grav['log']->warning('Form Turnstile invalid: [' . $uri->route() . '] ' . json_encode($content));
                     $event->stopPropagation();
                     return;
                 }
@@ -665,6 +665,11 @@ class FormPlugin extends Plugin
                     }
 
                     $filename = $prefix . $this->udate($format, $raw_format) . $postfix . $ext;
+                }
+
+                // Handle bad filenames.
+                if (!Utils::checkFilename($filename)) {
+                    throw new RuntimeException(sprintf('Form save: File with extension not allowed: %s', $filename));
                 }
 
                 /** @var Twig $twig */
@@ -1130,6 +1135,10 @@ class FormPlugin extends Plugin
                 return false;
             }
 
+            if (isset($form->xhr_submit) && $form->xhr_submit) {
+                $form->set('template', $form->template ?? 'form-xhr');
+            }
+
             // Set page template if passed by form
             if (isset($form->template)) {
                 $this->grav['page']->template($form->template);
@@ -1253,7 +1262,7 @@ class FormPlugin extends Plugin
         if ($forms) {
             $this->forms = Utils::arrayMergeRecursiveUnique($this->forms, $forms);
             if ($this->config()['debug']) {
-                $this->grav['log']->addDebug(sprintf("<<<< Loaded cached forms: %s\n%s", $this->getFormCacheId(), $this->arrayToString($this->forms)));
+                $this->grav['log']->debug(sprintf("<<<< Loaded cached forms: %s\n%s", $this->getFormCacheId(), $this->arrayToString($this->forms)));
             }
 
         }
@@ -1277,7 +1286,7 @@ class FormPlugin extends Plugin
 
         $cache->save($cache_id, $this->forms);
         if ($this->config()['debug']) {
-            $this->grav['log']->addDebug(sprintf(">>>> Saved cached forms: %s\n%s", $this->getFormCacheId(), $this->arrayToString($this->forms)));
+            $this->grav['log']->debug(sprintf(">>>> Saved cached forms: %s\n%s", $this->getFormCacheId(), $this->arrayToString($this->forms)));
         }
     }
 
@@ -1290,7 +1299,10 @@ class FormPlugin extends Plugin
     {
         /** @var \Grav\Common\Cache $cache */
         $cache = $this->grav['cache'];
-        $cache_id = $cache->getKey() . '-form-plugin';
+        /** @var Pages $pages */
+        $pages= $this->grav['pages'];
+//        $cache_id = $cache->getKey() . '-form-plugin';
+        $cache_id = $pages->getPagesCacheId() . '-form-plugin';
         return $cache_id;
     }
 

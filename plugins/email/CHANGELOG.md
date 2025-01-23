@@ -1,3 +1,29 @@
+# v4.1.2
+## 01/06/2025
+
+1. [](#improved)
+    * Updated to latest symfony libraries (`v5.4.45`)
+    * Added a note about Google App Passwords for authentication in the README.md
+
+# v4.1.1
+## 10/28/2024
+
+1. [](#improved)
+  * Updated logging methods to support Monolog2+
+
+# v4.1.0
+## 04/09/2024
+
+1. [](#improved)
+   * Update vendor libraries for Mailer to latest `5.4` versions
+   * When you send an email you can use `Email::getLastSendMessage()` and `Email::getLastSendDebug()` methods to get information about the email processing.
+
+# v4.0.4
+## 07/10/2023
+
+1. [](#bugfix)
+   * Fix for email file attachments using stream
+
 # v4.0.3
 ## 06/29/2023
 

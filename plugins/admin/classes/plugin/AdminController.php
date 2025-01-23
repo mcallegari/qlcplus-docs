@@ -3,7 +3,7 @@
 /**
  * @package    Grav\Plugin\Admin
  *
- * @copyright  Copyright (c) 2015 - 2023 Trilby Media, LLC. All rights reserved.
+ * @copyright  Copyright (c) 2015 - 2024 Trilby Media, LLC. All rights reserved.
  * @license    MIT License; see LICENSE file for details.
  */
 
@@ -62,7 +62,7 @@ class AdminController extends AdminBaseController
      * @param array|null $post
      * @return void
      */
-    public function initialize(Grav $grav = null, $view = null, $task = null, $route = null, $post = null)
+    public function initialize(?Grav $grav = null, $view = null, $task = null, $route = null, $post = null)
     {
         $this->grav = $grav;
         $this->admin = $this->grav['admin'];
@@ -2717,7 +2717,7 @@ class AdminController extends AdminBaseController
      * @param PageInterface|null $page
      * @return Media|null
      */
-    public function getMedia(PageInterface $page = null)
+    public function getMedia(?PageInterface $page = null)
     {
         $page = $page ?? $this->admin->page($this->route);
         if (!$page) {
