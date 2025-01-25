@@ -1,5 +1,5 @@
 ---
-title: 'Glossary and Concepts'
+title: 'Glossar und Konzepte'
 date: '07:32 21-08-2023'
 ---
 
@@ -18,7 +18,7 @@ Wie die meisten QLC+ Funktionen unterstützt Audio Ein- und Ausblendzeiten.
 
 Der Blackout ist eine spezielle QLC+ Funktion, mit der alle [HTP](#htp-highest-takes-precedence)-Kanäle in allen Universen auf Null gesetzt werden. Dadurch wird die Lichtquelle aller Leuchtmittel geschlossen. Die Kanäle bleiben auf Null, unabhängig von aktuell ausgeführten Funktionen oder manuell zugewiesenen Werten (z. B. über den [Simple Desk](/simple-desk)). Wenn der Blackout ausgeschaltet wird, werden alle Kanäle wieder durch Funktionen oder ihren manuell eingestellten Wert gesteuert.
 
-### Capabilities
+### Fähigkeiten und Eigenschaften
 
 Einige Kanäle in intelligenten Geräten bieten viele Arten von Funktionen oder Fähigkeiten, wie das Einschalten der Lampe, wenn der Kanalwert \[240-255\] beträgt. Das Einstellen einer roten Farbe mit einem Farbrad wenn der Wert genau \[15\] ist, oder einfach die Dimmerintensität des Geräts mit den Werten \[0-255\] steuern. Jede dieser einzelnen Funktionen wird als Fähigkeit bezeichnet und jede von ihnen hat diese drei Eigenschaften:
 
@@ -57,7 +57,7 @@ Bisher sind drei Arten von Widgets verfügbar:
 
 Eine Übersicht mit Screenshots finden Sie [hier](https://qlcplus.org/old/clickandgo.html)
 
-### ![](../collection.png) Collection
+### ![](../collection.png) Kollektionen
 
 Eine Sammlung [Funktion](#Funktionen) kapselt mehrere Funktionen, die gleichzeitig ausgeführt werden, wenn die Sammlungsfunktion ausgeführt wird. In eine Sammlung können beliebig viele Funktionen eingefügt werden, aber jede Funktion kann nur einmal eingefügt werden und eine Sammlung kann kein direktes Mitglied von sich selbst sein.
 
@@ -101,7 +101,7 @@ Es können mehrere Instanzen eines Geräts erstellt werden (z. B. müssen Benutz
 
 Generische Dimmergeräte benötigen keine eigenen Gerätedefinitionen, da normalerweise mehrere Dimmer in einen gemeinsamen Adressraum gepatcht werden und dabei ein oder mehrere Dimmer-Racks verwenden. Benutzer können Instanzen dieser generischen Dimmereinheiten erstellen, indem sie einfach die Anzahl der Kanäle definieren, die jeder von ihnen haben soll.
 
-### ![](../group.png) Fixture Group
+### ![](../group.png) Fixture Gruppierung
 
 Eine Gerätegruppe ist, wie der Name schon sagt, eine Gruppe von [Geräten](#Geräte). Sie definieren auch (auf einer eher grundlegenden Ebene) die tatsächliche physische Anordnung dieser Geräte in der realen Welt. Dieses Wissen kann beispielsweise in der RGB-Matrix genutzt werden, um eine Wand aus RGB-mischbaren Lichtern zu erzeugen, die als einzelne Pixel in einem grafischen Muster oder Lauftext fungieren können.
 
@@ -109,7 +109,7 @@ Eine Gerätegruppe ist, wie der Name schon sagt, eine Gruppe von [Geräten](#Ger
 
 Viele Hersteller entwerfen ihre Lichteffekte so, dass sie so konfiguriert werden können, dass sie verschiedene Kanalsätze verstehen. Beispielsweise könnte ein Scanner zwei Konfigurationsoptionen haben: eine für nur 8-Bit-Bewegungskanäle (1x Schwenken, 1x Neigen) und eine andere für 16-Bit-Bewegungskanäle (2x Schwenken, 2x Neigen). Anstatt für jede Variation eine komplett neue Fixture-Definition zu erstellen, wurden sie in den Fixture-Definitionen von QLC+ in Fixture-Modi gebündelt.
 
-### ![](../function.png) Functions
+### ![](../function.png) Funktionen
 
 Die Anzahl der Funktionen ist faktisch unbegrenzt. Funktionen werden verwendet, um die Einstellung von Werten für DMX-Kanäle zu automatisieren. Jeder Funktionstyp hat seine eigene Art, Lichter zu automatisieren.
 
@@ -160,7 +160,7 @@ Wenn Sie den Schieberegler 2 erneut in Richtung 0 % ziehen, verringert sich die 
 
 Eine Überblendung zwischen zwei [Szenen] (#scene) ersetzt die HTP-Pegel in der ersten Szene durch die HTP-Pegel der zweiten. Die neuen HTP-Ebenen werden wie oben mit HTP-Ebenen anderer Funktionen und virtuellen Konsolen-Widgets kombiniert. Siehe auch [LTP](#ltp).
 
-### ![](../input_output.png) Input/Output plugins
+### ![](../input_output.png) Eingänge/Ausgänge plugins
 
 QLC+ unterstützt eine Vielzahl von Plugins zum Senden und Empfangen von Daten von/an die DMX Universen und Art-Net Controller.  
 Ein Plugin kann eine Schnittstelle zu physischen Geräten (z. B. DMX-Adaptern oder MIDI-Controllern) oder zu einem Netzwerkprotokoll (z. B. [ArtNet](/plugins/art-net), [OSC](/plugins/osc) oder [E1 .31](/plugins/e1-31-sacn)).  
@@ -174,7 +174,7 @@ Eine input line ist eine von einer Hardware oder einem Netzwerk bereitgestellte 
 
 Eine output line ist eine von einer Hardware oder einem Netzwerk bereitgestellte Verbindung, auf die über ein Ausgabe-Plugin zugegriffen wird. Mit anderen Worten handelt es sich um ein echtes DMX-Universum, das jedoch als output bezeichnet wurde, um es von den internen Universen von QLC+ zu trennen. Sie können sie sich als einzelne XLR-Ausgangsanschlüsse in Ihrer DMX-Hardware vorstellen.
 
-### Input profiles
+### Eingangsprofile
 
 Eingabeprofile können als eine Art ​​von [Fixtures'](#Fixtures) betrachtet werden. Sie enthalten Informationen zu bestimmten Geräten, die Eingabedaten erzeugen. Ein Eingabegerät kann zum Beispiel ein Slider-Board wie das Behringer BCF-2000, KORG nanoKONTROL, ein Enttec Playback Wing usw. sein.
 
@@ -186,7 +186,7 @@ Die LTP-Regel ist einfach: Die neueste Ebene, die von einer Funktion oder einem 
 
 Während einer Überblendung zwischen [Szenen](#scene) werden die LTP-Pegel häufig geändert. Dies muss mit einiger Vorsicht gehandhabt werden, da einige LTP-Ebenen sofort auf eine neue Ebene springen müssen, beispielsweise beim Wechsel von einem Gobo zu einem anderen. LTP-Gruppen wie Schwenken und Neigen müssen jedoch möglicherweise während einer Überblendung schrittweise von einer Ebene zur anderen wechseln. Durch die Kombination von Szenen in einer [Collection](#collection) können unterschiedliche Timings erreicht werden. Siehe auch [HTP](#htp).
 
-### ![](../operate.png) Modes
+### ![](../operate.png) Modi
 
 Q Light Controller Plus basiert auf dem gemeinsamen Konzept welches zwei unterschiedliche Betriebsmodi hat, um versehentliche und möglicherweise schädliche Änderungen während des Betriebs zu verhindern:
 
@@ -203,11 +203,11 @@ Jede RGB-Matrix hat ihre eigenen Geschwindigkeitseinstellungen:
 * **Ausblenden:** Zeit zum Ausblenden jedes Pixels
 * **Dauer:** Die Dauer des aktuellen Schritts/Frames
 
-### ![](../rgbmatrix.png) RGB Script
+### ![](../rgbmatrix.png) RGB Skript
 
 Ein RGB-Skript ist ein in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (auch als JavaScript bekannt) geschriebenes Programm, das die notwendigen Bilddaten für [RGB-Matrix](#rgb-matrix)-Funktionen erzeugt . Weitere Informationen finden Sie auf der Seite [RGB-Skript-API](/function-manager/rgb-script-api).
 
-### ![](../scene.png) Scene
+### ![](../scene.png) Szenen
 
 Eine Szene [funktion](#functions) umfasst die Werte ausgewählter Kanäle, die in einer oder mehreren Fixture-Instanzen enthalten sind. Wenn eine Szene gestartet wird, hängt die Zeit die ihre Kanäle benötigen um ihre Zielwerte zu erreichen, von den Geschwindigkeitseinstellungen der Szene ab:
 
@@ -218,7 +218,7 @@ Jede Funktion hat ihre eigenen Geschwindigkeitseinstellungen:
 
 Kopien von Szenenfunktionen können mit dem [Funktionsmanager](/function-manager) erstellt werden. Der gesamte Inhalt der Szene wird in das Duplikat kopiert.
 
-### ![](../sequence.png) Sequence
+### ![](../sequence.png) Sequenze
 
 Eine Sequenz verfügt über einige der Funktionen eines [Chasers](#chaser).  
 Es entspricht einem Chaser, bei dem jeder Schritt eine einzelne [Szene] (#scene) ist und jede dieser Szenen denselben Kanalsatz steuert. Eine Sequenz ist an eine bestimmte Szene gebunden, was bedeutet dass alle Schritte der Sequenz nur die aktivierten Kanäle dieser Szene steuern können.  
@@ -227,7 +227,7 @@ Wenn eine Sequenz erstellt wird, erscheint im [Funktionsmanager] (/function-mana
 Um den Unterschied zwischen einer Sequenz und einem Chaser zu verstehen, lesen Sie bitte den zweiten Absatz der Dokumentation zum [Show Manager] (/show-manager).
 
 
-### ![](../script.png) Script
+### ![](../script.png) Skript
 
 Das Skript [function](#functions) basiert auf einer einfachen aber leistungsstarken Skriptsprache um QLC+-Funktionen in sequentieller Reihenfolge zu automatisieren. Ein Skript kann mit dem [Skript-Editor](/function-manager/script-editor) geändert werden.
 

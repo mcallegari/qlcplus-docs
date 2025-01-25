@@ -1,5 +1,5 @@
 ---
-title: 'Main Window'
+title: 'Hauptfenster'
 taxonomy:
     category: docs
 child_type: docs
@@ -26,7 +26,7 @@ Das QLC+-Hauptfenster besteht aus drei Hauptteilen:
 
 Die meisten Steuerelemente in der Software verfügen über Tooltips, die angezeigt werden, wenn Sie den Mauszeiger eine kurze Zeit darüber halten.
 
-### Menu Leiste (1)
+### Menüleiste (1)
 
 Die Menüleiste oben im Arbeitsbereichsfenster enthält die folgenden Schaltflächen (von links nach rechts):
 

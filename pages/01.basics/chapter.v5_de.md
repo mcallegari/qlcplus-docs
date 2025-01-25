@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: Basis
 taxonomy:
     category: docs
 child_type: docs
@@ -12,6 +12,6 @@ media_order: 'qlcplus.svg'
 
 # Introduction
 
-Welcome to the **Q Light Controller+** documentation
+Wilkommen zur **Q Light Controller+** Dokumentation,
 
-Hier finden Sie alle Konzepte, Arbeitsabläufe sowie Tipps und Tricks, um mit QLC+ optimal zu arbeiten.
+hier finden Sie alle Konzepte, Arbeitsabläufe sowie Tipps und Tricks, um mit QLC+ optimal zu arbeiten.
