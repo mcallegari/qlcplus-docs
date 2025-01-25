@@ -1,5 +1,5 @@
 ---
-title: 'DMX Address Tool'
+title: 'DMX Adressierungstool'
 taxonomy:
     category:
         - docs

@@ -75,7 +75,7 @@ Im Folgenden sind die möglichen Parameter aufgeführt, die angepasst werden kö
 | **Farbgel** | Legen Sie das Farbgel fest, das auf das aktuell ausgewählte Fixture-Element angewendet werden soll. Dies ist nützlich für generische Dimmer mit einer herkömmlichen Glühbirne, die selbst keine Farbe abgeben. Diese Funktion hat keine Auswirkung auf RGB-LED-Leuchten. |
 | ![](/basics/fileclose.png) | Zurücksetzen eines zuvor eingestellten Farbgels |
 
-### Pan/Tilt display
+### Pan/Tilt Anzeige
 
 PAN/TILT Die Anzeige erfolgt schematisch durch farbige Ringe/Bögen um das Gerät herum. **P**urpurfarbener Bogen zeigt **P**AN-Winkel und **T**türkiser Bogen zeigt **T**ILT-Winkel. Graue Punkte zeigen die Schwenk-/Neigebereiche an. Null (Mitte des Bereichs) liegt unten.
 

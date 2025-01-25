@@ -1,5 +1,5 @@
 ---
-title: 'Questions and Answers'
+title: 'Fragen und Antworten'
 date: '08:32 21-08-2023'
 media_order: dmx-usb-settings.png
 ---

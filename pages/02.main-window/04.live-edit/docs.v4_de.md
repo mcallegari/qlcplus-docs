@@ -1,5 +1,5 @@
 ---
-title: 'Live Edit'
+title: 'Live Editierung'
 taxonomy:
     category:
         - docs
