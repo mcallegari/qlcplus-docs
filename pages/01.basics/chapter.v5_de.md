@@ -14,4 +14,4 @@ media_order: 'qlcplus.svg'
 
 Wilkommen zur **Q Light Controller+** Dokumentation,
 
-Hier finden Sie alle Konzepte, Arbeitsabläufe sowie Tipps und Tricks, um mit QLC+ optimal zu arbeiten.
+hier finden Sie alle Konzepte, Arbeitsabläufe sowie Tipps und Tricks, um mit QLC+ optimal zu arbeiten.
