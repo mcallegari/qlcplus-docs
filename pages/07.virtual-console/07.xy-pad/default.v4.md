@@ -101,6 +101,8 @@ Here you can set the basic XY Pad behaviour as well as the external input contro
 | **Y-Axis slider movement** | The behaviour of the vertical slider (the Y-Axis control) can be set to **Normal** or **Inverted**.  <br>In the first case the maximum value will be reached at the bottom of the pad, while in the second case it will be reached at the top. |
 | **Pan / Horizontal Axis** | Allow to select an external input to control the horizontal slider displayed at the bottom of the widget. When activating a EFX preset, this input will control the X position of the working window, so the X position of the EFX. |
 | **Tilt / Vertical Axis** | Allow to select an external input to control the vertical slider displayed at the right side of the widget. When activating a EFX preset, this input will control the Y position of the working window, so the Y position of the EFX. |
+| **Pan Fine** | Allow to select an external input to control the horizontal fine movement. |
+| **Tilt Fine** | Allow to select an external input to control the vertical fine movement. |
 | **Width** | Allow to select an external input to control the width of the working window. This has no effect in usage #1 and #3 |
 | **Height** | Allow to select an external input to control the height of the working window. This has no effect in usage #1 and #3 |
 
