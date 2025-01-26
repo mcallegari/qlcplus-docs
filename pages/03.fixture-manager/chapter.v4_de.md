@@ -1,5 +1,5 @@
 ---
-title: 'Fixture Manager'
+title: 'Gerätemanager'
 taxonomy:
     category: docs
 child_type: docs
