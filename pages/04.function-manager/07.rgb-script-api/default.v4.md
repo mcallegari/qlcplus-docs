@@ -264,3 +264,17 @@ There is a development tool available in the QLC+ source repository that makes i
     }
     )()
 ```
+
+### API version 3
+
+Version 3 of the RGB Script API introduces access to **rawColors**, providing scripts with the ability to directly utilize the colors selected in the RGB Matrix Editor. This enhancement allows for more dynamic and synchronized lighting effects, especially in multi-color animations.
+
+#### Key Features
+- **Access to Selected Colors:** Scripts can now retrieve the exact colors chosen by the user in the RGB Matrix Editor for precise synchronization with stage lighting setups.
+- **Enhanced Multi-Color Support:** By accessing the full spectrum of user-selected colors, scripts can create more intricate and varied animations.
+
+#### Using rawColors
+
+The `rawColors` parameter is passed to the `rgbMap` function and contains an array of the RGB values selected by the user. This allows scripts to dynamically adapt animations based on user inputs.
+
+You can see an example of the new API being used in balls.js.
