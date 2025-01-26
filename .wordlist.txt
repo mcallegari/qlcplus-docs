@@ -76,6 +76,7 @@ rgb
 rgbMapStepCount
 QRgb
 RGB
+BGR
 RGBW
 RGBAW
 RGBAWUV
