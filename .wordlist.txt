@@ -303,3 +303,4 @@ Automat
 stoponexit
 waitfunctionstop
 waitfunctionstart
+rawColors
