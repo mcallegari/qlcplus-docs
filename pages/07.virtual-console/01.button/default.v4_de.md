@@ -3,7 +3,7 @@ title: Knöpfe
 date: '14:26 21-08-2023'
 ---
 
-Ein Button ist eines der einfachsten und leistungsstärksten Widgets in QLC+; Damit können Sie Ihre Funktionen starten, stoppen und flashen. 
+Ein Knopf ist eines der einfachsten und leistungsstärksten Widgets in QLC+; Damit können Sie Ihre Funktionen starten, stoppen und flashen. 
 
 ### Konfiguration
 
