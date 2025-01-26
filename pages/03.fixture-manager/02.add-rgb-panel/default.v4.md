@@ -24,7 +24,7 @@ Let's have a look at every option in this panel:
 | **Universe** | The universe where the RGB Panel is going to start. If the panel requires a number of channels that don't fit in a single universe, it will span across multiple universes, starting from the one selected with this option. |
 | **Address** | The DMX start address where the RGB Panel has to be mapped |
 | **Allow cross-universe addressing** | This experimental feature allows particularly large fixtures to be contiguous across universes. Even heads will be split if necessary |
-| **Components** | A pre-defined selection of heads layout to determine the order of color components |
+| **Components** | A ready made selection of color components such as RGB, BGR, RGBW, etc |
 | **16bit** | For each color component, add also the fine channel |
 
 #### Size
