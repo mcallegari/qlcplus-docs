@@ -261,3 +261,18 @@ Im QLC+-Quell-Repository steht ein Entwicklungstool zur Verfügung, das das Debu
     }
     )()
 ```
+
+
+### API version 3
+
+Version 3 der RGB-Skript-API führt den Zugriff auf **rawColors** ein und bietet Skripten die Möglichkeit, die im RGB-Matrix-Editor ausgewählten Farben direkt zu verwenden. Diese Verbesserung ermöglicht dynamischere und synchronisiertere Lichteffekte, insbesondere bei mehrfarbigen Animationen.
+
+#### Schlüsselfunktionen
+- **Zugriff auf ausgewählte Farben:** Skripte können jetzt genau die vom Benutzer im RGB-Matrix-Editor ausgewählten Farben abrufen, um eine präzise Synchronisierung mit Bühnenbeleuchtungs-Setups zu ermöglichen.
+- **Erweiterte Mehrfarbenunterstützung:** Durch den Zugriff auf das gesamte Spektrum der vom Benutzer ausgewählten Farben können Skripte komplexere und abwechslungsreichere Animationen erstellen.
+
+#### rawColors benutzen
+
+Der Parameter „rawColors“ wird an die Funktion „rgbMap“ übergeben und enthält ein Array der vom Benutzer ausgewählten RGB-Werte. Dadurch können Skripte Animationen basierend auf Benutzereingaben dynamisch anpassen.
+
+Ein Beispiel für die Verwendung der neuen API finden Sie inballs.js.
