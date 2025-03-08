@@ -21,3 +21,15 @@ Wenn Sie fertig sind, starten Sie VDJ neu.
   
 Gehen Sie nun zu QLC+ und aktivieren Sie das OS2L-Plugin in einem beliebigen Universum. Wenn Sie in VDJ einen bestimmten Port festgelegt haben, öffnen Sie den OS2L-Konfigurationsdialog und stellen Sie dort denselben Port ein.  
 Sobald dies erledigt ist, beginnt QLC+, Signale von VDJ zu empfangen (das Joystick-Symbol blinkt neben dem Universe-Feld).
+
+Client-Konfiguration
+--------------
+
+Um andere Clients zu unterstützen, muss ein Eingabeprofil erstellt werden, welches OS2L Nachrichten den Kanälen zuweist. Das OS2L Plugin hört auf folgende Events: `beat`, `cmd` und `btn`.
+
+Eine `beat` Nachricht ändert den Wert des Kanals 8342 auf 255. Beispiel: `{"evt":"beat"}`.
+
+Eine `cmd` Nachricht addressiert den Kanal mit der Nummer gegebn durch `id` und setzt den Wert gegeben durch `param`. Beispiel: `{"evt": "cmd", "id": "1", "param": 255}`.
+
+Eine `btn` Nachricht kann auch Konfiguriert werden. Die Kanalnummer wird vom CRC des `name` Parameters abgeleitet. Der einfachste Weg um die Kanalnummer herauszufinden, ist durch den Automatikmodus im Eingabeprofil. Der Wert, der auf den Kanal gelegt wird, ist entweder 255 bei einem `state` von `on` bzw. 0 bei `off`. Beispiel: `{"evt":"btn","name":"Light Left 2","state":"on"}`.
+
