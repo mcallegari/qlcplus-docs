@@ -7,7 +7,7 @@ Introducció
 ------------
 
 El connector OS2L permet la comunicació directa entre QLC+ i un amfitrió compatible amb OS2L.  
-Les especificacions d'OS2L es poden trobar a: [http://os2l.org](http://os2l.org/)  
+Les especificacions d'OS2L es poden trobar a: [https://os2l.org](https://os2l.org/)
 De moment, l'únic amfitrió OS2L compatible és [Virtual DJ](https://www.virtualdj.com/).  
 El connector QLC+ OS2L funcionarà en el mateix amfitrió (127.0.0.1) o en un amfitrió diferent amb un sistema operatiu de la vostra elecció (Windows, macOS, Linux)
 

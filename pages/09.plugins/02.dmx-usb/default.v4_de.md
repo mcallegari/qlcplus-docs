@@ -43,14 +43,14 @@ sudo adduser your\_user\_name dialout
 
 ### macOS
 
-Unter Apple macOS benötigen Sie überhaupt keine Treiber, da QLC+ die native USB-Schnittstelle von macOS verwendet. Die Installation der D2XX-Treiber sollte keinen Schaden anrichten, aber **INSTALLIEREN SIE KEINE VCP-Treiber (Virtual COM Port)**, da diese definitiv QLC+ beeinträchtigen. Wenn Sie die VCP-Treiber zuvor installiert haben, lesen Sie in den [FTDI-Installationshandbüchern](http://www.ftdichip.com/Support/Documents/InstallGuides.htm) nach, wie Sie sie deinstallieren.  
+Unter Apple macOS benötigen Sie überhaupt keine Treiber, da QLC+ die native USB-Schnittstelle von macOS verwendet. Die Installation der D2XX-Treiber sollte keinen Schaden anrichten, aber **INSTALLIEREN SIE KEINE VCP-Treiber (Virtual COM Port)**, da diese definitiv QLC+ beeinträchtigen. Wenn Sie die VCP-Treiber zuvor installiert haben, lesen Sie in den [FTDI-Installationshandbüchern](https://ftdichip.com/document/installation-guides/) nach, wie Sie sie deinstallieren.
   
 **Probleme mit OSX Mavericks (oder höher)**: Bitte überprüfen Sie [Fragen und Antworten Nr. 3](/basics/questions-and-answers)
 
 ### Windows
 
-Unter Microsoft Windows benötigt das Plugin die [neuesten D2XX-Treiber von FTDI](http://www.ftdichip.com/Drivers/D2XX.htm). Wenn ein FTDI-Gerät zum ersten Mal angeschlossen wird, lädt Windows normalerweise automatisch die D2XX-Treiber herunter, sodass überhaupt keine Aktion erforderlich ist.  
-Sollte dies nicht der Fall sein, konsultieren Sie bitte die [FTDI-Installationshandbücher](http://www.ftdichip.com/Support/Documents/InstallGuides.htm), um zu erfahren, wie Sie die Treiber installieren.  
+Unter Microsoft Windows benötigt das Plugin die [neuesten D2XX-Treiber von FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Wenn ein FTDI-Gerät zum ersten Mal angeschlossen wird, lädt Windows normalerweise automatisch die D2XX-Treiber herunter, sodass überhaupt keine Aktion erforderlich ist.
+Sollte dies nicht der Fall sein, konsultieren Sie bitte die [FTDI-Installationshandbücher](https://ftdichip.com/document/installation-guides/), um zu erfahren, wie Sie die Treiber installieren.
 **INSTALLIEREN SIE KEINE VCP-Treiber (Virtual COM Port)**, da diese wahrscheinlich die D2XX-Schnittstelle beeinträchtigen.
 
 Von ENTTEC DMX USB Pro unterstützte Modi

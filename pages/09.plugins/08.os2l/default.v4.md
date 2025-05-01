@@ -7,7 +7,7 @@ Introduction
 ------------
 
 The OS2L plugin allows direct communication between QLC+ and an OS2L capable host.  
-OS2L specifications can be found at: [http://os2l.org](http://os2l.org/)  
+OS2L specifications can be found at: [https://os2l.org](https://os2l.org/)
 At the moment the only OS2L host supported is [Virtual DJ](https://www.virtualdj.com/).  
 QLC+ OS2L plugin will work either on the same host (127.0.0.1) or on a different host with an OS of your choice (Windows, macOS, Linux)
 
