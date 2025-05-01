@@ -26,7 +26,7 @@ Channel Modifier Editor
 
 The channel modifier editor is presented like this:
 
-![](channelmodifier.png)  
+![](channel_modifier.png)
   
 On the right side of the window, a list of available modifier templates is displayed.  
 Clicking on a template in the list, will show the curve preview on the left side of the window.  
