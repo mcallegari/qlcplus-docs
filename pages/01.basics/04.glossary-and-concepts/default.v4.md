@@ -69,7 +69,7 @@ Copies of collection functions can be created with the [Function Manager](/funct
 
 [DMX](https://en.wikipedia.org/wiki/DMX512) is short for Digital MultipleX. It basically defines a whole bunch of properties, protocol, wiring etc. In the case of lighting software, it defines the maximum number of channels (512) per universe and the value range of each channel (0-255).
 
-QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#outputplugins).
+QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#input-output-plugins).
 
 ### ![](../efx.png) EFX
 
@@ -119,7 +119,7 @@ The function types are:
 *   [Chaser](#chaser)
 *   [Sequence](#sequence)
 *   [EFX](#efx)
-*   [RGB Matrix](#rgbmatrix)
+*   [RGB Matrix](#rgb-matrix)
 *   [Collection](#collection)
 *   [Show](#show)
 *   [Audio](#audio)
@@ -158,7 +158,7 @@ The HTP rule is simple: the highest level (nearer 100%) that is currently being 
 
 Let's say you have two sliders that control the same intensity channel. First, you set slider 1 to 50% and then move slider 2 from 0% to 75%. As long as slider 2 is below 50% nothing happens, but after crossing the 50% level set by slider 1, the light intensity increases up to 75%. If you drag slider 2 again towards 0%, the light intensity decreases until it reaches the 50% set by slider 1 and stays at 50% until slider 1 is dragged down.
 
-A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first scene with the HTP levels of the second. The new HTP levels will be combined with HTP levels from other functions and virtual console widgets as above. See also [LTP](#ltp).
+A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first scene with the HTP levels of the second. The new HTP levels will be combined with HTP levels from other functions and virtual console widgets as above. See also [LTP](#ltp-latest-takes-precedence).
 
 ### ![](../input_output.png) Input/Output plugins
 
@@ -184,7 +184,7 @@ LTP is a rule that decides what level is sent to out to a DMX universe by a chan
 
 The LTP rule is simple: the latest level that has been set by a function or a Virtual Console widget gets sent out to the DMX universe.
 
-During a crossfade between [Scenes](#scene), LTP levels will often be changed. This has to be handled with some care as some LTP levels need to jump immediately to a new level, for example, changing from one gobo to another. LTP groups such as pan and tilt, however, might need to change gradually from one level to another during a crossfade. Different timings can be achieved by combining scenes in a [Collection](#collection). See also [HTP](#htp).
+During a crossfade between [Scenes](#scene), LTP levels will often be changed. This has to be handled with some care as some LTP levels need to jump immediately to a new level, for example, changing from one gobo to another. LTP groups such as pan and tilt, however, might need to change gradually from one level to another during a crossfade. Different timings can be achieved by combining scenes in a [Collection](#collection). See also [HTP](#htp-highest-takes-precedence).
 
 ### ![](../operate.png) Modes
 
@@ -195,7 +195,7 @@ Q Light Controller Plus is based on the common concept of having two distinct op
 
 ### ![](../rgbmatrix.png) RGB Matrix
 
-An RGB matrix [function](#functions) can be used to impose simple graphics and text on a matrix (a grid or a wall) of RGB and/or monochrome fixture [heads](#head). The RGB matrix function has been designed to be extendable with [scripts](#rgbscript) that can be written by users.
+An RGB matrix [function](#functions) can be used to impose simple graphics and text on a matrix (a grid or a wall) of RGB and/or monochrome fixture [heads](#head). The RGB matrix function has been designed to be extendable with [scripts](#rgb-script) that can be written by users.
 
 Each RGB matrix has its own speed settings:
 
@@ -214,7 +214,7 @@ A scene [function](#functions) comprises the values of selected channels that ar
 Each function has its own speed settings:
 
 *   **Fade In:** The time used to fade all channels to their target values, from whatever value they had
-*   **Fade Out:** The time used to fade HTP/intensity channels back to zero. Note that ONLY [HTP](#htp) channels are affected by this setting.
+*   **Fade Out:** The time used to fade HTP/intensity channels back to zero. Note that ONLY [HTP](#htp-highest-takes-precedence) channels are affected by this setting.
 
 Copies of scene functions can be created with the [Function Manager](/function-manager). All of the scene's contents are copied to the duplicate.
 

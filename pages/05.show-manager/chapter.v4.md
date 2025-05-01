@@ -90,7 +90,7 @@ A Track can be set to ![](../images/track-mute.png) mute and ![](../images/track
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
 Once selected, a track will display its [Scene Editor](/function-manager/scene-editor) on the bottom of the screen.
 
-#### 3. Add some [Functions](/basics/glossary-and-concepts#function)
+#### 3. Add some [Functions](/basics/glossary-and-concepts#functions)
 
 When a track has been activated, you can quickly add a ![](/basics/sequence.png) [Sequence](/basics/glossary-and-concepts#sequence) or an ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio) function to it by pressing the toolbar buttons.  
 Otherwise, by clicking on the ![](/basics/edit_add.png) button, it is possible to import existing QLC+ Functions and add them to the Show timeline.  
