@@ -32,7 +32,7 @@
 
 
 ## Introduction
-Welcome to the official documentation repository for [qlcplus](https://qlcplus.org/)!
+Welcome to the official documentation repository for [qlcplus](https://www.qlcplus.org/)!
 
 The [docs.qlcplus.org](https://docs.qlcplus.org/) website uses the [Grav](https://getgrav.org/) content management system (CMS) and Learn2 with Git Sync plugin. This helps us to collaboratively edit our Markdown-based documentation. When changes are made to this repo the website automatically reflects the changes.
 

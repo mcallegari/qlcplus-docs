@@ -55,7 +55,7 @@ So far, three types of widgets are available:
 *   RGB Color Picker. Controls values for selected RGB channels with a single click
 *   Gobo/Macro Picker. Access and display a Gobo/Macro defined in the Fixture definition
 
-An overview with screenshots is available [here](https://qlcplus.org/old/clickandgo.html)
+An overview with screenshots is available [here](https://www.qlcplus.org/old/clickandgo.html)
 
 ### ![](../collection.png) Collection
 

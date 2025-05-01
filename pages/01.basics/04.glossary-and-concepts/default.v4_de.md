@@ -55,7 +55,7 @@ Bisher sind drei Arten von Widgets verfügbar:
 * RGB-Farbwähler Steuert die Werte für ausgewählte RGB-Kanäle mit einem einzigen Klick
 * Gobo-/Makroauswahl Greifen Sie auf ein in der Fixture-Definition definiertes Gobo/Makro zu und zeigen Sie es an
 
-Eine Übersicht mit Screenshots finden Sie [hier](https://qlcplus.org/old/clickandgo.html)
+Eine Übersicht mit Screenshots finden Sie [hier](https://www.qlcplus.org/old/clickandgo.html)
 
 ### ![](../collection.png) Kollektionen
 
