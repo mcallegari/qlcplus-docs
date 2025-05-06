@@ -48,7 +48,7 @@ i les plantilles MIDI.Canvia en funció del vostre sistema operatiu:
   Podeu arribar a qualsevol d'aquestes carpetes des d'un terminal amb l'ordre `cd`. Per exemple:`cd $HOME/Biblioteca/Aplicació\\ Suport/`
   QLC+ Tingueu en compte que els fixtures i els perfils d'entrada que es troben a la carpeta d'usuari
   tindran prioritat sobre els mateixos fitxers de la carpeta del sistema QLC+. També podeu desar
-  [definicions de Fixture](/basics/glossary-and-concepts#fixtures) i [Perfils d'entrada](/input-output/input-profiles)
+  [definicions de Fixture](/basics/glossary-and-concepts#fixtures) 
   a la mateixa carpeta que el vostre projecte, QLC+ els trobarà quan obriu aquest projecte.
 
 #### Pregunta #5: On es troba la carpeta del sistema QLC+ al meu sistema?
