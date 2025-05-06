@@ -32,7 +32,7 @@ Nodle USB DMX interface
 -----------------------
 
 The Nodle USB DMX interface is available in two versions: For the self-built kit version it is called:
-[Nodle U1](https://www.dmxcontrol-projects.org/en/projects/nodle-u1.html) and the prefabricated one it is called [Nodle R4S](https://www.dmxcontrol-projects.org/en/projects/nodle-r4s.html) (ready for show).
+[Nodle U1](https://www.dmxcontrol-projects.org/en/projects/nodle-u1-interface.html) and the prefabricated one it is called [Nodle R4S](https://www.dmxcontrol-projects.org/en/projects/nodle-r4s-interface.html) (ready for show).
 
 Both can input and output DMX data like normal, but can also merge dmx internally. When activated via the configuration
 dialog, the device merges any DMX data coming from QLC+ (if selected as output) with all

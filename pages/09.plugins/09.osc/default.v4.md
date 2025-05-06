@@ -52,5 +52,5 @@ Controllers
 QLC+ has been tested with the following OSC controllers:
 
 * [Open Stage Control](https://openstagecontrol.ammd.net/)
-* [TouchOSC](https://hexler.net/software/touchosc). A predefined input profile is ready to use for the Mix16 and Automat5 layouts.
+* [TouchOSC](https://hexler.net/touchosc). A predefined input profile is ready to use for the Mix16 and Automat5 layouts.
 * [Pure Data](https://archive.flossmanuals.net/pure-data/network-data/osc.html)

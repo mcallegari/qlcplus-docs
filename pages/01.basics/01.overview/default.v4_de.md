@@ -20,12 +20,12 @@ Wir sind auf Beiträge von Benutzern wie Ihnen angewiesen. Jede Spende, egal wie
 
 ### Wie kann ich spenden?
 
-Sie können über GitHub-Sponsoring (https://github.com/sponsors/mcallegari) oder durch den Kauf von offiziellen Merchandise-Artikeln (https://merch.qlcplus.org) einen Beitrag leisten. Ebenfalls können Sie auch über PayPal spenden. Besuchen Sie unsere Homepage (https://www.qlcplus.org/) um mehr zu erfahren.
+Sie können über [GitHub-Sponsoring](https://github.com/sponsors/mcallegari) oder durch den Kauf von [offiziellen Merchandise-Artikeln](https://merch.qlcplus.org) einen Beitrag leisten. Ebenfalls können Sie auch über PayPal spenden. Besuchen Sie unsere [Homepage](https://www.qlcplus.org/) um mehr zu erfahren.
 
 ### Kann ich auf andere Weise einen Beitrag leisten?
 
 Wenn Sie nicht über die Mittel zum Spenden verfügen, gibt es eine Reihe anderer Möglichkeiten, einen Beitrag zu QLC+ zu leisten, darunter:
-1. Teilnahme am offiziellen QLC+ Forum (https://qlcplus.org/forum/)
+1. Teilnahme am offiziellen [QLC+ Forum](https://www.qlcplus.org/forum/)
 2. Verbesserungsvorschläge für diese Dokumentation (siehe Schaltfläche „Diese Seite bearbeiten“ oben rechts)
 3. Erzählen Sie Ihren Freunden von QLC+
 4. Nutzen Sie QLC+ für Ihre Projekte!

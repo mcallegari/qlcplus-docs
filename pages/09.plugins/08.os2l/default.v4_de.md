@@ -7,7 +7,7 @@ Einführung
 ------------
 
 Das OS2L-Plugin ermöglicht die direkte Kommunikation zwischen QLC+ und einem OS2L-fähigen Host.  
-OS2L-Spezifikationen finden Sie unter: [http://os2l.org](http://os2l.org/)  
+OS2L-Spezifikationen finden Sie unter: [https://os2l.org](https://os2l.org/)
 Derzeit ist der einzige unterstützte OS2L-Host [Virtual DJ](https://www.virtualdj.com/).  
 Das QLC+ OS2L-Plugin funktioniert entweder auf demselben Host (127.0.0.1) oder auf einem anderen Host mit einem Betriebssystem Ihrer Wahl (Windows, macOS, Linux).
 

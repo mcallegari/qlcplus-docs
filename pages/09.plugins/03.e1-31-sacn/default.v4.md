@@ -7,7 +7,7 @@ media_order: e131_configuration.png
 Introduction
 ------------
 
-QLC+ supports the [E1.31 protocol](https://www.opendmx.net/index.php/E1.31) (also known as s.ACN) through an input/output plugin that receives and transmits packets on the network.  
+QLC+ supports the [E1.31 protocol](https://wiki.openlighting.org/index.php/E1.31) (also known as s.ACN) through an input/output plugin that receives and transmits packets on the network.
 No extra requirements are needed, since QLC+ has a native implementation of the E1.31 protocol that works on Linux, Windows and OSX systems.  
 The E1.31 plugin can send and receive packets from multiple network cards, virtual addresses, the loopback device (127.0.0.1) and multiple universes per network interface.  
 By default, E1.31 packets will be sent as UDP on multicast addresses like 239.255.0.x, where 'x' is the universe number selected in QLC+. The port used is 5568.  
@@ -64,4 +64,4 @@ Compatibility
 
 QLC+ has been tested with the following E1.31 software and devices:
 
-* [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Output device
+* [DMXKing eDMX2 TX](https://web.archive.org/web/20160103204133/https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Output device

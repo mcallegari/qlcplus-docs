@@ -63,8 +63,8 @@ QLC+ ha estat provat amb els següents programaris/dispositius Art-Net:
 * [DMXKing eDMX1 TX](https://dmxking.com/artnetsacn/edmx1-max) \- 1 Dispositiu de sortida
 * [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-max) \- 2 Dispositiu de sortida
 * [Enttec Open DMX Ethernet (ODE)](https://www.enttec.com/index.php?main_menu=Products&pn=70305) \- Dispositiu d'entrada/sortida
-* [OLA - Open Lighting Architecture](https://www.opendmx.net/index.php/Open_Lighting_Architecture) \- Node de programari d'entrada/sortida
+* [OLA - Open Lighting Architecture](https://wiki.openlighting.org/index.php/Open_Lighting_Architecture) \- Node de programari d'entrada/sortida
 * [Art-Net Controller LITE](https://sites.google.com/site/artnetcontroller/) \- Controlador d'entrada per a Android
-* [Art-Net Controller LITE](https://play.google.com/store/apps/details?id=com.chfsoft.artnet_dmx_Lite) \- Controlador d'entrada per a Android
-* [Modul8](http://www.garagecube.com/modul8/)
-* [Jinx!](http://www.live-leds.de/) \- Control de Matrius LED
+* [Art-Net Controller LITE](https://play.google.com/store/apps/details?id=com.chfsoft.artnet_dmx_Lite&noprocess) \- Controlador d'entrada per a Android
+* [Modul8](https://www.garagecube.com/modul8/)
+* [Jinx!](https://live-leds.de/) \- Control de Matrius LED

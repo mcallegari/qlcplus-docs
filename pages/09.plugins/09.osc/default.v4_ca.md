@@ -44,4 +44,4 @@ Controladors
 
 QLC+ s'ha provat amb els següents controladors OSC:
 
-* [TouchOSC](https://hexler.net/software/touchosc). Un perfil d'entrada predefinit està a punt per utilitzar per a la disposició Mix16.
+* [TouchOSC](https://hexler.net/touchosc). Un perfil d'entrada predefinit està a punt per utilitzar per a la disposició Mix16.

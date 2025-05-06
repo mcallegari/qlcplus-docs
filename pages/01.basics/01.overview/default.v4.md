@@ -25,7 +25,7 @@ You can contribute via [GitHub Sponsorship](https://github.com/sponsors/mcallega
 ### Can I contribute another way?
 
 If you don't have the means to donate there are a number of other ways to contribute to QLC+ including:
-1. Participating in the [QLC+ official forum](https://qlcplus.org/forum/)
+1. Participating in the [QLC+ official forum](https://www.qlcplus.org/forum/)
 1. Suggesting improvements to this documentation (See the top right "Edit this page" button)
 1. Telling your friends about QLC+
 1. Using QLC+ for your projects!
