@@ -88,7 +88,7 @@ Apareixerà una finestra emergent que demanarà un nom per a assignar-lo al Show
 Quan afegiu una pista, una finestra emergent us demanarà que seleccioneu una funció existent o que en creeu una de nova amb un nom predeterminat.  
 En acabar, es crearà una pista nova. Totes les seqüències creades en aquesta pista actuaran només en l'escena associada, no afectant cap de les altres pistes.  
 Una pista de nova creació s'establirà automàticament com a activa. Una pista activa té una llum verda al costat esquerre.  
-Es pot establir una pista en els estats de ![](../images/track-mute.png) silenci i ![](../images/track-solo.png) solo. L'estat silenci exclourà la pista de la reproducció, mentre que l'estat solo silenciarà totes les altres pistes del Show.  
+Es pot establir una pista en els estats de ![](track-mute.png) silenci i ![](track-solo.png) solo. L'estat silenci exclourà la pista de la reproducció, mentre que l'estat solo silenciarà totes les altres pistes del Show.
 En fer clic dret sobre una pista, és possible moure-la cap amunt ![](/basics/up.png) o cap avall ![](/basics/down.png) per a l'ordenació lògica.  
 Un cop seleccionada, una pista mostrarà el seu [Editor d'Escenes](/function-manager/scene-editor) a la part inferior de la pantalla.
 

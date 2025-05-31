@@ -43,14 +43,14 @@ sudo adduser el\_teu\_nom\_usuari dialout
 
 ### macOS
 
-A l'Apple macOS, no necessites cap controlador, ja que QLC+ utilitza la interfície USB nativa del macOS. La instal·lació dels controladors D2XX no hauria de causar danys, però **NO INSTAL·LEU ELS CONTROLADORS VCP (Virtual COM Port),** ja que definitivament interferiran amb QLC +. Si heu instal·lat prèviament els controladors VCP, consulteu les [guies d'instal·lació FTDI](http://www.ftdichip.com/Support/Documents/InstallGuides.htm) sobre com desinstal·lar-los.
+A l'Apple macOS, no necessites cap controlador, ja que QLC+ utilitza la interfície USB nativa del macOS. La instal·lació dels controladors D2XX no hauria de causar danys, però **NO INSTAL·LEU ELS CONTROLADORS VCP (Virtual COM Port),** ja que definitivament interferiran amb QLC +. Si heu instal·lat prèviament els controladors VCP, consulteu les [guies d'instal·lació FTDI](https://ftdichip.com/document/installation-guides/) sobre com desinstal·lar-los.
 
 **Problemes d'OSX Mavericks (o posterior):** consulteu [Preguntes i respostes #3](/basics/questions-and-answers)
 
 ### Windows
 
-A Microsoft Windows, el connector necessita els [últims controladors D2XX de FTDI](http://www.ftdichip.com/Drivers/D2XX.htm). Normalment, quan un dispositiu FTDI està connectat per primera vegada, Windows us baixarà automàticament els controladors D2XX, de manera que no cal cap acció.  
-Si això no passa, consulteu les [guies d'instal·lació FTDI](http://www.ftdichip.com/Support/Documents/InstallGuides.htm) per saber com instal·lar els controladors.  
+A Microsoft Windows, el connector necessita els [últims controladors D2XX de FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Normalment, quan un dispositiu FTDI està connectat per primera vegada, Windows us baixarà automàticament els controladors D2XX, de manera que no cal cap acció.
+Si això no passa, consulteu les [guies d'instal·lació FTDI](https://ftdichip.com/document/installation-guides/) per saber com instal·lar els controladors.
 **NO INSTAL·LEU controladors VCP (Port Virtual COM)**, ja que probablement interferiran amb la interfície D2XX.
 
 Modes compatibles amb ENTTEC DMX USB Pro

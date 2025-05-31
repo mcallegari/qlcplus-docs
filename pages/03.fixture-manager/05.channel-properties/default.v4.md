@@ -13,7 +13,7 @@ Channels properties
 |     |     |
 | --- | --- |
 | **Can fade** | Determine if a channel is included or excluded in the QLC+ fade transitions.  <br>By default all the channels are affected by the Fade In and Fade Out timings of the QLC+ functions.  <br>When this property is unchecked, a channel will not fade, meaning that a fade transition from 20 to 200, will set the channel immediately to 200.  <br>This is useful for example for Pan/Tilt channels of moving heads, where you want the motors to avoid fading but immediately go to the final value. |
-| **Behaviour** | Force the channel behaviour according to the [HTP](/basics/glossary-and-concepts#htp) and [LTP](/basics/glossary-and-concepts#ltp) rules. When changing the behaviour of a channel, the list will highlight in red, showing evidence that the channels has been modified.  <br>**Note: Use this functionality only if you know what you're doing and fully understand how HTP and LTP work** |
+| **Behaviour** | Force the channel behaviour according to the [HTP](/basics/glossary-and-concepts#htp-highest-takes-precedence) and [LTP](/basics/glossary-and-concepts#ltp-latest-takes-precedence) rules. When changing the behaviour of a channel, the list will highlight in red, showing evidence that the channels has been modified.  <br>**Note: Use this functionality only if you know what you're doing and fully understand how HTP and LTP work** |
 | **Modifier** | Channels modifiers are a powerful tool to modify the behaviour of a channel by acting at the end of the DMX value calculation, right before the [Grand Master](/basics/glossary-and-concepts#grand-master) modification.  <br>By default all the channels will follow a linear rule, meaning that the original DMX value will be equal to the output DMX value. (0-0, 1-1, ... , 255-255)  <br>When clicking on this button, the Channel Modifier Editor panel (described below) will be displayed. |
 
   
@@ -26,7 +26,7 @@ Channel Modifier Editor
 
 The channel modifier editor is presented like this:
 
-![](channelmodifier.png)  
+![](channel_modifier.png)
   
 On the right side of the window, a list of available modifier templates is displayed.  
 Clicking on a template in the list, will show the curve preview on the left side of the window.  

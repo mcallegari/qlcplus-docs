@@ -55,7 +55,7 @@ Fins ara, hi ha tres tipus de ginys disponibles:
 * Selector de color RGB. Controla els valors dels canals RGB seleccionats amb un sol clic
 * Selector de Gobo/Macro. Accedeix i mostra un Gobo/Macro definit a la definició del Fixture
 
-Hi ha disponible una visió general amb captures de pantalla [aquí](https://qlcplus.org/old/clickandgo.html)
+Hi ha disponible una visió general amb captures de pantalla [aquí](https://www.qlcplus.org/old/clickandgo.html)
 
 ### ![](../collection.png) Col·lecció
 
