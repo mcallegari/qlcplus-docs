@@ -35,7 +35,7 @@ Derzeit werden folgende Abschnittsschlüsselwörter unterstützt:
 
 Der Abschnittsinhalt muss eine CSS-Syntax haben. Wenn Sie sich mit Webdesign auskennen, dürfte Ihnen die Erstellung dieser Datei sehr leicht fallen!  
 Da die Stildatei eng mit den inneren Qt-Objekten verknüpft ist, möchten Sie möglicherweise die folgenden Artikel lesen, um die Namen der Elemente und die zusätzlichen CSS-Eigenschaften herauszufinden, die das Qt-Team der Standard-CSS-Syntax hinzugefügt hat.  
-[Qt-Stylesheets](https://doc.qt.io/qt-5/stylesheet-syntax.html)  
+[Qt-Stylesheets](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)
 [Beispiele für Qt-Stylesheets](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
 Es bleibt Ihrer Fantasie überlassen, wie Sie das Erscheinungsbild der QLC+-GUI am liebsten anpassen möchten! Wenn Sie einen Stil finden, der es wert ist, geteilt zu werden, vergessen Sie nicht, Ihren Beitrag einzusenden, indem Sie ihn online im [QLC+-Forum](https://www.qlcplus.org/forum/viewforum.php?f=5) veröffentlichen.
 

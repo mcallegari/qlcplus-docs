@@ -6,7 +6,7 @@ date: '05:15 22-08-2023'
 Einführung
 ------------
 
-Dieses Plugin bietet Ein-/Ausgabeunterstützung für das [MIDI-Protokoll](https://en.wikipedia.org/wiki/MIDI) und gibt dem Benutzer die Freiheit, typische Parameter wie Kanäle, Noten, Programmwechsel und Kontrollwechsel zu steuern.  
+Dieses Plugin bietet Ein-/Ausgabeunterstützung für das [MIDI-Protokoll](https://de.wikipedia.org/wiki/MIDI) und gibt dem Benutzer die Freiheit, typische Parameter wie Kanäle, Noten, Programmwechsel und Kontrollwechsel zu steuern.
 Das MIDI-Plugin kann sehr leistungsstark in Kombination mit MIDI-Geräten wie Keyboards, MIDI-Controllern (wie Behringer BCF2000 oder KORG nanoKONTROL) oder einem Software-Audiosequenzer wie Cubase oder Ardour 3 verwendet werden.  
 Die Verwendung kann von Fader-zu-Fader-Steuerung (im BCF2000-Fall) bis hin zur Sequenzauslösung für synchronisierte Shows (metronomgesteuerte Gigs mit einem Audiosequenzer) variieren.
 

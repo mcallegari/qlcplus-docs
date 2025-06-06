@@ -6,7 +6,7 @@ date: '05:13 22-08-2023'
 Einführung
 ------------
 
-Das HID-Plugin unterstützt das [HID-System](https://en.wikipedia.org/wiki/Human_interface_device) unter Windows und Linux.  
+Das HID-Plugin unterstützt das [HID-System](https://de.wikipedia.org/wiki/Human_Interface_Device) unter Windows und Linux.
 HID ist eine generische Methode zur Zuordnung von Eingabe-/Ausgabegeräten wie Joysticks, Touchpads, Tastaturen, Mäusen usw.  
 Das QLC+ HID-Plugin soll nur Joysticks und den FX5 USB DMX-Adapter unterstützen.
 

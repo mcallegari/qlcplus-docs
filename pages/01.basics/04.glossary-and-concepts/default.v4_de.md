@@ -67,7 +67,7 @@ Kopien von Sammlungsfunktionen können mit dem [Funktionsmanager](/function-mana
 
 ### DMX
 
-[DMX](https://en.wikipedia.org/wiki/DMX512) ist die Abkürzung für Digital MultipleX. Es definiert im Wesentlichen eine ganze Reihe von Eigenschaften, Protokollen, Verkabelungen usw. Im Fall von Beleuchtungssoftware definiert es die maximale Anzahl von Kanälen (512 Kanäle) pro Universum und den Wertebereich jedes Kanals (0-255).
+[DMX](https://de.wikipedia.org/wiki/DMX_(Lichttechnik)) ist die Abkürzung für Digital MultipleX. Es definiert im Wesentlichen eine ganze Reihe von Eigenschaften, Protokollen, Verkabelungen usw. Im Fall von Beleuchtungssoftware definiert es die maximale Anzahl von Kanälen (512 Kanäle) pro Universum und den Wertebereich jedes Kanals (0-255).
 
 QLC+ unterstützt unbegrenzte Universen (es gibt zunächst 4, aber bei Bedarf können weitere hinzugefügt werden). Sie müssen nicht unbedingt an DMX-Hardware angeschlossen werden. Die eigentliche Hardware-Abstraktion (ob analog 0-10 V, DMX oder eine andere Methode) wird durch [Ausgabe-Plugins](#outputplugins) erreicht.
 
@@ -205,7 +205,7 @@ Jede RGB-Matrix hat ihre eigenen Geschwindigkeitseinstellungen:
 
 ### ![](../rgbmatrix.png) RGB Skript
 
-Ein RGB-Skript ist ein in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (auch als JavaScript bekannt) geschriebenes Programm, das die notwendigen Bilddaten für [RGB-Matrix](#rgb-matrix)-Funktionen erzeugt . Weitere Informationen finden Sie auf der Seite [RGB-Skript-API](/function-manager/rgb-script-api).
+Ein RGB-Skript ist ein in [ECMAScript](https://de.wikipedia.org/wiki/ECMAScript) (auch als JavaScript bekannt) geschriebenes Programm, das die notwendigen Bilddaten für [RGB-Matrix](#rgb-matrix)-Funktionen erzeugt . Weitere Informationen finden Sie auf der Seite [RGB-Skript-API](/function-manager/rgb-script-api).
 
 ### ![](../scene.png) Szenen
 

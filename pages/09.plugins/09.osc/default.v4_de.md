@@ -6,7 +6,7 @@ date: '05:18 22-08-2023'
 Einführung
 ------------
 
-QLC+ unterstützt das [OSC-Protokoll](https://en.wikipedia.org/wiki/Open_Sound_Control) über ein Eingabe-/Ausgabe-Plugin, das Pakete im Netzwerk empfängt und überträgt.  
+QLC+ unterstützt das [OSC-Protokoll](https://de.wikipedia.org/wiki/Open_Sound_Control) über ein Eingabe-/Ausgabe-Plugin, das Pakete im Netzwerk empfängt und überträgt.
 Es sind keine zusätzlichen Anforderungen erforderlich, da QLC+ über eine native Implementierung des OSC-Protokolls verfügt, das auf Linux-, Windows- und OSX-Systemen funktioniert.  
 Das OSC-Plugin kann Pakete von mehreren Netzwerkkarten, virtuellen Adressen, dem Loopback-Gerät (127.0.0.1) und mehreren Universen pro Netzwerkschnittstelle senden und empfangen.  
 Standardmäßig überwacht das OSC-Plugin Ports ab 7700 plus dem QLC+-Universum minus eins.  

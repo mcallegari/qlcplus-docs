@@ -67,7 +67,7 @@ Es poden crear còpies de funcions de col·lecció amb el [Gestor de funcions](/
 
 ### DMX
 
-[DMX](https://en.wikipedia.org/wiki/DMX512) és l'abreviatura de **D**igital **M**ultiple**X**. Bàsicament defineix tot un conjunt de propietats, protocol, cablejat, etc. En el cas del programari d'il·luminació, defineix el nombre màxim de canals (512) per univers i el rang de valors de cada canal (0-255).
+[DMX](https://ca.wikipedia.org/wiki/Digital_Multiplex) és l'abreviatura de **D**igital **M**ultiple**X**. Bàsicament defineix tot un conjunt de propietats, protocol, cablejat, etc. En el cas del programari d'il·luminació, defineix el nombre màxim de canals (512) per univers i el rang de valors de cada canal (0-255).
 
 QLC+ admet universos il·limitats (hi ha 4 inicials, però es poden afegir-ne més si cal). No necessàriament han d'estar connectats al maquinari DMX; més aviat, DMX acaba de ser seleccionat com l'estàndard d'il·luminació de facto. L'abstracció real del maquinari (ja sigui analògic 0-10V, DMX o algun altre mètode) s'aconsegueix mitjançant [connectors de sortida](#connectors-de-sortida).
 
@@ -205,7 +205,7 @@ Cada matriu RGB té la seva pròpia configuració de velocitat:
 
 ### ![](../rgbmatrix.png) Script RGB
 
-Un script RGB és un programa escrit en [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (també conegut com a JavaScript) que produeix les dades d'imatge necessàries per a les funcions  [Matriu RGB](#rgb-matrix). Més informació a la pàgina de l'[API d'script RGB](/function-manager/rgb-script-api).
+Un script RGB és un programa escrit en [ECMAScript](https://ca.wikipedia.org/wiki/ECMAScript) (també conegut com a JavaScript) que produeix les dades d'imatge necessàries per a les funcions  [Matriu RGB](#rgb-matrix). Més informació a la pàgina de l'[API d'script RGB](/function-manager/rgb-script-api).
 
 ### ![](../scene.png) Escena
 

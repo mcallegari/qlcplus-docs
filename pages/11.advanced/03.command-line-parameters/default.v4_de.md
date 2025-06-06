@@ -23,7 +23,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-d oder --debug**<br><br>**Beschreibung:** Aktivieren Sie den Debug-Modus und legen Sie optional den Ausgabepegel fest. Beachten Sie, dass seit 4.8.0 Meldungen für Level DEBUG (0) nicht in veröffentlichten Binärdateien enthalten sind.<br><br>**Parameter:** Level (siehe [QtMsgType](https://doc.qt.io/qt -5/qtglobal.html#QtMsgType-enum))<br><br>**Beispiele:** <br>Debug-Modus aktivieren und Debug-Level auf 0 setzen: <br>qlcplus -d <br>qlcplus --debug <br> <br>Debug-Modus aktivieren und Debug-Level auf 3 setzen: <br>qlcplus -d 3 |
+| **-d oder --debug**<br><br>**Beschreibung:** Aktivieren Sie den Debug-Modus und legen Sie optional den Ausgabepegel fest. Beachten Sie, dass seit 4.8.0 Meldungen für Level DEBUG (0) nicht in veröffentlichten Binärdateien enthalten sind.<br><br>**Parameter:** Level (siehe [QtMsgType](https://doc.qt.io/archives/qt-5.15/qtglobal.html#QtMsgType-enum))<br><br>**Beispiele:** <br>Debug-Modus aktivieren und Debug-Level auf 0 setzen: <br>qlcplus -d <br>qlcplus --debug <br> <br>Debug-Modus aktivieren und Debug-Level auf 3 setzen: <br>qlcplus -d 3 |
 
 |     |
 | --- |
