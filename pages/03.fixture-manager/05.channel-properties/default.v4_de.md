@@ -26,7 +26,7 @@ Kanalmodifikator-Editor
 
 TDer Kanalmodifikator-Editor wird wie folgt dargestellt:
 
-![](channelmodifier.png)  
+![](channel_modifier.png)
   
 Auf der rechten Seite des Fensters wird eine Liste der verfügbaren Modifikatorvorlagen angezeigt.  
 Durch Klicken auf eine Vorlage in der Liste wird die Kurvenvorschau auf der linken Seite des Fensters angezeigt.  

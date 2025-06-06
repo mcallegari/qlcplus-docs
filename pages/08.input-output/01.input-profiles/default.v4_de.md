@@ -62,7 +62,7 @@ Wenn Sie einen Kanal hinzufügen ![](/basics/edit_add.png) oder bearbeiten ![](/
 
 * **Nummer**: Die Kanalnummer. Da QLC+ eine Vielzahl von Eingabe-Plugins unterstützt, ist die Kanalnummer möglicherweise nicht intuitiv. Bearbeiten Sie sie daher nur, wenn Sie wissen, was Sie tun.
 * **Name**: Der Kanalname. Dies ist eine beliebige Zeichenfolge, die den Zweck eines Kanals angibt.
-* **Typ**: Der Kanaltyp. Dies kann sein: ![](/basics/slider.png) Slider, ![](/basics/knob.png) Knob, ![](/basics/button.png) Button oder ![](/basics/ knob.png) Encoder  
+* **Typ**: Der Kanaltyp. Dies kann sein: ![](/basics/slider.png) Slider, ![](/basics/knob.png) Knob, ![](/basics/button.png) Button oder ![](/basics/knob.png) Encoder
     Andere Typen: ![](/basics/back.png) Vorherige Seite, ![](/basics/forward.png) Nächste Seite, ![](/basics/star.png) Set Page werden zur Steuerung mehrseitiger Frames verwendet .
 
 Für MIDI-Profile enthält der Dialog zusätzliche Felder:
