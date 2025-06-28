@@ -4,7 +4,13 @@ on:
   push:
     tags:
       - '*'
-
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag'
+        required: true
+        type: string
+        
 permissions:
   contents: write
       
@@ -21,8 +27,11 @@ jobs:
       - name: Set version from tag
         id: set_version
         run: |
-          VERSION=${GITHUB_REF#refs/tags/}
-          echo "::set-output name=version::$VERSION"
+          VERSION="${{ github.event.inputs.tag }}"
+          if [ -z "$VERSION" ]; then
+            VERSION="${GITHUB_REF#refs/tags/}"
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Install PowerShell
         run: |
