@@ -305,3 +305,4 @@ waitfunctionstop
 waitfunctionstart
 rawColors
 CRC
+validator
