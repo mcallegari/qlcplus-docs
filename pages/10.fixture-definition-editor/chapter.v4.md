@@ -10,7 +10,9 @@ media_order: 'fixture_editor_physical.png,fixture_editor_aliases.png,fixture_edi
 
 # Fixture Definition Editor
 
-The Fixture Definition Editor is a separate application bundled together with QLC+ for creating and modifying [fixture definitions](/basics/glossary-and-concepts#fixtures). Having a fixture definition for each of your lights allows QLC+ to know how to control them.
+The Fixture Definition Editor is a separate application bundled together with QLC+ for creating and modifying [fixture definitions](/basics/glossary-and-concepts#fixtures).<br>
+Having a fixture definition for each of your lights allows QLC+ to know how to control them.<br>
+When creating a new fixture definition, please validate it with the [online fixture validator](https://www.qlcplus.org/fixture_validator.php). It will help you to make a correct definition.<br>
 
 ## Saving your fixture definitions
 
