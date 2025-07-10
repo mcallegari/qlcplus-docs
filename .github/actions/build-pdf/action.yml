@@ -51,11 +51,11 @@ runs:
             convert "$file" -units PixelsPerInch -density 96 "$file"
           fi
         done
-    - name: Fetch Latest Release
+    - name: Get latest release tag
       id: get_release
       shell: bash
       env:
-        GH_TOKEN: ${{ github.token }}
+        GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: |
         RELEASE=$(gh release view --json tagName --jq .tagName || echo "")
         echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
