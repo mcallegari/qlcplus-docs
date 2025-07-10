@@ -1,3 +1,6 @@
+param([string]$Lang="EN")
+$Lang = $Lang.ToUpper()
+
 function Update-MarkdownHeadingLevels {
     param (
         [string]$markdown
@@ -76,11 +79,28 @@ function Get-MarkdownFiles {
 
         # Iterate over each folder
         foreach ($folder in $folders) {
-            # Output the folder name
-            #Write-Host "Folder name: $($folder.FullName)"
+            $chapterLocalized = Join-Path $folder.FullName "chapter.v4_${Lang}.md"
+            $chapterDefault   = Join-Path $folder.FullName "chapter.v4.md"
+            if (Test-Path $chapterLocalized) {
+                $markdownFiles += Get-Item $chapterLocalized
+            } elseif (Test-Path $chapterDefault) {
+                $markdownFiles += Get-Item $chapterDefault
+            }
 
-            $markdownFiles += Get-ChildItem -Path ($folder.FullName + "\chapter.v4.md")
-            $markdownFiles += Get-ChildItem -Path ($folder.FullName) -Recurse -File | Where-Object { $_.Name -match "default\.v4\.md|docs\.md"} | Sort-Object FullName
+            $docFiles = Get-ChildItem -Path $folder.FullName -Recurse -File | Where-Object { $_.Name -match "default\.v4\.md|docs\.md" }
+            foreach ($doc in $docFiles) {
+                if ($doc.Name -eq 'docs.md') {
+                    $locName = "docs.v4_${Lang}.md"
+                } else {
+                    $locName = "$($doc.BaseName)_${Lang}.md"
+                }
+                $locPath = Join-Path $doc.DirectoryName $locName
+                if (Test-Path $locPath) {
+                    $markdownFiles += Get-Item $locPath
+                } else {
+                    $markdownFiles += $doc
+                }
+            }
         }
     } else {
         Write-Host "Directory not found: $directory"
@@ -219,5 +239,5 @@ $outputFile     = "./.github/workflows/bin/markdown/qlcplus-docs.md"  # Path to 
 Copy-ImagesToDirectory -sourceDirectory $directoryPath -destinationDirectory $imageDir
 
 # Process and combine markdown files
-$markdownFiles = Get-MarkdownFiles -Path $directoryPath -Lang "EN"
+$markdownFiles = Get-MarkdownFiles -Path $directoryPath -Lang $Lang
 Merge-MarkdownFiles -MarkdownFiles $markdownFiles -OutputPath $outputFile -directoryPath $directoryPath
