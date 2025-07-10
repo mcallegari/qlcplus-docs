@@ -1,3 +1,7 @@
+param(
+    [string]$Lang = "EN"
+)
+
 function Update-MarkdownHeadingLevels {
     param (
         [string]$markdown
@@ -68,22 +72,34 @@ function Get-MarkdownFiles {
         [string]$Path,
         [string]$Lang
     )
-    Write-Host "Getting all markdown files from the $path directory..."
+    Write-Host "Getting all markdown files from the $Path directory for language $Lang..."
     if (Test-Path $Path -PathType Container) {
         # Get the list of folders in the directory (feed is excluded as it's a stub for RSS)
-        $folders = Get-ChildItem -Path $Path -Directory -Exclude feed
+        $folders = Get-ChildItem -Path $Path -Directory -Exclude feed | Sort-Object Name
         $markdownFiles = @()
 
         # Iterate over each folder
         foreach ($folder in $folders) {
-            # Output the folder name
-            #Write-Host "Folder name: $($folder.FullName)"
+            # Determine chapter file
+            $chapterFile = Get-ChildItem -Path $folder.FullName -Filter "chapter*.${Lang}.md" -ErrorAction SilentlyContinue | Select-Object -First 1
+            if (-not $chapterFile) {
+                $chapterFile = Get-ChildItem -Path $folder.FullName -Filter "chapter*.md" | Where-Object { $_.Name -notmatch '_[a-z][a-z]\.md$' } | Select-Object -First 1
+            }
+            if ($chapterFile) { $markdownFiles += $chapterFile }
 
-            $markdownFiles += Get-ChildItem -Path ($folder.FullName + "\chapter.v4.md")
-            $markdownFiles += Get-ChildItem -Path ($folder.FullName) -Recurse -File | Where-Object { $_.Name -match "default\.v4\.md|docs\.md"} | Sort-Object FullName
+            # Determine documentation files
+            $baseDocs = Get-ChildItem -Path $folder.FullName -Recurse -File | Where-Object { $_.Name -match 'default\.v4\.md' }
+            foreach ($base in $baseDocs | Sort-Object FullName) {
+                $langFile = Join-Path $base.DirectoryName ($base.BaseName + "_${Lang}.md")
+                if ($Lang -ne 'EN' -and (Test-Path $langFile)) {
+                    $markdownFiles += Get-Item $langFile
+                } else {
+                    $markdownFiles += $base
+                }
+            }
         }
     } else {
-        Write-Host "Directory not found: $directory"
+        Write-Host "Directory not found: $Path"
         return
     }
     
@@ -218,6 +234,6 @@ $outputFile     = "./.github/workflows/bin/markdown/qlcplus-docs.md"  # Path to 
 # Move all image files into ./images so they can be found
 Copy-ImagesToDirectory -sourceDirectory $directoryPath -destinationDirectory $imageDir
 
-# Process and combine markdown files
-$markdownFiles = Get-MarkdownFiles -Path $directoryPath -Lang "EN"
+# Process and combine markdown files for the specified language
+$markdownFiles = Get-MarkdownFiles -Path $directoryPath -Lang $Lang
 Merge-MarkdownFiles -MarkdownFiles $markdownFiles -OutputPath $outputFile -directoryPath $directoryPath

@@ -15,9 +15,27 @@ permissions:
   contents: write
       
 jobs:
+  detect-languages:
+    runs-on: ubuntu-latest
+    outputs:
+      langs: ${{ steps.set.outputs.langs }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - id: set
+        run: |
+          langs=$(find pages -name "*_??.md" | sed -n 's/.*_\([a-z][a-z]\)\.md/\1/p' | sort -u | tr '\n' ' ')
+          langs="en $langs"
+          json="[\"$(echo $langs | sed 's/ /\",\"/g')\"]"
+          echo "langs=$json" >> "$GITHUB_OUTPUT"
+
   build_release:
     name: build_release
+    needs: detect-languages
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lang: ${{ fromJSON(needs.detect-languages.outputs.langs) }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -48,7 +66,7 @@ jobs:
       - name: Run PowerShell script
         shell: pwsh
         run: |
-            ./scripts/Merge-MarkdownFiles.ps1
+            ./scripts/Merge-MarkdownFiles.ps1 -Lang ${{ matrix.lang }}
 
       - name: Fix logo
         run: |
@@ -126,6 +144,8 @@ jobs:
           sudo apt-get install -y ghostscript
           gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/temp/titlepage.pdf ./.github/workflows/bin/temp/QLCplusDocumentation.pdf
           echo "rm -d /.github/workflows/bin/temp/"
+      - name: Rename PDF
+        run: mv ./.github/workflows/bin/pdf/qlcplus-docs.pdf ./.github/workflows/bin/pdf/qlcplus-docs-${{ matrix.lang }}.pdf
     
 
       - name: Upload PDF asset to release
@@ -133,4 +153,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload "${{ steps.set_version.outputs.version }}" \
-            ./.github/workflows/bin/pdf/qlcplus-docs.pdf --clobber
+            ./.github/workflows/bin/pdf/qlcplus-docs-${{ matrix.lang }}.pdf --clobber

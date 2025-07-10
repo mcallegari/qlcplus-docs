@@ -3,6 +3,20 @@ on:
   push:
   pull_request:
 jobs:
+  detect-languages:
+    runs-on: ubuntu-latest
+    outputs:
+      langs: ${{ steps.set.outputs.langs }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - id: set
+        run: |
+          langs=$(find pages -name "*_??.md" | sed -n 's/.*_\([a-z][a-z]\)\.md/\1/p' | sort -u | tr '\n' ' ')
+          langs="en $langs"
+          json="[\"$(echo $langs | sed 's/ /\",\"/g')\"]"
+          echo "langs=$json" >> "$GITHUB_OUTPUT"
+
   check-spelling:
     runs-on: ubuntu-latest
     steps:
@@ -15,7 +29,11 @@ jobs:
           task_name: Markdown
 
   build-pdf:
+    needs: detect-languages
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lang: ${{ fromJSON(needs.detect-languages.outputs.langs) }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -34,7 +52,7 @@ jobs:
     - name: Run PowerShell script
       shell: pwsh
       run: |
-        ./scripts/Merge-MarkdownFiles.ps1
+        ./scripts/Merge-MarkdownFiles.ps1 -Lang ${{ matrix.lang }}
 
     - name: Fix logo and copy images to root directory for pandoc # images directory is deleted in "Cleanup temporary items" step
       run: |
@@ -122,11 +140,11 @@ jobs:
     - name: Upload-PDF
       uses: actions/upload-artifact@v4
       with:
-          name: qlcplus-docs-en-pdf
+          name: qlcplus-docs-${{ matrix.lang }}-pdf
           path: ./.github/workflows/bin/pdf/
 
     - name: Upload-Markdown
       uses: actions/upload-artifact@v4
       with:
-          name: qlcplus-docs-en-markdown
+          name: qlcplus-docs-${{ matrix.lang }}-markdown
           path: ./.github/workflows/bin/markdown/
