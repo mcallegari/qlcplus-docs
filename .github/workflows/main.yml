@@ -21,18 +21,18 @@ jobs:
         uses: actions/checkout@v4
 
       - id: build
-        uses: ./.github/actions/build-pdf
+        uses: ./.github/actions/build-pdf.yml
         with:
           lang: en
 
-    - name: Upload-PDF
-      uses: actions/upload-artifact@v4
-      with:
-          name: qlcplus-docs-en-pdf
-          path: ./.github/workflows/bin/pdf/
-
-    - name: Upload-Markdown
-      uses: actions/upload-artifact@v4
-      with:
-          name: qlcplus-docs-en-markdown
-          path: ./.github/workflows/bin/markdown/
+      - name: Upload-PDF
+        uses: actions/upload-artifact@v4
+        with:
+            name: qlcplus-docs-en-pdf
+            path: ./.github/workflows/bin/pdf/
+  
+      - name: Upload-Markdown
+        uses: actions/upload-artifact@v4
+        with:
+            name: qlcplus-docs-en-markdown
+            path: ./.github/workflows/bin/markdown/
