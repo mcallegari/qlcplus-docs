@@ -15,9 +15,28 @@ permissions:
   contents: write
       
 jobs:
+  detect-langs:
+    runs-on: ubuntu-latest
+    outputs:
+      langs: ${{ steps.setlangs.outputs.langs }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - id: setlangs
+        run: |
+          langs=$(find pages -name '*_??.md' | sed -n 's/.*_\([A-Za-z][A-Za-z]\)\.md/\1/p' | tr '[:upper:]' '[:lower:]' | sort -u)
+          langs="en $langs"
+          json=$(printf '%s\n' $langs | jq -R . | jq -sc .)
+          echo "langs=$json" >> "$GITHUB_OUTPUT"
+
   build_release:
+    needs: detect-langs
     name: build_release
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: ${{ fromJson(needs.detect-langs.outputs.langs) }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -36,7 +55,7 @@ jobs:
       - id: build
         uses: ./.github/actions/build-pdf
         with:
-          lang: en
+          lang: ${{ matrix.lang }}
 
       - name: Upload PDF asset to release
         env:
