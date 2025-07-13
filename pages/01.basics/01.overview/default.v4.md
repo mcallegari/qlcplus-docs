@@ -29,3 +29,10 @@ If you don't have the means to donate there are a number of other ways to contri
 1. Suggesting improvements to this documentation (See the top right "Edit this page" button)
 1. Telling your friends about QLC+
 1. Using QLC+ for your projects!
+
+### Safety warning!
+QLC+ is not designed or certified for safety-critical applications such as pyrotechnics, flame effects, CO₂ jets, or motorized stage elements. While QLC+ can control these devices, it does not provide safety interlocks, channel locking, or fail-safe mechanisms. Your computer may crash or behave unpredictably under certain conditions.
+
+QLC+ has been used successfully for laser shows. This is generally acceptable, as long as your lasers include hardware-based crowd scanning protection and comply with all relevant safety regulations.
+
+Use of QLC+ for high-risk effects is done entirely at your own risk. Always ensure a fully independent, hardware-based safety system is in place, and never rely solely on software control for potentially dangerous effects.
