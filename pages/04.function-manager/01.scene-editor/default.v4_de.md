@@ -2,13 +2,13 @@
 title: 'Szeneneditor'
 ---
 
-Der Szeneneditor wird, wie der Name schon sagt zum Bearbeiten von ![](/basics/scene.png) [Szene](/basics/glossary-and-concepts#scene)-Funktionen verwendet. Der Editor ist in Registerkarten unterteilt; Mit der ersten Registerkarte **Allgemein** steuern Sie die Liste der Geräte und [Kanalgruppen](/basics/glossary-and-concepts#channel-groups), die an der Szenenbearbeitung teilnehmen, zusammen mit dem Szenennamen.  
+Der Szeneneditor wird, wie der Name schon sagt zum Bearbeiten von ![](/basics/scene.png) [Szene](/basics/glossary-and-concepts#szene)-Funktionen verwendet. Der Editor ist in Registerkarten unterteilt; Mit der ersten Registerkarte **Allgemein** steuern Sie die Liste der Geräte und [Kanalgruppen](/basics/glossary-and-concepts#kanalgruppen), die an der Szenenbearbeitung teilnehmen, zusammen mit dem Szenennamen.
 Alle nachfolgenden Registerkarten werden verwendet, um die einzelnen Kanalwerte für jedes Gerät und, falls welche definiert sind, die Werte der Kanalgruppen zu steuern.
 
 Allgemeine Tab-Steuerelemente
 --------------------
 
-Im linken Teil des Bildschirms werden die Schaltflächen zur Steuerung der in der Szene verwendeten Geräte angezeigt.  
+Im linken Teil des Bildschirms werden die Schaltflächen zur Steuerung der in der Szene verwendeten Geräte angezeigt.
 
 |     |     |
 | --- | --- |
@@ -18,26 +18,26 @@ Im linken Teil des Bildschirms werden die Schaltflächen zur Steuerung der in de
 | ![](/basics/check.png) | Aktivieren Sie alle Kanäle der ausgewählten Geräte. |
 | ![](/basics/uncheck.png) | Deaktivieren Sie alle Kanäle der ausgewählten Geräte. |
 
-Im rechten Teil des Bildschirms werden die Schaltflächen zur Steuerung der in der Szene verwendeten [Kanalgruppen](/basics/glossary-and-concepts#channel-groups) angezeigt
+Im rechten Teil des Bildschirms werden die Schaltflächen zur Steuerung der in der Szene verwendeten [Kanalgruppen](/basics/glossary-and-concepts#kanalgruppen) angezeigt
 
 |     |     |
 | --- | --- |
 | ![](/basics/check.png) | Aktivieren Sie alle ausgewählten Kanalgruppen. |
 | ![](/basics/uncheck.png) | Deaktivieren Sie alle ausgewählten Kanalgruppen. |
 
-  
+
 **Hinweis:** Es ist nützlich zu wissen, dass beim Aktivieren/Deaktivieren einer Kanalgruppe die von der Gruppe gesteuerten Geräte automatisch zum linken Bereich hinzugefügt werden. Die von der Gruppe gesteuerten Kanäle werden bei jedem Gerät automatisch aktiviert/deaktiviert.
 
 Registerkarten für Kanalgruppen
 -------------------
 
-Diese Registerkarte wird nur angezeigt, wenn in der Registerkarte „Allgemein“ eine oder mehrere Kanalgruppen ausgewählt sind.  
+Diese Registerkarte wird nur angezeigt, wenn in der Registerkarte „Allgemein“ eine oder mehrere Kanalgruppen ausgewählt sind.
 Jede Kanalgruppe wird mit einer Schnellzugriffstaste für Makros ([Click And Go](/basics/glossary-and-concepts#click-and-go) falls unterstützt), einer Beschriftung mit dem Gruppenwert, einem Fader und dem Namen der Gruppe angezeigt.
 
 Fixture-Registerkarten
 ------------
 
-Jedes Gerät wird durch eine eigene Registerkarte dargestellt, die Schieberegler für jeden Kanal des Geräts enthält. Jeder Kanal kann mit einem Kontrollkästchen oben in der Kanaleinheit aktiviert oder deaktiviert werden. Der Wert jedes Kanals kann entweder durch Eingabe des Werts in das Bearbeitungsfeld oben auf dem Schieberegler oder durch Bewegen des Schiebereglers festgelegt werden. Kanäle, die mehrere Funktionen wie Gobos, Farben usw. bereitstellen, verfügen außerdem über eine Schaltfläche über dem Kanalschieberegler. Mit dieser Schaltfläche können Sie direkt eine bestimmte Funktion oder Fähigkeit auswählen, die von diesem Kanal bereitgestellt wird.  
+Jedes Gerät wird durch eine eigene Registerkarte dargestellt, die Schieberegler für jeden Kanal des Geräts enthält. Jeder Kanal kann mit einem Kontrollkästchen oben in der Kanaleinheit aktiviert oder deaktiviert werden. Der Wert jedes Kanals kann entweder durch Eingabe des Werts in das Bearbeitungsfeld oben auf dem Schieberegler oder durch Bewegen des Schiebereglers festgelegt werden. Kanäle, die mehrere Funktionen wie Gobos, Farben usw. bereitstellen, verfügen außerdem über eine Schaltfläche über dem Kanalschieberegler. Mit dieser Schaltfläche können Sie direkt eine bestimmte Funktion oder Fähigkeit auswählen, die von diesem Kanal bereitgestellt wird.
 **Hinweis**: Die Tastenkombination zum Wechseln zwischen den Bearbeitungsfeldern für Kanalwerte lautet „**Tabulatortaste**“, um nach rechts zu wechseln, und „**Umschalttaste + Tabulatortaste**“, um nach links zu wechseln.
 
 ### Status des Kanals aktiviert/deaktiviert

@@ -4,13 +4,13 @@ date: '08:32 21-08-2023'
 media_order: dmx-usb-settings.png
 ---
 
-Auf dieser Seite finden Sie die häufigsten Fragen, die Ihnen beim Einstieg in QLC+ in den Sinn kommen könnten.  
+Auf dieser Seite finden Sie die häufigsten Fragen, die Ihnen beim Einstieg in QLC+ in den Sinn kommen könnten.
 Hier finden Sie entweder direkt die Antwort oder Hilfe, die Ihnen den richtigen Weg weist.
- 
+
 
 #### Frage #1: QLC+ findet mein USB Dongle nicht.
 
-**A:** QLC+ unterstützt sehr viele Arten von USB-DMX adaptern. Stelle bitte zuerst fest, dass die Verbindung richtig besteht. Im Regelfall wird die Aktivität des Adapters auch 
+**A:** QLC+ unterstützt sehr viele Arten von USB-DMX adaptern. Stelle bitte zuerst fest, dass die Verbindung richtig besteht. Im Regelfall wird die Aktivität des Adapters auch
 über eine Status LED signalisiert.
 
 Wenn Sie Windows benutzen und der Adapter von Peperoni oder Vellemann ist, lesen Sie bitte die Anleitung auf deren Hilfeseiten wie die Adapter einzurichten sind.
@@ -55,7 +55,7 @@ Sie können jeden dieser Ordner von einem Terminal aus mit dem Befehl „cd“ e
 `cd $HOME/Library/Application\\ Support/QLC+`
 
 Bitte beachten Sie, dass im Benutzerordner gefundene Geräte und Eingabeprofile Vorrang haben
-die gleichen Dateien im QLC+-Systemordner. 
+die gleichen Dateien im QLC+-Systemordner.
 
 Sie können auch benutzerdefinierte [Fixture-Definitionen](/basics/glossary-and-concepts#fixtures)
 im selben Ordner wie Ihr Projekt speichern, QLC+ findet sie, wenn Sie das Projekt öffnen.
@@ -100,4 +100,3 @@ Bitte beachten Sie, dass eine gute DMX-Bildwiederholfrequenz bei etwa 44 Hz lieg
 eine Ausgabezeile und klicken Sie auf das Symbol ![](/basics/configure.png).
 
 ![dmx-usb-settings](dmx-usb-settings.png "dmx-usb-settings")
-

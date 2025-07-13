@@ -3,7 +3,7 @@ title: 'Chaser-Editor'
 date: '12:08 21-08-2023'
 ---
 
-Der Chaser-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser)-Funktionen verwendet.  
+Der Chaser-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser)-Funktionen verwendet.
 Ein Chaser besteht aus Schritten und jeder Schritt wird durch dargestellt
 
 * Eine progressive Zahl
@@ -29,7 +29,7 @@ Die Timing-Schritte und das Notizfeld können durch Doppelklicken geändert werd
 | ![](/basics/editcopy.png) | Kopieren Sie die ausgewählten Schritte in die Zwischenablage. |
 | ![](/basics/editpaste.png) | Fügen Sie die zuvor aus der Zwischenablage kopierten Schritte an der aktuell ausgewählten Position ein. Wenn keine vorhanden sind, werden die Schritte am Ende der Liste angehängt |
 | ![](/basics/editcut.png) | Entfernen Sie die ausgewählten Schritte aus der Liste und kopieren Sie sie in die Zwischenablage. |
-| ![](/basics/edit_add.png) | Fügen Sie dem Chaser eine vorhandene [Funktion](/basics/glossary-and-concepts#functions) hinzu, indem Sie das Dialogfeld [Funktion auswählen](../function-selection) verwenden. Die Funktion wird nach dem aktuell ausgewählten Schritt eingefügt. |
+| ![](/basics/edit_add.png) | Fügen Sie dem Chaser eine vorhandene [Funktion](/basics/glossary-and-concepts#funktionen) hinzu, indem Sie das Dialogfeld [Funktion auswählen](../function-selection) verwenden. Die Funktion wird nach dem aktuell ausgewählten Schritt eingefügt. |
 | ![](/basics/edit_remove.png) | Entfernen Sie den ausgewählten Schritt aus dem Chaser. |
 | ![](/basics/up.png) | Verschiebt den ausgewählten Schritt über/vor den vorherigen Schritt. |
 | ![](/basics/down.png) | Verschieben Sie den ausgewählten Schritt unter/hinter den nächsten Schritt. |

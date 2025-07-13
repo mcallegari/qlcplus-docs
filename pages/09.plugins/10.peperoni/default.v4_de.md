@@ -21,7 +21,7 @@ Für Mac OS
 
 ### Windows
 
-Sie müssen die [Peperoni USBDMX Windows-Treiber] (http://www.lighting-solutions.de/support/driver.html) installieren. Normalerweise liegen diese zusammen mit dem Peperoni-Gerät, das Sie gekauft haben, auf einer CD bei.  
+Sie müssen die [Peperoni USBDMX Windows-Treiber](http://www.lighting-solutions.de/support/driver.html) installieren. Normalerweise liegen diese zusammen mit dem Peperoni-Gerät, das Sie gekauft haben, auf einer CD bei.
 Wenn QLC+ Ihr Peperoni-Gerät nach der Installation des Treibers immer noch nicht erkennt, kopieren Sie die Datei usbdmx.dll, die Sie im Treiber-ZIP-Paket (Ordner i386) finden, in den Hauptordner von QLC+.
 
 * Entpacken Sie das Treiberpaket in einen Ordner auf Ihrer Festplatte.

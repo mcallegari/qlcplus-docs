@@ -7,7 +7,7 @@ Einführung
 ------------
 
 Das HID-Plugin unterstützt das [HID-System](https://de.wikipedia.org/wiki/Human_Interface_Device) unter Windows und Linux.
-HID ist eine generische Methode zur Zuordnung von Eingabe-/Ausgabegeräten wie Joysticks, Touchpads, Tastaturen, Mäusen usw.  
+HID ist eine generische Methode zur Zuordnung von Eingabe-/Ausgabegeräten wie Joysticks, Touchpads, Tastaturen, Mäusen usw.
 Das QLC+ HID-Plugin soll nur Joysticks und den FX5 USB DMX-Adapter unterstützen.
 
 Anforderungen
@@ -18,8 +18,8 @@ Für dieses Plugin sind keine besonderen Anforderungen erforderlich. Stellen Sie
 Joysticks
 ---------
 
-QLC+ versucht, die spezifischen Joystick-Funktionen, wie Achsen und Tasten, als einzelne Kanäle zu erkennen, die Ihren Widgets der virtuellen Konsole zugeordnet werden können.  
-Achsen und Tasten werden von QLC+ in sequentieller Reihenfolge zugeordnet. Wenn Ihr Joystick also beispielsweise 2 Achsen und 4 Tasten unterstützt, werden sie in den Eingabezuordnungsdialogen wie folgt angezeigt:  
+QLC+ versucht, die spezifischen Joystick-Funktionen, wie Achsen und Tasten, als einzelne Kanäle zu erkennen, die Ihren Widgets der virtuellen Konsole zugeordnet werden können.
+Achsen und Tasten werden von QLC+ in sequentieller Reihenfolge zugeordnet. Wenn Ihr Joystick also beispielsweise 2 Achsen und 4 Tasten unterstützt, werden sie in den Eingabezuordnungsdialogen wie folgt angezeigt:
 
 * Kanal 1: X-Achse
 * Kanal 2: Y-Achse

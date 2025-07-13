@@ -33,19 +33,19 @@ Der Stil jedes Widgets der virtuellen Konsole kann (bis zu einem gewissen Grad) 
 
 |     |     |
 | --- | --- |
-| ![](/basics/button.png) | Fügen Sie eine neue [Schaltfläche](Schaltfläche) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+B) |
-| ![](/basics/buttonmatrix.png) | Fügen Sie dem aktuell ausgewählten Frame eine neue [Schaltflächenmatrix] (Schaltflächenmatrix) hinzu, indem Sie den entsprechenden Dialog (STRG+UMSCHALT+M) | verwenden
-| ![](/basics/slider.png) | Fügen Sie einen neuen [Schieberegler](Schieberegler) zum aktuell ausgewählten Rahmen hinzu (STRG+UMSCHALT+S) |
-| ![](/basics/slidermatrix.png) | Fügen Sie dem aktuell ausgewählten Frame eine neue [Slider-Matrix] (Slider-Matrix) hinzu (STRG+UMSCHALT+I) |
-| ![](/basics/rgbmatrix.png) | Fügen Sie eine neue [Animation](Animation) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+R) |
-| ![](/basics/knob.png) | Fügen Sie einen neuen [Knopf](Schieberegler) zum aktuell ausgewählten Rahmen hinzu. Dies ist eine praktische Verknüpfung zum Hinzufügen eines Schieberegler-Widgets im Knopfstil (STRG+UMSCHALT+K) |
-| ![](/basics/speed.png) | Fügen Sie eine neue [Kurzwahl] (Kurzwahl) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+D) |
-| ![](/basics/xypad.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues [XY-Pad] (xy-Pad) hinzu (STRG+UMSCHALT+X) |
-| ![](/basics/cuelist.png) | Fügen Sie eine neue [Cue-Liste] (Cue-Liste) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+C) |
-| ![](/basics/frame.png) | Fügen Sie einen neuen [Frame](Frame) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+F) |
-| ![](/basics/soloframe.png) | Fügen Sie einen neuen [Solo-Frame] (Solo-Frame) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+O) |
-| ![](/basics/label.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues [Label](Label) hinzu (STRG+UMSCHALT+L) |
-| ![](/basics/audioinput.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues Widget [Audio-Trigger] (Audio-Trigger) hinzu (STRG+UMSCHALT+A) |
+| ![](/basics/button.png) | Fügen Sie eine neue [Schaltfläche](button) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+B) |
+| ![](/basics/buttonmatrix.png) | Fügen Sie dem aktuell ausgewählten Frame eine neue [Schaltflächenmatrix](button-matrix) hinzu, indem Sie den entsprechenden Dialog (STRG+UMSCHALT+M) | verwenden
+| ![](/basics/slider.png) | Fügen Sie einen neuen [Schieberegler](slider) zum aktuell ausgewählten Rahmen hinzu (STRG+UMSCHALT+S) |
+| ![](/basics/slidermatrix.png) | Fügen Sie dem aktuell ausgewählten Frame eine neue [Slider-Matrix](slider-matrix) hinzu (STRG+UMSCHALT+I) |
+| ![](/basics/rgbmatrix.png) | Fügen Sie eine neue [Animation](animation) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+R) |
+| ![](/basics/knob.png) | Fügen Sie einen neuen [Knopf](slider) zum aktuell ausgewählten Rahmen hinzu. Dies ist eine praktische Verknüpfung zum Hinzufügen eines Schieberegler-Widgets im Knopfstil (STRG+UMSCHALT+K) |
+| ![](/basics/speed.png) | Fügen Sie eine neue [Kurzwahl](speed-dial) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+D) |
+| ![](/basics/xypad.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues [XY-Pad](xy-pad) hinzu (STRG+UMSCHALT+X) |
+| ![](/basics/cuelist.png) | Fügen Sie eine neue [Cue-Liste](cue-list) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+C) |
+| ![](/basics/frame.png) | Fügen Sie einen neuen [Frame](frame) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+F) |
+| ![](/basics/soloframe.png) | Fügen Sie einen neuen [Solo-Frame](solo-frame) zum aktuell ausgewählten Frame hinzu (STRG+UMSCHALT+O) |
+| ![](/basics/label.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues [Label](label) hinzu (STRG+UMSCHALT+L) |
+| ![](/basics/audioinput.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues Widget [Audio-Trigger](audio-triggers) hinzu (STRG+UMSCHALT+A) |
 | ![](/basics/clock.png) | Fügen Sie dem aktuell ausgewählten Frame ein neues Uhr-Widget hinzu (STRG+UMSCHALT+T). Dieses Widget kann für drei Zwecke verwendet werden: Systemuhr, Stoppuhr und Countdown.  <br>In den letzten beiden Fällen und wenn sich QLC+ im Betriebsmodus befindet, wird der Zähler durch Klicken mit der linken Maustaste angehalten, während durch Klicken mit der rechten Maustaste der Zähler auf den Anfangswert zurückgesetzt wird.  <br>Im Systemuhrmodus ist es möglich, den Start einer QLC+-Funktion während der Tageszeit zu planen. |
 | ![](/basics/editcut.png) | Schneiden Sie die aktuell ausgewählten Widgets in die Zwischenablage aus. Beachten Sie, dass die Widgets nur verschwinden, wenn sie an der neuen Position eingefügt werden (STRG+X) |
 | ![](/basics/editcopy.png) | Kopieren Sie die aktuell ausgewählten Widgets in die Zwischenablage (STRG+C) |

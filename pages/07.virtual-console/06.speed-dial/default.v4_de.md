@@ -6,7 +6,7 @@ media_order: speeddial.png
 
 Kurzwahlräder sind dazu gedacht, die Geschwindigkeit einer Reihe von Funktionen über die virtuelle Konsole anzupassen, ähnlich wie Busmodus-Schieberegler in den vorherigen Versionen von QLC+. Während das Buskonzept auf der Zuweisung von Funktionen und einem Schieberegler zum selben Bus beruhte, ist die Methode des Kurzwahlrads einfacher und unkomplizierter: Der Benutzer wählt direkt eine Reihe von Funktionen aus, deren Geschwindigkeitseigenschaften mit dem Drehrad gesteuert werden, wodurch die Notwendigkeit entfällt Busse in der Mitte.
 
-  
+
 Das Widget wird wie folgt angezeigt:
 
 ![](speeddial.png)
@@ -54,9 +54,9 @@ Für jeden Geschwindigkeitswert (Einblenden, Ausblenden, Dauer) kann ein Multipl
 
 |     |     |
 | --- | --- |
-| **Einblendfaktor** | Wählen Sie einen Multiplikator aus, um die [Einblendgeschwindigkeit](/basics/glossary-and-concepts#functions) | der Funktionen anzupassen
-| **Fade-Out-Faktor** | Wählen Sie einen Multiplikator aus, um die [Ausblendgeschwindigkeit](/basics/glossary-and-concepts#functions) | der Funktionen anzupassen
-| **Dauerfaktor (+Tap)** | Wählen Sie einen Multiplikator aus, um die [Dauer](/basics/glossary-and-concepts#functions) | der Funktionen anzupassen
+| **Einblendfaktor** | Wählen Sie einen Multiplikator aus, um die [Einblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
+| **Fade-Out-Faktor** | Wählen Sie einen Multiplikator aus, um die [Ausblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
+| **Dauerfaktor (+Tap)** | Wählen Sie einen Multiplikator aus, um die [Dauer](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
 
 Dieser Multiplikator wird auf den Kurzwahlwert angewendet, bevor der Geschwindigkeitswert der Funktionen angepasst wird.
 
@@ -95,8 +95,8 @@ Hier kann ausgewählt werden, ob der Multiplikationsfaktor zurückgesetzt werden
 
 ### Konfiguration – Registerkarte „Voreinstellungen“.
 
-Eine Voreinstellung ist eine Möglichkeit, schnell auf einen vordefinierten Wert für eine Kurzwahl zuzugreifen.  
-Jede Voreinstellung wird im Kurzwahl-Widget-Layout als Schaltfläche dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.  
+Eine Voreinstellung ist eine Möglichkeit, schnell auf einen vordefinierten Wert für eine Kurzwahl zuzugreifen.
+Jede Voreinstellung wird im Kurzwahl-Widget-Layout als Schaltfläche dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.
 Links auf der Registerkarte „Voreinstellungen“ befindet sich die Liste der Voreinstellungen. Wenn Sie in dieser Liste eine Voreinstellung auswählen, können Sie über die Schaltfläche rechts deren Eigenschaften bearbeiten.
 
 |     |     |

@@ -3,7 +3,7 @@ title: 'Befehlszeilenparameter'
 date: '08:19 22-08-2023'
 ---
 
-QLC+ unterstützt eine Reihe von Befehlszeilenparametern, um einige Funktionalitäten beim Start zu automatisieren/erweitern.  
+QLC+ unterstützt eine Reihe von Befehlszeilenparametern, um einige Funktionalitäten beim Start zu automatisieren/erweitern.
 Die Verwendung von Befehlszeilenparametern kann je nach verwendetem Betriebssystem schwierig sein:
 
 **Linux**: Öffnen Sie einfach ein Terminal und geben Sie „qlcplus“ gefolgt von den benötigten Parametern ein<br>
@@ -15,7 +15,7 @@ Um zum Beispiel die deutsche Sprache beim Start zu erzwingen, ändern Sie Ihre S
 **OSX**: Dies ist der schwierigste Fall, da QLC+ unter OSX in einem DMG-Paket gebündelt ist. Sie müssen ein Terminal öffnen und wie folgt in die QLC+ DMG „cd“ eingeben: „cd QLC+.app\\Contents\\MacOS“<br>
 Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parametern ein
 
-  
+
 
 |     |
 | --- |
@@ -39,7 +39,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus] gesperrt. (/basics/glossary-and-concepts#modes))<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br >qlcplus -k <br>qlcplus --kiosk |
+| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus](/basics/glossary-and-concepts#modi) gesperrt.<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br >qlcplus -k <br>qlcplus --kiosk |
 
 |     |
 | --- |
@@ -59,7 +59,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-p oder --operate**<br><br>**Beschreibung:** Starten Sie die Anwendung im Modus [Operate](/basics/glossary-and-concepts#modes).<br><br>* *Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie QLC+ im Betriebsmodus: <br>qlcplus -p <br>qlcplus --operate |
+| **-p oder --operate**<br><br>**Beschreibung:** Starten Sie die Anwendung im Modus [Operate](/basics/glossary-and-concepts#modi).<br><br>* *Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie QLC+ im Betriebsmodus: <br>qlcplus -p <br>qlcplus --operate |
 
 |     |
 | --- |

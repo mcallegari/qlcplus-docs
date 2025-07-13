@@ -37,10 +37,10 @@ Das Hauptfenster im Fixture-Editor ist lediglich ein leerer Arbeitsbereich, der 
 
 ## Fixture-Editor
 
-Die Fixture-Editor-Fenster enthalten alles, was zum Bearbeiten jeweils einer Fixture-Definition erforderlich ist. Die Fenster sind in fünf Registerkarten unterteilt: 
-[**Allgemein**](allgemein)<br>
-[**Physisch**](physisch)<br>
-[**Kanäle**](Kanäle)<br>
-[**Modi**](Modi)<br>
-[**Aliase**](Aliase)<br>
+Die Fixture-Editor-Fenster enthalten alles, was zum Bearbeiten jeweils einer Fixture-Definition erforderlich ist. Die Fenster sind in fünf Registerkarten unterteilt:
+[**Allgemein**](general)<br>
+[**Physisch**](physical)<br>
+[**Kanäle**](channels)<br>
+[**Modi**](modes)<br>
+[**Aliase**](aliases)<br>
 Die Registerkarten sind in einer logischen Reihenfolge angeordnet, die beim Erstellen einer neuen Gerätedefinition von links nach rechts eingehalten werden sollte.

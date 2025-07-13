@@ -3,22 +3,22 @@ title: 'Audio-Trigger'
 date: '03:46 22-08-2023'
 ---
 
-Ab QLC+ Version 4.4.0 können Sie mit dieser Funktionalität eine Audioeingangsquelle wie ein Mikrofon verwenden, um Ihren Lichtshows mehr Leben zu verleihen.  
+Ab QLC+ Version 4.4.0 können Sie mit dieser Funktionalität eine Audioeingangsquelle wie ein Mikrofon verwenden, um Ihren Lichtshows mehr Leben zu verleihen.
 
 Einführung
 ------------
 
-Wenn Sie auf das Symbol ![](/basics/audioinput.png) klicken, wird Ihrer virtuellen Konsole ein Audio-Trigger-Widget hinzugefügt.  
-Der Grafikbereich des Widgets zeigt die Live-Überwachung des aufgenommenen Audios und zeigt eine Reihe von Spektrumbalken und einen Lautstärkebalken an.  
-Unten sehen Sie den von QLC+ analysierten Frequenzbereich  
+Wenn Sie auf das Symbol ![](/basics/audioinput.png) klicken, wird Ihrer virtuellen Konsole ein Audio-Trigger-Widget hinzugefügt.
+Der Grafikbereich des Widgets zeigt die Live-Überwachung des aufgenommenen Audios und zeigt eine Reihe von Spektrumbalken und einen Lautstärkebalken an.
+Unten sehen Sie den von QLC+ analysierten Frequenzbereich
 
 Konfiguration
 -------------
 
-Wenn Sie im Designmodus auf das Widget doppelklicken, wird ein Bedienfeld mit einem vollständigen Satz an Optionen zum Optimieren der Funktionalität des Audio-Triggers angezeigt.  
-Als erstes können Sie die Anzahl der Spektrumbalken konfigurieren, die Sie anzeigen möchten und die Sie während Ihrer Live-Show benötigen. Die akzeptierte Zahl liegt zwischen 5 und 32.  
-Sobald die Anzahl der Balken festgelegt ist, können Sie jedem Balken eine Funktionalität zuweisen. Es gibt eine Liste mit den folgenden Optionen für die Lautstärke- und Spektrumbalken:  
-  
+Wenn Sie im Designmodus auf das Widget doppelklicken, wird ein Bedienfeld mit einem vollständigen Satz an Optionen zum Optimieren der Funktionalität des Audio-Triggers angezeigt.
+Als erstes können Sie die Anzahl der Spektrumbalken konfigurieren, die Sie anzeigen möchten und die Sie während Ihrer Live-Show benötigen. Die akzeptierte Zahl liegt zwischen 5 und 32.
+Sobald die Anzahl der Balken festgelegt ist, können Sie jedem Balken eine Funktionalität zuweisen. Es gibt eine Liste mit den folgenden Optionen für die Lautstärke- und Spektrumbalken:
+
 
 |     |     |
 | --- | --- |

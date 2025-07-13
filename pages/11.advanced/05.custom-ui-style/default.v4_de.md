@@ -3,22 +3,22 @@ title: 'Benutzerdefinierter UI-Stil'
 date: '11:59 22-08-2023'
 ---
 
-Ab Version 4.5.0 kann QLC+ eine benutzerdefinierte Datei lesen, um das Erscheinungsbild der GUI auf sehr zugängliche Weise zu ändern.  
+Ab Version 4.5.0 kann QLC+ eine benutzerdefinierte Datei lesen, um das Erscheinungsbild der GUI auf sehr zugängliche Weise zu ändern.
 Wenn keine Datei gefunden wird, startet QLC+ mit dem Standardstil.
 
 Die Theme-Stildatei
 -------------------
 
-Der Dateiname ist in QLC+ fest codiert und muss lauten: „qlcplusStyle.qss“.  
-Die Stildatei muss außerdem in einem bestimmten Pfad abgelegt werden:  
+Der Dateiname ist in QLC+ fest codiert und muss lauten: „qlcplusStyle.qss“.
+Die Stildatei muss außerdem in einem bestimmten Pfad abgelegt werden:
 
 * **Linux**: `$HOME/.qlcplus`
 * **Windows**: „C:\\Benutzer\{Benutzername}\QLC+“.
 * **OSX**: `$HOME/Library/Application\\ Support/QLC+`
 
-Die Theme-Datei ist in Abschnitte unterteilt. Jeder Abschnitt stellt die UI-Elemente dar, die beim Ausführen von QLC+ geändert werden. Unveränderte Abschnitte können weggelassen werden.  
-Abschnitte beginnen mit einer Reihe von „===“-Zeichen und dem Abschnittsnamen.  
-Derzeit werden folgende Abschnittsschlüsselwörter unterstützt:  
+Die Theme-Datei ist in Abschnitte unterteilt. Jeder Abschnitt stellt die UI-Elemente dar, die beim Ausführen von QLC+ geändert werden. Unveränderte Abschnitte können weggelassen werden.
+Abschnitte beginnen mit einer Reihe von „===“-Zeichen und dem Abschnittsnamen.
+Derzeit werden folgende Abschnittsschlüsselwörter unterstützt:
 ```
 ============== MAIN
 ============== SIMPLE_DESK_NONE
@@ -33,18 +33,18 @@ Derzeit werden folgende Abschnittsschlüsselwörter unterstützt:
 ============== CONSOLE_CHANNEL_COMMON
 ```
 
-Der Abschnittsinhalt muss eine CSS-Syntax haben. Wenn Sie sich mit Webdesign auskennen, dürfte Ihnen die Erstellung dieser Datei sehr leicht fallen!  
-Da die Stildatei eng mit den inneren Qt-Objekten verknüpft ist, möchten Sie möglicherweise die folgenden Artikel lesen, um die Namen der Elemente und die zusätzlichen CSS-Eigenschaften herauszufinden, die das Qt-Team der Standard-CSS-Syntax hinzugefügt hat.  
+Der Abschnittsinhalt muss eine CSS-Syntax haben. Wenn Sie sich mit Webdesign auskennen, dürfte Ihnen die Erstellung dieser Datei sehr leicht fallen!
+Da die Stildatei eng mit den inneren Qt-Objekten verknüpft ist, möchten Sie möglicherweise die folgenden Artikel lesen, um die Namen der Elemente und die zusätzlichen CSS-Eigenschaften herauszufinden, die das Qt-Team der Standard-CSS-Syntax hinzugefügt hat.
 [Qt-Stylesheets](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)
-[Beispiele für Qt-Stylesheets](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
+[Beispiele für Qt-Stylesheets](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)
 Es bleibt Ihrer Fantasie überlassen, wie Sie das Erscheinungsbild der QLC+-GUI am liebsten anpassen möchten! Wenn Sie einen Stil finden, der es wert ist, geteilt zu werden, vergessen Sie nicht, Ihren Beitrag einzusenden, indem Sie ihn online im [QLC+-Forum](https://www.qlcplus.org/forum/viewforum.php?f=5) veröffentlichen.
 
-Bitte beachten Sie: Nicht alle Stile können über das Stylesheet geändert werden, da sie in C++ fest codiert sind. 
+Bitte beachten Sie: Nicht alle Stile können über das Stylesheet geändert werden, da sie in C++ fest codiert sind.
 
 Beispiel für den dunkelblauen QLC+-Stil
 --------------
 
-Um Ihnen ein Beispiel dafür zu geben, wie einfach dieser Vorgang ist, finden Sie hier einen bläulich-dunklen Stil für QLC+.  
+Um Ihnen ein Beispiel dafür zu geben, wie einfach dieser Vorgang ist, finden Sie hier einen bläulich-dunklen Stil für QLC+.
 Wenn Sie die folgenden Zeilen wie oben erläutert an der richtigen Stelle in „qlcplusStyle.qss“ kopieren, werden Sie beim nächsten Start sehen, dass sie auf QLC+ angewendet werden.
 ```
 ============== MAIN
