@@ -10,7 +10,9 @@ media_order: 'fixture_editor_physical.png,fixture_editor_aliases.png,fixture_edi
 
 # Fixture-Definitionseditor
 
-Der Fixture Definition Editor ist eine separate Anwendung, die zusammen mit QLC+ zum Erstellen und Ändern von [Fixture-Definitionen](/basics/glossary-and-concepts#fixtures) gebündelt wird. Wenn Sie für jedes Ihrer Lichter eine Gerätedefinition haben, weiß QLC+, wie es diese steuern kann.
+Der Fixture Definition Editor ist eine separate Anwendung, die zusammen mit QLC+ zum Erstellen und Ändern von [Fixture-Definitionen](/basics/glossary-and-concepts#fixtures) gebündelt wird.<br>
+Wenn Sie für jedes Ihrer Lichter eine Gerätedefinition haben, weiß QLC+, wie es diese steuern kann.<br>
+Bitte validieren Sie neu erstellte Gerätedefinitionen mit dem [Online-Gerätedefinitionsvalidator](https://www.qlcplus.org/fixture_validator.php), um sicherzustellen, dass Sie eine korrekte Definition erstellen.<br>
 
 ## Speichern Ihrer Fixture-Definitionen
 
