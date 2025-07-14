@@ -31,7 +31,7 @@ Es gibt mehrere Möglichkeiten das Problem zu lösen, aber im Grunde ist das Erg
 
 Bitte schauen Sie auf der entsprechenden Seite nach um zu erfahren wie Sie [den Apple FTDI-Treiber deaktivieren](/plugins/disable-apple-serial-vcp-driver)
 
-Andernfalls können Sie das [ENTTEC FTDI Driver Control Tool] herunterladen (https://www.dmxis.com/release/FtdiDriverControl.zip).
+Andernfalls können Sie das [ENTTEC FTDI Driver Control Tool](https://www.dmxis.com/release/FtdiDriverControl.zip) herunterladen.
 Versuchen Sie den Apple-Treiber damit zu aktivieren/deaktivieren.
 
 **Notiz 1: Dies kann das Verhalten anderer USB-Geräte beeinträchtigen. Tun Sie es also nur, wenn Sie wissen was Sie tun!**

@@ -90,7 +90,7 @@ Eine Spur kann auf ![](track-mute.png) Stummschaltung und ![](track-solo.png) So
 Wenn Sie mit der rechten Maustaste auf einen Titel klicken, können Sie ihn nach oben ![](/basics/up.png) oder nach unten ![](/basics/down.png) verschieben, um eine logische Reihenfolge zu erreichen.
 Sobald eine Spur ausgewählt ist, wird ihr [Szeneneditor](/function-manager/scene-editor) unten auf dem Bildschirm angezeigt.
 
-#### 3. Fügen Sie einige [Funktionen] hinzu (/basics/glossary-and-concepts#function)
+#### 3. Fügen Sie einige [Funktionen](/basics/glossary-and-concepts#funktionen) hinzu
 
 Wenn ein Titel aktiviert wurde, können Sie schnell eine ![](/basics/sequence.png) [Sequenz](/basics/glossary-and-concepts#sequenz) oder eine ![](/basics/audio.png) hinzufügen ) [Audio](/basics/glossary-and-concepts#audio) aufrufen, indem Sie auf die Symbolleistenschaltflächen klicken.
 Andernfalls ist es durch Klicken auf die Schaltfläche ![](/basics/edit_add.png) möglich, vorhandene QLC+-Funktionen zu importieren und zur Show-Timeline hinzuzufügen.
