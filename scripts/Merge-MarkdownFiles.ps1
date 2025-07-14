@@ -1,5 +1,5 @@
-param([string]$Lang="EN")
-$Lang = $Lang.ToUpper()
+param([string]$Lang="en")
+$Lang = $Lang.ToLower()
 
 function Update-MarkdownHeadingLevels {
     param (
