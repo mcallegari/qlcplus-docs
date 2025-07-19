@@ -3,7 +3,7 @@ title: 'Parameteroptimierung'
 date: '11:41 22-08-2023'
 ---
 
-In diesem Abschnitt wird erläutert, wie Sie einige QLC+-Parameter, die über die Benutzeroberfläche nicht verfügbar sind, manuell abrufen und anpassen können.  
+In diesem Abschnitt wird erläutert, wie Sie einige QLC+-Parameter, die über die Benutzeroberfläche nicht verfügbar sind, manuell abrufen und anpassen können.
 Denken Sie daran, dass es einen guten Grund dafür gibt, wenn Sie sie nicht über die Benutzeroberfläche ändern können.
 
 > **Warnung: Bearbeiten Sie die Konfigurationsdateien NICHT manuell, es sei denn, Sie wissen, was Sie tun. Jede falsch platzierte Änderung kann zu Programmabstürzen oder unangenehmer Instabilität führen.**
@@ -15,37 +15,37 @@ Denken Sie daran, dass es einen guten Grund dafür gibt, wenn Sie sie nicht übe
 Linux
 -----
 
-Die Konfigurationsdateien befinden sich im $HOME-Verzeichnis Ihres Benutzers im Ordner .config/qlcplus.  
-Hier ist der Schnellbefehl, um von einem Terminal aus darauf zuzugreifen:  
-`cd $HOME/.config/qlcplus`  
+Die Konfigurationsdateien befinden sich im $HOME-Verzeichnis Ihres Benutzers im Ordner .config/qlcplus.
+Hier ist der Schnellbefehl, um von einem Terminal aus darauf zuzugreifen:
+`cd $HOME/.config/qlcplus`
 Sie finden sowohl QLC+- als auch Fixture-Editor-Konfigurationsdateien.
 
 Windows
 -------
 
-Konfigurationsparameter werden in der Windows-Registrierung gespeichert.  
-Um darauf zuzugreifen, führen Sie das Tool „regedit“ aus und suchen Sie nach dem Schlüssel mit dem Namen „qlcplus“.  
+Konfigurationsparameter werden in der Windows-Registrierung gespeichert.
+Um darauf zuzugreifen, führen Sie das Tool „regedit“ aus und suchen Sie nach dem Schlüssel mit dem Namen „qlcplus“.
 Der Schlüssel, in dem die Benutzerkonfiguration gespeichert wird, wird benannt
 `Computer\HKEY_CURRENT_USER\Software\qlcplus\`
 
 macOS
 -------
 
-Konfigurationsdateien befinden sich im $HOME-Verzeichnis Ihres Benutzers im Ordner „Library/Preferences“, der von macOS standardmäßig ausgeblendet ist.  
-Hier ist der Schnellbefehl, um von einem Terminal aus darauf zuzugreifen:  
-`cd $HOME/Library/Preferences`  
-Die QLC+-Konfigurationsdatei heißt „net.sf.Q Light Controller Plus.plist“, während die Konfigurationsdatei des Fixture-Editors „net.sf.Fixture Definition Editor.plist“ heißt.  
-  
-**Bitte beachten Sie, dass die Einstellungen zwischengespeichert werden!**  
-Grundsätzlich lädt macOS beim Booten alle Plist-Dateien im Speicher, und wenn Sie sie manuell ändern, werden die Änderungen ignoriert. Schlimmer noch: Die Dateien werden regelmäßig aktualisiert, sodass Ihre Änderungen überschrieben werden.  
-Die Lösung besteht darin, nach dem Ändern einer .plist-Datei ein Terminal zu öffnen und Folgendes einzugeben:  
-`killall -u yourusername cfprefsd`  
+Konfigurationsdateien befinden sich im $HOME-Verzeichnis Ihres Benutzers im Ordner „Library/Preferences“, der von macOS standardmäßig ausgeblendet ist.
+Hier ist der Schnellbefehl, um von einem Terminal aus darauf zuzugreifen:
+`cd $HOME/Library/Preferences`
+Die QLC+-Konfigurationsdatei heißt „net.sf.Q Light Controller Plus.plist“, während die Konfigurationsdatei des Fixture-Editors „net.sf.Fixture Definition Editor.plist“ heißt.
+
+**Bitte beachten Sie, dass die Einstellungen zwischengespeichert werden!**
+Grundsätzlich lädt macOS beim Booten alle Plist-Dateien im Speicher, und wenn Sie sie manuell ändern, werden die Änderungen ignoriert. Schlimmer noch: Die Dateien werden regelmäßig aktualisiert, sodass Ihre Änderungen überschrieben werden.
+Die Lösung besteht darin, nach dem Ändern einer .plist-Datei ein Terminal zu öffnen und Folgendes einzugeben:
+`killall -u yourusername cfprefsd`
 Dabei ist „IhrBenutzername“ der Name des Benutzers, den Sie für den Zugriff auf Ihren Mac verwenden. Der Befehl zwingt macOS dazu, die Einstellungen einschließlich Ihrer Änderungen neu zu laden.
 
 ## Konfiguration zurücksetzen
 <hr>
 
-Manchmal kann es notwendig sein, die QLC+-Konfiguration zurückzusetzen und QLC+ in den Zustand „Werkseinstellungen“ zu versetzen.  
+Manchmal kann es notwendig sein, die QLC+-Konfiguration zurückzusetzen und QLC+ in den Zustand „Werkseinstellungen“ zu versetzen.
 Suchen Sie dazu die Konfiguration wie im ersten Absatz beschrieben und gehen Sie dann wie folgt vor:
 
 * Unter Linux und OSX verwenden Sie den Befehl „rm 'filename‘“, um die Konfigurationsdatei zu löschen
@@ -88,7 +88,7 @@ Parameter werden in einer Nur-Text-Datei gespeichert, die Sie mit einem Nur-Text
 
 Höchstwahrscheinlich werden Sie die folgenden Parameter in einer Standard-QLC+-Konfiguration nicht finden. Um sie wirksam zu machen, müssen Sie sie am Ende Ihrer Konfigurationsdatei **hinzufügen**.
 
-### 1. Einfacher Schreibtisch
+### 1. Einfache Oberfläche
 
 **Kategorie:** `simpledesk`<br>
 **Name:** `channelsperpage`<br>
@@ -102,7 +102,7 @@ Höchstwahrscheinlich werden Sie die folgenden Parameter in einer Standard-QLC+-
 **Beschreibung:** Legen Sie die Anzahl der pro Seite angezeigten Wiedergabeschieberegler fest<br>
 **Standard:** 15<br>
 
-### 2. DMX USB Enttec Offene Kanalnummer
+### 2. DMX USB Enttec Open Kanalanzahl
 
 **Kategorie:** `enttecdmxusbopen`<br>
 **Name:** `Kanäle`<br>

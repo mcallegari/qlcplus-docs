@@ -3,7 +3,7 @@ title: 'Audio-Editor'
 date: '04:32 22-08-2023'
 ---
 
-Der Audio-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio)-Funktionen verwendet.  
+Der Audio-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio)-Funktionen verwendet.
 Es bietet grundlegende Steuerelemente und zeigt Informationen über die angehängte Audiodatei an.
 
 Controls

@@ -106,7 +106,7 @@ So, now we add this support function to the script:
 
 ### rgbMap(width, height, rgb, step)
 
-This function is the actual brains of the script. It produces two-dimensional arrays whose size MUST be **height** times **width**. I.e. the array returned from this function must contain **height** items and each of these items must be an array that contains **width** items that must be 32bit integers, representing an RGB color as understood by [QRgb](https://doc.qt.io/qt-5/qcolor.html#QRgb-typedef) without alpha channel (0x00RRGGBB). The **rgb** parameter is an integer-representation of the color selected by user in the [RGB Matrix Editor](../rgb-matrix-editor). The **step** parameter tells the step number requested by the RGB Matrix function and is guaranteed to be within (0, rgbMapStepCount(w, h) - 1).
+This function is the actual brains of the script. It produces two-dimensional arrays whose size MUST be **height** times **width**. I.e. the array returned from this function must contain **height** items and each of these items must be an array that contains **width** items that must be 32bit integers, representing an RGB color as understood by [QRgb](https://doc.qt.io/archives/qt-5.15/qcolor.html#QRgb-typedef) without alpha channel (0x00RRGGBB). The **rgb** parameter is an integer-representation of the color selected by user in the [RGB Matrix Editor](../rgb-matrix-editor). The **step** parameter tells the step number requested by the RGB Matrix function and is guaranteed to be within (0, rgbMapStepCount(w, h) - 1).
 
 **Parameters:**
 

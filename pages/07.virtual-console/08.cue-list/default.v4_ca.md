@@ -5,7 +5,7 @@ date: '03:34 22-08-2023'
 
 Una Llista Cue proporciona una llista de [Funcions](/basics/glossary-and-concepts#funcions) que podeu passar amb una sola tecla de teclat. La Llista Cue està dissenyada per a representacions teatrals on l'operador d'il·luminació només ha de seguir el guió i commutar el següent punt a mesura que l'actuació continua.
 
-La primera columna de la Llista Cue mostra el número de cue que va de l'1 a l'infinit i més enllà de[*](https://en.wikipedia.org/wiki/Buzz_Lightyear). La segona columna mostra el nom de la [Funció](/basics/glossary-and-concepts#funcions) individual que s'ha assignat a aquesta cue en particular.
+La primera columna de la Llista Cue mostra el número de cue que va de l'1 a l'infinit i més enllà de[*](https://ca.wikipedia.org/wiki/Buzz_Lightyear). La segona columna mostra el nom de la [Funció](/basics/glossary-and-concepts#funcions) individual que s'ha assignat a aquesta cue en particular.
 
 **Tingueu en compte** que només els [Chasers](/basics/glossary-and-concepts#chaser) es poden assignar a una llista de Cue, per la senzilla raó que el Chaser és l'única funció amb una durada. Com que qualsevol altra funció es pot afegir com a pas a un Chaser amb l'editor de Chaser [](/function-manager/chaser-editor), és senzill crear els Cues desitjats barrejant [Escenes](/basics/glossary-and-concepts#escena), [Col·leccions](/basics/glossary-and-concepts#colleccio), i així successivament...
 

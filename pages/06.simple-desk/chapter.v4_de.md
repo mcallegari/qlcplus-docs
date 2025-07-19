@@ -14,19 +14,19 @@ taxonomy:
 
 # Einfache Arbeitsoberfläche
 
-Das einfache Pult emuliert eine typische Lichtkonsole, die ein vollständiges 512-Kanal-DMX-Universum mit mehreren Cue-Stacks steuern kann, die mit Wiedergabe-Schiebereglern bedient werden.  
-Der einfache Schreibtisch ist in zwei Hauptbereiche unterteilt: **Kanäle** (oberer Bereich) und **Hinweise** (unterer Bereich).  
-Der Kanalbereich spiegelt genau den aktuellen Status jedes DMX-Kanals jedes Universums wider. Wenn Kanäle gesteuert werden, ohne dass ein Projekt geladen ist, können Benutzer sie vollständig manuell steuern.  
-Wenn ein Projekt geladen ist, überschreibt das Verschieben eines Simple-Desk-Kanals alle anderen QLC+-Funktionen, die versuchen, diesen Kanal zu steuern. Eine visuelle Anzeige färbt den Hintergrund des Kanals rot und informiert den Benutzer darüber, dass Simple Desk nun die vollständige Kontrolle darüber hat.  
-Dies ist in einigen Live-Umständen sehr nützlich, in denen eine laufende Funktion eine manuelle Anpassung erfordert.  
-Um Simple Desk von übergeordneten Kanälen zu „deaktivieren“, klicken Sie einfach auf die Schaltfläche „Zurücksetzen“. Durch das Zurücksetzen von Kanälen werden diese entweder auf Null oder auf den zuvor durch eine Funktion festgelegten Wert zurückgesetzt.  
-  
-Cues arbeitet getrennt von anderen QLC+-Komponenten. Beispielsweise sind Hinweise innerhalb des Hinweisstapels im [Funktionsmanager](/function-manager) nicht sichtbar und [Szenen](/basics/glossary-and-concepts#scene) sind im Hinweisstapel nicht sichtbar.
+Das einfache Pult emuliert eine typische Lichtkonsole, die ein vollständiges 512-Kanal-DMX-Universum mit mehreren Cue-Stacks steuern kann, die mit Wiedergabe-Schiebereglern bedient werden.
+Der einfache Schreibtisch ist in zwei Hauptbereiche unterteilt: **Kanäle** (oberer Bereich) und **Hinweise** (unterer Bereich).
+Der Kanalbereich spiegelt genau den aktuellen Status jedes DMX-Kanals jedes Universums wider. Wenn Kanäle gesteuert werden, ohne dass ein Projekt geladen ist, können Benutzer sie vollständig manuell steuern.
+Wenn ein Projekt geladen ist, überschreibt das Verschieben eines Simple-Desk-Kanals alle anderen QLC+-Funktionen, die versuchen, diesen Kanal zu steuern. Eine visuelle Anzeige färbt den Hintergrund des Kanals rot und informiert den Benutzer darüber, dass Simple Desk nun die vollständige Kontrolle darüber hat.
+Dies ist in einigen Live-Umständen sehr nützlich, in denen eine laufende Funktion eine manuelle Anpassung erfordert.
+Um Simple Desk von übergeordneten Kanälen zu „deaktivieren“, klicken Sie einfach auf die Schaltfläche „Zurücksetzen“. Durch das Zurücksetzen von Kanälen werden diese entweder auf Null oder auf den zuvor durch eine Funktion festgelegten Wert zurückgesetzt.
+
+Cues arbeitet getrennt von anderen QLC+-Komponenten. Beispielsweise sind Hinweise innerhalb des Hinweisstapels im [Funktionsmanager](/function-manager) nicht sichtbar und [Szenen](/basics/glossary-and-concepts#szene) sind im Hinweisstapel nicht sichtbar.
 
 Kontrollen – Universum
 -------------------
 
-Die Universumsbox enthält die Schieberegler, mit denen einzelne DMX-Kanäle im ersten DMX-Universum gesteuert werden. Da 512 Slider nicht gleichzeitig gut auf den Bildschirm passen, wurden sie in Seiten unterteilt. Standardmäßig enthält jede Seite 32 Schieberegler, die jedoch [abgestimmt] werden können (#tuning).
+Die Universumsbox enthält die Schieberegler, mit denen einzelne DMX-Kanäle im ersten DMX-Universum gesteuert werden. Da 512 Slider nicht gleichzeitig gut auf den Bildschirm passen, wurden sie in Seiten unterteilt. Standardmäßig enthält jede Seite 32 Schieberegler, die jedoch [abgestimmt](#feinabstimmung) werden können.
 
 |     |     |
 | --- | --- |
@@ -35,7 +35,7 @@ Die Universumsbox enthält die Schieberegler, mit denen einzelne DMX-Kanäle im 
 | **Universum-Seitenbox** | Zeigt die aktuelle DMX-Seite an. Sie können zu einer Seite springen, indem Sie die Seitenzahl direkt in dieses Feld eingeben oder das Mausrad verwenden, um schnell zwischen den Seiten zu springen. |
 | ![](/basics/forward.png) | Springen Sie zur nächsten DMX-Seite. |
 | ![](/basics/fileclose.png) | Setzen Sie alle DMX-Schieberegler auf Null oder den zuvor durch eine Funktion festgelegten Wert zurück. |
-| **GM** | Der [Großmeister](/basics/glossary-and-concepts#grand-master) |
+| **GM** | Der [Masterregler](/basics/glossary-and-concepts#masterregler) |
 
 Steuerelemente – Wiedergabe
 -------------------
@@ -62,9 +62,9 @@ Das Cue-Stack-Feld zeigt den Inhalt der aktuell ausgewählten Wiedergabe.
 | ![](/basics/record.png) | Zeichnen Sie einen neuen Cue auf und übernehmen Sie dessen Inhalt aus den aktuellen DMX-Schiebereglerwerten. |
 | **Cue-Stapel** | Dieses Feld zeigt den Inhalt des Cue-Stapels der aktuell ausgewählten Wiedergabe zusammen mit der Indexnummer (1, 2, 3...), der Einblendgeschwindigkeit, der Ausblendgeschwindigkeit, der Dauer und einem optionalen Namen für jeden Cue an.<br>< br>Sie können die Cue-Reihenfolge ändern, indem Sie die Cues übereinander ziehen, entweder einzeln oder mehrere Cues gleichzeitig. |
 
-[](#Tuning)
+[](#feinabstimmung)
 
-Abstimmung
+Feinabstimmung
 ------
 
-Weitere Informationen finden Sie im Abschnitt [Manuelle Parameteroptimierung](/advanced/parameters-tuning#1-simple-desk) Simple Desk
+Weitere Informationen finden Sie im Abschnitt [Manuelle Parameteroptimierung](/advanced/parameters-tuning#1-einfache-oberfläche) Simple Desk
