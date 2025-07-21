@@ -69,8 +69,8 @@ runs:
       shell: bash
       env:
         DOC_LANG: ${{ inputs.lang }}
+        TRANSLATIONS_FILE: ./scripts/titlepage_translations.json
       run: |
-        TRANSLATIONS_FILE=./scripts/titlepage_translations.json
         python3 - <<'PY' >> "$GITHUB_ENV"
         import json, os
         path = os.environ['TRANSLATIONS_FILE']
