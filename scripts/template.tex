@@ -46,13 +46,13 @@
         % Conditional release rendering
         \ifx\release\empty
         \else
-            {\Huge \textit{Release: $release$}} \\
+            {\Huge \textit{$release_prefix$ $release$}} \\
         \fi
         \vfill
         % Custom "Written by..." message above the author
         \ifx\author\empty
         \else
-            {\Large \textit{Written by... you!}} \\  % Custom message
+            {\Large \textit{$written_by$}} \\  % Custom message
             {\Large $author$} \\  % Author's name
         \fi
         \vfill
