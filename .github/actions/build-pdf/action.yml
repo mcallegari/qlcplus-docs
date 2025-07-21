@@ -59,27 +59,27 @@ runs:
       run: |
         RELEASE=$(gh release view --json tagName --jq .tagName || echo "")
         echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
-  - name: Put current date into a variable
-    shell: bash
-    run: echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
-  - name: Load title page translations
-    shell: bash
-    env:
-      DOC_LANG: ${{ inputs.lang }}
-    run: |
-      TRANSLATIONS_FILE=./scripts/titlepage_translations.json
-      python3 - <<'PY' >> "$GITHUB_ENV"
-import json, os
-file = os.environ['TRANSLATIONS_FILE']
-lang = os.environ.get('DOC_LANG', 'en')
-with open(file) as f:
-    data = json.load(f)
-default = data.get('en', {})
-trans = data.get(lang, default)
-for key in ['title', 'subtitle', 'author', 'written_by', 'release_prefix']:
-    val = trans.get(key, default.get(key, ''))
-    print(f"{key.upper()}={val}")
-PY
+    - name: Put current date into a variable
+      shell: bash
+      run: echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
+    - name: Load title page translations
+      shell: bash
+      env:
+        DOC_LANG: ${{ inputs.lang }}
+      run: |
+        TRANSLATIONS_FILE=./scripts/titlepage_translations.json
+        python3 - <<'PY' >> "$GITHUB_ENV"
+        import json, os
+        file = os.environ['TRANSLATIONS_FILE']
+        lang = os.environ.get('DOC_LANG', 'en')
+        with open(file) as f:
+            data = json.load(f)
+        default = data.get('en', {})
+        trans = data.get(lang, default)
+        for key in ['title', 'subtitle', 'author', 'written_by', 'release_prefix']:
+            val = trans.get(key, default.get(key, ''))
+            print(f"{key.upper()}={val}")
+        PY
     - name: Build PDF
       uses: docker://pandoc/extra
       with:
