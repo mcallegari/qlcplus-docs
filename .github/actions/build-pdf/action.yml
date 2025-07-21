@@ -55,9 +55,12 @@ runs:
       id: get_release
       shell: bash
       env:
-        GH_TOKEN:  ${{ github.token }}
+        GH_TOKEN: ${{ github.token }}
       run: |
-        RELEASE=$(gh release view --json tagName --jq .tagName || echo "")
+        RELEASE=$(gh release view --json tagName --jq .tagName 2>/dev/null || true)
+        if [ -z "$RELEASE" ]; then
+          RELEASE="0.0.0-dev"
+        fi
         echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
     - name: Put current date into a variable
       shell: bash
@@ -70,9 +73,9 @@ runs:
         TRANSLATIONS_FILE=./scripts/titlepage_translations.json
         python3 - <<'PY' >> "$GITHUB_ENV"
         import json, os
-        file = os.environ['TRANSLATIONS_FILE']
+        path = os.environ['TRANSLATIONS_FILE']
         lang = os.environ.get('DOC_LANG', 'en')
-        with open(file) as f:
+        with open(path) as f:
             data = json.load(f)
         default = data.get('en', {})
         trans = data.get(lang, default)
