@@ -55,29 +55,34 @@ runs:
       id: get_release
       shell: bash
       env:
-        GH_TOKEN:  ${{ github.token }}
+        GH_TOKEN: ${{ github.token }}
       run: |
-        RELEASE=$(gh release view --json tagName --jq .tagName || echo "")
+        RELEASE=$(gh release view --json tagName --jq .tagName 2>/dev/null || true)
+        if [ -z "$RELEASE" ]; then
+          RELEASE="0.0.0-dev"
+        fi
         echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
     - name: Put current date into a variable
       shell: bash
       run: echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
-      - name: Load title page translations
-        shell: bash
-        env:
-          DOC_LANG: ${{ inputs.lang }}
-          run: |
-            FILE=./scripts/titlepage_translations.json
-            TITLE=$(jq -r --arg l "$DOC_LANG" '.[$l].title // .en.title' "$FILE")
-            SUBTITLE=$(jq -r --arg l "$DOC_LANG" '.[$l].subtitle // .en.subtitle' "$FILE")
-            AUTHOR=$(jq -r --arg l "$DOC_LANG" '.[$l].author // .en.author' "$FILE")
-            WRITTEN_BY=$(jq -r --arg l "$DOC_LANG" '.[$l].written_by // .en.written_by' "$FILE")
-            RELEASE_PREFIX=$(jq -r --arg l "$DOC_LANG" '.[$l].release_prefix // .en.release_prefix' "$FILE")
-            echo "TITLE=$TITLE" >> $GITHUB_ENV
-            echo "SUBTITLE=$SUBTITLE" >> $GITHUB_ENV
-            echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
-            echo "WRITTEN_BY=$WRITTEN_BY" >> $GITHUB_ENV
-            echo "RELEASE_PREFIX=$RELEASE_PREFIX" >> $GITHUB_ENV
+    - name: Load title page translations
+      shell: bash
+      env:
+        DOC_LANG: ${{ inputs.lang }}
+        TRANSLATIONS_FILE: ./scripts/titlepage_translations.json
+      run: |
+        python3 - <<'PY' >> "$GITHUB_ENV"
+        import json, os
+        path = os.environ['TRANSLATIONS_FILE']
+        lang = os.environ.get('DOC_LANG', 'en')
+        with open(path) as f:
+            data = json.load(f)
+        default = data.get('en', {})
+        trans = data.get(lang, default)
+        for key in ['title', 'subtitle', 'author', 'written_by', 'release_prefix']:
+            val = trans.get(key, default.get(key, ''))
+            print(f"{key.upper()}={val}")
+        PY
     - name: Build PDF
       uses: docker://pandoc/extra
       with:
