@@ -10,7 +10,7 @@ QLC+ ist eine leistungsstarke und benutzerfreundliche Software für die Lichtste
 
 Sie können QLC+ auf Linux, Windows (10+), macOS (10.13+) und dem Raspberry Pi verwenden.
 
-### Was bedeutet "Open Source"?
+### Was bedeutet „Open Source“?
 Open Source bedeutet, dass QLC+ in öffentlicher Zusammenarbeit entwickelt wird. Der Quellcode von QLC+ ist für jedermann zugänglich und das Ändern und Verteilen frei verfügbar. Dieser Ansatz fördert die Innovationen durch gemeinsame Problemlösung. Benutzer aus der ganzen Welt tragen zu der Entwicklung bei und stellen so sicher, dass QLC+ sich kontinuierlich weiterentwickeln und verbessert werden kann.
 
 ### Warum sollte dennoch gespendet werden?

@@ -176,11 +176,11 @@ Eine output line ist eine von einer Hardware oder einem Netzwerk bereitgestellte
 
 ### Eingangsprofile
 
-Eingabeprofile können als eine Art ​​von [Fixtures'](#Fixtures) betrachtet werden. Sie enthalten Informationen zu bestimmten Geräten, die Eingabedaten erzeugen. Ein Eingabegerät kann zum Beispiel ein Slider-Board wie das Behringer BCF-2000, KORG nanoKONTROL, ein Enttec Playback Wing usw. sein.
+Eingabeprofile können als eine Art ​​von [Fixtures'](#fixtures) betrachtet werden. Sie enthalten Informationen zu bestimmten Geräten, die Eingabedaten erzeugen. Ein Eingabegerät kann zum Beispiel ein Slider-Board wie das Behringer BCF-2000, KORG nanoKONTROL, ein Enttec Playback Wing usw. sein.
 
 ### LTP (Latest Takes Precedence)
 
-LTP ist eine Regel die entscheidet, an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#Funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen wird es für Kanäle verwendet, die anderen Gruppen als der **Intensität**-Gruppe zugewiesen wurden, wie z. B. Schwenken, Neigen, Gobo, Strobe-Geschwindigkeit und andere intelligente Geräteparameter.
+LTP ist eine Regel die entscheidet, an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen wird es für Kanäle verwendet, die anderen Gruppen als der **Intensität**-Gruppe zugewiesen wurden, wie z. B. Schwenken, Neigen, Gobo, Strobe-Geschwindigkeit und andere intelligente Geräteparameter.
 
 Die LTP-Regel ist einfach: Die neueste Ebene, die von einer Funktion oder einem Widget einer virtuellen Konsole festgelegt wurde, wird an das DMX-Universum gesendet.
 
