@@ -29,7 +29,7 @@ Das Widget wird wie folgt angezeigt:
 
 ### Betrieb
 
-Das Schnellwahlrad selbst sieht genauso aus und funktioniert genauso wie die Schnellwahlräder in verschiedenen Funktionseditoren: In der Mitte befindet sich ein **großes Rad (2)**, das die Zeit verlängert, wenn es im Uhrzeigersinn gedreht wird, und verkürzt, wenn es gegen den Uhrzeigersinn gedreht wird . Die Schaltflächen „Plus“ ![](/basics/edit_add.png) und „Minus“ ![](/basics/edit_remove.png) **(1)** sind eine alternative Möglichkeit, die Geschwindigkeit anzupassen.
+Das Schnellwahlrad selbst sieht genauso aus und funktioniert genauso wie die Schnellwahlräder in verschiedenen Funktionseditoren: In der Mitte befindet sich ein **großes Rad (2)**, das die Zeit verlängert, wenn es im Uhrzeigersinn gedreht wird, und verkürzt, wenn es gegen den Uhrzeigersinn gedreht wird. Die Schaltflächen „Plus“ ![](/basics/edit_add.png) und „Minus“ ![](/basics/edit_remove.png) **(1)** sind eine alternative Möglichkeit, die Geschwindigkeit anzupassen.
 
 Der **aktuelle Zeitwert** **(4)** wird in vier Teilen angezeigt. Wenn Sie auf eines dieser Felder klicken, erhöhen/verringern das Wählrad und die Plus-/Minus-Tasten diese Zeiteinheit. Anstelle des Drehrads/der Tasten kann auch das Mausrad verwendet werden und die Felder akzeptieren auch Werte, die über den Ziffernblock eingegeben werden.
 
