@@ -57,9 +57,9 @@ Sie können jeden dieser Ordner von einem Terminal aus mit dem Befehl „cd“ e
 Bitte beachten Sie, dass im Benutzerordner gefundene Geräte und Eingabeprofile Vorrang haben
 die gleichen Dateien im QLC+-Systemordner.
 
-Sie können auch benutzerdefinierte [Fixture-Definitionen] (/basics/glossary-and-concepts#fixtures) und speichern
-[Eingabeprofile](/input-output/input-profiles) im selben Ordner wie Ihr Projekt, findet QLC+
-sie, wenn Sie das Projekt öffnen.
+Sie können benutzerdefinierte [Fixture-Definitionen](/basics/glossary-and-concepts#fixtures) und
+[Eingabeprofile](/input-output/input-profiles) auch im selben Ordner wie Ihr Projekt speichern,
+findet QLC+ sie, wenn Sie das Projekt öffnen.
 
 #### Frage #5: Wo befindet sich der QLC+-Systemordner in meinem System?
 
