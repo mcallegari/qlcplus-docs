@@ -58,7 +58,8 @@ You can reach any of these folders from a terminal with the `cd` command. For ex
 Please keep in mind that fixtures and input profiles found in the user folder will have precedence over
 the same files in the QLC+ system folder. 
 
-You can also save custom [Fixture Definitions](/basics/glossary-and-concepts#fixtures) in the same folder as your project, QLC+ will find
+You can also save custom [Fixture Definitions](/basics/glossary-and-concepts#fixtures) and
+[Input Profiles](/input-output/input-profiles) in the same folder as your project, QLC+ will find
 them when you open that project.
 
 #### Question #5: Where is the QLC+ system folder located in my system?
