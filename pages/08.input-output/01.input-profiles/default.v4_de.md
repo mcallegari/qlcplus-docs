@@ -123,6 +123,7 @@ Ein Name für die erstellte Farbe. Z.B. „Blau“
 
 ### MIDI-Kanäle
 Einige Controller ermöglichen die Zuordnung verschiedener Kanäle zu unterschiedlichen Anzeigemodi für Feedbackfarben. Der AKAI APC Mini MK2 ermöglicht beispielsweise die folgenden Kanäle/Modi:
+
 ![](/input-output/input-profile-midi-channels.png)
 
 # Zurück zum Eingabeprofil-Definitionsfenster

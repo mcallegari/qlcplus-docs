@@ -37,9 +37,10 @@ Anforderungen
 ### Linux
 
 Auf allen Linux-Distributionen müssen Sie libftdi installieren. Wenn Sie QLC+ mit dem Ubuntu Software Center oder einem anderen automatischen Installationstool installieren, wird diese Bibliothek automatisch für Sie installiert.
-In manchen Fällen, wenn das Gerät nichts ausgibt, kann es sinnvoll sein, Ihren Benutzer mit dem folgenden Befehl zur Gruppe „Dialout“ hinzuzufügen:
-
+In manchen Fällen, wenn das Gerät nichts ausgibt, kann es sinnvoll sein, Ihren Benutzer mit dem folgenden Befehl zur Gruppe „dialout“ hinzuzufügen:
+```
 sudo adduser your\_user\_name dialout
+```
 
 ### macOS
 

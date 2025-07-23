@@ -64,7 +64,7 @@ Das Bearbeiten eines Kopfes ist sehr einfach: Setzen Sie ein Häkchen bei jedem 
 
 |     |     |
 | --- | --- |
-| **Senderliste** | Zeigt die Liste aller im aktuellen Modus verfügbaren Fixture-Kanäle an. Kanäle, die einem anderen Kopf zugewiesen wurden, sind deaktiviert und können nicht ausgewählt werden, da jeder Kanal jeweils nur zu einem Kopf gehören kann. |
+| **Kanalliste** | Zeigt die Liste aller im aktuellen Modus verfügbaren Fixture-Kanäle an. Kanäle, die einem anderen Kopf zugewiesen wurden, sind deaktiviert und können nicht ausgewählt werden, da jeder Kanal jeweils nur zu einem Kopf gehören kann. |
 
 ## Registerkarte „Physisch“.
 

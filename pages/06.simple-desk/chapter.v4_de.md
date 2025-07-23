@@ -30,7 +30,7 @@ Die Universumsbox enthält die Schieberegler, mit denen einzelne DMX-Kanäle im 
 
 |     |     |
 | --- | --- |
-| ![](/basics/tabview.png) | Schalten Sie den Ansichtsmodus von allen Kanälen auf Fixture-Kanäle um. Bitte beachten Sie, dass der zweite Modus ein leeres Ergebnis | erzeugt, wenn keine Fixtures definiert wurden
+| ![](/basics/tabview.png) | Schalten Sie den Ansichtsmodus von allen Kanälen auf Fixture-Kanäle um. Bitte beachten Sie, dass der zweite Modus ein leeres Ergebnis erzeugt, wenn keine Fixtures definiert wurden |
 | ![](/basics/back.png) | Zur vorherigen DMX-Seite springen. |
 | **Universum-Seitenbox** | Zeigt die aktuelle DMX-Seite an. Sie können zu einer Seite springen, indem Sie die Seitenzahl direkt in dieses Feld eingeben oder das Mausrad verwenden, um schnell zwischen den Seiten zu springen. |
 | ![](/basics/forward.png) | Springen Sie zur nächsten DMX-Seite. |
@@ -60,7 +60,7 @@ Das Cue-Stack-Feld zeigt den Inhalt der aktuell ausgewählten Wiedergabe.
 | ![](/basics/forward.png) | Springen Sie zum nächsten Cue (oder starten Sie die Wiedergabe beim ersten Cue im Cue-Stapel mit voller Intensität). |
 | ![](/basics/edit.png) | Wechseln Sie in den/vom Cue-Bearbeitungsmodus. Wenn diese Schaltfläche gedrückt wird, können Sie den Inhalt einzelner Cues bearbeiten; Der Inhalt des aktuell aktiven Cues wird auf den DMX-Schiebereglern angezeigt.<br><br>Die Geschwindigkeit des Einblendens, des Ausblendens und die Dauer sowie der Name einzelner Cues können mit den Geschwindigkeitsreglern angepasst werden, die in einem separaten Tool angezeigt werden Fenster. Sie können auch mehrere Cues auswählen, um deren Geschwindigkeit gleichzeitig anzupassen. Die DMX-Schieberegler sind dann jedoch deaktiviert, um zu verhindern, dass Sie versehentlich alle Cue-Inhalte mit denselben Werten überschreiben. |
 | ![](/basics/record.png) | Zeichnen Sie einen neuen Cue auf und übernehmen Sie dessen Inhalt aus den aktuellen DMX-Schiebereglerwerten. |
-| **Cue-Stapel** | Dieses Feld zeigt den Inhalt des Cue-Stapels der aktuell ausgewählten Wiedergabe zusammen mit der Indexnummer (1, 2, 3...), der Einblendgeschwindigkeit, der Ausblendgeschwindigkeit, der Dauer und einem optionalen Namen für jeden Cue an.<br>< br>Sie können die Cue-Reihenfolge ändern, indem Sie die Cues übereinander ziehen, entweder einzeln oder mehrere Cues gleichzeitig. |
+| **Cue-Stapel** | Dieses Feld zeigt den Inhalt des Cue-Stapels der aktuell ausgewählten Wiedergabe zusammen mit der Indexnummer (1, 2, 3...), der Einblendgeschwindigkeit, der Ausblendgeschwindigkeit, der Dauer und einem optionalen Namen für jeden Cue an.<br><br>Sie können die Cue-Reihenfolge ändern, indem Sie die Cues übereinander ziehen, entweder einzeln oder mehrere Cues gleichzeitig. |
 
 [](#feinabstimmung)
 

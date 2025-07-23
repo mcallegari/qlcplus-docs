@@ -21,7 +21,7 @@ Es wird wie folgt angezeigt:
 | **(4) Horizontaler und vertikaler Winkel** | Wenn in den Definitionen der gesteuerten Geräte der richtige Schwenk- und Neigungsbereich eingetragen ist und der Bereich für alle Geräte gleich ist, zeigt dieser Text den aus DMX-Koordinaten berechneten Winkel an.  <br>0 Grad liegt in der Mitte des Bereichs (DMX-Wert 127,127). Wenn der Schwenkbereich für ein Gerät beispielsweise 540 Grad beträgt, liegt der angezeigte Winkel zwischen -270 und 270 Grad.  <br>Hinweis: Dies funktioniert möglicherweise nicht richtig, wenn ein Gerät einen begrenzten Achsenbereich in der Konfiguration oder eine umgekehrte Achse hat. |
 | **(5) Wertschieberegler** | Mit diesen Schiebereglern können Sie den Wert der X/Y-Achsen ändern. |
 | **(6) Griff** | Der blaue Punkt ist der Griff. Sie können es entweder mit der Maus, mit der Tastatur oder einem externen Controller bewegen. |
-| **(7) Arbeitsbereich** | Dies ist der Bereich, der die möglichen Positionen einschränkt. Es kann gleich oder ein Teil von (8) | sein
+| **(7) Arbeitsbereich** | Dies ist der Bereich, der die möglichen Positionen einschränkt. Es kann gleich oder ein Teil von (8) sein |
 | **(8) Hauptbereich** | Dies ist der Bereich, der alle möglichen X/Y-Positionen repräsentiert. |
 | **(9) Voreinstellungen** | In diesem Bereich werden die voreingestellten Schaltflächen angezeigt, sofern verfügbar. |
 
@@ -82,9 +82,9 @@ Die Kopfposition kann mit den Pfeiltasten auf der Tastatur gesteuert werden. Jed
 |     |     |     |
 | --- | --- | --- |
 | **Pfeiltasten** | Grob | Schritt=1 |
-| **Umschalt + Pfeiltasten** | Gut | Schritt=1 |
+| **Umschalt + Pfeiltasten** | Fein | Schritt=1 |
 | **Strg + Pfeiltasten** | Grob | Schritt=10 |
-| **Umschalt + Strg + Pfeiltasten** | Gut | Schritt=10 |
+| **Umschalt + Strg + Pfeiltasten** | Fein | Schritt=10 |
 
 ### Konfiguration
 
@@ -111,7 +111,7 @@ Hier können Sie die Geräte hinzufügen/entfernen, die das XY-Pad in Verwendung
 
 |     |     |
 | --- | --- |
-| **Spielplan** | Zeigt die Fixtures an, die aktuell vom XY-Pad gesteuert werden.<br><br>**Fixture**: Die Namen der einzelnen Fixtures<br>**X-Axis**: Zeigt den Wertebereich (und ggf. die Umkehrung) an. der horizontalen Achse (Pan) für jedes Gerät<br>**Y-Achse**: Zeigt den Wertebereich (und ggf. die Umkehrung) der vertikalen Achse (Tilt) für jedes Gerät | an
+| **Spielplan** | Zeigt die Fixtures an, die aktuell vom XY-Pad gesteuert werden.<br><br>**Fixture**: Die Namen der einzelnen Fixtures<br>**X-Axis**: Zeigt den Wertebereich (und ggf. die Umkehrung) an. der horizontalen Achse (Pan) für jedes Gerät<br>**Y-Achse**: Zeigt den Wertebereich (und ggf. die Umkehrung) der vertikalen Achse (Tilt) für jedes Gerät an |
 | ![](/basics/edit_add.png) | Fügen Sie [Fixtures](/basics/glossary-and-concepts#fixtures) hinzu, die vom XY-Pad gesteuert werden sollen, indem Sie den Dialog [Fixture auswählen](/function-manager/fixture-selection) verwenden.  <br>**HINWEIS**: Im Dialog werden nur Geräte angezeigt, die über Pan- und Tilt-Kanäle verfügen. |
 | ![](/basics/edit_remove.png) | Entfernen Sie die ausgewählten Geräte aus der Kontrollliste des XY-Pads. |
 | ![](/basics/edit.png) | Bearbeiten Sie das Verhalten des ausgewählten Geräts, gesteuert durch das XY-Pad. |
@@ -133,7 +133,7 @@ Hier können Sie Voreinstellungen zum XY-Pad hinzufügen/entfernen. Jede Voreins
 
 |     |     |
 | --- | --- |
-|**Voreinstellungsliste** | Zeigt die Liste der aktuell zum XY-Pad hinzugefügten Voreinstellungen | an
+|**Voreinstellungsliste** | Zeigt die Liste der aktuell zum XY-Pad hinzugefügten Voreinstellungen an |
 | ![](/basics/xypad.png) Position hinzufügen | Wenn Sie auf diese Schaltfläche klicken, wird eine neue Positionsvoreinstellung erstellt und dem XY-Pad hinzugefügt. Standardmäßig sind die voreingestellten Namen die X/Y-Koordinaten zum Zeitpunkt der Erstellung |
 | ![](/basics/efx.png) EFX hinzufügen | Wenn Sie auf diese Schaltfläche klicken, wird das Dialogfeld [Funktion auswählen](/function-manager/fixture-selection) angezeigt, in dem Sie einen vorhandenen EFX aus Ihrem Arbeitsbereich auswählen können.  <br>Wenn Sie fertig sind, wird eine neue EFX-Voreinstellung erstellt und dem XY-Pad hinzugefügt. Standardmäßig ist der voreingestellte Name der EFX-Name |
 | ![](/basics/scene.png) Szene hinzufügen | Wenn Sie auf diese Schaltfläche klicken, wird das Dialogfeld [Funktion auswählen](/function-manager/function-selection) angezeigt, in dem Sie eine vorhandene Szene aus Ihrem Arbeitsbereich auswählen können.  <br>Wenn Sie fertig sind, wird eine neue Szenenvoreinstellung erstellt und dem XY-Pad hinzugefügt. Standardmäßig ist der voreingestellte Name der Szenenname.  <br>Beachten Sie, dass ein Fehler angezeigt und keine Voreinstellung erstellt wird, wenn die ausgewählte Szene keine Pan- oder Tilt-Kanäle hat. |

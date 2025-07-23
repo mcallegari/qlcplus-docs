@@ -27,7 +27,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-f oder --fullscreen**<br><br>**Beschreibung:** Starten Sie die Anwendung im Vollbildmodus<br><br>**Parameter:** Methode (entweder „normal“ oder „Größe ändern“ )<br><br>**Beispiele:** <br>Sagen Sie dem Fenstermanager, dass er QLC+ den gesamten Bildschirmbereich zuweisen soll: <br>qlcplus -f <br>qlcplus --fullscreen <br>qlcplus -f normal < br>qlcplus --fullscreen normal <br> <br>Ändern Sie die Größe von QLC+, um den gesamten Bildschirmbereich einzunehmen (nützlich in benutzerdefinierten X11-Sitzungen ohne Fenstermanager): <br>qlcplus -f resize <br>qlcplus --fullscreen resize |
+| **-f oder --fullscreen**<br><br>**Beschreibung:** Starten Sie die Anwendung im Vollbildmodus<br><br>**Parameter:** Methode (entweder „normal“ oder „Größe ändern“ )<br><br>**Beispiele:** <br>Sagen Sie dem Fenstermanager, dass er QLC+ den gesamten Bildschirmbereich zuweisen soll: <br>qlcplus -f <br>qlcplus --fullscreen <br>qlcplus -f normal <br>qlcplus --fullscreen normal <br> <br>Ändern Sie die Größe von QLC+, um den gesamten Bildschirmbereich einzunehmen (nützlich in benutzerdefinierten X11-Sitzungen ohne Fenstermanager): <br>qlcplus -f resize <br>qlcplus --fullscreen resize |
 
 |     |
 | --- |
@@ -35,11 +35,11 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-h oder --help**<br><br>**Beschreibung:** Befehlszeilenhilfe anzeigen (nur in Linux und OS X)<br><br>**Parameter:** Keine<br ><br>**Beispiele:** <br>Befehlszeilenhilfe anzeigen: <br>qlcplus -h <br>qlcplus --help |
+| **-h oder --help**<br><br>**Beschreibung:** Befehlszeilenhilfe anzeigen (nur in Linux und OS X)<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Befehlszeilenhilfe anzeigen: <br>qlcplus -h <br>qlcplus --help |
 
 |     |
 | --- |
-| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus](/basics/glossary-and-concepts#modi) gesperrt.<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br >qlcplus -k <br>qlcplus --kiosk |
+| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus](/basics/glossary-and-concepts#modi) gesperrt.<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br>qlcplus -k <br>qlcplus --kiosk |
 
 |     |
 | --- |
@@ -51,19 +51,19 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-n oder --nogui**<br><br>**Beschreibung:** Starten Sie die Anwendung mit ausgeblendeter GUI (nur Raspberry Pi)<br><br>**Parameter:** Keine<br><br >**Beispiele:** <br>Starten Sie QLC+ ohne sichtbare GUI: <br>qlcplus -n <br>qlcplus --nogui |
+| **-n oder --nogui**<br><br>**Beschreibung:** Starten Sie die Anwendung mit ausgeblendeter GUI (nur Raspberry Pi)<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie QLC+ ohne sichtbare GUI: <br>qlcplus -n <br>qlcplus --nogui |
 
 |     |
 | --- |
-| **-o oder --open**<br><br>**Beschreibung:** Öffnet die angegebene Arbeitsbereichsdatei<br><br>**Parameter:** Dateiname<br><br>**Beispiele :** <br>Öffnen Sie sample.qxw: <br>qlcplus -o sample.qxw <br>qlcplus --open sample.qxw |
+| **-o oder --open**<br><br>**Beschreibung:** Öffnet die angegebene Arbeitsbereichsdatei<br><br>**Parameter:** Dateiname<br><br>**Beispiele:** <br>Öffnen Sie sample.qxw: <br>qlcplus -o sample.qxw <br>qlcplus --open sample.qxw |
 
 |     |
 | --- |
-| **-p oder --operate**<br><br>**Beschreibung:** Starten Sie die Anwendung im Modus [Operate](/basics/glossary-and-concepts#modi).<br><br>* *Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie QLC+ im Betriebsmodus: <br>qlcplus -p <br>qlcplus --operate |
+| **-p oder --operate**<br><br>**Beschreibung:** Starten Sie die Anwendung im Modus [Operate](/basics/glossary-and-concepts#modi).<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie QLC+ im Betriebsmodus: <br>qlcplus -p <br>qlcplus --operate |
 
 |     |
 | --- |
-| **-v oder --version**<br><br>**Beschreibung:** Zeigt die aktuelle Anwendungsversionsnummer an<br><br>**Parameter:** Keine<br><br>**Beispiele :** <br>qlcplus -v <br>qlcplus --version |
+| **-v oder --version**<br><br>**Beschreibung:** Zeigt die aktuelle Anwendungsversionsnummer an<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>qlcplus -v <br>qlcplus --version |
 
 |     |
 | --- |
@@ -71,7 +71,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-wp oder --web-port**<br><br>**Beschreibung:** Einen bestimmten Port für den Webzugriff verwenden<br><br>**Parameter:** Portnummer<br><br >**Beispiele:** <br>qlcplus -wp 12345 <br>qlcplus --web-port 12345 |
+| **-wp oder --web-port**<br><br>**Beschreibung:** Einen bestimmten Port für den Webzugriff verwenden<br><br>**Parameter:** Portnummer<br><br>**Beispiele:** <br>qlcplus -wp 12345 <br>qlcplus --web-port 12345 |
 
 |     |
 | --- |

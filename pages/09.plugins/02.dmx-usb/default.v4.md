@@ -38,8 +38,9 @@ Requirements
 
 On all Linux distributions, you need to install libftdi. If you install QLC+ with the Ubuntu Software Center or some other automatic installer tool, this library will be installed automatically for you.  
 In some cases, if the device doesn't output anything, it might be useful to add your user to the "dialout" group with the following command:  
-
+```
 sudo adduser your\_user\_name dialout
+```
 
 ### macOS
 

@@ -38,8 +38,9 @@ Requisits
 
 A totes les distribucions de Linux, heu d'instal·lar libftdi. Si instal·leu QLC+ amb l'Ubuntu Software Center o alguna altra eina d'instal·lació automàtica, aquesta biblioteca s'instal·larà automàticament.  
 En alguns casos, si el dispositiu no emet res, pot ser útil afegir el vostre usuari al grup "dialout" amb l'ordre següent:
-
+```
 sudo adduser el\_teu\_nom\_usuari dialout
+```
 
 ### macOS
 

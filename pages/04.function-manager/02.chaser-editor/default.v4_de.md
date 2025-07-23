@@ -21,10 +21,10 @@ Die Timing-Schritte und das Notizfeld können durch Doppelklicken geändert werd
 |     |     |
 | --- | --- |
 | **Name des Verfolgers** | Ändern Sie den Namen des Chasers. |
-| ![](/basics/speed.png) | Ein-/Ausblenden des Kurzwahl-Widgets, das zur einfacheren Abstimmung der Chaser-Parameter wie Einblenden, Ausblenden und Halten | verwendet wird
+| ![](/basics/speed.png) | Ein-/Ausblenden des Kurzwahl-Widgets, das zur einfacheren Abstimmung der Chaser-Parameter wie Einblenden, Ausblenden und Halten verwendet wird |
 | ![](/basics/player_play.png) | Starten Sie den Chaser, um die Wiedergabe ab dem ausgewählten Schritt zu testen |
 | ![](/basics/player_stop.png) | Stoppen Sie eine zuvor gestartete Wiedergabe |
-| ![](/basics/back.png) | Wenn die Wiedergabe aktiv ist, gehen Sie im Chaser | zum vorherigen Schritt
+| ![](/basics/back.png) | Wenn die Wiedergabe aktiv ist, gehen Sie im Chaser zum vorherigen Schritt |
 | ![](/basics/forward.png) | Wenn die Wiedergabe aktiv ist, fahren Sie mit dem nächsten Schritt im Chaser fort |
 | ![](/basics/editcopy.png) | Kopieren Sie die ausgewählten Schritte in die Zwischenablage. |
 | ![](/basics/editpaste.png) | Fügen Sie die zuvor aus der Zwischenablage kopierten Schritte an der aktuell ausgewählten Position ein. Wenn keine vorhanden sind, werden die Schritte am Ende der Liste angehängt |

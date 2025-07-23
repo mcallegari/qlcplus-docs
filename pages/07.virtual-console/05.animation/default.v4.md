@@ -50,4 +50,4 @@ Each custom control is represented as a button in the Animation widget layout an
 | **![](/basics/fileclose.png) Add end color reset** | Add a Matrix end color reset control.  <br>The button displayed in the widget's layout will have a gray background color and when pressed, it will reset the current matrix end color (if previously set) |
 | **![](/basics/script.png) Add preset** | Add a Matrix preset control. When clicking this button, a dialog will be displayed for the preset selection.  <br>The button displayed in the widget's layout will have a gray background color and a label corresponding to the preset's name. |
 | **![](/basics/fonts.png) Add text** | Add a Matrix text animation control. When clicking this button, a dialog will be displayed requiring to enter the desired text to be animated on the Matrix.  <br>The button displayed in the widget's layout will have a gray background color and a label corresponding to the chosen text. |
-| **![](/basics/edit_remove.png) Remove** | Remove the currently selected control from the controls list. |f
+| **![](/basics/edit_remove.png) Remove** | Remove the currently selected control from the controls list. |

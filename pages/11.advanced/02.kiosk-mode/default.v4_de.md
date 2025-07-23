@@ -7,7 +7,7 @@ QLC+ verfügt über einen speziellen Modus, wenn Ihre Beleuchtung von unerfahren
 
 Wenn Sie QLC+ im Kioskmodus starten möchten, führen Sie Folgendes aus:
 
-„qlcplus -k -f -o workspace.qxw -p -c 500,10,32,32“.
+`qlcplus -k -f -o workspace.qxw -p -c 500,10,32,32`.
 
 * **-k** aktiviert den Kioskmodus
 * **-f** versetzt QLC+ in den Vollbildmodus

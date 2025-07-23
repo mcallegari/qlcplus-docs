@@ -9,7 +9,7 @@ Wenn keine Datei gefunden wird, startet QLC+ mit dem Standardstil.
 Die Theme-Stildatei
 -------------------
 
-Der Dateiname ist in QLC+ fest codiert und muss lauten: „qlcplusStyle.qss“.
+Der Dateiname ist in QLC+ fest codiert und muss lauten: `qlcplusStyle.qss`.
 Die Stildatei muss außerdem in einem bestimmten Pfad abgelegt werden:
 
 * **Linux**: `$HOME/.qlcplus`

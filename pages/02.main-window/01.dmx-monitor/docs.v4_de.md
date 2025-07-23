@@ -42,7 +42,7 @@ Derzeit zeigt der Monitor Folgendes an:
 
 * Master-Dimmer
 * R/G/B
-* C/M/J
+* C/M/Y
 * Farbräder, wenn sie RGB-Farbwerte enthalten. Zweifarbige Werte werden nicht unterstützt
 * Shutter, der geöffnet ist, es sei denn, der Funktionsname enthält „close“ oder „blackout“ (Beispiel: „Shutter Close“)
 
@@ -55,11 +55,11 @@ Grafische Elemente können manuell verschoben werden, indem Sie sie über das Ra
 | | |
 | - | - |
 | **DMX-Ansicht** | Durch Klicken auf diese Schaltfläche kann in den DMX-Ansichtsmodus gewechselt werden. |
-| **Rasterabmessungen** | Legen Sie die Breite und Höhe des 2D-Ansichtsrasters fest, indem Sie die in den beiden Drehfeldern | angezeigten Werte ändern
+| **Rasterabmessungen** | Legen Sie die Breite und Höhe des 2D-Ansichtsrasters fest, indem Sie die in den beiden Drehfeldern angezeigten Werte ändern |
 | **Gittereinheiten** | Legen Sie die Maßeinheiten für das 2D-Ansichtsraster fest, indem Sie die gewünschte Einheit aus dem Dropdown-Menü auswählen. Mögliche Optionen sind Meter und Fuß. |
 | ![](/basics/edit_add.png) | Fügen Sie dem 2D-Ansichtsraster eine Vorrichtung hinzu. Wenn Sie auf dieses Symbol klicken, wird der Geräteauswahldialog angezeigt. Bereits zur Ansicht hinzugefügte Geräte werden deaktiviert, da es nicht möglich ist dasselbe Gerät zweimal hinzuzufügen |
 | ![](/basics/edit_remove.png) | Entfernen Sie eine Vorrichtung aus dem 2D-Ansichtsraster. Durch Klicken auf dieses Symbol wird das aktuell ausgewählte Gerät entfernt. Ein ausgewähltes Gerät wird gelb hervorgehoben. |
-| ![](/basics/image.png) | Öffnen Sie den Dialog zur Auswahl des Monitor-Hintergrundbilds.<br>Hier können Sie zwischen drei möglichen Modi wählen:<br><br>**Kein Hintergrund**: Die Monitor-2D-Ansicht hat kein Hintergrundbild<br>* *Gemeinsamer Hintergrund**: In der Monitor-2D-Ansicht wird das ausgewählte Hintergrundbild angezeigt<br>**Benutzerdefinierte Hintergrundliste**: In diesem Modus ist es möglich, ein Hintergrundbild für eine bestimmte QLC+-Funktion auszuwählen.<br>Klicken Sie einfach auf Die ![](/basics/edit_add.png) und ![](/basics/edit_remove.png) Schaltflächen zum Hinzufügen/Entfernen von Funktionen und dem zugehörigen Hintergrundbild zum Monitor. Wenn eine Funktion in dieser Liste gestartet wird, ändert sich das Hintergrundbild der Monitor-2D-Ansicht entsprechend. |
+| ![](/basics/image.png) | Öffnen Sie den Dialog zur Auswahl des Monitor-Hintergrundbilds.<br>Hier können Sie zwischen drei möglichen Modi wählen:<br><br>**Kein Hintergrund**: Die Monitor-2D-Ansicht hat kein Hintergrundbild<br>**Gemeinsamer Hintergrund**: In der Monitor-2D-Ansicht wird das ausgewählte Hintergrundbild angezeigt<br>**Benutzerdefinierte Hintergrundliste**: In diesem Modus ist es möglich, ein Hintergrundbild für eine bestimmte QLC+-Funktion auszuwählen.<br>Klicken Sie einfach auf Die ![](/basics/edit_add.png) und ![](/basics/edit_remove.png) Schaltflächen zum Hinzufügen/Entfernen von Funktionen und dem zugehörigen Hintergrundbild zum Monitor. Wenn eine Funktion in dieser Liste gestartet wird, ändert sich das Hintergrundbild der Monitor-2D-Ansicht entsprechend. |
 | ![](/basics/label.png) | Namen von Fixtures unter ihrer grafischen Darstellung ein-/ausblenden |
 
 ### Fixture Item Editor
@@ -69,8 +69,8 @@ Im Folgenden sind die möglichen Parameter aufgeführt, die angepasst werden kö
 
 | | |
 | - | - |
-| **Horizontale Position** | Legen Sie die Position auf der X-Achse des Rasters mithilfe der Rastermaßeinheiten | fest
-| **Vertikale Position** | Legen Sie die Position auf der Y-Achse des Rasters mithilfe der Rastermaßeinheiten | fest
+| **Horizontale Position** | Legen Sie die Position auf der X-Achse des Rasters mithilfe der Rastermaßeinheiten fest |
+| **Vertikale Position** | Legen Sie die Position auf der Y-Achse des Rasters mithilfe der Rastermaßeinheiten fest |
 | **Rotation** | Legen Sie den Drehwinkel des grafischen Elements fest, das das ausgewählte Gerät darstellt |
 | **Farbgel** | Legen Sie das Farbgel fest, das auf das aktuell ausgewählte Fixture-Element angewendet werden soll. Dies ist nützlich für generische Dimmer mit einer herkömmlichen Glühbirne, die selbst keine Farbe abgeben. Diese Funktion hat keine Auswirkung auf RGB-LED-Leuchten. |
 | ![](/basics/fileclose.png) | Zurücksetzen eines zuvor eingestellten Farbgels |

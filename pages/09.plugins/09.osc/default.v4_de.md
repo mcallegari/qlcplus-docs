@@ -44,6 +44,7 @@ Kanalrechner
 
 Wenn es keine Möglichkeit gibt, eine automatische Erkennung über den Eingabeprofil-Editor eines OSC-Controllers durchzuführen, könnte Ihnen dieses Tool helfen.
 Sie können den **OSC-Pfad** eingeben und QLC+ berechnet die Kanalnummer für Sie. Es handelt sich im Grunde um einen 16-Bit-Hash des Pfads, den QLC+ zur Darstellung einer OSC-Eingabe verwendet.
+
 **Hinweis:** Zwischen dem Rechner und dem, was Sie im Eingabeprofil-Editor sehen, besteht ein Versatz von 1. Dies ist in Ordnung, da Kanäle in QLC+ bei 1 und nicht bei 0 beginnen. Was der Rechner anzeigt, ist die Kanalnummer, die Sie tatsächlich in ein Eingabeprofil oder in Ihren benutzerdefinierten OSC-Controller schreiben müssen.
 
 Controller
