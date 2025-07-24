@@ -66,6 +66,9 @@ If you find a problem but don't have the time to fix it, you can [open an issue]
 1. Open the newly created language-specific `.md` files.
 2. Replace the content with the translated text
 
+### 3. Add translations for the offline PDF title page text
+1. Open [scripts/titlepage_translations.json](scripts/titlepage_translations.json) in your editor
+2. Add your language code and individual translations just like the others.
 </details>
 
 ## Support QLC+
