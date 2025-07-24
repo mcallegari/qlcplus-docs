@@ -11,7 +11,7 @@ Aquest projecte és una bifurcació del gran [projecte QLC](https://qlc.sourcefo
 
 L'objectiu principal és portar QLC+ al nivell d'altres programes comercials de control d'il·luminació.
 
-QLC+ funciona a Linux, Windows (7+), macOS (10.7+) i Raspberry Pi.
+QLC+ funciona a Linux, Windows (10+), macOS (10.13+) i Raspberry Pi.
 
 
 ### Advertiment de seguretat

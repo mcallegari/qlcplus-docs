@@ -8,7 +8,7 @@ taxonomy:
 
 QLC+ is powerful and user-friendly software designed to control lighting. Whether you're an experienced lighting professional or just getting started, QLC+ empowers you to take control of your lighting fixtures with ease. The primary goal of this project is to bring QLC+ to the level of available commercial software. QLC+ represents a community-driven approach to software development, as it is proudly open source.
 
-You can use QLC+ on Linux, Windows (7+), macOS (10.7+) and the Raspberry Pi.
+You can use QLC+ on Linux, Windows (10+), macOS (10.13+) and the Raspberry Pi.
 
 ### What Does "Open Source" Mean?
 Being open source means that QLC+ is developed in a collaborative public manner. The source code of QLC+ is freely available for anyone to view, modify, and distribute. This approach encourages innovation through collective problem-solving. Users from around the world contribute to its development, ensuring that QLC+ is continuously evolving and improving.
