@@ -17,6 +17,10 @@
         <img src="https://img.shields.io/github/issues/mcallegari/qlcplus-docs" /></a>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/" alt="License: CC0-1.0">
         <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" /></a>
+    <a href="https://github.com/mcallegari/qlcplus/commits/master/">
+        <img src="https://img.shields.io/github/commits-since/mcallegari/qlcplus-docs/latest/master" alt="Commits since latest release badge" /></a>
+    <a href="https://github.com/mcallegari/qlcplus/commits/master/">
+        <img src="https://img.shields.io/github/commit-activity/w/mcallegari/qlcplus-docs" alt="Weekly commit activity badge" /></a>
 </p>
 
 
