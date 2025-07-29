@@ -9,18 +9,18 @@
 <p align="center">
     <a href="https://github.com/mcallegari/qlcplus-docs/actions" alt="Workflow">
         <img src="https://github.com/mcallegari/qlcplus-docs/actions/workflows/main.yml/badge.svg" /></a>
+    <a href="https://github.com/mcallegari/qlcplus-docs/issues" alt="Issues">
+        <img src="https://img.shields.io/github/issues/mcallegari/qlcplus-docs" /></a>
+    <a href="https://github.com/mcallegari/qlcplus-docs/commits/main/">
+        <img src="https://img.shields.io/github/commits-since/mcallegari/qlcplus-docs/latest/main" alt="Commits since latest release badge" /></a>
+    <a href="https://github.com/mcallegari/qlcplus-docs/commits/main/">
+        <img src="https://img.shields.io/github/commit-activity/w/mcallegari/qlcplus-docs" alt="Weekly commit activity badge" /></a>
     <a href="https://observatory.mozilla.org/analyze/docs.qlcplus.org" alt="Mozilla HTTP Observatory Grade">
         <img src="https://img.shields.io/mozilla-observatory/grade-score/docs.qlcplus.org?publish" /></a>
     <a href="https://digitalbeacon.co/report/docs-qlcplus-org" alt="Beacon">
         <img src="https://img.shields.io/badge/dynamic/json?color=blue&label=Beacon&query=%24.co2&suffix=%20CO%E2%82%82%2Fview&url=https%3A%2F%2Fdigitalbeacon.co%2Fbadge%3Furl%3Dhttps%253A%252F%252Fdocs.qlcplus.org&cacheSeconds=604800" /></a>
-    <a href="https://github.com/mcallegari/qlcplus-docs/issues" alt="Issues">
-        <img src="https://img.shields.io/github/issues/mcallegari/qlcplus-docs" /></a>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/" alt="License: CC0-1.0">
         <img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" /></a>
-    <a href="https://github.com/mcallegari/qlcplus/commits/master/">
-        <img src="https://img.shields.io/github/commits-since/mcallegari/qlcplus-docs/latest/main" alt="Commits since latest release badge" /></a>
-    <a href="https://github.com/mcallegari/qlcplus/commits/master/">
-        <img src="https://img.shields.io/github/commit-activity/w/mcallegari/qlcplus-docs" alt="Weekly commit activity badge" /></a>
 </p>
 
 
