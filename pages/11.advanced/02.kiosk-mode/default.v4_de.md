@@ -19,4 +19,4 @@ Sie können natürlich Ihre eigene Arbeitsbereichsdatei für **-o** und Größe/
 
 Bei Bedarf können Sie jeden Parameter weglassen. Lassen Sie beispielsweise **-c 500,10,32,32** weg, wenn Sie keine Schaltfläche zum Schließen wünschen, und lassen Sie **-f** weg, wenn Sie dies nicht möchten. Ich möchte keinen Vollbildmodus.
 
-Alle Befehlszeilenparameter werden [hier] beschrieben (../command-line-parameters).
+Alle Befehlszeilenparameter werden [hier](../command-line-parameters) beschrieben.

@@ -4,7 +4,7 @@ date: '03:53 22-08-2023'
 ---
 Farben, Schriftart, Rahmenstil, Stapelreihenfolge, Größe und Platzierung der Widgets können geändert werden, um besser zu Ihrer Vorstellung von der perfekten Lichtkonsole zu passen. Die meisten dieser Optionen, mit Ausnahme des Verschiebens und Änderns der Größe, sind im Menü **Bearbeiten** der virtuellen Konsole verfügbar, d. h., sie können sowohl über die Menüleiste als auch über ein Popup-Menü aufgerufen werden, indem Sie mit der rechten Maustaste auf das gewünschte Widget klicken anpassen.
 
-**HINWEIS:** Die Gestaltungs- und Platzierungsoptionen der Virtual Console-Widgets sind nur verfügbar, wenn sich die Anwendung im [Designmodus](/basics/glossary-and-concepts#modes) befindet.
+**HINWEIS:** Die Gestaltungs- und Platzierungsoptionen der Virtual Console-Widgets sind nur verfügbar, wenn sich die Anwendung im [Designmodus](/basics/glossary-and-concepts#modi) befindet.
 
 ### Widgets verschieben
 

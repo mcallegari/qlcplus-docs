@@ -64,4 +64,4 @@ Compatibilitat
 
 QLC+ ha estat provat amb els següents programaris/dispositius E1.31:
 
-* [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Dispositiu de sortida
+* [DMXKing eDMX2 TX](https://web.archive.org/web/20160103204133/https://dmxking.com/artnetsacn/edmx2-tx-rdm) \- Dispositiu de sortida

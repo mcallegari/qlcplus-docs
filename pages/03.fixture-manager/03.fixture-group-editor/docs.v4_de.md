@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-Der Fixture-Gruppen-Editor wird verwendet, wenn Sie eine [Fixture-Gruppe] (/basics/glossary-and-concepts#fixture-group) im [Fixture-Manager] (/fixture-manager) auswählen. Mit diesem Editor kann die physische Anordnung der [Geräte](/basics/glossary-and-concepts#fixtures) und ihrer [Köpfe](/basics/glossary-and-concepts#head) beschrieben werden, die der Gruppe zugewiesen sind .
+Der Fixture-Gruppen-Editor wird verwendet, wenn Sie eine [Fixture-Gruppe](/basics/glossary-and-concepts#fixture-gruppierung) im [Fixture-Manager](/fixture-manager) auswählen. Mit diesem Editor kann die physische Anordnung der [Geräte](/basics/glossary-and-concepts#fixtures) und ihrer [Köpfe](/basics/glossary-and-concepts#head) beschrieben werden, die der Gruppe zugewiesen sind .
 
 ### Einstellungen
 

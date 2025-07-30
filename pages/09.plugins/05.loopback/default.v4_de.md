@@ -6,7 +6,7 @@ date: '05:14 22-08-2023'
 Einführung
 ------------
 
-Das Loopback-Plugin bietet eine Möglichkeit, Widgets der [Virtual Console](/virtual-console) aus Szenen und anderen [Funktionen](/basics/glossary-and-concepts#functions) zu steuern. Daten, die QLC+ an den Ausgangsport sendet, werden zum Eingangsport zurückgeschleift, wo sie zur externen Steuerung verwendet werden können. Offensichtlich können der Ausgabe-Port und der Eingabe-Port an unterschiedliche Universen angeschlossen sein.
+Das Loopback-Plugin bietet eine Möglichkeit, Widgets der [Virtual Console](/virtual-console) aus Szenen und anderen [Funktionen](/basics/glossary-and-concepts#funktionen) zu steuern. Daten, die QLC+ an den Ausgangsport sendet, werden zum Eingangsport zurückgeschleift, wo sie zur externen Steuerung verwendet werden können. Offensichtlich können der Ausgabe-Port und der Eingabe-Port an unterschiedliche Universen angeschlossen sein.
 
 Das Plugin stellt 4 unabhängige Zeilen zur Verfügung.
 

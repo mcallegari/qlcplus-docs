@@ -23,7 +23,7 @@ When done, type "qlcplus" followed by the parameters you need
 
 |     |
 | --- |
-| **-d or --debug**<br><br>**Description:** Enable debug mode and optionally set the output level. Note that since 4.8.0 messages for level DEBUG (0) are not included in released binaries.<br><br>**Parameters:** Level (see [QtMsgType](https://doc.qt.io/qt-5/qtglobal.html#QtMsgType-enum))<br><br>**Examples:**  <br>Enable debug mode and set debug level to 0:  <br>qlcplus -d  <br>qlcplus --debug  <br>  <br>Enable debug mode and set debug level to 3:  <br>qlcplus -d 3 |
+| **-d or --debug**<br><br>**Description:** Enable debug mode and optionally set the output level. Note that since 4.8.0 messages for level DEBUG (0) are not included in released binaries.<br><br>**Parameters:** Level (see [QtMsgType](https://doc.qt.io/archives/qt-5.15/qtglobal.html#QtMsgType-enum))<br><br>**Examples:**  <br>Enable debug mode and set debug level to 0:  <br>qlcplus -d  <br>qlcplus --debug  <br>  <br>Enable debug mode and set debug level to 3:  <br>qlcplus -d 3 |
 
 |     |
 | --- |

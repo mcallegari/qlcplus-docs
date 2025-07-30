@@ -3,9 +3,9 @@ title: Schieberegler
 date: '03:02 22-08-2023'
 ---
 
-Schieberegler werden für drei verschiedene Zwecke verwendet: 
+Schieberegler werden für drei verschiedene Zwecke verwendet:
 * [Fixture](/basics/glossary-and-concepts#fixtures) Einstellung des Kanalpegels
-* [Funktion](/basics/glossary-and-concepts#functions) Wiedergabe und Intensitätsanpassung
+* [Funktion](/basics/glossary-and-concepts#funktionen) Wiedergabe und Intensitätsanpassung
 * Submaster-Funktionalität<br>
 
 Jeder Schieberegler kann in jedem dieser Modi betrieben werden und jeder Modus verfügt über eigene Konfigurationsoptionen.
@@ -25,7 +25,7 @@ Die Registerkarte „Allgemein“ enthält alle Eigenschaften des Schiebereglers
 | **Wertanzeigestil** | **Aktuell**: Aktuelle DMX-Werte (0-255) anzeigen<br>**Prozentsatz**: Prozentwerte anzeigen (0-100%) |
 | **Schieberbewegung** | **Normal**: Die Werte nehmen nach oben hin zu und nach unten hin ab.<br>**Invertiert**: Drehen Sie den Schieberegler um, sodass die Werte nach unten hin ansteigen und nach oben abnehmen. |
 | **Aufholen des Eingangswerts des externen Controllers** | Wenn diese Funktion aktiviert ist, hilft sie bei der Steuerung des Schiebereglers mit externen Controllern, die kein Feedback unterstützen oder keine motorisierten Fader haben.  <br>Wenn Sie beispielsweise einige Schieberegler auf verschiedenen Seiten eines Frames mit einem einzelnen Fader eines externen Controllers steuern, kann es beim Seitenwechsel sehr leicht zu „nicht synchronen“ Positionen kommen.  <br>Wenn diese Option aktiviert ist, sollte ein externer Controller-Fader einen bestimmten Schwellenwert erreichen, bevor sich der Schieberegler-Cursor zu bewegen beginnt, um einen Synchronisierungsstatus zu gewährleisten und unerwünschte Schieberegler-Sprünge zu vermeiden. |
-| **Externe Eingabe** | Sie können einen externen Eingabekanal von einem Eingabegerät (z. B. einem Slider-Board) an Slider anschließen, sodass Sie zum Bewegen von Slidern nicht immer die Maus oder den Touchscreen verwenden müssen.<br><br>**Eingabeuniversum** : Das Eingabeuniversum, aus dem Sie Eingabedaten für den Schieberegler erhalten möchten.<br>**Eingabekanal**: Der einzelne Eingabekanal innerhalb des ausgewählten Eingabeuniversums, den Sie zur Steuerung des Schiebereglers verwenden möchten.<br>** Automatische Erkennung**: Wenn diese Option aktiviert ist, können Sie sie einfach bewegen/drücken eine Taste/einen Schieberegler/einen Knopf auf Ihrer externen Eingabehardware und diese wird automatisch dem Schieberegler zugewiesen. Die neueste Kombination wird in den Textfeldern angezeigt, wenn QLC+ Eingabedaten empfängt. Wenn in den Feldern nichts angezeigt wird, liegt möglicherweise ein Problem mit Ihrer Eingangsverbindung vor, das Sie zuerst beheben müssen.<br>**Wählen...**: Zeigt die Option [Eingangskanal auswählen](../select- (Eingangskanal)-Dialogfeld, mit dem Sie einen Eingangskanal manuell auswählen können. |
+| **Externe Eingabe** | Sie können einen externen Eingabekanal von einem Eingabegerät (z. B. einem Slider-Board) an Slider anschließen, sodass Sie zum Bewegen von Slidern nicht immer die Maus oder den Touchscreen verwenden müssen.<br><br>**Eingabeuniversum** : Das Eingabeuniversum, aus dem Sie Eingabedaten für den Schieberegler erhalten möchten.<br>**Eingabekanal**: Der einzelne Eingabekanal innerhalb des ausgewählten Eingabeuniversums, den Sie zur Steuerung des Schiebereglers verwenden möchten.<br>** Automatische Erkennung**: Wenn diese Option aktiviert ist, können Sie sie einfach bewegen/drücken eine Taste/einen Schieberegler/einen Knopf auf Ihrer externen Eingabehardware und diese wird automatisch dem Schieberegler zugewiesen. Die neueste Kombination wird in den Textfeldern angezeigt, wenn QLC+ Eingabedaten empfängt. Wenn in den Feldern nichts angezeigt wird, liegt möglicherweise ein Problem mit Ihrer Eingangsverbindung vor, das Sie zuerst beheben müssen.<br>**Wählen...**: Zeigt die Option [Eingangskanal auswählen](../select-input-channel)-Dialogfeld, mit dem Sie einen Eingangskanal manuell auswählen können. |
 
 ### Konfiguration – Registerkarte „Ebene“.
 
@@ -44,11 +44,11 @@ Wenn sich der Schieberegler derzeit nicht im Level-Modus befindet, sehen Sie led
 
 ### Konfiguration – Registerkarte „Wiedergabe“.
 
-Wenn sich der Schieberegler derzeit nicht im Wiedergabemodus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Wiedergabemodus zu wechseln. Nachdem Sie darauf geklickt haben, werden die Eigenschaften des Wiedergabemodus angezeigt.  
+Wenn sich der Schieberegler derzeit nicht im Wiedergabemodus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Wiedergabemodus zu wechseln. Nachdem Sie darauf geklickt haben, werden die Eigenschaften des Wiedergabemodus angezeigt.
 
 Wenn sich der Schieberegler im Wiedergabemodus befindet, verhält er sich wie eine Kombination aus Schaltfläche und Schieberegler. Mit dem Schieberegler können Sie eine Funktion starten UND gleichzeitig die Intensität der Funktion steuern. Wenn der Schieberegler auf Null steht, wird die Funktion gestoppt, aber jeder Wert über Null startet die Funktion (sofern sie nicht bereits gestartet wurde) und passt gleichzeitig die Intensität der Funktion an (falls zutreffend).
 
-Ein Schieberegler im Wiedergabemodus ignoriert die Ein- und Ausblendzeiten der angehängten Funktion, sodass Überblendungen manuell durchgeführt werden müssen.  
+Ein Schieberegler im Wiedergabemodus ignoriert die Ein- und Ausblendzeiten der angehängten Funktion, sodass Überblendungen manuell durchgeführt werden müssen.
 Wenn Sie Ein-/Ausblendautomatisierungen zusammen mit der Steuerung der Funktionsintensität benötigen, ist die Verwendung eines ![](/basics/button.png)[Virtual Console Button](../button) in Kombination mit einem Slider in Der Submaster-Modus ist genau das, wonach Sie suchen.
 
 |     |     |
@@ -62,7 +62,7 @@ Wenn Sie Ein-/Ausblendautomatisierungen zusammen mit der Steuerung der Funktions
 
 Wenn sich der Schieberegler derzeit nicht im Submaster-Modus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Submaster-Modus zu wechseln. Nachdem Sie darauf geklickt haben, wird der Schieberegler so eingestellt, dass er als Submaster fungiert.
 
-Wenn ein Schieberegler auf den Submaster-Modus eingestellt ist, steuert er die Intensität jedes anderen Widgets im selben Frame (bitte beachten Sie, dass der Hauptbereich der virtuellen Konsole ebenfalls ein Frame ist!)  
-Die Intensität eines Widgets hängt von der Art des Widgets selbst und der damit gesteuerten Funktionalität ab. Ein Submaster steuert die Intensität jeder „lichtemittierenden“ QLC+-Funktionalität, entweder einer Funktion oder einzelner Kanalebenen.  
-Beispielsweise kann ein Submaster die Intensität einer Funktion steuern, die einer [Schaltfläche](../Schaltfläche) zugeordnet ist, oder die Kanalpegel, die einem Schieberegler im Pegelmodus zugeordnet sind.  
+Wenn ein Schieberegler auf den Submaster-Modus eingestellt ist, steuert er die Intensität jedes anderen Widgets im selben Frame (bitte beachten Sie, dass der Hauptbereich der virtuellen Konsole ebenfalls ein Frame ist!)
+Die Intensität eines Widgets hängt von der Art des Widgets selbst und der damit gesteuerten Funktionalität ab. Ein Submaster steuert die Intensität jeder „lichtemittierenden“ QLC+-Funktionalität, entweder einer Funktion oder einzelner Kanalebenen.
+Beispielsweise kann ein Submaster die Intensität einer Funktion steuern, die einer [Schaltfläche](../button) zugeordnet ist, oder die Kanalpegel, die einem Schieberegler im Pegelmodus zugeordnet sind.
 Jedes Widget wird von einem Submaster gesteuert, auch wenn die Funktionalität des Widgets noch nicht aktiv ist. Wenn beispielsweise ein Submaster auf 50 % eingestellt ist, startet ein anschließender Tastendruck die zugehörige Funktion mit 50 % Intensität.
