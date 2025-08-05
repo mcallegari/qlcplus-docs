@@ -4,23 +4,20 @@
     "subtitle": "Comprehensive Guide",
     "author": "docs.qlcplus.org",
     "written_by": "Written by... you!",
-    "release_prefix": "Release:",
-    "chapter_prefix": "Chapter"
+    "release_prefix": "Release:"
   },
   "de": {
     "title": "Q Light Controller + Dokumentation",
     "subtitle": "Umfassender Leitfaden",
     "author": "docs.qlcplus.org",
     "written_by": "Geschrieben von... dir!",
-    "release_prefix": "Version:",
-    "chapter_prefix": "Kapitel"
+    "release_prefix": "Version:"
   },
   "ca": {
     "title": "Documentació de Q Light Controller +",
     "subtitle": "Guia completa",
     "author": "docs.qlcplus.org",
     "written_by": "Escrit per... tu!",
-    "release_prefix": "Versió:",
-    "chapter_prefix": "Capítol"
+    "release_prefix": "Versió:"
   }
 }

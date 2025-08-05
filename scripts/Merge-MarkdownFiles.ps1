@@ -1,5 +1,17 @@
 param([string]$Lang="en")
+param([string]$ChapterPrefix="Chapter")
+
+# Ensure our Lang is lowercase to match file names
 $Lang = $Lang.ToLower()
+
+# Check if ChapterPrefix is provided
+if (-not $ChapterPrefix) {
+    Write-Error "Error: 'chapter_prefix' is missing. Please add it to the scripts/workflow_translations.json file."
+    exit 1
+}
+
+# Capitalize the first letter of ChapterPrefix
+$ChapterPrefix = -join ($ChapterPrefix.Substring(0, 1).ToUpper(), $ChapterPrefix.Substring(1))
 
 function Update-MarkdownHeadingLevels {
     param (
