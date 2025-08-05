@@ -1,5 +1,5 @@
-param([string]$Lang="en")
-param([string]$ChapterPrefix="Chapter")
+param([string]$Lang="en",
+	  [string]$ChapterPrefix="Chapter")
 
 # Ensure our Lang is lowercase to match file names
 $Lang = $Lang.ToLower()
