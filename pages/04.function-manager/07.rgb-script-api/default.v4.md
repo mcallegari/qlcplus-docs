@@ -177,12 +177,33 @@ Following a table of the accepted attributes and the meaning of their values.
 
 ### Development Tool
 
-There is a development tool available in the QLC+ source repository that makes it easier to debug and test your custom scripts with a web browser. To use the tool, you must download the following two files to a directory on your hard disk, open the **devtool.html** file with your browser and follow its instructions:
+There is a development tool available in the QLC+ source repository that makes it easier to debug and test your custom scripts with a web browser. To use the tool, you must follow these instructions:
 
-* [devtool.html](https://raw.githubusercontent.com/mcallegari/qlcplus/master/resources/rgbscripts/devtool.html)
-* [devtool.js](https://raw.githubusercontent.com/mcallegari/qlcplus/master/resources/rgbscripts/devtool/devtool.js)
+#### 1. Download the QLC+ Source Code
 
-(Right-click and "Copy Link Location" works probably best)
+1. Visit the QLC+ GitHub repository:  
+   [https://github.com/mcallegari/qlcplus](https://github.com/mcallegari/qlcplus)
+2. **Option A:** Download as a ZIP  
+   - Click **Code → Download ZIP**  
+   - Extract the contents to a folder on your computer
+3. **Option B:** Clone with Git
+   ```bash
+   git clone https://github.com/mcallegari/qlcplus.git
+   ```
+#### 2. Locate the Developer Tool
+
+Inside the QLC+ source folder, navigate to:
+
+```
+resources/rgbscripts/devtool.html
+```
+
+#### 3. Open the Tool in Your Browser
+
+- Double-click `devtool.html`, or  
+- Right-click → **Open With** → your preferred web browser
+
+---
 
 ### Example Script: Full Columns
 
