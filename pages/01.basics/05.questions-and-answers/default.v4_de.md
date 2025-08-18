@@ -10,13 +10,13 @@ Hier finden Sie entweder direkt die Antwort oder Hilfe, die Ihnen den richtigen 
 
 #### Frage #1: QLC+ findet mein USB Dongle nicht.
 
-**A:** QLC+ unterstützt sehr viele Arten von USB-DMX-Adaptern. Stelle bitte zuerst fest, dass die Verbindung richtig besteht. Im Regelfall wird die Aktivität des Adapters auch über eine Status LED signalisiert.
+**A:** QLC+ unterstützt sehr viele Arten von USB-DMX-Adaptern. Stelle bitte zuerst fest, dass die Verbindung richtig besteht. Im Regelfall wird die Aktivität des Adapters auch über eine Status-LED signalisiert.
 
 Wenn Sie Windows benutzen und der Adapter von Peperoni oder Vellemann ist, lesen Sie bitte die Anleitung auf deren Hilfeseiten wie die Adapter einzurichten sind.
 Aufgrund von Lizenzproblemen werden die beiden, separaten DLL-Dateien benötigt, um ordnungsgemäß zu funktionieren.
 Bitte überprüfen Sie [Peperoni output plugin](/plugins/peperoni) oder [Velleman output plugin](/plugins/velleman)
 
-Wenn Sie Linux benutzen, stellen sie sicher, dass die Distribution Ihren Adapter richtig erkennt wenn dieser eingesteckt ist. Normalerweise sollte das `dmesg`-Kommando etwas anzeigen.
+Wenn Sie Linux benutzen, stellen sie sicher, dass die Distribution Ihren Adapter richtig erkennt, wenn dieser eingesteckt ist. Normalerweise sollte das `dmesg`-Kommando etwas anzeigen.
 
 #### Frage #2: Ich habe mehrere [Schaltflächen](/virtual-console/button) in meiner virtuellen Konsole. Ich brauche eine Möglichkeit, die aktuell aktive Schaltfläche zu deaktivieren, wenn ich eine andere aktiviere. Wie mache ich das?
 

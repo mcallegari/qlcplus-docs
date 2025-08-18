@@ -43,7 +43,7 @@ Die Menüleiste oben im Arbeitsbereichsfenster enthält die folgenden Schaltflä
 
 * * *
 
-![](../basics/monitor.png)[DMX Monitor](/main-window/dmx-monitor) (CTRL+M)
+![](../basics/monitor.png)[DMX Monitor](/main-window/dmx-monitor) (STRG+M)
 
 ![](../basics/diptool.png)[DMX Address tool](/main-window/dmx-address-tool)
 
