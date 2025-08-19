@@ -186,14 +186,14 @@ There is a development tool available in the QLC+ source repository that makes i
 2. **Option A:** Download as a ZIP  
    - Click **Code → Download ZIP**  
    - Extract the contents to a folder on your computer
-3. **Option B:** Clone with Git
+3. **Option B:** Clone entire repo
+   If you are familiar with Git, you can clone the repository by running:
    ```bash
    git clone https://github.com/mcallegari/qlcplus.git
    ```
 #### 2. Locate the Developer Tool
 
 Inside the QLC+ source folder, navigate to:
-
 ```
 resources/rgbscripts/devtool.html
 ```
