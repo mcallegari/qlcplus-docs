@@ -21,5 +21,5 @@ Controls
 | **Schleife** | Schleife die Audiowiedergabe, bis sie explizit gestoppt wird. |
 | ![](/basics/speed.png) | Ein-/Ausblenden des Kurzwahl-Widgets, das zur einfacheren Einstellung der Audio-Ein-/Ausblendparameter verwendet wird |
 | **Einblenden** | Textfeld zur Eingabe einer Einblendzeit für die Audiowiedergabe. Zeiten können im QLC+-Verfahren (z. B. 3s.55) oder in Sekunden eingegeben werden (z. B. wenn Sie „2“ eingeben und die Eingabetaste drücken, wird 02s.00) |
-| **Ausblenden** | Textfeld zur Eingabe einer Ausblendzeit für die Audiowiedergabe. Zeiten können wie im Einblendfeld | eingegeben werden
-| **Audiogerät** | Wählen Sie ein bestimmtes Audioausgabegerät aus, das zum Abspielen der angehängten Audiodatei verwendet werden soll. Diese Liste ist dieselbe, die Sie im [Audio-Eingabe-/Ausgabebereich](/input-output/audio) | finden
+| **Ausblenden** | Textfeld zur Eingabe einer Ausblendzeit für die Audiowiedergabe. Zeiten können wie im Einblendfeld eingegeben werden |
+| **Audiogerät** | Wählen Sie ein bestimmtes Audioausgabegerät aus, das zum Abspielen der angehängten Audiodatei verwendet werden soll. Diese Liste ist dieselbe, die Sie im [Audio-Eingabe-/Ausgabebereich](/input-output/audio) finden |

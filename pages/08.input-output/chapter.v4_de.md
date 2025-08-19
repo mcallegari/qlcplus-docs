@@ -44,7 +44,7 @@ Auf der linken Seite des Input/Output Managers befindet sich eine Symbolleiste, 
 | --- | --- |
 | ![](/basics/edit_add.png) | Fügen Sie ein neues Universum hinzu. Das Universum wird einen Namen wie „Universum X“ haben, wobei X eine von QLC+ zugewiesene fortlaufende Nummer (und auch die Universums-ID) ist. |
 | ![](/basics/edit_remove.png) | Entfernen Sie das aktuell ausgewählte Universum.  <br>**Bitte seien Sie bei diesem Vorgang vorsichtig, da er Ihr Projekt gefährden kann und nicht rückgängig gemacht werden kann.** <br>Wenn Sie ein Universum löschen, wenn es derzeit gepatcht ist oder einige Geräte darauf zugeordnet sind, wird eine Popup-Meldung angezeigt Bitte um Bestätigung, ob der Vorgang abgeschlossen oder abgebrochen werden soll. |
-| **Universumsname** | Eine beliebige Zeichenfolge, die Sie festlegen können, um die Bedeutung eines Universums | schnell zu identifizieren
+| **Universumsname** | Eine beliebige Zeichenfolge, die Sie festlegen können, um die Bedeutung eines Universums schnell zu identifizieren |
 | **Passthrough** | Siehe [unten](#universum-passthrough) |
 
 Patchen

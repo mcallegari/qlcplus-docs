@@ -86,7 +86,7 @@ Es gibt zwei Verhaltensweisen: Absolut und Relativ.
 
 **Absolut** ist die Standardeinstellung und weist QLC+ grundsätzlich an, die Schiebereglerwerte genau so zu verwenden, wie sie von einem externen Controller empfangen werden.
 
-**Relativ** ist ein erweitertes Verhalten, das nützlich ist, wenn ein HID-Joystick mit einem QLC+ [XY-Pad-Widget](/virtual-console/xy-pad) oder einem [Slider-Widget](/virtual-console/slider) verwendet wird. . Von einem externen Controller empfangene Werte werden als relative Bewegung ausgehend von der aktuellen Position eines Widgets der virtuellen Konsole behandelt.
+**Relativ** ist ein erweitertes Verhalten, das nützlich ist, wenn ein HID-Joystick mit einem QLC+ [XY-Pad-Widget](/virtual-console/xy-pad) oder einem [Slider-Widget](/virtual-console/slider) verwendet wird. Von einem externen Controller empfangene Werte werden als relative Bewegung ausgehend von der aktuellen Position eines Widgets der virtuellen Konsole behandelt.
 Machen wir ein Beispiel. Angenommen, Sie haben ein XY-Pad in Ihrer virtuellen Konsole, das eine Gruppe beweglicher Köpfe steuert und überwacht. Während Ihrer Show werden Sie eine Reihe von Szenen sehen, in denen die Köpfe geschwenkt und geneigt werden. Irgendwann möchten Sie die Position der Köpfe geringfügig um einige Grad anpassen. Hier setzt die Relativbewegung ein. Wenn Sie Ihren Joystick (oder externen Schieberegler) bewegen, passt QLC+ die Köpfe von ihren aktuellen Positionen aus an. Die Richtung hängt direkt von Ihrem externen Controller ab. Die relative Bewegung stoppt, wenn der externe Controller zu seinem Ursprung zurückkehrt. Joysticks haben dafür eine Feder.
 Darüber hinaus können Sie mit der Einstellung „Input Profile Editor Relative“ einen **Empfindlichkeit**-Parameter festlegen, der QLC+ über die Stärke Ihrer externen Controller-Bewegungen informiert. Je höher dieser Wert ist, desto langsamer erfolgen die Bewegungen. Je niedriger, desto schneller.
 
@@ -123,6 +123,7 @@ Ein Name für die erstellte Farbe. Z.B. „Blau“
 
 ### MIDI-Kanäle
 Einige Controller ermöglichen die Zuordnung verschiedener Kanäle zu unterschiedlichen Anzeigemodi für Feedbackfarben. Der AKAI APC Mini MK2 ermöglicht beispielsweise die folgenden Kanäle/Modi:
+
 ![](/input-output/input-profile-midi-channels.png)
 
 # Zurück zum Eingabeprofil-Definitionsfenster

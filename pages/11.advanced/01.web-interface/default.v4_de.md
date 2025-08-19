@@ -46,11 +46,11 @@ Das Tastenfeld ist nützlich, um eine Reihe von Kanalwerten mit einem einzigen B
 | --- | --- |
 | **Schlüssel** | **Beschreibung** |
 | AT | legt einen Wert für einen angegebenen DMX-Kanal oder eine Gruppe von Kanälen (Bereich) fest.  <br>Beispiel: **13 AT 148** (setzt Kanal 13 auf den Wert 148) |
-| DURCH | wählt einen Bereich von DMX-Kanälen aus <br>Beispiel: **3 THRU 15 AT 133** (stellt die Kanäle 3 bis 15 auf den Wert 133 ein) |
-| VOLL | setzt den Maximalwert (255) auf die ausgewählten DMX-Kanäle oder Kanalgruppen <br>Beispiel: **18 FULL** (stellt Kanal 18 auf 255) <br>**1 THRU 10 FULL** (stellt Kanäle 1 auf 10 bis 255) |
-| NULL | Setzt den Minimalwert (0) auf die ausgewählten DMX-Kanäle oder Kanalgruppen <br>Beispiel: **4 ZERO** (setzt Kanal 4 auf 0) |
-| VON | legt eine Kanallücke innerhalb eines Bereichs fest <br>Beispiel: **1 BIS 10 DURCH 2 BEI 100** (setzt die Kanäle 1, 3, 5, 7 und 9 auf den Wert 100) |
-| +% | erhöht die aktuellen Werte der Kanäle um einen bestimmten Prozentsatz <br>Beispiel: **1 BIS 10 DURCH 2 + % 20** (erhöht die aktuellen Werte der Kanäle 1, 3, 5, 7 und 9 um 20 %) |
+| THRU | wählt einen Bereich von DMX-Kanälen aus <br>Beispiel: **3 THRU 15 AT 133** (stellt die Kanäle 3 bis 15 auf den Wert 133 ein) |
+| FULL | setzt den Maximalwert (255) auf die ausgewählten DMX-Kanäle oder Kanalgruppen <br>Beispiel: **18 FULL** (stellt Kanal 18 auf 255) <br>**1 THRU 10 FULL** (stellt Kanäle 1 auf 10 bis 255) |
+| ZERO | Setzt den Minimalwert (0) auf die ausgewählten DMX-Kanäle oder Kanalgruppen <br>Beispiel: **4 ZERO** (setzt Kanal 4 auf 0) |
+| BY | legt eine Kanallücke innerhalb eines Bereichs fest <br>Beispiel: **1 THRU 10 BY 2 AT 100** (setzt die Kanäle 1, 3, 5, 7 und 9 auf den Wert 100) |
+| +% | erhöht die aktuellen Werte der Kanäle um einen bestimmten Prozentsatz <br>Beispiel: **1 THRU 10 BY 2 +% 20** (erhöht die aktuellen Werte der Kanäle 1, 3, 5, 7 und 9 um 20 %) |
 | -% | reduziert die aktuellen Werte der Kanäle um einen bestimmten Prozentsatz <br>Beispiel: **1 THRU 10 BY 2 -% 20** (reduziert die aktuellen Werte der Kanäle 1, 3, 5, 7 und 9 um 20 %) |
 
 

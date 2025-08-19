@@ -18,18 +18,18 @@ Das Widget wird wie folgt angezeigt:
 | **(1) Zeitsteuerungstasten** | Die Plus- und Minus-Schaltflächen erhöhen oder verringern das aktuell fokussierte Zeitfeld von **(4)** um eins. Standardmäßig ist das fokussierte Feld Millisekunden |
 | **(2) Wählen** | Der Drehknopf kann manuell unbegrenzt gedreht werden, um das aktuell fokussierte Zeitfeld von **(4)** anzupassen. Standardmäßig ist das fokussierte Feld Millisekunden |
 | **(3) Tippen Sie auf die Schaltfläche** | Durch Tippen auf die Schaltfläche wird der Kurzwahlzeitwert auf das Intervall zwischen den Aktionen zum Drücken/Loslassen der Taste eingestellt. Je schneller gedrückt wird, desto niedriger ist der Zeitwert |
-| **(4) Zeitfelder** | Die 4 Zeitfelder zeigen den aktuellen Zeitwert der Kurzwahl an und können individuell angepasst werden, indem Sie entweder eine Zahl über eine Tastatur eingeben oder die Zeitsteuerungstasten **(1)**, den Drehknopf **(2) verwenden. **, die Tap-Taste **(3)** oder Voreinstellungen **(11)**. |
+| **(4) Zeitfelder** | Die 4 Zeitfelder zeigen den aktuellen Zeitwert der Kurzwahl an und können individuell angepasst werden, indem Sie entweder eine Zahl über eine Tastatur eingeben oder die Zeitsteuerungstasten **(1)**, den Drehknopf **(2)**, die Tap-Taste **(3)** oder Voreinstellungen **(11)** verwenden. |
 | **(5) Trennschaltfläche** | Teilen Sie den aktuellen Zeitfaktor durch 2 und wenden Sie ihn auf die aktuelle Kurzwahlzeit an.  <br>Ein Faktor kleiner als 1x wird zu einem Bruch wie 1/2x, 1/4x usw. |
 | **(6) Zeitfaktor** | Zeigt den aktuellen Faktor multipliziert mit der aktuell in **(4)** angezeigten Zeit an.  <br>Ein Faktor kleiner als 1x ist ein Teiler. Beispiel: Zeit = 8s.28, Faktor = 1/4x, Ergebnis = 02s.07 |
 | **(7) Multiplikator-Schaltfläche** | Multiplizieren Sie den aktuellen Zeitfaktor mit 2 und wenden Sie ihn auf die aktuelle Kurzwahlzeit an. |
 | **(8) Reset-Taste** | Setzen Sie den aktuellen Zeitfaktor auf 1x zurück und wenden Sie ihn auf die aktuelle Kurzwahlzeit an. |
-| **(9) Faktorisierte Zeit** | Zeigt das Ergebnis der Kurzwahlzeit multipliziert mit dem aktuellen Zeitfaktor **(6)** | an
-| **(10) Schaltfläche „Übernehmen“** | Wendet die aktuelle Kurzwahlzeit auf die zugehörigen Funktionen an. Dies ist nützlich, wenn in einer virtuellen Konsole | mehrere Kurzwahlnummern vorhanden sind
+| **(9) Faktorisierte Zeit** | Zeigt das Ergebnis der Kurzwahlzeit multipliziert mit dem aktuellen Zeitfaktor **(6)**  an. |
+| **(10) Schaltfläche „Übernehmen“** | Wendet die aktuelle Kurzwahlzeit auf die zugehörigen Funktionen an. Dies ist nützlich, wenn in einer virtuellen Konsole mehrere Kurzwahlräder vorhanden sind |
 | **(11) Voreinstellungstasten** | In diesem Bereich werden die vom Benutzer hinzugefügten Zeitvoreinstellungen angezeigt, sofern vorhanden |
 
 ### Betrieb
 
-Das Schnellwahlrad selbst sieht genauso aus und funktioniert genauso wie die Schnellwahlräder in verschiedenen Funktionseditoren: In der Mitte befindet sich ein **großes Rad (2)**, das die Zeit verlängert, wenn es im Uhrzeigersinn gedreht wird, und verkürzt, wenn es gegen den Uhrzeigersinn gedreht wird . Die Schaltflächen „Plus“ ![](/basics/edit_add.png) und „Minus“ ![](/basics/edit_remove.png) **(1)** sind eine alternative Möglichkeit, die Geschwindigkeit anzupassen.
+Das Schnellwahlrad selbst sieht genauso aus und funktioniert genauso wie die Schnellwahlräder in verschiedenen Funktionseditoren: In der Mitte befindet sich ein **großes Rad (2)**, das die Zeit verlängert, wenn es im Uhrzeigersinn gedreht wird, und verkürzt, wenn es gegen den Uhrzeigersinn gedreht wird. Die Schaltflächen „Plus“ ![](/basics/edit_add.png) und „Minus“ ![](/basics/edit_remove.png) **(1)** sind eine alternative Möglichkeit, die Geschwindigkeit anzupassen.
 
 Der **aktuelle Zeitwert** **(4)** wird in vier Teilen angezeigt. Wenn Sie auf eines dieser Felder klicken, erhöhen/verringern das Wählrad und die Plus-/Minus-Tasten diese Zeiteinheit. Anstelle des Drehrads/der Tasten kann auch das Mausrad verwendet werden und die Felder akzeptieren auch Werte, die über den Ziffernblock eingegeben werden.
 
@@ -42,7 +42,7 @@ Mit der **Tippen**-Taste **(3)** kann die Zeit an einen Beat angepasst werden. D
 
 Bei einer Cueliste, einem Chaser oder einer RGB-Matrix bewegt die Tipptaste die Funktion zum nächsten Schritt/zur nächsten Position, wenn der Schnellwahlknopf zum Anpassen der Dauer eingestellt ist. Das getippte Tempo muss mehr als 1/4 der ursprünglichen Dauer betragen.
 
-### Konfiguration – Registerkarte „Funktionen“.
+### Konfiguration – Registerkarte „Funktionen“
 
 Kurzwahlen können mit der Schaltfläche „Eigenschaften“ ![](/basics/edit.png) in der Symbolleiste oder durch Doppelklicken auf die Kurzwahl selbst konfiguriert werden.
 
@@ -54,9 +54,9 @@ Für jeden Geschwindigkeitswert (Einblenden, Ausblenden, Dauer) kann ein Multipl
 
 |     |     |
 | --- | --- |
-| **Einblendfaktor** | Wählen Sie einen Multiplikator aus, um die [Einblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
-| **Fade-Out-Faktor** | Wählen Sie einen Multiplikator aus, um die [Ausblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
-| **Dauerfaktor (+Tap)** | Wählen Sie einen Multiplikator aus, um die [Dauer](/basics/glossary-and-concepts#funktionen) | der Funktionen anzupassen
+| **Einblendfaktor** | Wählen Sie einen Multiplikator aus, um die [Einblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) der Funktionen anzupassen |
+| **Fade-Out-Faktor** | Wählen Sie einen Multiplikator aus, um die [Ausblendgeschwindigkeit](/basics/glossary-and-concepts#funktionen) der Funktionen anzupassen |
+| **Dauerfaktor (+Tap)** | Wählen Sie einen Multiplikator aus, um die [Dauer](/basics/glossary-and-concepts#funktionen) der Funktionen anzupassen |
 
 Dieser Multiplikator wird auf den Kurzwahlwert angewendet, bevor der Geschwindigkeitswert der Funktionen angepasst wird.
 
@@ -64,7 +64,7 @@ Wählen Sie **(Nicht gesendet)**, damit der Geschwindigkeitswert der Funktionen 
 
 ![](/basics/edit_add.png)Funktion(en) hinzufügen, die über die Kurzwahl gesteuert werden sollen.![](/basics/edit_remove.png)Entfernen Sie die ausgewählten Funktionen aus der Liste der gesteuerten Funktionen der Kurzwahl.
 
-### Konfiguration – Registerkarte „Eingabe“.
+### Konfiguration – Registerkarte „Eingabe“
 
 Hier kann der Eingang von einem externen Controller konfiguriert werden
 
@@ -74,7 +74,7 @@ Hier kann der Eingang von einem externen Controller konfiguriert werden
 
 eine für den Wert mit Minimum und Maximum und eine für die Tipptaste.
 
-### Konfiguration – Registerkarte „Erscheinungsbild“.
+### Konfiguration – Registerkarte „Erscheinungsbild“
 
 Hier kann die individuelle Sichtbarkeit der Layoutelemente des Widgets ein- oder ausgeschaltet werden. Auf diese Weise ist es möglich, etwas Platz auf dem Bildschirm einzusparen, wenn einige Felder nicht benötigt werden (z. B. wenn sie von einem externen Controller gesteuert werden, wird das große Einstellrad nicht benötigt).
 
@@ -89,11 +89,12 @@ Hier kann die individuelle Sichtbarkeit der Layoutelemente des Widgets ein- oder
 | **Millisekundenfeld anzeigen** |
 | **Multiplikator- und Teilerschaltflächen anzeigen** |
 | **Schaltfläche „Anwenden“ anzeigen** |
-### Konfiguration – Registerkarte „Multiplikator“.
+
+### Konfiguration – Registerkarte „Multiplikator“
 
 Hier kann ausgewählt werden, ob der Multiplikationsfaktor zurückgesetzt werden soll, wenn der Drehknopf **(2)** manuell eingestellt wird und einzelne externe Bedienelemente für die Multiplikationstaste **(5)**, die Teilertaste **(7) ** und die Schaltfläche zum Zurücksetzen des Faktors **(8)**
 
-### Konfiguration – Registerkarte „Voreinstellungen“.
+### Konfiguration – Registerkarte „Voreinstellungen“
 
 Eine Voreinstellung ist eine Möglichkeit, schnell auf einen vordefinierten Wert für eine Kurzwahl zuzugreifen.
 Jede Voreinstellung wird im Kurzwahl-Widget-Layout als Schaltfläche dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.
