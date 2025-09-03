@@ -2,6 +2,7 @@ qlcplus
 qlc
 Callegari
 Massimo
+mcallegari
 Heikki
 Junnila
 Grav
@@ -306,3 +307,5 @@ waitfunctionstart
 rawColors
 CRC
 validator
+github
+GitHub
