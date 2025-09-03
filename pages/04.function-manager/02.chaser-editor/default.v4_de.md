@@ -1,5 +1,5 @@
 ---
-title: 'Chaser-Editor'
+title: Chaser-Editor
 date: '12:08 21-08-2023'
 ---
 
@@ -34,8 +34,8 @@ Die Timing-Schritte und das Notizfeld können durch Doppelklicken geändert werd
 | ![](/basics/up.png) | Verschiebt den ausgewählten Schritt über/vor den vorherigen Schritt. |
 | ![](/basics/down.png) | Verschieben Sie den ausgewählten Schritt unter/hinter den nächsten Schritt. |
 | ![](/basics/random.png) | Ordnen Sie die ausgewählten Szenen zufällig neu an (mischen Sie sie). Die Hauptunterschiede zu „Run Order: Random“ bestehen darin, dass die Reihenfolge der gemischten Szenen statisch und vorhersehbar ist, manuell geändert werden kann und sich nicht unbedingt auf alle Szenen auswirkt. |
-| **Reihenfolge ausführen** | * Loop: Immer wieder durch die Stufen laufen.<br>* Single Shot: Einmal durch die Stufen laufen und dann anhalten.<br>* Ping Pong: Immer wieder durch die Stufen laufen, dabei die Richtung an beiden Enden umkehren. <br>* Zufällig: Führen Sie die Schritte in zufälliger Reihenfolge immer wieder durch. |
-| **Richtung** | * Vorwärts: Führen Sie die Schritte von Anfang bis Ende durch. 1, 2, 3...<br>* Rückwärts: Führen Sie die Schritte vom Ende bis zum Anfang durch. ...3, 2, 1 |
-| **Einblendgeschwindigkeit** | * Gemeinsam: Wenden Sie die gleiche Geschwindigkeit für alle Schritte in diesem Chaser an<br>* Pro Schritt: Wenden Sie eine benutzerdefinierte Geschwindigkeit für jeden Schritt in diesem Chaser an<br>* Standard: Wenden Sie die Standardgeschwindigkeit für jeden Schritt an (0 Sekunden). |
-| **Ausblendgeschwindigkeit** | * Gemeinsam: Wenden Sie die gleiche Geschwindigkeit für alle Schritte in diesem Chaser an<br>* Pro Schritt: Wenden Sie eine benutzerdefinierte Geschwindigkeit für jeden Schritt in diesem Chaser an<br>* Standard: Wenden Sie die Standardgeschwindigkeit für jeden Schritt an (0 Sekunden). |
-| **Schrittdauer** | * Gemeinsam: Wenden Sie für alle Schritte in diesem Chaser die gleiche Dauer an<br>* Pro Schritt: Wenden Sie für jeden Schritt in diesem Chaser eine benutzerdefinierte Dauer an |
+| **Reihenfolge ausführen** | **Loop**: Immer wieder durch die Stufen laufen.<br>**Single Shot**: Einmal durch die Stufen laufen und dann anhalten.<br>**Ping Pong**: Immer wieder durch die Stufen laufen, dabei die Richtung an beiden Enden umkehren. <br>**Zufällig**: Führen Sie die Schritte in zufälliger Reihenfolge immer wieder durch. |
+| **Richtung** | **Vorwärts**: Führen Sie die Schritte von Anfang bis Ende durch. 1, 2, 3...<br>**Rückwärts**: Führen Sie die Schritte vom Ende bis zum Anfang durch. ...3, 2, 1 |
+| **Einblendgeschwindigkeit** | **Gemeinsam**: Wenden Sie die gleiche Geschwindigkeit für alle Schritte in diesem Chaser an<br>**Pro Schritt**: Wenden Sie eine benutzerdefinierte Geschwindigkeit für jeden Schritt in diesem Chaser an<br>**Standard**: Wenden Sie die Standardgeschwindigkeit für jeden Schritt an (0 Sekunden). |
+| **Ausblendgeschwindigkeit** | **Gemeinsam**: Wenden Sie die gleiche Geschwindigkeit für alle Schritte in diesem Chaser an<br>**Pro Schritt**: Wenden Sie eine benutzerdefinierte Geschwindigkeit für jeden Schritt in diesem Chaser an<br>**Standard**: Wenden Sie die Standardgeschwindigkeit für jeden Schritt an (0 Sekunden). |
+| **Schrittdauer** | **Gemeinsam**: Wenden Sie für alle Schritte in diesem Chaser die gleiche Dauer an<br>**Pro Schritt**: Wenden Sie für jeden Schritt in diesem Chaser eine benutzerdefinierte Dauer an |
