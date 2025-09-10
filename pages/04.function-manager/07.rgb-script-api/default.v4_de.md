@@ -174,12 +174,34 @@ Nachfolgend eine Tabelle der akzeptierten Attribute und der Bedeutung ihrer Wert
 
 ### Entwicklungstool
 
-Im QLC+-Quell-Repository steht ein Entwicklungstool zur Verfügung, das das Debuggen und Testen Ihrer benutzerdefinierten Skripte mit einem Webbrowser erleichtert. Um das Tool zu verwenden, müssen Sie die folgenden zwei Dateien in ein Verzeichnis auf Ihrer Festplatte herunterladen, die Datei **devtool.html** mit Ihrem Browser öffnen und deren Anweisungen befolgen:
+Im QLC+-Quell-Repository steht ein Entwicklungstool zur Verfügung, welches das Debuggen und Testen Ihrer benutzerdefinierten Skripte mit einem Webbrowser erleichtert. Befolgen Sie die folgenden Anweisungen, um das Tool zu verwenden:
 
-* [devtool.html](https://raw.githubusercontent.com/mcallegari/qlcplus/master/resources/rgbscripts/devtool.html)
-* [devtool.js](https://raw.githubusercontent.com/mcallegari/qlcplus/master/resources/rgbscripts/devtool/devtool.js)
+#### 1. Laden Sie den QLC+-Quellcode herunter
 
-(Rechtsklick und „Link-Speicherort kopieren“ funktioniert wahrscheinlich am besten.)
+1. Besuchen Sie das QLC+-GitHub-Repository:  
+   [https://github.com/mcallegari/qlcplus](https://github.com/mcallegari/qlcplus)
+2. **Option A:** Als ZIP herunterladen  
+   - Klicken Sie auf **Code → ZIP herunterladen**  
+   - Entpacken Sie den Inhalt in einen Ordner auf Ihrem Computer
+3. **Option B:** Das gesamte Repository mit Git klonen
+   Wenn Sie mit Git vertraut sind, können Sie das Repository klonen, indem Sie folgenden Befehl ausführen:
+   ```bash
+   git clone https://github.com/mcallegari/qlcplus.git
+   ```
+
+#### 2. Das Entwicklungstool finden
+
+Navigieren Sie im QLC+-Quellordner zu:
+```
+resources/rgbscripts/devtool.html
+```
+
+#### 3. Das Tool im Webbrowser öffnen
+
+- Doppelklicken Sie auf `devtool.html` oder  
+- Klicken Sie mit der rechten Maustaste auf → **Öffnen mit** → Ihrem bevorzugten Webbrowser
+
+---
 
 ### Beispielskript: Vollständige Spalten
 

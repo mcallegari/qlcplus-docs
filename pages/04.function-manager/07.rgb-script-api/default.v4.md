@@ -191,6 +191,7 @@ There is a development tool available in the QLC+ source repository that makes i
    ```bash
    git clone https://github.com/mcallegari/qlcplus.git
    ```
+
 #### 2. Locate the Developer Tool
 
 Inside the QLC+ source folder, navigate to:
