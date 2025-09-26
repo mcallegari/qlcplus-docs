@@ -18,7 +18,7 @@ El fitxer d'estil també s'ha de col·locar en un camí específic que és:
 
 El fitxer d'estil ha de tenir una sintaxi CSS. Si esteu còmode amb el disseny web, heu de trobar la creació d'aquest fitxer molt fàcil!  
 Atès que el fitxer d'estil està estrictament relacionat amb els objectes interiors de les Qt, és possible que vulgueu llegir els articles següents per a esbrinar els noms dels elements i les propietats CSS addicionals que l'equip de les Qt ha afegit a la sintaxi CSS predeterminada.  
-[Fulls d'estil de les Qt](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)
+[Fulls d'estil de les Qt](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)  
 [Fulls d'estil de les Qt Exemples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
 Depèn de la teva imaginació com prefereixis personalitzar l'aparença de la IGU QLC+! Si trobeu un estil digne de compartir, no oblideu enviar la vostra contribució publicant-lo en línia al [Fòrum QLC+](https://www.qlcplus.org/forum/viewforum.php?f=5)
 

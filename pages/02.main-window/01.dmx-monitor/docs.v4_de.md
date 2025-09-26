@@ -9,10 +9,10 @@ process:
 media_order: pan-tilt.png
 ---
 
-Der DMX-Monitor ist ein nützliches Tool zum Verfolgen der Werte, die an die Ausgabeuniversen gesendet werden. Es werden nur die Informationen zu den benötigten Vorrichtungen angezeigt. Die Anzeigeoptionen des Monitors haben keinen Einfluss auf die eigentliche Geräteadressierung, schließlich handelt es sich nur um einen **Monitor**.
+Der DMX-Monitor ist ein nützliches Tool zum Verfolgen der Werte, die an die Ausgabeuniversen gesendet werden. Es werden nur die Informationen zu den benötigten Vorrichtungen angezeigt. Die Anzeigeoptionen des Monitors haben keinen Einfluss auf die eigentliche Geräteadressierung, schließlich handelt es sich nur um einen **Monitor**.  
 Der DMX-Monitor verfügt über zwei Anzeigemodi: **DMX-Ansicht** und **2D-Ansicht**.
 
-DMX Ansicht
+DMX-Ansicht
 --------
 
 Die DMX-Ansicht zeigt alle Geräte des Projekts und spiegelt jeden Kanal mit Zahlen und Symbolen dar. Es stellt grundsätzlich jeden Kanal in 3 Zeilen dar:
@@ -46,8 +46,8 @@ Derzeit zeigt der Monitor Folgendes an:
 * Farbräder, wenn sie RGB-Farbwerte enthalten. Zweifarbige Werte werden nicht unterstützt
 * Shutter, der geöffnet ist, es sei denn, der Funktionsname enthält „close“ oder „blackout“ (Beispiel: „Shutter Close“)
 
-Im 2D-Ansichtsmodus können Sie auswählen, welche Geräte angezeigt werden sollen, sowie deren Position in einem Raster, das die Abmessungen einer realen Bühne darstellt.
-Das Raster möchte die Vorderansicht einer Bühne reproduzieren, Sie können es jedoch nach Belieben als generischen Raum verwenden.
+Im 2D-Ansichtsmodus können Sie auswählen, welche Geräte angezeigt werden sollen, sowie deren Position in einem Raster, das die Abmessungen einer realen Bühne darstellt.  
+Das Raster möchte die Vorderansicht einer Bühne reproduzieren, Sie können es jedoch nach Belieben als generischen Raum verwenden.  
 Grafische Elemente können manuell verschoben werden, indem Sie sie über das Raster ziehen. Wenn Sie darauf klicken, können Sie sie mit dem Bedienfeld „Monitor Fixture Editor“ konfigurieren, das auf der rechten Seite des Fensters angezeigt wird.
 
 ### Symbolleisten-Steuerelemente
@@ -64,7 +64,7 @@ Grafische Elemente können manuell verschoben werden, indem Sie sie über das Ra
 
 ### Fixture Item Editor
 
-Wenn auf ein Gerät geklickt wird, wird es gelb hervorgehoben und der Monitor Fixture Item Editor wird auf der rechten Seite des Fensters angezeigt.
+Wenn auf ein Gerät geklickt wird, wird es gelb hervorgehoben und der Monitor Fixture Item Editor wird auf der rechten Seite des Fensters angezeigt.  
 Im Folgenden sind die möglichen Parameter aufgeführt, die angepasst werden können:
 
 | | |

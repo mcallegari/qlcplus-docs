@@ -3,9 +3,9 @@ title: 'Skript-Editor'
 date: '04:07 22-08-2023'
 ---
 
-Der Skripteditor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/script.png) [Skript](/basics/glossary-and-concepts#skript)-Funktionen verwendet.
-Es besteht im Wesentlichen aus einem Texteditor, in dem der Benutzer ein Skript unter Verwendung einer Metasprache mit einer unten beschriebenen Syntax schreiben kann.
-Das Skript kann manuell geändert werden, wenn Sie die Syntax der Sprache vollständig verstehen. Andernfalls stehen ganz rechts im Editor einige Hilfsschaltflächen zur Verfügung, um die Erstellung/Bearbeitung des Skripts zu beschleunigen und zu erleichtern.
+Der Skripteditor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/script.png) [Skript](/basics/glossary-and-concepts#skript)-Funktionen verwendet.  
+Es besteht im Wesentlichen aus einem Texteditor, in dem der Benutzer ein Skript unter Verwendung einer Metasprache mit einer unten beschriebenen Syntax schreiben kann.  
+Das Skript kann manuell geändert werden, wenn Sie die Syntax der Sprache vollständig verstehen. Andernfalls stehen ganz rechts im Editor einige Hilfsschaltflächen zur Verfügung, um die Erstellung/Bearbeitung des Skripts zu beschleunigen und zu erleichtern.  
 Jede Zeile eines Skripts wird von QLC+ in sequentieller Reihenfolge ausgeführt.
 
 ### Kontrollen
@@ -23,8 +23,8 @@ Jede Zeile eines Skripts wird von QLC+ in sequentieller Reihenfolge ausgeführt.
 
 ### Sprachsyntax
 
-Die QLC+ Script-Metasprache basiert auf einem **Schlüsselwort:Wert**-Modell mit einigen Einfügungen von C-Sprachsyntaxregeln.
-Jede Codezeile wird von der QLC+-Engine analysiert und überprüft, um das Vorhandensein von Syntaxfehlern zu erkennen.
+Die QLC+ Script-Metasprache basiert auf einem **Schlüsselwort:Wert**-Modell mit einigen Einfügungen von C-Sprachsyntaxregeln.  
+Jede Codezeile wird von der QLC+-Engine analysiert und überprüft, um das Vorhandensein von Syntaxfehlern zu erkennen.  
 Hier ist eine Tabelle, die jedes von der Skript-Engine akzeptierte Schlüsselwort und seine Syntax beschreibt.v
 
 #### Startfunktion

@@ -3,8 +3,8 @@ title: 'Kanalgruppen Editor'
 date: '11:27 21-08-2023'
 ---
 
-Der Kanalgruppen-Editor wird durch Klicken auf die Registerkarte „Kanalgruppen“ im Bereich [Fixture Manager](/fixture-manager) aktiviert.
-Mit dieser Funktionalität (eingeführt in QLC+ Version 4.0.0) ist es möglich, Gruppen von Kanälen mit derselben Funktionalität zu erstellen.
+Der Kanalgruppen-Editor wird durch Klicken auf die Registerkarte „Kanalgruppen“ im Bereich [Fixture Manager](/fixture-manager) aktiviert.  
+Mit dieser Funktionalität (eingeführt in QLC+ Version 4.0.0) ist es möglich, Gruppen von Kanälen mit derselben Funktionalität zu erstellen.  
 Wenn Sie beispielsweise über 20 PARs verfügen, möchten Sie möglicherweise den ROTEN Kanal aller PARs mit einem einzigen Fader steuern.
 
 ### Einstellungen

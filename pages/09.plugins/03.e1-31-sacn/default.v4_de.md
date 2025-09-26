@@ -8,27 +8,27 @@ Einführung
 ------------
 
 QLC+ unterstützt das [E1.31-Protokoll](https://wiki.openlighting.org/index.php/E1.31) (auch bekannt als s.ACN) über ein Eingabe-/Ausgabe-Plugin, das Pakete im Netzwerk empfängt und überträgt.  
-Es sind keine zusätzlichen Anforderungen erforderlich, da QLC+ über eine native Implementierung des E1.31-Protokolls verfügt, das auf Linux-, Windows- und OSX-Systemen funktioniert.
-Das E1.31-Plugin kann Pakete von mehreren Netzwerkkarten, virtuellen Adressen, dem Loopback-Gerät (127.0.0.1) und mehreren Universen pro Netzwerkschnittstelle senden und empfangen.
-Standardmäßig werden E1.31-Pakete als UDP an Multicast-Adressen wie 239.255.0.x gesendet, wobei „x“ die in QLC+ ausgewählte Universumsnummer ist. Der verwendete Port ist 5568.
-Bei Verwendung des Loopback-Geräts werden Pakete immer über die Adresse 127.0.0.1 übertragen.
-Bei der Übertragung mehrerer Universen auf derselben Schnittstelle werden die Pakete standardmäßig mit einer E1.31-Universum-ID gesendet, die dem QLC+-Universum entspricht.
+Es sind keine zusätzlichen Anforderungen erforderlich, da QLC+ über eine native Implementierung des E1.31-Protokolls verfügt, das auf Linux-, Windows- und OSX-Systemen funktioniert.  
+Das E1.31-Plugin kann Pakete von mehreren Netzwerkkarten, virtuellen Adressen, dem Loopback-Gerät (127.0.0.1) und mehreren Universen pro Netzwerkschnittstelle senden und empfangen.  
+Standardmäßig werden E1.31-Pakete als UDP an Multicast-Adressen wie 239.255.0.x gesendet, wobei „x“ die in QLC+ ausgewählte Universumsnummer ist. Der verwendete Port ist 5568.  
+Bei Verwendung des Loopback-Geräts werden Pakete immer über die Adresse 127.0.0.1 übertragen.  
+Bei der Übertragung mehrerer Universen auf derselben Schnittstelle werden die Pakete standardmäßig mit einer E1.31-Universum-ID gesendet, die dem QLC+-Universum entspricht.  
 
-Zum Beispiel:
-QLC+ Universum 1 -> E1.31 Universum 1 auf 239.255.0.1
-QLC+ Universum 2 -> E1.31 Universum 2 auf 239.255.0.2
-...
-QLC+ Universum 8 -> E1.31 Universum 8 auf 239.255.0.8
+Zum Beispiel:  
+QLC+ Universum 1 -> E1.31 Universum 1 auf 239.255.0.1  
+QLC+ Universum 2 -> E1.31 Universum 2 auf 239.255.0.2  
+...  
+QLC+ Universum 8 -> E1.31 Universum 8 auf 239.255.0.8  
 
 Sollten die oben genannten Einstellungen nicht den Anforderungen Ihres Netzwerks entsprechen, lesen Sie bitte das folgende Kapitel.
 
 Konfiguration
 -------------
 
-Wenn Sie auf die Konfigurationsschaltfläche ![](/basics/configure.png) klicken, wird ein kleiner Dialog mit dem Bereich „Universenkonfiguration“ angezeigt.
+Wenn Sie auf die Konfigurationsschaltfläche ![](/basics/configure.png) klicken, wird ein kleiner Dialog mit dem Bereich „Universenkonfiguration“ angezeigt.  
 
-Nachdem ein QLC+-Universum mit einem E1.31-Ein- oder -Ausgang gepatcht wurde, wird in dieser Liste ein Eintrag angezeigt, der es ermöglicht, die gewünschten Parameter, die vom E1.31-Plugin verwendet werden sollen, manuell zu konfigurieren.
-Eingabezeilen können mit folgenden Parametern konfiguriert werden:
+Nachdem ein QLC+-Universum mit einem E1.31-Ein- oder -Ausgang gepatcht wurde, wird in dieser Liste ein Eintrag angezeigt, der es ermöglicht, die gewünschten Parameter, die vom E1.31-Plugin verwendet werden sollen, manuell zu konfigurieren.  
+Eingabezeilen können mit folgenden Parametern konfiguriert werden:  
 
 |     |     |
 | --- | --- |
@@ -42,10 +42,10 @@ Beispiel für eine Eingabekonfiguration:
 
 ![](e131_configuration.png)
 
-Wenn in diesem Beispiel E1.31-Pakete an der Adresse 127.0.0.1 und Port 8000 empfangen werden, wirken sich die Pakete, die auf E1.31-Universum 4 laufen, auf QLC+-Universum 1 aus.
-Außerdem übertragen wir QLC+-Universum 2 auf der Multicast-Adresse 239.255.0.2, E1.31-Universum 1 und QLC+-Universum 3 auf der Unicast-Adresse 13.0.0.175, Port 7000, E1.31-Universum 2.
+Wenn in diesem Beispiel E1.31-Pakete an der Adresse 127.0.0.1 und Port 8000 empfangen werden, wirken sich die Pakete, die auf E1.31-Universum 4 laufen, auf QLC+-Universum 1 aus.  
+Außerdem übertragen wir QLC+-Universum 2 auf der Multicast-Adresse 239.255.0.2, E1.31-Universum 1 und QLC+-Universum 3 auf der Unicast-Adresse 13.0.0.175, Port 7000, E1.31-Universum 2.  
 
-Ausgabeleitungen können mit folgenden Parametern konfiguriert werden:
+Ausgabeleitungen können mit folgenden Parametern konfiguriert werden:  
 
 |     |     |
 | --- | --- |

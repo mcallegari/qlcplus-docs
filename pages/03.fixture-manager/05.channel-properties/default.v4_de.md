@@ -4,8 +4,8 @@ date: '11:32 21-08-2023'
 media_order: channel_modifier.png
 ---
 
-Dieses Fenster zeigt einen Baum mit Elementen an, die in einer Universes/Fixtures/Channels-Struktur verschachtelt sind.
-Auf der rechten Seite des Kanals jedes Geräts werden die verfügbaren Optionen angezeigt, mit denen das Verhalten jedes einzelnen Kanals geändert werden kann.
+Dieses Fenster zeigt einen Baum mit Elementen an, die in einer Universes/Fixtures/Channels-Struktur verschachtelt sind.  
+Auf der rechten Seite des Kanals jedes Geräts werden die verfügbaren Optionen angezeigt, mit denen das Verhalten jedes einzelnen Kanals geändert werden kann.  
 
 Channels properties
 -------------------
@@ -28,15 +28,15 @@ TDer Kanalmodifikator-Editor wird wie folgt dargestellt:
 
 ![](channel_modifier.png)
 
-Auf der rechten Seite des Fensters wird eine Liste der verfügbaren Modifikatorvorlagen angezeigt.
-Durch Klicken auf eine Vorlage in der Liste wird die Kurvenvorschau auf der linken Seite des Fensters angezeigt.
-Eine Modifikatorkurve besteht aus einer Reihe von Linien, die darstellen, wie ein DMX-Kanal geändert werden soll, wenn sich sein Wert ändert.
-Jede Zeile beginnt und endet mit einem sogenannten „Handler“. Ein Modifikator kann praktisch unendlich viele Handler haben, aber es muss immer einen Handler für den DMX-Wert 0 und einen Handler für den DMX-Wert 255 geben, um den gesamten DMX-Wertebereich abzudecken.
-Grundsätzlich repräsentiert die X-Koordinate der Vorschau den ursprünglichen DMX-Wert und die Y-Koordinate den geänderten DMX-Wert.
-Beim Klicken auf einen Handler wird dies deutlicher, da die Felder oberhalb der Kurvenvorschau mit den genannten Werten gefüllt werden.
-Handler können einfach mit der Maus verschoben werden, indem man sie herumzieht oder indem man die Werte der ursprünglichen oder geänderten DMX-Werte manuell ändert.
+Auf der rechten Seite des Fensters wird eine Liste der verfügbaren Modifikatorvorlagen angezeigt.  
+Durch Klicken auf eine Vorlage in der Liste wird die Kurvenvorschau auf der linken Seite des Fensters angezeigt.  
+Eine Modifikatorkurve besteht aus einer Reihe von Linien, die darstellen, wie ein DMX-Kanal geändert werden soll, wenn sich sein Wert ändert.  
+Jede Zeile beginnt und endet mit einem sogenannten „Handler“. Ein Modifikator kann praktisch unendlich viele Handler haben, aber es muss immer einen Handler für den DMX-Wert 0 und einen Handler für den DMX-Wert 255 geben, um den gesamten DMX-Wertebereich abzudecken.  
+Grundsätzlich repräsentiert die X-Koordinate der Vorschau den ursprünglichen DMX-Wert und die Y-Koordinate den geänderten DMX-Wert.  
+Beim Klicken auf einen Handler wird dies deutlicher, da die Felder oberhalb der Kurvenvorschau mit den genannten Werten gefüllt werden.  
+Handler können einfach mit der Maus verschoben werden, indem man sie herumzieht oder indem man die Werte der ursprünglichen oder geänderten DMX-Werte manuell ändert.  
 
-Um eine neue Vorlage zu erstellen, wählen Sie einfach eine vorhandene Vorlage aus, geben Sie ihr einen neuen Namen und fügen Sie mit den Schaltflächen ![](/basics/edit_add.png) und ![](/basics/edit_remove.png) nach Bedarf Handler hinzu bzw. entfernen Sie sie.
+Um eine neue Vorlage zu erstellen, wählen Sie einfach eine vorhandene Vorlage aus, geben Sie ihr einen neuen Namen und fügen Sie mit den Schaltflächen ![](/basics/edit_add.png) und ![](/basics/edit_remove.png) nach Bedarf Handler hinzu bzw. entfernen Sie sie.  
 Wenn Sie fertig sind, klicken Sie einfach auf die Schaltfläche ![](/basics/filesave.png) und Ihre Vorlage wird in Ihrem Benutzervorlagenordner gespeichert. Bitte sehen Sie sich die Seite „Fragen und Antworten“ (/basics/questions-and-answers) an, um diesen Ordner zu finden.
 
 Kanalmodifikator-Vorlagen

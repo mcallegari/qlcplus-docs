@@ -11,7 +11,7 @@ In der ersten Spalte der Cue-Liste wird die Cue-Nummer angezeigt, die von 1 bis 
 
 ### Konfiguration
 
-Cue-Listen können mit der Objekteigenschaften-Schaltfläche ![](/basics/edit.png) in der Symbolleiste oder durch Doppelklick auf das Cue-List-Widget konfiguriert werden.
+Cue-Listen können mit der Objekteigenschaften-Schaltfläche ![](/basics/edit.png) in der Symbolleiste oder durch Doppelklick auf das Cue-List-Widget konfiguriert werden.  
 
 |     |     |
 | --- | --- |
@@ -26,11 +26,11 @@ Cue-Listen können mit der Objekteigenschaften-Schaltfläche ![](/basics/edit.pn
 
 ### Betriebsmodus
 
-Wenn Sie QLC+ in den [Betriebsmodus](/basics/glossary-and-concepts#modi) schalten, wird die Cue-Liste aktiv und ermöglicht die Auswahl der gewünschten Cues, die im zugehörigen Chaser enthalten sind.
+Wenn Sie QLC+ in den [Betriebsmodus](/basics/glossary-and-concepts#modi) schalten, wird die Cue-Liste aktiv und ermöglicht die Auswahl der gewünschten Cues, die im zugehörigen Chaser enthalten sind.  
 
-Durch Drücken der ENTER-Taste wird der ausgewählte Cue gestartet.
+Durch Drücken der ENTER-Taste wird der ausgewählte Cue gestartet.  
 
-Die folgenden Elemente werden unten im Cue-List-Widget angezeigt:
+Die folgenden Elemente werden unten im Cue-List-Widget angezeigt:  
 
 
 |     |     |
@@ -45,15 +45,15 @@ Die folgenden Elemente werden unten im Cue-List-Widget angezeigt:
 
 ### Überblendung
 
-Mit dem Seitenfader kann die Überblendung zwischen zwei aufeinanderfolgenden Cues manuell gesteuert werden.
+Mit dem Seitenfader kann die Überblendung zwischen zwei aufeinanderfolgenden Cues manuell gesteuert werden.  
 
-Die Zahlen oben und unten am Fader zeigen den „aktuellen Cue“ und den „nächsten Cue“ an.
-Die Beschriftung des aktuellen Cues ist blau. Dieser liegt bei 100 %, wenn die Wiedergabe der Cue-Liste gestartet wird.
-Die Beschriftung für den nächsten Cue ist orangefarben und steht bei 0 %, wenn die Wiedergabe der Cue-Liste gestartet wird.
+Die Zahlen oben und unten am Fader zeigen den „aktuellen Cue“ und den „nächsten Cue“ an.  
+Die Beschriftung des aktuellen Cues ist blau. Dieser liegt bei 100 %, wenn die Wiedergabe der Cue-Liste gestartet wird.  
+Die Beschriftung für den nächsten Cue ist orangefarben und steht bei 0 %, wenn die Wiedergabe der Cue-Liste gestartet wird.  
 
-Wenn die Cue-Liste ausgeführt wird, steuert der Crossfade-Fader die Intensität der zugehörigen Cues, indem er deren Ein- und Ausblendgeschwindigkeiten außer Kraft setzt und so eine manuelle Steuerung des Übergangs ermöglicht.
+Wenn die Cue-Liste ausgeführt wird, steuert der Crossfade-Fader die Intensität der zugehörigen Cues, indem er deren Ein- und Ausblendgeschwindigkeiten außer Kraft setzt und so eine manuelle Steuerung des Übergangs ermöglicht.  
 
-Nachdem der Fader an das entgegengesetzte Ende seines Weges bewegt wurde, finden folgende Änderungen statt:
+Nachdem der Fader an das entgegengesetzte Ende seines Weges bewegt wurde, finden folgende Änderungen statt:  
 
 * Die orangefarbene Beschriftung des nächsten Cues wechselt zu Blau. Dies zeigt an, dass der alte nächste Cue zum neuen aktuellen Cue geworden ist.
 * Die blaue Beschriftung des aktuellen Cues wechselt zu Orange und die Nummer des Cues wird um 2 erhöht. Dieser Fader steuert nun den Cue, der nach dem alten nächsten Cue kommt.
@@ -62,6 +62,6 @@ Nachdem der Fader an das entgegengesetzte Ende seines Weges bewegt wurde, finden
 
 ### Hinweis
 
-Wenn ein Cue mithilfe des [Chaser-Editors](/function-manager/chaser-editor) zu einem Chaser hinzugefügt wird, wird die Standarddauer auf 0 gesetzt.
-Um zu vermeiden, dass die Cues in der Cue-Liste hektisch und ohne Ergebnis wiederholt werden, legen Sie die Dauer Ihrer Cues fest, indem Sie entweder auf das Dauerfeld doppelklicken oder das Kurzwahl-Widget verwenden![](/basics/speed.png)
+Wenn ein Cue mithilfe des [Chaser-Editors](/function-manager/chaser-editor) zu einem Chaser hinzugefügt wird, wird die Standarddauer auf 0 gesetzt.  
+Um zu vermeiden, dass die Cues in der Cue-Liste hektisch und ohne Ergebnis wiederholt werden, legen Sie die Dauer Ihrer Cues fest, indem Sie entweder auf das Dauerfeld doppelklicken oder das Kurzwahl-Widget verwenden![](/basics/speed.png)  
 Beachten Sie, dass Sie, wenn Sie Szenen benötigen, die Sie manuell mit dem Cue-List-Widget überblenden möchten, die Dauer der Cues wahrscheinlich mit dem [Speed ​​Dial-Widget](../speed-dial) auf „unendlich“ (∞) einstellen möchten). Dies kann im Chaser-Editor durch Klicken auf die Schaltfläche ![](/basics/speed.png) aktiviert werden.

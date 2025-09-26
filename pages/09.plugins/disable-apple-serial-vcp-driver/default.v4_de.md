@@ -11,7 +11,7 @@ Ein VCP-Treiber für die meisten FTDI-USB-zu-Seriell-Konverter wird als Teil des
 
 ### Deaktivieren durch Umbenennen (nur OS X 10.9 und 10.10)
 
-Hinweis: Diese Methode funktioniert **nur auf 10.9 Mavericks und 10.10 Yosemite.**
+Hinweis: Diese Methode funktioniert **nur auf 10.9 Mavericks und 10.10 Yosemite.**  
 
 Starten Sie eine Terminalsitzung (Gehe zu > Anwendungen > Dienstprogramme > Terminal) und kopieren Sie den folgenden Text und fügen Sie ihn in die Eingabeaufforderung ein:
 
@@ -21,7 +21,7 @@ sudo mv AppleUSBFTDI.kext AppleUSBFTDI.disabled
 sudo touch /System/Library/Extensions
 ```
 
-dann neu starten.
+dann neu starten.  
 Um VCP wieder zu aktivieren, benennen Sie AppleUSBFTDI.disabled wieder in AppleUSBFTDI.kext um
 
 ```
@@ -34,7 +34,7 @@ dann neu starten.
 
 ### Vorübergehend entladen (alle Versionen von OS X)
 
-Hinweis: Diese Methode funktioniert auf allen Versionen von OS X.
+Hinweis: Diese Methode funktioniert auf allen Versionen von OS X.  
 
 Es ist möglich, Apples VCP für die aktuelle Sitzung, also bis zum nächsten Neustart, zu entladen:
 
@@ -54,7 +54,7 @@ Die Befehle kextunload und kextload können in jedem Verzeichnis ausgeführt wer
 
 Hinweis: Dies ist die einzige nicht temporäre Methode, die unter **10.11 El Capitan** funktioniert.
 
-FTDI stellt eine signierte Kernel-Erweiterung (D2xxHelper.kext) bereit, die keinen Code enthält, aber verhindert, dass OS Dadurch bleibt das Gerät unbeansprucht und steht nur für D2XX-Programme zur Verfügung.
+FTDI stellt eine signierte Kernel-Erweiterung (D2xxHelper.kext) bereit, die keinen Code enthält, aber verhindert, dass OS Dadurch bleibt das Gerät unbeansprucht und steht nur für D2XX-Programme zur Verfügung.  
 1. Trennen Sie alle FTDI-Geräte.  
 2. Laden Sie das D2xxHelper-Installationsprogramm von [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/) herunter und führen Sie es aus.  
 3. Neustart.  

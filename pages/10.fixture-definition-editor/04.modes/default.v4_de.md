@@ -68,6 +68,6 @@ Das Bearbeiten eines Kopfes ist sehr einfach: Setzen Sie ein Häkchen bei jedem 
 
 ## Registerkarte „Physisch“.
 
-Diese Registerkarte ist identisch mit der _globalen_ [physischen Registerkarte](/fixture-definition-editor/physical), die sich in den Hauptfenstern des Fixture-Editors befindet.
+Diese Registerkarte ist identisch mit der _globalen_ [physischen Registerkarte](/fixture-definition-editor/physical), die sich in den Hauptfenstern des Fixture-Editors befindet.  
 Der einzige Unterschied besteht darin, dass Sie hier auswählen können, ob der Modus, den Sie bearbeiten, dieselben oder unterschiedliche physische Informationen enthält.
 Lassen Sie im ersten Fall einfach die Option **„Globale Einstellungen verwenden“** aktiviert. Wenn der Modus unterschiedliche Eigenschaften verfügbar macht, aktivieren Sie die Option **Globale Einstellungen überschreiben** und geben Sie alle erforderlichen Informationen ein.

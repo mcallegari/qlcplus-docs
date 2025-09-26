@@ -3,7 +3,7 @@ title: 'Befehlszeilenparameter'
 date: '08:19 22-08-2023'
 ---
 
-QLC+ unterstützt eine Reihe von Befehlszeilenparametern, um einige Funktionalitäten beim Start zu automatisieren/erweitern.
+QLC+ unterstützt eine Reihe von Befehlszeilenparametern, um einige Funktionalitäten beim Start zu automatisieren/erweitern.  
 Die Verwendung von Befehlszeilenparametern kann je nach verwendetem Betriebssystem schwierig sein:
 
 **Linux**: Öffnen Sie einfach ein Terminal und geben Sie „qlcplus“ gefolgt von den benötigten Parametern ein<br>

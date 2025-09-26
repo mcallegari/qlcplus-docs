@@ -44,11 +44,11 @@ Wenn sich der Schieberegler derzeit nicht im Level-Modus befindet, sehen Sie led
 
 ### Konfiguration – Registerkarte „Wiedergabe“.
 
-Wenn sich der Schieberegler derzeit nicht im Wiedergabemodus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Wiedergabemodus zu wechseln. Nachdem Sie darauf geklickt haben, werden die Eigenschaften des Wiedergabemodus angezeigt.
+Wenn sich der Schieberegler derzeit nicht im Wiedergabemodus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Wiedergabemodus zu wechseln. Nachdem Sie darauf geklickt haben, werden die Eigenschaften des Wiedergabemodus angezeigt.  
 
 Wenn sich der Schieberegler im Wiedergabemodus befindet, verhält er sich wie eine Kombination aus Schaltfläche und Schieberegler. Mit dem Schieberegler können Sie eine Funktion starten UND gleichzeitig die Intensität der Funktion steuern. Wenn der Schieberegler auf Null steht, wird die Funktion gestoppt, aber jeder Wert über Null startet die Funktion (sofern sie nicht bereits gestartet wurde) und passt gleichzeitig die Intensität der Funktion an (falls zutreffend).
 
-Ein Schieberegler im Wiedergabemodus ignoriert die Ein- und Ausblendzeiten der angehängten Funktion, sodass Überblendungen manuell durchgeführt werden müssen.
+Ein Schieberegler im Wiedergabemodus ignoriert die Ein- und Ausblendzeiten der angehängten Funktion, sodass Überblendungen manuell durchgeführt werden müssen.  
 Wenn Sie Ein-/Ausblendautomatisierungen zusammen mit der Steuerung der Funktionsintensität benötigen, ist die Verwendung eines ![](/basics/button.png)[Virtual Console Button](../button) in Kombination mit einem Slider in Der Submaster-Modus ist genau das, wonach Sie suchen.
 
 |     |     |
@@ -62,7 +62,7 @@ Wenn Sie Ein-/Ausblendautomatisierungen zusammen mit der Steuerung der Funktions
 
 Wenn sich der Schieberegler derzeit nicht im Submaster-Modus befindet, sehen Sie lediglich eine Schaltfläche, die Sie auffordert, darauf zu klicken, um in den Submaster-Modus zu wechseln. Nachdem Sie darauf geklickt haben, wird der Schieberegler so eingestellt, dass er als Submaster fungiert.
 
-Wenn ein Schieberegler auf den Submaster-Modus eingestellt ist, steuert er die Intensität jedes anderen Widgets im selben Frame (bitte beachten Sie, dass der Hauptbereich der virtuellen Konsole ebenfalls ein Frame ist!)
-Die Intensität eines Widgets hängt von der Art des Widgets selbst und der damit gesteuerten Funktionalität ab. Ein Submaster steuert die Intensität jeder „lichtemittierenden“ QLC+-Funktionalität, entweder einer Funktion oder einzelner Kanalebenen.
-Beispielsweise kann ein Submaster die Intensität einer Funktion steuern, die einer [Schaltfläche](../button) zugeordnet ist, oder die Kanalpegel, die einem Schieberegler im Pegelmodus zugeordnet sind.
+Wenn ein Schieberegler auf den Submaster-Modus eingestellt ist, steuert er die Intensität jedes anderen Widgets im selben Frame (bitte beachten Sie, dass der Hauptbereich der virtuellen Konsole ebenfalls ein Frame ist!)  
+Die Intensität eines Widgets hängt von der Art des Widgets selbst und der damit gesteuerten Funktionalität ab. Ein Submaster steuert die Intensität jeder „lichtemittierenden“ QLC+-Funktionalität, entweder einer Funktion oder einzelner Kanalebenen.  
+Beispielsweise kann ein Submaster die Intensität einer Funktion steuern, die einer [Schaltfläche](../button) zugeordnet ist, oder die Kanalpegel, die einem Schieberegler im Pegelmodus zugeordnet sind.  
 Jedes Widget wird von einem Submaster gesteuert, auch wenn die Funktionalität des Widgets noch nicht aktiv ist. Wenn beispielsweise ein Submaster auf 50 % eingestellt ist, startet ein anschließender Tastendruck die zugehörige Funktion mit 50 % Intensität.

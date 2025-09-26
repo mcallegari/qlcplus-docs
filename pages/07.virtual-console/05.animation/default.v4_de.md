@@ -3,23 +3,23 @@ title: Animationen
 date: '03:09 22-08-2023'
 ---
 
-Ein Animations-Widget ist ein vollständiges Werkzeug zum Arbeiten mit den [RGB-Matrizen](/basics/glossary-and-concepts#rgb-matrix) Ihres Projekts.
-Es zeigt mehrere grafische Elemente an, um eine Matrix während Live-Shows vollständig zu steuern.
+Ein Animations-Widget ist ein vollständiges Werkzeug zum Arbeiten mit den [RGB-Matrizen](/basics/glossary-and-concepts#rgb-matrix) Ihres Projekts.  
+Es zeigt mehrere grafische Elemente an, um eine Matrix während Live-Shows vollständig zu steuern.  
 Am wichtigsten ist, dass Sie damit eine Reihe sogenannter „benutzerdefinierter Steuerelemente“ definieren können, um Voreinstellungen, Farben und Eigenschaften schnell abzurufen und sofort auf eine laufende Matrix anzuwenden.
 
 Einführung
 ------------
 
-Wenn Sie auf das Symbol ![](/basics/animation.png) klicken, wird Ihrer virtuellen Konsole ein Animations-Widget hinzugefügt.
-Standardmäßig zeigt das Widget 4 Elemente an:
+Wenn Sie auf das Symbol ![](/basics/animation.png) klicken, wird Ihrer virtuellen Konsole ein Animations-Widget hinzugefügt.  
+Standardmäßig zeigt das Widget vier Elemente an:
 
-* Ganz links ein Schieberegler zur Steuerung der Wiedergabe und der Intensität einer RGB-Matrix.
-    Die Schiebereglerbewegung kann einer externen Controller-Eingangsleitung zugeordnet werden.
+* Ganz links ein Schieberegler zur Steuerung der Wiedergabe und der Intensität einer RGB-Matrix.  
+    Die Schiebereglerbewegung kann einer externen Controller-Eingangsleitung zugeordnet werden.  
     Es verhält sich im Wiedergabemodus genau wie ein [Virtual Console Slider](../slider).
 * Oben rechts zwei [Click & Go](/basics/glossary-and-concepts#click-and-go)-Schaltflächen zum Festlegen der Start- und Endfarbe der Matrix. Wenn Sie im [Betriebsmodus](/basics/glossary-and-concepts#modi) darauf klicken, wird ein Farbauswahlmenü angezeigt.
 * Unterhalb der beiden Schaltflächen befindet sich ein Dropdown-Menü zur Auswahl der gewünschten Matrix-Animation oder Voreinstellung.
 
-Der Platz unter dem Animationsmenü ist für benutzerdefinierte Steuerelemente reserviert. Sie können im Widget-Konfigurationsfenster definiert werden und werden jeweils als einzelne Schaltfläche angezeigt.
+Der Platz unter dem Animationsmenü ist für benutzerdefinierte Steuerelemente reserviert. Sie können im Widget-Konfigurationsfenster definiert werden und werden jeweils als einzelne Schaltfläche angezeigt.  
 Jedes benutzerdefinierte Steuerelement kann einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.
 
 Konfiguration
@@ -38,9 +38,9 @@ Ein Animations-Widget kann mit der Schaltfläche „Eigenschaften“ ![](/basics
 
 ### Seite „Benutzerdefinierte Steuerelemente“.
 
-Ein benutzerdefiniertes Steuerelement ist eine „Verknüpfung“ zu einer Funktionalität einer RGB-Matrix.
-Grundsätzlich können Sie während der Designphase einer Show alle Optionen steuern, die normalerweise im [RGB-Matrix-Editor](/function-manager/rgb-matrix-editor) verwendet werden. Die einzige Option, die Sie nicht steuern können, ist die Fixture-Gruppe, die von einer RGB-Matrixfunktion verwendet wird.
-Auf dieser Konfigurationsseite kann der Benutzer je nach Bedarf während einer Live-Aufführung eine beliebige Anzahl benutzerdefinierter Steuerelemente definieren.
+Ein benutzerdefiniertes Steuerelement ist eine „Verknüpfung“ zu einer Funktionalität einer RGB-Matrix.  
+Grundsätzlich können Sie während der Designphase einer Show alle Optionen steuern, die normalerweise im [RGB-Matrix-Editor](/function-manager/rgb-matrix-editor) verwendet werden. Die einzige Option, die Sie nicht steuern können, ist die Fixture-Gruppe, die von einer RGB-Matrixfunktion verwendet wird.  
+Auf dieser Konfigurationsseite kann der Benutzer je nach Bedarf während einer Live-Aufführung eine beliebige Anzahl benutzerdefinierter Steuerelemente definieren.  
 Jedes benutzerdefinierte Steuerelement wird als Schaltfläche im Layout des Animations-Widgets dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.
 
 |     |     |

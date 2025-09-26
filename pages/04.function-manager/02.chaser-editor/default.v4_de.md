@@ -3,7 +3,7 @@ title: Chaser-Editor
 date: '12:08 21-08-2023'
 ---
 
-Der Chaser-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser)-Funktionen verwendet.
+Der Chaser-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/chaser.png) [Chaser](/basics/glossary-and-concepts#chaser)-Funktionen verwendet.  
 Ein Chaser besteht aus Schritten und jeder Schritt wird durch dargestellt
 
 * Eine progressive Zahl

@@ -4,7 +4,7 @@ date: '08:32 21-08-2023'
 media_order: dmx-usb-settings.png
 ---
 
-Auf dieser Seite finden Sie die häufigsten Fragen, die Ihnen beim Einstieg in QLC+ in den Sinn kommen könnten.
+Auf dieser Seite finden Sie die häufigsten Fragen, die Ihnen beim Einstieg in QLC+ in den Sinn kommen könnten.  
 Hier finden Sie entweder direkt die Antwort oder Hilfe, die Ihnen den richtigen Weg weist.
 
 
