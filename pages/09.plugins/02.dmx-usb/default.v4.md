@@ -44,14 +44,14 @@ sudo adduser your\_user\_name dialout
 
 ### macOS
 
-On Apple macOS, you don't need any drivers at all since QLC+ uses the macOS native USB interface. Installing the D2XX drivers should cause no harm, but **DO NOT INSTALL VCP (Virtual COM Port) drivers** as they will definitely interfere with QLC+. If you have previously installed the VCP drivers, consult the [FTDI installation guides](https://ftdichip.com/document/installation-guides/) on how to uninstall them.
+On Apple macOS, you don't need any drivers at all since QLC+ uses the macOS native USB interface. Installing the D2XX drivers should cause no harm, but **DO NOT INSTALL VCP (Virtual COM Port) drivers** as they will definitely interfere with QLC+. If you have previously installed the VCP drivers, consult the [FTDI installation guides](https://ftdichip.com/document/installation-guides/) on how to uninstall them.  
   
 **OSX Mavericks (or later) issues**: please check [Questions & answers #3](/basics/questions-and-answers)
 
 ### Windows
 
-On Microsoft Windows, the plugin needs the [latest D2XX drivers from FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Normally, when a FTDI device is plugged in for the first time, Windows will automatically download the D2XX drivers for you, so no action is needed at all.
-If that doesn't happen, please consult the [FTDI installation guides](https://ftdichip.com/document/installation-guides/) to know how to install the drivers.
+On Microsoft Windows, the plugin needs the [latest D2XX drivers from FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Normally, when a FTDI device is plugged in for the first time, Windows will automatically download the D2XX drivers for you, so no action is needed at all.  
+If that doesn't happen, please consult the [FTDI installation guides](https://ftdichip.com/document/installation-guides/) to know how to install the drivers.  
 **DO NOT INSTALL VCP (Virtual COM Port) drivers** as they will probably interfere with the D2XX interface.
 
 ENTTEC DMX USB Pro supported modes

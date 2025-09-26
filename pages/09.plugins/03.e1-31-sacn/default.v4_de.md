@@ -7,7 +7,7 @@ media_order: e131_configuration.png
 Einführung
 ------------
 
-QLC+ unterstützt das [E1.31-Protokoll](https://wiki.openlighting.org/index.php/E1.31) (auch bekannt als s.ACN) über ein Eingabe-/Ausgabe-Plugin, das Pakete im Netzwerk empfängt und überträgt.
+QLC+ unterstützt das [E1.31-Protokoll](https://wiki.openlighting.org/index.php/E1.31) (auch bekannt als s.ACN) über ein Eingabe-/Ausgabe-Plugin, das Pakete im Netzwerk empfängt und überträgt.  
 Es sind keine zusätzlichen Anforderungen erforderlich, da QLC+ über eine native Implementierung des E1.31-Protokolls verfügt, das auf Linux-, Windows- und OSX-Systemen funktioniert.
 Das E1.31-Plugin kann Pakete von mehreren Netzwerkkarten, virtuellen Adressen, dem Loopback-Gerät (127.0.0.1) und mehreren Universen pro Netzwerkschnittstelle senden und empfangen.
 Standardmäßig werden E1.31-Pakete als UDP an Multicast-Adressen wie 239.255.0.x gesendet, wobei „x“ die in QLC+ ausgewählte Universumsnummer ist. Der verwendete Port ist 5568.

@@ -55,7 +55,7 @@ Die Befehle kextunload und kextload können in jedem Verzeichnis ausgeführt wer
 Hinweis: Dies ist die einzige nicht temporäre Methode, die unter **10.11 El Capitan** funktioniert.
 
 FTDI stellt eine signierte Kernel-Erweiterung (D2xxHelper.kext) bereit, die keinen Code enthält, aber verhindert, dass OS Dadurch bleibt das Gerät unbeansprucht und steht nur für D2XX-Programme zur Verfügung.
-1\. Trennen Sie alle FTDI-Geräte.
-2\. Laden Sie das D2xxHelper-Installationsprogramm von [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/) herunter und führen Sie es aus.
-3\. Neustart.
-4\. Schließen Sie die FTDI-Geräte erneut an.
+1. Trennen Sie alle FTDI-Geräte.  
+2. Laden Sie das D2xxHelper-Installationsprogramm von [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/) herunter und führen Sie es aus.  
+3. Neustart.  
+4. Schließen Sie die FTDI-Geräte erneut an.

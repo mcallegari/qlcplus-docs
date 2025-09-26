@@ -40,7 +40,7 @@ The scripts must be self-executing, i.e. when they are evaluated, the script its
 However, a script with nothing more than an empty object does nothing, no matter how self-executing it might be. You must also declare some **properties** for the returned object so that QLC+ knows how to use the script and to show it to the user (you). So, you need to declare the following properties for the returned script object:
 
 * **apiVersion:** The API version that the script follows. Currently, the accepted values are '1' or '2'.  
-    apiVersion 1 allows simple scripting and easier coding, while apiVersion 2 offers advanced features [described below](#api-version-2).
+    apiVersion 1 allows simple scripting and easier coding, while apiVersion 2 offers advanced features [described below](#api-version-2).  
     Any other value will cause the script to be treated as invalid.
 * **name:** The name of your script. This name appears in the pattern selection box in the [RGB Matrix Editor](../rgb-matrix-editor)
 * **author:** The name of the person who has written the script. **You.**

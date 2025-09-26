@@ -86,7 +86,7 @@ Es erscheint ein Popup, in dem Sie nach dem Namen gefragt werden, den Sie der Sh
 Wenn Sie einen Track hinzufügen, werden Sie in einem Popup aufgefordert, eine vorhandene Funktion auszuwählen oder eine neue mit einem Standardnamen zu erstellen.
 Wenn Sie fertig sind, wird ein neuer Track erstellt. Alle auf dieser Spur erstellten Sequenzen wirken sich nur auf die zugehörige Szene aus und haben keinen Einfluss auf die anderen Spuren.
 Ein neu erstellter Track wird automatisch als aktiv gesetzt. Eine aktive Spur hat auf der linken Seite ein grünes Licht.
-Eine Spur kann auf ![](track-mute.png) Stummschaltung und ![](track-solo.png) Solo-Zustand eingestellt werden. Im Stummschaltungszustand wird die Spur von der Wiedergabe ausgeschlossen, während im Solo-Zustand alle anderen Spuren der Show stummgeschaltet werden.
+Eine Spur kann auf ![](track-mute.png) Stummschaltung und ![](track-solo.png) Solo-Zustand eingestellt werden. Im Stummschaltungszustand wird die Spur von der Wiedergabe ausgeschlossen, während im Solo-Zustand alle anderen Spuren der Show stummgeschaltet werden.  
 Wenn Sie mit der rechten Maustaste auf einen Titel klicken, können Sie ihn nach oben ![](/basics/up.png) oder nach unten ![](/basics/down.png) verschieben, um eine logische Reihenfolge zu erreichen.
 Sobald eine Spur ausgewählt ist, wird ihr [Szeneneditor](/function-manager/scene-editor) unten auf dem Bildschirm angezeigt.
 

@@ -50,9 +50,9 @@ A l'Apple macOS, no necessites cap controlador, ja que QLC+ utilitza la interfí
 
 ### Windows
 
-A Microsoft Windows, el connector necessita els [últims controladors D2XX de FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Normalment, quan un dispositiu FTDI està connectat per primera vegada, Windows us baixarà automàticament els controladors D2XX, de manera que no cal cap acció.
+A Microsoft Windows, el connector necessita els [últims controladors D2XX de FTDI](https://ftdichip.com/drivers/d2xx-drivers/). Normalment, quan un dispositiu FTDI està connectat per primera vegada, Windows us baixarà automàticament els controladors D2XX, de manera que no cal cap acció.  
 Si això no passa, consulteu les [guies d'instal·lació FTDI](https://ftdichip.com/document/installation-guides/) per saber com instal·lar els controladors.
-**NO INSTAL·LEU controladors VCP (Port Virtual COM)**, ja que probablement interferiran amb la interfície D2XX.
+**NO INSTAL·LEU controladors VCP (Port Virtual COM)**, ja que probablement interferiran amb la interfície D2XX.  
 
 Modes compatibles amb ENTTEC DMX USB Pro
 ----------------------------------
