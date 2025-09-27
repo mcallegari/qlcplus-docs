@@ -9,10 +9,10 @@ Diese Seite wurde in alphabetischer Reihenfolge geordnet, um die Suche nach eine
 
 ### ![](../audio.png) Audio
 
-Eine Audio-[Funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte gespeicherte Audiodatei darstellt.
-QLC+ unterstützt die gängigsten Audioformate wie Wave, MP3, M4A, Ogg und Flac. Es unterstützt Mono- oder Stereokanäle und verschiedene Abtastraten wie 44,1 kHz, 48 kHz usw.
-Audiofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt im [Chaser](#chaser) oder in einer [Show](#show) platziert werden.
-Wie die meisten QLC+ Funktionen unterstützt Audio Ein- und Ausblendzeiten.
+Eine Audio-[Funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte gespeicherte Audiodatei darstellt.  
+QLC+ unterstützt die gängigsten Audioformate wie Wave, MP3, M4A, Ogg und Flac. Es unterstützt Mono- oder Stereokanäle und verschiedene Abtastraten wie 44,1 kHz, 48 kHz usw.  
+Audiofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt im [Chaser](#chaser) oder in einer [Show](#show) platziert werden.  
+Wie die meisten QLC+-Funktionen unterstützt Audio Ein- und Ausblendzeiten.
 
 ### ![](../blackout.png) Blackout
 
@@ -28,7 +28,7 @@ Einige Kanäle in intelligenten Geräten bieten viele Arten von Funktionen oder 
 
 ### Kanalgruppen
 
-Kanalgruppen können im Bereich [Fixture Manager](/fixture-manager) mithilfe des [Channel Groups Editor](/fixture-manager/channel-groups-editor) hinzugefügt und definiert werden.
+Kanalgruppen können im Bereich [Fixture Manager](/fixture-manager) mithilfe des [Channel Groups Editor](/fixture-manager/channel-groups-editor) hinzugefügt und definiert werden.  
 Kanalgruppen können einen benutzerdefinierten Namen haben und alle benutzerdefinierten Kanäle gruppieren, die aus einer vorhandenen Geräteliste ausgewählt werden.
 
 ### ![](../chaser.png) Chaser
@@ -48,7 +48,7 @@ Kopien von Chaserfunktionen können mit dem [Funktionsmanager](/function-manager
 
 ### Click And Go
 
-Click And Go ist eine Technologie, die es dem Benutzer ermöglicht auf vollständig visuelle Weise und mit nur wenigen Klicks schnell auf Makros und Farben zuzugreifen. Dies kann zu effizienteren Live-Shows und mehr Freiheit bei der Auswahl des gewünschten Ergebnisses führen.
+Click And Go ist eine Technologie, die es dem Benutzer ermöglicht auf vollständig visuelle Weise und mit nur wenigen Klicks schnell auf Makros und Farben zuzugreifen. Dies kann zu effizienteren Live-Shows und mehr Freiheit bei der Auswahl des gewünschten Ergebnisses führen.  
 Bisher sind drei Arten von Widgets verfügbar:
 
 * Einzelne Farbe (gilt für die Intensitätskanäle Rot, Grün, Blau, Cyan, Gelb, Magenta, Amber und Weiß)
@@ -162,9 +162,9 @@ Eine Überblendung zwischen zwei [Szenen](#szene) ersetzt die HTP-Pegel in der e
 
 ### ![](../input_output.png) Eingabe-/Ausgabe-Plugins
 
-QLC+ unterstützt eine Vielzahl von Plugins zum Senden und Empfangen von Daten von/an die DMX Universen und Art-Net Controller.
-Ein Plugin kann eine Schnittstelle zu physischen Geräten (z. B. DMX-Adaptern oder MIDI-Controllern) oder zu einem Netzwerkprotokoll (z. B. [ArtNet](/plugins/art-net), [OSC](/plugins/osc) oder [E1.31](/plugins/e1-31-sacn)).
-Plugins unterstützen Eingabe-, Ausgabe- oder Feedbackfunktionen abhängig vom Gerät oder Protokoll das sie steuern.
+QLC+ unterstützt eine Vielzahl von Plugins zum Senden und Empfangen von Daten von/an die DMX Universen und Art-Net Controller.  
+Ein Plugin kann eine Schnittstelle zu physischen Geräten (z. B. DMX-Adaptern oder MIDI-Controllern) oder zu einem Netzwerkprotokoll (z.B. [ArtNet](/plugins/art-net), [OSC](/plugins/osc) oder [E1.31](/plugins/e1-31-sacn)) sein.  
+Plugins unterstützen Eingabe-, Ausgabe- oder Feedbackfunktionen abhängig vom Gerät oder Protokoll das sie steuern.  
 
 Die primären Eingabemethoden für QLC+ sind natürlich die Tastatur und Maus. Benutzer können Tastaturtasten virtuellen Konsolentasten zuweisen, Schieberegler ziehen und so ziemlich alles mit einer Maus und Tastatur erledigen.
 
@@ -220,9 +220,9 @@ Kopien von Szenenfunktionen können mit dem [Funktionsmanager](/function-manager
 
 ### ![](../sequence.png) Sequenz
 
-Eine Sequenz verfügt über einige der Funktionen eines [Chasers](#chaser).
-Es entspricht einem Chaser, bei dem jeder Schritt eine einzelne [Szene](#szene) ist und jede dieser Szenen denselben Kanalsatz steuert. Eine Sequenz ist an eine bestimmte Szene gebunden, was bedeutet, dass alle Schritte der Sequenz nur die aktivierten Kanäle dieser Szene steuern können.
-Beim Erstellen neuer Schritte in einer Sequenz wird kein Popup zur Funktionsauswahl angezeigt, da ein Sequenzschritt im Gegensatz zu einem Chaser-Schritt keine anderen Funktionen enthalten kann.
+Eine Sequenz verfügt über einige der Funktionen eines [Chasers](#chaser).  
+Es entspricht einem Chaser, bei dem jeder Schritt eine einzelne [Szene](#szene) ist und jede dieser Szenen denselben Kanalsatz steuert. Eine Sequenz ist an eine bestimmte Szene gebunden, was bedeutet, dass alle Schritte der Sequenz nur die aktivierten Kanäle dieser Szene steuern können.  
+Beim Erstellen neuer Schritte in einer Sequenz wird kein Popup zur Funktionsauswahl angezeigt, da ein Sequenzschritt im Gegensatz zu einem Chaser-Schritt keine anderen Funktionen enthalten kann.  
 Wenn eine Sequenz erstellt wird, erscheint im [Funktionsmanager](/function-manager) ein spezielles Sequenzsymbol als untergeordnetes Element der Szene, an die es gebunden ist.
 Um den Unterschied zwischen einer Sequenz und einem Chaser zu verstehen, lesen Sie bitte den zweiten Absatz der Dokumentation zum [Show Manager](/show-manager).
 
@@ -237,6 +237,6 @@ Eine Show ist eine erweiterte [Funktion](#funktionen), die die meisten QLC+-Funk
 
 ### ![](../video.png) Video
 
-Eine Video[funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte oder einer Netzwerk-URL gespeicherte Videodatei darstellt.
-Die unterstützten Videoformate hängen von Ihrem Betriebssystem ab. Beispielsweise ist Mac OSX auf MOV/MP4-Dateien beschränkt und nicht viel mehr.
+Eine Video[funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte oder einer Netzwerk-URL gespeicherte Videodatei darstellt.  
+Die unterstützten Videoformate hängen von Ihrem Betriebssystem ab. Beispielsweise ist Mac OSX auf MOV/MP4-Dateien beschränkt und nicht viel mehr.  
 Videofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt in [Chaser](#chaser) oder in einer [Show](#show) platziert werden.

@@ -14,12 +14,12 @@ taxonomy:
 
 # Einfache Arbeitsoberfläche
 
-Das einfache Pult emuliert eine typische Lichtkonsole, die ein vollständiges 512-Kanal-DMX-Universum mit mehreren Cue-Stacks steuern kann, die mit Wiedergabe-Schiebereglern bedient werden.
-Der einfache Schreibtisch ist in zwei Hauptbereiche unterteilt: **Kanäle** (oberer Bereich) und **Hinweise** (unterer Bereich).
-Der Kanalbereich spiegelt genau den aktuellen Status jedes DMX-Kanals jedes Universums wider. Wenn Kanäle gesteuert werden, ohne dass ein Projekt geladen ist, können Benutzer sie vollständig manuell steuern.
-Wenn ein Projekt geladen ist, überschreibt das Verschieben eines Simple-Desk-Kanals alle anderen QLC+-Funktionen, die versuchen, diesen Kanal zu steuern. Eine visuelle Anzeige färbt den Hintergrund des Kanals rot und informiert den Benutzer darüber, dass Simple Desk nun die vollständige Kontrolle darüber hat.
-Dies ist in einigen Live-Umständen sehr nützlich, in denen eine laufende Funktion eine manuelle Anpassung erfordert.
-Um Simple Desk von übergeordneten Kanälen zu „deaktivieren“, klicken Sie einfach auf die Schaltfläche „Zurücksetzen“. Durch das Zurücksetzen von Kanälen werden diese entweder auf Null oder auf den zuvor durch eine Funktion festgelegten Wert zurückgesetzt.
+Das einfache Pult emuliert eine typische Lichtkonsole, die ein vollständiges 512-Kanal-DMX-Universum mit mehreren Cue-Stacks steuern kann, die mit Wiedergabe-Schiebereglern bedient werden.  
+Der einfache Schreibtisch ist in zwei Hauptbereiche unterteilt: **Kanäle** (oberer Bereich) und **Hinweise** (unterer Bereich).  
+Der Kanalbereich spiegelt genau den aktuellen Status jedes DMX-Kanals jedes Universums wider. Wenn Kanäle gesteuert werden, ohne dass ein Projekt geladen ist, können Benutzer sie vollständig manuell steuern.  
+Wenn ein Projekt geladen ist, überschreibt das Verschieben eines Simple-Desk-Kanals alle anderen QLC+-Funktionen, die versuchen, diesen Kanal zu steuern. Eine visuelle Anzeige färbt den Hintergrund des Kanals rot und informiert den Benutzer darüber, dass Simple Desk nun die vollständige Kontrolle darüber hat.  
+Dies ist in einigen Live-Umständen sehr nützlich, in denen eine laufende Funktion eine manuelle Anpassung erfordert.  
+Um Simple Desk von übergeordneten Kanälen zu „deaktivieren“, klicken Sie einfach auf die Schaltfläche „Zurücksetzen“. Durch das Zurücksetzen von Kanälen werden diese entweder auf Null oder auf den zuvor durch eine Funktion festgelegten Wert zurückgesetzt.  
 
 Cues arbeitet getrennt von anderen QLC+-Komponenten. Beispielsweise sind Hinweise innerhalb des Hinweisstapels im [Funktionsmanager](/function-manager) nicht sichtbar und [Szenen](/basics/glossary-and-concepts#szene) sind im Hinweisstapel nicht sichtbar.
 

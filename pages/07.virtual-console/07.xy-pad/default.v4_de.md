@@ -4,9 +4,9 @@ date: '03:22 22-08-2023'
 media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 ---
 
-XY Pad ist ein virtuelles Konsolen-Widget zur Positionierung von Vorrichtungen.
-Es kann die typischen DMX-Bewegungskanäle (**Pan** und **Tilt**) intelligenter Beleuchtungsgeräte, nämlich Scanner und Moving Heads, verarbeiten.
-Das Pad ist ein in der Größe veränderbarer Bereich, der von mehreren Bedienelementen umgeben ist, um die Anforderungen zu erfüllen, die Sie möglicherweise während einer Live-Show haben.
+XY-Pad ist ein virtuelles Konsolen-Widget zur Positionierung von Vorrichtungen.  
+Es kann die typischen DMX-Bewegungskanäle (**Pan** und **Tilt**) intelligenter Beleuchtungsgeräte, nämlich Scanner und Moving Heads, verarbeiten.  
+Das Pad ist ein in der Größe veränderbarer Bereich, der von mehreren Bedienelementen umgeben ist, um die Anforderungen zu erfüllen, die Sie möglicherweise während einer Live-Show haben.  
 Es wird wie folgt angezeigt:
 
 ![](xypad.png)
@@ -27,25 +27,25 @@ Es wird wie folgt angezeigt:
 
 ### Begrenzung des Arbeitsbereichs
 
-Das XY-Pad ist im Grunde eine Karte des gesamten Gradbereichs, den die Schwenk- und Neigungskanäle Ihrer Geräte verwalten können.
+Das XY-Pad ist im Grunde eine Karte des gesamten Gradbereichs, den die Schwenk- und Neigungskanäle Ihrer Geräte verwalten können.  
 Hier ist ein Bild, das zeigt, wie der Hauptbereich normalerweise Grade darstellt:
 
 ![](xypad2.png)
 
-Es gibt jedoch Fälle, in denen Sie den Grad begrenzen möchten, den ein beweglicher Kopf oder ein Scanner erreichen kann.
-Beispielsweise sollten Geräte mit einem Schwenkbereich von 540 Grad darauf beschränkt sein, nur in einem Bereich zu arbeiten, der dem Publikum zugewandt ist, oder Sie möchten möglicherweise vermeiden, dass bewegte Köpfe, die verkehrt herum an einer Traverse montiert sind, zur Decke oder außerhalb der Bühne zeigen.
+Es gibt jedoch Fälle, in denen Sie den Grad begrenzen möchten, den ein beweglicher Kopf oder ein Scanner erreichen kann.  
+Beispielsweise sollten Geräte mit einem Schwenkbereich von 540 Grad darauf beschränkt sein, nur in einem Bereich zu arbeiten, der dem Publikum zugewandt ist, oder Sie möchten möglicherweise vermeiden, dass bewegte Köpfe, die verkehrt herum an einer Traverse montiert sind, zur Decke oder außerhalb der Bühne zeigen.  
 Mit dem XY-Pad gibt es zwei Möglichkeiten, dies zu erreichen:
 
 **1\. Arbeitsfenster**
 
-Mit den Schiebereglern für den oberen und linken Bereich **(1)** ist es möglich, den Bereich einzuschränken, in dem das XY-Pad funktioniert.
-Wenn Sie den Bereich dieser Schieberegler reduzieren, wird ein halbtransparenter grüner Bereich **(7)** über dem Hauptbereich hervorgehoben, um die X/Y-Grenzen zu markieren, an denen Ihre Geräte arbeiten sollen.
+Mit den Schiebereglern für den oberen und linken Bereich **(1)** ist es möglich, den Bereich einzuschränken, in dem das XY-Pad funktioniert.  
+Wenn Sie den Bereich dieser Schieberegler reduzieren, wird ein halbtransparenter grüner Bereich **(7)** über dem Hauptbereich hervorgehoben, um die X/Y-Grenzen zu markieren, an denen Ihre Geräte arbeiten sollen.  
 Beachten Sie, dass bei Verwendung einer Maus auf der Benutzeroberfläche die Bewegung der Griffe auf das Arbeitsfenster beschränkt ist, auch wenn Sie den Cursor außerhalb davon ziehen, während bei Verwendung eines externen Controllers alle Werte auf das Fenster skaliert werden. Dadurch können Sie den gesamten Bereich eines physischen Faders nutzen und haben so eine höhere Empfindlichkeit beim Einstellen einer Position.
 
 **2\. Individuelles Leuchtenprogramm**
 
-Es ist möglich, im Eigenschaftendialog für jedes Gerät einen bestimmten Bereich festzulegen (siehe Abschnitt **Konfiguration**). Bei dieser Methode wird der gesamte Hauptbereich **(8)** genutzt und jeder angegebene Bereich jedes Geräts darauf skaliert.
-Dies ist sehr praktisch, wenn Sie ein XY-Pad mit gemischten Vorrichtungen und unterschiedlichen Gradbereichen verwenden möchten.
+Es ist möglich, im Eigenschaftendialog für jedes Gerät einen bestimmten Bereich festzulegen (siehe Abschnitt **Konfiguration**). Bei dieser Methode wird der gesamte Hauptbereich **(8)** genutzt und jeder angegebene Bereich jedes Geräts darauf skaliert.  
+Dies ist sehr praktisch, wenn Sie ein XY-Pad mit gemischten Vorrichtungen und unterschiedlichen Gradbereichen verwenden möchten.  
 
 Beispielsweise können Sie ein Gerät mit einer Schwenkbewegung von 540 Grad genau wie eines mit einer Schwenkbewegung von 360 Grad veranlassen.
 
@@ -55,24 +55,24 @@ Es ist möglich, beide Grenzwerte zu aktivieren (mithilfe der Bereichsschiebereg
 
 ### XY-Pad-Verwendungen
 
-Das XY-Pad ermöglicht drei völlig unterschiedliche Verwendungsmöglichkeiten, die jedoch alle auf die Positionierung ausgerichtet sind. Es liegt an Ihnen, je nach Ihren Bedürfnissen zu entscheiden, wie Sie sie am besten nutzen. Möglicherweise möchten Sie auch die Verwendung mehrerer XY-Pads für unterschiedliche Zwecke in Betracht ziehen.
+Das XY-Pad ermöglicht drei völlig unterschiedliche Verwendungsmöglichkeiten, die jedoch alle auf die Positionierung ausgerichtet sind. Es liegt an Ihnen, je nach Ihren Bedürfnissen zu entscheiden, wie Sie sie am besten nutzen. Möglicherweise möchten Sie auch die Verwendung mehrerer XY-Pads für unterschiedliche Zwecke in Betracht ziehen.  
 
-* **1- Absolute Positionierung**: Dies ist die grundlegende Verwendung und erfordert lediglich die Angabe, welche Geräte Sie steuern möchten (hinzugefügt über das Konfigurationsfenster) und schließlich deren spezifischen Betriebsbereich.
-    Wie bereits beschrieben, müssen Sie lediglich Ihre Geräte einmal einrichten und mit dem Bewegen mit Ihrem bevorzugten Controller beginnen.
-    Es ist auch möglich, einige Positionsvoreinstellungen zu definieren, sodass in **(9)** eine Reihe von Schaltflächen angezeigt werden, um schnell eine absolute Position abzurufen.
+* **1- Absolute Positionierung**: Dies ist die grundlegende Verwendung und erfordert lediglich die Angabe, welche Geräte Sie steuern möchten (hinzugefügt über das Konfigurationsfenster) und schließlich deren spezifischen Betriebsbereich.  
+    Wie bereits beschrieben, müssen Sie lediglich Ihre Geräte einmal einrichten und mit dem Bewegen mit Ihrem bevorzugten Controller beginnen.  
+    Es ist auch möglich, einige Positionsvoreinstellungen zu definieren, sodass in **(9)** eine Reihe von Schaltflächen angezeigt werden, um schnell eine absolute Position abzurufen.  
     Wenn eine Fixture-Gruppen-Voreinstellung aktiviert ist, steuert das XY-Pad nur die absoluten Positionen der in der Voreinstellung definierten Fixtures. (Weitere Informationen finden Sie auf der Registerkarte „Voreinstellungen“).
 
-* **2- EFX**: Im Konfigurationsfenster (Registerkarte „Voreinstellungen“) ist es möglich, einige Voreinstellungen hinzuzufügen, um vorhandene ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) Funktionen. Wenn Sie ein EFX-Preset aktivieren, wird die animierte Vorschau der Fixture-Bewegungen wie folgt angezeigt:
+* **2- EFX**: Im Konfigurationsfenster (Registerkarte „Voreinstellungen“) ist es möglich, einige Voreinstellungen hinzuzufügen, um vorhandene ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) Funktionen. Wenn Sie ein EFX-Preset aktivieren, wird die animierte Vorschau der Fixture-Bewegungen wie folgt angezeigt:  
     ![](xypad-efx.png)
-    Wenn kein Arbeitsfenster festgelegt ist, wird der EFX genau so angezeigt, wie er im [EFX-Editor](/function-manager/efx-editor) in der Vorschau angezeigt wird. Andernfalls wird der EFX so skaliert, dass er in das definierte Arbeitsfenster passt.
+    Wenn kein Arbeitsfenster festgelegt ist, wird der EFX genau so angezeigt, wie er im [EFX-Editor](/function-manager/efx-editor) in der Vorschau angezeigt wird. Andernfalls wird der EFX so skaliert, dass er in das definierte Arbeitsfenster passt.  
     Wenn ein Arbeitsfenster aktiv ist, wird es zwischen Nutzung Nr. 1 und Nutzung Nr. 2 geteilt.
 
-* **3- Relativ zu einer Szene**: Im Konfigurationsfenster (Registerkarte „Voreinstellungen“) ist es auch möglich, einige Voreinstellungen hinzuzufügen, um vorhandene ![](/basics/scene.png) [Szenen](/basics/glossary-and-concepts#szene)-Funktionen abzurufen
-    Das XY-Pad erkennt, welche Schwenk-/Neigekanäle in der Szene vorhanden sind, und stellt sie ein.
-    Der Pad-Griff **(6)** positioniert sich automatisch in der Mitte des Hauptbereichs **(8)**. Durch Bewegen des Griffs werden relative Werte aus der Mitte des Pads erzeugt, die zu den DMX-Werten der laufenden Szene addiert/subtrahiert werden.
-    Wenn Sie nach oben bewegen, wird ein negativer Offset zu den Neigungskanälen hinzugefügt, und wenn Sie nach unten gehen, wird ein positiver Offset hinzugefügt.
-    Durch Bewegen nach links wird ein negativer Offset zu den Pan-Kanälen hinzugefügt, durch Bewegen nach rechts wird ein positiver Offset hinzugefügt.
-    Wenn beim Aktivieren einer Szenenvoreinstellung ein Arbeitsfenster aktiv ist, wird es ausgeblendet, da es bei dieser Verwendung keine absoluten Werte gibt. Beim Zurückschalten auf Verwendung Nr. 1 oder Nr. 2 wird das Arbeitsfenster wiederhergestellt.
+* **3- Relativ zu einer Szene**: Im Konfigurationsfenster (Registerkarte „Voreinstellungen“) ist es auch möglich, einige Voreinstellungen hinzuzufügen, um vorhandene ![](/basics/scene.png) [Szenen](/basics/glossary-and-concepts#szene)-Funktionen abzurufen.  
+    Das XY-Pad erkennt, welche Schwenk-/Neigekanäle in der Szene vorhanden sind, und stellt sie ein.  
+    Der Pad-Griff **(6)** positioniert sich automatisch in der Mitte des Hauptbereichs **(8)**. Durch Bewegen des Griffs werden relative Werte aus der Mitte des Pads erzeugt, die zu den DMX-Werten der laufenden Szene addiert/subtrahiert werden.  
+    Wenn Sie nach oben bewegen, wird ein negativer Offset zu den Neigungskanälen hinzugefügt, und wenn Sie nach unten gehen, wird ein positiver Offset hinzugefügt.  
+    Durch Bewegen nach links wird ein negativer Offset zu den Pan-Kanälen hinzugefügt, durch Bewegen nach rechts wird ein positiver Offset hinzugefügt.  
+    Wenn beim Aktivieren einer Szenenvoreinstellung ein Arbeitsfenster aktiv ist, wird es ausgeblendet, da es bei dieser Verwendung keine absoluten Werte gibt. Beim Zurückschalten auf Verwendung Nr. 1 oder Nr. 2 wird das Arbeitsfenster wiederhergestellt.  
     Bitte beachten Sie, dass bei Aktivierung einer Szenenvoreinstellung tatsächlich die gesamte Szene gestartet wird, mit Farben und allem. In diesem Fall wird empfohlen, Szenen nur mit aktivierten Schwenk-/Neigekanälen zu erstellen und kein XY-Pad für andere Zwecke zu verwenden.
 
 ### Tastatursteuerung
@@ -92,7 +92,7 @@ XY-Pads können mit der Schaltfläche „Eigenschaften“ ![](/basics/edit.png) 
 
 **1\. Registerkarte „Allgemein“**
 
-Hier können Sie das grundlegende Verhalten des XY-Pads sowie die externen Eingabesteuerungen festlegen.
+Hier können Sie das grundlegende Verhalten des XY-Pads sowie die externen Eingabesteuerungen festlegen.  
 **Hinweis:** Wenn Sie über Touch OSC ein XY-Pad zuweisen, müssen Sie auf die Schaltfläche „Neigung/vertikale Achse“ zur automatischen Erkennung klicken, andernfalls werden die X- und Y-Achsen vertauscht.
 
 |     |     |

@@ -14,38 +14,38 @@ taxonomy:
 
 # Showmanager
 
-Diese Funktion soll Benutzern die Möglichkeit geben, eine zeitgesteuerte Show auf benutzerfreundliche und vollständig grafische Weise einzurichten.
-Die grafische Benutzeroberfläche zeigt eine Mehrspuransicht, wie sie für Audiosequenzer oder Videobearbeitungssoftware typisch ist, und mit ihr können Benutzer QLC+-[Funktionen](/basics/glossary-and-concepts#funktionen) an der gewünschten Stelle und zum gewünschten Zeitpunkt in der Ansicht platzieren .
-Show Manager bietet dank seines visuell orientierten Ansatzes viel Flexibilität bei der Erstellung einer [Show](/basics/glossary-and-concepts#show). Sobald Sie die Grundelemente verstanden haben, ist es sehr einfach, die vorhandenen Funktionen zu erstellen, zu verschieben oder zu bearbeiten und eine Show durch das Hinzufügen neuer Tracks zu verbessern.
+Diese Funktion soll Benutzern die Möglichkeit geben, eine zeitgesteuerte Show auf benutzerfreundliche und vollständig grafische Weise einzurichten.  
+Die grafische Benutzeroberfläche zeigt eine Mehrspuransicht, wie sie für Audiosequenzer oder Videobearbeitungssoftware typisch ist, und mit ihr können Benutzer QLC+-[Funktionen](/basics/glossary-and-concepts#funktionen) an der gewünschten Stelle und zum gewünschten Zeitpunkt in der Ansicht platzieren.  
+Show Manager bietet dank seines visuell orientierten Ansatzes viel Flexibilität bei der Erstellung einer [Show](/basics/glossary-and-concepts#show). Sobald Sie die Grundelemente verstanden haben, ist es sehr einfach, die vorhandenen Funktionen zu erstellen, zu verschieben oder zu bearbeiten und eine Show durch das Hinzufügen neuer Tracks zu verbessern.  
 
-Typische Anwendungsfälle für Shows sind Auftritte, bei denen eine Band Lieder nach einem Metronom spielt und die Lichtshow immer die gleiche sein muss, die der Musik folgt.
-Ein weiterer Fall sind visuelle Unterhaltungsshows, bei denen Tänzer oder Sänger der Musik folgen und Lichter zum richtigen Zeitpunkt für Atmosphäre sorgen.
+Typische Anwendungsfälle für Shows sind Auftritte, bei denen eine Band Lieder nach einem Metronom spielt und die Lichtshow immer die gleiche sein muss, die der Musik folgt.  
+Ein weiterer Fall sind visuelle Unterhaltungsshows, bei denen Tänzer oder Sänger der Musik folgen und Lichter zum richtigen Zeitpunkt für Atmosphäre sorgen.  
 
-Der Show Manager regt Benutzer dazu an, die Sequenzfunktion intensiv zu nutzen. Hier ist die Erklärung des Unterschieds zwischen einem Chaser und einer Sequenz.
+Der Show Manager regt Benutzer dazu an, die Sequenzfunktion intensiv zu nutzen. Hier ist die Erklärung des Unterschieds zwischen einem Chaser und einer Sequenz.  
 
 Sequenzen vs. Chaser
 --------------------
 
-Auch wenn die Funktionen [Sequenz](/basics/glossary-and-concepts#sequenz) und [Chaser](/basics/glossary-and-concepts#chaser) einige Gemeinsamkeiten haben, sind sie nicht dasselbe.
-Falls noch nicht geschehen, können Sie die Definitionen noch einmal auf der Seite [Grundlegende Konzepte und Glossar](/basics/glossary-and-concepts) dieser Dokumentation lesen.
+Auch wenn die Funktionen [Sequenz](/basics/glossary-and-concepts#sequenz) und [Chaser](/basics/glossary-and-concepts#chaser) einige Gemeinsamkeiten haben, sind sie nicht dasselbe.  
+Falls noch nicht geschehen, können Sie die Definitionen noch einmal auf der Seite [Grundlegende Konzepte und Glossar](/basics/glossary-and-concepts) dieser Dokumentation lesen.  
 Die Hauptunterschiede sind:
 
-**Schritte**: Die Schritte eines Chasers können jede QLC+-Funktion darstellen, während die Schritte einer Sequenz verschiedene Werte derselben [Szene](/basics/glossary-and-concepts#szene) darstellen.
+**Schritte**: Die Schritte eines Chasers können jede QLC+-Funktion darstellen, während die Schritte einer Sequenz verschiedene Werte derselben [Szene](/basics/glossary-and-concepts#szene) darstellen.  
     Mit anderen Worten: Ein Chaser ist eine unabhängige Funktion, während eine Sequenz nur über einer Szene existieren kann.
     Der Grund dafür ist, wie bereits erwähnt, der visuelle Ansatz des Showmanagers. Wenn eine Spur einer Show die grafische Darstellung einer Szene ist, ist es intuitiver anzunehmen, dass jede auf dieser Spur erstellte Sequenz eine Funktion ist, die die Werte dieser Szene steuert.
 
-**Reihenfolge**: Chaser können in beliebiger Reihenfolge wiedergegeben werden (Vorwärts, Rückwärts, Ping-Pong, Zufall), während im Show Manager Sequenzen immer vom Anfang bis zum Ende (Vorwärts) wiedergegeben werden. Dies hängt wiederum mit dem visuellen Aspekt des Show Managers zusammen, bei dem die Wiedergabe eine natürliche Zeitvorwärtsrichtung hat.
+**Reihenfolge**: Chaser können in beliebiger Reihenfolge wiedergegeben werden (Vorwärts, Rückwärts, Ping-Pong, Zufall), während im Show Manager Sequenzen immer vom Anfang bis zum Ende (Vorwärts) wiedergegeben werden. Dies hängt wiederum mit dem visuellen Aspekt des Show Managers zusammen, bei dem die Wiedergabe eine natürliche Zeitvorwärtsrichtung hat.  
     Andererseits können mit dem Funktionsmanager erstellte Sequenzen die gleichen Reihenfolgeeigenschaften wie Chaser haben.
 
-**Bearbeiten**: Auch der Bearbeitungsansatz zwischen Sequenzen und Chaser ist unterschiedlich.
-    Normalerweise sieht der Arbeitsablauf eines Chasers so aus: Erstellen Sie eine Funktion und fügen Sie sie dann als Schritt zum Chaser hinzu.
-    Der Arbeitsablauf einer Sequenz ist: Erstellen Sie eine Szene, erstellen Sie eine Sequenz darüber und fügen Sie Schritte hinzu.
-    Der Sequenz-Ansatz kann bei der Gestaltung einer Lichtshow sehr effektiv sein, wenn Sie wissen, welche Leuchten Sie verwenden werden. Ein weiterer großer Vorteil der Sequenzbearbeitung besteht darin, dass beim Erstellen eines neuen Schritts die Werte des vorherigen Schritts in den neuen kopiert werden. Der Benutzer muss also lediglich die Unterschiede zwischen ihnen anpassen.
-    Wenn Sie 500 Schritte erstellen und diese alle unterschiedlich sind, dauert die Erstellung von Sequenzen und Chasern fast gleich lange.
+**Bearbeiten**: Auch der Bearbeitungsansatz zwischen Sequenzen und Chaser ist unterschiedlich.  
+    Normalerweise sieht der Arbeitsablauf eines Chasers so aus: Erstellen Sie eine Funktion und fügen Sie sie dann als Schritt zum Chaser hinzu.  
+    Der Arbeitsablauf einer Sequenz ist: Erstellen Sie eine Szene, erstellen Sie eine Sequenz darüber und fügen Sie Schritte hinzu.  
+    Der Sequenz-Ansatz kann bei der Gestaltung einer Lichtshow sehr effektiv sein, wenn Sie wissen, welche Leuchten Sie verwenden werden. Ein weiterer großer Vorteil der Sequenzbearbeitung besteht darin, dass beim Erstellen eines neuen Schritts die Werte des vorherigen Schritts in den neuen kopiert werden. Der Benutzer muss also lediglich die Unterschiede zwischen ihnen anpassen.  
+    Wenn Sie 500 Schritte erstellen und diese alle unterschiedlich sind, dauert die Erstellung von Sequenzen und Chasern fast gleich lange.  
 
-**Synchronisierung**: Ein weiterer großer Vorteil der Verwendung von Sequenzen in einer Show besteht darin, dass eine Show leicht erweitert (oder reduziert) werden kann, während es Ihnen bei einem Chaser schwerfällt, die neuen Funktionen mit den vorhandenen zu synchronisieren.
-    Ein Beispiel. Nehmen wir an, Ihr Projekt steuert 50 Geräte, die eine Mischung aus Moving Heads, PARs und Scannern sind. Irgendwann kauft man ein paar Laser und möchte, dass sie zu bestimmten Zeitpunkten in vorhandenen Szenen aktiv werden. Mit dem Show Manager können Sie das in wenigen Minuten erledigen! Sie müssen lediglich die beiden neuen Geräte zum Projekt hinzufügen, eine Spur zu den von der Änderung betroffenen Shows hinzufügen und einige Sequenzen zur Steuerung der Laser erstellen.
-    Mit der Lebenslauffunktion des Show Managers sparen Sie außerdem viel Zeit beim Testen der neuen Änderungen.
+**Synchronisierung**: Ein weiterer großer Vorteil der Verwendung von Sequenzen in einer Show besteht darin, dass eine Show leicht erweitert (oder reduziert) werden kann, während es Ihnen bei einem Chaser schwerfällt, die neuen Funktionen mit den vorhandenen zu synchronisieren.  
+    Ein Beispiel. Nehmen wir an, Ihr Projekt steuert 50 Geräte, die eine Mischung aus Moving Heads, PARs und Scannern sind. Irgendwann kauft man ein paar Laser und möchte, dass sie zu bestimmten Zeitpunkten in vorhandenen Szenen aktiv werden. Mit dem Show Manager können Sie das in wenigen Minuten erledigen! Sie müssen lediglich die beiden neuen Geräte zum Projekt hinzufügen, eine Spur zu den von der Änderung betroffenen Shows hinzufügen und einige Sequenzen zur Steuerung der Laser erstellen.  
+    Mit der Lebenslauffunktion des Show Managers sparen Sie außerdem viel Zeit beim Testen der neuen Änderungen.  
     Bei Chasern müssten Sie sich wahrscheinlich mit komplexen [Sammlungen](/basics/glossary-and-concepts#sammlung) befassen und die Zeitabläufe einiger Schritte überprüfen, bevor Sie die richtige Kombination finden.
 
 Manager-Symbolleisten-Steuerelemente anzeigen
@@ -78,46 +78,46 @@ Der Show Manager ist so eingerichtet, dass er schnell und einfach verwendet werd
 
 #### 1. Eine neue Show hinzufügen ![](/basics/show.png)
 
-Zunächst müssen Sie der Ansicht eine neue Show hinzufügen. Dadurch wird eine leere Multitrack-Ansicht ohne Tracks und ohne Elemente erstellt, die zum Füllen bereit ist.
+Zunächst müssen Sie der Ansicht eine neue Show hinzufügen. Dadurch wird eine leere Multitrack-Ansicht ohne Tracks und ohne Elemente erstellt, die zum Füllen bereit ist.  
 Es erscheint ein Popup, in dem Sie nach dem Namen gefragt werden, den Sie der Show zuweisen möchten. Es ist möglich, den Namen nachträglich mit dem [Funktionsmanager](/function-manager) über das Bedienfeld [Show Editor](/function-manager/show-editor) zu ändern.
 
 #### 2. Einen Titel hinzufügen ![](/basics/edit_add.png)
 
-Wenn Sie einen Track hinzufügen, werden Sie in einem Popup aufgefordert, eine vorhandene Funktion auszuwählen oder eine neue mit einem Standardnamen zu erstellen.
-Wenn Sie fertig sind, wird ein neuer Track erstellt. Alle auf dieser Spur erstellten Sequenzen wirken sich nur auf die zugehörige Szene aus und haben keinen Einfluss auf die anderen Spuren.
-Ein neu erstellter Track wird automatisch als aktiv gesetzt. Eine aktive Spur hat auf der linken Seite ein grünes Licht.
-Eine Spur kann auf ![](track-mute.png) Stummschaltung und ![](track-solo.png) Solo-Zustand eingestellt werden. Im Stummschaltungszustand wird die Spur von der Wiedergabe ausgeschlossen, während im Solo-Zustand alle anderen Spuren der Show stummgeschaltet werden.
-Wenn Sie mit der rechten Maustaste auf einen Titel klicken, können Sie ihn nach oben ![](/basics/up.png) oder nach unten ![](/basics/down.png) verschieben, um eine logische Reihenfolge zu erreichen.
+Wenn Sie einen Track hinzufügen, werden Sie in einem Popup aufgefordert, eine vorhandene Funktion auszuwählen oder eine neue mit einem Standardnamen zu erstellen.  
+Wenn Sie fertig sind, wird ein neuer Track erstellt. Alle auf dieser Spur erstellten Sequenzen wirken sich nur auf die zugehörige Szene aus und haben keinen Einfluss auf die anderen Spuren.  
+Ein neu erstellter Track wird automatisch als aktiv gesetzt. Eine aktive Spur hat auf der linken Seite ein grünes Licht.  
+Eine Spur kann auf ![](track-mute.png) Stummschaltung und ![](track-solo.png) Solo-Zustand eingestellt werden. Im Stummschaltungszustand wird die Spur von der Wiedergabe ausgeschlossen, während im Solo-Zustand alle anderen Spuren der Show stummgeschaltet werden.  
+Wenn Sie mit der rechten Maustaste auf einen Titel klicken, können Sie ihn nach oben ![](/basics/up.png) oder nach unten ![](/basics/down.png) verschieben, um eine logische Reihenfolge zu erreichen.  
 Sobald eine Spur ausgewählt ist, wird ihr [Szeneneditor](/function-manager/scene-editor) unten auf dem Bildschirm angezeigt.
 
 #### 3. Fügen Sie einige [Funktionen](/basics/glossary-and-concepts#funktionen) hinzu
 
-Wenn ein Titel aktiviert wurde, können Sie schnell eine ![](/basics/sequence.png) [Sequenz](/basics/glossary-and-concepts#sequenz) oder eine ![](/basics/audio.png) hinzufügen ) [Audio](/basics/glossary-and-concepts#audio) aufrufen, indem Sie auf die Symbolleistenschaltflächen klicken.
-Andernfalls ist es durch Klicken auf die Schaltfläche ![](/basics/edit_add.png) möglich, vorhandene QLC+-Funktionen zu importieren und zur Show-Timeline hinzuzufügen.
-Ein neues Element wird an der Cursorposition platziert, es ist jedoch jederzeit möglich, es an die gewünschte Zeit zu verschieben, indem Sie es einfach entlang der Zeitleiste ziehen.
-Ein Element kann nicht in eine andere Spur verschoben werden, da es an die Spur gebunden ist, in der es ursprünglich erstellt wurde.
-Mit den Symbolleistensymbolen kann ein Element kopiert ![](/basics/editcopy.png), eingefügt ![](/basics/editpaste.png) oder gelöscht ![](/basics/editdelete.png) werden. Das eingefügte Element wird an der aktuellen Cursorposition platziert.
-Die Hintergrundfarbe des Elements kann mit dem Symbolleistensymbol ![](/basics/color.png) geändert werden. Die zugewiesene Farbe wird in Ihrer Projektdatei gespeichert.
+Wenn ein Titel aktiviert wurde, können Sie schnell eine ![](/basics/sequence.png) [Sequenz](/basics/glossary-and-concepts#sequenz) oder eine ![](/basics/audio.png) [Audio](/basics/glossary-and-concepts#audio)-Funktion hinzufügen, indem Sie auf die Symbolleistenschaltflächen klicken.  
+Andernfalls ist es durch Klicken auf die Schaltfläche ![](/basics/edit_add.png) möglich, vorhandene QLC+-Funktionen zu importieren und zur Show-Timeline hinzuzufügen.  
+Ein neues Element wird an der Cursorposition platziert, es ist jedoch jederzeit möglich, es an die gewünschte Zeit zu verschieben, indem Sie es einfach entlang der Zeitleiste ziehen.  
+Ein Element kann nicht in eine andere Spur verschoben werden, da es an die Spur gebunden ist, in der es ursprünglich erstellt wurde.  
+Mit den Symbolleistensymbolen kann ein Element kopiert ![](/basics/editcopy.png), eingefügt ![](/basics/editpaste.png) oder gelöscht ![](/basics/editdelete.png) werden. Das eingefügte Element wird an der aktuellen Cursorposition platziert.  
+Die Hintergrundfarbe des Elements kann mit dem Symbolleistensymbol ![](/basics/color.png) geändert werden. Die zugewiesene Farbe wird in Ihrer Projektdatei gespeichert.  
 Sobald ein Element ausgewählt ist, wird auf der rechten Seite des Bildschirms sein spezifischer Funktionseditor angezeigt. Wenn Sie mit der rechten Maustaste auf ein Element klicken, wird ein Kontextmenü mit den folgenden Optionen angezeigt:
 
 * **Vorschau**: Diese Option ist nur für Audioelemente verfügbar. Es wird die Wellenformvorschau für den rechten, linken oder Stereokanal angezeigt, sofern verfügbar
 * **Am Cursor ausrichten**: Diese Option verschiebt das ausgewählte Element an die Cursorposition
 * ![](/basics/lock.png)**Sperren/Entsperren**: Sobald ein Element gesperrt ist, kann es nicht mehr auf der Timeline gezogen werden
 
-Befolgen Sie Schritt 4, um zu verstehen, wie eine Sequenz gefüllt wird
+Befolgen Sie Schritt 4, um zu verstehen, wie eine Sequenz gefüllt wird.  
 
 #### 4. Bearbeiten Sie Ihre Funktionen
 
-Sobald ein Element erstellt wurde, ist es nun an der Zeit, es zu bearbeiten.
-**Bitte beachten Sie**, dass der Unterschied zwischen einem Chaser und einer Sequenz darin besteht, dass eine Sequenz an die Spur (also die Szene) gebunden ist, in der sie erstellt wurde. Wenn Sie also einen Schritt hinzufügen, fordert QLC+ nicht zur Auswahl einer bestimmten Funktion auf, sondern verwendet immer die Kanäle derselben Szene.
-Wenn Sie eine Funktion bearbeiten, sehen Sie, wie sich das Element in der Multitrack-Ansicht ändert, und geben eine sofortige Rückmeldung zur Ausrichtung auf andere Elemente oder bestimmte Zeitpunkte.
-Ein- und Ausblendzeiten werden als diagonale Linien über den Elementen in der Multitrack-Ansicht angezeigt, während verschiedene Schritte/Loops durch vertikale Linien unterteilt werden.
+Sobald ein Element erstellt wurde, ist es nun an der Zeit, es zu bearbeiten.  
+**Bitte beachten Sie**, dass der Unterschied zwischen einem Chaser und einer Sequenz darin besteht, dass eine Sequenz an die Spur (also die Szene) gebunden ist, in der sie erstellt wurde. Wenn Sie also einen Schritt hinzufügen, fordert QLC+ nicht zur Auswahl einer bestimmten Funktion auf, sondern verwendet immer die Kanäle derselben Szene.  
+Wenn Sie eine Funktion bearbeiten, sehen Sie, wie sich das Element in der Multitrack-Ansicht ändert, und geben eine sofortige Rückmeldung zur Ausrichtung auf andere Elemente oder bestimmte Zeitpunkte.  
+Ein- und Ausblendzeiten werden als diagonale Linien über den Elementen in der Multitrack-Ansicht angezeigt, während verschiedene Schritte/Loops durch vertikale Linien unterteilt werden.  
 
 
-Um die Komplexität der Show zu erhöhen, können weitere Funktionen hinzugefügt werden. Wiederholen Sie einfach die oben genannten Schritte je nach Bedarf.
+Um die Komplexität der Show zu erhöhen, können weitere Funktionen hinzugefügt werden. Wiederholen Sie einfach die oben genannten Schritte je nach Bedarf.  
 
 Und schließlich...spielen! ![](/basics/player_play.png)
 ---------------------------------------------
 
-Wenn schließlich eine komplette Show erstellt wurde, kann diese einfach durch Klicken auf das Play-Symbol abgespielt werden.
+Wenn schließlich eine komplette Show erstellt wurde, kann diese einfach durch Klicken auf das Play-Symbol abgespielt werden.  
 Die Wiedergabe beginnt immer an der aktuellen Cursorposition. Die Cursorposition kann durch Klicken auf die Zeitleiste geändert werden.

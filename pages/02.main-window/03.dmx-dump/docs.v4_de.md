@@ -5,8 +5,8 @@ taxonomy:
         - docs
 ---
 
-Mit der DMX-Dump-Funktion können Sie die aktuellen DMX-Werte speichern, die zu einem bestimmten Zeitpunkt an die Ausgabeuniversen gesendet werden. Grundsätzlich wird ein „Schnappschuss“ der DMX-Kanäle erstellt und für eine spätere Verwendung gespeichert.
-DMX Dump kann Werte in einer neuen [Szene](/basics/glossary-and-concepts#szene) speichern oder die Werte einer vorhandenen Szene überschreiben. Die „gedumpte“ Szene kann auch zu einem vorhandenen [Chaser](/basics/glossary-and-concepts#chaser), einer [Schaltfläche](/virtual-console/button) oder einem [Schieberegler](/virtual-console/slider) einer virtuellen Konsole hinzugefügt werden)
+Mit der DMX-Dump-Funktion können Sie die aktuellen DMX-Werte speichern, die zu einem bestimmten Zeitpunkt an die Ausgabeuniversen gesendet werden. Grundsätzlich wird ein „Schnappschuss“ der DMX-Kanäle erstellt und für eine spätere Verwendung gespeichert.  
+DMX Dump kann Werte in einer neuen [Szene](/basics/glossary-and-concepts#szene) speichern oder die Werte einer vorhandenen Szene überschreiben. Die „gedumpte“ Szene kann auch zu einem vorhandenen [Chaser](/basics/glossary-and-concepts#chaser), einer [Schaltfläche](/virtual-console/button) oder einem [Schieberegler](/virtual-console/slider) einer virtuellen Konsole hinzugefügt werden.  
 
 Bitte beachten Sie Folgendes:
 

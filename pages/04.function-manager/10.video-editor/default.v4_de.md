@@ -3,7 +3,7 @@ title: 'Video-Editor'
 date: '04:33 22-08-2023'
 ---
 
-Der Video-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/video.png) [Video](/basics/glossary-and-concepts#video)-Funktionen verwendet.
+Der Video-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/video.png) [Video](/basics/glossary-and-concepts#video)-Funktionen verwendet.  
 
 Steuerungen
 --------

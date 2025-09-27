@@ -86,7 +86,7 @@ A popup will appear asking the name to assign to the Show. It is possible to cha
 When you add a track, a popup will ask you to select an existing function or to create a new one with a default name.  
 When done, a new track will be created. All the sequences created on this track will act only on the associated Scene, not affecting any of the other tracks.  
 A newly created track will be set automatically as active. An active track has a green light on the left hand side.  
-A Track can be set to ![](track-mute.png) mute and ![](track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.
+A Track can be set to ![](track-mute.png) mute and ![](track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.  
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
 Once selected, a track will display its [Scene Editor](/function-manager/scene-editor) on the bottom of the screen.
 

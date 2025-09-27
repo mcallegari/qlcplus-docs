@@ -96,8 +96,8 @@ Hier kann ausgewählt werden, ob der Multiplikationsfaktor zurückgesetzt werden
 
 ### Konfiguration – Registerkarte „Voreinstellungen“
 
-Eine Voreinstellung ist eine Möglichkeit, schnell auf einen vordefinierten Wert für eine Kurzwahl zuzugreifen.
-Jede Voreinstellung wird im Kurzwahl-Widget-Layout als Schaltfläche dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.
+Eine Voreinstellung ist eine Möglichkeit, schnell auf einen vordefinierten Wert für eine Kurzwahl zuzugreifen.  
+Jede Voreinstellung wird im Kurzwahl-Widget-Layout als Schaltfläche dargestellt und kann entweder mit der Maus angeklickt oder auf einem Touchscreen gedrückt oder einer Tastenkombination oder einer externen Controller-Eingabezeile zugeordnet werden.  
 Links auf der Registerkarte „Voreinstellungen“ befindet sich die Liste der Voreinstellungen. Wenn Sie in dieser Liste eine Voreinstellung auswählen, können Sie über die Schaltfläche rechts deren Eigenschaften bearbeiten.
 
 |     |     |

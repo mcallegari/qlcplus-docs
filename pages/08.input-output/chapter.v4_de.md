@@ -14,30 +14,30 @@ taxonomy:
 
 # Eingabe/Ausgabe
 
-Standardmäßig bietet QLC+ 4 Universen, Sie können diese jedoch nach Bedarf hinzufügen/entfernen.
-Die Eingabe-/Ausgabezuordnung wird im aktuell geladenen Projekt gespeichert. Dadurch können Sie Ihr Projekt auf einen anderen Computer/Betriebssystem portieren, ohne es jedes Mal neu konfigurieren zu müssen.
+Standardmäßig bietet QLC+ 4 Universen, Sie können diese jedoch nach Bedarf hinzufügen/entfernen.  
+Die Eingabe-/Ausgabezuordnung wird im aktuell geladenen Projekt gespeichert. Dadurch können Sie Ihr Projekt auf einen anderen Computer/Betriebssystem portieren, ohne es jedes Mal neu konfigurieren zu müssen.  
 Wenn kein Projekt geladen ist, behält QLC+ die I/O-Zuordnung als „Fallback“-Konfiguration bei.
 
 Eingabe-/Ausgabemanager
 --------------------
 
-Um auf den Eingabe-/Ausgabe-Manager zuzugreifen, klicken Sie einfach auf die Registerkarte mit dem Symbol ![](/basics/input_output.png) am unteren Rand des QLC+-Hauptbildschirms.
-Der Bildschirm ist folgendermaßen aufgebaut:
+Um auf den Eingabe-/Ausgabe-Manager zuzugreifen, klicken Sie einfach auf die Registerkarte mit dem Symbol ![](/basics/input_output.png) am unteren Rand des QLC+-Hauptbildschirms.  
+Der Bildschirm ist folgendermaßen aufgebaut:  
 
 * Auf der linken Seite befindet sich die Liste der internen Universen, die QLC+ verwalten kann
 * Auf der rechten Seite befindet sich die Liste der Geräte und ihrer zugeordneten Eingänge, Ausgänge und Rückkopplungsleitungen, die QLC+ erkannt hat
 * Unten rechts befindet sich ein Bereich mit kurzen Informationen zum aktuell ausgewählten Gerät
 
-Jedes Gerät verfügt über ein Kontrollkästchen, wenn eine Eingangs-, Ausgangs- oder Rückmeldeleitung verfügbar ist.
-Jedes QLC+-Universum kann einen einzelnen Eingang, einen einzelnen Ausgang und eine einzelne Feedback-Leitung abbilden
+Jedes Gerät verfügt über ein Kontrollkästchen, wenn eine Eingangs-, Ausgangs- oder Rückmeldeleitung verfügbar ist.  
+Jedes QLC+-Universum kann einen einzelnen Eingang, einen einzelnen Ausgang und eine einzelne Feedback-Leitung abbilden.  
 
-Einige Plugins müssen möglicherweise konfiguriert werden, bevor sie verwendet werden können, sodass Sie zunächst möglicherweise nicht alle Ein-/Ausgaben sehen können. Die Konfigurationsschaltfläche befindet sich neben dem Informationsfeld und ist aktiviert, wenn das Plugin manuelle Einstellungen zulässt.
+Einige Plugins müssen möglicherweise konfiguriert werden, bevor sie verwendet werden können, sodass Sie zunächst möglicherweise nicht alle Ein-/Ausgaben sehen können. Die Konfigurationsschaltfläche befindet sich neben dem Informationsfeld und ist aktiviert, wenn das Plugin manuelle Einstellungen zulässt.  
 Das Schaltflächensymbol ist: ![](/basics/configure.png)
 
 Universen hinzufügen/entfernen
 -------------------------
 
-QLC+ unterstützt eine beliebige Anzahl von Universen, abhängig vom CPU-Limit des Geräts, das sie steuert.
+QLC+ unterstützt eine beliebige Anzahl von Universen, abhängig vom CPU-Limit des Geräts, das sie steuert.  
 Auf der linken Seite des Input/Output Managers befindet sich eine Symbolleiste, in der Sie Universen hinzufügen/entfernen, benennen und konfigurieren können.
 
 |     |     |
@@ -50,10 +50,10 @@ Auf der linken Seite des Input/Output Managers befindet sich eine Symbolleiste, 
 Patchen
 --------
 
-Um die Eingabe-/Ausgabezeile eines Plugins auf das ausgewählte Universum zu patchen, müssen Sie ein Häkchen in der Eingabe-/Ausgabezeile dieses bestimmten Plugins setzen. Sie können einem Universum jeweils nur eine Zeile zuweisen. Wenn Sie also eine andere Zeile markieren, verschiebt sich das Häkchen von seiner vorherigen Position zu der gerade markierten Position.
+Um die Eingabe-/Ausgabezeile eines Plugins auf das ausgewählte Universum zu patchen, müssen Sie ein Häkchen in der Eingabe-/Ausgabezeile dieses bestimmten Plugins setzen. Sie können einem Universum jeweils nur eine Zeile zuweisen. Wenn Sie also eine andere Zeile markieren, verschiebt sich das Häkchen von seiner vorherigen Position zu der gerade markierten Position.  
 Wenn Sie bei einem Plugin keine Zeile sehen, bedeutet das, dass Sie kein Gerät haben, das QLC+ versteht, und Ihnen die einzige (nicht auswählbare) Wahl bleibt: Keine.
 
-Wenn eine Eingabe-/Ausgabezeile aktiviert wird, ändern sich die entsprechenden Universumsinformationen auf der linken Seite des Bildschirms und der neue Konfigurationssatz wird angezeigt.
+Wenn eine Eingabe-/Ausgabezeile aktiviert wird, ändern sich die entsprechenden Universumsinformationen auf der linken Seite des Bildschirms und der neue Konfigurationssatz wird angezeigt.  
 Die Plugin-Informationen unten rechts auf dem Bildschirm ändern sich ebenfalls und geben Ihnen den neuen Status der Plugin-Zeile an.
 
 Universum-Passthrough
@@ -71,10 +71,10 @@ Passthrough-Daten werden von QLC+-Grandmaster- oder Kanalmodifikatoren nicht bee
 Input und Feedback
 -------------------
 
-Wenn eine Plugin-Eingangszeile überprüft wird, wird sie sofort aktiviert, sodass Sie einen einfachen Test durchführen können, um noch einmal zu überprüfen, ob Ihre Hardware ordnungsgemäß mit QLC+ funktioniert.
+Wenn eine Plugin-Eingangszeile überprüft wird, wird sie sofort aktiviert, sodass Sie einen einfachen Test durchführen können, um noch einmal zu überprüfen, ob Ihre Hardware ordnungsgemäß mit QLC+ funktioniert.  
 Bewegen Sie einfach einen Fader/Regler an Ihrem externen Gerät, und wenn alles gut funktioniert, wird auf der linken Seite des Bildschirms neben dem entsprechenden Universum ein ![](/basics/input.png)-Symbol angezeigt.
 
-Wenn Ihr Eingabegerät einen Rückkanal unterstützt, kann QLC+ eine visuelle/mechanische Rückmeldung an ihn senden. Geräte wie Behringer BCF2000 unterstützen diese Funktion.
+Wenn Ihr Eingabegerät einen Rückkanal unterstützt, kann QLC+ eine visuelle/mechanische Rückmeldung an ihn senden. Geräte wie Behringer BCF2000 unterstützen diese Funktion.  
 Derzeit wird Feedback nur über MIDI, OSC und Loopback unterstützt.
 
 Um zu erfahren, wie Sie Ihr externes Eingabegerät für die optimale Verwendung mit QLC+ einrichten, lesen Sie bitte weiter mit der [Anleitung für Eingabeprofile](input-profiles).
