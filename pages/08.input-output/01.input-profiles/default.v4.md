@@ -9,11 +9,12 @@ An input profile is a configuration that maps input signals from an external con
 
 ## Select an Input Profile
 
-QLC+ Is bundled with many input profiles ready for you to use. If your device is already supported, you can activate the profile by:
- 1. Selecting the ![](/basics/input_output.png) Inputs/Outputs tab
- 2. Select the desired universe on the left part of the screen
- 3. Click the Profile tab placed beside the Mapping tab on the top right part of the screen.
- 4. Find the input profile and click the accompanying check mark to select it. 
+QLC+ is bundled with many input profiles ready for you to use. If your device is already supported, you can activate the profile by:
+
+1. Selecting the ![](/basics/input_output.png) Inputs/Outputs tab.
+2. Select the desired universe on the left part of the screen.
+3. Click the Profile tab placed beside the Mapping tab on the top right part of the screen.
+4. Find the input profile and click the accompanying check mark to select it.
 
 
 ## Add/Edit a Profile
@@ -25,7 +26,7 @@ If the device you want to use isn't in the list of bundled input profiles, you a
 ## Input Profile Editor
 
 ### General
-The general tab is the place to enter general information about the fixture (How eloquently named). 
+The general tab is the place to enter general information about the fixture (How eloquently named).
 
 #### Manufacturer
 If your manufacturer is already listed, use the same spelling and capitalisation.
