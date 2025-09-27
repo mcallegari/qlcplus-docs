@@ -13,7 +13,7 @@ Per exemple, per forçar l'idioma alemany a l'inici, modifiqueu la línia d'ordr
 ![](../command-line.png)
 
 **OSX**: Aquest és el cas més difícil, ja que QLC+ a OSX s'inclou en un paquet DMG. Necessites obrir un terminal i executar "cd" al QLC+ DMG com aquest: `cd QLC+.app\\Contents\\MacOS`<br>
-Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis
+Quan hagis acabat, escriu "qlcplus" seguit dels paràmetres que necessitis.
 
 
 

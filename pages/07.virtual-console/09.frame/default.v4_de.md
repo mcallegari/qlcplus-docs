@@ -12,14 +12,14 @@ Rahmen können mit der Schaltfläche „Eigenschaften“ ![](/basics/edit.png) i
 
 Abgesehen von den standardmäßigen [Styling- und Platzierungsoptionen](../styling-and-placement) verfügen Rahmen über die folgenden zusätzlichen Optionen, die in zwei Registerkarten unterteilt sind:  
 
-### Registerkarte „Darstellung“.
+### Registerkarte „Darstellung“
 
 * **Frame-Name**: Ermöglicht Ihnen, dem Rahmen eine beliebige Bezeichnung zuzuweisen. Dies wird nur angezeigt, wenn die Option „Kopfzeile anzeigen“ aktiviert ist (siehe unten).
 * **Untergeordnete Widgets akzeptieren**: Ermöglicht das Hinzufügen von Widgets zum Rahmen.
 * **Größenänderung zulassen**: Ermöglicht die Änderung der Rahmenhöhe und -breite.
 * **Header anzeigen**: Zeigt den Rahmen-Header an. Standardmäßig werden drei Elemente angezeigt: Eine Schaltfläche zum Erweitern/Reduzieren, der Rahmenname und eine Schaltfläche zum Aktivieren/Deaktivieren. Einige weitere optionale Steuerelemente werden angezeigt, wenn sich der Rahmen im Mehrseitenmodus befindet. Siehe nächsten Absatz.
 
-### Registerkarte „Seiten“.
+### Registerkarte „Seiten“
 
 Virtuelle Konsolenrahmen können in mehrseitige Widgets umgewandelt werden, was nützlich ist, wenn es um viele Widgets oder Controller geht, die Seiten unterstützen.  
 Die Mehrseitenfunktion ist standardmäßig deaktiviert, kann aber auf dieser Registerkarte aktiviert werden.  

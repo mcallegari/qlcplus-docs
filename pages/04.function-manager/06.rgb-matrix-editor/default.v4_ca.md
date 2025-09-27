@@ -14,7 +14,7 @@ Controls
 | **Nom de la matriu RGB** | Canvia el nom de la matriu RGB. |
 | ![](/basics/speed.png) | Ajustar els paràmetres de velocitat de la matriu RGB:<br><br>**Fade In:** El temps que triga els fixtures en el grup de fixtures de la matriu RGB a esvair els seus canals d'intensitat fins a<br>**Fade Out:** El temps que triga els fixtures en el grup de fixtures de la matriu RGB a esvair els seus canals d'intensitat de nou a zero<br>**Durada:** La durada de cada pas del patró seleccionat |
 | ![](/basics/sequence.png) | Converteix la matriu RGB actual en una [Seqüència](/basics/glossary-and-concepts#seqüència). Això és útil per accelerar la creació d'un [Show](/basics/glossary-and-concepts#show). Tingueu en compte que si el patró seleccionat genera dades aleatòries, aquesta funcionalitat generarà una seqüència diferent cada vegada. |
-| ![](/basics/square.png) | Canvia el mode de vista prèvia entre cercles i quadrats |
+| ![](/basics/square.png) | Canvia el mode de vista prèvia entre cercles i quadrats. |
 | ![](/basics/player_play.png) | Feu que la matriu RGB s'executi com si s'iniciés des d'un botó [Consola Virtual](/virtual-console). Tingueu en compte que la previsualització s'atura mentre s'executa la funció. |
 | **Grup de Fixtures** | El [Grup de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures) que està controlat per aquesta matriu RGB. |
 | **Àrea de Previsualització** | Mostra una vista prèvia del patró seleccionat actualment imposat als fixtures definits en el grup de fixtures seleccionat actualment. Tingues en compte que la vista prèvia no mostra la diferència entre els fixtures amb capacitat RGB i els monocroms/fixos. |
