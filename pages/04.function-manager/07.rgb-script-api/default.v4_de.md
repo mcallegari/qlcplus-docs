@@ -183,7 +183,7 @@ Im QLC+-Quell-Repository steht ein Entwicklungstool zur Verfügung, welches das 
 2. **Option A:** Als ZIP herunterladen  
    - Klicken Sie auf **Code → ZIP herunterladen**  
    - Entpacken Sie den Inhalt in einen Ordner auf Ihrem Computer
-3. **Option B:** Das gesamte Repository mit Git klonen
+3. **Option B:** Das gesamte Repository mit Git klonen  
    Wenn Sie mit Git vertraut sind, können Sie das Repository klonen, indem Sie folgenden Befehl ausführen:
    ```bash
    git clone https://github.com/mcallegari/qlcplus.git
