@@ -23,6 +23,9 @@ Jede Zeile verfügt über drei Optionen, die je nach Bedarf geändert werden kö
 * **Programmwechsel**: Dies ist eine der MIDI-Protokollmeldungen (wie Control Change), die häufig von MIDI-Controllern verwendet werden. Jedes Gerät sollte die unterstützten PC-Meldungen in seinem Benutzerhandbuch auflisten. Bitte lesen Sie dieses daher durch, bevor Sie diesen Modus verwenden. Der PC-Bereich kann von 0 bis 127 reichen und Werte von 0 bis 127 haben, die in QLC+ verdoppelt werden, um dem DMX-Bereich (0-255) zu entsprechen.
 * **Initialisierungsnachricht**: Dies ist eine Liste von Presets (Vorlagen), die die Initialisierungsnachricht enthält, die QLC+ sendet, wenn ein MIDI-Gerät vor der Verwendung geöffnet wird. Eine ausführliche Erläuterung dieser Funktionalität finden Sie weiter unten.
 
+> [!WICHTIG]
+> **Hinweis:** QLC+ folgt dem MIDI-Standard, in dem eine „Note On“-Nachricht mit einer Anschlagstärke („velocity“) von `0` als „Note Off“ interpretiert wird. Wenn Ihr MIDI-Controller oder Ihre MIDI-Software „Note On“-Nachrichten mit einer Anschlagstärke von `0` sendet, aktiviert QLC+ keine Steuerelemente auf der virtuellen Konsole. Um die Steuerelemente zu aktivieren, stellen Sie sicher, dass „Note On“-Nachrichten eine Anschlagstärke ungleich Null verwenden. Dieses Problem wurde bei der Verwendung von „ProPresenter“ beobachtet und konnte durch Einstellen einer Anschlagstärke ungleich Null behoben werden.
+
 Rückmeldung
 ---------
 
