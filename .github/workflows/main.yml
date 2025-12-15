@@ -26,13 +26,13 @@ jobs:
           lang: en
 
       - name: Upload-PDF
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
             name: qlcplus-docs-en-pdf
             path: ./.github/workflows/bin/pdf/
   
       - name: Upload-Markdown
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
             name: qlcplus-docs-en-markdown
             path: ./.github/workflows/bin/markdown/
