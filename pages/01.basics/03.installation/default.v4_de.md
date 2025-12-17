@@ -29,5 +29,6 @@ Das offizielle QLC+-Paket für Linux wird als Debian-Paket (.deb) zur Verfügung
 
 Um es zu installieren, führen Sie bitte folgenden Befehl im Terminal und dem Ordner aus, in dem Sie das Paket heruntergeladen haben:
 ```
-sudo dpkg -i qlcplus_x.y.x.deb
+sudo apt install ./qlcplus_x.y.z.deb
 ```
+Fortgeschrittene Benutzer, die sich mit Paket-Abhängigkeiten auskennen, können auch den Befehl `sudo dpkg -i qlcplus_x.y.z.deb` verwenden.
