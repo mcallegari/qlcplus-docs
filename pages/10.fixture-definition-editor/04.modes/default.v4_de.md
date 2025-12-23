@@ -3,7 +3,7 @@ title: Modi
 date: '07:07 22-08-2023'
 ---
 
-Die Registerkarte „Modi“ enthält alle [Modi](/basics/glossary-and-concepts#fixture-mode), für die das Gerät konfiguriert werden kann.
+Die Registerkarte „Modi“ enthält alle [Modi](/basics/glossary-and-concepts#gerätemodus), für die das Gerät konfiguriert werden kann.
 
 ![](../fixture_editor_modes.png)
 
@@ -19,9 +19,9 @@ Die Registerkarte „Modi“ enthält alle [Modi](/basics/glossary-and-concepts#
 ## Modus-Editor
 
 
-Der Modus-Editor wird zum Erstellen und Bearbeiten von [Modi](/basics/glossary-and-concepts#fixture-mode) verwendet, indem Sätze von **Kanälen** in einer bestimmten Reihenfolge (wie vom Hersteller des Geräts definiert) ausgewählt werden. Jedes Editorfenster ist in drei Registerkarten unterteilt: Kanäle, Köpfe und Physikalisch.
+Der Modus-Editor wird zum Erstellen und Bearbeiten von [Modi](/basics/glossary-and-concepts#gerätemodus) verwendet, indem Sätze von **Kanälen** in einer bestimmten Reihenfolge (wie vom Hersteller des Geräts definiert) ausgewählt werden. Jedes Editorfenster ist in drei Registerkarten unterteilt: Kanäle, Köpfe und Physikalisch.
 
-## Registerkarte „Kanäle“.
+## Registerkarte „Kanäle“
 
 
 Auf der Registerkarte „Kanäle“ können Sie die Kanäle des Geräts in einer Reihenfolge anordnen, die eine tatsächliche Darstellung der DMX-Kanäle ergibt, die das Gerät versteht, wenn es in diesem bestimmten Modus konfiguriert wurde.
@@ -37,9 +37,9 @@ Auf der Registerkarte „Kanäle“ können Sie die Kanäle des Geräts in einer
 | ![](/basics/up.png) | Erhöht den ausgewählten Kanal um eine Position nach oben. |
 | ![](/basics/down.png) | Senken Sie den ausgewählten Kanal um eine Position nach unten. |
 
-## Registerkarte „Köpfe“.
+## Registerkarte „Köpfe“
 
-Auf der Registerkarte „Köpfe“ können Sie mehrere [Köpfe](/basics/glossary-and-concepts#head) für ein einzelnes Gerät definieren, sodass QLC+ weiß, jeden von ihnen in bestimmten Situationen (z. B. [Gerätegruppen](/basics/glossary-and-concepts#fixture-gruppierung) einzeln zu behandeln. Grundlagen/Glossar-und-Konzepte#Fixture-Group)). Wenn ein Gerät nur einen Kopf enthält, wenn es für die Verwendung des aktuell bearbeiteten Modus konfiguriert ist (d. h. alle Kanäle des Modus steuern jeweils einen Kopf), besteht keine Notwendigkeit, den Kopf zu definieren. Wenn das Gerät jedoch über mehrere Köpfe verfügt, die Sie steuern möchten, müssen Sie hier jeden Kopf definieren.
+Auf der Registerkarte „Köpfe“ können Sie mehrere [Köpfe](/basics/glossary-and-concepts#head) für ein einzelnes Gerät definieren, sodass QLC+ weiß, jeden von ihnen in bestimmten Situationen (z. B. [Gerätegruppen](/basics/glossary-and-concepts#gerätegruppe) einzeln zu behandeln. Grundlagen/Glossar-und-Konzepte#Fixture-Group)). Wenn ein Gerät nur einen Kopf enthält, wenn es für die Verwendung des aktuell bearbeiteten Modus konfiguriert ist (d. h. alle Kanäle des Modus steuern jeweils einen Kopf), besteht keine Notwendigkeit, den Kopf zu definieren. Wenn das Gerät jedoch über mehrere Köpfe verfügt, die Sie steuern möchten, müssen Sie hier jeden Kopf definieren.
 
 Köpfe haben keine Namen, da sie als einfache „Untergeräte“ innerhalb eines Geräts betrachtet werden können. Stattdessen erhalten sie automatisch Indexnummern. Die Reihenfolge der Köpfe sollte so genau wie möglich der Konfiguration der physischen Vorrichtung entsprechen. Wenn die Köpfe in der realen Welt also 1, 2, 3, 4 sind, definieren Sie sie nicht als 4, 2, 1, 3 oder etwas ähnlich Ärgerliches.
 
@@ -66,7 +66,7 @@ Das Bearbeiten eines Kopfes ist sehr einfach: Setzen Sie ein Häkchen bei jedem 
 | --- | --- |
 | **Kanalliste** | Zeigt die Liste aller im aktuellen Modus verfügbaren Fixture-Kanäle an. Kanäle, die einem anderen Kopf zugewiesen wurden, sind deaktiviert und können nicht ausgewählt werden, da jeder Kanal jeweils nur zu einem Kopf gehören kann. |
 
-## Registerkarte „Physisch“.
+## Registerkarte „Physisch“
 
 Diese Registerkarte ist identisch mit der _globalen_ [physischen Registerkarte](/fixture-definition-editor/physical), die sich in den Hauptfenstern des Fixture-Editors befindet.  
 Der einzige Unterschied besteht darin, dass Sie hier auswählen können, ob der Modus, den Sie bearbeiten, dieselben oder unterschiedliche physische Informationen enthält.

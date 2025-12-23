@@ -6,7 +6,7 @@ media_order: 'efx-general.png,efx-movement.png'
 
 Der EFX-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx)-Funktionen verwendet. Die Ansicht ist in zwei Registerkarten unterteilt:
 
-* Auf der Registerkarte „Allgemein“ können Sie [Geräte](/basics/glossary-and-concepts#fixtures), Geschwindigkeit und Gerätereihenfolge auswählen.
+* Auf der Registerkarte **Allgemein** können Sie [Geräte](/basics/glossary-and-concepts#fixtures), Geschwindigkeit und Gerätereihenfolge auswählen.
 * Auf der Registerkarte **Bewegung** können Sie Details dazu auswählen, wie die Geräte ihre Strahlen bewegen sollen.
 
 ### Allgemeine Tab-Steuerelemente
@@ -18,7 +18,7 @@ Der EFX-Editor wird, wie der Name schon sagt, zum Bearbeiten von ![](/basics/efx
 | ![](/basics/speed.png) | Passen Sie die EFX-Geschwindigkeitseinstellungen an:<br><br>**Einblenden:** Blendet den EFX-Start auf die Zielgröße ein<br>**Ausblenden:** Wird derzeit nicht verwendet<br>**Dauer:** Die Dauer einer ganzen Runde mit dem ausgewählten Muster |
 | ![](/basics/player_play.png) | Aktivieren Sie die Ausgabe und führen Sie EFX aus, um zu testen, wie sie aussieht |
 | **EFX-Name** | Ändern Sie den Namen des EFX. |
-| **Spielplan** | **Schritt**: Zeigt die Reihenfolge an, in der die Geräte ihre Bewegung in serieller/asymmetrischer Reihenfolge beginnen<br>**Gerät**: Der Name jedes Geräts, das dem EFX hinzugefügt wurde<br>**Modus** : Die Kanäle, die der EFX steuern soll. Sie können **Position**, **Dimmer** oder **RGB** sein. <br>*Hinweis*: Bei der Auswahl von RGB möchten Sie möglicherweise den unten beschriebenen „Farbhintergrund“ aktivieren.<br>**Umgekehrt **: Wenn diese Option aktiviert ist, kehrt das Gerät seine Bewegung um, im Gegensatz zu nicht umgekehrten Geräten. Die „normale“ Richtung wird durch die Richtung auf der Seite „Bewegung“ festgelegt.<br>**Start Offset**: Wert in Grad, wo auf dem Bewegungspfad dieses Gerät beginnen soll |
+| **Spielplan** | **Schritt**: Zeigt die Reihenfolge an, in der die Geräte ihre Bewegung in serieller/asymmetrischer Reihenfolge beginnen<br>**Gerät**: Der Name jedes Geräts, das dem EFX hinzugefügt wurde<br>**Modus**: Die Kanäle, die der EFX steuern soll. Sie können **Position**, **Dimmer** oder **RGB** sein. <br>*Hinweis*: Bei der Auswahl von RGB möchten Sie möglicherweise den unten beschriebenen „Farbhintergrund“ aktivieren.<br>**Umgekehrt**: Wenn diese Option aktiviert ist, kehrt das Gerät seine Bewegung um, im Gegensatz zu nicht umgekehrten Geräten. Die „normale“ Richtung wird durch die Richtung auf der Seite „Bewegung“ festgelegt.<br>**Start Offset**: Wert in Grad, wo auf dem Bewegungspfad dieses Gerät beginnen soll |
 | ![](/basics/edit_add.png) | Fügen Sie nach der aktuell ausgewählten Position eine [Fixture](/basics/glossary-and-concepts#fixtures) zum EFX hinzu. Da EFX zum Bewegen des Kopfes oder Spiegels eines intelligenten Geräts verwendet wird, können einem EFX nur Geräte mit **Schwenk- und Neigefunktion** (8 Bit oder 16 Bit) hinzugefügt werden. |
 | ![](/basics/edit_remove.png) | Entfernen Sie die ausgewählten Geräte aus dem EFX. |
 | ![](/basics/up.png) | Heben Sie das ausgewählte Gerät (zuvor) der Reihe nach nach oben. |

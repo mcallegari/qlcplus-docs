@@ -7,8 +7,8 @@ media_order: channel_modifier.png
 Dieses Fenster zeigt einen Baum mit Elementen an, die in einer Universes/Fixtures/Channels-Struktur verschachtelt sind.  
 Auf der rechten Seite des Kanals jedes Geräts werden die verfügbaren Optionen angezeigt, mit denen das Verhalten jedes einzelnen Kanals geändert werden kann.  
 
-Channels properties
--------------------
+Kanaleigenschaften
+------------------
 
 |     |     |
 | --- | --- |

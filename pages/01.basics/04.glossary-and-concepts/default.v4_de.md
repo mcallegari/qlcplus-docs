@@ -33,7 +33,7 @@ Kanalgruppen können einen benutzerdefinierten Namen haben und alle benutzerdefi
 
 ### ![](../chaser.png) Chaser
 
-Eine Chaser-[Funktion](#funktionen) besteht aus mehreren Szenen, die nacheinander ausgeführt wird, wenn die Chaserfunktion gestartet wird. Die nächste Funktion wird erst ausgeführt, nachdem die vorherige beendet wurde. In einen Chaser können beliebig viele [Funktionen](#Funktionen) eingefügt werden.
+Eine Chaser-[Funktion](#funktionen) besteht aus mehreren Szenen, die nacheinander ausgeführt wird, wenn die Chaserfunktion gestartet wird. Die nächste Funktion wird erst ausgeführt, nachdem die vorherige beendet wurde. In einen Chaser können beliebig viele [Funktionen](#funktionen) eingefügt werden.
 
 Die Richtung der Chaser-Funktion kann umgekehrt oder die Szenenauswahl zufällig erfolgen. Die Chaserfunktion kann auch so eingestellt werden, dass sie eine Endlosschleife durchführt oder eine unendliche Ping-Pong-Schleife (die Richtung wird nach jedem Durchgang umgekehrt) oder sie kann nur einmal im Single-Shot-Modus durchlaufen und danach von selbst beendet werden. Wenn die Funktion auf eine Endlosschleife eingestellt ist, muss sie manuell gestoppt werden.
 
@@ -101,11 +101,11 @@ Es können mehrere Instanzen eines Geräts erstellt werden (z. B. müssen Benutz
 
 Generische Dimmergeräte benötigen keine eigenen Gerätedefinitionen, da normalerweise mehrere Dimmer in einen gemeinsamen Adressraum gepatcht werden und dabei ein oder mehrere Dimmer-Racks verwenden. Benutzer können Instanzen dieser generischen Dimmereinheiten erstellen, indem sie einfach die Anzahl der Kanäle definieren, die jeder von ihnen haben soll.
 
-### ![](../group.png) Fixture Gruppierung
+### ![](../group.png) Gerätegruppe
 
 Eine Gerätegruppe ist, wie der Name schon sagt, eine Gruppe von [Fixtures](#fixtures). Sie definieren auch (auf einer eher grundlegenden Ebene) die tatsächliche physische Anordnung dieser Geräte in der realen Welt. Dieses Wissen kann beispielsweise in der RGB-Matrix genutzt werden, um eine Wand aus RGB-mischbaren Lichtern zu erzeugen, die als einzelne Pixel in einem grafischen Muster oder Lauftext fungieren können.
 
-### Fixture Mode
+### Gerätemodus
 
 Viele Hersteller entwerfen ihre Lichteffekte so, dass sie so konfiguriert werden können, dass sie verschiedene Kanalsätze verstehen. Beispielsweise könnte ein Scanner zwei Konfigurationsoptionen haben: eine für nur 8-Bit-Bewegungskanäle (1x Schwenken, 1x Neigen) und eine andere für 16-Bit-Bewegungskanäle (2x Schwenken, 2x Neigen). Anstatt für jede Variation eine komplett neue Fixture-Definition zu erstellen, wurden sie in den Fixture-Definitionen von QLC+ in Fixture-Modi gebündelt.
 
@@ -147,11 +147,11 @@ Ein Head stellt einen einzelnen Lichteffekt dar. Normalerweise enthält eine ein
 Beispielsweise könnten Sie über eine RGB-LED-Leuchte verfügen, die auf einem einzelnen Körper montiert ist und als solche wie eine einzelne Leuchte mit einem DMX-Eingang und einem DMX-Ausgang erscheint. Tatsächlich besteht es jedoch aus vier separaten RGB-LED-Leuchtmitteln. Diese separaten Geräte werden in QLC+ als Köpfe behandelt;
 Sie haben einige Eigenschaften mit ihren Geschwisterköpfen gemeinsam, sie können einzeln gesteuert werden, verfügen aber möglicherweise auch über eine Master-Intensitätssteuerung, die die Lichtleistung aller Heads zusammen steuert.
 
-Jeder Head gehört zu einem [Fixture Mode](#fixture-mode), da ein Gerät in einem Modus möglicherweise genügend Kanäle zur Verfügung stellt, um jeden seiner Heads einzeln zu steuern, während in einem anderen Modus möglicherweise nur eine Handvoll Kanäle zur Steuerung aller Köpfe bereitgestellt werden Heads gleichzeitig.
+Jeder Head gehört zu einem [Gerätemodus](#gerätemodus), da ein Gerät in einem Modus möglicherweise genügend Kanäle zur Verfügung stellt, um jeden seiner Heads einzeln zu steuern, während in einem anderen Modus möglicherweise nur eine Handvoll Kanäle zur Steuerung aller Köpfe bereitgestellt werden Heads gleichzeitig.
 
 ### HTP (Highest Takes Precedence)
 
-HTP ist eine Regel, die entscheidet an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#Funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen hören Intensitätskanäle der HTP-Regel. Dazu gehören generische Intensitätskanäle, die zur Steuerung der Lichtintensität mit Dimmern verwendet werden, sowie Kanäle zur Steuerung der Intensität einer Farbe, typischerweise in einer LED-Leuchte.
+HTP ist eine Regel, die entscheidet an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen hören Intensitätskanäle der HTP-Regel. Dazu gehören generische Intensitätskanäle, die zur Steuerung der Lichtintensität mit Dimmern verwendet werden, sowie Kanäle zur Steuerung der Intensität einer Farbe, typischerweise in einer LED-Leuchte.
 
 Die HTP-Regel ist einfach: Der höchste Pegel (näher 100 %) der derzeit an einen Kanal gesendet wird, wird an das DMX-Universum gesendet.
 

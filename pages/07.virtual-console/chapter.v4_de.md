@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 <style>
-    #kapitel p {
+    #chapter p {
         text-align: left;
     }
 </style>
@@ -54,7 +54,7 @@ Der Stil jedes Widgets der virtuellen Konsole kann (bis zu einem gewissen Grad) 
 | ![](/basics/edit.png) | Konfigurieren Sie das aktuell ausgewählte Widget mit einem eigenen Konfigurationsdialog (STRG+E) |
 | ![](/basics/editclear.png) | Benennen Sie die aktuell ausgewählten Widgets um. |
 | ![](/basics/up.png) | Bringen Sie das ausgewählte Widget in den Vordergrund (UMSCHALT+NACH OBEN) |
-| ![](/basics/down.png) | Das ausgewählte Widget nach hinten senden (UMSCHALT+RUNTER) |
+| ![](/basics/down.png) | Das ausgewählte Widget nach hinten senden (UMSCHALT+NACH UNTEN) |
 | ![](/basics/color.png) | Ändern Sie die Hintergrundfarbe des ausgewählten Widgets (UMSCHALT+B) |
 | ![](/basics/image.png) | Legen Sie ein Hintergrundbild für das ausgewählte Widget fest (UMSCHALT+I) |
 | ![](/basics/fontcolor.png) | Ändern Sie die Schriftfarbe des ausgewählten Widgets. |

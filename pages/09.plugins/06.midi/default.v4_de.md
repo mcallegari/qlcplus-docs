@@ -41,7 +41,7 @@ Schauen wir uns einige Beispiele an:
 KORG nanoPAD X-Achse
 -------------------
 
-Aus unbekannten Gründen wird in den Werkseinstellungen des nanoPAD die X-Achse des Pad-Bereichs nicht abgebildet. Damit es vollständig mit QLC+ funktioniert, laden Sie bitte das KORG-Dienstprogramm (nur Windows und macOS) von [hier](http://i.korg.com/SupportPage.aspx?productid=415) herunter und stellen Sie die X-Achse auf CC2 ein ( Kontrollwechsel Nr. 2).
+Aus unbekannten Gründen wird in den Werkseinstellungen des nanoPAD die X-Achse des Pad-Bereichs nicht abgebildet. Damit es vollständig mit QLC+ funktioniert, laden Sie bitte das KORG-Dienstprogramm (nur Windows und macOS) von [hier](http://i.korg.com/SupportPage.aspx?productid=415) herunter und stellen Sie die X-Achse auf CC2 ein (Kontrollwechsel Nr. 2).
 
 AKAI APC LED-Feedback
 ----------------------
