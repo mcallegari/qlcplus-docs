@@ -14,7 +14,7 @@ Controls
 | **RGB matrix name** | Change the name of the RGB matrix. |
 | ![](/basics/speed.png) | Adjust the RGB Matrix speed settings:<br><br>**Fade In:** The time it takes for the fixtures in the RGB Matrix fixture group to fade their intensity channels up<br>**Fade Out:** The time it takes for the fixtures in the RGB Matrix fixture group to fade their intensity channels back to zero<br>**Duration:** The duration of each step of the selected pattern |
 | ![](/basics/sequence.png) | Convert the current RGB Matrix into a [Sequence](/basics/glossary-and-concepts#sequence). This is useful to speed up the creation of a [Show](/basics/glossary-and-concepts#show). Please note that if the selected pattern generates random data, this functionality will generate a different Sequence every time. |
-| ![](/basics/square.png) | Switch the preview mode between circles and squares |
+| ![](/basics/square.png) | Switch the preview mode between circles and squares. |
 | ![](/basics/player_play.png) | Make the RGB Matrix run as if it were started from a [Virtual Console](/virtual-console) button. Note that the preview stops while the function is running. |
 | **Fixture group** | The [Fixture Group](/basics/glossary-and-concepts#fixture-group) that is controlled by this RGB matrix. |
 | **Preview area** | Shows a preview of the currently selected pattern imposed on the fixtures defined in the currently selected fixture group. Note that the preview doesn't show the difference between RGB-capable and monochrome/fixed color fixtures. |

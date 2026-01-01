@@ -5,11 +5,11 @@ taxonomy:
         - docs
 ---
 
-Der Fixture-Gruppen-Editor wird verwendet, wenn Sie eine [Fixture-Gruppe](/basics/glossary-and-concepts#fixture-gruppierung) im [Fixture-Manager](/fixture-manager) auswählen. Mit diesem Editor kann die physische Anordnung der [Geräte](/basics/glossary-and-concepts#fixtures) und ihrer [Köpfe](/basics/glossary-and-concepts#head) beschrieben werden, die der Gruppe zugewiesen sind .
+Der Fixture-Gruppen-Editor wird verwendet, wenn Sie eine [Gerätegruppe](/basics/glossary-and-concepts#gerätegruppe) im [Fixture-Manager](/fixture-manager) auswählen. Mit diesem Editor kann die physische Anordnung der [Geräte](/basics/glossary-and-concepts#fixtures) und ihrer [Köpfe](/basics/glossary-and-concepts#head) beschrieben werden, die der Gruppe zugewiesen sind .
 
 ### Einstellungen
 
-Jede Fixture-Gruppe hat einen Namen (zur Vereinfachung) und die Fixture-Konfiguration in einem unbegrenzten \[X,Y\]-Raster. Sie können die Größe des Rasters sowie die Platzierung einzelner Leuchtenköpfe im Raster anpassen.
+Jede Gerätegruppe hat einen Namen (zur Vereinfachung) und die Fixture-Konfiguration in einem unbegrenzten \[X,Y\]-Raster. Sie können die Größe des Rasters sowie die Platzierung einzelner Leuchtenköpfe im Raster anpassen.
 
 |     |     |
 | --- | --- |
