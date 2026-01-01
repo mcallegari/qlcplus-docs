@@ -69,3 +69,6 @@ QLC+ has been tested with the following Art-Net software and devices:
 * [Art-Net Controller LITE](https://play.google.com/store/apps/details?id=com.chfsoft.artnet_dmx_Lite&noprocess) \- Input controller for Android
 * [Modul8](https://www.garagecube.com/modul8/)
 * [Jinx!](https://live-leds.de/) \- LED Matrix Control
+* [Chauvet DJ AN 2](https://www.chauvetdj.com/products/dmx-an2) - 2 Channel Input/Output device
+* [American DJ (ADJ) Net 8](https://www.adj.com/products/net-8) - 8 Channel Input/Output device
+  
