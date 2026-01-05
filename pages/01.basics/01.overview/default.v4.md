@@ -25,10 +25,11 @@ You can contribute via [GitHub Sponsorship](https://github.com/sponsors/mcallega
 ### Can I contribute another way?
 
 If you don't have the means to donate there are a number of other ways to contribute to QLC+ including:
+
 1. Participating in the [QLC+ official forum](https://www.qlcplus.org/forum/)
-1. Suggesting improvements to this documentation (See the top right "Edit this page" button)
-1. Telling your friends about QLC+
-1. Using QLC+ for your projects!
+2. Suggesting improvements to this documentation (See the top right "Edit this page" button)
+3. Telling your friends about QLC+
+4. Using QLC+ for your projects!
 
 ### Safety warning!
 QLC+ is not designed or certified for safety-critical applications such as pyrotechnics, flame effects, CO₂ jets, or motorized stage elements. While QLC+ can control these devices, it does not provide safety interlocks, channel locking, or fail-safe mechanisms. Your computer may crash or behave unpredictably under certain conditions.

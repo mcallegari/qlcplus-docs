@@ -59,7 +59,7 @@ Bloc amb D2xxHelper (OS X 10.9 i posteriors)
 Nota: aquest és l'únic mètode no temporal que funciona en el **10.11 El Capitan**.
 
 FTDI proporciona una extensió del nucli signada (D2xxHelper.kext) que no conté cap codi però actua per evitar que OS X coincideixi amb un xip FTDI (amb el proveïdor estàndard i els identificadors de producte) amb un controlador VCP, ja sigui d'Apple o de FTDI. Això deixa el dispositiu sense reclamar, i només disponible per als programes D2XX.  
-1\. Desconnecta tots els dispositius FTDI.  
-2\. Baixeu i executeu l'instal·lador D2xxHelper des de [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/)
-3\. Reinicia.
-  4\. Reconnecta els dispositius FTDI.
+1. Desconnecta tots els dispositius FTDI.  
+2. Baixeu i executeu l'instal·lador D2xxHelper des de [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/).  
+3. Reinicia.  
+4. Reconnecta els dispositius FTDI.

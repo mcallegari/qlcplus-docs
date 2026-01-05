@@ -55,7 +55,7 @@ The kextunload and kextload commands can be run in any directory.
 Note: this is the only non-temporary method which works on **10.11 El Capitan**.  
   
 FTDI provides a signed kernel extension (D2xxHelper.kext) which contains no code but acts to prevent OS X from matching an FTDI chip (with standard vendor and product identifiers) with a VCP driver, either Apple's or FTDI's. This leaves the device unclaimed, and available for D2XX programs only.  
-1\. Disconnect all FTDI devices.  
-2\. Download and run the D2xxHelper installer from [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/)
-3\. Reboot.  
-4\. Reconnect the FTDI devices.
+1. Disconnect all FTDI devices.  
+2. Download and run the D2xxHelper installer from [https://ftdichip.com/drivers/d2xx-drivers/](https://ftdichip.com/drivers/d2xx-drivers/).  
+3. Reboot.  
+4. Reconnect the FTDI devices.

@@ -39,7 +39,7 @@ jobs:
         lang: ${{ fromJson(needs.detect-langs.outputs.langs) }}
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 

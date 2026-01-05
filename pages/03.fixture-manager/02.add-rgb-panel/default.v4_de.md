@@ -3,17 +3,17 @@ title: 'RGB Panel hinzufügen'
 date: '11:11 21-08-2023'
 ---
 
-Auf dem Markt finden Sie leicht LED-Streifen die Sie nach Belieben verdrahten können, um ein RGB-Panel (oder eine Matrix) zu erstellen. In diesem Dialogfeld können Sie schnell ein RGB-Panel erstellen und einrichten. Es handelt sich um einen speziellen Dialog, der Sie bei dem umfangreichen Prozess der manuellen Erstellung von Vorrichtungen je nach gewünschtem Layout unterstützt.
+Auf dem Markt finden Sie leicht LED-Streifen, die Sie nach Belieben verdrahten können, um ein RGB-Panel (oder eine Matrix) zu erstellen. In diesem Dialogfeld können Sie schnell ein RGB-Panel erstellen und einrichten. Es handelt sich um einen speziellen Dialog, der Sie bei dem umfangreichen Prozess der manuellen Erstellung von Vorrichtungen je nach gewünschtem Layout unterstützt.  
 Bitte beachten Sie, dass das Layout nach der Erstellung des Panels nur noch manuell geändert werden kann.
 
 ## Panel Erstellung
 
-Wenn Sie in diesem Dialogfeld auf „OK“ klicken passieren zwei Dinge:
+Wenn Sie in diesem Dialogfeld auf „OK“ klicken passieren zwei Dinge:  
 
 * QLC+ erstellt eine Vorrichtung für jede Reihe des Panels. Sie können so betrachtet werden, als ob das Panel aus einzelnen RGB-Balken zusammengesetzt wäre.
 * QLC+ erstellt eine Gerätegruppe, die das Panel mit den Köpfen darstellt, die sich bereits in der richtigen Verschiebung befinden
 
-Sobald ein RGB-Panel erstellt ist, können Sie ganz einfach zum [Funktionsmanager](/function-manager) gehen, eine neue [RGB-Matrix](/basics/glossary-and-concepts#rgb-matrix) erstellen und sehr schnell mit der Benutzung beginnen.
+Sobald ein RGB-Panel erstellt ist, können Sie ganz einfach zum [Funktionsmanager](/function-manager) gehen, eine neue [RGB-Matrix](/basics/glossary-and-concepts#rgb-matrix) erstellen und sehr schnell mit der Benutzung beginnen.  
 
 Schauen wir uns alle Optionen in diesem Bereich an:
 

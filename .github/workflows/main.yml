@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Check Spelling
-        uses: rojopolis/spellcheck-github-actions@0.51.0
+        uses: rojopolis/spellcheck-github-actions@0.56.0
         with:
           config_path: .spellcheck.yml
           task_name: Markdown
@@ -37,7 +37,7 @@ jobs:
         lang: ${{ fromJson(needs.detect-langs.outputs.langs) }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - id: build
         uses: ./.github/actions/build-pdf
@@ -45,13 +45,13 @@ jobs:
           lang: ${{ matrix.lang }}
 
       - name: Upload-PDF
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
             name: qlcplus-docs-${{ matrix.lang }}-pdf
             path: ./.github/workflows/bin/pdf/
-
-#      - name: Upload-Markdown
-#        uses: actions/upload-artifact@v4
-#        with:
-#            name: qlcplus-docs-${{ matrix.lang }}-markdown
-#            path: ./.github/workflows/bin/markdown/
+  
+      - name: Upload-Markdown
+        uses: actions/upload-artifact@v6
+        with:
+            name: qlcplus-docs-en-markdown
+            path: ./.github/workflows/bin/markdown/

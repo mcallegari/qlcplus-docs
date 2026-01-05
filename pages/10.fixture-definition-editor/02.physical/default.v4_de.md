@@ -3,7 +3,7 @@ title: Physisch
 date: '05:31 22-08-2023'
 ---
 
-Dies ist der Abschnitt, in dem die _globalen_ physischen Informationen des Geräts bereitgestellt werden.
+Dies ist der Abschnitt, in dem die _globalen_ physischen Informationen des Geräts bereitgestellt werden.  
 In jedem Modus ist auch ein identischer Abschnitt vorhanden, falls das Gerät die Änderung seiner physikalischen Eigenschaften (z. B. Schwenk-/Neigebereich) je nach Modus zulässt. In diesem Fall können die globalen physischen Informationen durch physische Informationen pro Modus überschrieben werden.
 
 ![](../fixture_editor_physical.png)

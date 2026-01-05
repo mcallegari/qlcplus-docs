@@ -63,7 +63,7 @@ Mostra els controls de la barra d'eines del Gestor de Shows
 | ![](/basics/editcopy.png) | CTRL+C | Copia l'element seleccionat al porta-retalls del QLC+ |
 | ![](/basics/editpaste.png) | CTRL+V | Enganxa el contingut del porta-retalls del QLC+ a la posició del cursor. En realitzar aquesta operació es realitzen dues comprovacions:<br><br>**Superposició**: comprova si l'element que enganxareu es superposa amb un element existent a la pista seleccionada<br>**Validesa**: Si esteu enganxant una seqüència, QLC+ verificarà que el contingut de la seqüència sigui compatible amb la pista seleccionada actualment |
 | ![](/basics/editdelete.png) | Suprimeix | Suprimeix l'element seleccionat. Això pot ser una seqüència, un element d'àudio o una pista. Tingueu en compte que suprimir una pista també suprimirà totes les seves seqüències/àudios fills.  <br>**Nota: El Gestor de Shows només realitzarà una "eliminació visual" de les funcions. Per eliminar-los permanentment, utilitzeu el [Gestor de Funcions](/function-manager)** |
-| ![](/basics/color.png) | CTRL+R | Assigna un color personalitzat a l'element seleccionat |
+| ![](/basics/color.png) | CTRL+L | Assigna un color personalitzat a l'element seleccionat |
 | ![](/basics/lock.png) | CTRL+K | Bloqueja o desbloqueja l'element seleccionat. Un cop bloquejat un element, ja no es pot arrossegar a la línia de temps |
 | ![](/basics/speed.png) | CTRL+T | Obriu una finestra on podreu ajustar el temps d'inici i la durada total de l'element seleccionat. El comportament d'aquest últim dependrà de l'element seleccionat.  <br>En ítems d'àudio i vídeo no fa res.  <br>A Seqüències i Chasers estirarà tots els temps dels passos per adaptar-los a la durada desitjada.  <br>A les EFX i Matrius RGB es mostraran algunes opcions addicionals, que permeten estirar la funció original o fer un bucle de la funció fins que s'assoleixi la durada desitjada. |
 | ![](/basics/grid.png) | CTRL+G | Activa/desactiva la funcionalitat "Ajusta a la quadrícula". La vista s'omplirà amb barres verticals corresponents als marcadors de capçalera (temps o BPM) <br>Ajustar a la quadrícula corregirà els elements arrossegant-los a la barra de referència més propera |
@@ -88,7 +88,7 @@ Apareixerà una finestra emergent que demanarà un nom per a assignar-lo al Show
 Quan afegiu una pista, una finestra emergent us demanarà que seleccioneu una funció existent o que en creeu una de nova amb un nom predeterminat.  
 En acabar, es crearà una pista nova. Totes les seqüències creades en aquesta pista actuaran només en l'escena associada, no afectant cap de les altres pistes.  
 Una pista de nova creació s'establirà automàticament com a activa. Una pista activa té una llum verda al costat esquerre.  
-Es pot establir una pista en els estats de ![](track-mute.png) silenci i ![](track-solo.png) solo. L'estat silenci exclourà la pista de la reproducció, mentre que l'estat solo silenciarà totes les altres pistes del Show.
+Es pot establir una pista en els estats de ![](track-mute.png) silenci i ![](track-solo.png) solo. L'estat silenci exclourà la pista de la reproducció, mentre que l'estat solo silenciarà totes les altres pistes del Show.  
 En fer clic dret sobre una pista, és possible moure-la cap amunt ![](/basics/up.png) o cap avall ![](/basics/down.png) per a l'ordenació lògica.  
 Un cop seleccionada, una pista mostrarà el seu [Editor d'Escenes](/function-manager/scene-editor) a la part inferior de la pantalla.
 

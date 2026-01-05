@@ -61,7 +61,7 @@ Show Manager toolbar controls
 | ![](/basics/editcopy.png) | CTRL+C | Copy the currently selected item into QLC+ clipboard |
 | ![](/basics/editpaste.png) | CTRL+V | Paste QLC+ clipboard content at the cursor position. When performing this operation two checks are performed:<br><br>**Overlapping**: checks if the item you're going to paste overlaps with an existing item in the selected track<br>**Validity**: If you're pasting a Sequence, QLC+ will verify that the Sequence contents are compatible with the currently selected track |
 | ![](/basics/editdelete.png) | Del | Delete the currently selected item. This can be a sequence, an audio item or a track. Note that deleting a track will delete also all its sequences/audio children.  <br>**Note: Show Manager will only perform a "visual removal" of functions. To permanently delete them, please use the [Function Manager](/function-manager)** |
-| ![](/basics/color.png) | CTRL+R | Assign a custom color to the selected item |
+| ![](/basics/color.png) | CTRL+L | Assign a custom color to the selected item |
 | ![](/basics/lock.png) | CTRL+K | Lock or unlock then selected item. Once an item is locked, it cannot be dragged on the timeline anymore |
 | ![](/basics/speed.png) | CTRL+T | Open a window where you can adjust the selected item start time and total duration. The behaviour of the latter will depend on the selected item.  <br>On Audio and Video items it does nothing.  <br>On Sequences and Chasers it will stretch all the steps timings to fit to the desired duration.  <br>On EFX and RGB Matrices some extra options will be displayed, allowing to stretch the original function or loop the function until the desired duration is reached. |
 | ![](/basics/grid.png) | CTRL+G | Enable/disable the "Snap to grid" functionality. The view will be filled with vertical bars corresponding to the header markers (time or BPM)  <br>Snapping to grid will correct your items by dragging them to the nearest reference bar |
@@ -86,7 +86,7 @@ A popup will appear asking the name to assign to the Show. It is possible to cha
 When you add a track, a popup will ask you to select an existing function or to create a new one with a default name.  
 When done, a new track will be created. All the sequences created on this track will act only on the associated Scene, not affecting any of the other tracks.  
 A newly created track will be set automatically as active. An active track has a green light on the left hand side.  
-A Track can be set to ![](track-mute.png) mute and ![](track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.
+A Track can be set to ![](track-mute.png) mute and ![](track-solo.png) solo states. The mute state will exclude the track from the playback, while the solo state will mute all the other tracks of the Show.  
 When right clicking on a track, it is possible to move it up ![](/basics/up.png) or down ![](/basics/down.png) for logical ordering.  
 Once selected, a track will display its [Scene Editor](/function-manager/scene-editor) on the bottom of the screen.
 

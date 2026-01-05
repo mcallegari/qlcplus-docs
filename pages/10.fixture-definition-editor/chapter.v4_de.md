@@ -37,7 +37,7 @@ Das Hauptfenster im Fixture-Editor ist lediglich ein leerer Arbeitsbereich, der 
 
 ## Fixture-Editor
 
-Die Fixture-Editor-Fenster enthalten alles, was zum Bearbeiten jeweils einer Fixture-Definition erforderlich ist. Die Fenster sind in fünf Registerkarten unterteilt:
+Die Fixture-Editor-Fenster enthalten alles, was zum Bearbeiten jeweils einer Fixture-Definition erforderlich ist. Die Fenster sind in fünf Registerkarten unterteilt:<br>
 [**Allgemein**](general)<br>
 [**Physisch**](physical)<br>
 [**Kanäle**](channels)<br>
