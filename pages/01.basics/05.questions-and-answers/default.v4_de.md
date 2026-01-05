@@ -49,7 +49,7 @@ Es ändert sich je nach Betriebssystem:
 * **Windows**: Es handelt sich um einen Ordner in Ihrem Benutzerverzeichnis (z. B. <Benutzername>): `C:\\Users\\<Username>\\QLC+`
 * **Mac OS**: Es befindet sich in Ihrem Benutzerverzeichnis „Bibliothek“: `$HOME/Library/Application\\ Support/QLC+`
 
-Sie können jeden dieser Ordner von einem Terminal aus mit dem Befehl „cd“ erreichen. Zum Beispiel:
+Sie können jeden dieser Ordner von einem Terminal aus mit dem Befehl `cd` erreichen. Zum Beispiel:
 
 `cd $HOME/Library/Application\\ Support/QLC+`
 
@@ -70,8 +70,8 @@ und es ändert sich je nach Betriebssystem:
 * **Mac OS**: Es handelt sich um einen Ordner im QLC+-Bundle (.app-Datei). Es ist möglich zu stöbern
   Die QLC+ .app-Bundle-Inhalte einfach mit Finder. Klicken Sie einfach mit der rechten Maustaste auf die Datei und wählen Sie sie aus
   „Paketinhalt anzeigen“.<br>Andernfalls ist der Systemordner über ein Terminal erreichbar
-  aber es hängt davon ab, wo Sie QLC+ installiert haben. Zum Beispiel, wenn Sie QLC+ hineingezogen haben
-  Anwendungen lauten: „/Applications/QLC+.app/Contents/Resources“.
+  aber es hängt davon ab, wo Sie QLC+ installiert haben. Zum Beispiel, wenn Sie QLC+ in „Anwendungen“ hineingezogen haben,
+  befindet sich QLC+ unter `/Applications/QLC+.app/Contents/Resources`.
 
 #### Frage #6: QLC+ kann in Windows manche Videos nicht abspielen.
 

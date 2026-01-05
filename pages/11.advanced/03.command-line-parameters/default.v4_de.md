@@ -7,13 +7,13 @@ QLC+ unterstützt eine Reihe von Befehlszeilenparametern, um einige Funktionalit
 Die Verwendung von Befehlszeilenparametern kann je nach verwendetem Betriebssystem schwierig sein:
 
 **Linux**: Öffnen Sie einfach ein Terminal und geben Sie „qlcplus“ gefolgt von den benötigten Parametern ein<br>
-**Windows**: Erstellen Sie eine Verknüpfung von qlcplus.exe (normalerweise unter C:\\QLC+) auf Ihrem Desktop. Klicken Sie mit der rechten Maustaste auf die Verknüpfung und wählen Sie „Eigenschaften“. Im Feld „Ziel“ sehen Sie etwas wie „C:\\QLC+\\qlcplus.exe“. Dort können Sie Befehlszeilenparameter hinzufügen. Wenn Sie fertig sind, klicken Sie auf OK.<br>
+**Windows**: Erstellen Sie eine Verknüpfung von qlcplus.exe (normalerweise unter C:\\QLC+) auf Ihrem Desktop. Klicken Sie mit der rechten Maustaste auf die Verknüpfung und wählen Sie „Eigenschaften“. Im Feld „Ziel“ sehen Sie etwas wie `C:\\QLC+\\qlcplus.exe`. Dort können Sie Befehlszeilenparameter hinzufügen. Wenn Sie fertig sind, klicken Sie auf OK.<br>
 Um zum Beispiel die deutsche Sprache beim Start zu erzwingen, ändern Sie Ihre Shortcut-Befehlszeile wie folgt:
 
 ![](../command-line.png)
 
-**OSX**: Dies ist der schwierigste Fall, da QLC+ unter OSX in einem DMG-Paket gebündelt ist. Sie müssen ein Terminal öffnen und wie folgt in die QLC+ DMG „cd“ eingeben: „cd QLC+.app\\Contents\\MacOS“<br>
-Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parametern ein
+**OSX**: Dies ist der schwierigste Fall, da QLC+ unter OSX in einem DMG-Paket gebündelt ist. Sie müssen ein Terminal öffnen und wie folgt mithilfe des Befehls „cd“ in die QLC+ DMG wechseln: `cd QLC+.app\\Contents\\MacOS`<br>
+Wenn Sie fertig sind, geben Sie `qlcplus` gefolgt von den benötigten Parametern ein.
 
 
 
@@ -39,7 +39,7 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus](/basics/glossary-and-concepts#modi) gesperrt.<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br>qlcplus -k <br>qlcplus --kiosk |
+| **-k oder --kiosk**<br><br>**Beschreibung:** Kioskmodus aktivieren (nur [virtuelle Konsole](/virtual-console) ist sichtbar und die Anwendung ist im [Betriebsmodus](/basics/glossary-and-concepts#modi) gesperrt).<br><br>**Parameter:** Keine<br><br>**Beispiele:** <br>Starten Sie die Anwendung im Kioskmodus: <br>qlcplus -k <br>qlcplus --kiosk |
 
 |     |
 | --- |
@@ -79,4 +79,4 @@ Wenn Sie fertig sind, geben Sie „qlcplus“ gefolgt von den benötigten Parame
 
 |     |
 | --- |
-| **-a oder --web-auth-file**<br><br>**Beschreibung:** Geben Sie eine Datei an, in der die Anmeldeinformationen für die Standardauthentifizierung für den Webzugriff gespeichert werden sollen<br><br>**Parameter:** Datei Name<br><br>**Beispiele:** <br>qlcplus -wa qlcplus_password <br>qlcplus --web-auth-file qlcplus_password |
+| **-a oder --web-auth-file**<br><br>**Beschreibung:** Geben Sie eine Datei an, in der die Anmeldeinformationen für die Standardauthentifizierung für den Webzugriff gespeichert werden sollen<br><br>**Parameter:** Dateiname<br><br>**Beispiele:** <br>qlcplus -wa qlcplus_password <br>qlcplus --web-auth-file qlcplus_password |

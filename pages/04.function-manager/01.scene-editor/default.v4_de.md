@@ -34,7 +34,7 @@ Registerkarten für Kanalgruppen
 Diese Registerkarte wird nur angezeigt, wenn in der Registerkarte „Allgemein“ eine oder mehrere Kanalgruppen ausgewählt sind.  
 Jede Kanalgruppe wird mit einer Schnellzugriffstaste für Makros ([Click And Go](/basics/glossary-and-concepts#click-and-go) falls unterstützt), einer Beschriftung mit dem Gruppenwert, einem Fader und dem Namen der Gruppe angezeigt.
 
-Fixture-Registerkarten
+Geräte-Registerkarten
 ------------
 
 Jedes Gerät wird durch eine eigene Registerkarte dargestellt, die Schieberegler für jeden Kanal des Geräts enthält. Jeder Kanal kann mit einem Kontrollkästchen oben in der Kanaleinheit aktiviert oder deaktiviert werden. Der Wert jedes Kanals kann entweder durch Eingabe des Werts in das Bearbeitungsfeld oben auf dem Schieberegler oder durch Bewegen des Schiebereglers festgelegt werden. Kanäle, die mehrere Funktionen wie Gobos, Farben usw. bereitstellen, verfügen außerdem über eine Schaltfläche über dem Kanalschieberegler. Mit dieser Schaltfläche können Sie direkt eine bestimmte Funktion oder Fähigkeit auswählen, die von diesem Kanal bereitgestellt wird.  
@@ -52,7 +52,7 @@ Wenn ein Kanal aktiviert wurde, ändert die Szene den Wert dieses Kanals auf den
 | --- | --- |
 | ![](/basics/check.png) | Aktivieren Sie alle Kanäle des aktuellen Geräts. Wählen Sie im Modus „Alle Kanäle“ Kanäle für alle Geräte aus. |
 | ![](/basics/uncheck.png) | Deaktivieren Sie alle Kanäle des aktuellen Geräts. Deaktivieren Sie im Modus „Alle Kanäle“ die Kanäle für alle Geräte. |
-| ![](/basics/back.png) | Gehen Sie zur vorherigen Registerkarte in der Ansicht. Wenn die erste Registerkarte ausgewählt ist, gelangen Sie zur letzten Registerkarte in der Ansicht. Tastaturkürzel: '**ALT+Links**' |
+| ![](/basics/back.png) | Gehen Sie zur vorherigen Registerkarte in der Ansicht. Wenn die erste Registerkarte ausgewählt ist, gelangen Sie zur letzten Registerkarte in der Ansicht. Tastaturkürzel: „**ALT+Links**“ |
 | ![](/basics/forward.png) | Gehen Sie zur nächsten Registerkarte in der Ansicht. Wenn die letzte Registerkarte ausgewählt ist, gelangen Sie zur ersten Registerkarte in der Ansicht. Tastaturkürzel: „**ALT+Rechts**“ |
 | ![](/basics/editcopy.png) | Die Kopierfunktion hat zwei Modi: <br><br>**Kopieren Sie die Werte** (und aktivierten/deaktivierten Zustände) aller Kanäle im aktuellen Gerät in die Zwischenablage.<br>**Kopieren Sie nur die ausgewählten Kanäle** (Strg-geklickt, gelber Hintergrund) Werte in die Zwischenablage. |
 | ![](/basics/editpaste.png) | Fügen Sie die Werte aus der Zwischenablage in das aktuelle Gerät ein. Wenn beim „Kopieren“ keine Kanäle ausgewählt wurden, werden alle aktivierten/deaktivierten Zustände zusammen mit den Kanalwerten eingefügt. |

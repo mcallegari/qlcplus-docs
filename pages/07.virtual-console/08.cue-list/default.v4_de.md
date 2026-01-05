@@ -64,4 +64,4 @@ Nachdem der Fader an das entgegengesetzte Ende seines Weges bewegt wurde, finden
 
 Wenn ein Cue mithilfe des [Chaser-Editors](/function-manager/chaser-editor) zu einem Chaser hinzugefügt wird, wird die Standarddauer auf 0 gesetzt.  
 Um zu vermeiden, dass die Cues in der Cue-Liste hektisch und ohne Ergebnis wiederholt werden, legen Sie die Dauer Ihrer Cues fest, indem Sie entweder auf das Dauerfeld doppelklicken oder das Kurzwahl-Widget verwenden![](/basics/speed.png)  
-Beachten Sie, dass Sie, wenn Sie Szenen benötigen, die Sie manuell mit dem Cue-List-Widget überblenden möchten, die Dauer der Cues wahrscheinlich mit dem [Speed ​​Dial-Widget](../speed-dial) auf „unendlich“ (∞) einstellen möchten). Dies kann im Chaser-Editor durch Klicken auf die Schaltfläche ![](/basics/speed.png) aktiviert werden.
+Beachten Sie, dass Sie, wenn Sie Szenen benötigen, die Sie manuell mit dem Cue-List-Widget überblenden möchten, die Dauer der Cues wahrscheinlich mit dem [Speed ​​Dial-Widget](../speed-dial) auf „unendlich“ (∞) einstellen möchten. Dies kann im Chaser-Editor durch Klicken auf die Schaltfläche ![](/basics/speed.png) aktiviert werden.

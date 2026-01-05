@@ -13,7 +13,7 @@ For example, to force the German language at startup, modify your shortcut comma
 ![](../command-line.png)
 
 **OSX**: This is the most difficult case since QLC+ on OSX is bundled into a DMG package. You need to open a terminal and "cd" into the QLC+ DMG like this: `cd QLC+.app\\Contents\\MacOS`<br>
-When done, type "qlcplus" followed by the parameters you need
+When done, type "qlcplus" followed by the parameters you need.
 
   
 

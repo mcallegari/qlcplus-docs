@@ -17,7 +17,7 @@ Auf allen Linux-Distributionen müssen Sie libusb installieren. Wenn Sie QLC+ mi
 
 ### Mac OS X
 
-Für Mac OS
+Für Mac OS X ist nichts Besonderes erforderlich. Alle erforderlichen Komponenten sind bereits im Q Light Controller Plus-Anwendungspaket enthalten, da QLC+ die native USB-Schnittstelle von OS X verwendet.
 
 ### Windows
 

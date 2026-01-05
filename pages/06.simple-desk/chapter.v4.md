@@ -62,8 +62,6 @@ The cue stack box shows the contents of the currently selected playback.
 | ![](/basics/record.png) | Record a new cue, taking its contents from the current DMX slider values. |
 | **Cue Stack** | This box displays the contents of the currently selected playback's cue stack, along with the index number (1, 2, 3...), Fade In speed, Fade Out speed, Duration and an optional name for each cue.<br><br>You can change the cue order by dragging the cues on top of each other, either one at a time or multiple cues at the same time. |
 
-[](#Tuning)
-
 Tuning
 ------
 

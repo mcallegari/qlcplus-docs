@@ -68,7 +68,7 @@ Show Manager toolbar controls
 | **00:00:00.000** |     | This field displays the cursor time position both if the playback is stopped or activated |
 | ![](/basics/player_play.png)![](/basics/player_pause.png) | Space | Start the current Show playback from the cursor position, or pause it and leave the lights on. |
 | ![](/basics/player_stop.png) | CTRL+Space | Stop the current Show playback. Clicking once will stop the cursor at the current position for resuming later. Clicking twice will restore the cursor to 0 seconds.  <br>**Hint:** When resuming a show with audio tracks, please keep in mind that audio accuracy depends on the file formats you are using. For example MP3 files resume is not particularly accurate, while wave files resume is. |
-| **Time markers** |     | This drop down menu lets you to choose the desired time division to display for your Show.  <br>This can be either 'Time'. 'BPM 4/4', 'BPM 3/4' or 'BPM 2/2' |
+| **Time markers** |     | This drop down menu lets you to choose the desired time division to display for your Show.  <br>This can be either 'Time', 'BPM 4/4', 'BPM 3/4' or 'BPM 2/2'. |
 | **BPMs** |     | When a BPM time division mode is selected, this field lets you decide the appropriate BPM to set for you Show. This ranges from 20 to 240.  <br>This can be quite useful when dealing with electronic music or BPM synchronized shows |
 
 Just 4 steps
