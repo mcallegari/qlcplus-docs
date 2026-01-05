@@ -20,7 +20,7 @@ Um Ihre Fixture-Definitionen in QLC+ zu verwenden, müssen Sie sie an einem Ort 
 1. Im selben Ordner wie Ihr QLC+-Arbeitsbereich (praktisch, wenn Sie Ihren Arbeitsbereich jemand anderem geben möchten)
 2. Im Benutzer-Fixtures-Ordner an folgenden Orten:
     * Linux: Es handelt sich um einen versteckten Ordner in Ihrem Benutzer-Home-Verzeichnis: „$HOME/.qlcplus/Fixtures“.
-    * Windows: Es ist ein Ordner in Ihrem Benutzerverzeichnis: „C:\\Benutzer\{Benutzername}\QLC+\Fixtures“.
+    * Windows: Es ist ein Ordner in Ihrem Benutzerverzeichnis: `C:\\Benutzer\\<Benutzername>\\QLC+\\Fixtures`.
     * Mac OS: Es befindet sich in Ihrem Benutzerbibliotheksverzeichnis: „$HOME/Library/Application\\ Support/QLC+/Fixtures“.
 	
 **Wichtiger Hinweis: Sie sollten Ihre benutzerdefinierten Geräte NICHT im Geräteordner des QLC+-Systems speichern oder kopieren. Dies liegt daran, dass bei der Deinstallation von QLC+ alle Geräte in diesem Ordner gelöscht werden. Es kann auch zu unbeabsichtigten Konflikten zwischen dem System und Ihren eigenen Gerätedefinitionen kommen.**

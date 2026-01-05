@@ -13,7 +13,7 @@ Der Dateiname ist in QLC+ fest codiert und muss lauten: `qlcplusStyle.qss`.
 Die Stildatei muss außerdem in einem bestimmten Pfad abgelegt werden:  
 
 * **Linux**: `$HOME/.qlcplus`
-* **Windows**: „C:\\Benutzer\{Benutzername}\QLC+“.
+* **Windows**: `C:\\Benutzer\\<Benutzername>\\QLC+`.
 * **OSX**: `$HOME/Library/Application\\ Support/QLC+`
 
 Die Theme-Datei ist in Abschnitte unterteilt. Jeder Abschnitt stellt die UI-Elemente dar, die beim Ausführen von QLC+ geändert werden. Unveränderte Abschnitte können weggelassen werden.  

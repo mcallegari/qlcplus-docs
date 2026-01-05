@@ -34,15 +34,36 @@ runs:
         mkdir -p ./.github/workflows/bin/temp
         mkdir -p ./.github/workflows/bin/markdown
         mkdir -p ./.github/workflows/bin/pdf
+
+    - name: Load workflow_translations.json
+      shell: bash
+      env:
+        DOC_LANG: ${{ inputs.lang }}
+        TRANSLATIONS_FILE: ./scripts/titlepage_translations.json
+      run: |
+        python3 - <<'PY' >> "$GITHUB_ENV"
+        import json, os
+        path = os.environ['TRANSLATIONS_FILE']
+        lang = os.environ.get('DOC_LANG', 'en')
+        with open(path) as f:
+            data = json.load(f)
+        default = data.get('en', {})
+        trans = data.get(lang, default)
+        for key in ['title', 'subtitle', 'author', 'written_by', 'release_prefix', 'chapter_prefix']:
+            val = trans.get(key, default.get(key, ''))
+            print(f"{key.upper()}={val}")
+        PY
+        
     - name: Run PowerShell merge script
       shell: pwsh
       run: |
-        ./scripts/Merge-MarkdownFiles.ps1 -Lang ${{ inputs.lang }}
+        ./scripts/Merge-MarkdownFiles.ps1 -Lang ${{ inputs.lang }} -ChapterPrefix $env:CHAPTER_PREFIX
     - name: Fix logo and copy images
       shell: bash
       run: |
         cp -r ./.github/workflows/bin/markdown/images ./images
         sed -i '/!\[\](images\/qlcplus\.svg)/d' ./.github/workflows/bin/markdown/qlcplus-docs.md
+        
     - name: Normalize image DPI
       shell: bash
       run: |
@@ -51,17 +72,23 @@ runs:
             convert "$file" -units PixelsPerInch -density 96 "$file"
           fi
         done
+        
     - name: Get latest release tag
       id: get_release
       shell: bash
       env:
-        GH_TOKEN:  ${{ github.token }}
+        GH_TOKEN: ${{ github.token }}
       run: |
-        RELEASE=$(gh release view --json tagName --jq .tagName || echo "")
+        RELEASE=$(gh release view --json tagName --jq .tagName 2>/dev/null || true)
+        if [ -z "$RELEASE" ]; then
+          RELEASE="0.0.0-dev"
+        fi
         echo "LATEST_RELEASE=$RELEASE" >> $GITHUB_ENV
+        
     - name: Put current date into a variable
       shell: bash
       run: echo "EXPORT_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
+      
     - name: Build PDF
       uses: docker://pandoc/extra
       with:
@@ -83,6 +110,7 @@ runs:
       shell: bash
       run: |
         echo '![​](images/qlcplus.svg){ style="width: 50%; margin: auto;" }' >> ./.github/workflows/bin/temp/titlepage.md
+        
     - name: Convert Title Page to PDF
       uses: docker://pandoc/extra
       with:
@@ -94,11 +122,14 @@ runs:
           --verbose
           -V mainfont="Source Sans Pro"
           -V sansfont="Source Sans Pro"
-          -V title="Q Light Controller + Documentation"
-          -V subtitle="Comprehensive Guide"
-          -V author="docs.qlcplus.org"
+          -V title="${{ env.TITLE }}"
+          -V subtitle="${{ env.SUBTITLE }}"
+          -V author="${{ env.AUTHOR }}"
+          -V written_by="${{ env.WRITTEN_BY }}"
+          -V release_prefix="${{ env.RELEASE_PREFIX }}"
           -V date="${{ env.EXPORT_DATE }}"
           -V release="${{ env.LATEST_RELEASE }}"
+          
     - name: Combine Title Page and Documentation PDFs
       shell: bash
       run: |
