@@ -1,7 +1,9 @@
 <div class="version-chooser">
   Version:
+    <!-- DEBUG: labels={{ config.plugins.langswitcher.language_labels|json_encode }} -->
     <select id="switch-version">
     {% set langobj = grav['language'] %}
+    {% set labels = config.plugins.langswitcher.language_labels %}
     {% for key in langswitcher.languages %}
         {% if key == langswitcher.current %}
             {% set lang_url = page.url %}
@@ -10,7 +12,8 @@
             {% set lang_url = base_url_simple ~ langobj.getLanguageURLPrefix(key)~langswitcher.page_route ?: '/' %}
             {% set active = '' %}
         {% endif %}
-        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ config.plugins.langswitcher.language_labels[key] ?: key }}</option>
+        <!-- DEBUG: key={{ key }}, type={{ key|gettype ?? 'unknown' }}, label={{ labels[key] ?? 'NOT_FOUND' }} -->
+        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ labels[key] ?? key }}</option>
     {% endfor %}
     </select>
 </div>
