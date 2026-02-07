@@ -1,8 +1,23 @@
+{% set langobj = grav['language'] %}
+{# Build a map of versions to languages #}
+{% set versions = {} %}
+{% for key in langswitcher.languages %}
+    {% set parts = key|split('_') %}
+    {% set ver = parts[0] %}
+    {% set lang = parts|length > 1 ? parts[1] : 'en' %}
+    {% set versions = versions|merge({ (ver):(versions[ver]|default([]))|merge([lang]) }) %}
+{% endfor %}
+
+{% set current_parts = langswitcher.current|split('_') %}
+{% set current_version = current_parts[0] %}
+{% set current_language = current_parts|length > 1 ? current_parts[1] : 'en' %}
+
 <div class="version-chooser">
   Version:
     <select id="switch-version">
-    {% set langobj = grav['language'] %}
-    {% for key in langswitcher.languages %}
+    {% for ver in versions|keys %}
+        {% set target_lang = current_language in versions[ver] ? current_language : 'en' %}
+        {% set key = ver ~ (target_lang == 'en' ? '' : '_' ~ target_lang) %}
         {% if key == langswitcher.current %}
             {% set lang_url = page.url %}
             {% set active = ' selected="selected"' %}
@@ -10,10 +25,29 @@
             {% set lang_url = base_url_simple ~ langobj.getLanguageURLPrefix(key)~langswitcher.page_route ?: '/' %}
             {% set active = '' %}
         {% endif %}
-        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ key }}</option>
+        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ ver }}</option>
     {% endfor %}
     </select>
 </div>
+
+<div class="language-chooser">
+  Language:
+    <select id="switch-language">
+    {% for lang in versions[current_version]|default(['en']) %}
+        {% set key = current_version ~ (lang == 'en' ? '' : '_' ~ lang) %}
+        {% if key == langswitcher.current %}
+            {% set lang_url = page.url %}
+            {% set active = ' selected="selected"' %}
+        {% else %}
+            {% set lang_url = base_url_simple ~ langobj.getLanguageURLPrefix(key)~langswitcher.page_route ?: '/' %}
+            {% set active = '' %}
+        {% endif %}
+        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ lang }}</option>
+    {% endfor %}
+    </select>
+</div>
+
 <script>
 jQuery(document).on('change', '#switch-version', function() { window.location.href = this.value });
+jQuery(document).on('change', '#switch-language', function() { window.location.href = this.value });
 </script>
