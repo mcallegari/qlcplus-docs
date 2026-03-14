@@ -30,7 +30,7 @@
         " /></a>
     <!-- BEGIN LATEST DOWNLOAD BUTTON -->
     <a href="https://www.qlcplus.org/downloads/4.14.3/QLC+_4.14.3_user_manual.pdf" alt="offline-pdf">
-        <img src="https://custom-icon-badges.demolab.com/badge/-Download_PDF-blue?style=for-the-badge&logo=download&logoColor=white" /></a>
+        <img src="https://custom-icon-badges.demolab.com/badge/-Download_v4_PDF-blue?style=for-the-badge&logo=download&logoColor=white" /></a>
     <!-- END LATEST DOWNLOAD BUTTON -->
 </p>
 
