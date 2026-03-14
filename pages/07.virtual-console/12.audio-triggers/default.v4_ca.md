@@ -10,7 +10,7 @@ Introducció
 
 En fer clic a la icona ![](/basics/audioinput.png), s'afegirà un giny d'activador d'àudio a la vostra consola virtual.  
 L'àrea de gràfics del giny mostra el seguiment en directe de l'àudio capturat, mostrant un nombre de barres d'espectre i una barra de volum.  
-A la part inferior es pot veure el rang de freqüències analitzades per QLC+
+A la part inferior es pot veure el rang de freqüències analitzades per QLC+.
 
 Configuració
 -------------

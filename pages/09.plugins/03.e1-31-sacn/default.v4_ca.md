@@ -7,7 +7,7 @@ media_order: e131_configuration.png
 Introducció
 ------------
 
-QLC+ suporta el protocol [E1.31](https://wiki.openlighting.org/index.php/E1.31) (també conegut com a sACN) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.
+QLC+ suporta el protocol [E1.31](https://wiki.openlighting.org/index.php/E1.31) (també conegut com a sACN) a través d'un connector d'entrada/sortida que rep i transmet paquets a la xarxa.  
 No es necessiten requisits addicionals, ja que QLC+ té una implementació nativa del protocol E1.31 que funciona en sistemes Linux, Windows i OSX.  
 El connector E1.31 pot enviar i rebre paquets de múltiples targetes de xarxa, adreces virtuals, el dispositiu de bucle/loopback (127.0.0.1) i múltiples universos per interfície de xarxa.  
 Per defecte, els paquets E1.31 s'enviaran com UDP en adreces multicast com 239.255.0.x, on "x" és el número d'univers seleccionat a QLC+. El port utilitzat és 5568.  

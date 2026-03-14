@@ -60,6 +60,14 @@ form:
       options:
         long: PLUGIN_LANGSWITCHER.LANGUAGE_DISPLAY_LONG
         short: PLUGIN_LANGSWITCHER.LANGUAGE_DISPLAY_SHORT
+        custom: PLUGIN_LANGSWITCHER.LANGUAGE_DISPLAY_CUSTOM
+
+    language_labels:
+      type: array
+      label: Custom Language Labels
+      help: Map each language code to a display label (e.g. v4 = "Version 4 English"). Used when Language Display is set to "Custom Labels".
+      placeholder_key: Language code (e.g. v4_de)
+      placeholder_value: Display label (e.g. Version 4 Deutsch)
 
     untranslated_pages_behavior:
       type: select

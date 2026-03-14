@@ -23,6 +23,9 @@ Cada línia té tres opcions que es poden canviar en funció de les teves necess
     * **Canvi de Programa**: aquest és un dels missatges de protocol MIDI (com Canvi de Control) que utilitzen freqüentment els controladors MIDI. Cada dispositiu hauria de llistar els missatges PC compatibles en el seu manual d'usuari, per tant, consulteu-lo abans d'utilitzar aquest mode. L'interval de PC pot anar de 0 a 127 i pot tenir valors de 0 a 127, que es duplicaran dins de QLC+ perquè coincideixi amb l'interval DMX (0-255).
 * **Missatge d'Inicialització**: Aquesta és una llista de predefinits (plantilles) que contenen el missatge d'inicialització que QLC+ enviarà en obrir un dispositiu MIDI abans d'utilitzar-lo. A continuació s'escriu una explicació detallada d'aquesta funcionalitat.
 
+> [!IMPORTANT]
+> **Nota:** QLC+ segueix l'estàndard MIDI, on un missatge «Nota activa» amb velocitat `0` s'interpreta com a «Nota desactivada.» Si el vostre controlador o programari envia una nota als missatges amb velocitat `0`, QLC+ no activarà els botons de la consola virtual. Per a activar els controls, assegureu-vos que el Note On dels missatges utilitzi una velocitat diferent de zero. Aquest problema s'ha observat amb el ProPresenter, i es pot resoldre establint una velocitat diferent de zero.
+
 Feedback/Retroalimentacions
 ---------
 

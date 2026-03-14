@@ -35,7 +35,7 @@ At the moment, supported section keywords are:
 
 The section content must have a CSS syntax. If you're comfortable with web designing, you should find the creation of this file very easy!  
 Since the style file is strictly related to the inner Qt objects, you might want to read the following articles to find out the elements' names and the additional CSS properties the Qt team added to the default CSS syntax.  
-[Qt Style Sheets](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)
+[Qt Style Sheets](https://doc.qt.io/archives/qt-5.15/stylesheet-syntax.html)  
 [Qt Style Sheets Examples](https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html)  
 It is up to your imagination how you prefer to customize the QLC+ GUI appearance! If you find a style worth sharing, don't forget to send in your contribution by posting it online in the [QLC+ forum](https://www.qlcplus.org/forum/viewforum.php?f=5)
 

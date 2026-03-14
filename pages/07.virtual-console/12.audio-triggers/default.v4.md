@@ -10,7 +10,7 @@ Introduction
 
 When clicking on the ![](/basics/audioinput.png) icon, an audio trigger widget will be added to your Virtual Console.  
 The widget's graphics area shows live monitoring of the captured audio, displaying a number of spectrum bars and a volume bar.  
-On the bottom you can see the range of frequencies analyzed by QLC+  
+On the bottom you can see the range of frequencies analyzed by QLC+.  
 
 Configuration
 -------------

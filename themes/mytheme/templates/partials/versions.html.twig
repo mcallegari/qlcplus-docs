@@ -10,7 +10,7 @@
             {% set lang_url = base_url_simple ~ langobj.getLanguageURLPrefix(key)~langswitcher.page_route ?: '/' %}
             {% set active = '' %}
         {% endif %}
-        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ key }}</option>
+        <option value="{{ lang_url ~ uri.params }}"{{ active }}>{{ config.plugins.langswitcher.language_labels[key] ?? key }}</option>
     {% endfor %}
     </select>
 </div>

@@ -26,11 +26,12 @@
 
 <p align="center">
     <a href="https://docs.qlcplus.org/" alt="docs.qlcplus.org">
-        <img src="https://img.shields.io/badge/View_Online-grey?style=for-the-badge&logo=aiohttp
-        " /></a>
+        <img src="https://img.shields.io/badge/View_Online-grey?style=for-the-badge&logo=aiohttp" />
+    </a>
     <!-- BEGIN LATEST DOWNLOAD BUTTON -->
     <a href="https://www.qlcplus.org/downloads/4.14.3/QLC+_4.14.3_user_manual.pdf" alt="offline-pdf">
-        <img src="https://custom-icon-badges.demolab.com/badge/-Download_v4_PDF-blue?style=for-the-badge&logo=download&logoColor=white" /></a>
+        <img src="https://custom-icon-badges.demolab.com/badge/-Download_v4_PDF-blue?style=for-the-badge&logo=download&logoColor=white" />
+    </a>
     <!-- END LATEST DOWNLOAD BUTTON -->
 </p>
 
@@ -86,7 +87,7 @@ If QLC+ helps you to make your lights shine, please consider donating or buying 
 </tr>
 <tr>
 <td style="text-align:right">Buy merch, themes and plugins:</td>
-<td style="text-align:left"><a href="https://merch.qlcplus.org"><img alt="Static Badge" src="https://img.shields.io/badge/merch.qlcplus.org-d?logoColor=%23FFFFF"></a></td>
+<td style="text-align:left"><a href="https://qlcplus-merch.myshopify.com"><img alt="Static Badge" src="https://img.shields.io/badge/merch.qlcplus.org-d?logoColor=%23FFFFF"></a></td>
 </tr>
 </tbody>
 </table>

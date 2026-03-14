@@ -12,6 +12,6 @@ media_order: 'qlcplus.svg,add_dump.png,animation.png,attach.png,audio.png,audioi
 
 # Einführung
 
-Wilkommen zur **Q Light Controller+** Dokumentation,
+Willkommen zur **Q Light Controller+** Dokumentation,
 
 hier finden Sie alle Konzepte, Arbeitsabläufe sowie Tipps und Tricks, um mit QLC+ optimal zu arbeiten.

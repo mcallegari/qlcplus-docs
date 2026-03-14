@@ -9,10 +9,10 @@ Diese Seite wurde in alphabetischer Reihenfolge geordnet, um die Suche nach eine
 
 ### ![](../audio.png) Audio
 
-Eine Audio-[Funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte gespeicherte Audiodatei darstellt.
-QLC+ unterstützt die gängigsten Audioformate wie Wave, MP3, M4A, Ogg und Flac. Es unterstützt Mono- oder Stereokanäle und verschiedene Abtastraten wie 44,1 kHz, 48 kHz usw.
-Audiofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt im [Chaser](#chaser) oder in einer [Show](#show) platziert werden.
-Wie die meisten QLC+ Funktionen unterstützt Audio Ein- und Ausblendzeiten.
+Eine Audio-[Funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte gespeicherte Audiodatei darstellt.  
+QLC+ unterstützt die gängigsten Audioformate wie Wave, MP3, M4A, Ogg und Flac. Es unterstützt Mono- oder Stereokanäle und verschiedene Abtastraten wie 44,1 kHz, 48 kHz usw.  
+Audiofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt im [Chaser](#chaser) oder in einer [Show](#show) platziert werden.  
+Wie die meisten QLC+-Funktionen unterstützt Audio Ein- und Ausblendzeiten.
 
 ### ![](../blackout.png) Blackout
 
@@ -28,12 +28,12 @@ Einige Kanäle in intelligenten Geräten bieten viele Arten von Funktionen oder 
 
 ### Kanalgruppen
 
-Kanalgruppen können im Bereich [Fixture Manager](/fixture-manager) mithilfe des [Channel Groups Editor](/fixture-manager/channel-groups-editor) hinzugefügt und definiert werden.
+Kanalgruppen können im Bereich [Fixture Manager](/fixture-manager) mithilfe des [Channel Groups Editor](/fixture-manager/channel-groups-editor) hinzugefügt und definiert werden.  
 Kanalgruppen können einen benutzerdefinierten Namen haben und alle benutzerdefinierten Kanäle gruppieren, die aus einer vorhandenen Geräteliste ausgewählt werden.
 
 ### ![](../chaser.png) Chaser
 
-Eine Chaser-[Funktion](#funktionen) besteht aus mehreren Szenen, die nacheinander ausgeführt wird, wenn die Chaserfunktion gestartet wird. Die nächste Funktion wird erst ausgeführt, nachdem die vorherige beendet wurde. In einen Chaser können beliebig viele [Funktionen](#Funktionen) eingefügt werden.
+Eine Chaser-[Funktion](#funktionen) besteht aus mehreren Szenen, die nacheinander ausgeführt wird, wenn die Chaserfunktion gestartet wird. Die nächste Funktion wird erst ausgeführt, nachdem die vorherige beendet wurde. In einen Chaser können beliebig viele [Funktionen](#funktionen) eingefügt werden.
 
 Die Richtung der Chaser-Funktion kann umgekehrt oder die Szenenauswahl zufällig erfolgen. Die Chaserfunktion kann auch so eingestellt werden, dass sie eine Endlosschleife durchführt oder eine unendliche Ping-Pong-Schleife (die Richtung wird nach jedem Durchgang umgekehrt) oder sie kann nur einmal im Single-Shot-Modus durchlaufen und danach von selbst beendet werden. Wenn die Funktion auf eine Endlosschleife eingestellt ist, muss sie manuell gestoppt werden.
 
@@ -48,7 +48,7 @@ Kopien von Chaserfunktionen können mit dem [Funktionsmanager](/function-manager
 
 ### Click And Go
 
-Click And Go ist eine Technologie, die es dem Benutzer ermöglicht auf vollständig visuelle Weise und mit nur wenigen Klicks schnell auf Makros und Farben zuzugreifen. Dies kann zu effizienteren Live-Shows und mehr Freiheit bei der Auswahl des gewünschten Ergebnisses führen.
+Click And Go ist eine Technologie, die es dem Benutzer ermöglicht auf vollständig visuelle Weise und mit nur wenigen Klicks schnell auf Makros und Farben zuzugreifen. Dies kann zu effizienteren Live-Shows und mehr Freiheit bei der Auswahl des gewünschten Ergebnisses führen.  
 Bisher sind drei Arten von Widgets verfügbar:
 
 * Einzelne Farbe (gilt für die Intensitätskanäle Rot, Grün, Blau, Cyan, Gelb, Magenta, Amber und Weiß)
@@ -101,11 +101,11 @@ Es können mehrere Instanzen eines Geräts erstellt werden (z. B. müssen Benutz
 
 Generische Dimmergeräte benötigen keine eigenen Gerätedefinitionen, da normalerweise mehrere Dimmer in einen gemeinsamen Adressraum gepatcht werden und dabei ein oder mehrere Dimmer-Racks verwenden. Benutzer können Instanzen dieser generischen Dimmereinheiten erstellen, indem sie einfach die Anzahl der Kanäle definieren, die jeder von ihnen haben soll.
 
-### ![](../group.png) Fixture Gruppierung
+### ![](../group.png) Gerätegruppe
 
 Eine Gerätegruppe ist, wie der Name schon sagt, eine Gruppe von [Fixtures](#fixtures). Sie definieren auch (auf einer eher grundlegenden Ebene) die tatsächliche physische Anordnung dieser Geräte in der realen Welt. Dieses Wissen kann beispielsweise in der RGB-Matrix genutzt werden, um eine Wand aus RGB-mischbaren Lichtern zu erzeugen, die als einzelne Pixel in einem grafischen Muster oder Lauftext fungieren können.
 
-### Fixture Mode
+### Gerätemodus
 
 Viele Hersteller entwerfen ihre Lichteffekte so, dass sie so konfiguriert werden können, dass sie verschiedene Kanalsätze verstehen. Beispielsweise könnte ein Scanner zwei Konfigurationsoptionen haben: eine für nur 8-Bit-Bewegungskanäle (1x Schwenken, 1x Neigen) und eine andere für 16-Bit-Bewegungskanäle (2x Schwenken, 2x Neigen). Anstatt für jede Variation eine komplett neue Fixture-Definition zu erstellen, wurden sie in den Fixture-Definitionen von QLC+ in Fixture-Modi gebündelt.
 
@@ -119,7 +119,7 @@ Die Funktionstypen sind:
 *   [Chaser](#chaser)
 *   [Sequenz](#sequenz)
 *   [EFX](#efx)
-*   [RGB Matrix](#rgb-matrix)
+*   [RGB-Matrix](#rgb-matrix)
 *   [Sammlung](#sammlung)
 *   [Show](#show)
 *   [Audio](#audio)
@@ -142,16 +142,16 @@ Der Masterregler verfügt außerdem über zwei **Wertmodi**, die steuern wie der
 
 ### Head
 
-Ein Head stellt ein einzelnes Lichteffekt dar. Normalerweise enthält eine einzelne Leuchte genau einen Ausgang, z. B. die Linse, die Glühbirne oder einen Satz LEDs. Es gibt jedoch immer mehr Leuchten auf dem Markt, die zwar als einzelne Leuchte betitelt werden, aber über mehrere Lichtaustrittspunkte, d. h. Heads, verfügen.
+Ein Head stellt einen einzelnen Lichteffekt dar. Normalerweise enthält eine einzelne Leuchte genau einen Ausgang, z. B. die Linse, die Glühbirne oder einen Satz LEDs. Es gibt jedoch immer mehr Leuchten auf dem Markt, die zwar als einzelne Leuchte betitelt werden, aber über mehrere Lichtaustrittspunkte, d. h. Heads, verfügen.
 
 Beispielsweise könnten Sie über eine RGB-LED-Leuchte verfügen, die auf einem einzelnen Körper montiert ist und als solche wie eine einzelne Leuchte mit einem DMX-Eingang und einem DMX-Ausgang erscheint. Tatsächlich besteht es jedoch aus vier separaten RGB-LED-Leuchtmitteln. Diese separaten Geräte werden in QLC+ als Köpfe behandelt;
 Sie haben einige Eigenschaften mit ihren Geschwisterköpfen gemeinsam, sie können einzeln gesteuert werden, verfügen aber möglicherweise auch über eine Master-Intensitätssteuerung, die die Lichtleistung aller Heads zusammen steuert.
 
-Jeder Head gehört zu einem [Fixture Mode](#fixture-mode), da ein Gerät in einem Modus möglicherweise genügend Kanäle zur Verfügung stellt, um jeden seiner Heads einzeln zu steuern, während in einem anderen Modus möglicherweise nur eine Handvoll Kanäle zur Steuerung aller Köpfe bereitgestellt werden Heads gleichzeitig.
+Jeder Head gehört zu einem [Gerätemodus](#gerätemodus), da ein Gerät in einem Modus möglicherweise genügend Kanäle zur Verfügung stellt, um jeden seiner Heads einzeln zu steuern, während in einem anderen Modus möglicherweise nur eine Handvoll Kanäle zur Steuerung aller Köpfe bereitgestellt werden Heads gleichzeitig.
 
 ### HTP (Highest Takes Precedence)
 
-HTP ist eine Regel, die entscheidet an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#Funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen hören Intensitätskanäle der HTP-Regel. Dazu gehören generische Intensitätskanäle, die zur Steuerung der Lichtintensität mit Dimmern verwendet werden, sowie Kanäle zur Steuerung der Intensität einer Farbe, typischerweise in einer LED-Leuchte.
+HTP ist eine Regel, die entscheidet an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen hören Intensitätskanäle der HTP-Regel. Dazu gehören generische Intensitätskanäle, die zur Steuerung der Lichtintensität mit Dimmern verwendet werden, sowie Kanäle zur Steuerung der Intensität einer Farbe, typischerweise in einer LED-Leuchte.
 
 Die HTP-Regel ist einfach: Der höchste Pegel (näher 100 %) der derzeit an einen Kanal gesendet wird, wird an das DMX-Universum gesendet.
 
@@ -162,9 +162,9 @@ Eine Überblendung zwischen zwei [Szenen](#szene) ersetzt die HTP-Pegel in der e
 
 ### ![](../input_output.png) Eingabe-/Ausgabe-Plugins
 
-QLC+ unterstützt eine Vielzahl von Plugins zum Senden und Empfangen von Daten von/an die DMX Universen und Art-Net Controller.
-Ein Plugin kann eine Schnittstelle zu physischen Geräten (z. B. DMX-Adaptern oder MIDI-Controllern) oder zu einem Netzwerkprotokoll (z. B. [ArtNet](/plugins/art-net), [OSC](/plugins/osc) oder [E1 .31](/plugins/e1-31-sacn)).
-Plugins unterstützen Eingabe-, Ausgabe- oder Feedbackfunktionen abhängig vom Gerät oder Protokoll das sie steuern.
+QLC+ unterstützt eine Vielzahl von Plugins zum Senden und Empfangen von Daten von/an die DMX Universen und Art-Net Controller.  
+Ein Plugin kann eine Schnittstelle zu physischen Geräten (z. B. DMX-Adaptern oder MIDI-Controllern) oder zu einem Netzwerkprotokoll (z.B. [ArtNet](/plugins/art-net), [OSC](/plugins/osc) oder [E1.31](/plugins/e1-31-sacn)) sein.  
+Plugins unterstützen Eingabe-, Ausgabe- oder Feedbackfunktionen abhängig vom Gerät oder Protokoll das sie steuern.  
 
 Die primären Eingabemethoden für QLC+ sind natürlich die Tastatur und Maus. Benutzer können Tastaturtasten virtuellen Konsolentasten zuweisen, Schieberegler ziehen und so ziemlich alles mit einer Maus und Tastatur erledigen.
 
@@ -176,11 +176,11 @@ Eine output line ist eine von einer Hardware oder einem Netzwerk bereitgestellte
 
 ### Eingangsprofile
 
-Eingabeprofile können als eine Art ​​von [Fixtures'](#Fixtures) betrachtet werden. Sie enthalten Informationen zu bestimmten Geräten, die Eingabedaten erzeugen. Ein Eingabegerät kann zum Beispiel ein Slider-Board wie das Behringer BCF-2000, KORG nanoKONTROL, ein Enttec Playback Wing usw. sein.
+Eingabeprofile können als eine Art ​​von [Fixtures](#fixtures) betrachtet werden. Sie enthalten Informationen zu bestimmten Geräten, die Eingabedaten erzeugen. Ein Eingabegerät kann zum Beispiel ein Slider-Board wie das Behringer BCF-2000, KORG nanoKONTROL, ein Enttec Playback Wing usw. sein.
 
 ### LTP (Latest Takes Precedence)
 
-LTP ist eine Regel die entscheidet, an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#Funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen wird es für Kanäle verwendet, die anderen Gruppen als der **Intensität**-Gruppe zugewiesen wurden, wie z. B. Schwenken, Neigen, Gobo, Strobe-Geschwindigkeit und andere intelligente Geräteparameter.
+LTP ist eine Regel die entscheidet, an welche Ebene ein Kanal an ein DMX-Universum gesendet wird wenn der Kanal von mehr als einer [Funktion](#funktionen) oder einem virtuellen Konsolen-Widget gesteuert wird. Im Allgemeinen wird es für Kanäle verwendet, die anderen Gruppen als der **Intensität**-Gruppe zugewiesen wurden, wie z. B. Schwenken, Neigen, Gobo, Strobe-Geschwindigkeit und andere intelligente Geräteparameter.
 
 Die LTP-Regel ist einfach: Die neueste Ebene, die von einer Funktion oder einem Widget einer virtuellen Konsole festgelegt wurde, wird an das DMX-Universum gesendet.
 
@@ -205,7 +205,7 @@ Jede RGB-Matrix hat ihre eigenen Geschwindigkeitseinstellungen:
 
 ### ![](../rgbmatrix.png) RGB-Skript
 
-Ein RGB-Skript ist ein in [ECMAScript](https://de.wikipedia.org/wiki/ECMAScript) (auch als JavaScript bekannt) geschriebenes Programm, das die notwendigen Bilddaten für [RGB-Matrix](#rgb-matrix)-Funktionen erzeugt . Weitere Informationen finden Sie auf der Seite [RGB-Skript-API](/function-manager/rgb-script-api).
+Ein RGB-Skript ist ein in [ECMAScript](https://de.wikipedia.org/wiki/ECMAScript) (auch als JavaScript bekannt) geschriebenes Programm, das die notwendigen Bilddaten für [RGB-Matrix](#rgb-matrix)-Funktionen erzeugt. Weitere Informationen finden Sie auf der Seite [RGB-Skript-API](/function-manager/rgb-script-api).
 
 ### ![](../scene.png) Szene
 
@@ -220,9 +220,9 @@ Kopien von Szenenfunktionen können mit dem [Funktionsmanager](/function-manager
 
 ### ![](../sequence.png) Sequenz
 
-Eine Sequenz verfügt über einige der Funktionen eines [Chasers](#chaser).
-Es entspricht einem Chaser, bei dem jeder Schritt eine einzelne [Szene](#szene) ist und jede dieser Szenen denselben Kanalsatz steuert. Eine Sequenz ist an eine bestimmte Szene gebunden, was bedeutet dass alle Schritte der Sequenz nur die aktivierten Kanäle dieser Szene steuern können.
-Beim Erstellen neuer Schritte in einer Sequenz wird kein Popup zur Funktionsauswahl angezeigt, da ein Sequenzschritt im Gegensatz zu einem Chaser-Schritt keine anderen Funktionen enthalten kann.
+Eine Sequenz verfügt über einige der Funktionen eines [Chasers](#chaser).  
+Es entspricht einem Chaser, bei dem jeder Schritt eine einzelne [Szene](#szene) ist und jede dieser Szenen denselben Kanalsatz steuert. Eine Sequenz ist an eine bestimmte Szene gebunden, was bedeutet, dass alle Schritte der Sequenz nur die aktivierten Kanäle dieser Szene steuern können.  
+Beim Erstellen neuer Schritte in einer Sequenz wird kein Popup zur Funktionsauswahl angezeigt, da ein Sequenzschritt im Gegensatz zu einem Chaser-Schritt keine anderen Funktionen enthalten kann.  
 Wenn eine Sequenz erstellt wird, erscheint im [Funktionsmanager](/function-manager) ein spezielles Sequenzsymbol als untergeordnetes Element der Szene, an die es gebunden ist.
 Um den Unterschied zwischen einer Sequenz und einem Chaser zu verstehen, lesen Sie bitte den zweiten Absatz der Dokumentation zum [Show Manager](/show-manager).
 
@@ -237,6 +237,6 @@ Eine Show ist eine erweiterte [Funktion](#funktionen), die die meisten QLC+-Funk
 
 ### ![](../video.png) Video
 
-Eine Video[funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte oder einer Netzwerk-URL gespeicherte Videodatei darstellt.
-Die unterstützten Videoformate hängen von Ihrem Betriebssystem ab. Beispielsweise ist Mac OSX auf MOV/MP4-Dateien beschränkt und nicht viel mehr.
+Eine Video[funktion](#funktionen) ist ein Objekt, das eine auf einer Festplatte oder einer Netzwerk-URL gespeicherte Videodatei darstellt.  
+Die unterstützten Videoformate hängen von Ihrem Betriebssystem ab. Beispielsweise ist Mac OSX auf MOV/MP4-Dateien beschränkt und nicht viel mehr.  
 Videofunktionen können mithilfe des Bedienfelds [Show Manager](/show-manager) zum gewünschten Zeitpunkt in [Chaser](#chaser) oder in einer [Show](#show) platziert werden.

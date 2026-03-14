@@ -29,4 +29,4 @@ Steps:
 1.  Set one universe for Loopback output (U1), and set the slider's input universe to Loopback Input (U2). Let's say the sliders external control is set to channel 14.
 2.  Add dimmer channel to U1 at address 14. In the channel modifiers dialog, set it to LTP (so that if the button goes off, the slider doesn't go to zero.
 3.  Create scenes with desired slider values for channel 14 in the U1 universe. You may set fade times as well.
-4.  Create buttons for the scenes
+4.  Create buttons for the scenes.

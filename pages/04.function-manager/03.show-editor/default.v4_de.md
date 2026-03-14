@@ -3,8 +3,8 @@ title: 'Show-Editor'
 date: '12:10 21-08-2023'
 ---
 
-Der Show-Editor ist ein Bedienfeld zum Anzeigen der aktuellen Struktur einer ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show), die mit dem [Show-Manager](/show-manager).
-Im Moment kann der Show-Editor eine Show nur umbenennen, was im Show-Manager nicht möglich ist.
+Der Show-Editor ist ein Bedienfeld zum Anzeigen der aktuellen Struktur einer ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show), die mit dem [Show-Manager](/show-manager).  
+Im Moment kann der Show-Editor eine Show nur umbenennen, was im Show-Manager nicht möglich ist.  
 
 Die Baumansicht dieses Panels zeigt nützliche Informationen zur angezeigten Show an, wie zum Beispiel:
 

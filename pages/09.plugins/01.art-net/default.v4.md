@@ -59,13 +59,4 @@ Here the links to download the tools:
 Compatibility
 -------------
 
-QLC+ has been tested with the following Art-Net software and devices:
-
-* [DMXKing eDMX1 TX](https://dmxking.com/artnetsacn/edmx1-max) \- 1 Output device
-* [DMXKing eDMX2 TX](https://dmxking.com/artnetsacn/edmx2-max) \- 2 Outputs device
-* [Enttec Open DMX Ethernet (ODE)](https://www.enttec.com/index.php?main_menu=Products&pn=70305) \- Input/Output device
-* [OLA - Open Lighting Architecture](https://wiki.openlighting.org/index.php/Open_Lighting_Architecture) \- Input/Output software node
-* [Art-Net Controller LITE](https://sites.google.com/site/artnetcontroller/) \- Input controller for Android
-* [Art-Net Controller LITE](https://play.google.com/store/apps/details?id=com.chfsoft.artnet_dmx_Lite&noprocess) \- Input controller for Android
-* [Modul8](https://www.garagecube.com/modul8/)
-* [Jinx!](https://live-leds.de/) \- LED Matrix Control
+Compatible Art-Net devices are listed on the [compatibility](https://qlcplus.org/discover/compatibility) page of the QLC+ website.

@@ -4,20 +4,20 @@ date: '11:36 21-08-2023'
 media_order: fixture_remap.png
 ---
 
-Ab Version 4.4.1 bietet QLC+ eine Funktion namens Fixtures Remapping.
-Wenn Sie Live-Shows an verschiedenen Veranstaltungsorten durchführen, können Sie möglicherweise erst in letzter Minute herausfinden, welche [Geräte](/basics/glossary-and-concepts#fixtures) dort installiert sind. Nun, die Neuzuordnung von Vorrichtungen hilft Ihnen, Ihre vorhandenen Projekte in dieser und vielen anderen Situationen zu nutzen, beispielsweise wenn Sie eine fehlerhafte Vorrichtung ersetzen müssen oder wenn Sie gemietete Ausrüstung zusätzlich zu Ihrer eigenen verwenden möchten.
-Sie können beispielsweise ein Projekt mit nur einem PAR, einem Moving Head und einem Scanner einrichten. Wenn Sie den Veranstaltungsort erreichen, an dem die Show stattfinden wird, können Sie Ihre Geräte den dort vorgefundenen Geräten zuordnen, zum Beispiel 50 PARs, 30 Moving Heads und 15 Scanner.
-Mit QLC+ dauert dieser Vorgang nur wenige Minuten!
+Ab Version 4.4.1 bietet QLC+ eine Funktion namens Fixtures Remapping.  
+Wenn Sie Live-Shows an verschiedenen Veranstaltungsorten durchführen, können Sie möglicherweise erst in letzter Minute herausfinden, welche [Geräte](/basics/glossary-and-concepts#fixtures) dort installiert sind. Nun, die Neuzuordnung von Vorrichtungen hilft Ihnen, Ihre vorhandenen Projekte in dieser und vielen anderen Situationen zu nutzen, beispielsweise wenn Sie eine fehlerhafte Vorrichtung ersetzen müssen oder wenn Sie gemietete Ausrüstung zusätzlich zu Ihrer eigenen verwenden möchten.  
+Sie können beispielsweise ein Projekt mit nur einem PAR, einem Moving Head und einem Scanner einrichten. Wenn Sie den Veranstaltungsort erreichen, an dem die Show stattfinden wird, können Sie Ihre Geräte den dort vorgefundenen Geräten zuordnen, zum Beispiel 50 PARs, 30 Moving Heads und 15 Scanner.  
+Mit QLC+ dauert dieser Vorgang nur wenige Minuten!  
 
-Mit der Neuzuordnung von Geräten können Sie 1-zu-1- oder 1-zu-viele-Neuzuweisungen ganzer Geräte oder einzelner Kanäle durchführen. QLC+ wird so weit wie möglich versuchen, die ursprünglich im Projekt verwendeten Kanäle neuen Kanälen derselben Kategorie neu zuzuordnen.
-Wenn Sie den Neuzuordnungsvorgang bestätigen, wird automatisch ein neues Projekt gespeichert, um Ihr ursprüngliches Projekt beizubehalten.
-Alle Geräte, Szenen, EFX, virtuellen Konsolen-Widgets und Audio-Trigger, die im Originalprojekt gefunden wurden, werden neu zugeordnet, sodass sie auf der neuen Geräteliste funktionieren.
+Mit der Neuzuordnung von Geräten können Sie 1-zu-1- oder 1-zu-viele-Neuzuweisungen ganzer Geräte oder einzelner Kanäle durchführen. QLC+ wird so weit wie möglich versuchen, die ursprünglich im Projekt verwendeten Kanäle neuen Kanälen derselben Kategorie neu zuzuordnen.  
+Wenn Sie den Neuzuordnungsvorgang bestätigen, wird automatisch ein neues Projekt gespeichert, um Ihr ursprüngliches Projekt beizubehalten.  
+Alle Geräte, Szenen, EFX, virtuellen Konsolen-Widgets und Audio-Trigger, die im Originalprojekt gefunden wurden, werden neu zugeordnet, sodass sie auf der neuen Geräteliste funktionieren.  
 
 
 Neuzuordnungsfenster
 ----------------
 
-Lassen Sie uns nun erklären, wie Sie das Fixture-Remapping-Fenster verwenden, beginnend mit einem Screenshot eines vollständigen Beispiels:
+Lassen Sie uns nun erklären, wie Sie das Fixture-Remapping-Fenster verwenden, beginnend mit einem Screenshot eines vollständigen Beispiels:  
 
 ![](fixture_remap.png)
 

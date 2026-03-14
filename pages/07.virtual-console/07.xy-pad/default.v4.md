@@ -64,7 +64,7 @@ The XY Pad allows 3 completely different usages, but all targeted to positioning
   
 * **2- EFX**: In the Configuration window (Presets tab), it is possible to add some presets to recall existing ![](/basics/efx.png) [EFX](/basics/glossary-and-concepts#efx) functions. When activating a EFX preset, the animated preview of the fixtures movements will be displayed like this:  
     ![](xypad-efx.png)  
-    If no working window is set, the EFX will be be displayed exactly like it is previewed in the [EFX Editor](/function-manager/efx-editor). Otherwise, the EFX will be scaled to fit the defined working window.
+    If no working window is set, the EFX will be be displayed exactly like it is previewed in the [EFX Editor](/function-manager/efx-editor). Otherwise, the EFX will be scaled to fit the defined working window.  
     If a working window is active, it will be shared between usage #1 and usage #2.
   
 * **3- Relative to a Scene**: In the Configuration window (Presets tab), it is also possible to add some presets to recall existing ![](/basics/scene.png) [Scene](/basics/glossary-and-concepts#scene) functions  
