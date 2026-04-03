@@ -17,6 +17,8 @@ Chose whether to install QLC+ in its standard location (C:\QLC+) or another fold
 No admin privileges are required to install QLC+ unless you want to associate .qxw (Project files) and .qxf (Fixture definition files) to the related application.
 In that case, right click on the installer file and run it as administrator.
 
+**Note** that version 4.x.x and version 5.x.x cannot cohexist in the same folder so if you install both, remember to install them in separate folders.
+
 ## macOS
 
 QLC+ on macOS comes as a DMG bundle.
