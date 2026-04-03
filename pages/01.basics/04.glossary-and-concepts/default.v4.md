@@ -127,7 +127,7 @@ The function types are:
 
 Each function can be named and, although the name is not used to uniquely identify individual functions, users are encouraged to name their functions in some systematic and concise way to help identify each of them. For your own comfort.
 
-As of version 3.3.0, each function has its own speed settings:
+Each function has its own speed settings:
 
 *   **Fade In:** The time used to fade HTP (in Scenes also LTP) channels to their target value
 *   **Fade Out:** The time used to fade HTP/intensity channels back to zero
