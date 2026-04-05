@@ -32,7 +32,7 @@ Most of the controls throughout the software have tooltips, which pop up after h
 The main top bar contains the following shortcuts (from left to right):
 
 * * *
-![](../basics/qlcplus.svg?resize=48,48) Global actions menu with the following operations
+#### ![](../basics/qlcplus.svg?resize=48,48) Global actions menu
 
 ![](../basics/filenew.svg) New workspace (CTRL+N)  
 ![](../basics/fileopen.svg?resize=48,48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
@@ -40,11 +40,8 @@ The main top bar contains the following shortcuts (from left to right):
 ![](../basics/filesaveas.svg?resize=48,48) Save the current workspace with a new name  
 ![](../basics/import.svg?resize=48,48) Import Fixtures and Functions from an existing project  
 
-* * *
 ![](../basics/undo.svg) Undo the last operation  
 ![](../basics/redo.svg) Redo the last operation undone  
-
-* * *
 
 ![](../basics/network.svg) Configure client and server network settings (either native or web interface)  
 ![](../basics/diptool.svg) Open the DIP switch calculation tool  
@@ -52,7 +49,10 @@ The main top bar contains the following shortcuts (from left to right):
 ![](../basics/fullscreen.svg) Toggle full screen mode (CTRL+F11)  
 ![](../basics/help.png) Switch the UI language (might require an application restart)  
 ![](../basics/about.svg) View information about QLC+  
+
 * * *
+
+#### Context switching buttons
 
 ![](../basics/add_dump.png)[DMX Dump](dmx-dump) (CTRL+D)  
 ![](../basics/liveedit.png)[Live Edit](live-edit): allows you to modify a function while QLC+ is in Operate Mode  
