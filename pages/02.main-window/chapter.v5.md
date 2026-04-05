@@ -3,7 +3,7 @@ title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
-media_order: main-window.png
+media_order: main-window-v5.png
 ---
 
 <style>
@@ -16,13 +16,13 @@ media_order: main-window.png
 
 # Main Window
 
-The QLC+ Main Window consists of three main parts:
+The QLC+ Main Window consists of four main parts:
 
 1.  A Menu bar containing buttons for global functions
 2.  Active panels selected by their respective tabs
 3.  Tabs that allow the selection of one of the QLC+ panels
 
-![](/main-window/main-window.png)
+![](/main-window/main-window-v5.png)
 
 Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
 
