@@ -32,7 +32,7 @@ Most of the controls throughout the software have tooltips, which pop up after h
 The main top bar contains the following shortcuts (from left to right):
 
 * * *
-Global actions menu with the following operations
+![](../basics/qlcplus.svg?resize=48,48) Global actions menu with the following operations
 
 ![](../basics/filenew.svg) New workspace (CTRL+N)  
 ![](../basics/fileopen.svg?resize=48,48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
@@ -49,7 +49,9 @@ Global actions menu with the following operations
 ![](../basics/network.svg) Configure client and server network settings (either native or web interface)  
 ![](../basics/diptool.svg) Open the DIP switch calculation tool  
 ![](../basics/configure.svg) Open the UI settings panel to tune colors, scaling, etc..  
-
+![](../basics/fullscreen.svg) Toggle full screen mode (CTRL+F11)  
+![](../basics/help.png) Switch the UI language (might require an application restart)  
+![](../basics/about.svg) View information about QLC+  
 * * *
 
 ![](../basics/add_dump.png)[DMX Dump](dmx-dump) (CTRL+D)  
