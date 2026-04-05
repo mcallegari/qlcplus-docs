@@ -76,9 +76,15 @@ The main window top bar includes more helpers on the right side of the screen.
 ![](../basics/stopall.svg?resize=48,48) Show the running function number and allow to stop them all at once  
 
 
-### Sub-Context and Controls (2)
+### Context Sub-Control Bar (2)
 
+This is another menu bar which changes per-context (or is not present at all) where you can either select the context preview mode or find a context toolbar with various controls.  
 
+* Fixtures And Functions shows preview mode and universe selectors 
+* Virtual Console shows a page selector
+* Simple Desk shows a universe selector and reset
+* Show Manager shows editor and playback controls
+* Input/Output Manager has no sub-control bar
 
 ### Main Working Area (3)
 
