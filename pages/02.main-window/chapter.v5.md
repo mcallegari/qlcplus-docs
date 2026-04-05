@@ -57,11 +57,14 @@ The menu items are listed here:
 
 #### Context switching buttons
 
-![](../basics/editor.svg) View the [Fixtures and Functions Context](/fixtures-functions-manager)  
-![](../basics/virtualconsole.svg) View the [Virtual Console](/virtual-console)  
-![](../basics/simpledesk.svg) View the [Simple Desk](/simple-desk)  
-![](../basics/showmanager.svg) View the [Show Manager](/show-manager)  
-![](../basics/inputoutput.svg) View the [Input/Output](/input-output) configuration manager
+By pressing these buttons, you can switch from one context to the other.  
+Contexts can help with the design phase, the live operations or the input/output configuration.
+
+![](../basics/editor.svg?resize=48,48) View the [Fixtures and Functions Context](/fixtures-functions-manager)  
+![](../basics/virtualconsole.svg?resize=48,48) View the [Virtual Console](/virtual-console)  
+![](../basics/simpledesk.svg?resize=48,48) View the [Simple Desk](/simple-desk)  
+![](../basics/showmanager.svg?resize=48,48) View the [Show Manager](/show-manager)  
+![](../basics/inputoutput.svg?resize=48,48) View the [Input/Output](/input-output) configuration manager
 
 ### Active Panel (2)
 
