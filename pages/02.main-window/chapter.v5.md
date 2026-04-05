@@ -49,7 +49,7 @@ The menu items are listed here:
 ![](../basics/network.svg) Configure client and server network settings (either native or web interface)  
 ![](../basics/diptool.svg) Open the DIP switch calculation tool  
 ![](../basics/configure.svg) Open the UI settings panel to tune colors, scaling, etc..  
-![](../basics/fullscreen.svg) Toggle full screen mode (CTRL+F11)  
+<i class="fa fa-download"></i> Toggle full screen mode (CTRL+F11)  
 ![](../basics/help.png) Switch the UI language (might require an application restart)  
 ![](../basics/about.svg) View information about QLC+  
 
