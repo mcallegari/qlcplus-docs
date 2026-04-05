@@ -91,3 +91,9 @@ This is another menu bar which changes per-context (or is not present at all) wh
 Everything happens here. Which panel is active depends on which context is currently selected.
 
 ### Side Panels (4)
+
+Side Panels have been introduced in version 5 to save space and provide quick tools to enhance the project editing.  
+In these panels you can find tools such as:
+* Fixture browser
+* Fixtures, Functions, Palettes or Widgets editors
+* Input/Output plugin, Profiles or Virtual Console Widgets list
