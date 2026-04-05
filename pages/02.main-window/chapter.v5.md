@@ -82,6 +82,6 @@ The main window top bar includes more helpers on the right side of the screen.
 
 ### Main Working Area (3)
 
-Everything happens here. Which panel is active depends on which tab is currently selected.
+Everything happens here. Which panel is active depends on which context is currently selected.
 
 ### Side Panels (4)
