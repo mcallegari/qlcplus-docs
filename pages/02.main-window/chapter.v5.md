@@ -58,7 +58,8 @@ The menu items are listed here:
 #### Context switching buttons
 
 By pressing these buttons, you can switch from one context to the other.  
-Contexts can help with the design phase, the live operations or the input/output configuration.
+Contexts can help with the design phase, the live operations or the input/output configuration.  
+Contexts can be detached from the main window by right clicking on their button.  
 
 ![](../basics/editor.svg?resize=48,48) View the [Fixtures and Functions Context](/fixtures-functions-manager)  
 ![](../basics/virtualconsole.svg?resize=48,48) View the [Virtual Console](/virtual-console)  
@@ -68,12 +69,10 @@ Contexts can help with the design phase, the live operations or the input/output
 
 ### Sub-Context and Controls (2)
 
-Everything happens here. Which panel is active depends on which tab is currently selected.
+
 
 ### Main Working Area (3)
 
-At the bottom of main window you can find easy eye catching icons for switching between QLC+ contexts.  
-By double clicking on a tab, **a context can be detached on a separate window**. To reattach a detached context, just close the window.  
-QLC+ contexts appear in the following order (from left to right):
+Everything happens here. Which panel is active depends on which tab is currently selected.
 
 ### Side Panels (4)
