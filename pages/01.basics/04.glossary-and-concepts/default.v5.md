@@ -7,14 +7,14 @@ Q Light Controller Plus (QLC+ for short) is meant to control lighting equipment 
 
 This page has been arranged in alphabetical order to facilitate searching for a specific topic.
 
-### ![](../audio.png) Audio
+### ![](../audio.svg) Audio
 
 An audio [function](#functions) is an object representing an audio file stored in a disk.  
 QLC+ supports the most common audio formats like Wave, MP3, M4A, Ogg and Flac. It supports mono or stereo channels and several sample rates like 44.1KHz, 48KHz, etc...  
 Audio functions can be placed in [Chaser](#chaser) or in a [Show](#show) at the desired time, using the [Show Manager](/show-manager) panel.  
 Like most of the QLC+ functions, Audio supports fade in and fade out times.  
 
-### ![](../blackout.png) Blackout
+### ![](../blackout.svg) Blackout
 
 Blackout is a special QLC+ function used to set all [HTP](#htp-highest-takes-precedence) channels in all universes to zero. This will have the effect of stopping light output from all fixtures. The channels will remain at zero, regardless of currently running functions or values assigned to them manually (from the [Simple Desk](/simple-desk) for example). When the Blackout is switched off, all the channels will go back to being controlled by functions or their manually set value. 
 
@@ -24,14 +24,10 @@ Some channels in intelligent fixtures provide many kinds of functions, or _capab
 
 *   Minimum value: The minimum channel value that provides a capability.
 *   Maximum value: The maximum channel value that provides a capability.
-*   Name: The friendly name of a capability.
+*   Name: The friendly name of a capability
+*   Preset: A pre-defined functionality to let QLC+ recognize precisely how to treat and simulate a channel value
 
-### Channel Groups
-
-Channel groups can be added and defined in the [Fixture Manager](/fixture-manager) panel by using the [Channel groups editor](/fixture-manager/channel-groups-editor).  
-Channel groups can have a user defined name and can group together any user defined channels selected from an existing Fixtures list.
-
-### ![](../chaser.png) Chaser
+### ![](../chaser.svg) Chaser
 
 A chaser [function](#functions) is built up from multiple scenes that are run in sequence, one after the other, when the chaser function is started. The next function is run only after the previous has finished. Any number of [functions](#functions) can be inserted to a chaser.
 
@@ -57,7 +53,7 @@ So far, three types of widgets are available:
 
 An overview with screenshots is available [here](https://www.qlcplus.org/old/clickandgo.html)
 
-### ![](../collection.png) Collection
+### ![](../collection.svg) Collection
 
 A collection [function](#functions) encapsulates multiple functions that are run simultaneously when the collection function is executed. Any number of functions can be inserted to a collection, but each function can be inserted only once and a collection cannot be a direct member of itself.
 
@@ -71,11 +67,11 @@ Copies of collection functions can be created with the [Function Manager](/funct
 
 QLC+ supports unlimited universes (there are 4 initial, but more can be added if needed). They do not necessarily need to be connected to DMX hardware. Actual hardware abstraction (whether it's analogue 0-10V, DMX or some other method) is achieved through [output plugins](#input-output-plugins).
 
-### ![](../efx.png) EFX
+### ![](../efx.svg) EFX
 
 An EFX [function](#functions) is mainly used to automate moving lights (e.g. scanners & moving heads), though it can also automate RGB or Dimmer values of non-moving lights. The EFX can create complex mathematical paths on an X-Y plane that are converted to DMX values for the fixture's pan and tilt, or RGB or Dimmer channels.
 
-### ![](../fixture.png) Fixtures
+### ![](../fixture.svg) Fixtures
 
 A fixture is essentially one lighting device. It can be, for example, one moving head, one scanner, one laser etc.. However, for simplicity, individual PAR cans (and the like) that are usually controlled thru one dimmer channel per can, can be grouped together to form one single fixture.
 
@@ -101,15 +97,15 @@ Several instances of a fixture can be created (e.g. users must be able to have s
 
 Generic dimmer devices don't need their own fixture definitions, because usually multiple dimmers are patched into a common address space, employing one or more dimmer racks. Users can create instances of these generic dimmer entities just by defining the number of channels each one of them should have.
 
-### ![](../group.png) Fixture Group
+### ![](../group.svg) Fixture Group
 
 A fixture group is, as the name says, a group of [fixtures](#fixtures). They also define (at a rather basic level) the actual physical, real world arrangement of these fixtures. This knowledge can be used, for example, in the RGB Matrix to produce a wall of RGB-mixable lights that can act as individual pixels in a graphic pattern or scrolling text.
 
 ### Fixture Mode
 
-Many manufacturers design their intelligent lights in such a way that they can be configured to understand different sets of channels. For example, a scanner might have two configuration options: one for only 8bit movement channels (1x pan, 1x tilt) and another one for 16bit movement channels (2x pan, 2x tilt). Instead of creating a completely new fixture definition for each variation, they have been bundled together in QLC+'s fixture definitions into fixture modes.
+Many manufacturers design their intelligent lights in such a way that they can be configured to understand different sets of channels. For example, a scanner might have two configuration options: one for only 8bit movement channels (1x pan, 1x tilt) and another one for 16bit movement channels (2x pan, 2x tilt). Instead of creating a completely new fixture definition for each variation, they have been bundled together in QLC+'s fixture definitions into fixture modes. Other desks or formats call this "personality".
 
-### ![](../function.png) Functions
+### ![](../functions.svg) Functions
 
 The number of functions is practically unlimited. Functions are used to automate the setting of values to DMX channels. Each function type has its own way of automating lights.
 
