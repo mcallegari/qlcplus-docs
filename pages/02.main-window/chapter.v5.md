@@ -96,4 +96,4 @@ Side Panels have been introduced in version 5 to save space and provide quick to
 In these panels you can find tools such as:
 * Fixture browser
 * Fixtures, Functions, Palettes or Widgets editors
-* Input/Output plugin, Profiles or Virtual Console Widgets list
+* Input/Output Plugins, Input Profiles or Virtual Console Widgets list
