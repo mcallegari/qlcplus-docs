@@ -105,7 +105,7 @@ A fixture group is, as the name says, a group of [fixtures](#fixtures). They als
 
 Many manufacturers design their intelligent lights in such a way that they can be configured to understand different sets of channels. For example, a scanner might have two configuration options: one for only 8bit movement channels (1x pan, 1x tilt) and another one for 16bit movement channels (2x pan, 2x tilt). Instead of creating a completely new fixture definition for each variation, they have been bundled together in QLC+'s fixture definitions into fixture modes. Other desks or formats call this "personality".
 
-### ![](../functions.svg) Functions
+### ![](../functions2.svg) Functions
 
 The number of functions is practically unlimited. Functions are used to automate the setting of values to DMX channels. Each function type has its own way of automating lights.
 
@@ -228,7 +228,7 @@ The Script [function](#functions) works on a simple yet powerful scripting langu
 
 A Show is an advanced [function](#functions) which encapsulates most of the QLC+ Functions to create a time driven light show. A Show can be created only with the [Show Manager](/show-manager) and can be inspected and renamed with the [Show Editor](/function-manager/show-editor).
 
-### ![](../video.svg) Video
+### ![](../video2.svg) Video
 
 A video [function](#functions) is an object representing a video file stored in a disk or a network URL.  
 The supported video formats depends on your Operating System. For example Mac OSX is limited to MOV/MP4 files and not much more.  
