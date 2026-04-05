@@ -48,7 +48,7 @@ Global actions menu with the following operations
 
 ![](../basics/network.svg) Configure client and server network settings (either native or web interface)  
 ![](../basics/diptool.svg) Open the DIP switch calculation tool  
-![](../basics/configure.svg?resize=48,48) Open the UI settings panel to tune colors, scaling, etc..  
+![](../basics/configure.svg) Open the UI settings panel to tune colors, scaling, etc..  
 
 * * *
 
