@@ -67,6 +67,15 @@ Contexts can be detached from the main window by right clicking on their button.
 ![](../basics/showmanager.svg?resize=48,48) View the [Show Manager](/show-manager)  
 ![](../basics/inputoutput.svg?resize=48,48) View the [Input/Output](/input-output) configuration manager
 
+#### Global helpers
+
+The main window top bar includes more helpers on the right side of the screen.
+
+![](../basics/dmxdump.svg?resize=48,48) View the [Fixtures and Functions Context](/fixtures-functions-manager)  
+BPM control [Virtual Console](/virtual-console)  
+![](../basics/stopall.svg?resize=48,48) Show the running function number and allow to stop them all at once  
+
+
 ### Sub-Context and Controls (2)
 
 
