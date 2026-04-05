@@ -35,7 +35,7 @@ The main top bar contains the following shortcuts (from left to right):
 Global actions menu with the following operations
 
 ![](../basics/filenew.svg) New workspace (CTRL+N)  
-![](../basics/fileopen.svg) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
+![](../basics/fileopen.svg =48x48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
 ![](../basics/filesave.svg) Save the current workspace (CTRL+S)  
 ![](../basics/filesaveas.svg) Save the current workspace with a new name  
 ![](../basics/import.svg) Import Fixtures and Functions from an existing project  
