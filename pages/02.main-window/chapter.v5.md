@@ -35,10 +35,10 @@ The main top bar contains the following shortcuts (from left to right):
 Global actions menu with the following operations
 
 ![](../basics/filenew.svg) New workspace (CTRL+N)  
-<img src="../basics/fileopen.svg" width=48> Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
-<img src="../basics/filesave.svg" width=48> Save the current workspace (CTRL+S)  
-<img src="../basics/filesaveas.svg" width=48> Save the current workspace with a new name  
-<img src="../basics/import.svg" width=48> Import Fixtures and Functions from an existing project  
+![](../basics/fileopen.svg?resize=48,48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
+![](../basics/filesave.svg?resize=48,48) Save the current workspace (CTRL+S)  
+![](../basics/filesaveas.svg?resize=48,48) Save the current workspace with a new name  
+![](../basics/import.svg?resize=48,48) Import Fixtures and Functions from an existing project  
 
 * * *
 ![](../basics/undo.svg) Undo the last operation  
@@ -46,9 +46,9 @@ Global actions menu with the following operations
 
 * * *
 
-![](../basics/fullscreen.png) Toggle full screen mode (CTRL+F11)  
-![](../basics/help.png) View this documentation (Shift+F1)  
-![](../basics/qlcplus.svg?resize=32,32) View information about QLC+  
+![](../basics/network.svg) Configure client and server network settings (either native or web interface)  
+![](../basics/diptool.svg) Open the DIP switch calculation tool  
+![](../basics/configure.svg?resize=48,48) Open the UI settings panel to tune colors, scaling, etc..  
 
 * * *
 
