@@ -27,22 +27,22 @@ The QLC+ Main Window consists of four main parts:
 
 Most of the controls throughout the software have tooltips, which pop up after holding your mouse cursor over them for a short while.
 
-### Menu bar (1)
+### Top bar (1)
 
-The menu bar on the top of the workspace window contains the following buttons (from left to right):
-
-* * *
-
-![](../basics/filenew.png) New workspace (CTRL+N)  
-![](../basics/fileopen.png) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
-![](../basics/filesave.png) Save the current workspace (CTRL+S)  
-![](../basics/filesaveas.png) Save the current workspace with a new name  
+The main top bar contains the following shortcuts (from left to right):
 
 * * *
+Global actions menu with the following operations
 
-![](../basics/monitor.png)[DMX Monitor](dmx-monitor) (CTRL+M)  
-![](../basics/diptool.png)[DMX Address tool](dmx-address-tool)  
-![](../basics/audioinput.png)[Audio triggers](/virtual-console/audio-triggers)  
+![](../basics/filenew.svg) New workspace (CTRL+N)  
+![](../basics/fileopen.svg) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
+![](../basics/filesave.svg) Save the current workspace (CTRL+S)  
+![](../basics/filesaveas.svg) Save the current workspace with a new name  
+![](../basics/import.svg) Import Fixtures and Functions from an existing project
+
+* * *
+![](../basics/undo.svg) Undo the last operation
+![](../basics/redo.svg) Redo the last operation undone
 
 * * *
 
