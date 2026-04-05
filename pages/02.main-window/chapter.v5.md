@@ -66,19 +66,14 @@ Contexts can help with the design phase, the live operations or the input/output
 ![](../basics/showmanager.svg?resize=48,48) View the [Show Manager](/show-manager)  
 ![](../basics/inputoutput.svg?resize=48,48) View the [Input/Output](/input-output) configuration manager
 
-### Active Panel (2)
+### Sub-Context and Controls (2)
 
 Everything happens here. Which panel is active depends on which tab is currently selected.
 
-### Panel Tabs (3)
+### Main Working Area (3)
 
 At the bottom of main window you can find easy eye catching icons for switching between QLC+ contexts.  
 By double clicking on a tab, **a context can be detached on a separate window**. To reattach a detached context, just close the window.  
 QLC+ contexts appear in the following order (from left to right):
 
-![](../basics/fixture.png) View the [Fixture Manager](/fixture-manager)  
-![](../basics/function.png) View the [Function Manager](/function-manager)  
-![](../basics/show.png) View the [Show Manager](/show-manager)  
-![](../basics/virtualconsole.png) View the [Virtual Console](/virtual-console)  
-![](../basics/slidermatrix.png) View the [Simple Desk](/simple-desk)  
-![](../basics/input_output.png) View the [Input/Output](/input-output) configuration manager
+### Side Panels (4)
