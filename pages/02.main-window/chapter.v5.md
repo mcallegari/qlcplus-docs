@@ -37,10 +37,10 @@ The main top bar contains the following shortcuts (from left to right):
 This menu is accessible from any QLC+ context and is a shortcut to the main project operations.  
 The menu items are listed here:
 
-![](../basics/filenew.svg) New workspace (CTRL+N)  
-![](../basics/fileopen.svg?resize=48,48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
-![](../basics/filesave.svg?resize=48,48) Save the current workspace (CTRL+S)  
-![](../basics/filesaveas.svg?resize=48,48) Save the current workspace with a new name  
+![](../basics/filenew.svg) Create a blank new project (CTRL+N)  
+![](../basics/fileopen.svg?resize=48,48) Open an existing project (when over, shows a list of recent files) (CTRL+O)  
+![](../basics/filesave.svg?resize=48,48) Save the current project (CTRL+S)  
+![](../basics/filesaveas.svg?resize=48,48) Save the current project with a new name  
 ![](../basics/import.svg?resize=48,48) Import Fixtures and Functions from an existing project  
 
 ![](../basics/undo.svg) Undo the last operation  
@@ -57,12 +57,11 @@ The menu items are listed here:
 
 #### Context switching buttons
 
-![](../basics/add_dump.png)[DMX Dump](dmx-dump) (CTRL+D)  
-![](../basics/liveedit.png)[Live Edit](live-edit): allows you to modify a function while QLC+ is in Operate Mode  
-![](../basics/liveedit_vc.png) Live Edit Virtual Console: allows you to modify the Virtual Console while QLC+ is in Operate Mode. Click to Toggle  
-![](../basics/panic.png) Stop All Functions (CTRL+Shift+ESC)  
-![](../basics/blackout.png) Toggle Blackout  
-![](../basics/operate.png) Switch between Design Mode and Operate Mode (CTRL+F12)
+![](../basics/editor.svg) View the [Fixtures and Functions Context](/fixtures-functions-manager)  
+![](../basics/virtualconsole.svg) View the [Virtual Console](/virtual-console)  
+![](../basics/simpledesk.svg) View the [Simple Desk](/simple-desk)  
+![](../basics/showmanager.svg) View the [Show Manager](/show-manager)  
+![](../basics/inputoutput.svg) View the [Input/Output](/input-output) configuration manager
 
 ### Active Panel (2)
 
