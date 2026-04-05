@@ -38,11 +38,11 @@ Global actions menu with the following operations
 ![](../basics/fileopen.svg) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
 ![](../basics/filesave.svg) Save the current workspace (CTRL+S)  
 ![](../basics/filesaveas.svg) Save the current workspace with a new name  
-![](../basics/import.svg) Import Fixtures and Functions from an existing project
+![](../basics/import.svg) Import Fixtures and Functions from an existing project  
 
 * * *
-![](../basics/undo.svg) Undo the last operation
-![](../basics/redo.svg) Redo the last operation undone
+![](../basics/undo.svg) Undo the last operation  
+![](../basics/redo.svg) Redo the last operation undone  
 
 * * *
 
