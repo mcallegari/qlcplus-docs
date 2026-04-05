@@ -34,6 +34,9 @@ The main top bar contains the following shortcuts (from left to right):
 * * *
 #### ![](../basics/qlcplus.svg?resize=48,48) Global actions menu
 
+This menu is accessible from any QLC+ context and is a shortcut to the main project operations.  
+The menu items are listed here:
+
 ![](../basics/filenew.svg) New workspace (CTRL+N)  
 ![](../basics/fileopen.svg?resize=48,48) Open an existing workspace (hold the button longer for a list of recent files) (CTRL+O)  
 ![](../basics/filesave.svg?resize=48,48) Save the current workspace (CTRL+S)  
