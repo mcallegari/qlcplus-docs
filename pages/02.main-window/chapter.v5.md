@@ -78,7 +78,7 @@ The main window top bar includes more helpers on the right side of the screen.
 
 ### Context Sub-Control Bar (2)
 
-This is another menu bar which changes per-context (or is not present at all) where you can either select the context preview mode or find a context toolbar with various controls.  
+This is another menu bar which changes per-context (or is not present at all) where you can either select the context preview mode or find a toolbar with various controls.  
 
 * Fixtures And Functions shows preview mode and universe selectors 
 * Virtual Console shows a page selector
