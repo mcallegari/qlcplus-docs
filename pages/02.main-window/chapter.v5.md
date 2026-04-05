@@ -18,9 +18,10 @@ media_order: main-window-v5.png
 
 The QLC+ Main Window consists of four main parts:
 
-1.  A Menu bar containing buttons for global functions
-2.  Active panels selected by their respective tabs
-3.  Tabs that allow the selection of one of the QLC+ panels
+1.  A top bar with the global shortcuts
+2.  A context sub-menu bar containing controls for the selected context
+3.  Main context area, which can be a preview or operative panel
+4.  Side panels to act on the current view without wasting space
 
 ![](/main-window/main-window-v5.png)
 
