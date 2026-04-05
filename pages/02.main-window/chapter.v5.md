@@ -72,7 +72,7 @@ Contexts can be detached from the main window by right clicking on their button.
 The main window top bar includes more helpers on the right side of the screen.
 
 ![](../basics/dmxdump.svg?resize=48,48) Open the [DMX Dump](dmx-dump) popup to quickly create Scenes  
-<i class="fa fa-foo fa-2x"></i>    BPM control: shows the current BPM number and open the [BPM Control](/bpm-system) popup  
+<i class="fa fa-wave-square fa-2x"></i>    BPM control: shows the current BPM number and open the [BPM Control](/bpm-system) popup  
 ![](../basics/stopall.svg?resize=48,48) Show the running function number and allow to stop them all at once  
 
 
