@@ -156,10 +156,10 @@ Let's say you have two sliders that control the same intensity channel. First, y
 
 A crossfade between 2 [Scenes](#scene) will replace the HTP levels in the first scene with the HTP levels of the second. The new HTP levels will be combined with HTP levels from other functions and virtual console widgets as above. See also [LTP](#ltp-latest-takes-precedence).
 
-### ![](../input_output.png) Input/Output plugins
+### ![](../inputoutput.svg) Input/Output plugins
 
 QLC+ supports a variety of plugins to send and receive data from/to the external world.  
-A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [ArtNet](/plugins/art-net), [OSC](/plugins/osc) or [E1.31](/plugins/e1-31-sacn)).  
+A plugin can be an interface to physical devices (such as DMX adapters or MIDI controllers) or to a network protocol (such as [Art-Net](/plugins/art-net), [OSC](/plugins/osc) or [E1.31](/plugins/e1-31-sacn)).  
 Plugins support input, output or feedback capabilities depending on the device or the protocol they're controlling.  
 
 The primary input methods for QLC+ are naturally the keyboard and mouse. Users can assign keyboard keys to virtual console buttons and drag sliders and do pretty much everything with a mouse.
@@ -182,14 +182,12 @@ The LTP rule is simple: the latest level that has been set by a function or a Vi
 
 During a crossfade between [Scenes](#scene), LTP levels will often be changed. This has to be handled with some care as some LTP levels need to jump immediately to a new level, for example, changing from one gobo to another. LTP groups such as pan and tilt, however, might need to change gradually from one level to another during a crossfade. Different timings can be achieved by combining scenes in a [Collection](#collection). See also [HTP](#htp-highest-takes-precedence).
 
-### ![](../operate.png) Modes
+### ![](../palette.svg) Palette
 
-Q Light Controller Plus is based on the common concept of having two distinct operational modes to prevent accidental and possibly harmful changes during operation:
+A Palette is an entity in QLC+ representing a fixture feature. For example a Palette can be a color, a position, a zoom angle and so on.
+Palettes can be used into [Scenes](#scene) to abstract a feature regardless of the Fixtures controlled by the Scene.
 
-*   Design mode is meant to edit the behaviour of the program; create and edit [functions](#functions) and [fixtures](#fixtures) and adjust how they work.
-*   Operate mode is meant to execute the created functions that eventually control the user's lighting fixtures.
-
-### ![](../rgbmatrix.png) RGB Matrix
+### ![](../rgbmatrix.svg) RGB Matrix
 
 An RGB matrix [function](#functions) can be used to impose simple graphics and text on a matrix (a grid or a wall) of RGB and/or monochrome fixture [heads](#head). The RGB matrix function has been designed to be extendable with [scripts](#rgb-script) that can be written by users.
 
@@ -199,11 +197,11 @@ Each RGB matrix has its own speed settings:
 *   **Fade Out:** Time to fade each pixel OFF
 *   **Duration:** The duration of the current step/frame
 
-### ![](../rgbmatrix.png) RGB Script
+### ![](../rgbmatrix.svg) RGB Script
 
 A RGB script is a program written in [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) (also known as JavaScript) that produces the necessary image data for [RGB Matrix](#rgb-matrix) functions. Learn more from the [RGB Script API](/function-manager/rgb-script-api) page.
 
-### ![](../scene.png) Scene
+### ![](../scene.svg) Scene
 
 A scene [function](#functions) comprises the values of selected channels that are contained in one or more fixture instances. When a scene is started, the time it takes for its channels to reach their target values depends on the scene's speed settings:
 
@@ -214,7 +212,7 @@ Each function has its own speed settings:
 
 Copies of scene functions can be created with the [Function Manager](/function-manager). All of the scene's contents are copied to the duplicate.
 
-### ![](../sequence.png) Sequence
+### ![](../sequence.svg) Sequence
 
 A Sequence has some of the functionality of a [Chaser](#chaser).  
 It is equivalent to a Chaser in which each step is a single [Scene](#scene) and every one of those Scenes controls the same set of channels. A Sequence is bound to one specific Scene, which means that all the steps of the Sequence can only control the enabled channels of that Scene.  
@@ -222,15 +220,15 @@ When creating new steps in a Sequence, no Function selection pop-up will appear,
 When a Sequence is created, a special sequence icon will appear in the [Function Manager](/function-manager) as a child of the Scene to which it is bound.  
 To understand the difference between a Sequence and a Chaser, you are invited to read the second paragraph of the [Show Manager](/show-manager) documentation.
 
-### ![](../script.png) Script
+### ![](../script.svg) Script
 
 The Script [function](#functions) works on a simple yet powerful scripting language to automate QLC+ functionalities in a sequential order. A Script can be modified with the [Script Editor](/function-manager/script-editor).
 
-### ![](../show.png) Show
+### ![](../show.svg) Show
 
 A Show is an advanced [function](#functions) which encapsulates most of the QLC+ Functions to create a time driven light show. A Show can be created only with the [Show Manager](/show-manager) and can be inspected and renamed with the [Show Editor](/function-manager/show-editor).
 
-### ![](../video.png) Video
+### ![](../video.svg) Video
 
 A video [function](#functions) is an object representing a video file stored in a disk or a network URL.  
 The supported video formats depends on your Operating System. For example Mac OSX is limited to MOV/MP4 files and not much more.  
