@@ -10,7 +10,7 @@ Using command line parameters can be tricky depending on the operating system yo
 **Windows**: create a shortcut of qlcplus-qml.exe (usually located in C:\\QLC+) on your desktop. Right click on the shortcut and select "Properties". In the "Target" field you will see something like `C:\\QLC+\\qlcplus-qml.exe`. There you can add command line parameters. When done click OK.<br>
 For example, to force the German language at startup, modify your shortcut command line like this:
 
-![](../command-line.png)
+![](../command-line-v5.png)
 
 **OSX**: This is the most difficult case since QLC+ on OSX is bundled into a DMG package. You need to open a terminal and "cd" into the QLC+ DMG like this:<br>`cd QLC+.app\\Contents\\MacOS`<br>
 When done, type `./qlcplus-qml` followed by the parameters you need.
