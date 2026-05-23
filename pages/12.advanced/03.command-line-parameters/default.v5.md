@@ -37,11 +37,11 @@ When done, type `./qlcplus-qml` followed by the parameters you need.
 
 |     |
 | --- |
-| **-k or --kiosk**<br><br>**Description:** Enable kiosk-mode (only [virtual console](/virtual-console) is visible<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start the application in kiosk mode:  <br>qlcplus -k  <br>qlcplus --kiosk |
+| **-k or --kiosk**<br><br>**Description:** Enable kiosk-mode (only [virtual console](/virtual-console) is visible)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Start the application in kiosk mode:  <br>qlcplus -k  <br>qlcplus --kiosk |
 
 |     |
 | --- |
-| **-l or --locale**<br><br>**Description:** Use the given language for translation<br><br>**Parameters:** Language code (currently supported: ca\_ES, cz\_CZ, de\_DE, en\_GB, es\_ES, fi\_FI, fr\_FR, it\_IT, ja\_JP, nl\_NL, pt_BR)<br><br>**Examples:**  <br>Use finnish language:  <br>qlcplus-qml -l fi_FI  <br>qlcplus-qml --locale fi_FI |
+| **-l or --locale**<br><br>**Description:** Use the given language for translation<br><br>**Parameters:** Language code (currently supported: ca\_ES, de\_DE, en\_GB, es\_ES, fr\_FR, it\_IT, ja\_JP, nl\_NL, pl\_PL, ru\_RU, uk\_UA)<br><br>**Examples:**  <br>Use finnish language:  <br>qlcplus-qml -l fi_FI  <br>qlcplus-qml --locale fi_FI |
 
 |     |
 | --- |
