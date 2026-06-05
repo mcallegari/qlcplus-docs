@@ -29,7 +29,7 @@ When done, type `./qlcplus-qml` followed by the parameters you need.
 
 |     |
 | --- |
-| **-h or --help**<br><br>**Description:** Display command-line help (only in Linux & OS X)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Display the command-line help:  <br>qlcplus-qml -h  <br>qlcplus-qml --help |
+| **-h or --help**<br><br>**Description:** Display command-line help (only on Linux and macOS)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Display the command-line help:  <br>qlcplus-qml -h  <br>qlcplus-qml --help |
 
 |     |
 | --- |
