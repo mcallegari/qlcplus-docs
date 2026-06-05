@@ -69,8 +69,8 @@ When done, type `./qlcplus-qml` followed by the parameters you need.
 
 |     |
 | --- |
-| **-d or --debug**<br><br>**Description:** Enable debug mode and optionally set the output level. Note that debug messages for level DEBUG (0) are not included in released binaries.<br><br>**Parameters:** Level (see [QtMsgType](https://doc.qt.io/qt-6/qtlogging.html#QtMsgType-enum))<br><br>**Examples:**  <br>Enable debug mode and set debug level to 0:  <br>qlcplus-qml -d  <br>qlcplus-qml --debug  <br>  <br>Enable debug mode and set debug level to 3:  <br>qlcplus-qml -d 3 |
+| **-d or --debug**<br><br>**Description:** Enable debug mode and optionally set the output level. Note that debug messages are not included in released binaries.<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug mode:  <br>qlcplus-qml -d  <br>qlcplus-qml --debug  <br>  |
 
 |     |
 | --- |
-| **-g or --log**<br><br>**Description:** Log debug messages to a file (`$HOME/QLC+.log`)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d 0 -g  <br>qlcplus --debug 0 --log |
+| **-g or --log**<br><br>**Description:** Log debug messages to a file (`$HOME/QLC+.log`)<br><br>**Parameters:** None<br><br>**Examples:**  <br>Enable debug messages and store them to log  <br>qlcplus -d -g  <br>qlcplus --debug --log |
