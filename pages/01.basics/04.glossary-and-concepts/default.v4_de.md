@@ -126,7 +126,7 @@ Die Funktionstypen sind:
 *   [Video](#video)
 
 Jede Funktion kann benannt werden, und obwohl der Name nicht zur eindeutigen Identifizierung einzelner Funktionen verwendet wird, werden Benutzer aufgefordert, ihre Funktionen auf systematische und prägnante Weise zu benennen, um die Identifizierung jeder einzelnen Funktion zu erleichtern. Für Ihren eigenen Komfort.
-Ab Version 3.3.0 verfügt jede Funktion über eigene Geschwindigkeitseinstellungen:
+Jede Funktion verfügt über eigene Geschwindigkeitseinstellungen:
 
 *   **Fade In:** Die Zeit, die benötigt wird, um HTP-Kanäle (in Szenen auch LTP-Kanäle) auf ihren Zielwert zu blenden
 *   **Fade Out:** Die Zeit, die zum Zurückblenden von HTP/Intensitätskanälen auf Null benötigt wird
