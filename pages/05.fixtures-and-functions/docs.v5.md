@@ -60,7 +60,7 @@ To the right of the view buttons you'll find:
 
 ---
 
-## Left panel — fixtures and channels
+## Left panel — Fixtures and channels
 
 The left panel groups three management tools at the top, the channel control
 tools in the middle, and the selection tools at the bottom.
@@ -108,17 +108,17 @@ Sequences, EFX, RGB Matrices, Collections, Scripts, Audio, Video and Shows.
 
 | Button | What it does |
 |--------|--------------|
-| **Function Manager** | Opens the list of all your functions, organised into folders. Select a function here to edit it. |
-| **Timing Settings** | (Show Manager only) Adjusts timing settings for the show. |
-| **Add a new function** | Opens a menu to create a new function. Pick the type and its editor opens automatically. (Only available when function editing is permitted.) |
-| **Delete** | Deletes the selected functions and folders, after asking you to confirm. |
-| **Rename** | Renames the selected item. When several items are selected, you can rename them all at once with automatic numbering. |
-| **Clone** | Makes a copy of each selected function. |
-| **Show function usage** | Shows where the selected function is used — which other functions, virtual console widgets, etc. reference it. |
-| **Autostart** | Marks the selected function to start automatically when the project is loaded (or removes that mark). |
-| **Function Preview** | Runs the selected function live so you can preview it. Click again to stop. |
-| **Toggle multiple selection** | (Show Manager only) Lets you select several items at once. |
-| **Reset dump channels** | Clears the channels currently captured for dumping into a scene. Shortcut: **Ctrl+R**. |
+| ![](../basics/functions.svg?resize=48,48) **Function Manager** | Opens the list of all your functions, organised into folders. Select a function here to edit it. |
+| <i class="fa fa-stopwatch fa-2x"></i>**Timing Settings** | (Show Manager only) Adjusts timing settings for the show. |
+| <i class="fa fa-plus fa-2x"></i>**Add a new function** | Opens a menu to create a new function. Pick the type and its editor opens automatically. (Only available when function editing is permitted.) |
+| <i class="fa fa-minus fa-2x"></i>**Delete** | Deletes the selected functions and folders, after asking you to confirm. |
+| ![](../basics/rename.svg?resize=48,48) **Rename** | Renames the selected item. When several items are selected, you can rename them all at once with automatic numbering. |
+| <i class="fa fa-clone fa-2x"></i>**Clone** | Makes a copy of each selected function. |
+| <i class="fa fa-sitemap fa-2x"></i>**Show function usage** | Shows where the selected function is used — which other functions, virtual console widgets, etc. reference it. |
+| ![](../basics/autostart.svg?resize=48,48) **Autostart** | Marks the selected function to start automatically when the project is loaded (or removes that mark). |
+| <i class="fa fa-play fa-2x"></i>**Function Preview** | Runs the selected function live so you can preview it. Click again to stop. |
+| ![](../basics/multiple.svg?resize=48,48) **Toggle multiple selection** | (Show Manager only) Lets you select several items at once. |
+| <i class="fa fa-xmark fa-2x"></i>**Reset dump channels** | Clears the channels currently captured for dumping into a scene. Shortcut: **Ctrl+R**. |
 
 ### Creating a function
 
