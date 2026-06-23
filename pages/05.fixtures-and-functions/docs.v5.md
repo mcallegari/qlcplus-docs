@@ -69,9 +69,9 @@ tools in the middle, and the selection tools at the bottom.
 
 | Button | What it does |
 |--------|--------------|
-| **Add Fixtures** | Opens the fixture browser. Search the fixture library and drag a fixture into the view to patch it. (Only available when fixture editing is permitted.) |
-| **Fixture Groups** | Create and edit groups of fixtures, so you can select and control several fixtures together. |
-| **Palettes** | Create and manage palettes — saved values for colour, position, dimmer, etc. — that you can reuse across your functions. |
+| ![](../basics/fixture.svg?resize=48,48) **Add Fixtures** | Opens the fixture browser. Search the fixture library and drag a fixture into the view to patch it. (Only available when fixture editing is permitted.) |
+| ![](../basics/group.svg?resize=48,48) **Fixture Groups** | Create and edit groups of fixtures, so you can select and control several fixtures together. |
+| ![](../basics/palette.svg?resize=48,48) **Palettes** | Create and manage palettes — saved values for colour, position, dimmer, etc. — that you can reuse across your functions. |
 
 ### Channel control tools
 
