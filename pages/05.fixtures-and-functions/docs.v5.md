@@ -32,10 +32,10 @@ a time.
 
 | View | What it shows |
 |------|---------------|
-| **Universe View** | A grid of DMX addresses for the selected universe. Fixtures occupy the channels they are patched to. You can drag a fixture to move it to a different address, and cut and paste fixtures. |
-| **DMX View** | Each fixture shown as a strip of its channels with their live values. Click a channel to open a slider or preset tool and change its value directly. |
-| **2D View** | A top-down plan of your stage, with each fixture drawn at its real position. Useful for laying out a rig as seen from above. |
-| **3D View** | A three-dimensional rendering of the stage, including beams and colours. (If your system does not support 3D rendering, a notice is shown instead.) |
+| ![](../basics/uniview.svg?resize=48,48) **Universe View** | A grid of DMX addresses for the selected universe. Fixtures occupy the channels they are patched to. You can drag a fixture to move it to a different address, and cut and paste fixtures. |
+| ![](../basics/dmxview.svg?resize=48,48) **DMX View** | Each fixture shown as a strip of its channels with their live values. Click a channel to open a slider or preset tool and change its value directly. |
+| ![](../basics/2dview.svg?resize=48,48) **2D View** | A top-down plan of your stage, with each fixture drawn at its real position. Useful for laying out a rig as seen from above. |
+| ![](../basics/3dview.svg?resize=48,48) **3D View** | A three-dimensional rendering of the stage, including beams and colours. (If your system does not support 3D rendering, a notice is shown instead.) |
 
 ### Choosing and detaching a view
 
