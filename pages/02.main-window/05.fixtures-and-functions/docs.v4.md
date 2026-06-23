@@ -4,6 +4,7 @@ date: '12:34 23-06-2026'
 taxonomy:
     category:
         - docs
+visible: false
 ---
 
-In this page...
+No content here
