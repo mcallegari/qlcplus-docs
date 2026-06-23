@@ -61,7 +61,7 @@ By pressing these buttons, you can switch from one context to the other.
 Contexts can help with the design phase, the live operations or the input/output configuration.  
 Contexts can be detached from the main window by right clicking on their button.  
 
-![](../basics/editor.svg?resize=48,48) View the [Fixtures and Functions Context](/fixtures-and-functions)  
+![](../basics/editor.svg?resize=48,48) View the [Fixtures and Functions Context](/main-window/fixtures-and-functions)  
 ![](../basics/virtualconsole.svg?resize=48,48) View the [Virtual Console](/virtual-console)  
 ![](../basics/simpledesk.svg?resize=48,48) View the [Simple Desk](/simple-desk)  
 ![](../basics/showmanager.svg?resize=48,48) View the [Show Manager](/show-manager)  
