@@ -82,13 +82,13 @@ applies to. Click a button to open its tool next to the panel.
 
 | Tool | What it controls |
 |------|------------------|
-| **Intensity** | The dimmer / master intensity of the selected fixtures. |
-| **Shutter** | Shutter and strobe presets (open, closed, strobe, pulse, …). |
-| **Position** | Pan and tilt — point moving heads and scanners. |
-| **Color** | The colour of the fixtures, mixing RGB (and white / amber / UV where available). |
-| **Color Wheel** | Selects a colour from the fixture's fixed colour wheel. |
-| **Gobos** | Selects a gobo from the fixture's gobo wheel. |
-| **Beam** | Beam properties such as zoom and focus. |
+| ![](../basics/intensity.svg?resize=48,48) **Intensity** | The dimmer / master intensity of the selected fixtures. |
+| ![](../basics/shutter.svg?resize=48,48) **Shutter** | Shutter and strobe presets (open, closed, strobe, pulse, …). |
+| ![](../basics/position.svg?resize=48,48) **Position** | Pan and tilt — point moving heads and scanners. |
+| ![](../basics/color.svg?resize=48,48) **Color** | The colour of the fixtures, mixing RGB (and white / amber / UV where available). |
+| ![](../basics/colorwheel.svg?resize=48,48) **Color Wheel** | Selects a colour from the fixture's fixed colour wheel. |
+| ![](../basics/gobo.svg?resize=48,48) **Gobos** | Selects a gobo from the fixture's gobo wheel. |
+| ![](../basics/beam.svg?resize=48,48) **Beam** | Beam properties such as zoom and focus. |
 
 ### Selection tools (bottom of the panel)
 
