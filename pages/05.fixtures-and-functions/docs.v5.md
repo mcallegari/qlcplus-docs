@@ -94,10 +94,10 @@ applies to. Click a button to open its tool next to the panel.
 
 | Button | What it does |
 |--------|--------------|
-| **Highlight** | Temporarily highlights the currently selected fixtures so you can see which ones they are. The number shows how many fixtures are selected. |
-| **Pick a 3D point** | (3D view only) Lets you click a point in the 3D stage to aim the selected fixtures at it. Shortcut: **Ctrl+P**. |
-| **Toggle multiple selection** | When enabled, clicking fixtures adds them to the selection instead of replacing it, so you can build up a selection of several fixtures. |
-| **Select / Deselect all** | Selects every fixture, or clears the selection if everything is already selected. Shortcut: **Ctrl+A**. |
+| <i class="fa fa-bolt fa-2x"></i> **Highlight** | Temporarily highlights the currently selected fixtures so you can see which ones they are. The number shows how many fixtures are selected. |
+| <i class="fa fa-crosshairs fa-2x"></i> **Pick a 3D point** | (3D view only) Lets you click a point in the 3D stage to aim the selected fixtures at it. Shortcut: **Ctrl+P**. |
+| ![](../basics/multiple.svg?resize=48,48) **Toggle multiple selection** | When enabled, clicking fixtures adds them to the selection instead of replacing it, so you can build up a selection of several fixtures. |
+| ![](../basics/selectall.svg?resize=48,48) **Select / Deselect all** | Selects every fixture, or clears the selection if everything is already selected. Shortcut: **Ctrl+A**. |
 
 ---
 
