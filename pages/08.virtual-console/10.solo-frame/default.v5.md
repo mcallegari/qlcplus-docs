@@ -3,19 +3,51 @@ title: 'Solo Frame'
 date: '03:43 22-08-2023'
 ---
 
-A Solo Frame is almost exactly the same kind of a container as a normal [Frame](../frame) in that can hold various widgets and other frames inside. However, the difference with Solo Frame is that it treats any [Buttons](../button) inside it differently by allowing only one button to be enabled at a time. For example, consider you have **Button A** and **Button B** inside a Solo Frame with **Button A** currently enabled. Next, you click button **Button B** which automatically results in **Button A** being released, leaving now only **Button B** enabled.
+A **Solo Frame** is a special [Frame](VCFrame.md) in the
+[Virtual Console](VirtualConsole.md) with one extra rule: only **one** of the
+functions inside it can play at a time. Starting a function automatically stops
+any other function running from a widget in the same frame.
 
-### Configuration
+This makes a Solo Frame the natural container for any group of looks that should
+be mutually exclusive — a row of colour buttons, a bank of scene "states", or a
+palette where selecting a new look replaces the previous one. Without it you'd
+have to stop the old look manually before starting the new one.
 
-Solo Frames can be configured with the properties ![](/basics/edit.png) button found in the toolbar or by double clicking the solo frame itself.  
-  
-Other than the standard [styling & placement options](../styling-and-placement), Solo Frames have every [frame](../frame) additional options:  
+A Solo Frame is the same widget as a [Frame](VCFrame.md) and shares all of its
+settings; it simply adds the solo behaviour and the **Solo Frame Options**
+section.
 
-* **Frame name**: Allow you to assign an arbitrary label to the Solo Frame. This will be displayed only when the "Show header" option is enabled (see below).
-* **Accept child widgets**: Allows you to add widgets to the Solo Frame.
-* **Allow resizing**: Allow the Solo Frame height and width to be changed.
-* **Show header**: Display a useful header composed of a button and a label. The button allows you to expand/collapse the Solo Frame, which can save a lot of Virtual Console space. The label will display the name of the Frame.
+## How the solo behaviour works
 
-And one other specific option:  
+* When a widget inside the frame **starts a function**, every other function
+  started by widgets in the same frame is **stopped**.
+* This applies to the widgets directly contained in the frame (for example its
+  [Buttons](VCButton.md)), giving you a clean one-at-a-time selector.
+* It only affects functions started *from within this frame* — functions running
+  elsewhere on the console are not touched.
 
-* **Mix sliders in playback mode**: When this option is enabled, the [sliders](../slider) in **playback** mode are allowed to be enabled at the same time. When moving a slider up, instead of instantly cancelling the other running sliders, it will fade them out at the same speed you are fading it up.
+## Settings
+
+A Solo Frame has all the [Frame settings](VCFrame.md#settings) — Header, Pages,
+Shortcuts — plus:
+
+### Solo Frame Options
+
+* **Exclude monitored functions** — keeps functions that are only being
+  *monitored* from being stopped by the solo rule. Use this when a widget in the
+  frame is monitoring/reflecting a function's state rather than actively playing
+  it, so monitoring isn't interrupted every time another button is pressed.
+
+## Creating one
+
+* Drag **Solo Frame** from the widget list onto the page, **or**
+* When creating a [Button Matrix](VCButtonMatrix.md) or
+  [Slider Matrix](VCSliderMatrix.md), choose **Solo** as the frame type to wrap
+  the whole grid in a Solo Frame.
+
+## Tips
+
+* Put a palette of colour or scene buttons in a Solo Frame so pressing one always
+  cancels the previous one — no "stop" step needed.
+* Combine with **Pages** (from the Frame settings) to build a paged, one-at-a-time
+  selector that still behaves solo on every page.
