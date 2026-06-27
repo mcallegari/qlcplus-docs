@@ -5,6 +5,12 @@ taxonomy:
     category: docs
 ---
 
+<style>
+    #chapter p {
+        text-align: left;
+    }
+</style>
+
 The **Simple Desk** is a manual DMX control surface. It gives you a fader and a
 value box for every channel of a universe, plus a **keypad** for entering
 console-style commands — letting you control your rig by hand, just like a
