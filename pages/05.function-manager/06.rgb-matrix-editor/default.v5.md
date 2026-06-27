@@ -4,24 +4,63 @@ date: '12:24 21-08-2023'
 media_order: blending.png
 ---
 
-The RGB matrix editor, as its name suggests, is used to edit ![](/basics/rgbmatrix.png) [RGB matrix](/basics/glossary-and-concepts#rgb-matrix) functions. The function works on predefined ![](/basics/group.png) [Fixture Groups](/basics/glossary-and-concepts#fixture-group) created by the user with the ![](/basics/fixture.png) [Fixture Manager](/fixture-manager).
+An **RGB Matrix** plays animated patterns, text and images across a **fixture
+group** laid out as a grid — LED panels, pixel bars, a wall of PARs, and so on.
+The RGB Matrix Editor opens in the right panel of the
+[Fixtures and Functions](FixturesAndFunctions.md) workspace, with a live
+**preview** of the animation.
 
-Controls
---------
+## Basic settings
 
-|     |     |
-| --- | --- |
-| **RGB matrix name** | Change the name of the RGB matrix. |
-| ![](/basics/speed.png) | Adjust the RGB Matrix speed settings:<br><br>**Fade In:** The time it takes for the fixtures in the RGB Matrix fixture group to fade their intensity channels up<br>**Fade Out:** The time it takes for the fixtures in the RGB Matrix fixture group to fade their intensity channels back to zero<br>**Duration:** The duration of each step of the selected pattern |
-| ![](/basics/sequence.png) | Convert the current RGB Matrix into a [Sequence](/basics/glossary-and-concepts#sequence). This is useful to speed up the creation of a [Show](/basics/glossary-and-concepts#show). Please note that if the selected pattern generates random data, this functionality will generate a different Sequence every time. |
-| ![](/basics/square.png) | Switch the preview mode between circles and squares. |
-| ![](/basics/player_play.png) | Make the RGB Matrix run as if it were started from a [Virtual Console](/virtual-console) button. Note that the preview stops while the function is running. |
-| **Fixture group** | The [Fixture Group](/basics/glossary-and-concepts#fixture-group) that is controlled by this RGB matrix. |
-| **Preview area** | Shows a preview of the currently selected pattern imposed on the fixtures defined in the currently selected fixture group. Note that the preview doesn't show the difference between RGB-capable and monochrome/fixed color fixtures. |
-| **Pattern** | Select the pattern and colors that are used on the selected fixture group for drawing graphics.  <br>Patterns can be:<br><br>**Plain Color**: all the pixels of the matrix will be lit to the selected color<br>  <br>**Animated Text**: display an animated text with the following parameters:<br> *Text*: The text edit field is used to edit the text content that is scrolled/flashed on the matrix.<br>*Font*: The font button ![](/basics/fonts.png) is used to select the font (tip: bitmap fonts work best)<br>*Animation*: The drop-down box is used to select the animation style (Horizontal, Vertical or Letters)<br>  <br>**Audio Spectrum**: QLC+ will start capturing data from the chosen audio input device and will represent the audio spectrum as vertical bars in the RGB Matrix with the selected start and end color.  <br>    For an optimal usage of this pattern, the hold time of the Matrix must be set to a reasonably low value (e.g. .20)<br>  <br>**Image**: display an image loaded from a file, with the following parameters:<br>    <br>    *Path*: The text edit field is used to edit the image filename<br>*Image*: The image button ![](/basics/image.png) is used to load an image from file<br>*Animation*: The drop-down box is used to select the animation style (Static, Horizontal, Vertical or Animation)<br>    <br>    Supported formats: PNG, XPM, JPG, GIF (for animated GIFs, only the first frame is used).<br>    <br>    Styles:<br>    <br>**Static** \- the image is statically displayed on the matrix. If the image is smaller than the matrix, it is repeated in both directions. (Tip: for stripes, use 1-point-high images)<br>**Horizontal** \- the image is scrolled horizontally. Again, image is repeated in both directions.<br>**Vertical** \- same as **Horizontal**, but in vertical direction.<br>**Animation** \- play animation. Stack the frames (of width equal to matrix's) side by side in one image. For example, when matrix is 8x8 and you want to have 4 frames, make image 32x8. The image is still repeated vertically.<br>  <br>The rest of the pattern list is filled with [RGB Scripts](/basics/glossary-and-concepts#rgb-script) loaded when QLC+ starts up.  <br>Depending on the selected pattern, it is possible to choose a start and an end color. Some patterns do not allow colors at all (since they elapse them autonomously) or allow just one color. |
-| **Pattern Blend Mode** | The blend mode is the mechanism used to mix multiple RGB Matrices running one on top of the other.  <br>Here's a representation of how it works:<br><br>![](blending.png)<br><br>The matrix running on the bottom layer must use the default mode, to prepare a ground of colors that all the above layers can use to perform blending. |
-| **Pattern Color Mode** | The color mode is the mechanism select which color channels the RGB Matrices applies to.  <br>Default setting is RGB mode, addressing RGB channels or CMY channels. If set otherwise, only the selected channels (e.g. "White") will be set in a grayscale of the selected color(s). Channels not representing the selected color mode (e.g. R, G and B) will not be touched. |
-| **Offset** | Available only when **Text** or **Image** is the selected pattern.<br><br>**X:** Used to shift the pattern along the horizontal x-axis (negative values go to the left, positive values go to the right)<br>**Y:** Used to shift the pattern along the vertical y-axis (negative values go up, positive values go down) |
-| **Run Order** | **Loop:** Run through the steps over and over again.<br>**Single Shot:** Run through the steps once and then stop.<br>**Ping Pong:** Run through the steps over and over again, reversing direction at both ends. |
-| **Direction** | **Forward:** Run through the steps from start to end; 1, 2, 3...<br>**Backward:** Run through the steps from end to start; ...3, 2, 1 |
-| **Control Mode** | This selects the channels which the RGB Matrix uses as output. For example: You can use the "Dimmer" option to allow the matrix to control dimmer channels for the fixtures in the group.  |
+* **Name** — the matrix's name (top bar).
+* **Fixture Group** — the group of fixtures the matrix plays on. The group's
+  layout (rows × columns) defines the pixel grid. Choose a group before anything
+  is shown.
+* **Pattern** — the animation algorithm to play. QLC+ ships many built-in
+  patterns, plus script-based ones; some patterns expose their own extra
+  **Parameters** (see below).
+* **Save this matrix to a sequence** — converts the running matrix into a
+  sequence of steps, so you can fine-tune or trim it as a chaser.
+* **Blend mode** — how the matrix combines with other output on the same
+  fixtures: **Default (HTP)**, **Mask**, **Additive** or **Subtractive**.
+* **Color mode** — which fixture capability the matrix drives: **Default (RGB)**,
+  **White**, **Amber**, **UV**, **Dimmer** or **Shutter**.
+* **Colors** — the colour (or colours) the pattern uses. Depending on the
+  pattern you can set up to five colours; each has a reset button.
+
+## Parameters
+
+Some patterns add a **Parameters** section with controls specific to that
+pattern (for example the number of bars, the size of a shape, and so on). It
+appears only when the selected pattern has adjustable parameters.
+
+## Text patterns
+
+When the pattern is **Text**, a text section appears:
+
+* **Text** — the message to scroll or display.
+* **Font** — choose and size the font.
+* **Animation** — how the text moves: **Letters** (one at a time),
+  **Horizontal** or **Vertical** scrolling.
+* **Offset** — **X** / **Y** position of the text on the grid.
+
+## Image patterns
+
+When the pattern is **Image**, an image section appears:
+
+* **Image** — pick the image (or animated GIF) file to display.
+* **Animation** — **Static**, **Horizontal**, **Vertical** or **Animation**
+  (play the frames).
+* **Offset** — **X** / **Y** position of the image on the grid.
+
+## Speed
+
+* **Steps fade in** — fade time into each animation step.
+* **Steps hold** — how long each step is held.
+* **Steps fade out** — fade time out of each step.
+* **Tempo type** — measure times in **Time** or in **Beats**.
+
+## Order and direction
+
+* **Run Order** — **Loop**, **Single Shot** or **Ping Pong**.
+* **Direction** — **Forward** or **Backward**.
