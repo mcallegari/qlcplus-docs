@@ -3,8 +3,6 @@ title: 'Cue List'
 date: '03:34 22-08-2023'
 ---
 
-# VC Cue List
-
 A **Cue List** plays a [Chaser](ChaserEditor.md) one cue (step) at a time, in
 order — exactly like a theatrical cue stack. It's the go-to widget for running a
 scripted show where you advance through looks with a **GO** button. The
