@@ -7,10 +7,9 @@ A **Frame** is a container in the [Virtual Console](VirtualConsole.md) that
 groups other widgets together. Use it to organise the console into sections, to
 move and show/hide a whole group at once, and to add multi-page sub-areas.
 
-A **Solo Frame** is a frame with one extra rule: only **one** of the functions
-inside it can play at a time. Starting a function automatically stops the others
-in the frame — perfect for a bank of mutually-exclusive looks (e.g. a row of
-colour buttons where only one colour is active).
+> For a frame in which only one function plays at a time, see
+> [Solo Frame](VCSoloFrame.md). A Solo Frame shares all the settings below and
+> adds the solo rule.
 
 ## Settings
 
@@ -19,11 +18,6 @@ colour buttons where only one colour is active).
 * **Show header** — shows the frame's header bar (with its label).
 * **Show enable button** — adds a toggle in the header that enables/disables all
   the widgets inside the frame at once.
-
-### Solo Frame Options *(Solo Frame only)*
-
-* **Exclude monitored functions** — keeps functions that are only being monitored
-  from being stopped by the solo rule, so monitoring widgets aren't interrupted.
 
 ### Pages
 
@@ -46,6 +40,7 @@ sub-console:
 
 * Drop widgets onto a frame to make them children of it; moving the frame moves
   them all.
-* Use a **Solo Frame** for any group where two looks shouldn't run together.
+* Use a [Solo Frame](VCSoloFrame.md) for any group where two looks shouldn't run
+  together.
 * Combine **Enable pages** with **Clone first page widgets** to build a paged
   section that keeps its master controls visible on every page.
