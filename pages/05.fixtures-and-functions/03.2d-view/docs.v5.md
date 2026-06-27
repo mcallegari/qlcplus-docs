@@ -5,8 +5,6 @@ taxonomy:
     category: docs
 ---
 
-# 2D View
-
 The **2D View** shows your fixtures laid out on a flat plan of the stage. Each
 fixture is drawn at its real position and, when fixtures are emitting light, you
 see their colour and beam from the chosen point of view. It is the main view for
