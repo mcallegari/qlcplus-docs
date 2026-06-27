@@ -8,13 +8,13 @@ taxonomy:
 The **Function Manager** is the list of all the **functions** in your project —
 Scenes, Chasers, Sequences, EFX, Collections, RGB Matrices, Shows, Scripts,
 Audio and Video. It lives in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace; open it with the
+[Fixtures and Functions](/fixtures-and-functions) workspace; open it with the
 **Function Manager** button.
 
 From here you select functions to edit, organise them into folders, and filter
 or search the list. The buttons that create, delete, rename, clone and preview
 functions are on the right panel itself — see
-[Fixtures and Functions](FixturesAndFunctions.md#right-panel--functions).
+[Fixtures and Functions](/fixtures-and-functions).
 
 ## The list
 
