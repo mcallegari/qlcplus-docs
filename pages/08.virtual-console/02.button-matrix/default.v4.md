@@ -3,22 +3,43 @@ title: 'Button Matrix'
 date: '14:30 21-08-2023'
 ---
 
-A Button Matrix is basically just a way for quickly creating multiple [Buttons](../button) at the same time inside a common container [Frame](../frame).
+A **Button Matrix** is a quick way to create a whole **grid of buttons** at once,
+instead of adding them one by one. It belongs to the
+[Virtual Console](VirtualConsole.md) and is ideal for banks of scenes, colour
+buttons, or any set of looks you want laid out in a tidy block.
 
-When creating a new button matrix, you can assign functions to each of the buttons quite quickly with the dedicated dialog.
+A Button Matrix is not a separate kind of widget: it creates a
+[Frame](VCFrame.md) (or [Solo Frame](VCFrame.md)) filled with a grid of
+[Buttons](VCButton.md). Once created, each button is configured individually, and
+the surrounding frame behaves like any other frame.
 
-### Add a Matrix of Buttons
+## Creating one
 
-When you want to create many buttons at the same time on the [Virtual Console](/virtual-console), you may do this by using the Add Button Matrix dialog.
+Drag **Button Matrix** from the widget list onto the page. A **Widget matrix
+setup** dialog appears, where you set:
 
-|     |     |
-| --- | --- |
-| **Function list** | Shows you a list of functions that will be assigned to the buttons, one function per button. |
-| ![](/basics/edit_add.png) | Add [Functions](/basics/glossary-and-concepts#functions) to the list. |
-| ![](/basics/edit_remove.png) | Remove the selected functions from the list. |
-| **Dimensions** | **Horizontal button count**: Number of buttons to create horizontally<br>**Vertical button count**: Number of buttons to create vertically<br>**Button size**: The size of each button<br>**Allocation**: Shows you the number of functions currently in the list and the number of buttons that will be created with the current parameters. If you have less buttons than functions, the remaining functions will NOT be allocated to any buttons. On the other hand, if you have more buttons than functions, some buttons are not assigned a function, leaving them empty. |
-| **Frame** | **Normal**: Place the buttons inside a [Normal Frame](../frame)<br>**Solo**: Place the buttons inside a [Solo Frame](../solo-frame) |
+* **Columns** — the number of buttons across (1–99).
+* **Rows** — the number of buttons down (1–99).
+* **Width / Height** — the size of each individual button, in pixels.
+* **Frame type** — whether the buttons go inside a **Normal** frame or a **Solo**
+  frame:
+  * **Normal** — the buttons are independent.
+  * **Solo** — only one button's function plays at a time; starting one stops the
+    others (see [Solo Frame](VCFrame.md)). Perfect for a grid of
+    mutually-exclusive looks such as a colour palette.
 
-### Configuration
+Confirm to create the grid.
 
-Refer to [Frame](../frame) and [Button](../button) on how to configure them.
+## After creation
+
+* Each cell is an ordinary [Button](VCButton.md) — select one in edit mode to
+  attach a function and set its behaviour.
+* The grid lives in a [Frame](VCFrame.md), so you can move, resize, label and
+  page the whole block together.
+
+## Tips
+
+* Choose **Solo** at creation time for a colour or look palette, so the grid
+  automatically behaves as a one-at-a-time selector.
+* Drag a multi-selection of functions onto the matrix to populate several buttons
+  quickly.
