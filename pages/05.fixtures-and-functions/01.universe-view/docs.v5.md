@@ -2,9 +2,9 @@
 title: 'Universe View'
 date: '13:53 27-06-2026'
 published: true
+taxonomy:
+    category: docs
 ---
-
-# Universe View
 
 The **Universe View** shows a single DMX universe as a grid of its 512
 channels. It is the most technical of the four views and is useful for checking
