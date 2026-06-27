@@ -61,5 +61,5 @@ Each track is one row of the timeline.
 ## Right panel
 
 While in the Show Manager the right panel is the usual
-[Function Manager](FunctionManager.md), so you can drag any function onto the
+[Function Manager](/function-manager), so you can drag any function onto the
 timeline. It also gains a **Timing Settings** button specific to shows.
