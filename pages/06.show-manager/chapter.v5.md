@@ -5,6 +5,12 @@ taxonomy:
     category: docs
 ---
 
+<style>
+    #chapter p {
+        text-align: left;
+    }
+</style>
+
 A **Show** is a timeline that arranges other functions (scenes, chasers, audio,
 video, …) on **tracks** against time, so a whole performance can be played back
 as one. Editing a Show is different from the other functions: it opens its own
