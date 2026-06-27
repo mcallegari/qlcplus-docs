@@ -1,6 +1,7 @@
 ---
 title: 'Show Editor'
 date: '12:10 21-08-2023'
+visible: false
 ---
 
 The Show Editor is a panel to display the current structure of a ![](/basics/show.png) [Show](/basics/glossary-and-concepts#show) created with the [Show Manager](/show-manager).  
