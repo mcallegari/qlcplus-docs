@@ -11,6 +11,10 @@ taxonomy:
     }
 </style>
 
+### Chapter 4
+
+# Function Manager
+
 The **Function Manager** is the list of all the **functions** in your project —
 Scenes, Chasers, Sequences, EFX, Collections, RGB Matrices, Shows, Scripts,
 Audio and Video. It lives in the right panel of the
