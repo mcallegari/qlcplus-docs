@@ -3,19 +3,29 @@ title: 'Collection Editor'
 date: '12:21 21-08-2023'
 ---
 
-The collection editor, as its name suggests, is used to edit ![](/basics/collection.png) [Collection](/basics/glossary-and-concepts#collection) functions.  
-Collections are very helpful in a workflow where you create QLC+ functions dedicated to specific areas of your show. For example, you can create a number of Scenes to control only colors, some other Scenes to control only positions and so on. Then you can create a number of Chasers and EFX for automations.  
-When you have created all the basic elements of your show, you can then use Collections to build a sort of "shortcut" to compound scenes. For example a color Scene + a position Scene.
+A **Collection** runs several functions **at the same time**. Where a chaser
+plays its members one after another, a collection fires them all together —
+useful for grouping looks and effects that should always start as one. The
+Collection Editor opens in the right panel of the
+[Fixtures and Functions](FixturesAndFunctions.md) workspace.
 
-**Note:** Collections don't have speed setting; each function you include in a collection follows its own speed settings.
+## Toolbar
 
-**Important**: The order of the Functions in a Collection is fundamental when dealing with HTP/LTP usage or relative values. QLC+ will internally start the Functions of a Collection from the first to the last, so if they use the same channels, just keep this in mind because you might run into undesired effects.  
-For example a Scene setting Pan/Tilt channels + a EFX in relative mode must have a precise order: the Scene in the first position and the EFX in the second position.
+* **Name** — the collection's name (top bar text field).
+* **Back** (arrow) — returns to the previous editor.
+* **Add a function** (＋) — opens the Function Manager in a side panel; drag
+  functions from it into the collection.
+* **Remove the selected function** (－) — removes the selected members, after
+  confirmation.
 
-### Controls
+## The function list
 
-|     |     |
-| --- | --- |
-| **Collection name** | Change the name of the collection. |
-| ![](/basics/edit_add.png) | Add an existing [Function](/basics/glossary-and-concepts#functions) to the collection, using the [Select Function](../function-selection) dialog. The order of the functions has no significance. |
-| ![](/basics/edit_remove.png) | Remove the selected functions from the collection. |
+The main area lists the functions that belong to the collection.
+
+* **Click** a function to select it; **Ctrl+click** for several.
+* **Drag** functions in from the Function Manager to add them, or drag within
+  the list to reorder.
+* **Double-click** a function to open its own editor.
+
+When the collection is triggered, every function in this list starts at once,
+and the collection stays active until they have all finished.
