@@ -10,6 +10,9 @@ taxonomy:
         text-align: left;
     }
 </style>
+### Chapter 6
+
+# Simple Desk
 
 The **Simple Desk** is a manual DMX control surface. It gives you a fader and a
 value box for every channel of a universe, plus a **keypad** for entering
