@@ -5,8 +5,6 @@ taxonomy:
     category: docs
 ---
 
-# 3D View
-
 The **3D View** renders your stage in three dimensions, complete with fixtures,
 beams, colours and atmospheric smoke. It is the most realistic preview of your
 show and is useful for visualising beam angles, positions and looks as an
