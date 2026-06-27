@@ -10,6 +10,9 @@ taxonomy:
         text-align: left;
     }
 </style>
+### Chapter 5
+
+# Show Manager 
 
 A **Show** is a timeline that arranges other functions (scenes, chasers, audio,
 video, …) on **tracks** against time, so a whole performance can be played back
