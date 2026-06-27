@@ -3,48 +3,43 @@ title: 'Audio Triggers'
 date: '03:46 22-08-2023'
 ---
 
-Starting from QLC+ version 4.4.0, this functionality allows you to use an audio input source such as a microphone, to add more life to your light shows.  
+An **Audio Triggers** widget listens to live audio (from the computer's audio
+input) and uses its **frequency spectrum** to drive functions, DMX channels or
+other widgets. It's how you make lights react to music automatically in the
+[Virtual Console](VirtualConsole.md).
 
-Introduction
-------------
+The incoming sound is split into a number of **frequency bars** (bass to treble),
+and each bar can be assigned a target that it controls as the music plays.
 
-When clicking on the ![](/basics/audioinput.png) icon, an audio trigger widget will be added to your Virtual Console.  
-The widget's graphics area shows live monitoring of the captured audio, displaying a number of spectrum bars and a volume bar.  
-On the bottom you can see the range of frequencies analyzed by QLC+.  
+## Settings
 
-Configuration
--------------
+* **Activation threshold** — the level a bar must reach before its target is
+  triggered.
+* **Deactivation threshold** — the level a bar must fall back below before its
+  target is released. (Having the two thresholds separate prevents flickering on
+  and off.)
 
-When double clicking on the widget in design mode, a panel is displayed showing a complete set of options to tune the audio trigger's functionality.  
-The first thing you can configure is the number of spectrum bars that you want to display and that you will need during your live show. The number accepted is between 5 and 32.  
-Once the number of bars has been decided, you can proceed to assign a functionality to each bar. There is a list showing the following options for the volume and spectrum bars:  
-  
+### Spectrum Bars
 
-|     |     |
-| --- | --- |
-| **Name** | Can be "Volume Bar" or a spectrum bar shown as #number (start frequency - end frequency). Example: #5 (1250Hz - 1562Hz) |
-| **Type** | Indicates the type of functionality the bar will control. It can be:<br><br>![](/basics/uncheck.png) **None** - No functionality assigned<br>![](/basics/intensity.png) **DMX** - Controls single DMX channels<br>![](/basics/function.png) **Function** - Controls a QLC+ function<br>![](/basics/virtualconsole.png) **VC Widget** - Controls a Virtual Console widget (at the moment only buttons, sliders, tapping of speed dials and next cue of cue lists) |
-| **Assign** | When a type is selected, a button with a ![](/basics/attach.png) icon is displayed to allow you to connect the bar to the desired functionality. Depending on which type you chose, clicking on this button will display the DMX channels, Functions or Virtual Console widgets selection dialogues. |
-| **Info** | This column displays some additional information about the bar--functionality association.  <br>Depending on the type you chose, you will find the number of DMX channels, the function name or the VC Widget name selected displayed here |
-| **Disable threshold** | When selecting a Function or a VC Widget button, this column allows you to set a deactivation threshold percentage. When the spectrum or volume bar goes below this value, the associated function/VC button will be stopped/deactivated. |
-| **Enable threshold** | When selecting a Function or a VC Widget button, this column allows you to set an activation threshold percentage. When the spectrum or volume bar goes above this value, the associated function/VC button will be started/activated. |
-| **Divisor** | For speed dials and cue lists, this will divide the taps by the selected number - only every n-th tap will be actually sent to the speed dial. In other words, the tap happens only on every n-th beat. If you want the tap on every beat, enter 1, for every other beat enter 2. For once in a 4/4 measure, enter 4. For once in 3 4/4 measures, enter 12. Maximum is 64. |
+* **Number of bars** — how many frequency bands the spectrum is divided into.
+  More bars give finer control across the frequency range.
 
-### DMX channels
+### Per-bar assignment
 
-You can choose one or more channels of the currently patched fixtures. Those channels will be set proportionally to total volume, or volume in a particular frequency band.
+For each bar you set:
 
-### Functions
+* **Name** — a label for the bar.
+* **Type** — what the bar controls:
+  * **None** — unused.
+  * **DMX** — drives a DMX channel level.
+  * **Function** — starts/stops a function. **Drop a Function here** to assign it.
+  * **Widget** — drives another VC widget. **Drop a VC Widget here** to assign
+    it.
+* **Information** — shows the current assignment.
 
-You can select one or more functions. Those functions are started when volume goes above the Enable threshold in respective band, and stopped when it goes below the Disable threshold.
+## Tips
 
-### VC Widgets
-
-You can select only **ONE** widget here, either a button, a slider or a speed dial. Depending on the type:
-
-* **Button** is pressed when volume goes above Enable threshold, and released when the volume is below Disable threshold (similar to functions).
-* **Slider** is moved in proportion to the volume (similar to DMX channels). For a slider the thresholds do not apply.
-* **Speed dial** is tapped.
-* **Cue List** "Next Cue" is pressed.
-
-For **Speed dials** and **Cue Lists**, the tap/button press happens when the volume goes above the Enable threshold, and won't happen again until the volume falls below the Disable threshold. This probably means you will have to set the thresholds a little closer to each other than for buttons.
+* Assign the **bass** bars to intensity or strobe functions and the **treble**
+  bars to colour changes for a classic music-reactive look.
+* Tune the **activation / deactivation thresholds** to the track so effects fire
+  on beats without chattering.
