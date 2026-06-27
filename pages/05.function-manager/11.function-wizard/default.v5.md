@@ -1,6 +1,7 @@
 ---
 title: 'Function Wizard'
 date: '04:35 22-08-2023'
+visible: false
 ---
 
 The Function Wizard's purpose is to help users create some common functions for a quick start.
