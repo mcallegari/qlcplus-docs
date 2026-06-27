@@ -2,7 +2,8 @@
 title: 'DMX View'
 date: '13:59 27-06-2026'
 taxonomy:
-    category: docs
+    category:
+        - docs
 ---
 
 The **DMX View** shows your fixtures as a flowing list of panels, one per
@@ -36,7 +37,24 @@ opening the full capability tools in the left panel.
 ## View settings
 
 Click the **settings** button (the "bars" icon) in the toolbar to open the DMX
-view's settings panel.
+view's settings panel on the right. It contains a **Channels** section that
+controls how each channel is labelled in the fixture panels:
+
+* **Show addresses** — when enabled, each channel shows its DMX address number
+  above the value. Turn it off for a more compact display that shows only the
+  channel values.
+* **Relative addresses** — chooses how those addresses are numbered (only
+  meaningful when **Show addresses** is on):
+  * **Off** — channels show their **absolute** DMX address in the universe. For
+    a fixture patched at address 10, its channels are labelled 11, 12, 13, …
+    (the fixture's start address plus the channel offset).
+  * **On** — channels show their address **relative to the fixture**, always
+    starting at 1. The same fixture's channels are labelled 1, 2, 3, …
+    regardless of where it is patched.
+
+  Use absolute addresses when you need to match what the console or a patch
+  sheet reports; use relative addresses when you care about a channel's position
+  within the fixture itself.
 
 ## Selecting fixtures
 
