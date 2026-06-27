@@ -3,8 +3,6 @@ title: 'Script Editor'
 date: '04:07 22-08-2023'
 ---
 
-# Script Editor
-
 A **Script** is a function written as a small **JavaScript** program. It lets you
 control fixtures and other functions with logic — starting and stopping
 functions, setting channels, waiting, generating random values, running system
