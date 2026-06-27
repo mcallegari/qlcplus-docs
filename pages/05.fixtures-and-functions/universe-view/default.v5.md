@@ -1,6 +1,7 @@
 ---
 title: 'Universe View'
 date: '13:53 27-06-2026'
+published: true
 ---
 
 # Universe View
