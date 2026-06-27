@@ -5,21 +5,76 @@ taxonomy:
         - docs
 ---
 
-The DMX Dump functionality allows you to save the current DMX values that are being sent to the output universes at a particular moment. Basically it takes a "snapshot" of DMX channels and saves them for a later use.  
-DMX Dump can save values to a new [Scene](/basics/glossary-and-concepts#scene) or overwrite the values of an existing Scene. The "dumped" Scene can also be added to an existing [Chaser](/basics/glossary-and-concepts#chaser), Virtual Console [button](/virtual-console/button) or [slider](/virtual-console/slider)  
-  
-Please note that:
+**DMX Dump** captures the values you are currently outputting and saves them
+into a **Scene**. It's the fastest way to build a scene: set a look by hand
+using the channel tools, the DMX view or the Simple Desk, then "dump" that look
+into a function you can recall later.
 
-*   Selected Channels/Chasers will be remembered when re-opening this window
-*   The DMX values saved are taken before the Grand Master
+## How it works
 
-When opening the DMX Dump window, the following options will appear:
+As you change channel values manually, QLC+ keeps track of every channel you
+have touched — these are the **dump values**. They are the candidates that will
+be written into a scene when you dump.
 
-| | |
-| - | - |
-| **Scene name** | Defines the name of the Scene that will be created. If no name is specified, a default name like "New Scene From Live" and a numeric identification will be set, allowing fast use of this functionality. |
-| ![](/basics/scene.png) **Select an existing Scene** | By clicking on this button, a Function selection window will be displayed, allowing to select an existing Scene to be overwritten with the current DMX values.<br><br>***Note:*** Overwriting a Scene doesn't ask for confirmation and can be a potentially dangerous operation if you select the wrong Scene by mistake. So be careful when using this functionality.<br><br>When a Scene is selected, the DMX Dump window will automatically set two things for you:<br>*   The "Dump selected channels" option will be checked<br>*   The Fixtures tree will be updated, and only the channels enabled in the Scene channels will be selected. If you need to overwrite different channels, just select/deselect them manually before confirming the operation<br>
-| **Dump all channels** | If this option is selected, QLC+ will dump all the channels of all the universes and all the fixtures. To inform the user about what this option will do, a report in the form of (Universes, Fixtures, Channels) will be displayed. |
-| **Dump selected channels** | If this option is selected, the panel below will be activated, allowing you to choose exactly which channels that you want to be saved into a Scene. They are organized in a tree by Universes and Fixtures. |
-| **Add to** | This section offers you immediate use of your scene in an existing Virtual Console widget.<br>Options are:<br><br>**Chaser**: The list contains all the chasers present when DMX Dump window is opened. Each Chaser has a checkbox that, if checked, will tell QLC+ to add the newly created Scene to the selected chasers.<br>This feature is very useful when using [Cue Lists](/virtual-console/cue-list) in the [Virtual Console](/virtual-console) panel, because the newly created Scene will appear in the Cue List for immediate use during a live performance.<br>**Button**: The list contains all the buttons currently present in your Virtual Console space.<br>When selected, the buttons will be set to activate/deactivate the Scene just captured. You will see the button label changing to "Scene from live ..." and a progress number to identify it.<br>***Note:*** Any previous function associated to the selected buttons will be overwritten!<br>**Slider**: The list contains all the sliders currently present in your Virtual Console space.<br>As with buttons, all the selected sliders will be set to control the Scene just captured.<br>***Note 1***: A slider must be in **playback mode** to work as an intensity controller for a Scene.<br>***Note 2***: Any previous function associated with the selected sliders will be overwritten! |
-| **Dump only non-zero values** | This option will tell QLC+ to save only the channels with values that are **not** equal to zero.<br>If you know what you're doing, this could save project space and avoid channels conflicts with other Virtual Console widgets. |
+The **DMX Dump** button lives in the top toolbar of the application (a small
+"dump" icon). A red **bubble** on the button shows how many channels are
+currently captured. When the bubble shows `0`, nothing has been touched yet and
+there is nothing to dump.
+
+You can clear the captured values at any time without dumping using **Reset dump
+channels** in the right panel (shortcut **Ctrl+R**). The captured values are
+also reset automatically in certain situations, such as starting a new project.
+
+> The dump button only works when function editing is allowed.
+
+## Starting a dump
+
+There are two ways to open the dump dialog:
+
+* **Click** the DMX Dump button in the toolbar.
+* **Drag** the DMX Dump button onto a function in the Function Manager. This
+  pre-selects that function as an existing scene to dump into (see below).
+
+## The DMX Channel Dump dialog
+
+The dialog has two sections.
+
+### Target Scene
+
+Choose where the captured values go:
+
+* **Dump to a new Scene** — creates a new scene. A default name (*New Scene N*)
+  is suggested in the text box; change it to whatever you like.
+* **Dump to existing Scene** — adds the captured values to a scene you already
+  have. The target is the scene currently selected in the Function Manager; if
+  none is selected, this option shows *(None selected)*. (Dragging the dump
+  button onto a function selects this option automatically.)
+
+### Channels to dump
+
+Choose which of the captured channels are written:
+
+* **Dump all the available channels** — dumps every channel across all
+  universes and fixtures, not just the ones you touched. The dialog shows how
+  many universes and fixtures this covers.
+  * **Dump only non-zero values** — (available with the option above) skips
+    channels that are at zero, so the scene only contains channels that are
+    actually doing something.
+* **Dump the selected fixture channels** — dumps only the channels of the
+  fixtures you currently have selected. This option is available when the
+  selected fixtures have channels that have been touched.
+
+#### Detected channel types
+
+When you dump the selected fixtures' channels, the dialog lists the **types of
+channel** it found among them — for example Intensity, RGB/CMY/WAUV, Colour
+macros, Gobo, Pan, Tilt, Speed, Shutter/Strobe, Prism, Beam, Effect and
+Maintenance. Each type has a checkbox so you can include or exclude it. Tick only
+the kinds of channel you want in the scene — for instance, dump the colours but
+leave intensity out.
+
+## Finishing
+
+Confirm the dialog to create or update the scene with your chosen channels. The
+new (or updated) scene then appears in the Function Manager, ready to be edited,
+previewed and triggered like any other function.
