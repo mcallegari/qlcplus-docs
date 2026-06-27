@@ -5,8 +5,6 @@ taxonomy:
     category: docs
 ---
 
-# DMX View
-
 The **DMX View** shows your fixtures as a flowing list of panels, one per
 fixture, each displaying its individual channels and their **live values**. It
 is the best view for checking what every channel is currently outputting and for
