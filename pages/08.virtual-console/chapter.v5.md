@@ -106,8 +106,8 @@ keyboard instead of the mouse.
 
 | Widget | Purpose |
 |--------|---------|
+| [Button](/virtual-console/button) | Triggers a function (toggle, flash, blackout, …). |
 | [Frame / Solo Frame](VCFrame.md) | A container that groups widgets; a Solo Frame ensures only one of its functions plays at a time. |
-| [Button](VCButton.md) | Triggers a function (toggle, flash, blackout, …). |
 | [Slider](VCSlider.md) | A fader for levels, submasters, the Grand Master or a function attribute. |
 | [Knob](VCSlider.md) | A rotary variant of the Slider. |
 | [Cue List](VCCueList.md) | Plays a chaser cue by cue, like a theatrical cue stack. |
