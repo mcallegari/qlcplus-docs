@@ -107,16 +107,16 @@ keyboard instead of the mouse.
 | Widget | Purpose |
 |--------|---------|
 | [Button](/virtual-console/button) | Triggers a function (toggle, flash, blackout, …). |
-| [Frame / Solo Frame](VCFrame.md) | A container that groups widgets; a Solo Frame ensures only one of its functions plays at a time. |
-| [Slider](VCSlider.md) | A fader for levels, submasters, the Grand Master or a function attribute. |
-| [Knob](VCSlider.md) | A rotary variant of the Slider. |
-| [Cue List](VCCueList.md) | Plays a chaser cue by cue, like a theatrical cue stack. |
-| [Speed Dial](VCSpeedDial.md) | Sets and multiplies the timing of functions. |
-| [XY Pad](VCXYPad.md) | Two-axis pan/tilt control for moving fixtures. |
-| [Animation](VCAnimation.md) | Plays and controls an RGB Matrix with live colour/preset changes. |
-| [Label](VCLabel.md) | A static text label for titling and grouping. |
-| [Audio Triggers](VCAudioTriggers.md) | Drives functions/levels from live audio analysis. |
-| [Clock](VCClock.md) | A clock, stopwatch or countdown that can schedule functions. |
-
-Button Matrix and Slider Matrix are simply quick ways to create a grid of
-[Buttons](VCButton.md) or [Sliders](VCSlider.md) inside a frame.
+| [Button Matrix](/virtual-console/button-matrix) | Create a grid of buttons inside a frame. |
+| [Slider](/virtual-console/slider) | A fader for levels, submasters, the Grand Master or a function attribute. |
+| [Slider](/virtual-console/slider-matrix) | Create a grid of sliders inside a frame. |
+| [Knob](/virtual-console/slider) | A rotary variant of the Slider. |
+| [Animation](/virtual-console/animation) | Plays and controls an RGB Matrix with live colour/preset changes. |
+| [Speed Dial](/virtual-console/speed-dial) | Sets and multiplies the timing of functions. |
+| [XY Pad](/virtual-console/xy-pad) | Two-axis pan/tilt control for moving fixtures. |
+| [Cue List](/virtual-console/cue-list) | Plays a chaser cue by cue, like a theatrical cue stack. |
+| [Frame](/virtual-console/frame) | A container that groups widgets. |
+| [Solo Frame](/virtual-console/solo-frame) | A container that ensures only one of its functions plays at a time. |
+| [Label](/virtual-console/label) | A static text label for titling and grouping. |
+| [Audio Triggers](/virtual-console/audio-triggers) | Drives functions/levels from live audio analysis. |
+| [Clock](/virtual-console/clock) | A clock, stopwatch or countdown that can schedule functions. |
