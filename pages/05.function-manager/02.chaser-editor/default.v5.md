@@ -6,8 +6,7 @@ date: '12:08 21-08-2023'
 A **Chaser** plays a list of functions (usually scenes) one after another, each
 for a defined time. It's the main way to build sequences of looks — colour
 chases, step-based effects, cue stacks, and so on. The Chaser Editor opens in
-the right panel of the [Fixtures and Functions](FixturesAndFunctions.md)
-workspace.
+the right panel of the [Fixtures and Functions](/fixtures-and-functions) workspace.
 
 ## Toolbar
 
