@@ -8,7 +8,7 @@ An **EFX** (effect) moves fixtures along a mathematical path — circles, eights
 lines and other shapes — automatically. It's the quickest way to create
 pan/tilt movement effects (and colour/dimmer effects) across many fixtures at
 once. The EFX Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 A large **preview** shows the path and the position of each fixture in real time
 as you change the settings.
