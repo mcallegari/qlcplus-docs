@@ -4,7 +4,7 @@ title: 'Scene Editor'
 
 A **Scene** is the most basic function: a fixed look made of channel values for
 one or more fixtures. The Scene Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace when you create or
+[Fixtures and Functions](/fixtures-and-functions) workspace when you create or
 edit a scene.
 
 A scene is built from **components** — the fixtures, fixture groups and palettes
