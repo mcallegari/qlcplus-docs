@@ -5,7 +5,7 @@ date: '04:32 22-08-2023'
 
 An **Audio** function plays a sound file. It lets you trigger music, stings and
 effects from QLC+ alongside your lighting. The Audio Editor opens in the right
-panel of the [Fixtures and Functions](FixturesAndFunctions.md) workspace; when
+panel of the [Fixtures and Functions](/fixtures-and-functions) workspace; when
 you create an audio function you are asked to pick the file first.
 
 ## Properties
