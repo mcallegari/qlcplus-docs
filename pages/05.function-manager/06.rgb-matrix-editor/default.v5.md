@@ -7,7 +7,7 @@ media_order: blending.png
 An **RGB Matrix** plays animated patterns, text and images across a **fixture
 group** laid out as a grid — LED panels, pixel bars, a wall of PARs, and so on.
 The RGB Matrix Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace, with a live
+[Fixtures and Functions](/fixtures-and-functions) workspace, with a live
 **preview** of the animation.
 
 ## Basic settings
