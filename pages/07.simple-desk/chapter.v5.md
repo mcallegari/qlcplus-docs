@@ -21,7 +21,7 @@ traditional lighting desk. It's ideal for quick hands-on control, busking, and
 testing.
 
 Open it from the main toolbar (the Simple Desk icon). What you set here can be
-captured into a Scene with [DMX Dump](DMXDump.md).
+captured into a Scene with [DMX Dump](/main-window/dmx-dump).
 
 ## Layout
 
