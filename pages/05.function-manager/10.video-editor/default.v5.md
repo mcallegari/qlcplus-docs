@@ -6,7 +6,7 @@ date: '04:33 22-08-2023'
 A **Video** function plays a video file (or a still picture, or a network
 stream) on a screen. It lets QLC+ drive projection and screen content together
 with the lighting. The Video Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace; when you create a
+[Fixtures and Functions](/fixtures-and-functions) workspace; when you create a
 video function you are asked to pick the file first.
 
 ## Properties
