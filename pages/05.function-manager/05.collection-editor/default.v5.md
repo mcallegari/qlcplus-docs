@@ -7,7 +7,7 @@ A **Collection** runs several functions **at the same time**. Where a chaser
 plays its members one after another, a collection fires them all together —
 useful for grouping looks and effects that should always start as one. The
 Collection Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 ## Toolbar
 
