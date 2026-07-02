@@ -7,7 +7,7 @@ A **Script** is a function written as a small **JavaScript** program. It lets yo
 control fixtures and other functions with logic — starting and stopping
 functions, setting channels, waiting, generating random values, running system
 commands and more. The Script Editor opens in the right panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 The whole script body runs as the contents of a single JavaScript function, so
 you can use ordinary JavaScript — variables, `if`/`for`/`while`, functions, and
