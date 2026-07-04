@@ -8,10 +8,10 @@ taxonomy:
 
 <style>
 table th:first-of-type {
-    width: 30%;
+    width: 25%;
 }
 table th:nth-of-type(2) {
-    width: 70%;
+    width: 75%;
 }
 </style>
 
