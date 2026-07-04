@@ -59,7 +59,7 @@ Across the top:
 | <i class="fa fa-play fa-2x"></i> **Play / Pause** | Play back or pause/resume the Show from the cursor position. |
 | <i class="fa fa-stop fa-2x"></i> **Stop / Rewind** | Stop thr Show playback (press again to rewind to the start). |
 | **Markers** | The time division shown on the header: **Time**, or beats at **BPM 4/4**, **3/4** or **2/4**. |
-| <i class="fa fa-magnifying-glass-minus"></i><i class="fa fa-magnifying-glass-plus"></i> **Zoom** | Zoom the timeline in and out along the time axis. |
+| <i class="fa fa-2x fa-magnifying-glass-minus"></i><i class="fa fa-2x fa-magnifying-glass-plus"></i> **Zoom** | Zoom the timeline in and out along the time axis. |
 
 ## Tracks
 
