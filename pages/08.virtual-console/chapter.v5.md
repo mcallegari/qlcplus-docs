@@ -29,8 +29,8 @@ It has two modes:
 ## Layout
 
 * A **toolbar** across the top shows one tab per **page**; click a tab to switch
-  pages. To the right are a **snapping** toggle (snap widgets to a grid) and
-  **zoom** controls.
+  pages. To the right are a ![](../basics/grid.svg?resize=24,24) **snapping**
+  toggle (snap widgets to a grid) and **zoom** controls.
 * The **page area** below is the canvas where widgets live.
 * In edit mode, a **right panel** holds the editing tools.
 
@@ -48,15 +48,13 @@ See [VC Page](VCPage.md) for page settings (size, PIN, adding/removing pages).
 
 ## Right panel (edit tools)
 
-* **Add a new widget** (＋) — opens the widget list; drag a widget type onto the
-  page to create it.
-* **Edit mode** (pencil, flashing red border when active) — toggles edit mode.
-  With a widget selected it shows that widget's properties.
-* **Function Manager** (functions icon) — opens the function list so you can drag
-  functions onto widgets to attach them.
-* **Remove the selected widgets** (－) — deletes the selected widgets.
-* **Copy** / **Paste** — copy the selected widgets and paste them (you can also
-  drag the paste button onto a target).
+| Button | What it does |
+|--------|--------------|
+| <i class="fa fa-plus fa-2x" style="color:limegreen"></i> **Add a new widget** | Opens the widget list; drag a widget type onto the page to create it. |
+| ![](../basics/edit.svg?resize=48,48) **Edit mode** | Toggles edit mode (the button shows a flashing red border while active). With a widget selected it shows that widget's properties. |
+| ![](../basics/functions.svg?resize=48,48) **Function Manager** | Opens the function list so you can drag functions onto widgets to attach them. |
+| <i class="fa fa-minus fa-2x" style="color:crimson"></i> **Remove the selected widgets** | Deletes the selected widgets. |
+| <i class="fa fa-copy fa-2x"></i> **Copy** / <i class="fa fa-paste fa-2x"></i> **Paste** | Copy the selected widgets and paste them (you can also drag the paste button onto a target). |
 
 ## Working with widgets
 
@@ -106,17 +104,17 @@ keyboard instead of the mouse.
 
 | Widget | Purpose |
 |--------|---------|
-| [Button](/virtual-console/button) | Triggers a function (toggle, flash, blackout, …). |
-| [Button Matrix](/virtual-console/button-matrix) | Create a grid of buttons inside a frame. |
-| [Slider](/virtual-console/slider) | A fader for levels, submasters, the Grand Master or a function attribute. |
-| [Slider](/virtual-console/slider-matrix) | Create a grid of sliders inside a frame. |
-| [Knob](/virtual-console/slider) | A rotary variant of the Slider. |
-| [Animation](/virtual-console/animation) | Plays and controls an RGB Matrix with live colour/preset changes. |
-| [Speed Dial](/virtual-console/speed-dial) | Sets and multiplies the timing of functions. |
-| [XY Pad](/virtual-console/xy-pad) | Two-axis pan/tilt control for moving fixtures. |
-| [Cue List](/virtual-console/cue-list) | Plays a chaser cue by cue, like a theatrical cue stack. |
-| [Frame](/virtual-console/frame) | A container that groups widgets. |
-| [Solo Frame](/virtual-console/solo-frame) | A container that ensures only one of its functions plays at a time. |
-| [Label](/virtual-console/label) | A static text label for titling and grouping. |
-| [Audio Triggers](/virtual-console/audio-triggers) | Drives functions/levels from live audio analysis. |
-| [Clock](/virtual-console/clock) | A clock, stopwatch or countdown that can schedule functions. |
+| ![](../basics/button.svg?resize=48,48) [Button](/virtual-console/button) | Triggers a function (toggle, flash, blackout, …). |
+| ![](../basics/buttonmatrix.svg?resize=48,48) [Button Matrix](/virtual-console/button-matrix) | Create a grid of buttons inside a frame. |
+| ![](../basics/slider.svg?resize=48,48) [Slider](/virtual-console/slider) | A fader for levels, submasters, the Grand Master or a function attribute. |
+| ![](../basics/sliders.svg?resize=48,48) [Slider Matrix](/virtual-console/slider-matrix) | Create a grid of sliders inside a frame. |
+| ![](../basics/knob.svg?resize=48,48) [Knob](/virtual-console/slider) | A rotary variant of the Slider. |
+| ![](../basics/animation.svg?resize=48,48) [Animation](/virtual-console/animation) | Plays and controls an RGB Matrix with live colour/preset changes. |
+| ![](../basics/speed.svg?resize=48,48) [Speed Dial](/virtual-console/speed-dial) | Sets and multiplies the timing of functions. |
+| ![](../basics/xypad.svg?resize=48,48) [XY Pad](/virtual-console/xy-pad) | Two-axis pan/tilt control for moving fixtures. |
+| ![](../basics/cuelist.svg?resize=48,48) [Cue List](/virtual-console/cue-list) | Plays a chaser cue by cue, like a theatrical cue stack. |
+| ![](../basics/frame.svg?resize=48,48) [Frame](/virtual-console/frame) | A container that groups widgets. |
+| ![](../basics/soloframe.svg?resize=48,48) [Solo Frame](/virtual-console/solo-frame) | A container that ensures only one of its functions plays at a time. |
+| ![](../basics/label.svg?resize=48,48) [Label](/virtual-console/label) | A static text label for titling and grouping. |
+| ![](../basics/audiotriggers.svg?resize=48,48) [Audio Triggers](/virtual-console/audio-triggers) | Drives functions/levels from live audio analysis. |
+| ![](../basics/clock.svg?resize=48,48) [Clock](/virtual-console/clock) | A clock, stopwatch or countdown that can schedule functions. |
