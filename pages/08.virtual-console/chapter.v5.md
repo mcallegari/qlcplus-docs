@@ -44,7 +44,7 @@ example one page per song, or per area of the stage.
   second screen).
 * A page can be **PIN-protected**; switching to it then asks for the PIN.
 
-See [VC Page](VCPage.md) for page settings (size, PIN, adding/removing pages).
+See [VC Page](/virtual-console/page) for page settings (size, PIN, adding/removing pages).
 
 ## Right panel (edit tools)
 
