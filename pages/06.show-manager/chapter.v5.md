@@ -10,10 +10,10 @@ taxonomy:
         text-align: left;
     }
 table th:first-of-type {
-    width: 25%;
+    width: 30%;
 }
 table th:nth-of-type(2) {
-    width: 75%;
+    width: 70%;
 }
 </style>
 ### Chapter 5
