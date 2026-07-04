@@ -117,7 +117,7 @@ Sequences, EFX, RGB Matrices, Collections, Scripts, Audio, Video and Shows.
 | <i class="fa fa-sitemap fa-2x"></i>**Show function usage** | Shows where the selected function is used — which other functions, virtual console widgets, etc. reference it. |
 | ![](../basics/autostart.svg?resize=48,48) **Autostart** | Marks the selected function to start automatically when the project is loaded (or removes that mark). |
 | <i class="fa fa-play fa-2x"></i>**Function Preview** | Runs the selected function live so you can preview it. Click again to stop. |
-| ![](../basics/multiple.svg?resize=48,48) **Toggle multiple selection** | (Show Manager only) Lets you select several items at once. |
+| ![](../basics/multiple.svg?resize=48,48) **Toggle multiple selection** | ([Show Manager](/show-manager) only) Lets you select several items at once. |
 | <i class="fa fa-xmark fa-2x"></i>**Reset dump channels** | Clears the channels currently captured for dumping into a scene. Shortcut: **Ctrl+R**. |
 
 ### Creating a function
