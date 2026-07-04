@@ -45,11 +45,13 @@ Across the top:
 | ![](../basics/color.svg?resize=48,48) **Show items color** | Sets the colour of the selected timeline items, to colour-code your show. |
 | ![](../basics/lock.svg?resize=48,48) **Lock / Unlock** | Locks the selected items so they can't be moved or resized by accident (the icon toggles between lock and unlock). |
 | ![](../basics/grid.svg?resize=48,48) **Snap to grid** | Makes items snap to the time grid when you move them. |
-| <i class="fa fa-arrows-left-right-to-line fa-2x" style="color:lightyellow"></i> **Stretch the original function** | When enabled, resizing an item stretches the underlying function's timing to fit, rather than just cropping it. |
+| <i class="fa fa-arrows-left-right-to-line fa-2x"></i> **Stretch the original function** | When enabled, resizing an item stretches the underlying function's timing to fit, rather than just cropping it. |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i> **Remove the selected items** | Removes the selected items from the show. (The original functions are **not** deleted.) |
-| <i class="fa fa-copy fa-2x"></i> **Copy** / <i class="fa fa-paste fa-2x"></i> **Paste** | Copy the selected items and paste them at the cursor position. |
+| <i class="fa fa-copy fa-2x"></i> **Copy** | Copy the selected items into the clipboard. |
+| <i class="fa fa-paste fa-2x"></i> **Paste** | Paste items from the clipboard at the cursor position. |
 | **Time display** | The current cursor time. |
-| <i class="fa fa-play fa-2x"></i> **Play / Pause** / <i class="fa fa-stop fa-2x"></i> **Stop / Rewind** | Play back the show from the cursor, pause/resume, and stop (press again to rewind to the start). |
+| <i class="fa fa-play fa-2x"></i> **Play / Pause** | Play back or pause/resume the Show from the cursor position. |
+| <i class="fa fa-stop fa-2x"></i> **Stop / Rewind** | Stop thr Show playback (press again to rewind to the start). |
 | **Markers** | The time division shown on the header: **Time**, or beats at **BPM 4/4**, **3/4** or **2/4**. |
 | **Zoom** | Zoom the timeline in and out along the time axis. |
 
