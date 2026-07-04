@@ -109,7 +109,7 @@ Sequences, EFX, RGB Matrices, Collections, Scripts, Audio, Video and Shows.
 | Button | What it does |
 |--------|--------------|
 | ![](../basics/functions.svg?resize=48,48) **Function Manager** | Opens the list of all your functions, organised into folders. Select a function here to edit it. |
-| <i class="fa fa-stopwatch fa-2x" style="color:turquoise"></i>**Timing Settings** | (Show Manager only) Adjusts timing settings for the show. |
+| <i class="fa fa-stopwatch fa-2x" style="color:turquoise"></i>**Timing Settings** | ([Show Manager](/show-manager) only) Adjusts timing settings for the show. |
 | <i class="fa fa-plus fa-2x" style="color:limegreen"></i>**Add a new function** | Opens a menu to create a new function. Pick the type and its editor opens automatically. (Only available when function editing is permitted.) |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i>**Delete** | Deletes the selected functions and folders, after asking you to confirm. |
 | ![](../basics/rename.svg?resize=48,48) **Rename** | Renames the selected item. When several items are selected, you can rename them all at once with automatic numbering. |
