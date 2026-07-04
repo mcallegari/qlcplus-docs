@@ -106,7 +106,7 @@ keyboard instead of the mouse.
 | Widget | Purpose |
 |--------|---------|
 | ![](../basics/button.svg?resize=48,48) [Button](/virtual-console/button) | Triggers a function (toggle, flash, blackout, …). |
-| ![](../basics/buttonmatrix.svg?resize=48,48) [Button Matrix](/virtual-console/button-matrix) | Create a grid of buttons inside a frame. |
+| ![](../basics/buttonmatrix2.svg?resize=48,48) [Button Matrix](/virtual-console/button-matrix) | Create a grid of buttons inside a frame. |
 | ![](../basics/slider.svg?resize=48,48) [Slider](/virtual-console/slider) | A fader for levels, submasters, the Grand Master or a function attribute. |
 | ![](../basics/sliders.svg?resize=48,48) [Slider Matrix](/virtual-console/slider-matrix) | Create a grid of sliders inside a frame. |
 | ![](../basics/knob.svg?resize=48,48) [Knob](/virtual-console/slider) | A rotary variant of the Slider. |
