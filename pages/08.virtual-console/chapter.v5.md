@@ -54,7 +54,8 @@ See [VC Page](VCPage.md) for page settings (size, PIN, adding/removing pages).
 | ![](../basics/edit.svg?resize=48,48) **Edit mode** | Toggles edit mode (the button shows a flashing red border while active). With a widget selected it shows that widget's properties. |
 | ![](../basics/functions.svg?resize=48,48) **Function Manager** | Opens the function list so you can drag functions onto widgets to attach them. |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i> **Remove the selected widgets** | Deletes the selected widgets. |
-| <i class="fa fa-copy fa-2x"></i> **Copy** / <i class="fa fa-paste fa-2x"></i> **Paste** | Copy the selected widgets and paste them (you can also drag the paste button onto a target). |
+| <i class="fa fa-copy fa-2x"></i> **Copy** | Copies the selected widgets to the clipboard. |
+| <i class="fa fa-paste fa-2x"></i> **Paste** | Pastes the widgets from the clipboard onto the page. You can also drag the paste button onto a target frame to paste inside it. |
 
 ## Working with widgets
 
