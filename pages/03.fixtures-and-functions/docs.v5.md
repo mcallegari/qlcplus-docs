@@ -140,14 +140,12 @@ The bottom panel is hidden until it's needed. It slides up from the bottom of
 the screen to host editors that work alongside the main view — most often the
 **Scene channel console**, where you set channel values for a scene.
 
-* <i class="fa fa-chevron-up fa-2x"></i> **Expand / Collapse** — opens the panel to its full
-  height or collapses it back to a thin strip. You can also drag the top edge of
-  the panel up or down to set any height you like.
-* <i class="fa fa-copy fa-2x"></i> **Copy to fixtures of the same type** — (Scene console only) copies the
-  selected channel values to every other fixture of the same type, so you don't
-  have to set them one by one.
-* ![](../basics/multiple.svg?resize=48,48) **Toggle multiple channel selection** — (Scene console only) lets you select
-  several channels at once.
+| Button | What it does |
+|--------|--------------|
+| <i class="fa fa-chevron-up fa-2x"></i> **Expand / Collapse** | opens the panel to its full height or collapses it back to a thin strip. You can also drag the top edge of the panel up or down to set any height you like |
+| <i class="fa fa-copy fa-2x"></i> **Copy to fixtures of the same type** | (Scene console only) copies the selected channel values to every other fixture of the same type, so you don't
+  have to set them one by one |
+| ![](../basics/multiple.svg?resize=48,48) **Toggle multiple channel selection** — (Scene console only) lets you select several channels at once |
 
 While the bottom panel is open it shares the screen with the views above it,
 which shrink to make room.
