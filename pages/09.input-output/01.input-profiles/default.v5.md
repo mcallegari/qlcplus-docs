@@ -3,135 +3,157 @@ title: 'Input Profiles'
 date: '04:57 22-08-2023'
 ---
 
+<style>
+table th:first-of-type {
+    width: 25%;
+}
+table th:nth-of-type(2) {
+    width: 75%;
+}
+</style>
+
 ## What is an input profile?
 
-An input profile is a configuration that maps input signals from an external control device (such as a MIDI controller, DMX controller, or other input hardware) to specific functions within QLC+. This allows users to control various aspects of their light show using their preferred hardware interface, without needing to know the underlying communication protocol.
+An **input profile** maps the signals coming from an external control device (a
+MIDI controller, an OSC app, a DMX desk, a joystick, …) to channels QLC+ can
+understand, so you can control your show with your preferred hardware without
+knowing the underlying protocol. Once a profile is assigned to a universe, its
+channels can be linked to Virtual Console widgets, channel groups and more.
 
-## Select an Input Profile
+## Selecting an input profile
 
-QLC+ is bundled with many input profiles ready for you to use. If your device is already supported, you can activate the profile by:
+QLC+ ships with many ready-made profiles. To assign one:
 
-1. Selecting the ![](/basics/input_output.png) Inputs/Outputs tab.
-2. Select the desired universe on the left part of the screen.
-3. Click the Profile tab placed beside the Mapping tab on the top right part of the screen.
-4. Find the input profile and click the accompanying check mark to select it.
+1. Open the ![](/basics/inputoutput.svg?resize=24,24) **Inputs/Outputs** context.
+2. Select the universe on which the device is patched.
+3. Open the **input profiles** list from the left panel (the **P** button).
+4. Find your device's profile and select it. It attaches to the universe's input
+   patch.
 
+## Creating / editing a profile
 
-## Add/Edit a Profile
-
-If the device you want to use isn't in the list of bundled input profiles, you are able to make one yourself. 
-
-**Click the ![](/basics/edit_add.png) create new input profile button to start making a profile definition for your input profile. Alternatively, you can edit any existing profile by selecting the appropriate item and clicking the ![](/basics/edit.png) edit button. The procedure is exactly the same in both cases from now on.**
+If your device isn't in the list, you can make your own. From the input profiles
+list, use the <i class="fa fa-2x fa-plus" style="color:limegreen"></i> button to create
+a new profile, or select an existing one and edit it. Either way the **Input
+Profile Editor** opens; the procedure is the same from here on.
 
 ## Input Profile Editor
 
+The editor is organised into tabs, with a shared toolbar for adding, removing and
+saving items:
+
+| Button | What it does |
+|--------|--------------|
+| <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add** | Adds a new channel / colour / MIDI channel, depending on the current tab. |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove** | Removes the selected item. |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Wizard** | (Input Mapping tab) Toggles the automatic channel-detection wizard (see below). |
+| ![](/basics/filesave.png?resize=48,48) **Save this profile** | Saves the profile. If manufacturer/model are empty you'll be asked to fill them first. |
+
 ### General
-The general tab is the place to enter general information about the fixture (How eloquently named).
 
-#### Manufacturer
-If your manufacturer is already listed, use the same spelling and capitalisation.
-#### Model
-Model names can include the full name and version of the controller. E.g. APC Mini MK2
-#### Type
-**First enter the profile's manufacturer and the model to these fields and select profile type.**
+The **General** area holds the profile's identification:
 
-**Type** is one of:
- - MIDI - for MIDI profiles, usually used with [MIDI plugin](/plugins/midi)
- - OSC - for OSC profiles, used with [OSC plugin](/plugins/osc)
- - HID - for HID profiles, used with [HID plugin](/plugins/hid)
- - DMX - generic DMX profiles
- - ENTTEC - ENTTEC Wing profiles, used with Enttec Wing plugin
+* **Manufacturer** — the device manufacturer. If it's already in the list, use the
+  same spelling and capitalisation.
+* **Model** — the device model, including version if relevant (e.g. "APC Mini
+  MK2").
+* **Type** — the profile type: **MIDI**, **OS2L**, **OSC**, **HID**, **DMX** or
+  **ENTTEC**. MIDI profiles show extra MIDI message fields in the channel editor
+  and expose the **MIDI Channels** tab and MIDI global settings.
 
-So far, the only difference is that MIDI profiles show MIDI message parameters in the channel editor.
+For MIDI profiles a **MIDI Global Settings** option is available: *When MIDI notes
+are used, send a Note Off when value is 0*.
 
-**Now click the Input Mapping tab to edit the profile's channels.** You have two choices for adding channel definitions: Manual and Automatic:
+### Input Mapping
 
-#### Manual mode
-If you're pretty savvy with MIDI codes or have good knowledge of the plugins and how they work, you can enter the parameters manually.
+This tab lists the profile's channels (Channel number, Name and Type). There are
+two ways to add channels.
 
-![](/basics/edit_add.png) Click the add button to enter individual channel information by hand for each channel.  
-![](/basics/edit_remove.png) Click to remove an existing channel  
+**Manual** — use the <i class="fa fa-plus" style="color:limegreen"></i> **Add**
+button to enter channel details by hand. Handy if you know your device's MIDI/OSC
+codes.
 
-#### Automatic mode
-Most of the time, you're better off pressing buttons on your controller to automatically detect and assign them.
+**Automatic** — use the
+<i class="fa fa-wand-magic-sparkles" style="color:cyan"></i> **Wizard** to detect
+channels by operating the controls on your device. QLC+ adds each control as you
+touch it. An input plugin must be patched to the current universe for this to
+work, and you must stop the wizard before leaving the page.
 
-![](/basics/wizard.png) Click the automatic wizard button to attempt automatic channel detection. You'll receive further instructions from QLC+. You must have an [input plugin](/input-output) assigned to the current universe for this feature to work. Also, you must first stop the wizard to be able to navigate away from this dialog page.
+> You cannot add the same channel more than once to a profile.
 
-####  properties
+#### Channel properties
 
-When you add ![](/basics/edit_add.png) or edit ![](/basics/edit.png) a channel, a small window will be displayed, asking you to fill or change some parameters:
+When you add or edit a channel you set:
 
-* **Number**: The channel number. Since QLC+ supports a wide variety of input plugins, the channel number might not be intuitive, so only edit this if you know what you're doing.
-* **Name**: The channel name. This is an arbitrary string to indicate the purpose of a channel.
-* **Type**: The channel type. This can be: ![](/basics/slider.png) Slider, ![](/basics/knob.png) Knob, ![](/basics/button.png) Button or ![](/basics/knob.png) Encoder  
-    Other types: ![](/basics/back.png) Previous page, ![](/basics/forward.png) Next Page, ![](/basics/star.png) Set Page are used to control multipage frames.
+* **Number** — the channel number. Because QLC+ supports many plugins this may not
+  be intuitive, so only change it if you know what you're doing.
+* **Name** — an arbitrary label describing the control's purpose.
+* **Type** — the kind of control:
+  ![](/basics/slider.png?resize=24,24) **Slider**,
+  ![](/basics/knob.png?resize=24,24) **Knob**,
+  ![](/basics/button.png?resize=24,24) **Button** or
+  ![](/basics/knob.png?resize=24,24) **Encoder**. Three special types —
+  ![](/basics/back.png?resize=24,24) **Previous Page**,
+  ![](/basics/forward.png?resize=24,24) **Next Page** and
+  ![](/basics/star.png?resize=24,24) **Page Set** — are used to control
+  multi-page frames.
 
-For MIDI profiles the dialog contains additional fields:
+For **MIDI** profiles the editor adds **Channel**, **Message**, **Param** and
+**Note** fields, letting you enter the MIDI specification in a more intuitive way
+(these translate into the channel number).
 
-* Channel
-* Message
-* Param
-* Note
+#### ![](/basics/slider.png?resize=24,24) Slider movement
 
-where you can enter the channel specification (which translates to channel number) in a more intuitive way.
+Selecting a **Slider** channel reveals its movement behaviour:
 
-  
-**Note that you cannot add the same channel multiple times to one profile.**
+* **Absolute** (default) — QLC+ uses the received value exactly as sent.
+* **Relative** — the value is treated as movement from the widget's current
+  position, useful with an HID joystick driving an [XY Pad](/virtual-console/xy-pad)
+  or [Slider](/virtual-console/slider) widget. A **Sensitivity** value sets how
+  strong the movement is — higher is slower, lower is faster.
 
+#### ![](/basics/knob.png?resize=24,24) Encoder
 
-#### ![](/basics/slider.png) Sliders movement properties
+An encoder is an endless rotary control, always relative: turning it generates
+positive or negative offsets in QLC+. A **Sensitivity** value sets the size of the
+offset added or subtracted per step.
 
-If your input profile includes slider channels, when you click on them you'll notice some extra properties showing up at the bottom of the input profile editor main window. With those, you can set how values received from a slider should act within QLC+.  
-  
-There are two behaviours: Absolute and Relative.  
-  
-**Absolute** is the default setting and basically tells QLC+ to use the slider values exactly as they are received from an external controller.  
-  
-**Relative** is a more advanced behaviour that comes handy when using a HID Joystick with a QLC+ [XY Pad widget](/virtual-console/xy-pad) or a [Slider widget](/virtual-console/slider). Values received from an external controller are treated as relative movement starting from the current position of a Virtual Console widget.  
-Let's make an example. Suppose you have a XY Pad in your Virtual Console, controlling and monitoring a group of moving heads. During your show you will have a number of scenes moving the heads pan and tilt. At some point you want to slightly adjust the position of the heads of just a few degrees. Here is when the relative movement kicks in. When you move your joystick (or external slider) QLC+ will adjust the heads from their current positions. The direction will depend directly from your external controller. The relative movement will stop when the external controller will return to its origin. Joysticks have a spring for that.  
-In addition to this, the Input Profile Editor Relative setting allows you to set a **Sensitivity** parameter that will instruct QLC+ about the strength of your external controller movements. The higher this value is, the slower the movements will occur. The lower, the faster.
+#### ![](/basics/button.png?resize=24,24) Button
 
+Buttons expose extra global behaviour:
 
-#### ![](/basics/knob.png) Encoder properties
+* **Generate an extra Press/Release when toggled** — for devices (e.g. Behringer
+  BCF2000) or software (e.g. TouchOSC) that send only a single value on press.
+  QLC+ synthesises the "missing" release so toggles behave consistently.
+* **Custom Feedback** — with **Lower value** and **Upper value** you force custom
+  values to be sent back when the button is off/on, for example to set the LED
+  colour on AKAI APC devices. This is global, but a specific Virtual Console
+  widget can override it.
 
-An encoder is an endless rotary control and can be treated only as a relative control. Basically the encoder can start at any position and when turned clockwise or counter-clockwise it will generate positive or negative offsets inside QLC+. When an Input Profile channel is set to the Encoder type, it is possible to specify a **sensitivity** value, which is nothing but the relative offset that will be added to or subtracted from the current QLC+ channel value.
+### Colors
 
+Some controllers can display colours on their buttons. This tab lets you define a
+set of feedback colours so they can be picked easily when editing Virtual Console
+widget feedback. Use <i class="fa fa-plus" style="color:limegreen"></i> **Add** to
+add an entry with:
 
-#### ![](/basics/button.png) Button properties
-
-It is possible to change the behaviour of individual buttons from an input profile, and the following properties will be used globally in QLC+.  
-  
-**Generate an extra Press/Release when toggled**: this is a quite specific option used for example when dealing with TouchOSC or the Behringer BCF2000.  
-QLC+ toggle events are triggered when a high+low sequence is received. This means that QLC+ expects a non zero value (typically 255) followed by a zero value to toggle, for example, a button.  
-Devices like BCF2000 or software like TouchOSC, instead, send just a non zero value when activating a button, and a zero value when deactivating it.  
-When checking this option, QLC+ will generate the "missing" events to standardize the way some controller work. So, for example, the BCF2000 will look like sending 255+0 when pressing a button, and another 255+0 when pressing it again.  
-  
-**Custom feedback**: with the "Lower value" and "Upper value" boxes, it is possible to force custom values to be sent when the selected button sends a non-zero and a zero value.  
-For example, with this option it is possible to set globally how AKAI APC devices LEDs should be colored when activated/deactivated.  
-Note that this option is global in QLC+, but it can be overridden if needed by a specific Virtual Console widget, through its configuration page.
-
-### Colours
-Some controllers allow colours to be specified when the button is activated. Input Profiles allow a set of colours to be defined so they can be selected more easily when editing Virtual Console widget feedback. 
-![](/basics/edit_add.png) Click the add button to add a feedback value and corresponding colour.
-#### Feedback Value
-This is the value which QLC+ needs to send the controller in order to generate the colour.
-
-#### Colour Picker
-Pick the colour that the button will be when at the specified value
-
-#### Colour Label
-A name for the created colour. E.g "Blue"
+* **Value** — the value QLC+ must send the controller to produce the colour.
+* **Color** — the colour shown at that value (a colour picker).
+* **Label** — a name for the colour (e.g. "Blue").
 
 ### MIDI Channels
-Some controllers allow different channels to map to different display modes for feedback colours. For example, the AKAI APC Mini MK2 allows for the following channels/modes:
-![](/input-output/input-profile-midi-channels.png)
 
-# Back to the input profile definitions panel
+For MIDI devices that use different MIDI channels for different feedback/display
+modes (for example the AKAI APC Mini MK2), this tab lets you add the relevant
+MIDI channels with a descriptive name, via <i class="fa fa-plus"
+style="color:limegreen"></i> **Add**.
 
-When you're done with channels mapping, click the OK button to accept changes and save the input profile. If you didn't enter a manufacturer/model for the profile, you'll be prompted to enter them before you can continue.  
-Now you should see the profile you just defined in the list of available input profiles. Remember how to assign it to the current universe? Scroll up to Profile assignment if you don't.
+## Saving
 
-To remove any existing input profiles, click the ![](/basics/edit_remove.png) remove button. Note that some profiles are so-called system profiles and cannot be removed unless you're the administrator.
+When you're done, save the profile with the
+![](/basics/filesave.png?resize=24,24) **Save** button (you'll be prompted for
+manufacturer/model if they're missing). Your new profile then appears in the
+input profiles list, ready to assign to a universe as described above.
 
-That's all!  
-Now you can start using your preferred profile. When assigning an input channel to a QLC+ element (like Virtual Console sliders, channel groups, etc..) you will see that your Input profile mapping will be used.
+Note that some bundled profiles are **system profiles** and cannot be removed
+unless you have administrator rights.
