@@ -29,19 +29,19 @@ without looking them up.
 
 ## Insert-method menu
 
-The <i class="fa fa-plus" style="color:limegreen"></i> button inserts a template
+The <i class="fa fa-2x fa-plus" style="color:limegreen"></i> button inserts a template
 for a common command, ready for you to fill in:
 
 | Entry | What it inserts |
 |-------|-----------------|
-| <i class="fa fa-play"></i> **Start function** | Begin running another function. |
-| <i class="fa fa-stop"></i> **Stop function** | Stop a running function. |
-| <i class="fa fa-sliders" style="color:lime"></i> **Set fixture channel** | Set a channel value on a fixture. |
-| <i class="fa fa-hourglass-end" style="color:deepskyblue"></i> **Wait time** | Pause for a given time before the next line. |
-| <i class="fa fa-dice" style="color:coral"></i> **Random number** | Produce a random value. |
-| <i class="fa fa-moon" style="color:darkslateblue"></i> **Blackout** | Turn the blackout on or off. |
-| <i class="fa fa-terminal"></i> **System command** | Run an external command. |
-| <i class="fa fa-folder-open" style="color:gold"></i> **File path** | Opens a file chooser and inserts the selected file's path (quoted), for commands that need a file. |
+| <i class="fa fa-2x fa-play"></i> **Start function** | Begin running another function. |
+| <i class="fa fa-2x fa-stop"></i> **Stop function** | Stop a running function. |
+| <i class="fa fa-2x fa-sliders" style="color:lime"></i> **Set fixture channel** | Set a channel value on a fixture. |
+| <i class="fa fa-2x fa-hourglass-end" style="color:deepskyblue"></i> **Wait time** | Pause for a given time before the next line. |
+| <i class="fa fa-2x fa-dice" style="color:coral"></i> **Random number** | Produce a random value. |
+| <i class="fa fa-2x fa-moon" style="color:darkslateblue"></i> **Blackout** | Turn the blackout on or off. |
+| <i class="fa fa-2x fa-terminal"></i> **System command** | Run an external command. |
+| <i class="fa fa-2x fa-folder-open" style="color:gold"></i> **File path** | Opens a file chooser and inserts the selected file's path (quoted), for commands that need a file. |
 
 ## Engine API
 
