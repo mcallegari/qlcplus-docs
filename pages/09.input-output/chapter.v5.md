@@ -9,72 +9,123 @@ taxonomy:
     #chapter p {
         text-align: left;
     }
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
 </style>
 ### Chapter 8
 
 # Input/Output
 
-By default QLC+ provides 4 universes but you can add/remove them as needed.  
-The input/output mapping is saved in the currently loaded project. This allows you to port your project on another computer/OS without the need to reconfigure it every time.  
-If no project is loaded, QLC+ will keep the I/O mapping as a "fallback" configuration.
+The **Input/Output** context is where you connect QLC+'s internal **universes**
+to the real world — the plugins and devices that send DMX out to your lights, and
+the controllers that send input in. By default QLC+ provides several universes,
+and you can add or remove them as needed.
 
-Input/Output Manager
---------------------
+The input/output mapping is saved inside the current project, so you can move a
+project to another computer or operating system without reconfiguring it. If no
+project is loaded, QLC+ keeps the mapping as a "fallback" configuration.
 
-To access the Input/Output Manager, just click on the tab with the ![](/basics/input_output.png) icon placed on the bottom of the QLC+ main screen.  
-The screen is composed in this way:  
+Open the context from the ![](/basics/inputoutput.svg?resize=24,24)
+**Inputs/Outputs** tab at the bottom of the QLC+ main screen.
 
-* On the left hand side there is the list of internal universes that QLC+ can manage
-* On the right hand side there is the list of devices and their mapped inputs, outputs and feedback lines that QLC+ has detected
-* On the bottom right hand side there is a panel displaying brief information on the currently selected device
+## Layout
 
-Every device has a checkbox whenever an input, output or feedback line is available.  
-Each QLC+ universe can map a single input, a single output and a single feedback line  
+The context is a patch diagram with a panel on each side:
 
-Some plugins might require configuration before they can be used' so you might not be able to see all inputs/outputs at first. The configuration button is place next to the information panel and it is enabled if the plugin allows any manual setting.  
-The button icon is: ![](/basics/configure.png)
+* **Left panel** — the tools for the **input** side of the selected universe
+  (input plugins, input profiles, and plugin/audio configuration).
+* **Centre** — a row of blocks, one per **universe** (plus an audio block at the
+  top). Input patches attach on the left of each block, output patches on the
+  right, drawn as connecting **wires**.
+* **Right panel** — the tools for the **output** side, plus blackout and the
+  universe add/remove buttons.
 
-Adding/Removing universes
--------------------------
+Click a universe block to select it; the side panels then act on that universe.
 
-QLC+ supports any number of universes, depending on the CPU limit of the device controlling them.  
-On the left hand side of the Input/Output Manager there is a toolbar where you can add/remove, name and configure universes.
+## The universe block
 
-|     |     |
-| --- | --- |
-| ![](/basics/edit_add.png) | Add a new universe. The universe will have a name like "Universe X", where X is a progressive number assigned by QLC+ (and also the Universe ID). |
-| ![](/basics/edit_remove.png) | Remove the currently selected universe.  <br>**Please be careful with this operation as it can compromise your project and cannot be reverted.**  <br>When deleting a universe, if it is currently patched or some fixtures are mapped on it, a popup message will appear asking for confirmation if the operation should be completed or abandoned. |
-| **Universe name** | An arbitrary string that you can set to quickly identify the meaning of a Universe |
-| **Passthrough** | See [below](#universe-passthrough) |
+Each universe is drawn as a central block with its wires:
 
-Patching
---------
+* **Name** — double-click the block to rename the universe to something
+  meaningful ("Stage left", "Movers", …).
+* <i class="fa fa-arrow-right-long"></i> **Passthrough** — the small arrow button
+  toggles passthrough for the universe (see [below](#universe-passthrough)).
+* **F — Feedback** — when an input patch is present, the **F** button
+  enables/disables the feedback line back to the controller.
 
-To patch a plugin's input/output line to the selected universe, you need to place a tick in that particular plugin's input/output line. You can have only one line assigned to a universe at a time, so when you check another line, the tick will move from its previous position to the one you just checked.  
-If you don't see any line on a plugin, it means you don't have any device that QLC+ understands and you're left with the one and only (non-selectable) choice: None.
+## Patching
 
-When an input/output line is checked, the corresponding universe information on the left hand side of the screen will change and will display the new configuration set.  
-The plugin information on the bottom right hand side of the screen will change as well and will give you the new status of the plugin line.
+Patching is done by **drag and drop**:
 
-Universe Passthrough
---------------------
+* Open the **input** or **output** plugin list from the side panel (the
+  ![](/basics/inputoutput.svg?resize=24,24) button), then **drag a plugin line**
+  onto the left (input) or right (output) side of a universe block. A wire is
+  drawn to show the connection.
+* Each universe can have **one input** line but **several output** lines (drop
+  more plugin lines on the right to add them).
+* To **remove** a patch, drag its patch block away from the universe and drop it
+  on the <i class="fa fa-trash-can"></i> bin that appears at the bottom of the
+  screen.
 
-When passthrough is enabled, universe just forwards what it receives in its input line to its output line. This is useful for several things:
+If a plugin needs configuration before its lines appear, use the
+![](/basics/configure.svg?resize=24,24) **plugin configuration** button in the
+side panel (it is shown only when the plugin supports manual settings).
 
-* **Protocol converter**: when you want to use QLC+ to act as a "protocol" converter. For example you can use this feature to transparently map an ArtNet network to a DMX USB adapter or even MIDI.
-* **Monitor external data**: patch fixtures and watch the data in DMX monitor
-* **Merge data from external controller**: Have external lighting desk control some of the channels independently and QLC+ control intelligent lights on the same universe.
-* **Raspberry Pi**: forward data from QLC+ on PC while programming scenes; when the workspace is transferred, Raspberry becomes main controller; the devices are always connected to Raspberry Pi
+## Adding / removing universes
 
-Passthrough data is not affected by QLC+ grandmaster or channel modifiers. It is merged in HTP fashion with QLC+ output if there are any fixtures patched at that channel (Note: it does not use LTP/HTP channel settings). Blackout affects passthrough data.
+The right panel holds the universe management buttons:
 
-Input and Feedback
--------------------
+| Button | What it does |
+|--------|--------------|
+| <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new universe** | Adds a new universe, named "Universe X" where X is a progressive number (also its ID). |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected universe** | Removes the last universe. **Be careful — this can affect fixtures patched to it and cannot be undone.** |
 
-When a plugin input line is checked, it gets enabled right away, so you can perform a basic test to double check if your hardware is working properly with QLC+.  
-Just move a fader/knob on your external device, and if everything works fine, you will see a ![](/basics/input.png) icon appearing beside the corresponding universe on the left side of the screen.
+## Blackout
 
-If your input device supports a return channel, QLC+ can send a visual/mechanical feedback to it. Devices such as Behringer BCF2000 support this feature.  
-At the moment feedback is only supported through MIDI, OSC and loopback.
+The right panel also has a blackout toggle
+(<i class="fa fa-eye"></i> / <i class="fa fa-eye-slash"></i>) that forces **all
+output patches** to zero — an instant "lights off" for the whole rig. Toggle it
+again to restore output.
 
-To learn how to setup your external input device for the best use with QLC+, please continue your reading with the [how-to for input profiles](input-profiles).
+## Universe passthrough
+
+When passthrough is enabled, a universe simply forwards whatever it receives on
+its **input** line to its **output** line. This is useful for:
+
+* **Protocol conversion** — e.g. transparently map an Art-Net network to a DMX
+  USB adapter or MIDI.
+* **Monitoring external data** — patch fixtures and watch incoming data in the
+  DMX monitor.
+* **Merging an external desk** — let an external lighting desk control some
+  channels while QLC+ controls intelligent lights on the same universe.
+* **Raspberry Pi setups** — program on a PC, then hand playback to a Pi that stays
+  wired to the devices.
+
+Passthrough data is not affected by the Grand Master or channel modifiers. It is
+merged HTP with QLC+ output where fixtures are patched (it does not use LTP/HTP
+channel settings). Blackout **does** affect passthrough data.
+
+## Audio
+
+The block at the top of the list represents the **audio** input and output
+devices. Select it, then use the ![](/basics/audiocard.svg?resize=24,24) buttons
+in the side panels to choose the audio input source and output device, and the
+![](/basics/configure.svg?resize=24,24) button to open the audio configuration.
+
+## Input and feedback
+
+When an input line is patched it is enabled immediately, so you can test it: move
+a fader or knob on your controller and, if it is working, you'll see input
+activity on that universe.
+
+If your controller has a return channel, QLC+ can send it visual/mechanical
+**feedback** (for example to light up buttons or motorise faders on a Behringer
+BCF2000). Enable it with the **F** button on the universe block. Feedback is
+currently supported over MIDI, OSC and loopback.
+
+To get the most from an external controller, set up an **input profile** — see
+[Input Profiles](input-profiles).
