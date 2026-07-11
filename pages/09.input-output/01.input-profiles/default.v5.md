@@ -47,7 +47,7 @@ saving items:
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add** | Adds a new channel / colour / MIDI channel, depending on the current tab. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove** | Removes the selected item. |
 | <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Wizard** | (Input Mapping tab) Toggles the automatic channel-detection wizard (see below). |
-| ![](/basics/filesave.png?resize=48,48) **Save this profile** | Saves the profile. If manufacturer/model are empty you'll be asked to fill them first. |
+| ![](/basics/filesave.svg?resize=32,32) **Save this profile** | Saves the profile. If manufacturer/model are empty you'll be asked to fill them first. |
 
 ### General
 
@@ -69,12 +69,12 @@ are used, send a Note Off when value is 0*.
 This tab lists the profile's channels (Channel number, Name and Type). There are
 two ways to add channels.
 
-**Manual** — use the <i class="fa fa-plus" style="color:limegreen"></i> **Add**
+**Manual** — use the <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add**
 button to enter channel details by hand. Handy if you know your device's MIDI/OSC
 codes.
 
 **Automatic** — use the
-<i class="fa fa-wand-magic-sparkles" style="color:cyan"></i> **Wizard** to detect
+<i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Wizard** to detect
 channels by operating the controls on your device. QLC+ adds each control as you
 touch it. An input plugin must be patched to the current universe for this to
 work, and you must stop the wizard before leaving the page.
@@ -89,20 +89,20 @@ When you add or edit a channel you set:
   be intuitive, so only change it if you know what you're doing.
 * **Name** — an arbitrary label describing the control's purpose.
 * **Type** — the kind of control:
-  ![](/basics/slider.png?resize=24,24) **Slider**,
-  ![](/basics/knob.png?resize=24,24) **Knob**,
-  ![](/basics/button.png?resize=24,24) **Button** or
-  ![](/basics/knob.png?resize=24,24) **Encoder**. Three special types —
-  ![](/basics/back.png?resize=24,24) **Previous Page**,
-  ![](/basics/forward.png?resize=24,24) **Next Page** and
-  ![](/basics/star.png?resize=24,24) **Page Set** — are used to control
+  ![](/basics/slider.svg?resize=24,24) **Slider**,
+  ![](/basics/knob.svg?resize=24,24) **Knob**,
+  ![](/basics/button.svg?resize=24,24) **Button** or
+  ![](/basics/knob.svg?resize=24,24) **Encoder**. Three special types —
+  ![](/basics/back.svg?resize=24,24) **Previous Page**,
+  ![](/basics/forward.svg?resize=24,24) **Next Page** and
+  ![](/basics/star.svg?resize=24,24) **Page Set** — are used to control
   multi-page frames.
 
 For **MIDI** profiles the editor adds **Channel**, **Message**, **Param** and
 **Note** fields, letting you enter the MIDI specification in a more intuitive way
 (these translate into the channel number).
 
-#### ![](/basics/slider.png?resize=24,24) Slider movement
+#### ![](/basics/slider.svg?resize=24,24) Slider movement
 
 Selecting a **Slider** channel reveals its movement behaviour:
 
@@ -112,13 +112,13 @@ Selecting a **Slider** channel reveals its movement behaviour:
   or [Slider](/virtual-console/slider) widget. A **Sensitivity** value sets how
   strong the movement is — higher is slower, lower is faster.
 
-#### ![](/basics/knob.png?resize=24,24) Encoder
+#### ![](/basics/knob.svg?resize=24,24) Encoder
 
 An encoder is an endless rotary control, always relative: turning it generates
 positive or negative offsets in QLC+. A **Sensitivity** value sets the size of the
 offset added or subtracted per step.
 
-#### ![](/basics/button.png?resize=24,24) Button
+#### ![](/basics/button.svg?resize=24,24) Button
 
 Buttons expose extra global behaviour:
 
@@ -134,7 +134,7 @@ Buttons expose extra global behaviour:
 
 Some controllers can display colours on their buttons. This tab lets you define a
 set of feedback colours so they can be picked easily when editing Virtual Console
-widget feedback. Use <i class="fa fa-plus" style="color:limegreen"></i> **Add** to
+widget feedback. Use <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add** to
 add an entry with:
 
 * **Value** — the value QLC+ must send the controller to produce the colour.
@@ -145,13 +145,13 @@ add an entry with:
 
 For MIDI devices that use different MIDI channels for different feedback/display
 modes (for example the AKAI APC Mini MK2), this tab lets you add the relevant
-MIDI channels with a descriptive name, via <i class="fa fa-plus"
+MIDI channels with a descriptive name, via <i class="fa fa-2x fa-plus"
 style="color:limegreen"></i> **Add**.
 
 ## Saving
 
 When you're done, save the profile with the
-![](/basics/filesave.png?resize=24,24) **Save** button (you'll be prompted for
+![](/basics/filesave.svg?resize=24,24) **Save** button (you'll be prompted for
 manufacturer/model if they're missing). Your new profile then appears in the
 input profiles list, ready to assign to a universe as described above.
 
