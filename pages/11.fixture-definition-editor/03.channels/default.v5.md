@@ -22,9 +22,9 @@ A small toolbar sits at the top of the section:
 
 | Button | What it does |
 |--------|--------------|
-| <i class="fa fa-plus" style="color:limegreen"></i> **Add a new channel** | Creates a new channel and opens the [Channel Editor](#channel-editor) on the right. |
-| <i class="fa fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Removes the selected channels from the fixture **and from all modes**. |
-| <i class="fa fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Creates many similar channels at once (see [Capability wizard](#capability-wizard)). |
+| <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new channel** | Creates a new channel and opens the [Channel Editor](#channel-editor) on the right. |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Removes the selected channels from the fixture **and from all modes**. |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Creates many similar channels at once (see [Capability wizard](#capability-wizard)). |
 
 Click a channel to select it; **double-click** it to open it in the Channel
 Editor. Channels can be **dragged** from this list into a mode's channel list in
@@ -45,9 +45,9 @@ colour, a gobo, prism rotation, and so on). Refer to your fixture's manual (its
 | **Role** | Applicable to channel pairs that make up 16-bit values, usually **Pan** or **Tilt** (some newer fixtures also support 16-bit dimmer, RGB, gobo or focus).<br>For 8-bit values (one channel per feature) assign the **Coarse (MSB)** control byte. For 16-bit values (two channels per feature) assign **Coarse (MSB)** to the coarse channel and **Fine (LSB)** to the fine channel. If unsure, use **Coarse (MSB)**. |
 | **Default value** | The DMX value (0–255) the channel is set to on power up. For example, some moving heads centre their Pan/Tilt, meaning an initial value of 127. |
 | **Capabilities** | The list of DMX value ranges for the channel, each with a **From** value, a **To** value and a **Description**. If a channel provides only one capability (e.g. pan or dimmer) use a channel preset instead. For richer channels (colours, gobos) create a range for each entry (e.g. 0–15 white, 16–32 blue …). Click a row's From / To / Description to edit it; press **Tab** to move between fields and continue onto the next row. A ⚠ warning icon appears on a row whose description is empty or whose range overlaps another. |
-| <i class="fa fa-minus" style="color:crimson"></i> | **Delete the selected capabilities** from the channel. |
-| <i class="fa fa-palette" style="color:yellow"></i> | **Automatic colour assignment** — for a colour channel, fills in standard colour capabilities automatically. |
-| <i class="fa fa-wand-magic-sparkles" style="color:cyan"></i> | **Capability wizard** — creates several equally-sized capabilities at once (see below). |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> | **Delete the selected capabilities** from the channel. |
+| <i class="fa fa-2x fa-palette" style="color:yellow"></i> | **Automatic colour assignment** — for a colour channel, fills in standard colour capabilities automatically. |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> | **Capability wizard** — creates several equally-sized capabilities at once (see below). |
 
 ### Capability preset
 
