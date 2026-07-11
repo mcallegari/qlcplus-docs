@@ -3,31 +3,20 @@ title: 'Script Editor'
 date: '04:07 22-08-2023'
 ---
 
-A **Script** is a function written as a small **JavaScript** program. It lets you
-control fixtures and other functions with logic — starting and stopping
-functions, setting channels, waiting, generating random values, running system
-commands and more. The Script Editor opens in the right panel of the
-[Fixtures and Functions](/fixtures-and-functions) workspace.
+A **Script** is a function written as a small **JavaScript** program. It lets you control fixtures and other functions with logic — starting and stopping functions, setting channels, waiting, generating random values, running system commands and more. The Script Editor opens in the right panel of the [Fixtures and Functions](/fixtures-and-functions) workspace.
 
-The whole script body runs as the contents of a single JavaScript function, so
-you can use ordinary JavaScript — variables, `if`/`for`/`while`, functions, and
-the standard `Math`, `String`, etc. objects. All interaction with QLC+ goes
-through a global object called **`Engine`**, whose methods are documented in the
-[Engine API](#engine-api) below.
+The whole script body runs as the contents of a single JavaScript function, so you can use ordinary JavaScript — variables, `if`/`for`/`while`, functions, and the standard `Math`, `String`, etc. objects. All interaction with QLC+ goes through a global object called **`Engine`**, whose methods are documented in the [Engine API](#engine-api) below.
 
 ## Toolbar
 
-* **Name** — the script's name (top bar).
-* **Back** (arrow) — returns to the previous editor.
-* **Add a method call at cursor position** (＋) — opens a menu of ready-made
-  commands to insert at the cursor (see below).
-* **Show/hide functions tree** (functions icon) — opens the Function Manager in
-  a side panel. **Double-click** or drag a function to insert its ID into the
-  script.
-* **Show/hide fixture tree** (fixture icon) — opens the Fixture Group Manager in
-  a side panel. **Double-click** or drag a fixture to insert its ID.
-* **Check the script syntax** (spell-check icon) — validates the script and
-  reports any errors in a popup.
+| Button | What it does |
+|--------|--------------|
+| **Name** | The script's name (top bar). |
+| <i class="fa fa-chevron-left fa-2x"></i> **Back** | Returns to the previous editor. |
+| <i class="fa fa-plus fa-2x" style="color:limegreen"></i> **Add a method call at cursor position** | Opens a menu of ready-made commands to insert at the cursor (see below). |
+| ![](/basics/functions.svg?resize=48,48) **Show/hide functions tree** | Opens the Function Manager in a side panel. **Double-click** or drag a function to insert its ID into the script. |
+| ![](/basics/fixture.svg?resize=48,48) **Show/hide fixture tree** | Opens the Fixture Group Manager in a side panel. **Double-click** or drag a fixture to insert its ID. |
+| <i class="fa fa-spell-check fa-2x"></i> **Check the script syntax** | Validates the script and reports any errors in a popup. |
 
 ## Writing the script
 
@@ -40,18 +29,19 @@ without looking them up.
 
 ## Insert-method menu
 
-The **＋** button inserts a template for a common command, ready for you to fill
-in:
+The <i class="fa fa-plus" style="color:limegreen"></i> button inserts a template
+for a common command, ready for you to fill in:
 
-* **Start function** — begin running another function.
-* **Stop function** — stop a running function.
-* **Set fixture channel** — set a channel value on a fixture.
-* **Wait time** — pause for a given time before the next line.
-* **Random number** — produce a random value.
-* **Blackout** — turn the blackout on or off.
-* **System command** — run an external command.
-* **File path** — opens a file chooser and inserts the selected file's path
-  (quoted), for commands that need a file.
+| Entry | What it inserts |
+|-------|-----------------|
+| <i class="fa fa-play"></i> **Start function** | Begin running another function. |
+| <i class="fa fa-stop"></i> **Stop function** | Stop a running function. |
+| <i class="fa fa-sliders" style="color:lime"></i> **Set fixture channel** | Set a channel value on a fixture. |
+| <i class="fa fa-hourglass-end" style="color:deepskyblue"></i> **Wait time** | Pause for a given time before the next line. |
+| <i class="fa fa-dice" style="color:coral"></i> **Random number** | Produce a random value. |
+| <i class="fa fa-moon" style="color:darkslateblue"></i> **Blackout** | Turn the blackout on or off. |
+| <i class="fa fa-terminal"></i> **System command** | Run an external command. |
+| <i class="fa fa-folder-open" style="color:gold"></i> **File path** | Opens a file chooser and inserts the selected file's path (quoted), for commands that need a file. |
 
 ## Engine API
 
