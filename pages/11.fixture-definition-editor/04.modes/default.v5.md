@@ -21,8 +21,8 @@ A small toolbar sits at the top of the section:
 
 | Button | What it does |
 |--------|--------------|
-| <i class="fa fa-plus" style="color:limegreen"></i> **Add a new mode** | Creates a new mode and opens the [Mode Editor](#mode-editor) on the right. |
-| <i class="fa fa-minus" style="color:crimson"></i> **Remove the selected mode(s)** | Removes the selected mode. Removing a mode does not delete any channels or other modes. |
+| <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new mode** | Creates a new mode and opens the [Mode Editor](#mode-editor) on the right. |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected mode(s)** | Removes the selected mode. Removing a mode does not delete any channels or other modes. |
 
 Each mode appears as a row showing its name. **Double-click** a mode to open it in
 the Mode Editor.
@@ -40,8 +40,8 @@ this mode.
 
 | Button | What it does |
 |--------|--------------|
-| <i class="fa fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Removes the selected channels from this mode. Other modes are left untouched. |
-| <i class="fa fa-certificate"></i> **Create a new emitter** | Groups the selected channels into a new [emitter](#emitters). |
+| <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Removes the selected channels from this mode. Other modes are left untouched. |
+| <i class="fa fa-2x fa-certificate"></i> **Create a new emitter** | Groups the selected channels into a new [emitter](#emitters). |
 
 To **add** channels to the mode, **drag** them from the [Channels](../channels)
 section into this list (a "Drop channels here" area is shown when the mode is
