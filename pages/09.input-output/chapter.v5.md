@@ -52,7 +52,7 @@ Each universe is drawn as a central block with its wires:
 
 * **Name** — double-click the block to rename the universe to something
   meaningful ("Stage left", "Movers", …).
-* <i class="fa fa-2x fa-arrow-right-long"></i> **Passthrough** — the small arrow button
+* <i class="fa fa-arrow-right-long"></i> **Passthrough** — the small arrow button
   toggles passthrough for the universe (see [below](#universe-passthrough)).
 * **F — Feedback** — when an input patch is present, the **F** button
   enables/disables the feedback line back to the controller.
@@ -68,7 +68,7 @@ Patching is done by **drag and drop**:
 * Each universe can have **one input** line but **several output** lines (drop
   more plugin lines on the right to add them).
 * To **remove** a patch, drag its patch block away from the universe and drop it
-  on the <i class="fa fa-2x fa-trash-can"></i> bin that appears at the bottom of the
+  on the <i class="fa fa-trash-can"></i> bin that appears at the bottom of the
   screen.
 
 If a plugin needs configuration before its lines appear, use the
@@ -87,7 +87,7 @@ The right panel holds the universe management buttons:
 ## Blackout
 
 The right panel also has a blackout toggle
-(<i class="fa fa-2x fa-eye"></i> / <i class="fa fa-2x fa-eye-slash"></i>) that forces **all
+(<i class="fa fa-eye"></i> / <i class="fa fa-eye-slash"></i>) that forces **all
 output patches** to zero — an instant "lights off" for the whole rig. Toggle it
 again to restore output.
 
