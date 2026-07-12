@@ -34,7 +34,7 @@ advances), so a client should simply listen and react.
 
 ## HTTP endpoints
 
-| OpType | Endpoint | Purpose |
+| Operation | Endpoint | Purpose |
 |----|------|---------|
 | GET | / | The Virtual Console web page. |
 | GET | /vc.json | The current Virtual Console layout and widget state as JSON. |
