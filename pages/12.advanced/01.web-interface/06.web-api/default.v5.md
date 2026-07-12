@@ -3,7 +3,7 @@ title: 'Web API'
 date: '03:38 12-07-2026'
 ---
 
-The QLC+ [Web Interface](../web-interface) is driven by a small **API** that you
+The QLC+ [Web Interface](../../web-interface) is driven by a small **API** that you
 can use from your own web pages or scripts to read QLC+'s state and control it
 remotely. This page documents the API used by the version 5 (QML) web access.
 
@@ -17,7 +17,7 @@ Most control happens over the WebSocket.
 ## Connecting
 
 First enable the web interface by starting QLC+ with `-w` (see the
-[Web Interface](../web-interface) page). Then open a WebSocket to:
+[Web Interface](../../web-interface) page). Then open a WebSocket to:
 
 ```
 ws://[IP address]:9999/qlcplusWS
@@ -153,22 +153,6 @@ value or a sub-command. The exact form depends on the widget type.
 | `VC_PAGE|<n>` | Switch the Virtual Console to page *n*. |
 | `GM_VALUE|<value>` | Set the Grand Master. QLC+ also pushes `GM_VALUE|<value>|<display>` when it changes. |
 | `POLL` | A keep-alive; QLC+ ignores it. |
-
-## WebSocket API — configuration
-
-The configuration page uses these commands (they mirror the desktop
-[Input/Output](/input-output) settings):
-
-| Message | Effect |
-|---------|--------|
-| `QLC+IO|INPUT|<universe>|<plugin>|<line>|<profile>` | Patch an input line. |
-| `QLC+IO|OUTPUT|<universe>|<plugin>|<line>` | Patch an output line. |
-| `QLC+IO|FB|<universe>|<plugin>|<line>` | Patch a feedback line. |
-| `QLC+IO|PROFILE|<universe>|<profile>` | Assign an input profile. |
-| `QLC+IO|PASSTHROUGH|<universe>|<true/false>` | Enable/disable passthrough. |
-| `QLC+IO|AUDIOIN|<device>` / `QLC+IO|AUDIOOUT|<device>` | Select audio input/output. |
-| `QLC+AUTH|ADD_USER|…` / `DEL_USER|…` / `SET_USER_LEVEL|…` | Manage authenticated users. |
-| `QLC+SYS|NETWORK|…` / `HOTSPOT|…` / `AUTOSTART|…` / `REBOOT` / `HALT` | System/device controls (where supported). |
 
 ## Notes and limitations
 
