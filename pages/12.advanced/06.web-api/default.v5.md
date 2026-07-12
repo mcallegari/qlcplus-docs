@@ -34,15 +34,15 @@ advances), so a client should simply listen and react.
 
 ## HTTP endpoints
 
-| Endpoint | Purpose |
-|----------|---------|
-| `GET /` | The Virtual Console web page. |
-| `GET /vc.json` | The current Virtual Console layout and widget state as JSON. |
-| `GET /simpleDesk` | The Simple Desk web page. |
-| `GET /config` | The configuration page. |
-| `GET /system` | The system page (network/hotspot/autostart, where supported). |
-| `POST /loadProject` | Upload and load a project (`.qxw`) file. |
-| `POST /loadFixture` | Upload and load a custom fixture definition. |
+| OpType | Endpoint | Purpose |
+|----|------|---------|
+| GET | / | The Virtual Console web page. |
+| GET | /vc.json | The current Virtual Console layout and widget state as JSON. |
+| GET | /simpleDesk | The Simple Desk web page. |
+| GET | /config | The configuration page. |
+| GET | /system | The system page (network/hotspot/autostart, where supported). |
+| POST | /loadProject | Upload and load a project (`.qxw`) file. |
+| POST | /loadFixture | Upload and load a custom fixture definition. |
 
 ## WebSocket API — QLC+API queries
 
