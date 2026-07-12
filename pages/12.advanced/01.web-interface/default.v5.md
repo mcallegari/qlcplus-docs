@@ -40,7 +40,7 @@ The web interface has three pages:
 * **Configuration**
 
 You can also build your own web pages that talk to QLC+ through its
-[Web API](../web-api).
+[Web API](web-api).
 
 ## Virtual Console page
 
