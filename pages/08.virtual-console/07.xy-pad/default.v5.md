@@ -133,9 +133,9 @@ widget settings.
 
 |     |     |
 | --- | --- |
-| ![](/basics/position.svg?resize=48,48) **Create a position preset from current XY position** | Stores the current cursor position as a preset. The default name is the X/Y coordinates at the time of creation. |
-| ![](/basics/functions.svg?resize=48,48) **Drag Scene/EFX functions as presets** | Opens the Function Manager side panel; drop ![](/basics/scene.svg?resize=48,48) [Scene](/basics/glossary-and-concepts#scene) or ![](/basics/efx.svg?resize=48,48) [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
-| ![](/basics/group.svg?resize=48,48) **Drag fixture items as fixture-group presets** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
+| ![](/basics/position.svg?resize=48,48) **Position Preset** | Stores the current cursor XY position as a preset. The default name is the X/Y coordinates at the time of creation. |
+| ![](/basics/functions.svg?resize=48,48) **Scene/EFX Function Preset** | Opens the Function Manager side panel; drop ![](/basics/scene.svg?resize=48,48) [Scene](/basics/glossary-and-concepts#scene) or ![](/basics/efx.svg?resize=48,48) [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
+| ![](/basics/group.svg?resize=48,48) **Fixture Group Preset** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove selected preset** | Deletes the selected preset. |
 | <i class="fa fa-2x fa-arrow-up"></i> / <i class="fa fa-2x fa-arrow-down"></i> **Move selected preset up / down** | Reorders the selected preset, which is also the order of the buttons under the pad. |
 | **Preset name** | Renames the selected preset. The name is what appears on the button. |
