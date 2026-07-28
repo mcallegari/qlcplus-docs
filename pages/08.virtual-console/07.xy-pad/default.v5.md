@@ -133,9 +133,9 @@ widget settings.
 
 |     |     |
 | --- | --- |
-| ![](/basics/position.svg?resize=24,24) **Create a position preset from current XY position** | Stores the current cursor position as a preset. The default name is the X/Y coordinates at the time of creation. |
-| ![](/basics/functions.svg?resize=24,24) **Drag Scene/EFX functions as presets** | Opens the Function Manager side panel; drop ![](/basics/scene.svg?resize=24,24) [Scene](/basics/glossary-and-concepts#scene) or ![](/basics/efx.svg?resize=24,24) [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
-| ![](/basics/group.svg?resize=24,24) **Drag fixture items as fixture-group presets** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
+| ![](/basics/position.svg?resize=48,48) **Create a position preset from current XY position** | Stores the current cursor position as a preset. The default name is the X/Y coordinates at the time of creation. |
+| ![](/basics/functions.svg?resize=48,48) **Drag Scene/EFX functions as presets** | Opens the Function Manager side panel; drop ![](/basics/scene.svg?resize=48,48) [Scene](/basics/glossary-and-concepts#scene) or ![](/basics/efx.svg?resize=48,48) [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
+| ![](/basics/group.svg?resize=48,48) **Drag fixture items as fixture-group presets** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove selected preset** | Deletes the selected preset. |
 | <i class="fa fa-2x fa-arrow-up"></i> / <i class="fa fa-2x fa-arrow-down"></i> **Move selected preset up / down** | Reorders the selected preset, which is also the order of the buttons under the pad. |
 | **Preset name** | Renames the selected preset. The name is what appears on the button. |
@@ -145,20 +145,20 @@ widget settings.
 Only **one preset at a time** can be active. Activating a preset automatically
 deactivates the previous one.
 
-* ![](/basics/position.svg?resize=24,24) **Position** — clicking the button moves
+* ![](/basics/position.svg?resize=48,48) **Position** — clicking the button moves
   the cursor to the stored position. The pad keeps working normally afterwards,
   so you can nudge the position by hand from there.
-* ![](/basics/efx.svg?resize=24,24) **EFX** — starts the
+* ![](/basics/efx.svg?resize=48,48) **EFX** — starts the
   [EFX](/function-manager/efx-editor) function. Click the button again (or
   activate another preset) to stop it. While the EFX runs, the fixture position
   dots show the fixtures moving along the pattern.
-* ![](/basics/scene.svg?resize=24,24) **Scene** — starts the
+* ![](/basics/scene.svg?resize=48,48) **Scene** — starts the
   [Scene](/function-manager/scene-editor) function, which sets its own Pan/Tilt
   values. Click again to stop it.
   > Note that the **whole** Scene is started, colours, dimmers and everything
   > else included. It is best to create dedicated Scenes containing only Pan and
   > Tilt channels for use as XY Pad presets.
-* ![](/basics/group.svg?resize=24,24) **Fixture Group** — restricts the pad to a
+* ![](/basics/group.svg?resize=48,48) **Fixture Group** — restricts the pad to a
   **subset** of the heads it controls: while active, only those heads follow the
   cursor, the others hold their position. Click again to release the restriction
   and control all heads once more. The list shows how many heads the preset
