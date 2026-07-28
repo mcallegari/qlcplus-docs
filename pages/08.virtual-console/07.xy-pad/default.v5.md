@@ -29,18 +29,19 @@ tilt and the bottom edge maximum tilt.
 
 Fixtures are added from the widget **settings**, in the **Fixtures** section:
 
-* Click the ![](../../basics/add.svg?resize=24,24) **Add a fixture/head** button to open the
-  fixture side panel, then **drag** items onto the drop area below the list.
+* Click the **Add a fixture/head** button to open the fixture side panel, then
+  **drag** items onto the drop area below the list.
 * You can drop a **universe**, a **fixture group**, a **fixture** or a single
   **head**. Universes, groups and fixtures are expanded into their individual
-  heads.
-* Only heads that actually have Pan and/or Tilt channels are kept; anything else
-  is silently ignored.
-* Each row of the list shows the head **name** and its current **X-Axis Range**
-  and **Y-Axis Range**.
+  heads, and heads already in the list are not added twice.
+* Each row shows the head **name** and its current **X-Axis Range** and **Y-Axis
+  Range**, in the units of the current Range Display Mode. A reversed axis is
+  marked with **(R)**.
+* Heads with no Pan or Tilt channel can be added, but they simply produce no
+  output — the pad only drives the Pan/Tilt channels it finds.
 
 Select rows in the list (with Ctrl/Shift for multiple selection) to act on them
-with the ![](../../basics/edit.svg?resize=24,24) and ![](../../basics/remove.svg?resize=24,24) buttons.
+with the edit and remove buttons of the same toolbar.
 
 ## Limiting the movement
 
@@ -65,9 +66,9 @@ main area.
 
 ### 2. Per-fixture Pan/Tilt range
 
-Select one or more heads in the **Fixtures** list and click the
-![](../../basics/edit.svg?resize=24,24) **Set the Pan/Tilt range of the selected fixture head(s)**
-button. A dialog lets you set, for both **Pan** and **Tilt**:
+Select one or more heads in the **Fixtures** list and click the **Set the
+Pan/Tilt range of the selected fixture head(s)** button. A dialog lets you set,
+for both **Pan** and **Tilt**:
 
 |     |     |
 | --- | --- |
@@ -117,9 +118,9 @@ The list of heads controlled by the pad, with its toolbar:
 
 |     |     |
 | --- | --- |
-| ![](../../basics/add.svg?resize=24,24) **Add a fixture/head** | Opens the fixture side panel and the drop area to add universes, groups, fixtures or single heads. |
-| ![](../../basics/edit.svg?resize=24,24) **Set the Pan/Tilt range** | Opens the Pan/Tilt range dialog for the selected head(s). See *Per-fixture Pan/Tilt range* above. |
-| ![](../../basics/remove.svg?resize=24,24) **Remove** | Removes the selected head(s) from the pad. |
+| **Add a fixture/head** | Opens the fixture side panel and the drop area to add universes, groups, fixtures or single heads. |
+| **Set the Pan/Tilt range** | Opens the Pan/Tilt range dialog for the selected head(s). See *Per-fixture Pan/Tilt range* above. |
+| **Remove** | Removes the selected head(s) from the pad. |
 
 ## Presets
 
@@ -129,11 +130,11 @@ widget settings.
 
 |     |     |
 | --- | --- |
-| ![](../../basics/position.svg?resize=24,24) **Create a position preset from current XY position** | Stores the current cursor position as a preset. The default name is the X/Y coordinates at the time of creation. |
-| ![](../../basics/functions.svg?resize=24,24) **Drag Scene/EFX functions as presets** | Opens the Function Manager side panel; drop ![](../../basics/scene.svg?resize=24,24) [Scene](/basics/glossary-and-concepts#scene) or ![](../../basics/efx.svg?resize=24,24) [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
-| ![](../../basics/group.svg?resize=24,24) **Drag fixture items as fixture-group presets** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
-| ![](../../basics/remove.svg?resize=24,24) **Remove selected preset** | Deletes the selected preset. |
-| ![](../../basics/arrow-up.svg?resize=24,24) / ![](../../basics/arrow-down.svg?resize=24,24) **Move up / down** | Reorders the selected preset, which is also the order of the buttons under the pad. |
+| **Create a position preset from current XY position** | Stores the current cursor position as a preset. The default name is the X/Y coordinates at the time of creation. |
+| **Drag Scene/EFX functions as presets** | Opens the Function Manager side panel; drop [Scene](/basics/glossary-and-concepts#scene) or [EFX](/basics/glossary-and-concepts#efx) functions on the drop area to turn them into presets. The default name is the function name. Scenes without any Pan or Tilt channel are rejected. |
+| **Drag fixture items as fixture-group presets** | Opens the fixture side panel; drop universes, groups, fixtures or heads to create a fixture-group preset. Only heads already controlled by the pad are kept. |
+| **Remove selected preset** | Deletes the selected preset. |
+| **Move selected preset up / down** | Reorders the selected preset, which is also the order of the buttons under the pad. |
 | **Preset name** | Renames the selected preset. The name is what appears on the button. |
 
 ### Preset types and behaviour
