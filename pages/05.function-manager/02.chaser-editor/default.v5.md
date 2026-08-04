@@ -11,8 +11,8 @@ A **Chaser** plays a list of functions (usually scenes) one after another, each 
 |--------|--------------|
 | **Name** | The chaser's name (top bar). |
 | <i class="fa fa-chevron-left fa-2x"></i> **Back** | Returns to the previous editor. |
-| <i class="fa fa-2x fa-circle-left" style="color:lightcyan"></i> **Preview the previous step** | When preview is running, steps backwards through the chaser so you can check each look on the output. |
-| <i class="fa fa-2x fa-circle-right" style="color:lightcyan"></i> **Preview the next step** | When preview is running, steps forwards through the chaser. |
+| <i class="fa fa-2x fa-circle-left" style="color:cyan"></i> **Preview the previous step** | When preview is running, steps backwards through the chaser so you can check each look on the output. |
+| <i class="fa fa-2x fa-circle-right" style="color:cyan"></i> **Preview the next step** | When preview is running, steps forwards through the chaser. |
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new step** | Opens the Function Manager in a side panel. **Double-click** or drag functions from it to append them as steps. |
 | <i class="fa fa-2x fa-clone"></i> **Duplicate the selected step(s)** | Copies the selected steps, inserting the copies into the list. |
 | <i class="fa fa-2x fa-shuffle" style="color:gold"></i> **Randomize the selected step(s) order** | Shuffles the order of the selected steps. |
