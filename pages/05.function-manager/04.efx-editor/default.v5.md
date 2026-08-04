@@ -21,7 +21,7 @@ The **Fixtures** section lists the fixtures (or heads) taking part in the effect
 
 | Button | What it does |
 |--------|--------------|
-| <i class="fa fa-2x fa-arrow-down-wide-short" style="color:white"></i> **Set an offset on all fixtures** | Opens a popup to spread the fixtures around the path in one go (see below). |
+| <i class="fa fa-2x fa-arrow-down-wide-short"></i> **Set an offset on all fixtures** | Opens a popup to spread the fixtures around the path in one go (see below). |
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a fixture/head** | Opens the Fixture Group Manager in a side panel. Drag universes, groups, fixtures or single heads onto the drop area below the list. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected fixture head(s)** | Removes the selected heads from the effect (asks for confirmation). |
 
