@@ -51,7 +51,7 @@ The **Parameters** section changes completely with the selected pattern, and is 
 | Setting | Meaning |
 |---------|---------|
 | **Text** | The message to display. |
-| <i class="fa fa-2x fa-font" style="color:lightcyan"></i> **Font** | Opens a font chooser for the family, size and style. |
+| <i class="fa fa-2x fa-font" style="color:cyan"></i> **Font** | Opens a font chooser for the family, size and style. |
 | **Animation** | How the text moves: **Letters** (one at a time), **Horizontal** or **Vertical** scrolling. |
 | **Offset X** / **Y** | Shifts the text on the grid (−255 to 255). |
 
