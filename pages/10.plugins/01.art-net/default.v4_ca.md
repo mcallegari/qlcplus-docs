@@ -58,4 +58,4 @@ Aquí els enllaços per descarregar les eines:
 Compatibilitat
 -------------
 
-Els dispositius Art-Net compatibles estan enumerats a la pàgina de [compatibilitat](https://qlcplus.org/discover/compatibility) del lloc web de QLC+.
+Els dispositius Art-Net compatibles estan enumerats a la pàgina de [compatibilitat](https://www.qlcplus.org/discover/compatibility) del lloc web de QLC+.

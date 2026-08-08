@@ -39,7 +39,7 @@
 ## Introduction
 Welcome to the official documentation repository for [qlcplus](https://www.qlcplus.org/)!
 
-The [docs.qlcplus.org](https://docs.qlcplus.org/) website uses the [Grav](https://getgrav.org/) content management system (CMS) and Learn2 with Git Sync plugin. This helps us to collaboratively edit our Markdown-based documentation. When changes are made to this repo the website automatically reflects the changes.
+The [docs.qlcplus.org](https://docs.qlcplus.org/) website uses the [Grav](https://getgrav.org/) content management system (CMS) and Learn2 with Git Sync plugin. This helps us to collaboratively edit our Markdown-based documentation. When changes are made to this repository, the website automatically reflects the changes.
 
 ## Contributing
 
@@ -98,14 +98,15 @@ Engage with the QLC+ community in the [forums](https://www.qlcplus.org/forum/) o
 By contributing to the documentation, you're not only helping yourself but also supporting the QLC+ community. Together, we can create a comprehensive and reliable resource for lighting enthusiasts using QLC+.
 
 ---
-<p align="center" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://docs.qlcplus.org">QLC+ Offiical Documentation</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://qlcplus.org">Massimo Callegari</a> is marked with <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a></p>
-
+<p align="center" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://docs.qlcplus.org">QLC+ Official Documentation</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://qlcplus.org">Massimo Callegari</a> is marked with <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0 Universal<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt=""></a></p>
 
 <p align="center">
     <a href="https://www.instagram.com/qlcplus/" alt="Instagram">
         <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=flat&logo=Instagram&logoColor=white" /></a>
-    <a href="https://www.youtube.com/watch?v=I9bccwcYQpM&" alt="YouTube">
-        <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white" /></a>
+    <a href="https://www.youtube.com/playlist?list=PLHT-wIriuitDiW4A9oKSDr__Z_jcmMVdi" alt="YouTube (v4)">
+        <img src="https://img.shields.io/badge/YouTube%20(v4)-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white" /></a>
+    <a href="https://www.youtube.com/playlist?list=PLHT-wIriuitBQo0DKX9YgWVmS6LsEErE_" alt="YouTube (v5)">
+        <img src="https://img.shields.io/badge/YouTube%20(v5)-%23FF0000.svg?style=flat&logo=YouTube&logoColor=white" /></a>
     <a href="https://www.facebook.com/qlcplus" alt="Facebook">
         <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?style=flat&logo=Facebook&logoColor=white" /></a>
 </p>

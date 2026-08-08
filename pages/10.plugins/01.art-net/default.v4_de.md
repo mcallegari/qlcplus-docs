@@ -59,4 +59,4 @@ Hier die Links zum Herunterladen der Tools:
 Kompatibilität
 -------------
 
-Kompatible Art-Net-Geräte sind auf der [Kompatibilitäts](https://qlcplus.org/discover/compatibility) Seite der QLC+ Website aufgeführt.
+Kompatible Art-Net-Geräte sind auf der [Kompatibilitätsseite](https://www.qlcplus.org/discover/compatibility) der QLC+-Website aufgeführt.

@@ -3,7 +3,7 @@ title: Slider
 date: '03:02 22-08-2023'
 ---
 
-A **Slider** is a fader in the [Virtual Console](VirtualConsole.md). Depending on
+A **Slider** is a fader in the [Virtual Console](/virtual-console). Depending on
 how it's configured it can control the level of a set of channels, act as a
 submaster, drive the Grand Master, or adjust an attribute of a function. The
 **Knob** widget is the same control drawn as a rotary dial instead of a fader.

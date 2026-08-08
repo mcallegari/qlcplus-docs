@@ -11,7 +11,7 @@ show and is useful for visualising beam angles, positions and looks as an
 audience would see them.
 
 It is one of the four views available from the toolbar at the top of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 > **Note:** The 3D View requires a system capable of the necessary graphics
 > rendering. On systems that don't support it, a notice is shown in place of the

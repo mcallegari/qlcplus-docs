@@ -7,7 +7,7 @@ media_order: speeddial.png
 A **Speed Dial** sets and adjusts the **timing** of functions live — the fade in,
 fade out and duration times. Use it to speed up or slow down chases and effects
 on the fly, often tapped in time with the music. It belongs to the
-[Virtual Console](VirtualConsole.md).
+[Virtual Console](/virtual-console).
 
 ## Settings
 
