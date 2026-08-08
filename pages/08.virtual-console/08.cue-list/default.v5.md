@@ -3,10 +3,10 @@ title: 'Cue List'
 date: '03:34 22-08-2023'
 ---
 
-A **Cue List** plays a [Chaser](ChaserEditor.md) one cue (step) at a time, in
+A **Cue List** plays a [Chaser](/function-manager/chaser-editor) one cue (step) at a time, in
 order — exactly like a theatrical cue stack. It's the go-to widget for running a
 scripted show where you advance through looks with a **GO** button. The
-[Virtual Console](VirtualConsole.md).
+[Virtual Console](/virtual-console).
 
 Attach a chaser by dragging it onto the widget or from the settings; each chaser
 step becomes a cue in the list.

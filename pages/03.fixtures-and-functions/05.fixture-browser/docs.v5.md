@@ -8,7 +8,7 @@ taxonomy:
 
 The **Fixture Browser** is where you patch new fixtures into your project. Open
 it with the **Add Fixtures** button at the top of the left panel in the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 It lets you find a fixture definition in the library, set how it should be
 patched, and drag it into one of the views.

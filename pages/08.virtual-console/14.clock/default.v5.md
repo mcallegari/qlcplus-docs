@@ -6,7 +6,7 @@ taxonomy:
         - docs
 ---
 
-A **Clock** widget shows time on the [Virtual Console](VirtualConsole.md) — as a
+A **Clock** widget shows time on the [Virtual Console](/virtual-console) — as a
 running clock, a stopwatch or a countdown — and can **schedule functions** to
 start and stop at set times. It's used for timed and unattended shows (e.g. a
 museum or shop window that runs to a daily schedule).

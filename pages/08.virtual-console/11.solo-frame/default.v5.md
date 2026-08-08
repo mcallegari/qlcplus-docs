@@ -3,8 +3,8 @@ title: 'Solo Frame'
 date: '03:43 22-08-2023'
 ---
 
-A **Solo Frame** is a special [Frame](VCFrame.md) in the
-[Virtual Console](VirtualConsole.md) with one extra rule: only **one** of the
+A **Solo Frame** is a special [Frame](../frame) in the
+[Virtual Console](/virtual-console) with one extra rule: only **one** of the
 functions inside it can play at a time. Starting a function automatically stops
 any other function running from a widget in the same frame.
 
@@ -13,7 +13,7 @@ be mutually exclusive — a row of colour buttons, a bank of scene "states", or 
 palette where selecting a new look replaces the previous one. Without it you'd
 have to stop the old look manually before starting the new one.
 
-A Solo Frame is the same widget as a [Frame](VCFrame.md) and shares all of its
+A Solo Frame is the same widget as a [Frame](../frame) and shares all of its
 settings; it simply adds the solo behaviour and the **Solo Frame Options**
 section.
 
@@ -22,13 +22,13 @@ section.
 * When a widget inside the frame **starts a function**, every other function
   started by widgets in the same frame is **stopped**.
 * This applies to the widgets directly contained in the frame (for example its
-  [Buttons](VCButton.md)), giving you a clean one-at-a-time selector.
+  [Buttons](../button)), giving you a clean one-at-a-time selector.
 * It only affects functions started *from within this frame* — functions running
   elsewhere on the console are not touched.
 
 ## Settings
 
-A Solo Frame has all the [Frame settings](VCFrame.md#settings) — Header, Pages,
+A Solo Frame has all the [Frame settings](../frame#settings) — Header, Pages,
 Shortcuts — plus:
 
 ### Solo Frame Options
@@ -41,8 +41,8 @@ Shortcuts — plus:
 ## Creating one
 
 * Drag **Solo Frame** from the widget list onto the page, **or**
-* When creating a [Button Matrix](VCButtonMatrix.md) or
-  [Slider Matrix](VCSliderMatrix.md), choose **Solo** as the frame type to wrap
+* When creating a [Button Matrix](../button-matrix) or
+  [Slider Matrix](../slider-matrix), choose **Solo** as the frame type to wrap
   the whole grid in a Solo Frame.
 
 ## Tips
