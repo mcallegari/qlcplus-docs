@@ -30,7 +30,7 @@ From any modern browser (on any device on the same network) connect to:
 **http://\[IP address\]:9999**
 
 where *\[IP address\]* is the address of the machine running QLC+ — for example
-`http://192.168.0.100:9999`. The browser must support **WebSockets**, which QLC+
+`http://192.168.0.100:9999`. The browser must support [WebSockets](https://caniuse.com/mdn-api_websocket), which QLC+
 uses to talk to the page in real time.
 
 The web interface has three pages:
