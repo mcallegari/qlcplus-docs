@@ -176,7 +176,7 @@ Input profiles can be thought of as [fixtures'](#fixtures) cousins; they contain
 
 ### LTP (Latest Takes Precedence)
 
-LTP is a rule that decides what level is sent to out to a DMX universe by a channel when the channel is being controlled by more than one [function](#functions) or Virtual Console widget. Generally, it is used for channels that have been assigned to groups other than the **Intensity** group, such as pan, tilt, gobo, strobe speed and other _intelligent fixture parameters_
+LTP is a rule that decides what level is sent to out to a DMX universe by a channel when the channel is being controlled by more than one [function](#functions) or Virtual Console widget. Generally, it is used for channels that have been assigned to groups other than the **Intensity** group, such as pan, tilt, gobo, strobe speed and other _intelligent fixture parameters_.
 
 The LTP rule is simple: the latest level that has been set by a function or a Virtual Console widget gets sent out to the DMX universe.
 

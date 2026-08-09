@@ -4,6 +4,7 @@ taxonomy:
     category:
         - docs
 ---
+
 ### Was ist QLC+?
 
 QLC+ ist eine leistungsstarke und benutzerfreundliche Software für die Lichtsteuerung. Egal, ob Sie ein erfahrener Lichttechniker sind oder gerade erst anfangen. QLC+ ermöglicht es Ihnen Ihre Lichteffekte mit Leichtigkeit zu steuern. Das Hauptziel dieses Projekts ist es, QLC+ auf das Niveau verfügbarer kommerzieller Software zu bringen. QLC+ repräsentiert einen gemeinschaftsorientierten Ansatz in der Softwareentwicklung, da es ein reines Open Source Projekt ist.
@@ -27,8 +28,9 @@ Sie können über [GitHub-Sponsoring](https://github.com/sponsors/mcallegari) od
 Wenn Sie nicht über die Mittel zum Spenden verfügen, gibt es eine Reihe anderer Möglichkeiten, einen Beitrag zu QLC+ zu leisten, darunter:
 1. Teilnahme am offiziellen [QLC+ Forum](https://www.qlcplus.org/forum/)
 2. Verbesserungsvorschläge für diese Dokumentation (siehe Schaltfläche „Diese Seite bearbeiten“ oben rechts)
-3. Erzählen Sie Ihren Freunden von QLC+
-4. Nutzen Sie QLC+ für Ihre Projekte!
+3. Helfen Sie, QLC+ in Ihre Sprache zu übersetzen. Klicken Sie [hier](https://github.com/mcallegari/qlcplus/wiki/How-to-translate-QLC-plus-in-your-language), um mehr darüber zu erfahren.
+4. Erzählen Sie Ihren Freunden von QLC+
+5. Nutzen Sie QLC+ für Ihre Projekte!
 
 ### Sicherheitshinweis
 QLC+ ist nicht für sicherheitskritische Anwendungen wie Pyrotechnik, Flammeneffekte, CO₂-Jets oder motorisierte Bühnenelemente konzipiert oder zertifiziert.
