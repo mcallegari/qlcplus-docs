@@ -54,6 +54,32 @@ settings panel. Its sections can be expanded and collapsed.
   all detail. Turn this down to bring the surfaces back without dimming the
   environment, which **Ambient light** controls separately. It does not affect
   the beams in the air; use **Smoke amount** for those.
+* **Lumens (experimental)** — render your rig photometrically instead of giving
+  every fixture the same output (off by default). Two things change when you
+  tick it. Each fixture is scaled by its real output: a 20000 lumen stage wash
+  and a small LED PAR light the stage very differently in reality, and now they
+  do so in the 3D view as well. The brightness comes from the **Lumens** value
+  in the fixture definition's physical properties, spread over the beam angle
+  so a narrow beam of the same output lands more intensely than a wide one, and
+  measured against the brightest fixture in your project, so that fixture keeps
+  the brightness it had and the rest fall in below it. Light also falls off with
+  distance, as it does in the room: a fixture hung high lays a wider, dimmer
+  pool than the same fixture hung low, and zooming a beam in concentrates it.
+  The distance light travels is measured against the scale of your own rig — the
+  average height your fixtures are placed at — so a small stage and an arena
+  each expose sensibly without a setting to tell them apart. A fixture whose
+  definition leaves Lumens unset is treated as being as bright as the reference,
+  so it never goes dark; if no fixture in the project has the value, nothing
+  changes. Use **Fixture light** alongside it to set the overall level.
+
+    This setting is marked experimental because the look it produces may still
+    change. It depends on your fixture definitions carrying sensible Lumens and
+    beam angle figures, and many do not. It also does not yet handle floor standing
+    fixtures well: uplighters are averaged in with the hung rig when the
+    reference distance is worked out, so a rig that mixes the two can render its
+    uplighters very hot. Turning **Fixture light** down pulls the frame back if
+    that happens. The beams in the air are not affected by the distance falloff
+    yet, only the light landing on surfaces.
 * **Smoke amount** — how much atmospheric haze is in the air (0–100%), which
   makes beams more visible.
 * **Show FPS** — displays a frame-rate counter, useful for judging performance.
