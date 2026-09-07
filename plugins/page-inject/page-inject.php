@@ -33,7 +33,7 @@ class PageInjectPlugin extends Plugin
     {
         return [
             'onPluginsInitialized' => ['onPluginsInitialized', 0],
-            'registerNextGenEditorPlugin' => ['registerNextGenEditorPlugin', 0],
+            'onEditorProShortcodeRegister' => ['onEditorProShortcodeRegister', 0],
         ];
     }
 
@@ -45,6 +45,7 @@ class PageInjectPlugin extends Plugin
         if ($this->isAdmin()) {
             $this->enable([
                 'onAdminTaskExecute' => ['onAdminTaskExecute', 0],
+                'onAssetsInitialized' => ['onAssetsInitialized', 0],
             ]);
             return;
         }
@@ -85,12 +86,64 @@ class PageInjectPlugin extends Plugin
 
             echo json_encode($json_response);
             exit;
+        } elseif ($e['method'] === 'taskListPages') {
+            header('Content-type: application/json');
+            header('Cache-Control: no-cache, no-store, must-revalidate');
+            $controller = $e['controller'];
+
+            if (!$controller->authorizeTask('listPages', ['admin.pages.read', 'admin.super'])) {
+                http_response_code(401);
+                echo json_encode(['status' => 'error', 'message' => 'Unauthorized']);
+                exit;
+            }
+
+            // Use Admin to properly initialize pages
+            $pages = Admin::enablePages();
+            
+            $pageList = [];
+            
+            // Get all pages
+            $allPages = $pages->all();
+            
+            if ($allPages) {
+                foreach ($allPages as $page) {
+                    if ($page && $page->routable()) {
+                        $pageList[] = [
+                            'route' => $page->route(),
+                            'title' => $page->title() ?: $page->slug()
+                        ];
+                    }
+                }
+            }
+            
+            // Sort by route
+            usort($pageList, function($a, $b) {
+                return strcmp($a['route'], $b['route']);
+            });
+
+            echo json_encode([
+                'status' => 'success', 
+                'pages' => $pageList
+            ]);
+            exit;
         }
     }
 
     public function onShortcodeHandlers()
     {
         $this->grav['shortcode']->registerAllShortcodes(__DIR__ . '/classes/shortcodes');
+    }
+
+    public function onAssetsInitialized()
+    {
+        if ($this->isAdmin()) {
+            // Check if Editor Pro is active
+            $config = $this->grav['config'];
+            if ($config->get('plugins.editor-pro.enabled')) {
+                $assets = $this->grav['assets'];
+                $assets->addCss('plugin://page-inject/editor-pro.css');
+            }
+        }
     }
 
     /**
@@ -143,36 +196,133 @@ class PageInjectPlugin extends Plugin
 
     public function onPagesInitialized()
     {
+        // The remote-injection receiver is opt-in and disabled by default. It
+        // serves page content to anonymous remote callers, so a site must
+        // explicitly enable it before this endpoint will respond.
+        if (!$this->config->get('plugins.page-inject.remote_receiver', false)) {
+            return;
+        }
+
         $uri = $this->grav['uri'];
         $type = $uri->query('action');
         $path = $uri->query('path');
         // Handle remote calls
         if (in_array($type, ['page-inject','content-inject']) && isset($path)) {
-           echo $this->getInjectedPageContent($type, $path);
+           // Enforce the injected page's access rules so restricted pages are
+           // not exposed through this unauthenticated endpoint.
+           echo $this->getInjectedPageContent($type, $path, null, null, true);
            exit;
 
         }
     }
 
-    public function registerNextGenEditorPlugin($event) {
-        $plugins = $event['plugins'];
 
-        // page-inject
-        $plugins['css'][] = 'plugin://page-inject/nextgen-editor/plugins/page-inject/page-inject.css';
-        $plugins['js'][] = 'plugin://page-inject/nextgen-editor/plugins/page-inject/page-inject.js';
-
-        $event['plugins']  = $plugins;
-        return $event;
+    public function onEditorProShortcodeRegister($event)
+    {
+        $shortcodes = $event['shortcodes'] ?? [];
+        
+        // Register page-inject shortcode
+        $shortcodes[] = [
+            'name' => 'page-inject',
+            'title' => 'Page Injection',
+            'description' => 'Inject an entire page rendered with its template',
+            'type' => 'block',
+            'plugin' => 'page-inject',
+            'category' => 'content',
+            'group' => 'Page Inject',
+            'icon' => '📄',
+            'attributes' => [
+                'path' => [
+                    'type' => 'page',  // Custom type for page picker
+                    'title' => 'Page Path',
+                    'required' => true,
+                    'placeholder' => 'Select a page to inject',
+                    'skipTitleAttribute' => true  // Don't save title as attribute
+                ],
+                'template' => [
+                    'type' => 'text',
+                    'title' => 'Custom Template (optional)',
+                    'placeholder' => 'Leave empty to use page\'s default template',
+                    'required' => false
+                ]
+            ],
+            'titleBarAttributes' => ['path'],
+            'hasContent' => false,
+            'customRenderer' => 'function(blockData, config) {
+                if (!blockData.attributes || !blockData.attributes.path) {
+                    return "<span class=\"page-inject-placeholder\">📄 Page Injection - No page selected</span>";
+                }
+                
+                const path = blockData.attributes.path;
+                const template = blockData.attributes.template;
+                const title = blockData.attributes.title || path;
+                
+                let html = "<span class=\"page-inject-block\">";
+                html += "<span class=\"page-inject-icon\">📄</span>";
+                html += "<span class=\"page-inject-type\">Page Injection</span>";
+                html += "<span class=\"page-inject-separator\">·</span>";
+                html += "<span class=\"page-inject-route\">" + path + "</span>";
+                if (template) {
+                    html += "<span class=\"page-inject-template\"> (Template: " + template + ")</span>";
+                }
+                html += "</span>";
+                
+                return html;
+            }'
+        ];
+        
+        // Register content-inject shortcode
+        $shortcodes[] = [
+            'name' => 'content-inject',
+            'title' => 'Content Injection',
+            'description' => 'Inject just the content of a page without its template',
+            'type' => 'block',
+            'plugin' => 'page-inject',
+            'category' => 'content',
+            'group' => 'Page Inject',
+            'icon' => '📝',
+            'attributes' => [
+                'path' => [
+                    'type' => 'page',  // Custom type for page picker
+                    'title' => 'Page Path',
+                    'required' => true,
+                    'placeholder' => 'Select a page to inject content from',
+                    'skipTitleAttribute' => true  // Don't save title as attribute
+                ]
+            ],
+            'titleBarAttributes' => ['path'],
+            'hasContent' => false,
+            'customRenderer' => 'function(blockData, config) {
+                if (!blockData.attributes || !blockData.attributes.path) {
+                    return "<span class=\"content-inject-placeholder\">📝 Content Injection - No page selected</span>";
+                }
+                
+                const path = blockData.attributes.path;
+                const title = blockData.attributes.title || path;
+                
+                let html = "<span class=\"content-inject-block\">";
+                html += "<span class=\"content-inject-icon\">📝</span>";
+                html += "<span class=\"content-inject-type\">Content Injection</span>";
+                html += "<span class=\"content-inject-separator\">·</span>";
+                html += "<span class=\"content-inject-route\">" + path + "</span>";
+                html += "</span>";
+                
+                return html;
+            }'
+        ];
+        
+        $event['shortcodes'] = $shortcodes;
     }
 
-    public static function getInjectedPageContent($type, $path, $page = null, $processed_content = null): ?string
+    public static function getInjectedPageContent($type, $path, $page = null, $processed_content = null, $enforce_access = false): ?string
     {
-        $pages = Grav::instance()['pages'];
-        $page = $page ?? Grav::instance()['page'];
+        $grav = Grav::instance();
+        $pages = $grav['pages'];
+        $page = $page ?? $grav['page'];
 
         if (is_null($processed_content)) {
             $header = new Data((array) $page->header());
-            $processed_content = $header->get('page-inject.processed_content') ?? Grav::instance()['config']->get('plugins.page-inject.processed_content', true);
+            $processed_content = $header->get('page-inject.processed_content') ?? $grav['config']->get('plugins.page-inject.processed_content', true);
         }
         preg_match('/(.*)\?template=(.*)|(.*)/i', $path, $template_matches);
 
@@ -185,6 +335,15 @@ class PageInjectPlugin extends Plugin
 
         $inject = $pages->find($page_path);
         if ($inject instanceof PageInterface && $inject->published()) {
+            // When serving through the unauthenticated remote receiver, honor
+            // the injected page's access rules (login plugin) so login-gated
+            // pages are not exposed to anonymous callers.
+            if ($enforce_access && isset($grav['login'])) {
+                $user = $grav['user'] ?? null;
+                if (!$user || !$grav['login']->isUserAuthorizedForPage($user, $inject)) {
+                    return null;
+                }
+            }
             // Force HTML to avoid issues with News Feeds
             $inject->templateFormat('html');
             if ($type == 'page-inject') {

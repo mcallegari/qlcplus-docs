@@ -27,6 +27,8 @@ You should now have all the plugin files under
 ```
 enabled: true
 built_in_css: true
+add_editor_button: true
+editor_insert_mode: link
 player_parameters:
   autoplay: 0
   cc_load_policy: 0
@@ -43,7 +45,7 @@ player_parameters:
   playsinline: 0
   rel: 1
   vq: default
-privacy_enhanced_mode: false
+privacy_enhanced_mode: true
 ```
 
 If you need to change any value, then the best process is to copy the [youtube.yaml](youtube.yaml) file into your `users/config/plugins/` folder (create it if it doesn't exist), and then modify there.  This will override the default settings.
@@ -74,7 +76,7 @@ To use this plugin you simply need to include a youtube URL in markdown link suc
 Will be converted into the following embeded HTML:
 
 ```
-<div class="grav-youtube"><iframe src="https://www.youtube.com/embed/BK8guP9ov2U" frameborder="0" allowfullscreen=""></iframe></div>
+<div class="grav-youtube-wrapper"><div class="grav-youtube"><iframe title="YouTube video player" src="https://www.youtube.com/embed/BK8guP9ov2U" frameborder="0" allowfullscreen=""></iframe></div></div>
 ```
 
 CSS is also loaded to provide the appropriate responsive layout.
@@ -94,6 +96,40 @@ Using the shortcode syntax it is also possible to set a custom thumbnail picture
 ```
 [youtube lazy_load=true thumbnail="name of media.jpg"]https://www.youtube.com/watch?v=BK8guP9ov2U[/youtube]
 ```
+
+## Parameter routing
+
+Shortcode attributes are routed to one of three destinations based on what they are, so a setting only ever ends up where it belongs:
+
+- **YouTube player parameters** (`autoplay`, `rel`, `controls`, `start`, `loop`, etc.) are appended to the embed URL sent to YouTube. See the [YouTube official documentation](https://developers.google.com/youtube/player_parameters) for the full list.
+- **Plugin settings** (`privacy_enhanced_mode`, `lazy_load`, `class`, `thumbnail`) are handled by the plugin and are never added to the URL.
+- **iframe attributes** (`width`, `height`, `title`, and any other attribute) are rendered directly on the `<iframe>` element.
+
+This means a plugin setting such as `privacy_enhanced_mode` no longer leaks into the YouTube URL, and sizing or accessibility attributes apply to the iframe itself:
+
+```
+[youtube width=640 height=360 title="Intro video" privacy_enhanced_mode=true rel=0]https://www.youtube.com/watch?v=BK8guP9ov2U[/youtube]
+```
+
+## Accessibility
+
+Every embed includes a `title` attribute on the iframe, which screen readers announce in place of the video. It defaults to `YouTube video player`; set your own with the `title` shortcode attribute (or the Title field in the Editor Pro dialog) to describe the specific video.
+
+# Editor Button
+
+The plugin adds a YouTube button to the page content editor. Click it, paste a video URL, and the embed code is inserted for you. Turn the button off with `add_editor_button: false`. The button appears in:
+
+- **Admin 1** — the classic markdown editor toolbar.
+- **Admin 2** — both the default (CodeMirror) markdown editor toolbar and the Editor Pro toolbar.
+
+## Insert mode
+
+The `editor_insert_mode` setting controls what the button inserts:
+
+- `link` (default) — inserts a built-in `[plugin:youtube](url)` link. This is rendered by the YouTube plugin on its own and needs no other plugins.
+- `shortcode` — inserts a `[youtube]...[/youtube]` shortcode with the full set of player options exposed as form fields. This format requires the separate `shortcode-core` plugin to render. If `shortcode-core` isn't enabled, the button falls back to the built-in link so it always works.
+
+In Admin 2 the button is provided through the [Editor Pro](https://github.com/trilbymedia/grav-plugin-editor-pro) plugin's toolbar; in shortcode mode the YouTube shortcode is also registered with Editor Pro so it appears in the shortcode picker.
 
 
 [grav]: http://github.com/getgrav/grav

@@ -1,3 +1,27 @@
+# v2.2.2
+## 07/30/2026
+
+1. [](#improved)
+    * Documented the Grav 2.0 settings that affect what injected content is allowed to do
+    * Corrected the documented default for the processed content option
+1. [](#bugfix)
+    * Restricted page content is no longer served to anonymous visitors through the inject endpoint
+    * The remote inject receiver endpoint is now disabled by default and must be explicitly enabled
+
+# v2.2.1
+## 05/01/2026
+
+1. [](#improved)
+    * Added 1.7|2.0 compatibility flags
+
+# v2.2.0
+## 08/25/2025
+
+1. [](#new)
+   * Added support for **Editor Pro** integration 
+1. [](#bugfix)
+    * Fix route -> path issues
+
 # v2.1.6
 ## 03/22/2023
 

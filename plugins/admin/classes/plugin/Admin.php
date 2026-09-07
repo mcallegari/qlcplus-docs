@@ -502,7 +502,10 @@ class Admin
             $root = '';
         }
 
-        $pattern = '`^((' . preg_quote($root, '`') . ')?(/[^/]+)?)' . preg_quote($base, '`') . '`ui';
+        // Match the base only at a path-segment boundary (followed by `/` or end of
+        // string) so a page route like `/pages/administration` is not mistaken for an
+        // existing `/admin` path just because the folder name starts with "admin".
+        $pattern = '`^((' . preg_quote($root, '`') . ')?(/[^/]+)?)' . preg_quote($base, '`') . '(?=/|$)`ui';
         // Check if we already have an admin path: /admin, /en/admin, /root/admin or /root/en/admin.
         if (preg_match($pattern, $redirect)) {
             $redirect = preg_replace('|^' . preg_quote($root, '|') . '|', '', $redirect);
@@ -711,6 +714,10 @@ class Admin
         $code = $data['2fa_code'] ?? null;
 
         $secret = $user->twofa_secret ?? null;
+        // Strip any whitespace from secret (fixes corrupted secrets)
+        if ($secret) {
+            $secret = preg_replace('/\s+/', '', $secret);
+        }
 
         if (!$code || !$secret || !$twoFa->verifyCode($secret, $code)) {
             $login->logout(['admin' => true]);
@@ -1047,6 +1054,11 @@ class Admin
     {
         // Clean fields for all users
         unset($post['hashed_password']);
+
+        // Sanitize twofa_secret: strip all whitespace to prevent corruption
+        if (isset($post['twofa_secret']) && is_string($post['twofa_secret'])) {
+            $post['twofa_secret'] = preg_replace('/\s+/', '', $post['twofa_secret']);
+        }
 
         // Clean field for users who shouldn't be able to modify these fields
         if (!$this->authorize(['admin.user', 'admin.super'])) {
@@ -1721,9 +1733,17 @@ class Admin
 //            $body = Response::get('http://localhost/notifications.json?' . time());
             $notifications = json_decode($body, true);
 
+            // The remote feed can hand back an empty body, an HTML error page,
+            // or otherwise invalid JSON, all of which decode to a non-array.
+            // Guard so PHP 8 doesn't fatal on usort()/array_reverse() being
+            // passed null instead of an array.
+            if (!is_array($notifications)) {
+                $notifications = [];
+            }
+
             // Sort by date
             usort($notifications, function ($a, $b) {
-                return strcmp($a['date'], $b['date']);
+                return strcmp($a['date'] ?? '', $b['date'] ?? '');
             });
 
             // Reverse order and create a new array
@@ -2413,7 +2433,7 @@ class Admin
      */
     public function getLogFiles()
     {
-        $logs = new GravData(['grav.log' => 'Grav System Log', 'email.log' => 'Email Log']);
+        $logs = new GravData(['grav.log' => 'Grav System Log', 'email.log' => 'Email Log', 'scheduler.log' => 'Scheduler Log']);
         Grav::instance()->fireEvent('onAdminLogFiles', new Event(['logs' => &$logs]));
         return $logs->toArray();
     }

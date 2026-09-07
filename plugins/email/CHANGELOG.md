@@ -1,3 +1,93 @@
+# v5.1.0
+## 09/05/2026
+
+1. [](#new)
+    * Email actions and plugins can now set custom headers on a message with a `headers` parameter, a map of header name to value, applied after everything else. The pair this was added for is `List-Unsubscribe` and `List-Unsubscribe-Post`, which together are RFC 8058 one-click unsubscribe: the unsubscribe button next to the sender name in Gmail and Outlook, and the thing a bulk sender is now expected to have. Setting a header that is already there replaces it, a value may be a list for a header that is allowed to repeat, and a name or value that cannot be written is skipped and logged rather than failing the whole send. Plugins building their own message can pass the same list to `applyHeaders()`, and can ask `Email::supportsParameter('headers')` first instead of comparing version numbers
+    * A test suite, run with `tests/vendor/bin/phpunit` after `composer install` inside `tests/`. It installs into `tests/vendor` from its own `tests/composer.json`, so the `vendor` directory the plugin ships stays free of development packages
+    * A provider contract under `classes/Providers/`, so that everything a mail provider knows about itself — how its delivery webhooks are verified and read, how a webhook is created from a pasted API key, what a sending domain's DNS has to say, and what its transport does to custom headers on the way out — lives in that provider's own `grav-plugin-email-<provider>` plugin rather than in whatever add-on happened to need the answer first. A transport plugin implements `Providers\Provider` and registers itself on the new `onEmailProviders` event; `Email::providers()` answers the registry, `Email::providerFor($engine)` and `Email::providerByKey($key)` find one, and a caller asks `Email::supportsFeature('providers')` first rather than comparing version numbers. A transport with no delivery API registers nothing, which is a complete answer: a store can then say plainly that the transport cannot report deliveries instead of showing a webhook address nothing will ever post to. Written up for plugin authors in `docs/providers.md`
+    * `Email::buildMailerFor($engine)` builds a Symfony mailer for a named engine rather than only for the one the site is configured with, through the same transport builder, the same `onEmailTransportDsn` event and the same DSNs as before. Nothing sends through it yet; it is there so that a site which one day wants some of its mail to leave through a second provider has somewhere to ask for that mailer, without that day being the day the transport builder gets rewritten
+    * `Providers\Event::$hard` now has a documented second meaning on a `dropped` event, which is the difference between a subscriber who is gone and one who happened to be on the list the morning the store ran out of quota. `hard = true` means the provider refused the address — it is on that provider's suppression list, or bounced, complained or unsubscribed there — and a store may treat it as permanent. `hard = false` or null means the provider refused this one message: a daily quota, a virus scan, content it did not like. The address is fine. `Event::isRefusedAddress()` is the question a suppression list should be asking, and `docs/providers.md` sets out which of each provider's refusals is which
+    * `Providers\SendHeader` names the header a store stamps its send id into, so that every provider answers the same one and nothing has to hard-code a name. It is `X-Grav-Send-Id` unless the site sets `providers.send_header` in the Email plugin's configuration, or an add-on calls `SendHeader::override()` to name it for the request. The reading of it lives there too — out of a map of custom args or user variables, a `{name, value}` header list, or SES's message tags — because seven transport plugins were each about to keep their own copy of the same twenty lines. `SendHeader::metadataHeader()` is the Postmark twin, which is the same value under the `X-PM-Metadata-` prefix that is the only way metadata reaches a Postmark webhook
+
+# v5.0.8
+## 09/04/2026
+
+1. [](#bugfix)
+    * The help text under the From, To, CC, BCC and Reply-to fields showed the name-addr example as "Your Name `" in the new admin, which renders help as sanitised HTML and dropped `<email@address.org>` as an unknown tag. The example's angle brackets are now written as entities so the format the field accepts is actually shown
+
+# v5.0.7
+## 08/28/2026
+
+1. [](#improved)
+    * The Spanish translation now covers every string, up from two, and the messages asking you to configure a 'to' or 'from' address no longer name the opposite one. Thanks to @pmoreno-rodriguez
+
+# v5.0.6
+## 08/17/2026
+
+1. [](#bugfix)
+    * Email addresses with a stray space around them are no longer thrown away, so a `from`, `to`, `cc`, `bcc` or `reply_to` setting that ends in a space keeps working instead of failing with a confusing "An email must have a From or a Sender header" error.
+    * An address setting containing nothing but spaces now tells you that address needs configuring, rather than failing later with that same confusing error.
+
+# v5.0.5
+## 08/05/2026
+
+1. [](#bugfix)
+    * [security] On Grav 2.0, email settings can no longer read your site, system or theme configuration directly, which was a way around the restriction added in 5.0.4 that already stopped them reading it through `config` ([GHSA-p597-crqc-m349](https://github.com/getgrav/grav/security/advisories/GHSA-p597-crqc-m349)). Requires Grav 2.0.16 or later, which is also where the underlying protection for email settings lives.
+
+# v5.0.4
+## 08/04/2026
+
+1. [](#bugfix)
+    * [security] On Grav 2.0, Twig in a form's email settings now runs under Grav's content sandbox, so someone who can only edit pages can no longer use an email action to run commands on the server ([GHSA-gh8j-q67c-j53f](https://github.com/getgrav/grav/security/advisories/GHSA-gh8j-q67c-j53f)). Requires Grav 2.0.16 or later.
+    * Email settings can still read your site configuration and this plugin's own address settings, so `{{ config.site.emails.sales }}` and `{{ config.plugins.email.to }}` keep working, but they can no longer read your mail server password or any other plugin's settings.
+    * Grav 1.7 has no Twig content sandbox, so email settings behave there exactly as they did before, and the plugin still runs on the PHP versions that line supports.
+
+# v5.0.3
+## 06/14/2026
+
+1. [](#improved)
+    * Email templates that fail to render (a Twig syntax error, or an unresolved include or extends) are now logged to the email and Grav logs instead of failing silently, so a broken template is much easier to track down.
+
+# v5.0.2
+## 06/08/2026
+
+1. [](#improved)
+    * Button links in HTML emails now keep their white text in email clients that force their own link color, by targeting the `a.btn-primary` and `a.btn-secondary` selectors with `!important`.
+
+# v5.0.1
+## 04/17/2026
+
+1. [](improved)
+    * Fixed compatiblity
+
+# v5.0.0
+## 04/17/2026
+
+1. [](#new)
+    * Added Grav 2.0 / Admin 2.0 support
+
+# v4.2.2
+## 12/10/2025
+
+1. [](#bugfix)
+    * Fixed `createAddress()` to gracefully handle empty or invalid email addresses instead of throwing RFC 2822 errors
+    * Fixed Twig processing to bypass Grav 1.8's security filter for trusted email config (fixes issues with `{% include %}` and field names containing `mail`)
+
+# v4.2.1
+## 11/24/2025
+
+1. [](#improved)
+    * Added more details for HTTP error logs when using API-based email providers
+    * Addressed a compatibility issue with Grav 1.8beta
+
+# v4.2.0
+## 08/25/2025
+
+1. [](#new)
+    * PHP 8.4 compatibility
+1. [](#improved)
+    * Vendor library updates
+
 # v4.1.2
 ## 01/06/2025
 

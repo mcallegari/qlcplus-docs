@@ -1,3 +1,44 @@
+# v3.0.1
+## 07/21/2026
+
+1. [](#improved)
+    * Stopped committing a developer build lockfile that raised dependency vulnerability alerts in projects tracking the plugin; the running site is unaffected.
+
+# v3.0.0
+## 04/17/2026
+
+1. [](#new)
+    * Added Grav 2.0 / Admin 2.0 support
+
+# v2.2.3
+## 10/29/2025
+
+1. [](#improved)
+   * `intl` php package is no longer required to install Grav
+
+# v2.2.2
+## 03/21/2025
+
+1. [](#bugfix)
+    * Fix permission warning on Windows [#46](https://github.com/getgrav/grav-plugin-problems/pull/46)
+
+# v2.2.1
+## 03/21/2025
+
+1. [](#bugfix)
+    * Fix path check on windows [#44](https://github.com/getgrav/grav-plugin-problems/pull/44)
+
+# v2.2.0
+## 03/20/2025
+
+1. [](#new)
+    * Extended php module checks [#38](https://github.com/getgrav/grav-plugin-problems/pull/38)  
+1. [](#improved)
+   * Make sure the Essential Folders are listed without extra '/' in front of them
+   * Updated `http://` links to `https://` across files [#41](https://github.com/getgrav/grav-plugin-problems/pull/41)
+   * Clarify Apache module detection text [#40](https://github.com/getgrav/grav-plugin-problems/pull/40)
+   * Ensure essential folder are listed without extra `/` [#39](https://github.com/getgrav/grav-plugin-problems/pull/39)
+
 # v2.1.2
 ## 10/22/2024
 

@@ -7,17 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit408d8a0c98daa5c7fd2b785b76395df1
 {
     public static $prefixLengthsPsr4 = array (
-        'G' => 
+        'G' =>
         array (
             'Grav\\Plugin\\LicenseManager\\' => 27,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Grav\\Plugin\\LicenseManager\\' => 
+        'Grav\\Plugin\\LicenseManager\\' =>
         array (
             0 => __DIR__ . '/../..' . '/classes',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -25,6 +29,7 @@ class ComposerStaticInit408d8a0c98daa5c7fd2b785b76395df1
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit408d8a0c98daa5c7fd2b785b76395df1::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit408d8a0c98daa5c7fd2b785b76395df1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit408d8a0c98daa5c7fd2b785b76395df1::$classMap;
 
         }, null, ClassLoader::class);
     }

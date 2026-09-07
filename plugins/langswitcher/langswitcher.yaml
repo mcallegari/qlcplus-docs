@@ -2,9 +2,4 @@ enabled: true
 built_in_css: true
 translated_urls: true
 untranslated_pages_behavior: none
-language_display: custom
-language_labels:
-  v4: "Version 4 English"
-  v4_de: "Version 4 Deutsch"
-  v4_ca: "Version 4 Català"
-  v5: "Version 5 English"
+language_display: long

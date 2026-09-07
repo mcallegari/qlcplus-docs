@@ -2,6 +2,7 @@ enabled: true
 built_in_css: true
 built_in_js: false
 add_editor_button: true
+editor_insert_mode: link
 player_parameters:
   autoplay: 0
   cc_load_policy: 0
@@ -18,5 +19,5 @@ player_parameters:
   playsinline: 0
   rel: 1
   vq: default
-privacy_enhanced_mode: false
+privacy_enhanced_mode: true
 lazy_load: false

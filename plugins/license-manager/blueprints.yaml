@@ -1,7 +1,7 @@
 name: License Manager
 slug: license-manager
 type: plugin
-version: 1.0.2
+version: 2.0.4
 description: Allow easy management of Grav Premium licenses
 icon: key
 author:
@@ -12,6 +12,8 @@ keywords: grav, plugin, theme, license, manager, premium
 bugs: https://github.com/getgrav/grav-plugin-license-manager/issues
 docs: https://github.com/getgrav/grav-plugin-license-manager/blob/develop/README.md
 license: MIT
+compatibility:
+  grav: ['1.7', '2.0']
 
 form:
   validation: strict

@@ -1,7 +1,7 @@
 name: YouTube
 slug: youtube
 type: plugin
-version: 4.2.0
+version: 4.4.1
 description: "**YouTube** is a simple plugin that converts markdown links or shortcodes into responsive embeds."
 icon: youtube
 author:
@@ -12,6 +12,9 @@ homepage: https://github.com/getgrav/grav-plugin-youtube
 keywords: youtube, markdown
 bugs: https://github.com/getgrav/grav-plugin-youtube/issues
 license: MIT
+
+compatibility:
+  grav: ['1.7', '2.0']
 
 form:
   validation: strict
@@ -61,12 +64,24 @@ form:
       validate:
         type: bool
 
+    editor_insert_mode:
+      type: select
+      size: medium
+      label: Editor button inserts
+      help: "Choose what the editor button inserts. <strong>Built-in parsing</strong> writes a <code>[plugin:youtube](url)</code> link that this plugin renders on its own (no extra plugins needed). <strong>Shortcode</strong> writes a <code>[youtube]</code> shortcode with the full set of player options, but requires the separate <code>shortcode-core</code> plugin to render."
+      default: link
+      options:
+        link: 'Built-in parsing (markdown link)'
+        shortcode: 'Shortcode (requires shortcode-core)'
+      validate:
+        type: string
+
     privacy_enhanced_mode:
       type: toggle
       label: Privacy-enhanced mode
       help: If enabled, YouTube won’t store information about visitors on your web page unless they play the video.
       highlight: 0
-      default: 0
+      default: 1
       options:
         1: Enabled
         0: Disabled

@@ -15,8 +15,9 @@
 
 namespace Grav\Plugin\TwigFeedsPlugin;
 
+use DateTime;
 use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+use Symfony\Component\Filesystem\Exception\IOException;
 use Symfony\Component\Yaml\Yaml;
 use Naneau\SemVer\Parser as SemVerParser;
 use Naneau\SemVer\Compare as SemVerCompare;
@@ -101,10 +102,10 @@ class Utilities
             if (is_dir($path)) {
                 try {
                     $this->fs->remove($path);
-                } catch (IOExceptionInterface $e) {
+                } catch (IOException $e) {
                     throw new \Exception($e);
                 }
-                return 'Removed ' . $path;;
+                return 'Removed ' . $path;
             } else {
                 return 'Not a directory: ' . $path;
             }
@@ -114,8 +115,8 @@ class Utilities
     /**
      * Fetch the plugin version from the blueprints or manifest
      *
-     * @param array $path Path to file
-     * @param array $mode 'blueprint' or 'manifest'
+     * @param string $path Path to file
+     * @param string $mode 'blueprint' or 'manifest'
      *
      * @return string Retrieved version
      */
@@ -209,5 +210,98 @@ class Utilities
         }
 
         return $versions;
+    }
+
+    /**
+     * Try to normalize XML feed-data into a common structure
+     *
+     * @param array $data Input-data
+     *
+     * @return array
+     */
+    public static function normalizeDirectFeedData($data)
+    {
+        if (array_key_exists('channel', $data)) {
+            $data = $data['channel'];
+        } else {
+            return $data;
+        }
+        if (
+            !array_key_exists('items', $data) &&
+            array_key_exists('entry', $data)
+        ) {
+            $data['items'] = $data['entry'];
+            unset($data['entry']);
+        }
+        if (
+            !array_key_exists('items', $data) &&
+            array_key_exists('item', $data)
+        ) {
+            $data['items'] = $data['item'];
+            unset($data['item']);
+        }
+        foreach ($data['items'] as $item) {
+          if (array_key_exists('item', $data)) {
+              $data['items'] = $data['item'];
+              unset($data['item']);
+          }
+        }
+        for ($i=0; $i < count($data['items']); $i++) {
+            if (
+              !array_key_exists('content', $data['items'][$i]) &&
+              array_key_exists('description', $data['items'][$i])
+            ) {
+                $data['items'][$i]['content'] = $data['items'][$i]['description'];
+                unset($data['items'][$i]['description']);
+            }
+            if (
+              !array_key_exists('lastModified', $data['items'][$i]) &&
+              array_key_exists('pubDate', $data['items'][$i])
+            ) {
+                $data['items'][$i]['lastModified'] = $data['items'][$i]['pubDate'];
+                unset($data['items'][$i]['pubDate']);
+            }
+        }
+        return $data;
+    }
+
+    /**
+     * Recursively convert XML-data to a normal array
+     *
+     * @param SimpleXMLElement $xml XML-data
+     *
+     * @return array
+     *
+     * @see https://stackoverflow.com/a/24919807
+     */
+    public static function simpleXml2ArrayWithCDATASupport($xml)
+    {
+        $array = (array) $xml;
+        if (count($array) === 0) {
+            return (string)$xml;
+        }
+        foreach ($array as $key => $value) {
+            if (is_object($value) && strpos(get_class($value), 'SimpleXML') > -1) {
+                $array[$key] = self::simpleXml2ArrayWithCDATASupport($value);
+            } else if (is_array($value)) {
+                $array[$key] = self::simpleXml2ArrayWithCDATASupport($value);
+            } else {
+                continue;
+            }
+        }
+        return $array;
+    }
+
+    public static function logger($logFile, $level = "", $message = "")
+    {
+        if (!$logFile || !is_string($logFile) || empty($logFile)) {
+            return;
+        }
+        $date = new DateTime('now');
+        file_put_contents(
+          $logFile,
+          $date->format('Y-m-d H:i:s') . ' ' . '[' . $level . '] ' . $message . PHP_EOL,
+          FILE_APPEND | LOCK_EX
+        );
     }
 }

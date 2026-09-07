@@ -1,19 +1,36 @@
 {
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "platform-check": false
   },
   "require": {
-    "symfony/filesystem": "^3.2",
+    "symfony/filesystem": "3.4",
     "naneau/semver": "^0.0.7",
-    "debril/feed-io": "^5.0.4",
-    "psr/log": "^1.1",
-    "kevinrob/guzzle-cache-middleware": "^3.2"
+    "kevinrob/guzzle-cache-middleware": "^3.2",
+    "php-feed-io/feed-io": "5.3.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "replace": {
+    "psr/log": "*"
+  },
+  "scripts": {
+    "test": "php vendor/bin/phpunit --no-output",
+    "test:debug": "php vendor/bin/phpunit --no-output --log-events-text php://stdout"
   },
   "autoload": {
     "psr-4": {
       "Grav\\Plugin\\TwigFeedsPlugin\\": "classes/",
-      "Grav\\Plugin\\TwigFeedsPlugin\\API\\": "classes/"
-    }
-  },
-  "platform-check": false
+      "Grav\\Plugin\\TwigFeedsPlugin\\API\\": "classes/",
+      "TwigFeeds\\Tests\\": "tests/",
+      "FeedIo\\Adapter\\Guzzle\\": "classes/FeedIo/Adapter/Guzzle"
+    },
+    "files": [
+      "classes/FeedIo/Adapter/Guzzle/Client.php"
+    ],
+    "exclude-from-classmap": [
+      "vendor/php-feed-io/feed-io/src/FeedIo/Adapter/Guzzle/Client.php"
+    ]
+  }
 }

@@ -4,8 +4,10 @@ namespace Grav\Plugin\Youtube\Twig;
 
 
 use Grav\Common\Grav;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-class YoutubeTwigExtension extends \Twig_Extension
+class YoutubeTwigExtension extends AbstractExtension
 {
     /**
      * Returns extension name.
@@ -23,8 +25,8 @@ class YoutubeTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('youtube_embed_url', [$this, 'embedUrl']),
-            new \Twig_SimpleFunction('youtube_thumbnail_url', [$this, 'thumbnailUrl']),
+            new TwigFunction('youtube_embed_url', [$this, 'embedUrl']),
+            new TwigFunction('youtube_thumbnail_url', [$this, 'thumbnailUrl']),
         ];
     }
 
@@ -47,6 +49,14 @@ class YoutubeTwigExtension extends \Twig_Extension
         if($lazy_load == true) {
             $player_parameters['autoplay'] = true;
         }
+
+        // Defence in depth: never let a non-player key reach the URL, even when
+        // this function is called directly (e.g. the markdown-link path or a
+        // third-party template) without the shortcode handler's partitioning.
+        $player_parameters = array_intersect_key(
+            $player_parameters,
+            array_flip(\Grav\Plugin\YoutubePlugin::PLAYER_PARAMS)
+        );
 
         // filter player parameters to only those not matching YouTube defaults
         $filtered_player_parameters = array();

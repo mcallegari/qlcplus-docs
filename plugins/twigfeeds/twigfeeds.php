@@ -15,6 +15,7 @@
 
 namespace Grav\Plugin;
 
+use Grav\Common\Grav;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 use Grav\Plugin\TwigFeedsPlugin\API\Parser;
@@ -61,6 +62,10 @@ class TwigFeedsPlugin extends Plugin
         return include __DIR__ . '/vendor/autoload.php';
     }
 
+    public $features = [
+        'blueprints' => 10,
+    ];
+
     /**
      * Initialize the plugin and events
      *
@@ -72,6 +77,12 @@ class TwigFeedsPlugin extends Plugin
             $this->grav['log']->error('TwigFeeds-plugin v5 requires PHP v8 or above');
             return;
         }
+        if (!$this->config->get('plugins.twigfeeds.enabled')) {
+            return;
+        }
+        if ($this->config->get('system.debugger.enabled')) {
+            $this->grav['debugger']->startTimer('twigfeeds', 'TwigFeeds');
+        }
         $this->enable(
             [
                 'onBeforeCacheClear' => ['onBeforeCacheClear', 0],
@@ -79,6 +90,9 @@ class TwigFeedsPlugin extends Plugin
                 'onTwigPageVariables' => ['outputFeeds', 0]
             ]
         );
+        if ($this->config->get('system.debugger.enabled')) {
+            $this->grav['debugger']->stopTimer('twigfeeds');
+        }
     }
 
     /**
@@ -115,6 +129,7 @@ class TwigFeedsPlugin extends Plugin
             $config['cache_path'] = $config['locator']->findResource('cache://', true) . '/twigfeeds/';
         }
         $config['blueprint_path'] = $config['locator']->findResource('user://plugins/twigfeeds/blueprints.yaml', true);
+        $config['log_file'] = $config['locator']->findResource('log://' . $config['log_file'], true, true);
         return $config;
     }
 
@@ -136,20 +151,50 @@ class TwigFeedsPlugin extends Plugin
     }
 
     /**
+     * Get taxons
+     *
+     * @param string $taxon Taxonomy-type to get
+     * @param string $fieldType Field-type to prepare data for
+     *
+     * @return array
+     *
+     * @see https://discourse.getgrav.org/t/set-category-and-tag-taxonomies-as-required/21837/12
+     */
+    public static function taxonomyValues(string $taxon, string $fieldType)
+    {
+        $grav = Grav::instance();
+        $admin = $grav['admin'];
+        $admin->enablePages();
+        $taxonomy = $grav['taxonomy'];
+        $keys = $taxonomy->getTaxonomyItemKeys($taxon);
+        $values = [];
+        foreach ($keys as $key) {
+            if ($fieldType === 'select') {
+                $values[$key] = $key;
+            } else {
+                $values[] = [
+                    'text' => $key,
+                    'value' => $key,
+                ];
+            }
+        }
+        return $values;
+    }
+
+    /**
      * Builds array of feeds for iteration, using cache-mechanism if enabled
      *
      * @return array Feeds
      */
     public function outputFeeds()
     {
-        if ($this->isAdmin() || $this->config()['enabled'] != true) {
+        if ($this->isAdmin() || $this->config()['enabled'] !== true) {
             return;
         }
         if (isset($this->grav['twig']->twig_vars['twig_feeds'])) {
             return;
         }
         $config = $this->config();
-
         $utility = new Utilities($config);
         $config['now'] = $utility->now;
         $manifest = new Manifest($config, $utility);
@@ -223,7 +268,7 @@ class TwigFeedsPlugin extends Plugin
                 }
                 $path = $config['cache_path'] . $data['filename'];
                 if (!file_exists($path)) {
-                    $debug ? $this->debug('Can\'t find ' . $data['filename'] . ', writing it') : null;
+                    $debug ? $this->debug('Can\'t find ' . $entry . ' in ' . $data['filename'] . ', writing it') : null;
                     $call = $parser->parseFeed($data, $path);
                     if ($config['silence_security'] && $call == null) {
                         continue;
@@ -274,9 +319,20 @@ class TwigFeedsPlugin extends Plugin
         if ($cache) {
             foreach ($content['data'] as $source => $data) {
                 $filename = $config['cache_path'] . $data['filename'];
-                $content = $parser->readFeed($filename);
-                if ($content) {
-                    $feed_items[$content['name']] = $content;
+                $fileContent = $parser->readFeed($filename);
+                $feedConfig = array_filter($config['twig_feeds'], function ($key) use ($source) {
+                    return $key['source'] === $source;
+                });
+                $fileContent['config'] = $feedConfig[array_key_first($feedConfig)];
+                if ($fileContent) {
+                    if (isset($fileContent['title'])) {
+                        $name = $fileContent['title'];
+                    } elseif (isset($fileContent['name'])) {
+                        $name = $fileContent['name'];
+                    } else {
+                        $name = $source;
+                    }
+                    $feed_items[$name] = $fileContent;
                 } else {
                     $debug ? $this->debug('Could not find ' . $filename . ', continuing') : null;
                 }
@@ -285,6 +341,7 @@ class TwigFeedsPlugin extends Plugin
             foreach ($config['twig_feeds'] as $feed) {
                 $feed['now'] = $utility->now;
                 $feed['cache'] = 'no';
+                $feed['config'] = $feed;
                 if (isset($feed['start'])) {
                     $start = $feed['start'];
                 } else {
@@ -307,7 +364,7 @@ class TwigFeedsPlugin extends Plugin
                 } else {
                     $name = $feed['source'];
                 }
-                $feed_items[$name] = $feed;
+                $feed['amount'] = count($resource['data']['items']);
                 if (isset($resource['data']) && !empty($resource['data'])) {
                     $feed_items[$name] = array_merge($feed, $resource['data']);
                 }

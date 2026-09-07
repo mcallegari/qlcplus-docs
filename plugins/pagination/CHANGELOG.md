@@ -1,3 +1,15 @@
+# v1.4.8
+## 07/02/2026
+
+1. [](#new)
+    * Added `currentPage()`, `itemsPerPage()`, and `pageCount()` accessors so the current page, items per page, and total page count are available from Twig [#58](https://github.com/getgrav/grav-plugin-pagination/pull/58)
+
+# v1.4.7
+## 05/01/2026
+
+1. [](#improved)
+    * Added 1.7|2.0 compatibility flags
+
 # v1.4.6
 ## 02/05/2024
 

@@ -58,76 +58,28 @@
             "install-path": "../bacon/bacon-qr-code"
         },
         {
-            "name": "birke/rememberme",
-            "version": "1.0.5",
-            "version_normalized": "1.0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gbirke/rememberme.git",
-                "reference": "810473852eb4823098e47e23376a19b77ba0c165"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gbirke/rememberme/zipball/810473852eb4823098e47e23376a19b77ba0c165",
-                "reference": "810473852eb4823098e47e23376a19b77ba0c165",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "^1.1.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "time": "2017-02-12T12:43:00+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Birke\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gabriel Birke",
-                    "email": "gb@birke-software.de"
-                }
-            ],
-            "description": "Secure \"Remember Me\" functionality",
-            "homepage": "https://github.com/gbirke/rememberme",
-            "keywords": [
-                "cookie",
-                "remember",
-                "security"
-            ],
-            "install-path": "../birke/rememberme"
-        },
-        {
             "name": "dasprid/enum",
-            "version": "1.0.4",
-            "version_normalized": "1.0.4.0",
+            "version": "1.0.7",
+            "version_normalized": "1.0.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DASPRiD/Enum.git",
-                "reference": "8e6b6ea76eabbf19ea2bf5b67b98e1860474012f"
+                "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/8e6b6ea76eabbf19ea2bf5b67b98e1860474012f",
-                "reference": "8e6b6ea76eabbf19ea2bf5b67b98e1860474012f",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
+                "reference": "b5874fa9ed0043116c72162ec7f4fb50e02e7cce",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1 <9.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7 | ^8 | ^9",
+                "phpunit/phpunit": "^7 || ^8 || ^9 || ^10 || ^11",
                 "squizlabs/php_codesniffer": "*"
             },
-            "time": "2023-03-01T18:44:03+00:00",
+            "time": "2025-09-16T12:23:56+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -154,41 +106,35 @@
             ],
             "support": {
                 "issues": "https://github.com/DASPRiD/Enum/issues",
-                "source": "https://github.com/DASPRiD/Enum/tree/1.0.4"
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.7"
             },
             "install-path": "../dasprid/enum"
         },
         {
-            "name": "paragonie/random_compat",
-            "version": "v1.4.3",
-            "version_normalized": "1.4.3.0",
+            "name": "mober/rememberme",
+            "version": "1.0.4",
+            "version_normalized": "1.0.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "9b3899e3c3ddde89016f576edb8c489708ad64cd"
+                "url": "https://github.com/m-ober/rememberme.git",
+                "reference": "4e71b0d9c692db28ae78c7eea752c4599b87dc2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/9b3899e3c3ddde89016f576edb8c489708ad64cd",
-                "reference": "9b3899e3c3ddde89016f576edb8c489708ad64cd",
+                "url": "https://api.github.com/repos/m-ober/rememberme/zipball/4e71b0d9c692db28ae78c7eea752c4599b87dc2c",
+                "reference": "4e71b0d9c692db28ae78c7eea752c4599b87dc2c",
                 "shasum": ""
             },
-            "require": {
-                "php": ">=5.2.0"
-            },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*"
             },
-            "suggest": {
-                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-            },
-            "time": "2018-04-04T21:48:54+00:00",
+            "time": "2015-07-22T18:26:14+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
+                "psr-4": {
+                    "Birke\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -196,18 +142,22 @@
             ],
             "authors": [
                 {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
+                    "name": "Gabriel Birke",
+                    "email": "gb@birke-software.de"
                 }
             ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "description": "Secure \"Remember Me\" functionality",
+            "homepage": "https://github.com/gbirke/rememberme",
             "keywords": [
-                "csprng",
-                "pseudorandom",
-                "random"
+                "cookie",
+                "remember",
+                "security"
             ],
-            "install-path": "../paragonie/random_compat"
+            "support": {
+                "issues": "https://github.com/m-ober/rememberme/issues",
+                "source": "https://github.com/m-ober/rememberme/tree/1.0.4"
+            },
+            "install-path": "../mober/rememberme"
         },
         {
             "name": "robthree/twofactorauth",

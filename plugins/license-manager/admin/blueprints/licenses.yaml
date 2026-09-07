@@ -22,5 +22,10 @@ form:
       help: PLUGIN_LICENSE_MANAGER.LICENSES_HELP
       placeholder_key: PLUGIN_LICENSE_MANAGER.SLUG
       placeholder_value: PLUGIN_LICENSE_MANAGER.LICENSE
-
-
+    products_title:
+      type: section
+      title: Products Installation State
+      underline: true
+    products_status:
+      type: products-status
+      style: vertical

@@ -11,6 +11,7 @@ use Grav\Common\Uri;
 use Grav\Common\Yaml;
 use Grav\Common\Page\Collection;
 use Grav\Common\Page\Page;
+use Grav\Common\Flex\Types\Pages\PageObject;
 use RocketTheme\Toolbox\Event\Event;
 use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
 use TeamTNT\TNTSearch\Exceptions\IndexNotFoundException;
@@ -202,6 +203,17 @@ class GravTNTSearch
 
         /** @var Twig $twig */
         $twig = $grav['twig'];
+
+        // Ensure the Twig environment is initialised before processing the page
+        // content below. When indexing runs outside the normal page-render
+        // lifecycle — e.g. saving a page through the Grav 2.0 API / Admin2, which
+        // never runs the Twig processor — `$twig->twig` is null and both
+        // `$twig->processTemplate()` and `$page->content()` fail with
+        // "__clone method called on non-object" in Twig::processPage().
+        // Twig::init() is idempotent (guards on `null === $this->twig`), so this
+        // is a no-op during a normal render.
+        $twig->init();
+
         $header = $page->header();
 
         // @phpstan-ignore-next-line
@@ -255,7 +267,7 @@ class GravTNTSearch
      */
     public function deleteIndex($object)
     {
-        if (!$object instanceof Page) {
+        if (!($object instanceof Page || $object instanceof PageObject)) {
             return;
         }
 
@@ -278,7 +290,7 @@ class GravTNTSearch
      */
     public function updateIndex($object)
     {
-        if (!$object instanceof Page) {
+        if (!($object instanceof Page || $object instanceof PageObject)) {
             return;
         }
 
@@ -300,6 +312,11 @@ class GravTNTSearch
 
             if (is_string($filter['items'])) {
                 $filter['items'] = Yaml::parse($filter['items']);
+            }
+
+            $pages = Grav::instance()['pages'];
+            if (method_exists($pages, 'enablePages')) {
+                $pages->enablePages();
             }
 
             $apage = new Page;
@@ -332,8 +349,11 @@ class GravTNTSearch
         if (!$page->routable()) {
             throw new \RuntimeException('not routable...');
         }
-        if ($redirect || (isset($header['tntsearch']['index']) && $header['tntsearch']['index'] === false )) {
+        if ($redirect && !(isset($header['tntsearch']['index']) && $header['tntsearch']['index'] === true)) {
             throw new \RuntimeException('redirect only...');
+        }
+        if (isset($header['tntsearch']['index']) && $header['tntsearch']['index'] === false) {
+            throw new \RuntimeException('skipped by user...');
         }
 
         $route = $page->route();

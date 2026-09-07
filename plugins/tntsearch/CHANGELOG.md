@@ -1,3 +1,35 @@
+# v3.4.6
+## 07/09/2026
+
+1. [](#bugfix)
+    * Fixed a 500 error when saving a page through Admin2 / the API by initialising Twig before the on-save reindex [#145](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/145)
+
+# v3.4.5
+## 06/19/2026
+
+1. [](#new)
+    * Added Dutch language stemmer support [#143](https://github.com/trilbymedia/grav-plugin-tntsearch/pull/143)
+1. [](#bugfix)
+    * Fixed PHP 8.4 deprecation warnings from implicitly nullable function parameters.
+
+# v3.4.4
+## 06/06/2026
+
+1. [](#bugfix)
+    * Register the index-update events regardless of `isAdmin()`, since admin2 saves run through the API plugin where `isAdmin()` is still false at init time, so the handlers were never being subscribed and create/update/delete from the new admin did not reindex [#142](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/142)
+
+# v3.4.3
+## 06/05/2026
+
+1. [](#bugfix)
+    * Fixed admin index not updating on Grav 2.0: listen for the real Flex event names (`onFlexObjectAfterSave`/`onFlexObjectAfterDelete`) and reindex on page move/rename (`onAdminAfterSaveAs`) [#142](https://github.com/trilbymedia/grav-plugin-tntsearch/issues/142)
+
+# v3.4.2
+## 05/01/2026
+
+1. [](#improved)
+    * Added 1.7|2.0 compatibility flags
+
 # v3.4.1
 ## 10/04/2024
 

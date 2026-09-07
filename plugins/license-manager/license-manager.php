@@ -1,6 +1,7 @@
 <?php
 namespace Grav\Plugin;
 
+use Composer\Autoload\ClassLoader;
 use Grav\Common\Plugin;
 use Grav\Plugin\Admin\AdminBaseController;
 use Grav\Plugin\LicenseManager\LicenseManager;
@@ -16,6 +17,11 @@ class LicenseManagerPlugin extends Plugin
     protected $admin_route = 'license-manager';
     protected $data;
 
+    public function autoload(): ClassLoader
+    {
+        return require __DIR__ . '/vendor/autoload.php';
+    }
+
     /**
      * @return array
      *
@@ -29,7 +35,94 @@ class LicenseManagerPlugin extends Plugin
     public static function getSubscribedEvents()
     {
         return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0]
+            'onPluginsInitialized'  => ['onPluginsInitialized', 0],
+            'onApiRegisterRoutes'   => ['onApiRegisterRoutes', 0],
+            'onApiSidebarItems'     => ['onApiSidebarItems', 0],
+            'onApiPluginPageInfo'   => ['onApiPluginPageInfo', 0],
+        ];
+    }
+
+    /**
+     * Register API routes for license management.
+     */
+    public function onApiRegisterRoutes(Event $event): void
+    {
+        $routes = $event['routes'];
+        $controller = \Grav\Plugin\LicenseManager\LicenseApiController::class;
+
+        // Static routes MUST come before parameterized routes (FastRoute constraint)
+        $routes->get('/licenses', [$controller, 'index']);
+        $routes->patch('/licenses', [$controller, 'saveAll']);
+        $routes->post('/licenses', [$controller, 'create']);
+        $routes->get('/licenses/form-data', [$controller, 'formData']);
+        $routes->get('/licenses/export', [$controller, 'export']);
+        $routes->post('/licenses/import', [$controller, 'import']);
+        $routes->get('/licenses/products-status', [$controller, 'productsStatus']);
+        $routes->post('/licenses/validate', [$controller, 'validate']);
+        $routes->get('/licenses/{slug}', [$controller, 'show']);
+        $routes->delete('/licenses/{slug}', [$controller, 'delete']);
+    }
+
+    /**
+     * Register sidebar item for admin-next.
+     */
+    public function onApiSidebarItems(Event $event): void
+    {
+        $items = $event['items'] ?? [];
+        $items[] = [
+            'id'        => 'license-manager',
+            'plugin'    => 'license-manager',
+            'label'     => 'Licenses',
+            'icon'      => 'fa-key',
+            'route'     => '/plugin/license-manager',
+            'priority'  => 10,
+            // Matches LicenseApiController, which requires api.system.read for
+            // every read endpoint. Users without it can't load the page anyway.
+            'authorize' => 'api.system.read',
+        ];
+        $event['items'] = $items;
+    }
+
+    /**
+     * Provide page definition for admin-next plugin page.
+     */
+    public function onApiPluginPageInfo(Event $event): void
+    {
+        if ($event['plugin'] !== 'license-manager') {
+            return;
+        }
+
+        $event['definition'] = [
+            'id'            => 'license-manager',
+            'plugin'        => 'license-manager',
+            'title'         => 'License Manager',
+            'icon'          => 'fa-key',
+            'page_type'     => 'blueprint',
+            'blueprint'     => 'licenses',
+            'data_endpoint' => '/licenses/form-data',
+            'save_endpoint' => '/licenses',
+            'actions'       => [
+                [
+                    'id'       => 'import',
+                    'label'    => 'Import',
+                    'icon'     => 'fa-upload',
+                    'upload'   => true,
+                    'endpoint' => '/licenses/import',
+                ],
+                [
+                    'id'       => 'export',
+                    'label'    => 'Export',
+                    'icon'     => 'fa-download',
+                    'download' => true,
+                    'endpoint' => '/licenses/export',
+                ],
+                [
+                    'id'      => 'save',
+                    'label'   => 'Save',
+                    'icon'    => 'fa-check',
+                    'primary' => true,
+                ],
+            ],
         ];
     }
 
@@ -54,7 +147,7 @@ class LicenseManagerPlugin extends Plugin
                 $enc_payload = $this->grav['uri']->query('payload');
 
                 if ($enc_payload) {
-                    $yaml = json_decode(base64_decode($enc_payload), true);
+                    $yaml = json_decode(base64_decode((string) $enc_payload), true);
                     $controller = new LicenseManagerController(new AdminBaseController(), null);
                     $controller->actionAddLicense($yaml);
                 }

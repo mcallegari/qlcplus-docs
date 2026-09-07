@@ -6,6 +6,40 @@ The **Shortcode Core** plugin allow for the development of simple yet powerful s
 
 This plugin uses the [Thunderer Advanced shortcode engine](https://github.com/thunderer/Shortcode). For more information please check out that repo on GitHub.
 
+## Available Shortcodes
+
+The Shortcode Core plugin provides the following built-in shortcodes:
+
+### Text Formatting
+- **[Underline](#underline)** - Underline text
+- **[Size](#font-size)** - Change font size
+- **[Color](#color)** - Change text color
+- **[Mark](#mark)** - Highlight/mark text
+
+### Text Alignment
+- **[Left](#left-align)** - Left align text
+- **[Center](#center-align)** - Center align text
+- **[Right](#right-align)** - Right align text
+
+### Containers
+- **[Div](#div)** - Wrap content in a div with classes/id
+- **[Span](#span)** - Wrap content in a span with classes/id
+- **[Columns](#columns)** - Create CSS columns
+- **[Details](#detailssummary)** - Collapsible content sections
+
+### Content Elements
+- **[Headers](#headers)** - H1-H6 with classes/id
+- **[Figure](#figure)** - Figure with caption
+- **[Notice](#notice)** - Notice/alert boxes
+- **[Section](#section)** - Named content sections
+
+### Special Functions
+- **[Raw](#raw)** - Prevent shortcode processing
+- **[Safe-Email](#safe-email)** - Encode email addresses
+- **[FontAwesome](#fontawesome)** - Insert FontAwesome icons
+- **[Language](#language)** - Language-specific content
+- **[Lorem](#lorem-ipsum)** - Generate lorem ipsum text
+
 ## Quick Example
 
 ```
@@ -21,8 +55,6 @@ This example functionality is provided with the **Shortcode Core** plugin to pro
 This will render:
 
 ![](assets/shortcode-core-1.png)
-
-The core plugin required for any other shortcode specific plugin. Provides some basic BBCode style syntax such as underline, color, center, and size.
 
 ## Installation
 
@@ -100,9 +132,54 @@ shortcode-core:
     parser: regex
 ```
 
-## Available Shortcodes
+## Building Your Own Shortcodes
 
-The core plugin contains a few simple shortcodes that can be used as basic examples:
+You can add your own shortcodes **without writing a PHP class or a plugin** using the **Shortcode Builder**. Each custom shortcode is backed by either a Twig template file or a short inline output snippet, and you wire it up in config or on the dedicated **Shortcode Builder** tab of the plugin settings (which works in both the classic admin and Admin Next).
+
+This is the recommended way to do the dynamic things people used to reach for Twig-in-content to do. In Grav 2.0, Twig in page content is disabled by default for [security reasons](https://learn.getgrav.org/content/twig-in-content); a shortcode keeps the logic in trusted code (a template or admin-authored config) while the author just writes a clean tag.
+
+The plugin ships with two starter examples you can edit or remove — a template-backed `[callout]` and an inline `[badge]`. They are defined under `shortcodes:` in `user/config/plugins/shortcode-core.yaml`:
+
+```yaml
+shortcodes:
+  - name: callout
+    template: 'shortcodes/callout.html.twig'
+  - name: badge
+    output: '<span class="badge badge-{{ params.style|default("default") }}">{{ content }}</span>'
+```
+
+* **`name`** — the shortcode tag. `callout` makes `[callout]…[/callout]` available.
+* **`template`** — a Twig template path (resolved through Grav's normal Twig lookup, so it can live in your theme or a plugin). Takes precedence over `output` when both are set.
+* **`output`** — an inline Twig snippet, handy for simple one-liners that don't warrant a file.
+
+Inside the template or snippet you have three variables:
+
+| Variable | Description |
+| --- | --- |
+| `params` | the shortcode's parameters, e.g. `params.style` for `[badge style="success"]` |
+| `content` | the content between the opening and closing tags |
+| `shortcode` | the raw shortcode object, for advanced use |
+
+A template-backed example (`templates/shortcodes/callout.html.twig` in your theme):
+
+```twig
+<div class="callout callout--{{ params.type|default('info') }}">
+    {% if params.title %}<strong>{{ params.title }}</strong>{% endif %}
+    <div>{{ content }}</div>
+</div>
+```
+
+Used in a page:
+
+```
+[callout type="warning" title="Heads up"]Save your work first.[/callout]
+```
+
+> **Safety:** the template/output is trusted code, but the author-supplied `params` and `content` it receives are auto-escaped by Twig on output, so untrusted input can't inject markup. Keep attribute values quoted in your templates (e.g. `class="{{ params.x }}"`) so the escaping protects you, exactly as in any Twig template.
+
+## Shortcode Reference
+
+### Text Formatting
 
 #### Underline
 
@@ -118,6 +195,15 @@ Set the size of some text to a specific pixel size
 
 ```
 This is [size=30]bigger text[/size]
+```
+
+#### Color
+
+Change the color of your text using color names or hex values
+
+```
+This is [color=blue]blue text[/color]
+This is [color=#FF0000]red text[/color]
 ```
 
 #### Left Align
@@ -144,6 +230,7 @@ Right align the text between this shortcode
 [right]This text is right aligned[/right]
 ```
 
+### Containers
 
 #### Div
 
@@ -167,13 +254,19 @@ or
 [/div]
 ```
 
+### Content Elements
+
 #### Headers
 
 Allows you to add `id` and `class` attributes to HTML `h1` through `h6` tags:
 
 ```
 [h1 class="major"]This is my title[/h1]
+[h2 id="section-1" class="subtitle"]Section Title[/h2]
+[h3 class="fancy-header"]Subsection[/h3]
 ```
+
+Supports h1 through h6 with any combination of id and class attributes.
 
 #### Span
 
@@ -182,6 +275,10 @@ Allows you to wrap markdown in an HTML `span` tag that supports both `id` and `c
 ```
 [span class="text-center"]
 This text is **centered** aligned
+[/span]
+
+[span id="important" class="highlight"]
+This is **important** highlighted text
 [/span]
 ```
 
@@ -432,28 +529,43 @@ Lorem ipsum dolor sit amet...
 
 **Note:** The show/hide behaviour is not supported in IE 11 or Edge 18, and the element will be permanently open. You can check the current status of browser compatibility at [Can I Use](https://caniuse.com/#search=details).
 
+### Special Functions
+
 #### Lorem Ipsum
 
 Useful for faking content, you can use a shortcode to quickly generate some random "lorem ipsum" text:
 
 **Paragraphs:**
 ```
-[lorem=5 /]
-
-[lorem p=5 tag=div /]
+[lorem=5 /]                    # 5 paragraphs (shorthand)
+[lorem p=5 /]                  # 5 paragraphs
+[lorem p=5 tag=div /]          # Wrap each paragraph in div tags
+[lorem p=3 tag=p /]            # Wrap each paragraph in p tags
 ```
 
 **Sentences:**
 ```
-[lorem s=4 /]
+[lorem s=4 /]                  # 4 sentences
+[lorem sentences=10 /]         # 10 sentences
 ```
 
 **Words:**
 ```
-[lorem w=35 /]
+[lorem w=35 /]                 # 35 words
+[lorem words=50 /]             # 50 words
 ```
 
-## Using Shortcodes in Twig
+**Options:**
+- `p` or `paragraphs` - Number of paragraphs to generate
+- `s` or `sentences` - Number of sentences to generate  
+- `w` or `words` - Number of words to generate
+- `tag` - HTML tag to wrap each paragraph (only for paragraph mode)
+
+The shorthand format `[lorem=X /]` defaults to generating X paragraphs.
+
+## Advanced Usage
+
+### Using Shortcodes in Twig
 
 You can now use shortcodes in Twig templates and process them with the `|shortcodes` filter. For example:
 
@@ -462,7 +574,7 @@ You can now use shortcodes in Twig templates and process them with the `|shortco
 {{ twig_text|shortcodes }}
 ```
 
-## Custom Shortcodes
+### Custom Shortcodes
 
 ### Simple Way
 
@@ -550,7 +662,7 @@ The best way to see how to create a new shortcode-based plugins is to look at th
 * Section Shortcode Example: https://github.com/getgrav/grav-plugin-shortcode-core/blob/develop/shortcodes/SectionShortcode.php
 * Section Prism Highlight Example: https://github.com/trilbymedia/grav-plugin-prism-highlight/blob/develop/shortcodes/PrismShortcode.php
 
-## Processing Shortcodes Before or After Markdown processing
+### Processing Shortcodes Before or After Markdown processing
 
 There are basically two ways of processing a shortcode:
 
@@ -574,10 +686,45 @@ $this->shortcode->getRawHandlers()->add('prism', function(ProcessedShortcode $sc
 
 The difference here is it uses `getRawHandlers()` to ensure the handler is processed to the content in the _raw_ state.
 
-## Display All Shortcodes
+### Display All Shortcodes
 
 You can now display all available shortcodes by using the CLI command:
 
 ```shell
 bin/plugin shortcode-core display
 ```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **Shortcodes not processing**
+   - Ensure the plugin is enabled
+   - Check that `active: true` in configuration
+   - Verify page doesn't have `shortcode-core: active: false` in frontmatter
+
+2. **Shortcodes showing as plain text**
+   - Check parser setting (should be `regular` or `regex`)
+   - Clear Grav cache: `bin/grav cache`
+   - Ensure `include_default_shortcodes: true`
+
+3. **Custom shortcodes not loading**
+   - Verify `custom_shortcodes` path is correct
+   - Check file naming matches class name
+   - Ensure proper namespace in PHP file
+
+## Requirements
+
+- Grav 1.4.0 or higher
+- PHP 7.1.3 or higher
+
+## Credits
+
+- [Thunderer Advanced Shortcode Engine](https://github.com/thunderer/Shortcode) - The powerful shortcode parsing library
+- [FontAwesome](https://fontawesome.com/) - Icon library for fa shortcode
+- [WordPress](https://wordpress.org/) - Inspiration for shortcode syntax
+- [Grav Team](https://getgrav.org) - For the amazing Grav CMS
+
+## License
+
+MIT License - See [LICENSE](LICENSE) file for details

@@ -1,3 +1,37 @@
+# v4.4.1
+## 06/29/2026
+
+1. [](#bugfix)
+    * Shortcode attributes that aren't YouTube player options no longer leak into the embed URL
+    * Sizing and title attributes now apply to the embed iframe instead of being ignored
+    * YouTube embeds now always include a title attribute for accessibility, with an option to customise it
+
+# v4.4.0
+## 06/27/2026
+
+1. [](#new)
+    * Added the editor button to Admin 2, for both the default markdown editor and the Editor Pro editor
+    * Added an "Editor button inserts" setting to choose between a built-in link or a shortcode
+1. [](#improved)
+    * Built-in link is now the default editor output, so the button works without the shortcode-core plugin
+1. [](#bugfix)
+    * Fixed a fatal error on Grav 2.0 that left the YouTube embed missing — the Twig extension now targets Twig 3
+    * Fixed YouTube embeds blanking the page on Grav 2.0 sites with content-Twig security enabled, by deferring the embed past Markdown and registering YouTube as a trusted iframe host
+
+> Note: the Admin 2 default-editor button needs the API plugin and Admin 2 (admin-next) updates that ship the markdown editor toolbar button hook. Trusted-iframe embedding needs Grav core with the `onXssAllowedIframeHosts` allow-list.
+
+# v4.3.1
+## 05/01/2026
+
+1. [](#improved)
+    * Added 1.7|2.0 compatibility flags
+
+# v4.3.0
+## 11/17/2025
+
+1. [](#new)
+    * Added Editor Pro support Shortcode format
+
 # v4.2.0
 ## 04/20/2023
 

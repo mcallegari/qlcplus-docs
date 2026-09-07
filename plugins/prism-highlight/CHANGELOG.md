@@ -1,3 +1,15 @@
+# v3.0.2
+## 08/11/2026
+
+1. [](#bugfix)
+    * Excluded the pre-minified `prism.js` from Grav's JS pipeline so it no longer triggers a minification error.
+
+# v3.0.1
+## 04/30/2026
+
+1. [](#bugfix)
+    * Fixed PHP 8.1+ deprecation notice — explicit string casts where `null` was being passed to string-typed function arguments.
+
 # v3.0.0
 ## 08/23/2022
 

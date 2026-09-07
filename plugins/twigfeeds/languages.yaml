@@ -11,6 +11,9 @@ en:
         DEBUG:
           LABEL: Debug
           DESCRIPTION: Enables Debug-mode, which logs to Grav's Debugger and log-file.
+        LOGFILE:
+          LABEL: Logfile
+          DESCRIPTION: Where to log parser-output, relative to `log://`, or empty to disable.
         SILENCE_SECURITY:
           LABEL: Silence security errors
           DESCRIPTION: Silently ignores security errors, such as missing certificates.
@@ -28,6 +31,15 @@ en:
           END:
             LABEL: Item End
             DESCRIPTION: End of feed results. Must be a number between 0 and 500.
+          CATEGORIES:
+            LABEL: Categories
+            DESCRIPTION: A broader grouping of metadata, like 'news' or 'people'
+          TAGS:
+            LABEL: Tags
+            DESCRIPTION: A narrower grouping of metadata, like 'Leipzig' or 'Manchester'
+          MODE:
+            LABEL: Mode
+            DESCRIPTION: Operation-mode, 'default', 'direct' or 'raw'
           CACHE_TIME:
             LABEL: Cache Time
             DESCRIPTION: Time, in seconds, to wait before caching data again.
