@@ -58,10 +58,10 @@ gets its own **tab** on the row below, so you can work on several at once.
 | Button | What it does |
 |--------|--------------|
 | <i class="fa fa-chevron-left"></i> **Back to QLC+** | Closes the editor and returns to QLC+ (prompting you to save any unsaved changes first). |
-| ![](../basics/filenew.png) **New definition** | Creates a new, empty fixture definition in a new tab. |
-| ![](../basics/fileopen.png) **Open definition** | Opens an existing `.qxf` fixture definition in a new tab. |
-| ![](../basics/filesave.png) **Save definition** | Saves the definition in the active tab. |
-| ![](../basics/filesaveas.png) **Save definition as…** | Saves the active definition under a new name. |
+| ![](../basics/filenew.svg) **New definition** | Creates a new, empty fixture definition in a new tab. |
+| ![](../basics/fileopen.svg?resize=48,48) **Open definition** | Opens an existing `.qxf` fixture definition in a new tab. |
+| ![](../basics/filesave.svg?resize=48,48) **Save definition** | Saves the definition in the active tab. |
+| ![](../basics/filesaveas.svg?resize=48,48) **Save definition as…** | Saves the active definition under a new name. |
 
 ## The editor
 
