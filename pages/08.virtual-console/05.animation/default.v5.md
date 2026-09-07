@@ -3,10 +3,10 @@ title: Animation
 date: '03:09 22-08-2023'
 ---
 
-An **Animation** widget plays and controls an [RGB Matrix](RGBMatrixEditor.md)
+An **Animation** widget plays and controls an [RGB Matrix](/function-manager/rgb-matrix-editor)
 function, letting you change its **colours** and switch its **pattern preset**
 live. It's the performance front-end for pixel/LED effects in the
-[Virtual Console](VirtualConsole.md).
+[Virtual Console](/virtual-console).
 
 Attach an RGB Matrix function by dragging it onto the widget or from the
 settings.

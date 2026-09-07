@@ -51,4 +51,4 @@ in the time editor.
 
 > When a scene is part of a **Sequence**, it is edited through the Sequence
 > Editor's *Fixtures* tab rather than on its own. See
-> [Sequence Editor](SequenceEditor.md).
+> [Sequence Editor](../sequence-editor).

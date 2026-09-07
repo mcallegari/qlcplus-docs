@@ -12,7 +12,7 @@ exactly which channels each fixture occupies, spotting gaps or overlaps, and
 re-addressing fixtures.
 
 It is one of the four views available from the toolbar at the top of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace. Use the **universe
+[Fixtures and Functions](/fixtures-and-functions) workspace. Use the **universe
 selector** in that toolbar to choose which universe you are looking at.
 
 ## The grid

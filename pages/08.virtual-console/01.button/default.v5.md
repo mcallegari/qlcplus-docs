@@ -3,7 +3,7 @@ title: Button
 date: '14:26 21-08-2023'
 ---
 
-A **Button** is the simplest [Virtual Console](VirtualConsole.md) widget: press
+A **Button** is the simplest [Virtual Console](/virtual-console) widget: press
 it to trigger a function. It's the building block of most consoles — one button
 per scene, chase or effect you want to fire.
 
@@ -32,7 +32,7 @@ from the button's settings.
 
 ## Tips
 
-* Combine buttons with a [Solo Frame](VCFrame.md) so that pressing one button
+* Combine buttons with a [Solo Frame](../solo-frame) so that pressing one button
   automatically stops the others — ideal for a row of mutually-exclusive looks.
 * Add an **external input** or **keyboard shortcut** (External controls tab) to
   fire the button from hardware or the keyboard.

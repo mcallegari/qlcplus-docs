@@ -6,7 +6,7 @@ date: '03:46 22-08-2023'
 An **Audio Triggers** widget listens to live audio (from the computer's audio
 input) and uses its **frequency spectrum** to drive functions, DMX channels or
 other widgets. It's how you make lights react to music automatically in the
-[Virtual Console](VirtualConsole.md).
+[Virtual Console](/virtual-console).
 
 The incoming sound is split into a number of **frequency bars** (bass to treble),
 and each bar can be assigned a target that it controls as the music plays.

@@ -6,7 +6,7 @@ media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 
 An **XY Pad** is a two-axis control for **pan and tilt** — drag the cursor around
 the pad and the attached moving fixtures follow. It's the natural way to position
-moving heads and scanners by hand from the [Virtual Console](VirtualConsole.md).
+moving heads and scanners by hand from the [Virtual Console](/virtual-console).
 
 The pad's horizontal axis drives **pan** and the vertical axis drives **tilt**.
 The whole area represents the complete range of movement your fixtures can reach:
