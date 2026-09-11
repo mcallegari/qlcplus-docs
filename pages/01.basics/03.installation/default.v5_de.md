@@ -22,7 +22,7 @@ Für die Installation sind keine Administratorrechte erforderlich, es sei denn, 
 
 QLC+ für macOS ist als DMG-Datei verfügbar.
 
-Doppelklicke darauf und starte QLC+ direkt. Alternativ kannst du es per Drag-and-Drop in den Anwendungsordner ziehen.
+Doppelklicke darauf und starte QLC+ direkt. Alternativ kannst du sie per Drag-and-Drop in den Anwendungsordner ziehen.
 
 ## Linux
 
