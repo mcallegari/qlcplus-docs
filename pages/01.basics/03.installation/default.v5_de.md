@@ -16,7 +16,7 @@ Wähle, ob QLC+ am Standardspeicherort (C:\QLC+) oder in einem anderen Ordner wi
 
 Für die Installation sind keine Administratorrechte erforderlich, es sei denn, du möchtest .qxw-Dateien (Projektdateien) und .qxf-Dateien (Fixture-Definitionsdateien) mit der jeweiligen Anwendung verknüpfen. In diesem Fall klicke mit der rechten Maustaste auf die Installationsdatei und führe sie als Administrator aus.
 
-**Note** Version 4.x.x und Version 5.x.x können nicht im selben Ordner arbeiten. Wenn du beide installieren willst, installiere sie bitte in getrennten Ordnern.
+**Hinweis:** Version 4.x.x und Version 5.x.x können nicht im selben Ordner arbeiten. Wenn du beide installieren willst, installiere sie bitte in getrennten Ordnern.
 
 ## macOS
 
