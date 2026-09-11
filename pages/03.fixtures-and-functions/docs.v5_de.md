@@ -1,5 +1,5 @@
 ---
-title: 'Fixtures and Functions'
+title: 'Geräte und Funktionen'
 date: '14:33 23-06-2026'
 taxonomy:
     category:
@@ -15,7 +15,7 @@ table th:nth-of-type(2) {
 }
 </style>
 
-Der Kontext **Fixtures and Functions** ist der wichtigste Bearbeitungsbereich der Version-5-Benutzeroberfläche.
+Der Kontext **Geräte und Funktionen** ist der wichtigste Bearbeitungsbereich der Version-5-Benutzeroberfläche.
 Hier fügen Sie Ihre Fixtures hinzu und ordnen sie an, steuern ihre Kanäle, organisieren Paletten und Fixture Groups und erstellen und bearbeiten Funktionen wie Scenes, Chaser, EFX und Shows.
 
 Der Arbeitsbereich ist in mehrere Bereiche unterteilt:
@@ -28,7 +28,7 @@ Der Arbeitsbereich ist in mehrere Bereiche unterteilt:
 
 Das linke und rechte Panel sind standardmäßig eingeklappt. Klicken Sie auf eine ihrer Schaltflächen, um das Panel aufzuklappen; klicken Sie erneut auf die aktive Schaltfläche, um es zu schließen. Sie können auch die Innenkante eines Panels ziehen, um es breiter oder schmaler zu machen.
 
-![Fixtures_and_functions](Fixtures_and_functions.png "Fixtures_and_functions")
+![Fixtures_and_functions](Fixtures_and_functions.png "Geräte und Funktionen")
 
 ---
 
