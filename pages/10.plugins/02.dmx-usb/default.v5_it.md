@@ -72,7 +72,7 @@ Se una modalità non è elencata qui, significa che non è supportata da QLC+ o 
 
   
 (1) DMX2 OUT è disponibile solo su DMX USB Mk2 Pro  
-(2) MIDI IN e MIDI OUT sono disponibili solo su DMX USB Mk2 Pro con un cavo breakout a 5 vie. I segnali MIDI OUT vengono inviati da 1 a 512 come descritto nella [mappa dei canali del plugin MIDI](../midi#channels-map)  
+(2) MIDI IN e MIDI OUT sono disponibili solo su DMX USB Mk2 Pro con un cavo breakout a 5 vie. I segnali MIDI OUT vengono inviati da 1 a 512 come descritto nella [mappa dei canali del plugin MIDI](../midi#mappa-dei-canali)  
 
 Tuning
 ------
