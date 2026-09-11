@@ -10,6 +10,6 @@ De moment, l'Editor de Shows només pot canviar el nom d'un Show, cosa que no é
 La vista en arbre d'aquest panell mostra informació útil respecte al Show que es mostra, com ara:
 
 * **Funció:** el nom de la funció
-* **Passos:** el nombre de passos que componen una [Seqüència](/basics/glossary-and-concepts#sequence)
+* **Passos:** el nombre de passos que componen una [Seqüència](/basics/glossary-and-concepts#seqüència)
 * **Temps d'inici:** el moment en què es reproduirà una seqüència
 * **Durada:** la durada de la seqüència

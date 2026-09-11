@@ -30,7 +30,7 @@ configuració; simplement hi afegeix el comportament solo i la secció
 
 ## Configuració
 
-Un Marc Solo té tota la [configuració del Marc](../frame#settings) —
+Un Marc Solo té tota la [configuració del Marc](../frame#configuració) —
 Capçalera, Pàgines, Dreceres — més:
 
 ### Solo Frame Options
