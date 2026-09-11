@@ -6,7 +6,7 @@ taxonomy:
 ---
 
 QLC+ zu installieren ist unkompliziert.
-Die Version für ihr Betriebssystem kann einfach von der [Downloadseite](https://www.qlcplus.org/download) herruntergeladen und installiert werden.
+Die Version für ihr Betriebssystem kann einfach von der [Downloadseite](https://www.qlcplus.org/download) heruntergeladen und installiert werden.
 
 ## Windows
 
