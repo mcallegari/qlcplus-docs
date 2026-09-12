@@ -1,5 +1,5 @@
 ---
-title: 'Editor d'Escenes'
+title: "Editor d'Escenes"
 ---
 
 Una **Escena** és la funció més bàsica: un aspecte fix format per valors de canal per
