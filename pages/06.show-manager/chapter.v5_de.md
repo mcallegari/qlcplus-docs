@@ -1,5 +1,5 @@
 ---
-title: 'Show Manager'
+title: 'Show-Manager'
 date: '14:07 21-08-2023'
 taxonomy:
     category: docs
@@ -18,7 +18,7 @@ table th:nth-of-type(2) {
 </style>
 ### Kapitel 5
 
-# Show Manager 
+# Show-Manager 
 
 Eine **Show** ist eine Timeline, die andere Funktionen (Szenen, Chaser, Audio,
 Video, …) auf **Tracks** entlang der Zeit anordnet, sodass eine ganze

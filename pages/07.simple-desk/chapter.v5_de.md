@@ -1,5 +1,5 @@
 ---
-title: 'Simple Desk'
+title: 'Einfache Arbeitsoberfläche'
 date: '14:16 21-08-2023'
 taxonomy:
     category: docs
@@ -12,7 +12,7 @@ taxonomy:
 </style>
 ### Kapitel 6
 
-# Simple Desk
+# Einfache Arbeitsoberfläche
 
 Das **Simple Desk** ist eine manuelle DMX-Steueroberfläche. Es bietet einen Fader und ein Wertefeld für jeden Kanal eines Universums sowie ein **Tastenfeld** zur Eingabe von Befehlen im Konsolenstil — sodass Sie Ihr Equipment von Hand steuern können, ganz wie an einem klassischen Lichtpult. Es eignet sich ideal für schnelle manuelle Eingriffe, Busking und Tests.
 
