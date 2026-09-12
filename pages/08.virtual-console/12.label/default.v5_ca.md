@@ -19,7 +19,7 @@ L'Etiqueta no té cap configuració pròpia especial; utilitza les
 * **Background image** — una imatge opcional darrere del text.
 * **Z-Index** — l'ordre d'apilament.
 
-Vegeu [Propietats bàsiques](/virtual-console#basic-properties-all-widgets) per
+Vegeu [Propietats bàsiques](/virtual-console#propietats-bàsiques-tots-els-ginys) per
 a la llista completa.
 
 ## Consells

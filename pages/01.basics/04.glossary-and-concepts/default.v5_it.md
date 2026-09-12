@@ -99,7 +99,7 @@ I dispositivi dimmer generici non necessitano di una propria definizione di fixt
 
 ### ![](../group.svg) Fixture Group
 
-Un fixture group è, come dice il nome, un gruppo di [fixture](#fixtures). Definisce anche (a un livello piuttosto basilare) la disposizione fisica reale di questi fixture nel mondo reale. Questa conoscenza può essere utilizzata, ad esempio, nella RGB Matrix per produrre una parete di luci miscelabili RGB che possono agire come singoli pixel in un pattern grafico o in un testo scorrevole.
+Un fixture group è, come dice il nome, un gruppo di [fixture](#fixture). Definisce anche (a un livello piuttosto basilare) la disposizione fisica reale di questi fixture nel mondo reale. Questa conoscenza può essere utilizzata, ad esempio, nella RGB Matrix per produrre una parete di luci miscelabili RGB che possono agire come singoli pixel in un pattern grafico o in un testo scorrevole.
 
 ### Fixture Mode
 
@@ -172,7 +172,7 @@ Una output line è una connessione fornita da un hardware o da una rete a cui si
 
 ### Input profiles
 
-Gli input profile possono essere pensati come i "cugini" dei [fixture](#fixtures); contengono informazioni su dispositivi specifici che producono dati di input. Un dispositivo di input può essere, ad esempio, una slider board come il Behringer BCF-2000, il KORG nanoKONTROL, un Enttec Playback Wing...
+Gli input profile possono essere pensati come i "cugini" dei [fixture](#fixture); contengono informazioni su dispositivi specifici che producono dati di input. Un dispositivo di input può essere, ad esempio, una slider board come il Behringer BCF-2000, il KORG nanoKONTROL, un Enttec Playback Wing...
 
 ### LTP (Latest Takes Precedence)
 

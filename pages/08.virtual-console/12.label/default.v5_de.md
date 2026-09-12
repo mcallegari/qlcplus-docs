@@ -20,7 +20,7 @@ Das Label hat keine eigenen speziellen Einstellungen; es verwendet die
 * **Z-Index** — die Stapelreihenfolge.
 
 Die vollständige Liste finden Sie unter
-[Basiseigenschaften](/virtual-console#basic-properties-all-widgets).
+[Basiseigenschaften](/virtual-console#grundeigenschaften-alle-widgets).
 
 ## Tipps
 

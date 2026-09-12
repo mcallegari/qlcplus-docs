@@ -19,7 +19,7 @@ condivise da ogni widget:
 * **Background image** — un'immagine facoltativa dietro al testo.
 * **Z-Index** — l'ordine di sovrapposizione.
 
-Vedere [Basic properties](/virtual-console#basic-properties-all-widgets) per
+Vedere [Basic properties](/virtual-console#proprietà-di-base-tutti-i-widget) per
 l'elenco completo.
 
 ## Suggerimenti

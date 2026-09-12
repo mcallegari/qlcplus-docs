@@ -21,7 +21,7 @@ table th:nth-of-type(2) {
 # Fixture Definition Editor
 
 Il **Fixture Definition Editor** viene utilizzato per creare e modificare le
-[definizioni dei fixture](/basics/glossary-and-concepts#fixtures) — i file che
+[definizioni dei fixture](/basics/glossary-and-concepts#fixture) — i file che
 indicano a QLC+ come controllare ciascuna delle proprie luci.<br>
 Nell'interfaccia della versione 5, l'editor è integrato direttamente in QLC+
 anziché essere un'applicazione separata: si apre dal **Fixture Browser** (il

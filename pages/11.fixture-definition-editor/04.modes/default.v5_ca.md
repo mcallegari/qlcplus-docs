@@ -12,7 +12,7 @@ table th:nth-of-type(2) {
 }
 </style>
 
-La secció **Modes** conté tots els [modes](/basics/glossary-and-concepts#fixture-mode)
+La secció **Modes** conté tots els [modes](/basics/glossary-and-concepts#mode-del-fixture)
 als quals es pot configurar el fixture. Cada mode és una disposició ordenada dels
 canals que heu definit a la secció [Canals](../channels), que correspon a com es
 comporta el fixture en aquell mode de funcionament.
@@ -54,7 +54,7 @@ controla la velocitat d'un gobo giratori).
 
 Els emissors (anomenats *caps* en versions anteriors) us permeten definir
 múltiples fonts de llum dins d'un únic fixture, de manera que QLC+ pugui tractar
-cadascuna individualment — per exemple als [Grups de Fixtures](/basics/glossary-and-concepts#fixture-group)
+cadascuna individualment — per exemple als [Grups de Fixtures](/basics/glossary-and-concepts#grup-de-fixtures)
 o a les vistes 2D/3D. Si un mode controla una sola font de llum no cal definir
 emissors.
 

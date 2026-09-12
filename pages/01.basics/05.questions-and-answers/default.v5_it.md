@@ -58,7 +58,7 @@ Potete raggiungere una qualsiasi di queste cartelle da un terminale con il coman
 Tenete presente che i fixture e i profili di input presenti nella cartella utente avranno la precedenza rispetto
 agli stessi file nella cartella di sistema di QLC+. 
 
-Potete anche salvare [Definizioni Fixture](/basics/glossary-and-concepts#fixtures) personalizzate e
+Potete anche salvare [Definizioni Fixture](/basics/glossary-and-concepts#fixture) personalizzate e
 [Profili di Input](/input-output/input-profiles) nella stessa cartella del vostro progetto; QLC+ li 
 troverà quando aprirete quel progetto.
 

@@ -9,7 +9,7 @@ Aquesta pàgina s'ha ordenat alfabèticament per facilitar la cerca d'un tema co
 
 ### ![](../audio.svg) Àudio
 
-Una [funció](#functions) d'àudio és un objecte que representa un fitxer d'àudio emmagatzemat en un disc.  
+Una [funció](#funcions) d'àudio és un objecte que representa un fitxer d'àudio emmagatzemat en un disc.  
 QLC+ és compatible amb els formats d'àudio més comuns, com ara Wave, MP3, M4A, Ogg i Flac. Admet canals mono o estèreo i diverses taxes de mostreig com 44.1KHz, 48KHz, etc...  
 Les funcions d'àudio es poden col·locar en un [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).  
 Com la majoria de les funcions de QLC+, l'àudio admet temps d'esvaïment d'entrada i de sortida.  
@@ -29,7 +29,7 @@ Alguns canals dels fixtures intel·ligents proporcionen molts tipus de funcions,
 
 ### ![](../chaser.svg) Chaser
 
-Una funció [chaser](#functions) es construeix a partir de diverses escenes que s'executen en seqüència, una darrere l'altra, quan s'inicia la funció chaser. La funció següent només s'executa un cop ha finalitzat l'anterior. Es pot inserir qualsevol nombre de [funcions](#functions) en un chaser.
+Una funció [chaser](#funcions) es construeix a partir de diverses escenes que s'executen en seqüència, una darrere l'altra, quan s'inicia la funció chaser. La funció següent només s'executa un cop ha finalitzat l'anterior. Es pot inserir qualsevol nombre de [funcions](#funcions) en un chaser.
 
 La direcció de la funció Chaser es pot invertir o la selecció d'escenes es pot aleatoritzar. La funció Chaser també es pot configurar perquè faci un bucle infinit, un bucle infinit de ping-pong (la direcció s'inverteix després de cada passada) o pot executar-se una sola vegada, en mode d'un sol tret, després del qual acaba per si mateixa. Si la funció s'estableix perquè faci un bucle infinit, s'ha d'aturar manualment.
 
@@ -55,7 +55,7 @@ Hi ha disponible una visió general amb captures de pantalla [aquí](https://www
 
 ### ![](../collection.svg) Col·lecció
 
-Una funció [col·lecció](#functions) encapsula diverses funcions que s'executen simultàniament quan s'executa la funció col·lecció. Es pot inserir qualsevol nombre de funcions en una col·lecció, però cada funció només es pot inserir una vegada i una col·lecció no pot ser membre directe de si mateixa.
+Una funció [col·lecció](#funcions) encapsula diverses funcions que s'executen simultàniament quan s'executa la funció col·lecció. Es pot inserir qualsevol nombre de funcions en una col·lecció, però cada funció només es pot inserir una vegada i una col·lecció no pot ser membre directe de si mateixa.
 
 Les col·leccions no tenen configuració de velocitat. La velocitat de cada funció membre s'estableix individualment mitjançant els seus propis editors.
 
@@ -65,11 +65,11 @@ Es poden crear còpies de funcions de col·lecció amb el [Function Manager](/fu
 
 [DMX](https://ca.wikipedia.org/wiki/DMX512) és l'abreviatura de Digital MultipleX. Bàsicament defineix tot un conjunt de propietats, protocol, cablejat, etc. En el cas del programari d'il·luminació, defineix el nombre màxim de canals (512) per univers i el rang de valors de cada canal (0-255).
 
-QLC+ admet universos il·limitats (n'hi ha 4 d'inicials, però se'n poden afegir més si cal). No cal que estiguin connectats necessàriament a maquinari DMX. L'abstracció real del maquinari (ja sigui analògic 0-10V, DMX o algun altre mètode) s'aconsegueix mitjançant [connectors de sortida](#input-output-plugins).
+QLC+ admet universos il·limitats (n'hi ha 4 d'inicials, però se'n poden afegir més si cal). No cal que estiguin connectats necessàriament a maquinari DMX. L'abstracció real del maquinari (ja sigui analògic 0-10V, DMX o algun altre mètode) s'aconsegueix mitjançant [connectors de sortida](#connectors-dentrada-sortida).
 
 ### ![](../efx.svg) EFX
 
-Una funció [EFX](#functions) s'utilitza principalment per automatitzar llums mòbils (per exemple, escàners i caps mòbils), tot i que també pot automatitzar valors RGB o de Dimmer de llums no mòbils. L'EFX pot crear camins matemàtics complexos en un pla X-Y que es converteixen en valors DMX per als canals de pan i tilt del fixture, o per als canals RGB o de Dimmer.
+Una funció [EFX](#funcions) s'utilitza principalment per automatitzar llums mòbils (per exemple, escàners i caps mòbils), tot i que també pot automatitzar valors RGB o de Dimmer de llums no mòbils. L'EFX pot crear camins matemàtics complexos en un pla X-Y que es converteixen en valors DMX per als canals de pan i tilt del fixture, o per als canals RGB o de Dimmer.
 
 ### ![](../fixture.svg) Fixtures
 
@@ -111,15 +111,15 @@ El nombre de funcions és pràcticament il·limitat. Les funcions s'utilitzen pe
 
 Els tipus de funció són:
 
-*   [Escena](#scene)
+*   [Escena](#escena)
 *   [Chaser](#chaser)
-*   [Seqüència](#sequence)
+*   [Seqüència](#seqüència)
 *   [EFX](#efx)
-*   [Matriu RGB](#rgb-matrix)
-*   [Col·lecció](#collection)
+*   [Matriu RGB](#matriu-rgb)
+*   [Col·lecció](#col·lecció)
 *   [Show](#show)
-*   [Àudio](#audio)
-*   [Vídeo](#video)
+*   [Àudio](#àudio)
+*   [Vídeo](#vídeo)
 
 Cada funció es pot anomenar i, tot i que el nom no s'utilitza per identificar de forma única les funcions individuals, s'anima els usuaris a anomenar les seves funcions d'una manera sistemàtica i concisa per ajudar a identificar cadascuna d'elles. Per a la teva pròpia comoditat.
 
@@ -144,17 +144,17 @@ Un head representa un dispositiu individual de sortida de llum en un fixture. No
 
 Per exemple, pots tenir un fixture de barra LED RGB que està muntat sobre un únic xassís i que, com a tal, apareix com un únic fixture amb una entrada DMX i una sortida DMX. No obstant això, en realitat està format per quatre "fixtures" LED RGB separats. Aquests fixtures separats es tracten a QLC+ com a heads; comparteixen algunes propietats amb els seus heads germans, es poden controlar individualment, però també poden tenir un control d'intensitat mestre que controla la sortida de llum de tots els heads junts.
 
-Cada head pertany a un [Mode de Fixture](#fixture-mode) perquè en un mode, un fixture pot proporcionar prou canals per controlar cadascun dels seus heads individualment, mentre que en un altre mode, només es pot proporcionar un grapat de canals per controlar tots els heads simultàniament.
+Cada head pertany a un [Mode de Fixture](#mode-del-fixture) perquè en un mode, un fixture pot proporcionar prou canals per controlar cadascun dels seus heads individualment, mentre que en un altre mode, només es pot proporcionar un grapat de canals per controlar tots els heads simultàniament.
 
 ### HTP (Highest Takes Precedence)
 
-HTP és una regla que decideix quin nivell s'envia a un univers DMX per a un canal quan aquest està sent controlat per més d'una [funció](#functions) o widget de la Virtual Console. Generalment, els canals d'intensitat obeeixen la regla HTP. Això inclou els canals d'intensitat genèrics utilitzats per controlar _la intensitat de la llum_ amb dimmers i també els canals que controlen la intensitat d'un color, normalment en un fixture LED.
+HTP és una regla que decideix quin nivell s'envia a un univers DMX per a un canal quan aquest està sent controlat per més d'una [funció](#funcions) o widget de la Virtual Console. Generalment, els canals d'intensitat obeeixen la regla HTP. Això inclou els canals d'intensitat genèrics utilitzats per controlar _la intensitat de la llum_ amb dimmers i també els canals que controlen la intensitat d'un color, normalment en un fixture LED.
 
 La regla HTP és senzilla: el nivell més alt (més proper al 100%) que s'està enviant actualment a un canal és el que s'envia a l'univers DMX.
 
 Suposem que tens dos lliscadors que controlen el mateix canal d'intensitat. Primer, poses el lliscador 1 al 50% i després mous el lliscador 2 del 0% al 75%. Mentre el lliscador 2 estigui per sota del 50%, no passa res, però un cop es supera el nivell del 50% establert pel lliscador 1, la intensitat de la llum augmenta fins al 75%. Si tornes a arrossegar el lliscador 2 cap al 0%, la intensitat de la llum disminueix fins que arriba al 50% establert pel lliscador 1 i es manté al 50% fins que el lliscador 1 s'arrossega cap avall.
 
-Un esvaïment creuat entre 2 [Escenes](#scene) substituirà els nivells HTP de la primera escena pels nivells HTP de la segona. Els nous nivells HTP es combinaran amb els nivells HTP d'altres funcions i widgets de la virtual console com s'ha descrit anteriorment. Vegeu també [LTP](#ltp-latest-takes-precedence).
+Un esvaïment creuat entre 2 [Escenes](#escena) substituirà els nivells HTP de la primera escena pels nivells HTP de la segona. Els nous nivells HTP es combinaran amb els nivells HTP d'altres funcions i widgets de la virtual console com s'ha descrit anteriorment. Vegeu també [LTP](#ltp-latest-takes-precedence).
 
 ### ![](../inputoutput.svg) Connectors d'entrada/sortida
 
@@ -176,20 +176,20 @@ Els perfils d'entrada es poden considerar com a cosins dels [fixtures](#fixtures
 
 ### LTP (Latest Takes Precedence)
 
-LTP és una regla que decideix quin nivell s'envia a un univers DMX per a un canal quan aquest està sent controlat per més d'una [funció](#functions) o widget de la Virtual Console. Generalment, s'utilitza per a canals que s'han assignat a grups diferents del grup **Intensity**, com ara pan, tilt, gobo, velocitat d'estroboscopi i altres _paràmetres de fixture intel·ligent_
+LTP és una regla que decideix quin nivell s'envia a un univers DMX per a un canal quan aquest està sent controlat per més d'una [funció](#funcions) o widget de la Virtual Console. Generalment, s'utilitza per a canals que s'han assignat a grups diferents del grup **Intensity**, com ara pan, tilt, gobo, velocitat d'estroboscopi i altres _paràmetres de fixture intel·ligent_
 
 La regla LTP és senzilla: l'últim nivell establert per una funció o per un widget de la Virtual Console és el que s'envia a l'univers DMX.
 
-Durant un esvaïment creuat entre [Escenes](#scene), sovint es canviaran els nivells LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells LTP han de saltar immediatament a un nou nivell, per exemple, en canviar d'un gobo a un altre. No obstant això, els grups LTP com pan i tilt potser han de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir temporitzacions diferents combinant escenes en una [Col·lecció](#collection). Vegeu també [HTP](#htp-highest-takes-precedence).
+Durant un esvaïment creuat entre [Escenes](#escena), sovint es canviaran els nivells LTP. Això s'ha de gestionar amb certa cura, ja que alguns nivells LTP han de saltar immediatament a un nou nivell, per exemple, en canviar d'un gobo a un altre. No obstant això, els grups LTP com pan i tilt potser han de canviar gradualment d'un nivell a un altre durant un esvaïment creuat. Es poden aconseguir temporitzacions diferents combinant escenes en una [Col·lecció](#col·lecció). Vegeu també [HTP](#htp-highest-takes-precedence).
 
 ### ![](../palette.svg) Palette
 
 Una Palette és una entitat de QLC+ que representa una característica d'un fixture. Per exemple, una Palette pot ser un color, una posició, un angle de zoom, etc.
-Les Palettes es poden utilitzar dins d'[Escenes](#scene) per abstreure una característica independentment dels Fixtures controlats per l'Escena.
+Les Palettes es poden utilitzar dins d'[Escenes](#escena) per abstreure una característica independentment dels Fixtures controlats per l'Escena.
 
 ### ![](../rgbmatrix.svg) Matriu RGB
 
-Una funció de [matriu RGB](#functions) es pot utilitzar per imposar gràfics i text senzills en una matriu (una graella o una paret) de [heads](#head) de fixture RGB i/o monocromàtics. La funció de matriu RGB ha estat dissenyada per ser ampliable amb [scripts](#rgb-script) que poden ser escrits pels usuaris.
+Una funció de [matriu RGB](#funcions) es pot utilitzar per imposar gràfics i text senzills en una matriu (una graella o una paret) de [heads](#head) de fixture RGB i/o monocromàtics. La funció de matriu RGB ha estat dissenyada per ser ampliable amb [scripts](#script-rgb) que poden ser escrits pels usuaris.
 
 Cada matriu RGB té la seva pròpia configuració de velocitat:
 
@@ -199,11 +199,11 @@ Cada matriu RGB té la seva pròpia configuració de velocitat:
 
 ### ![](../rgbmatrix.svg) Script RGB
 
-Un script RGB és un programa escrit en [ECMAScript](https://ca.wikipedia.org/wiki/ECMAScript) (també conegut com a JavaScript) que produeix les dades d'imatge necessàries per a les funcions de [Matriu RGB](#rgb-matrix). Aprèn-ne més a la pàgina de l'[API d'Script RGB](/function-manager/rgb-script-api).
+Un script RGB és un programa escrit en [ECMAScript](https://ca.wikipedia.org/wiki/ECMAScript) (també conegut com a JavaScript) que produeix les dades d'imatge necessàries per a les funcions de [Matriu RGB](#matriu-rgb). Aprèn-ne més a la pàgina de l'[API d'Script RGB](/function-manager/rgb-script-api).
 
 ### ![](../scene.svg) Escena
 
-Una funció d'[escena](#functions) comprèn els valors dels canals seleccionats que estan continguts en una o més instàncies de fixture. Quan s'inicia una escena, el temps que triguen els seus canals a arribar als valors objectiu depèn de la configuració de velocitat de l'escena:
+Una funció d'[escena](#funcions) comprèn els valors dels canals seleccionats que estan continguts en una o més instàncies de fixture. Quan s'inicia una escena, el temps que triguen els seus canals a arribar als valors objectiu depèn de la configuració de velocitat de l'escena:
 
 Cada funció té la seva pròpia configuració de velocitat:
 
@@ -215,21 +215,21 @@ Es poden crear còpies de funcions d'escena amb el [Function Manager](/function-
 ### ![](../sequence.svg) Seqüència
 
 Una Seqüència té algunes de les funcionalitats d'un [Chaser](#chaser).  
-És equivalent a un Chaser en el qual cada pas és una única [Escena](#scene) i cadascuna d'aquestes Escenes controla el mateix conjunt de canals. Una Seqüència està lligada a una Escena específica, cosa que significa que tots els passos de la Seqüència només poden controlar els canals habilitats d'aquesta Escena.  
+És equivalent a un Chaser en el qual cada pas és una única [Escena](#escena) i cadascuna d'aquestes Escenes controla el mateix conjunt de canals. Una Seqüència està lligada a una Escena específica, cosa que significa que tots els passos de la Seqüència només poden controlar els canals habilitats d'aquesta Escena.  
 Quan es creen nous passos en una Seqüència, no apareixerà cap finestra emergent de selecció de Funcions, ja que un pas de Seqüència no pot incloure altres Funcions, a diferència d'un pas de Chaser.  
 Quan es crea una Seqüència, apareixerà una icona especial de seqüència al [Function Manager](/function-manager) com a fill de l'Escena a la qual està lligada.  
 Per entendre la diferència entre una Seqüència i un Chaser, et convidem a llegir el segon paràgraf de la documentació del [Show Manager](/show-manager).
 
 ### ![](../script.svg) Script
 
-La funció [Script](#functions) treballa amb un llenguatge d'scripting senzill però potent per automatitzar les funcionalitats de QLC+ en un ordre seqüencial. Un Script es pot modificar amb l'[editor d'Scripts](/function-manager/script-editor).
+La funció [Script](#funcions) treballa amb un llenguatge d'scripting senzill però potent per automatitzar les funcionalitats de QLC+ en un ordre seqüencial. Un Script es pot modificar amb l'[editor d'Scripts](/function-manager/script-editor).
 
 ### ![](../show.svg) Show
 
-Un Show és una funció [avançada](#functions) que encapsula la majoria de les Funcions de QLC+ per crear un espectacle de llum impulsat pel temps. Un Show només es pot crear amb el [Show Manager](/show-manager) i es pot inspeccionar i canviar de nom amb l'[editor de Shows](/function-manager/show-editor).
+Un Show és una funció [avançada](#funcions) que encapsula la majoria de les Funcions de QLC+ per crear un espectacle de llum impulsat pel temps. Un Show només es pot crear amb el [Show Manager](/show-manager) i es pot inspeccionar i canviar de nom amb l'[editor de Shows](/function-manager/show-editor).
 
 ### ![](../video2.svg) Vídeo
 
-Una funció de [vídeo](#functions) és un objecte que representa un fitxer de vídeo emmagatzemat en un disc o en un URL de xarxa.  
+Una funció de [vídeo](#funcions) és un objecte que representa un fitxer de vídeo emmagatzemat en un disc o en un URL de xarxa.  
 Els formats de vídeo admesos depenen del teu sistema operatiu. Per exemple, Mac OSX es limita a fitxers MOV/MP4 i poc més.  
 Les funcions de vídeo es poden col·locar en un [Chaser](#chaser) o en un [Show](#show) en el moment desitjat, utilitzant el panell [Show Manager](/show-manager).

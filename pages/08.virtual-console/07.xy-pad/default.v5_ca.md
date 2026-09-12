@@ -145,7 +145,7 @@ posicions, efectes i subconjunts de fixtures. Es gestionen a la pestanya
 |     |     |
 | --- | --- |
 | ![](/basics/position.svg?resize=48,48) **Position Preset** | Emmagatzema la posició XY actual del cursor com a preset. El nom per defecte són les coordenades X/Y en el moment de la creació. |
-| ![](/basics/functions.svg?resize=48,48) **Scene/EFX Function Preset** | Obre el plafó lateral del Function Manager; deixa anar funcions ![](/basics/scene.svg?resize=48,48) [Scene](/basics/glossary-and-concepts#scene) o ![](/basics/efx.svg?resize=48,48) [EFX](/basics/glossary-and-concepts#efx) a l'àrea de destinació per convertir-les en presets. El nom per defecte és el nom de la funció. Les escenes sense cap canal Pan o Tilt es rebutgen. |
+| ![](/basics/functions.svg?resize=48,48) **Scene/EFX Function Preset** | Obre el plafó lateral del Function Manager; deixa anar funcions ![](/basics/scene.svg?resize=48,48) [Scene](/basics/glossary-and-concepts#escena) o ![](/basics/efx.svg?resize=48,48) [EFX](/basics/glossary-and-concepts#efx) a l'àrea de destinació per convertir-les en presets. El nom per defecte és el nom de la funció. Les escenes sense cap canal Pan o Tilt es rebutgen. |
 | ![](/basics/group.svg?resize=48,48) **Fixture Group Preset** | Obre el plafó lateral de fixtures; deixa anar universos, grups, fixtures o caps per crear un preset de grup de fixtures. Només es conserven els caps ja controlats pel pad. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove selected preset** | Suprimeix el preset seleccionat. |
 | <i class="fa fa-2x fa-arrow-up"></i> / <i class="fa fa-2x fa-arrow-down"></i> **Move selected preset up / down** | Reordena el preset seleccionat, que és també l'ordre dels botons sota el pad. |
