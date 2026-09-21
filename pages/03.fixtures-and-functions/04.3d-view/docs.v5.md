@@ -75,5 +75,13 @@ You can add your own 3D meshes to the scene (decor, set pieces, trusses, etc.):
   to place in the scene.
 * **Remove** (－) — delete the selected custom items.
 * **Normalize** (compress icon) — resets the selected items to a standard size.
+* **Name** — the name the item is listed under. It starts as the file name of
+  the mesh, so renaming is how you tell two copies of the same mesh apart.
+  Available when a single item is selected.
+* **Color** — click the colour swatch to choose a base colour for the selected
+  items. The colour tints the mesh rather than flooding it, so a mesh that
+  carries its own materials keeps its shading: the folds of a curtain stay
+  visible once it is turned red. Set it back to the default grey for the
+  mesh's own appearance.
 * The list below shows all custom items; click one to select it (and edit its
-  position, rotation and scale above).
+  name, colour, position, rotation and scale above).

@@ -300,6 +300,7 @@ Nodle
 capitalisation
 colour
 colours
+grey
 Automat
 stoponexit
 waitfunctionstop
