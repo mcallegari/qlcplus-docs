@@ -47,6 +47,13 @@ settings panel. Its sections can be expanded and collapsed.
   Higher settings look better but demand more from your graphics hardware.
 * **Ambient light** — overall brightness of the scene when no fixtures are lit
   (0–100%).
+* **Fixture light** — a global multiplier on the light your fixtures cast onto
+  the stage and the set (0–200%, 100% by default). The 3D view adds the output
+  of every fixture together, so a rig with many fixtures pointed at the same
+  area can wash the stage out to flat white or full-intensity color and lose
+  all detail. Turn this down to bring the surfaces back without dimming the
+  environment, which **Ambient light** controls separately. It does not affect
+  the beams in the air; use **Smoke amount** for those.
 * **Smoke amount** — how much atmospheric haze is in the air (0–100%), which
   makes beams more visible.
 * **Show FPS** — displays a frame-rate counter, useful for judging performance.
