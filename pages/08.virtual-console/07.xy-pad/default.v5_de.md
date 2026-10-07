@@ -111,6 +111,41 @@ setzen, gibt der Cursor am linken Rand 20 % (DMX 51) aus, am rechten Rand
 * **Invertierte Y-Achse** — kehrt die vertikale Achse um, sodass der maximale
   Tilt-Wert oben am Pad statt unten erreicht wird. Nützlich für Fixtures, die
   kopfüber an einer Traverse montiert sind.
+* **Floor control** — schaltet das Pad von der direkten Pan-/Tilt-Steuerung auf
+  das Anvisieren einer Position auf dem **Bühnenboden** um. Siehe *Floor
+  control* unten.
+
+### Floor control
+
+Mit aktiviertem **Floor control** steuert das Pad Pan und Tilt nicht mehr
+direkt. Stattdessen wird der Hauptbereich zu einem Draufsicht-Plan der Bühne —
+mit derselben Umgebungsgröße (Breite/Tiefe), die in der
+[3D View](/fixtures-and-functions/3d-view) eingestellt ist — und das Ziehen des
+Cursors bewegt ein Fadenkreuz-**Ziel** auf dem Boden. QLC+ berechnet dann, welchen
+Pan-/Tilt-Wert jeder gesteuerte Kopf benötigt, um genau auf diesen X/Z-Punkt zu
+zielen, basierend auf der eigenen 3D-Position des Kopfes, sodass ein gemischtes
+Rig aus Fixtures, die an unterschiedlichen Stellen hängen, alle auf denselben
+Punkt zeigen — ohne jegliche Bereichsanpassung pro Fixture.
+
+* Der vertikale **Wertschieberegler** rechts, der normalerweise die Y-Position
+  (Tilt) festlegt, wird durch einen **Höhenregler** (0–20 m) ersetzt, der das
+  Ziel über dem Boden anhebt oder absenkt — nützlich, um über Kopfhöhe oder
+  direkt auf den Boden zu zielen.
+* Eine Koordinatenanzeige in der Ecke des Pads zeigt das aktuelle Ziel als
+  **X / Z / H**, jeweils in Metern.
+* Der Zielmarker erhält mit zunehmender Höhe einen Ring um sich herum, als
+  visuellen Hinweis darauf, dass der Zielpunkt vom Boden abgehoben ist.
+* Die oben beschriebenen **Fixture-Positionspunkte** und die Skalierung des
+  **Bereichsfensters** sind spezifisch für die direkte Pan-/Tilt-Steuerung und
+  werden ausgeblendet, solange Floor control aktiv ist; der Pan-/Tilt-Bereichsdialog
+  pro Fixture und dessen Grenzen gelten weiterhin dafür, wie weit sich jeder Kopf
+  physisch drehen kann, um das Ziel zu erreichen.
+
+Floor control setzt voraus, dass die Fixtures eine bekannte Position haben —
+diese wird automatisch festgelegt, wenn sie in der 3D View platziert werden
+(auch durch den [Show Wizard](/fixtures-and-functions/show-wizard)), oder
+manuell über die Eigenschaften der 3D View. Ein Kopf ohne bekannte Position
+wird so gesteuert, als befände er sich in der Mitte des Bodens.
 
 ### Bereichsanzeigemodus
 
@@ -123,7 +158,10 @@ Pan-/Tilt-Bereiche der Fixtures verwendet werden:
 * **DMX** — rohe DMX-Werte, 0–255.
 
 Das Ändern des Modus ändert nicht die gespeicherten Bereiche, sondern nur die
-Art ihrer Anzeige und Eingabe.
+Art ihrer Anzeige und Eingabe. Klicken Sie auf die kleine Schaltfläche, die die
+aktuelle Einheit anzeigt (°, % oder DMX), neben der Symbolleiste der
+**Fixtures**-Liste, um zwischen den drei Modi zu wechseln, ohne die
+Registerkarte „Einstellungen“ zu öffnen.
 
 ### Fixtures
 

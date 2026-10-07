@@ -117,6 +117,7 @@ Sequences, EFX, RGB Matrices, Collections, Scripts, Audio, Video y Shows.
 |--------|--------------|
 | ![](../basics/functions.svg?resize=48,48) **Function Manager** | Abre la lista de todas las funciones, organizadas en carpetas. Seleccione una función aquí para editarla. |
 | <i class="fa fa-stopwatch fa-2x" style="color:turquoise"></i>**Timing Settings** | (Solo en [Show Manager](/show-manager)) Ajusta la temporización del show. |
+| <i class="fa fa-hat-wizard fa-2x" style="color:yellow"></i>**Show Wizard** | Abre el [Show Wizard](/fixtures-and-functions/show-wizard), que construye un show completo — disposición del escenario, funciones y Virtual Console — a partir de unas pocas decisiones de alto nivel. |
 | <i class="fa fa-plus fa-2x" style="color:limegreen"></i>**Add a new function** | Abre un menú para crear una nueva función. Elija el tipo y su editor se abre automáticamente. (Solo disponible cuando se permite la edición de funciones.) |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i>**Delete** | Elimina las funciones y carpetas seleccionadas, tras pedir confirmación. |
 | ![](../basics/rename.svg?resize=48,48) **Rename** | Renombra el elemento seleccionado. Cuando hay varios elementos seleccionados, se pueden renombrar todos a la vez con numeración automática. |

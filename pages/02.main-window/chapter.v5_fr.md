@@ -3,7 +3,7 @@ title: 'Fenêtre principale'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'main-window-v5.png,main-window.png'
+media_order: 'main-window-v5.3.png,main-window.png'
 ---
 
 <style>
@@ -23,7 +23,7 @@ La fenêtre principale de QLC+ se compose de quatre parties principales :
 3.  La zone de contexte principale, qui peut être un panneau de prévisualisation ou opératif
 4.  Des panneaux latéraux pour agir sur la vue actuelle sans gaspiller d'espace
 
-![](/main-window/main-window-v5.png)
+![](/main-window/main-window-v5.3.png)
 
 La plupart des contrôles du logiciel disposent d'infobulles, qui apparaissent après avoir maintenu le curseur de la souris sur eux pendant un court instant.
 

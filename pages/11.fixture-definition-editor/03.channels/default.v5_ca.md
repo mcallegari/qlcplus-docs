@@ -24,11 +24,39 @@ A la part superior de la secció hi ha una petita barra d'eines:
 |--------|--------------|
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Afegeix un canal nou** | Crea un canal nou i obre l'[Editor de Canals](#editor-de-canals) a la dreta. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Elimina els canals seleccionats** | Elimina els canals seleccionats del fixture **i de tots els modes**. |
-| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Assistent de canals** | Crea molts canals similars alhora (vegeu l'[Assistent de capacitats](#assistent-de-capacitats)). |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Assistent de canals** | Crea molts canals similars alhora (vegeu l'[Assistent de canals](#assistent-de-canals) més avall). |
 
 Feu clic a un canal per seleccionar-lo; feu-hi **doble clic** per obrir-lo a
 l'Editor de Canals. Els canals es poden **arrossegar** des d'aquesta llista a la
 llista de canals d'un mode a la secció [Modes](../modes).
+
+## Assistent de canals
+
+L'Assistent de Canals crea ràpidament un o diversos canals predefinits
+alhora, en lloc d'afegir-los i configurar-los un per un. Comparteix el seu
+diàleg amb l'[Assistent de capacitats](#assistent-de-capacitats) descrit més
+avall; els camps que es mostren depenen de quin dels dos heu obert.
+
+|     |     |
+| --- | --- |
+| **Type** | El tipus de canal(s) a crear — vegeu la taula a continuació. |
+| **Amount** | Quants canals crear. Per a un tipus multicolor (RGB, RGBW, …) és el nombre de **grups complets**, no de canals individuals — p. ex. "RGB" amb Amount 2 crea 6 canals (dos trios Vermell/Verd/Blau). |
+| **Label** | El nom donat a cada canal nou. Utilitzeu un coixinet `#` per marcar on va un número d'índex (p. ex. "Head #" crea Head 1, Head 2, …). Per a un tipus multicolor, cada component rep el nom del seu color i índex en lloc d'això (Red 1, Green 1, Blue 1, Red 2, …), i aquest camp s'ignora. |
+| **Preview** | S'actualitza a mesura que canvieu els paràmetres, llistant els canals que es crearan. |
+
+**Type** pot ser qualsevol d'aquests:
+
+* Un sol canal de color primari: **Red, Green, Blue, White, Amber, UV, Lime**
+  o **Indigo**.
+* Un predefinit de color multicanal, que crea un canal de color primari per
+  cada component: **RGB**, **RGBW**, **RGBA**, **RGBL** o **RGBAW**.
+* **Dimmer**, **Pan**, **Tilt**, **Color Macro** (per a una roda de color),
+  **Shutter**, **Beam** o **Effect**.
+
+Crear canals d'aquesta manera és equivalent a afegir-los un per un normalment
+i triar el [Preset](#editor-de-canals) corresponent — simplement és més
+ràpid quan un fixture necessita diversos canals del mateix tipus, com ara els
+caps individuals d'una barra de píxels o diversos sub-fixtures RGB idèntics.
 
 ## Editor de Canals
 

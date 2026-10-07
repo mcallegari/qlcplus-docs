@@ -111,6 +111,41 @@ proporcionalment.
 * **Inverted Y-Axis** — inverteix l'eix vertical, de manera que el valor
   màxim de tilt s'assoleix a la part superior del pad en lloc de a la part
   inferior. Útil per a fixtures muntats cap per avall en un truss.
+* **Floor control** — canvia el pad de control directe de pan/tilt a apuntar
+  a una posició del **terra de l'escenari**. Vegeu *Floor control* més avall.
+
+### Floor control
+
+Amb **Floor control** activat, el pad ja no controla directament el pan i el
+tilt. En lloc d'això, l'àrea principal esdevé un plànol de l'escenari vist
+des de dalt — amb la mateixa mida d'entorn (Amplada/Profunditat) establerta a
+la [3D View](/fixtures-and-functions/3d-view) — i arrossegar el cursor mou un
+**objectiu** en forma de creu sobre el terra. Llavors QLC+ calcula el
+pan/tilt que necessita cada cap controlat per apuntar exactament a aquell
+punt X/Z, utilitzant la posició 3D pròpia del cap, de manera que un equip
+mixt de fixtures penjats en llocs diferents apunten tots al *mateix punt*
+sense cap ajust de rang per fixture.
+
+* El **control lliscant de valor** vertical de la dreta, que normalment
+  estableix la posició Y (tilt), és substituït per un **control lliscant
+  d'alçada** (0–20 m) que puja o baixa l'objectiu per sobre del terra — útil
+  per apuntar per sobre de l'alçada del cap, o cap avall, al mateix terra.
+* Una lectura de coordenades a la cantonada del pad mostra l'objectiu actual
+  com a **X / Z / H**, totes en metres.
+* El marcador de l'objectiu desenvolupa un anell al seu voltant a mesura que
+  augmenta l'alçada, com a indicació visual que el punt d'apuntament s'ha
+  aixecat del terra.
+* Els **fixture position dots** i l'escalat de la **range window** descrits
+  més amunt són específics del control directe de pan/tilt i es oculten
+  mentre el floor control està actiu; el diàleg de rang Pan/Tilt per fixture
+  i els seus límits encara s'apliquen a fins a on pot girar físicament cada
+  cap per arribar a l'objectiu.
+
+El floor control depèn que els fixtures tinguin una posició coneguda —
+establerta automàticament quan es col·loquen a la 3D View (també pel
+[Show Wizard](/fixtures-and-functions/show-wizard)), o manualment des de les
+propietats de la 3D View. Un cap sense posició coneguda es controla com si
+estigués al centre del terra.
 
 ### Range Display Mode
 
@@ -124,7 +159,9 @@ dels fixtures:
 * **DMX** — valors DMX en brut, 0–255.
 
 Canviar el mode no canvia els rangs emmagatzemats, només com es mostren i
-s'introdueixen.
+s'introdueixen. Fes clic al petit botó que mostra la unitat actual (°, % o
+DMX), al costat de la barra d'eines de la llista **Fixtures**, per recórrer
+els tres modes sense obrir la pestanya Settings.
 
 ### Fixtures
 

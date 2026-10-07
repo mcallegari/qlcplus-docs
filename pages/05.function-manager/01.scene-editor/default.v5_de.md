@@ -42,6 +42,24 @@ Kanäle mit den **Kanalfähigkeits-Werkzeugen** im linken Bereich an (Intensitä
 Position usw.) oder verwenden Sie die **DMX-Ansicht**. Die Werte werden beim Ändern in
 der Szene gespeichert.
 
+## Kanäle von einem externen Controller steuern
+
+Solange der Szeneneditor geöffnet ist, bietet die Symbolleiste seines unteren Bereichs
+zusätzliche Schaltflächen, um die Kanäle der Szene direkt von einem gepatchten
+**MIDI**-, **OSC**-, **DMX**- oder **HID**-Controller (Joystick) aus zu steuern — praktisch,
+um Werte von Hand einzustellen, anstatt Schieberegler auf dem Bildschirm zu ziehen.
+
+| Schaltfläche | Funktion |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Die Kanäle mit einem externen Controller steuern** | Schaltet die externe Steuerung um. Solange sie aktiviert ist, werden die Fader/Regler des Controllers 1:1 auf die Kanäle der Szene abgebildet, in der Reihenfolge, in der sie in der Konsole erscheinen, und die **virtuelle Konsole empfängt keine Eingaben mehr** von diesem Controller, bis Sie dies ausschalten oder den Editor schließen. |
+| ![](/basics/position.svg?resize=48,48) **Pan-&-Tilt-Modus umschalten** | Wird nur angezeigt, solange die externe Steuerung aktiv ist. Schaltet die Zuordnung so um, dass die ersten vier Fader/Regler des Controllers stattdessen **Pan, Pan fein, Tilt und Tilt fein** eines einzelnen Fixtures steuern — praktisch, um einen Moving Head mit echten Fadern statt mit einem [XY Pad](/virtual-console/xy-pad) zu positionieren. |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Die Fader-Zuordnung rückwärts / vorwärts verschieben** | Blättert durch die Zuordnung, wenn mehr zu steuern ist, als der Controller Fader bereitstellt. Im normalen Modus ist eine Seite ein Block von Kanälen in der Größe der Faderanzahl des Controllers; im Pan-&-Tilt-Modus ist eine Seite ein einzelnes Fixture. |
+
+Der Kanal, der gerade von einem Controller gesteuert wird, wird in der Konsole
+hervorgehoben, sodass Sie auf einen Blick sehen, was jeder physische Fader tut.
+Verfügt eines der gepatchten Universen über einen Joystick (HID-Plugin), werden
+dessen Achsen erkannt und stehen der Zuordnung ebenfalls zur Verfügung.
+
 ## Geschwindigkeit
 
 Der einklappbare Bereich **Geschwindigkeit** legt fest, wie die Szene beim Auslösen

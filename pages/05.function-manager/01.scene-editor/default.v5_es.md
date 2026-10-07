@@ -41,6 +41,24 @@ usando las **herramientas de capacidades de canal** del panel izquierdo (Intensi
 Color, Posición, etc.) o la **Vista DMX**. Los valores se almacenan en la escena a
 medida que se van modificando.
 
+## Controlar los canales desde un controlador externo
+
+Mientras el Scene Editor está abierto, la barra de herramientas de su panel inferior
+dispone de botones adicionales para pilotar los canales de la escena directamente desde
+un controlador **MIDI**, **OSC**, **DMX** o **HID** (joystick) patcheado — útil para
+ajustar valores a mano en lugar de arrastrar sliders en pantalla.
+
+| Botón | Qué hace |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Control the channels with an external controller** | Activa o desactiva el control externo. Mientras está activado, los faders/perillas del controlador se mapean 1:1 sobre los canales de la escena, en el orden en que aparecen en la consola, y la **Virtual Console deja de recibir input** de ese controlador hasta que se desactive esta opción o se cierre el editor. |
+| ![](/basics/position.svg?resize=48,48) **Toggle Pan & Tilt mode** | Solo se muestra mientras el control externo está activado. Cambia el mapeo de modo que los primeros cuatro faders/perillas del controlador pilotan en su lugar **pan, pan fine, tilt y tilt fine** de un único fixture — útil para posicionar una cabeza móvil con faders reales en lugar de un [XY Pad](/virtual-console/xy-pad). |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Shift the faders mapping backward / forward** | Pagina el mapeo cuando hay más elementos que controlar de los faders que tiene el controlador. En modo normal, una página es un bloque de canales del tamaño del número de faders del controlador; en modo Pan & Tilt, una página es un único fixture. |
+
+El canal pilotado actualmente por un controlador se resalta en la consola, de modo que
+se puede ver de un vistazo qué está haciendo cada fader físico. Si uno de los universos
+patcheados tiene un joystick (plugin HID), sus ejes se detectan y también se ponen a
+disposición del mapeo.
+
 ## Velocidad
 
 La sección **Velocidad**, plegable, define cómo se desvanece la escena al activarse:

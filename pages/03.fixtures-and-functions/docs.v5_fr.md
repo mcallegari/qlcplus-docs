@@ -122,6 +122,7 @@ Video et Shows.
 |--------|--------------|
 | ![](../basics/functions.svg?resize=48,48) **Function Manager** | Ouvre la liste de toutes vos fonctions, organisées en dossiers. Sélectionnez une fonction ici pour la modifier. |
 | <i class="fa fa-stopwatch fa-2x" style="color:turquoise"></i>**Timing Settings** | (Uniquement dans le [Show Manager](/show-manager)) Ajuste les réglages de timing du show. |
+| <i class="fa fa-hat-wizard fa-2x" style="color:yellow"></i>**Show Wizard** | Ouvre le [Show Wizard](/fixtures-and-functions/show-wizard), qui construit un show complet — disposition de la scène, fonctions et Virtual Console — à partir de quelques choix de haut niveau. |
 | <i class="fa fa-plus fa-2x" style="color:limegreen"></i>**Add a new function** | Ouvre un menu permettant de créer une nouvelle fonction. Choisissez le type et son éditeur s'ouvre automatiquement. (Disponible uniquement lorsque l'édition des fonctions est autorisée.) |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i>**Delete** | Supprime les fonctions et dossiers sélectionnés, après vous avoir demandé de confirmer. |
 | ![](../basics/rename.svg?resize=48,48) **Rename** | Renomme l'élément sélectionné. Lorsque plusieurs éléments sont sélectionnés, vous pouvez tous les renommer en une seule fois avec une numérotation automatique. |

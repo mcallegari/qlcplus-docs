@@ -3,7 +3,7 @@ title: 'Ventana principal'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'main-window-v5.png,main-window.png'
+media_order: 'main-window-v5.3.png,main-window.png'
 ---
 
 <style>
@@ -23,7 +23,7 @@ La ventana principal de QLC+ está formada por cuatro partes principales:
 3.  El área de contexto principal, que puede ser un panel de vista previa u operativo
 4.  Paneles laterales para actuar sobre la vista actual sin desperdiciar espacio
 
-![](/main-window/main-window-v5.png)
+![](/main-window/main-window-v5.3.png)
 
 La mayoría de los controles del software tienen tooltips, que aparecen al mantener el cursor del ratón sobre ellos durante un breve periodo.
 

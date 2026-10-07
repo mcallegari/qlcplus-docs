@@ -3,7 +3,7 @@ title: 'Finestra principale'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'main-window-v5.png,main-window.png'
+media_order: 'main-window-v5.3.png,main-window.png'
 ---
 
 <style>
@@ -23,7 +23,7 @@ La finestra principale di QLC+ è composta da quattro parti principali:
 3.  L'area di contesto principale, che può essere un pannello di anteprima o operativo
 4.  Pannelli laterali per agire sulla vista corrente senza sprecare spazio
 
-![](/main-window/main-window-v5.png)
+![](/main-window/main-window-v5.3.png)
 
 La maggior parte dei controlli del software dispone di tooltip, che compaiono tenendo il cursore del mouse sopra di essi per un breve periodo.
 

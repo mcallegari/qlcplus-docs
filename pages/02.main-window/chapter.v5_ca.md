@@ -3,7 +3,7 @@ title: 'Main Window'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'main-window-v5.png,main-window.png'
+media_order: 'main-window-v5.3.png,main-window.png'
 ---
 
 <style>
@@ -23,7 +23,7 @@ La finestra principal de QLC+ consta de quatre parts principals:
 3.  L'àrea de context principal, que pot ser un panell de previsualització o operatiu
 4.  Panells laterals per actuar sobre la vista actual sense malgastar espai
 
-![](/main-window/main-window-v5.png)
+![](/main-window/main-window-v5.3.png)
 
 La majoria dels controls del programari tenen tooltips, que apareixen en mantenir el cursor del ratolí sobre ells durant una estona.
 

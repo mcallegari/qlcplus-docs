@@ -39,6 +39,24 @@ Per impostare l'aspetto, selezionare i fixture della scena e regolarne i canali 
 **strumenti delle capacità dei canali** nel pannello sinistro (Intensità, Colore, Posizione,
 ecc.) oppure la **Vista DMX**. I valori vengono memorizzati nella scena man mano che vengono modificati.
 
+## Controllare i canali da un controller esterno
+
+Mentre l'Editor Scena è aperto, la barra degli strumenti del suo pannello inferiore ha
+pulsanti aggiuntivi per pilotare i canali della scena direttamente da un controller
+**MIDI**, **OSC**, **DMX** o **HID** (joystick) patchato — comodo per impostare i valori a
+mano invece di trascinare gli slider sullo schermo.
+
+| Pulsante | Cosa fa |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Control the channels with an external controller** | Attiva/disattiva il controllo esterno. Quando è abilitato, i fader/manopole del controller vengono mappati 1:1 sui canali della scena, nell'ordine in cui compaiono nella console, e la **Virtual Console smette di ricevere input** da quel controller finché non si disattiva questa opzione o non si chiude l'editor. |
+| ![](/basics/position.svg?resize=48,48) **Toggle Pan & Tilt mode** | Mostrato solo mentre il controllo esterno è attivo. Cambia la mappatura in modo che i primi quattro fader/manopole del controller pilotino invece **pan, pan fine, tilt e tilt fine** di un singolo fixture — comodo per posizionare una testa mobile con fader reali anziché con un [XY Pad](/virtual-console/xy-pad). |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Shift the faders mapping backward / forward** | Scorre la mappatura per pagine quando c'è più da controllare di quanti fader abbia il controller. In modalità normale, una pagina è un blocco di canali della dimensione del numero di fader del controller; in modalità Pan & Tilt, una pagina è un singolo fixture. |
+
+Il canale attualmente pilotato da un controller viene evidenziato nella console, così
+è possibile vedere a colpo d'occhio cosa sta facendo ciascun fader fisico. Se uno degli
+universi patchati ha un joystick (plugin HID), i suoi assi vengono rilevati e resi
+disponibili anche per la mappatura.
+
 ## Velocità
 
 La sezione **Velocità**, comprimibile, imposta come la scena esegue la dissolvenza quando

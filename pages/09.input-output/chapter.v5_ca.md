@@ -139,6 +139,16 @@ motoritzar faders en un Behringer BCF2000). Activa-ho amb el botó **F** al
 bloc de l'univers. Actualment la retroalimentació és compatible amb MIDI,
 OSC i loopback.
 
+Per defecte, la retroalimentació s'envia de nou per la mateixa línia per la
+qual arriba l'entrada. Quan la retroalimentació està activada, apareix un
+petit botó a la cantonada inferior dreta del requadre de connexió, on el
+fil de retroalimentació s'hi uneix; fes-hi clic per triar una **línia
+diferent del mateix connector** per enviar-hi la retroalimentació en el seu
+lloc. Això és útil amb dispositius que utilitzen ports MIDI d'entrada/sortida
+separats o adreces OSC diferents per a l'entrada i la retroalimentació. Quan
+la destinació de la retroalimentació difereix de la línia d'entrada, el seu
+nom es mostra al costat del botó com a recordatori.
+
 Per treure el màxim profit d'un controlador extern, configura un **perfil
 d'entrada** — vegeu [Perfils d'Entrada](input-profiles).
 </content>

@@ -3,7 +3,7 @@ title: 'Hauptfenster'
 taxonomy:
     category: docs
 child_type: docs
-media_order: 'main-window-v5.png,main-window.png'
+media_order: 'main-window-v5.3.png,main-window.png'
 ---
 
 <style>
@@ -23,7 +23,7 @@ Das QLC+-Hauptfenster besteht aus vier Hauptteilen:
 3.  Dem Haupt-Kontextbereich, der ein Vorschau- oder Bedienfeld sein kann
 4.  Seitenpanels, um ohne Platzverschwendung auf die aktuelle Ansicht einzuwirken
 
-![](/main-window/main-window-v5.png)
+![](/main-window/main-window-v5.3.png)
 
 Die meisten Steuerelemente in der Software verfügen über Tooltips, die angezeigt werden, wenn Sie den Mauszeiger eine kurze Zeit darüber halten.
 

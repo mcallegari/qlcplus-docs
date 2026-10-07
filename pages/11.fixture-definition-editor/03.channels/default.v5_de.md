@@ -24,11 +24,40 @@ Oben im Bereich befindet sich eine kleine Symbolleiste:
 |--------|--------------|
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Neuen Kanal hinzufügen** | Erstellt einen neuen Kanal und öffnet rechts den [Kanaleditor](#kanaleditor). |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Ausgewählte(n) Kanal/Kanäle entfernen** | Entfernt die ausgewählten Kanäle aus dem Fixture **und aus allen Modi**. |
-| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Kanalassistent** | Erstellt viele ähnliche Kanäle auf einmal (siehe [Fähigkeitsassistent](#fähigkeitsassistent)). |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Kanalassistent** | Erstellt viele ähnliche Kanäle auf einmal (siehe [Kanalassistent](#kanalassistent) unten). |
 
 Klicken Sie auf einen Kanal, um ihn auszuwählen; **doppelklicken** Sie ihn, um
 ihn im Kanaleditor zu öffnen. Kanäle können aus dieser Liste in die
 Kanalliste eines Modus im Bereich [Modi](../modes) **gezogen** werden.
+
+## Kanalassistent
+
+Der Kanalassistent erstellt schnell ein oder mehrere voreingestellte Kanäle auf
+einmal, anstatt sie einzeln hinzuzufügen und zu konfigurieren. Er teilt sich
+seinen Dialog mit dem [Fähigkeitsassistenten](#fähigkeitsassistent), der weiter
+unten beschrieben wird; welche Felder angezeigt werden, hängt davon ab, welchen
+der beiden Sie geöffnet haben.
+
+|     |     |
+| --- | --- |
+| **Type** | Die Art der zu erstellenden Kanäle — siehe Tabelle unten. |
+| **Amount** | Wie viele Kanäle erstellt werden sollen. Bei einem Mehrfarben-Typ (RGB, RGBW, …) ist dies die Anzahl der **vollständigen Gruppen**, nicht der einzelnen Kanäle — z. B. erstellt „RGB“ mit Amount 2 sechs Kanäle (zwei Rot-/Grün-/Blau-Tripel). |
+| **Label** | Der Name, der jedem neuen Kanal gegeben wird. Verwenden Sie eine Raute `#`, um zu markieren, wo eine Indexnummer eingefügt wird (z. B. erstellt „Head #“ Head 1, Head 2, …). Bei einem Mehrfarben-Typ wird jede Komponente stattdessen nach ihrer Farbe und ihrem Index benannt (Red 1, Green 1, Blue 1, Red 2, …), und dieses Feld wird ignoriert. |
+| **Preview** | Wird aktualisiert, während Sie die Parameter ändern, und listet die Kanäle auf, die erstellt werden. |
+
+**Type** kann einer der folgenden sein:
+
+* Ein einzelner Primärfarbkanal: **Red, Green, Blue, White, Amber, UV, Lime**
+  oder **Indigo**.
+* Ein Mehrkanal-Farb-Preset, das pro Komponente einen Primärfarbkanal erstellt:
+  **RGB**, **RGBW**, **RGBA**, **RGBL** oder **RGBAW**.
+* **Dimmer**, **Pan**, **Tilt**, **Color Macro** (für ein Farbrad),
+  **Shutter**, **Beam** oder **Effect**.
+
+Kanäle auf diese Weise zu erstellen entspricht dem normalen Hinzufügen jedes
+einzelnen Kanals mit Auswahl des passenden [Presets](#kanaleditor) — es ist
+einfach schneller, wenn ein Fixture mehrere Kanäle derselben Art benötigt, etwa
+die einzelnen Köpfe einer Pixelleiste oder mehrere identische RGB-Subfixtures.
 
 ## Kanaleditor
 

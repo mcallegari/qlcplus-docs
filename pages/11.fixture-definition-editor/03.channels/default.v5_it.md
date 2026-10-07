@@ -26,11 +26,39 @@ sezione:
 |--------|--------------|
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new channel** | Crea un nuovo canale e apre il [Channel Editor](#channel-editor) sulla destra. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Rimuove i canali selezionati dal fixture **e da tutte le modalità**. |
-| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Crea molti canali simili in una sola volta (vedere [Capability wizard](#capability-wizard)). |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Crea molti canali simili in una sola volta (vedere [Channel wizard](#channel-wizard) più sotto). |
 
 Fare clic su un canale per selezionarlo; fare **doppio clic** per aprirlo nel
 Channel Editor. I canali possono essere **trascinati** da questo elenco
 nell'elenco dei canali di una modalità, nella sezione [Modes](../modes).
+
+## Channel wizard
+
+Il Channel Wizard crea rapidamente uno o più canali preimpostati in una sola
+volta, invece di aggiungerli e configurarli uno per uno. Condivide la propria
+finestra di dialogo con il [Capability wizard](#capability-wizard) descritto
+più sotto; i campi mostrati dipendono da quale dei due è stato aperto.
+
+|     |     |
+| --- | --- |
+| **Type** | Il tipo di canale/i da creare — vedere la tabella sotto. |
+| **Amount** | Quanti canali creare. Per un tipo multi-colore (RGB, RGBW, …) questo è il numero di **gruppi completi**, non di singoli canali — ad es. "RGB" con Amount 2 crea 6 canali (due terne Red/Green/Blue). |
+| **Label** | Il nome assegnato a ciascun nuovo canale. Utilizzare un cancelletto `#` per indicare dove va inserito un numero indice (ad es. "Head #" crea Head 1, Head 2, …). Per un tipo multi-colore, ciascun componente viene invece nominato in base al proprio colore e indice (Red 1, Green 1, Blue 1, Red 2, …), e questo campo viene ignorato. |
+| **Preview** | Si aggiorna man mano che si modificano i parametri, elencando i canali che verranno creati. |
+
+**Type** può essere uno dei seguenti:
+
+* Un singolo canale di colore primario: **Red, Green, Blue, White, Amber, UV,
+  Lime** o **Indigo**.
+* Un preset di colore multi-canale, che crea un canale di colore primario per
+  ciascun componente: **RGB**, **RGBW**, **RGBA**, **RGBL** o **RGBAW**.
+* **Dimmer**, **Pan**, **Tilt**, **Color Macro** (per una ruota colore),
+  **Shutter**, **Beam** o **Effect**.
+
+Creare i canali in questo modo equivale ad aggiungerli normalmente uno per uno
+e scegliere il [Preset](#channel-editor) corrispondente — è semplicemente più
+rapido quando un fixture necessita di più canali dello stesso tipo, come le
+singole teste di una barra a pixel o diversi sotto-fixture RGB identici.
 
 ## Channel Editor
 

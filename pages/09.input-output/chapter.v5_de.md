@@ -142,5 +142,14 @@ Fader an einem Behringer BCF2000 zu motorisieren). Aktivieren Sie es mit der
 Schaltfläche **F** am Universum-Block. Feedback wird derzeit über MIDI, OSC und
 Loopback unterstützt.
 
+Standardmäßig wird das Feedback über dieselbe Leitung zurückgesendet, über die
+auch die Eingabe hereinkommt. Wenn Feedback aktiviert ist, erscheint eine kleine
+Schaltfläche in der unteren rechten Ecke der Patch-Box, dort, wo die Feedback-Leitung
+auf sie trifft; klicken Sie darauf, um stattdessen eine **andere Leitung desselben
+Plugins** auszuwählen, an die das Feedback gesendet werden soll. Dies ist nützlich
+bei Geräten, die für Eingabe und Feedback getrennte MIDI-Ein-/Ausgänge oder
+OSC-Adressen verwenden. Weicht das Feedback-Ziel von der Eingangsleitung ab, wird
+dessen Name zur Erinnerung neben der Schaltfläche angezeigt.
+
 Um das Beste aus einem externen Controller herauszuholen, richten Sie ein
 **Eingangsprofil** ein — siehe [Eingangsprofile](input-profiles).

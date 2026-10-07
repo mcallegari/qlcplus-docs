@@ -141,5 +141,15 @@ motoriser des faders sur une Behringer BCF2000). Activez-le avec le bouton
 **F** sur le bloc d'univers. Le feedback est actuellement pris en charge via
 MIDI, OSC et loopback.
 
+Par défaut, le feedback est renvoyé sur la même ligne que celle par laquelle
+l'input arrive. Lorsque le feedback est activé, un petit bouton apparaît
+dans le coin inférieur droit du bloc de patch, à l'endroit où le fil de
+feedback le rejoint ; cliquez dessus pour choisir une **ligne différente du
+même plugin** à laquelle envoyer le feedback à la place. Ceci est utile avec
+les appareils qui utilisent des ports MIDI in/out séparés ou des adresses
+OSC distinctes pour l'input et le feedback. Lorsque la destination du
+feedback diffère de la ligne d'input, son nom est affiché à côté du bouton
+comme rappel.
+
 Pour tirer le meilleur parti d'un contrôleur externe, configurez un
 **profil d'input** — voir [Profils d'Input](input-profiles).

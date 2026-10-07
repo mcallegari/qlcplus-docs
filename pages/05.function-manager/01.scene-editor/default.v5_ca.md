@@ -39,6 +39,24 @@ Per definir l'aspecte, selecciona els fixtures de l'escena i ajusta els seus can
 les **eines de capacitat de canal** del panell esquerre (Intensitat, Color, Posició,
 etc.) o la **Vista DMX**. Els valors s'emmagatzemen a l'escena a mesura que els canvies.
 
+## Controlar els canals des d'un controlador extern
+
+Mentre l'Editor d'Escenes està obert, la barra d'eines del seu panell inferior
+té botons addicionals per controlar directament els canals de l'escena des d'un
+controlador **MIDI**, **OSC**, **DMX** o **HID** (joystick) connectat — útil
+per introduir valors a mà en lloc d'arrossegar controls lliscants a la pantalla.
+
+| Botó | Què fa |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Controla els canals amb un controlador extern** | Commuta el control extern. Mentre està activat, els faders/knobs del controlador es mapegen 1:1 sobre els canals de l'escena, en l'ordre en què apareixen a la consola, i la **Virtual Console deixa de rebre entrada** d'aquell controlador fins que ho desactivis o tanquis l'editor. |
+| ![](/basics/position.svg?resize=48,48) **Commuta el mode Pan & Tilt** | Només es mostra mentre el control extern està activat. Canvia el mapatge perquè els primers quatre faders/knobs del controlador controlin en canvi **pan, pan fine, tilt i tilt fine** d'un sol fixture — útil per posicionar un cap mòbil amb faders reals en lloc d'un [XY Pad](/virtual-console/xy-pad). |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Desplaça el mapatge de faders enrere / endavant** | Pagina el mapatge quan hi ha més coses a controlar que faders té el controlador. En mode normal, una pàgina és un bloc de canals de la mida del nombre de faders del controlador; en mode Pan & Tilt, una pàgina és un sol fixture. |
+
+El canal controlat actualment per un controlador es ressalta a la consola, de
+manera que pots veure d'un cop d'ull què fa cada fader físic. Si un dels
+universos connectats té un joystick (connector HID), els seus eixos es
+detecten i també es posen a disposició del mapatge.
+
 ## Velocitat
 
 La secció plegable **Velocitat** estableix com s'esvaeix l'escena quan s'activa:

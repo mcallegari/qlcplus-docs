@@ -111,6 +111,43 @@ proporzionale.
 * **Inverted Y-Axis** — inverte l'asse verticale, così il valore massimo di
   tilt viene raggiunto nella parte superiore del pad anziché in quella
   inferiore. Utile per fixture montati capovolti su un traliccio.
+* **Floor control** — passa il pad dal controllo pan/tilt grezzo al
+  puntamento verso una posizione sul **pavimento del palco**. Vedere *Floor
+  control* più sotto.
+
+### Floor control
+
+Con **Floor control** abilitato, il pad non pilota più direttamente pan e
+tilt. Invece, l'area principale diventa una pianta dall'alto del palco — con
+le stesse dimensioni dell'ambiente (Width/Depth) impostate nella
+[3D View](/fixtures-and-functions/3d-view) — e trascinando il cursore si
+sposta un **target** a forma di mirino sul pavimento. QLC+ calcola quindi il
+pan/tilt di cui ciascuna testa controllata ha bisogno per puntare esattamente
+su quel punto X/Z, usando la posizione 3D propria della testa, così un
+impianto misto di fixture appesi in punti diversi punta tutto nello
+**stesso punto** senza alcuna regolazione di range per singolo fixture.
+
+* Il **value slider** verticale sulla destra, che normalmente imposta la
+  posizione Y (tilt), viene sostituito da uno **height slider** (0–20 m) che
+  alza o abbassa il target rispetto al pavimento — utile per puntare sopra
+  l'altezza delle teste, o verso il basso sul pavimento stesso.
+* Un riquadro di lettura delle coordinate nell'angolo del pad mostra il
+  target attuale come **X / Z / H**, tutti in metri.
+* Il marcatore del target genera un anello attorno a sé man mano che
+  l'altezza aumenta, come indicazione visiva che il punto di mira è sollevato
+  dal pavimento.
+* I **fixture position dots** e il ridimensionamento della **range window**
+  descritti sopra sono specifici del controllo pan/tilt grezzo e vengono
+  nascosti mentre il floor control è attivo; la finestra di dialogo del
+  range Pan/Tilt per singolo fixture e i relativi limiti continuano comunque
+  ad applicarsi a quanto lontano ciascuna testa può fisicamente ruotare per
+  raggiungere il target.
+
+Il floor control dipende dal fatto che i fixture abbiano una posizione nota —
+impostata automaticamente quando vengono posizionati nella 3D View
+(anche tramite lo [Show Wizard](/fixtures-and-functions/show-wizard)), oppure
+manualmente dalle proprietà della 3D View. Una testa senza posizione nota
+viene pilotata come se si trovasse al centro del pavimento.
 
 ### Range Display Mode
 
@@ -124,7 +161,10 @@ fixture:
 * **DMX** — valori DMX grezzi, 0–255.
 
 Cambiare la modalità non modifica i range memorizzati, ma solo il modo in
-cui vengono mostrati e inseriti.
+cui vengono mostrati e inseriti. Fare clic sul piccolo pulsante che mostra
+l'unità corrente (°, % o DMX), accanto alla barra degli strumenti
+dell'elenco **Fixtures**, per scorrere ciclicamente le tre modalità senza
+aprire la scheda Settings.
 
 ### Fixtures
 

@@ -113,6 +113,42 @@ proportionnellement.
 * **Inverted Y-Axis** — inverse l'axe vertical, de sorte que la valeur
   maximale de tilt soit atteinte en haut du pad au lieu du bas. Utile pour
   les fixtures montés à l'envers sur un pont.
+* **Floor control** — fait passer le pad d'un contrôle pan/tilt brut à un
+  visée sur une position du **plancher de scène**. Voir *Floor control*
+  ci-dessous.
+
+### Floor control
+
+Lorsque **Floor control** est activé, le pad ne pilote plus directement le
+pan et le tilt. À la place, la zone principale devient un plan vu de dessus
+de la scène — la même taille d'environnement (Width/Depth) que celle définie
+dans la [3D View](/fixtures-and-functions/3d-view) — et faire glisser le
+curseur déplace une **cible** en croix sur le plancher. QLC+ calcule alors le
+pan/tilt dont chaque head contrôlé a besoin pour viser exactement ce point
+X/Z, en utilisant la position 3D propre du head, de sorte qu'un rig mixte de
+fixtures suspendus à différents endroits pointent tous vers le *même
+endroit* sans aucun réglage de plage par fixture.
+
+* Le **value slider** vertical sur la droite, qui définit normalement la
+  position Y (tilt), est remplacé par un **height slider** (0–20 m) qui
+  élève ou abaisse la cible au-dessus du plancher — utile pour viser
+  au-dessus de la hauteur des têtes, ou vers le plancher lui-même.
+* Un affichage de coordonnées dans le coin du pad montre la cible actuelle
+  sous la forme **X / Z / H**, toutes en mètres.
+* Le marqueur de cible se dote d'un anneau autour de lui à mesure que la
+  hauteur augmente, comme indice visuel que le point visé est soulevé du
+  plancher.
+* Les **fixture position dots** et la mise à l'échelle de la **range
+  window** décrites plus haut sont spécifiques au contrôle pan/tilt brut et
+  sont masqués tant que le floor control est actif ; la boîte de dialogue
+  de plage Pan/Tilt par fixture et ses limites continuent de s'appliquer à
+  l'amplitude de rotation physique de chaque head pour atteindre la cible.
+
+Le floor control dépend du fait que les fixtures aient une position connue —
+définie automatiquement lorsqu'ils sont placés dans la 3D View (y compris
+par le [Show Wizard](/fixtures-and-functions/show-wizard)), ou manuellement
+depuis les propriétés de la 3D View. Un head sans position connue est piloté
+comme s'il se trouvait au centre du plancher.
 
 ### Range Display Mode
 
@@ -126,7 +162,10 @@ Pan/Tilt des fixtures :
 * **DMX** — valeurs DMX brutes, 0–255.
 
 Changer le mode ne modifie pas les plages enregistrées, seulement la façon
-dont elles sont affichées et saisies.
+dont elles sont affichées et saisies. Cliquez sur le petit bouton affichant
+l'unité actuelle (°, % ou DMX), à côté de la barre d'outils de la liste
+**Fixtures**, pour parcourir cycliquement les trois modes sans ouvrir
+l'onglet Settings.
 
 ### Fixtures
 

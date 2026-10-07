@@ -48,6 +48,26 @@ canaux à l'aide des **outils de capacités de canaux** dans le panneau gauche
 (Intensité, Couleur, Position, etc.) ou de la **Vue DMX**. Les valeurs sont
 enregistrées dans la scène au fur et à mesure de leur modification.
 
+## Contrôler les canaux depuis un contrôleur externe
+
+Lorsque l'Éditeur de Scène est ouvert, sa barre d'outils du panneau inférieur
+comporte des boutons supplémentaires permettant de piloter directement les
+canaux de la scène depuis un contrôleur **MIDI**, **OSC**, **DMX** ou **HID**
+(joystick) patché — pratique pour régler les valeurs à la main plutôt que de
+faire glisser des sliders à l'écran.
+
+| Bouton | Ce qu'il fait |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Control the channels with an external controller** | Active/désactive le contrôle externe. Lorsqu'il est activé, les faders/boutons du contrôleur sont mappés 1:1 sur les canaux de la scène, dans l'ordre où ils apparaissent dans la console, et la **Virtual Console cesse de recevoir les entrées** de ce contrôleur jusqu'à ce que vous désactiviez cette option ou fermiez l'éditeur. |
+| ![](/basics/position.svg?resize=48,48) **Toggle Pan & Tilt mode** | Affiché uniquement lorsque le contrôle externe est activé. Change le mappage de sorte que les quatre premiers faders/boutons du contrôleur pilotent à la place **pan, pan fine, tilt et tilt fine** d'un seul fixture — pratique pour positionner une lyre avec de vrais faders plutôt qu'un [XY Pad](/virtual-console/xy-pad). |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Shift the faders mapping backward / forward** | Fait défiler le mappage par pages lorsqu'il y a plus de choses à contrôler que le contrôleur n'a de faders. En mode normal, une page correspond à un bloc de canaux de la taille du nombre de faders du contrôleur ; en mode Pan & Tilt, une page correspond à un seul fixture. |
+
+Le canal actuellement piloté par un contrôleur est mis en surbrillance dans
+la console, afin que vous puissiez voir d'un coup d'œil ce que fait chaque
+fader physique. Si l'un des univers patchés dispose d'un joystick (plugin
+HID), ses axes sont détectés et rendus disponibles pour le mappage
+également.
+
 ## Vitesse
 
 La section **Vitesse**, repliable, définit comment la scène effectue son fondu
