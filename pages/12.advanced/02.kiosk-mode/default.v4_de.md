@@ -1,5 +1,5 @@
 ---
-title: 'Kiosk Modus'
+title: 'Kiosk-Modus'
 date: '08:17 22-08-2023'
 ---
 

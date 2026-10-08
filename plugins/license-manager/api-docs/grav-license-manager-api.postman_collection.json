@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "grav-license-manager-api-v1",
+		"name": "Grav License Manager API",
+		"description": "API endpoints for managing Grav Premium licenses.\n\nRequires the Grav CMS API plugin to be installed and enabled.\n\nUses the same environment variables as the core Grav CMS API collection:\n- `base_url` - Your Grav site URL\n- `api_prefix` - API version prefix (default: /api/v1)\n- `api_key` - A valid API key\n- `grav_environment` - Grav environment (default: localhost)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List Licenses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"const res = pm.response.json();",
+							"pm.test('Status is 200', () => pm.response.to.have.status(200));",
+							"pm.test('Data is array', () => pm.expect(res.data).to.be.an('array'));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"}
+				],
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses"]
+				},
+				"description": "List all stored premium licenses. Keys are masked for security."
+			}
+		},
+		{
+			"name": "Get License",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"const res = pm.response.json();",
+							"pm.test('Status is 200', () => pm.response.to.have.status(200));",
+							"pm.test('Has slug', () => pm.expect(res.data).to.have.property('slug'));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"}
+				],
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses/admin-pro",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses", "admin-pro"]
+				},
+				"description": "Get a specific license by product slug."
+			}
+		},
+		{
+			"name": "Add License",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"const res = pm.response.json();",
+							"pm.test('Status is 201', () => pm.response.to.have.status(201));",
+							"pm.test('Has success message', () => pm.expect(res.data.message).to.include('successfully'));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"},
+					{"key": "Content-Type", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"slug\": \"admin-pro\",\n    \"license\": \"F0A1B2C3-D4E5F6A7-B8C9D0E1-F2A3B4C5\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses"]
+				},
+				"description": "Add or update a premium license. License format is validated before saving."
+			}
+		},
+		{
+			"name": "Remove License",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Status is 204', () => pm.response.to.have.status(204));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"}
+				],
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses/admin-pro",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses", "admin-pro"]
+				},
+				"description": "Remove a license by product slug."
+			}
+		},
+		{
+			"name": "Validate License Format",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"const res = pm.response.json();",
+							"pm.test('Status is 200', () => pm.response.to.have.status(200));",
+							"pm.test('Has valid field', () => pm.expect(res.data).to.have.property('valid'));"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"},
+					{"key": "Content-Type", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"license\": \"F0A1B2C3-D4E5F6A7-B8C9D0E1-F2A3B4C5\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses/validate",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses", "validate"]
+				},
+				"description": "Check if a license key matches the valid format. Does not verify against any server."
+			}
+		},
+		{
+			"name": "Validate License (invalid)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{"key": "X-API-Key", "value": "{{api_key}}"},
+					{"key": "X-Grav-Environment", "value": "{{grav_environment}}"},
+					{"key": "Content-Type", "value": "application/json"}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"license\": \"not-a-valid-license\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}{{api_prefix}}/licenses/validate",
+					"host": ["{{base_url}}{{api_prefix}}"],
+					"path": ["licenses", "validate"]
+				},
+				"description": "Test validation with an invalid license format. Should return valid: false."
+			}
+		}
+	]
+}

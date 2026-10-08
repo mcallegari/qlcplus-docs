@@ -12,7 +12,7 @@ is the best view for checking what every channel is currently outputting and for
 setting a single channel by hand.
 
 It is one of the four views available from the toolbar at the top of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace. Use the **universe
+[Fixtures and Functions](/fixtures-and-functions) workspace. Use the **universe
 selector** in that toolbar to limit the view to one universe.
 
 ## The fixture panels

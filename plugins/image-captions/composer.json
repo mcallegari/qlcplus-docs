@@ -1,0 +1,5 @@
+{
+    "require": {
+        "imangazaliev/didom": "^2.0"
+    }
+}

@@ -1,0 +1,466 @@
+{% set settings = config.plugins['git-sync'] %}
+{% set frontend_url = (uri.base ~ uri.rootUrl)|trim('/') %}
+
+<div class="remodal" data-remodal-id="wizard" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+
+    <h1>{{ 'PLUGIN_GIT_SYNC.WIZARD_TITLE'|t }}</h1>
+    {% if git_sync.git_installed %}
+    <div class="step-0">
+        <div class="panel">
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP0_P1'|t|markdown|raw }}
+            </p>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP0_P2'|t|markdown|raw }}
+            </p>
+        </div>
+    </div>
+
+    <div class="step-1">
+        {% set selectedRepo = 'github.com' in settings.repository ? 'github' : selectedRepo %}
+        {% set selectedRepo = 'bitbucket.com' in settings.repository ? 'bitbucket' : selectedRepo %}
+        {% set selectedRepo = 'gitlab.com' in settings.repository ? 'gitlab' : selectedRepo %}
+        {% set selectedRepo = not (settings.repository is empty) and not selectedRepo ? 'allothers' : selectedRepo %}
+
+        <h1>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP'|t }} 1 - {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP_HOSTING'|t }}</h1>
+        <div class="panel hidden disabled">
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP1_P1'|t|markdown|raw }}
+            </p>
+            <div class="columns wizard-padding">
+                <div class="column">
+                    <label>
+                        <input type="radio" value="github" name="gitsync[repository]" {{ selectedRepo == 'github' ? 'checked' : '' }} />
+                        <img src="{{ url('plugin://git-sync/images/repos/github.svg') }}" />
+                        <a href="https://github.com/join?source=header-home" target="_blank">({{ 'PLUGIN_GIT_SYNC.WIZARD_CREATE_ACCOUNT'|t }})</a>
+                    </label>
+                    <label>
+                        <input type="radio" value="bitbucket" name="gitsync[repository]" {{ selectedRepo == 'bitbucket' ? 'checked' : '' }} />
+                        <img src="{{ url('plugin://git-sync/images/repos/bitbucket.svg') }}" />
+                        <a href="https://bitbucket.org/account/signup/" target="_blank">({{ 'PLUGIN_GIT_SYNC.WIZARD_CREATE_ACCOUNT'|t }})</a>
+                    </label>
+                    <label>
+                        <input type="radio" value="gitlab" name="gitsync[repository]" {{ selectedRepo == 'gitlab' ? 'checked' : '' }} />
+                        <img src="{{ url('plugin://git-sync/images/repos/gitlab.svg') }}" />
+                        <a href="https://gitlab.com/users/sign_up" target="_blank">({{ 'PLUGIN_GIT_SYNC.WIZARD_CREATE_ACCOUNT'|t }})</a>
+                    </label>
+                     <label>
+                        <input type="radio" value="allothers" name="gitsync[repository]" {{ selectedRepo == 'allothers' ? 'checked' : '' }} />
+                        <img src="{{ url('plugin://git-sync/images/repos/gitlogo.svg') }}" />
+                         <small>({{ 'PLUGIN_GIT_SYNC.WIZARD_ANY_SERVICE'|t }})</small>
+                    </label>
+                </div>
+                <div class="column">
+                    <label for="gs-user-field">
+                        <span class="block">
+                            {{ 'PLUGIN_GIT_SYNC.GIT_USER'|t }}
+                            <label for="gs-no-user" class="no_user">
+                                <input id="gs-no-user" type="checkbox" name="gitsync[no_user]" {{ settings.no_user ? 'checked' }}/>
+                                {{ 'PLUGIN_GIT_SYNC.WIZARD_NO_USER_LABEL'|t }}
+                            </label>
+                        </span>
+                        <input
+                            id="gs-user-field"
+                            type="text"
+                            name="gitsync[repo_user]"
+                            {% if settings.no_user %}
+                            disabled="disabled"
+                            {% endif %}
+                            placeholder="{{ settings.no_user ? '<username not required>' : 'Username, not email' }}"
+                            value="{{ settings.user|default('') }}"
+                        />
+                    </label>
+                    <label>
+                        {{ 'PLUGIN_GIT_SYNC.GIT_PASSWORD'|t }}
+                        <input type="password" name="gitsync[repo_password]" placeholder="{{ 'PLUGIN_GIT_SYNC.GIT_PASSWORD_PLACEHOLDER'|t }}" value="" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="access-tokens wizard-padding">
+                <h3>{{ 'PLUGIN_GIT_SYNC.WIZARD_2FA_TITLE'|t }}</h3>
+                <p>{{ 'PLUGIN_GIT_SYNC.WIZARD_2FA_P1'|t|markdown|raw }}</p>
+                <p>{{ 'PLUGIN_GIT_SYNC.WIZARD_2FA_P2'|t|markdown|raw }}</p>
+
+                <p><a href="#" class="button" data-access-tokens-details>{{ 'PLUGIN_GIT_SYNC.WIZARD_MORE_DETAILS'|t }} <i class="fa fa-fw fa-chevron-down"></i></a></p>
+
+                <div class="access-tokens-details" style="display: none;">
+                    <p>{{ 'PLUGIN_GIT_SYNC.WIZARD_2FA_DETAILS_P1'|t|markdown|raw }}</p>
+
+                    <p>{{ 'PLUGIN_GIT_SYNC.WIZARD_2FA_DETAILS_P2'|t|markdown|raw }}</p>
+
+                    <div class="hidden-step-github hidden">
+                        <h4>GitHub</h4>
+                        <p>
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_TOKENS_P'|t|markdown|raw }}
+                        </p>
+
+                        <ul>
+                            <li><i class="fa fa-check-square-o"></i> <code>repo</code> ({{ 'PLUGIN_GIT_SYNC.WIZARD_GH_SCOPE_1'|t }})</li>
+                            <li><i class="fa fa-check-square-o"></i> <code>admin:repo_hook</code> ({{ 'PLUGIN_GIT_SYNC.WIZARD_GH_SCOPE_2'|t }})</li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden-step-bitbucket hidden">
+                        <h4>Bitbucket</h4>
+                        <p>
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PASSWORDS_P'|t|markdown|raw }}
+                        </p>
+
+                        <ul>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PERM_REPO'|t }}
+                                <ul>
+                                    <li><i class="fa fa-check-square-o"></i> <code>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PERM_READ'|t }}</code></li>
+                                    <li><i class="fa fa-check-square-o"></i> <code>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PERM_WRITE'|t }}</code></li>
+                                </ul>
+                            </li>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PERM_WEBHOOKS'|t }}
+                                <ul>
+                                    <li><i class="fa fa-check-square-o"></i> <code>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_PERM_READ_WRITE'|t }}</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden-step-gitlab hidden">
+                        <h4>GitLab</h4>
+                        <p>
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_GL_TOKENS_P'|t|markdown|raw }}
+                        </p>
+
+                        <ul>
+                            <li><i class="fa fa-check-square-o"></i> <code>API</code> ({{ 'PLUGIN_GIT_SYNC.WIZARD_GL_SCOPE_1'|t }})</li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden-step-allothers hidden">
+                        <h4>{{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_TOKENS_TITLE'|t }}</h4>
+
+                        <p>{{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_TOKENS_P'|t|markdown|raw }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP0_P2'|t|markdown|raw }}
+            </p>
+        </div>
+    </div>
+
+    <div class="step-2">
+        <h1>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP'|t }} 2 - {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP_REPOSITORY'|t }}</h1>
+        <div class="panel hidden disabled">
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_INTRO'|t }}
+            </p>
+
+            <div class="wizard-padding">
+                <ol>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI1_TITLE'|t }}
+                        <ul>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI1_1'|t }}</li>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI1_2'|t }}</li>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI1_3'|t }}</li>
+                        </ul>
+                    </li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI2_TITLE'|t }}
+                        <ul>
+                            <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP2_LI2_1'|t|markdown|raw }}</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="hidden-step-github wizard-padding hidden">
+                <h4>GitHub</h4>
+                <p>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_REPO_HELP'|t|markdown|raw }}
+                </p>
+            </div>
+            <div class="hidden-step-bitbucket wizard-padding hidden">
+                <h4>Bitbucket</h4>
+                <p>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_BB_REPO_HELP'|t|markdown|raw }}
+                </p>
+            </div>
+            <div class="hidden-step-gitlab wizard-padding hidden">
+                <h4>GitLab</h4>
+                <p>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_GL_REPO_HELP'|t|markdown|raw }}
+                </p>
+            </div>
+            <div class="hidden-step-allothers wizard-padding hidden">
+              <h4>{{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_TOKENS_TITLE'|t }}</h4>
+
+            </div>
+
+            <p class="hidden-step-bitbucket hidden">
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_BB_URL_NOTICE'|t|markdown|raw }}
+            </p>
+
+            <p>
+                <label>
+                    {{ 'PLUGIN_GIT_SYNC.GIT_REPOSITORY'|t }}
+
+                    <input type="text" name="gitsync[repo_url]" placeholder="https://github.com/getgrav/grav.git" value="{{ settings.repository|default('') }}" />
+                </label>
+                <span>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_REPO_FOOTNOTE'|t|markdown|raw }}
+                </span>
+            </p>
+
+            <p>
+                <label>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_BRANCH_LABEL'|t }}
+
+                    <input type="text" name="gitsync[branch]" placeholder="main" value="{{ settings.branch }}">
+                </label>
+            </p>
+
+            <p class="center">
+                <a href="#" class="button" data-gitsync-action="test"><i class="fa fa-fw fa-plug"></i> {{ 'PLUGIN_GIT_SYNC.WIZARD_VERIFY_BTN'|t }}</a>
+            </p>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP0_P2'|t|markdown|raw }}
+            </p>
+        </div>
+    </div>
+
+    <div class="step-3">
+        <h1>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP'|t }} 3 - {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP_WEBHOOK'|t }}</h1>
+        <div class="panel hidden disabled" data-gitsync-uribase="{{ frontend_url }}">
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP3_INTRO'|t }}</p>
+
+            <p>
+                <label>
+                    {{ 'PLUGIN_GIT_SYNC.WEBHOOK'|t }}
+                    <input type="text" name="gitsync[webhook]" placeholder="/_git-sync" value="{{ settings.webhook|default('/_git-sync') }}" />
+                </label>
+            </p>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP3_SECRET_P'|t }}</p>
+
+            <p class="webhook-secret-wrapper">
+                <label for="gitsync-webhook-secret-input">
+                    <input id="gitsync-webhook-secret-input" type="checkbox" name="gitsync[webhook_enabled]" {{ settings.webhook_enabled ? 'checked' }}>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_WEBHOOK_SECRET_CHECK'|t }}
+                </label>
+                <label class="{{ not settings.webhook_enabled ? 'hidden' }}">
+                    {{ 'PLUGIN_GIT_SYNC.WEBHOOK_SECRET'|t }}
+                    <input type="text" name="gitsync[webhook_secret]" placeholder="{{ 'PLUGIN_GIT_SYNC.WIZARD_WEBHOOK_SECRET_PLACEHOLDER'|t }}" value="{{ settings.webhook_secret }}" />
+                </label>
+            </p>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP3_INSTRUCTIONS_INTRO'|t }}</p>
+
+            <div class="hidden-step-github wizard-padding hidden">
+                <h4>GitHub</h4>
+                <ol>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP1'|t|markdown|raw }}</li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP2'|t|markdown|raw }}</li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP3'|t|markdown|raw }}</li>
+                    <li>
+                        {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP4'|t }}
+                        <ul>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_PAYLOAD'|t }}</strong>: <code>{{ frontend_url }}<span class="gitsync-webhook">{{ settings.webhook|default('/_git-sync') }}</span></code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_CONTENT_TYPE'|t }}</strong>: <code>application/json</code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_SECRET'|t }}</strong>: <span class="gitsync-webhook-secret">{{ (settings.webhook_enabled and settings.webhook_secret ? '<code>' ~ settings.webhook_secret ~ '</code>' : '<em>' ~ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_LEAVE_EMPTY'|t ~ '</em>')|raw }}</span></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_EVENTS'|t }}</strong> <code>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_PUSH_EVENT'|t }}</code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_ACTIVE'|t }}</strong>: <i class="fa fa-check-square-o"></i></li>
+                        </ul>
+                    </li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP5'|t|markdown|raw }}</li>
+                </ol>
+            </div>
+
+            <div class="hidden-step-bitbucket wizard-padding hidden">
+                <h4>Bitbucket</h4>
+                <ol>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_STEP1'|t|markdown|raw }}</li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_STEP2'|t|markdown|raw }}</li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_STEP3'|t|markdown|raw }}</li>
+                    <li>
+                        {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP4'|t }}
+                        <ul>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_TITLE'|t }}</strong>: <em>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_TITLE_EXAMPLE'|t }}</em></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_URL'|t }}</strong>: <code>{{ frontend_url }}<span class="gitsync-webhook">{{ settings.webhook|default('/_git-sync') }}</span></code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_ACTIVE'|t }}</strong>: <i class="fa fa-check-square-o"></i></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_PUSH'|t }}</strong>: <i class="fa fa-dot-circle-o"></i></li>
+                        </ul>
+                    </li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_STEP5'|t|markdown|raw }}</li>
+                </ol>
+            </div>
+            <div class="hidden-step-gitlab wizard-padding hidden">
+                <h4>GitLab</h4>
+                <ol>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_STEP1'|t|markdown|raw }}</li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_STEP2'|t|markdown|raw }}</li>
+                    <li>
+                        {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP4'|t }}
+                        <ul>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_URL'|t }}</strong>: <code>{{ frontend_url }}<span class="gitsync-webhook">{{ settings.webhook|default('/_git-sync') }}</span></code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_SECRET_TOKEN'|t }}</strong>: <span class="gitsync-webhook-secret">{{ (settings.webhook_enabled and settings.webhook_secret ? '<code>' ~ settings.webhook_secret ~ '</code>' : '<em>' ~ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_LEAVE_EMPTY'|t ~ '</em>')|raw }}</span></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_PUSH_EVENTS'|t }}</strong>: <i class="fa fa-check-square-o"></i></li>
+                        </ul>
+                    </li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP5'|t|markdown|raw }}</li>
+                </ol>
+            </div>
+
+            <div class="hidden-step-allothers wizard-padding hidden">
+                <h4>{{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_HOOK_TITLE'|t }}</h4>
+                <ol>
+                 <li>
+                  {{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_HOOK_STEP1'|t }}
+                  </li>
+                  <li>
+                  {{ 'PLUGIN_GIT_SYNC.WIZARD_OTHER_HOOK_STEP2'|t }}
+                  </li>
+                    <li>
+                        {{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP4'|t }}
+                        <ul>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_BB_HOOK_URL'|t }}</strong>: <code>{{ frontend_url }}<span class="gitsync-webhook">{{ settings.webhook|default('/_git-sync') }}</span></code></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_SECRET_TOKEN'|t }}</strong>: <span class="gitsync-webhook-secret">{{ (settings.webhook_enabled and settings.webhook_secret ? '<code>' ~ settings.webhook_secret ~ '</code>' : '<em>' ~ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_LEAVE_EMPTY'|t ~ '</em>')|raw }}</span></li>
+                            <li><strong>{{ 'PLUGIN_GIT_SYNC.WIZARD_GL_HOOK_PUSH_EVENTS'|t }}</strong>: <i class="fa fa-check-square-o"></i></li>
+                        </ul>
+                    </li>
+                    <li>{{ 'PLUGIN_GIT_SYNC.WIZARD_GH_HOOK_STEP5'|t|markdown|raw }}</li>
+                </ol>
+            </div>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP0_P2'|t|markdown|raw }}
+            </p>
+        </div>
+    </div>
+
+    <div class="step-4">
+        <h1>{{ 'PLUGIN_GIT_SYNC.WIZARD_STEP'|t }} 4 - {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP_FOLDERS'|t }}</h1>
+        <div class="panel hidden disabled">
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_STEP4_INTRO'|t|markdown|raw }}
+            </p>
+            <div class="columns wizard-padding">
+                <div class="column">
+                    <label>
+                        <input type="checkbox" value="pages" name="gitsync[folders]" {{ not settings.folders or 'pages' in settings.folders ? 'checked' : '' }} />
+                        <span>Pages</span>
+                        <i class="info-desc fa fa-info-circle"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox" value="themes" name="gitsync[folders]" {{ 'themes' in settings.folders ? 'checked' : '' }} />
+                        <span>Themes</span>
+                        <i class="info-desc fa fa-info-circle"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox" value="plugins" name="gitsync[folders]" {{ 'plugins' in settings.folders ? 'checked' : '' }} />
+                        <span>Plugins</span>
+                        <i class="info-desc fa fa-info-circle"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox" value="config" name="gitsync[folders]" {{ 'config' in settings.folders ? 'checked' : '' }} />
+                        <span>Config</span>
+                        <span class="hint--right" data-hint="This folder might contain sensitive data"><i class="fa fa-warning"></i></span>
+                        <i class="info-desc fa fa-info-circle"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox" value="data" name="gitsync[folders]"{{ 'data' in settings.folders ? 'checked' : '' }} />
+                        <span>Data</span>
+                        <span class="hint--right" data-hint="This folder might contain sensitive data"><i class="fa fa-warning"></i></span>
+                        <i class="info-desc fa fa-info-circle"></i>
+                    </label>
+                    {% if 'accounts' in settings.folders %}
+                        <label>
+                            <input type="checkbox" value="accounts" name="gitsync[folders]" {{ 'accounts' in settings.folders ? 'checked' : '' }} />
+                            <span>Accounts</span>
+                            <span class="hint--right" data-hint="This folder contains sensitive data"><i class="fa fa-warning"></i></span>
+                            <i class="info-desc fa fa-info-circle"></i>
+                        </label>
+                    {% endif %}
+
+                    {% set first_custom_folder = true %}
+                    {% for folder in settings.folders %}
+                        {% if '/' in folder %}
+                            {% if first_custom_folder %}
+                                <hr />
+                                {% set first_custom_folder = false %}
+                            {% endif %}
+                            <label>
+                                <input type="checkbox" value="{{ folder }}" name="gitsync[folders]" checked />
+                                <span>{{ folder }}</span>
+                                <i class="info-desc fa fa-info-circle"></i>
+                            </label>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="column">
+                    <div class="description">
+                        <p class="description-accounts hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_ACCOUNTS'|t }}
+                        </p>
+                        <p class="description-config hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_CONFIG'|t }}
+                        </p>
+                        <p class="description-data hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_DATA'|t }}
+                        </p>
+                        <p class="description-pages hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_PAGES'|t }}
+                        </p>
+                        <p class="description-plugins hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_PLUGINS'|t }}
+                        </p>
+                        <p class="description-themes hidden">
+                            {{ 'PLUGIN_GIT_SYNC.WIZARD_DESC_THEMES'|t }}
+                        </p>
+
+                        <p class="info warning description-accounts description-config description-data hidden">{{ 'PLUGIN_GIT_SYNC.WIZARD_SENSITIVE_WARN'|t }}</p>
+
+                        <p class="info alert description-themes hidden">{{ 'PLUGIN_GIT_SYNC.WIZARD_THEMES_ALERT'|t }}</p>
+
+                        {% for folder in settings.folders if '/' in folder %}
+                            <p class="description-{{ folder|replace({'/': '-'}) }} hidden">
+                                This folders was manually added either by you in the settings or by your Skeleton.
+                            </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                {{ 'PLUGIN_GIT_SYNC.WIZARD_SAVE_INSTRUCTION'|t|markdown|raw }}
+            </p>
+        </div>
+    </div>
+
+    <div class="button-bar">
+        <a class="button secondary float-left" data-remodal-action="cancel" href="#">{{ 'PLUGIN_GIT_SYNC.WIZARD_CANCEL'|t }}</a>
+        <a class="button hidden" data-gitsync-action="previous" href="#"><i class="fa fa-fw fa-chevron-left"></i> {{ 'PLUGIN_GIT_SYNC.WIZARD_PREVIOUS'|t }}</a>
+        <a class="button" data-gitsync-action="next" href="#">{{ 'PLUGIN_GIT_SYNC.WIZARD_NEXT'|t }} <i class="fa fa-fw fa-chevron-right"></i></a>
+        <a class="button hidden" data-gitsync-action="save" href="#"><i class="fa fa-fw fa-check"></i> {{ 'PLUGIN_GIT_SYNC.WIZARD_SAVE_FINISH'|t }}</a>
+    </div>
+    {% else %}
+        <div class="step-0">
+            <div class="panel">
+                <p>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_NO_GIT_P1'|t|markdown|raw }}</p>
+
+                <p>
+                    {{ 'PLUGIN_GIT_SYNC.WIZARD_NO_GIT_P2'|t|markdown|raw }}
+                </p>
+
+                <p>You can also specify a custom path in the Advanced section down below at the <strong>Git Binary Path</strong> field. If you are using <strong>Windows</strong> (VM, Azure or a local setup), you might have to change the location accordingly (quotes do matter), for example: <br /> <code>"D:\Program Files\Git\bin\git.exe"</code>.</p>
+            </div>
+        </div>
+        <div class="button-bar">
+            <a class="button secondary float-left" data-remodal-action="cancel" href="#">{{ 'PLUGIN_GIT_SYNC.WIZARD_CLOSE'|t }}</a>
+        </div>
+    {% endif %}
+</div>
+

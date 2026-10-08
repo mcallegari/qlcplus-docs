@@ -127,5 +127,13 @@ If your controller has a return channel, QLC+ can send it visual/mechanical
 BCF2000). Enable it with the **F** button on the universe block. Feedback is
 currently supported over MIDI, OSC and loopback.
 
+By default, feedback is sent back out on the same line the input comes in on.
+When feedback is enabled, a small button appears at the bottom-right corner of
+the patch box, where the feedback wire joins it; click it to pick a
+**different line of the same plugin** to send feedback to instead. This is
+useful with devices that use separate MIDI in/out ports or OSC addresses for
+input and feedback. When the feedback destination differs from the input line,
+its name is shown next to the button as a reminder.
+
 To get the most from an external controller, set up an **input profile** — see
 [Input Profiles](input-profiles).

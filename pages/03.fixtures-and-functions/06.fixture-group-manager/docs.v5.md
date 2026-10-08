@@ -10,7 +10,7 @@ The **Fixture Group Manager** lists all the fixtures in your project, organised
 by universe, and lets you create **fixture groups**, inspect and rename items,
 and edit fixture and channel properties. Open it with the **Fixture Groups**
 button in the left panel of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 ## The tree
 

@@ -11,7 +11,7 @@ see their colour and beam from the chosen point of view. It is the main view for
 arranging a rig spatially and for designing looks visually.
 
 It is one of the four views available from the toolbar at the top of the
-[Fixtures and Functions](FixturesAndFunctions.md) workspace.
+[Fixtures and Functions](/fixtures-and-functions) workspace.
 
 ## Moving around
 

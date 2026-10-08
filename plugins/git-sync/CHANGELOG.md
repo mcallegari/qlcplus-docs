@@ -1,0 +1,320 @@
+# v3.4.11
+## 09/03/2026
+
+1. [](#bugfix)
+    * Your own rules in `user/.gitignore` are kept when Git Sync settings are saved. Git Sync's rules now sit in a marked block and everything outside it is left alone, where previously the whole file was replaced and the replacement pushed [#263](https://github.com/trilbymedia/grav-plugin-git-sync/issues/263)
+
+# v3.4.10
+## 09/03/2026
+
+1. [](#bugfix)
+    * Fixed Git Sync removing a repository's other top-level folders from the remote when it was first connected. Only folders you had Git Sync syncing and then removed from the list are untracked now, and anything else in the repository is left alone on disk and on the remote. Thanks to @onetrev [#262](https://github.com/trilbymedia/grav-plugin-git-sync/issues/262)
+    * A folder the repository tracks but Git Sync does not sync is no longer deleted from your own copy on the next pull or reset
+
+# v3.4.9
+## 09/02/2026
+
+1. [](#new)
+    * `media` is now offered in the Folders to Sync list, in the settings form and in the setup Wizard. Files uploaded on Admin 2's Media page live in `user/media`, which was not one of the folders you could pick, so they never reached the remote and went missing on the live site. Existing sites are unchanged until you tick the new option. Thanks to @onetrev [#261](https://github.com/trilbymedia/grav-plugin-git-sync/issues/261)
+    * The setup Wizard is now translated too, and follows the site's language without a reload. Thanks to @pmoreno-rodriguez [#260](https://github.com/trilbymedia/grav-plugin-git-sync/pull/260)
+
+# v3.4.8
+## 08/27/2026
+
+1. [](#new)
+    * The plugin's settings can now be translated, and ship in English and Spanish. They render translated in both the Grav 1.7 admin and Admin 2. Thanks to @pmoreno-rodriguez for the translations [#258](https://github.com/trilbymedia/grav-plugin-git-sync/pull/258).
+
+1. [](#bugfix)
+    * The Git Sync panel on the Plugins page now uses the site's language instead of always showing English.
+
+# v3.4.7
+## 08/24/2026
+
+1. [](#bugfix)
+    * Fixed content being deleted from disk when a folder was removed from the sync list. Git Sync now stops tracking that folder properly, so a reset, a sync or a webhook pull leaves it alone instead of clearing it out [#257](https://github.com/trilbymedia/grav-plugin-git-sync/issues/257).
+
+# v3.4.6
+## 08/13/2026
+
+1. [](#bugfix)
+    * Fixed Git Sync's own settings never being recognised when saved from Admin Next, which left the repository password stored unencrypted and skipped remote/committer setup on the initial save [#255](https://github.com/trilbymedia/grav-plugin-git-sync/issues/255).
+    * Fixed saves to config, accounts, themes and other data areas not matching the tracked folder list when they come from Admin Next, so those changes are now committed like their admin-classic equivalents.
+
+# v3.4.5
+## 07/28/2026
+
+1. [](#bugfix)
+    * Fixed `{{pageTitle}}` and `{{pageRoute}}` in the commit message coming out as `NO TITLE FOUND` / `NO ROUTE FOUND` when saving from Admin Next [#254](https://github.com/trilbymedia/grav-plugin-git-sync/issues/254).
+    * Fixed the committer falling back to `GitSync` instead of the logged-in account when "Use Grav User Name" or "Use Grav User Full Name" is selected and the save comes from Admin Next.
+    * Page title and route are now also picked up on delete and media changes, not just page saves.
+
+# v3.4.4
+## 06/30/2026
+
+1. [](#bugfix)
+    * The default branch is now `main` instead of `master` throughout — the setup Wizard (every hosting service, including "All others"), the Local Branch / Remote Branch settings fields, and the API defaults — matching the current default branch on GitHub, modern GitLab (14.0+), and Bitbucket Cloud. Previously the Wizard silently pre-filled `master` for GitLab and Bitbucket, which caused `git fetch origin master` to fail with `couldn't find remote ref master` on a freshly created repo [#251](https://github.com/trilbymedia/grav-plugin-git-sync/issues/251).
+    * `hasRemote()` now performs a genuine, quiet existence check (`git remote`) rather than running `remote get-url <name>` and relying on a thrown error. With command logging enabled this no longer writes a misleading `error: No such remote` line every time a remote hasn't been added yet.
+
+# v3.4.3
+## 06/01/2026
+
+1. [](#bugfix)
+    * Fixed commits failing with `fatal: empty ident name (for <…>) not allowed` when the committer name resolved to an empty string — for example a blank **Committer Name** field, or "Use Grav User Full Name" selected for an admin account with no full name set. Blank names/emails now fall back to the `GitSync` / `git-sync@trilby.media` defaults [#249](https://github.com/trilbymedia/grav-plugin-git-sync/issues/249).
+
+# v3.4.2
+## 05/29/2026
+
+1. [](#bugfix)
+    * **The Git Sync sidebar entry and the toolbar Synchronize button are now hidden from users who lack any Git Sync permission**, matching how admin-classic gates the same menu. The items only appear for users with one of `api.git-sync`, `api.git-sync.read`, `api.git-sync.write`, or `api.git-sync.admin` (or super-admins). Requires grav-plugin-api ≥ 1.0.0-rc.11. Fixes [getgrav/grav-plugin-admin2#23](https://github.com/getgrav/grav-plugin-admin2/issues/23).
+
+# v3.4.1
+## 05/07/2026
+
+1. [](#bugfix)
+    * Fixed automatic sync not running after page save / delete / media changes in Admin2 [#250](https://github.com/trilbymedia/grav-plugin-git-sync/issues/250).
+    * Fixed the Wizard's webhook URL preview leaving out the install sub-folder when Grav is hosted under a path [#249](https://github.com/trilbymedia/grav-plugin-git-sync/issues/249).
+
+# v3.4.0
+## 05/06/2026
+
+1. [](#new)
+    * Added a dedicated Git Sync page in Admin2 with a sidebar entry and Wizard / Synchronize / Reset Local Copy / Save buttons in the page header.
+    * Added a step-by-step setup Wizard in Admin2 that walks you through hosting service, repository, webhook and folders, with a one-click button to verify your credentials and branch.
+    * Added a quick Synchronize button to the Admin2 toolbar that's available everywhere once Git Sync is configured.
+    * Added a proper password input for the Git Password / Token field in Admin2 with a show / hide toggle and the same "securely stored" placeholder you're used to.
+1. [](#improved)
+    * The plugin's entry under Admin2 → Plugins now shows just the enable / disable toggle and a pointer to the dedicated Git Sync page, so you don't see the same form twice.
+    * Synchronize and Reset Local Copy keep the rest of Admin2 responsive while they're running.
+
+# v3.2.1
+## 05/01/2026
+
+1. [](#improved)
+    * Added 1.7|2.0 compatibility flags
+
+# v3.2.0
+## 12/29/2025
+
+1. [](#improved)
+    * Improved PHP 8.4 compatibility
+1. [](#bugfix)
+    * Fix issue with saving reporting problems with `Folders`.
+
+# v3.1.0
+## 12/03/2025
+
+1. [](#new)
+    * Added sync direction configuration to enable one-way (pull only) synchronization [#224](https://github.com/trilbymedia/grav-plugin-git-sync/pull/224)
+1. [](#improved)
+    * Fixed git pull command for modern git versions by adding `--ff` flag [#246](https://github.com/trilbymedia/grav-plugin-git-sync/pull/246)
+    * Removed unnecessary `config->reload()` call in `onAdminAfterSave` event
+
+# v3.0.0
+## 10/19/2025
+
+1. [](#improved)
+    * Grav 1.8 support
+    * Use `{$var}` instead of `${var}` causing deprecation notices
+    * Prevent accepting webhooks when they are disabled in config [#216](https://github.com/trilbymedia/grav-plugin-git-sync/issues/216)
+    * Updated FAQ link to discussion
+
+# v2.3.2
+## 06/03/2021
+
+1. [](#bugfix)
+   * Better validation for Git Repository value on both Wizard and Backend. 
+   * Prevent malicious commands from being executed in Wizard when "Verifying Authentication, Connection and Branch".
+
+# v2.3.1
+## 04/30/2021
+
+1. [](#bugfix)
+   * Fixed regression where `testRepository` would erroneously pass with invalid credentials [#200](https://github.com/trilbymedia/grav-plugin-git-sync/issues/200)
+   * Fixed Exception thrown with `bin/plugin git-sync status` command, preventing `sync` [#200](https://github.com/trilbymedia/grav-plugin-git-sync/issues/200)
+
+# v2.3.0
+## 04/27/2021
+
+1. [](#new)
+   * Added new Advanced Git Ignore field where it is possible to specify custom git ignore entries to play along with GitSync [#197](https://github.com/trilbymedia/grav-plugin-git-sync/issues/197) [#117](https://github.com/trilbymedia/grav-plugin-git-sync/issues/117) 
+   * Support `ssh://` protocol and SSH Key authentication ([read more](https://github.com/trilbymedia/grav-plugin-git-sync#ssh--enterprise)) [#110](https://github.com/trilbymedia/grav-plugin-git-sync/issues/110)
+1. [](#improved)
+   * Updated PHP Encryption dependency
+1. [](#bugfix)
+   * Fixed issue with Flex Objects, preventing GitSync's settings to get refreshed `onAdminSave` when "Sync on Page Save" disabled
+   * Return raw URL for repositories setup with `ssh://` protocol, instead of injecting the password like `git://` and `http://` protocols do [#104](https://github.com/trilbymedia/grav-plugin-git-sync/issues/104)
+
+# v2.2.0
+## 04/17/2021
+
+1. [](#improved)
+   * Better support for branches other than `master`. This includes the transition to `main` from GitHub and the groundwork to support other big providers making the change as announced soon. GitSync is now capable of preset the branch based on the provider selected. You are now also able to specify any custom branch and when testing the repository connection it will also ensure the branch exists and provide feedback if not. 
+1. [](#bugfix)
+   * Changing remote branch is now going to properly reference it instead of remaining stuck to `master` [#192](https://github.com/trilbymedia/grav-plugin-git-sync/issues/192), [#183](https://github.com/trilbymedia/grav-plugin-git-sync/issues/183)
+   * Fixed issue where the Folders to synchronize from the Wizard wouldn't get properly saved [#178](https://github.com/trilbymedia/grav-plugin-git-sync/issues/178)
+
+# v2.1.1
+## 07/17/2020
+
+1. [](#new)
+    * Added `No User` option to allow disabling the username requirement. This is useful for when you have a token and the user is not required. (#166, thanks GwynethLlewelyn)
+    * Added `passwd` command for programmatically change user/password (use: `bin/plugin git-sync passwd`) (#146)
+    * Fixed regression wrongly returning the installed Git version and causing all sort of problems, including unrelated histories not kicking off (#61, #168, #171, #173)
+    * Fixed potential issue where the new feature `no_user` my throw an error
+    * Fixed issue with autoload
+1. [](#bugfix)
+    * Fixed classes not being loaded in `cli` commands due to Grav changes (#167)
+    * Updated dependencies / recompiled JS for production
+1. [](#improved)
+    * Bumped modules versions
+
+# v2.1.0
+## 03/13/2020
+
+1. [](#new)
+    * Requires Grav v1.6.0
+    * Pass phpstan level 2 tests
+1. [](#improved)
+    * Code cleanup
+    * Added support for Gitea / Gogs webhook secret (#149, thanks @Aisbergg)
+
+# v2.0.5
+## 05/06/2019
+
+1. [](#bugfix)
+    * Fixed validation error with commalist in Folders to Sync field (#141)
+
+# v2.0.4
+## 04/22/2019
+
+1. [](#improved)
+    * urlencode username to allow for special characters (#139)
+
+# v2.0.3
+## 03/07/2019
+
+1. [](#bugifx)
+    * Properly fallback to config message if not there yet (#134)
+
+# v2.0.2
+## 02/21/2019
+
+1. [](#improved)
+    * Fixed InitCommand spelling (#132, thanks @alex-mohemian)
+1. [](#bugfix)
+    * Fixed PHP 5.6 incompatibility introduced by latest release.
+
+# v2.0.1
+## 02/19/2019
+
+1. [](#new)
+    * Added new `init` CLI command (`bin/plugin git-sync init`) (#128, thanks @LeonRyan and @alex-mohemian) 
+1. [](#improved)
+    * Allow setting a personalised commit message (#123, thanks @kyed)
+    * Added better directions for Azure + IIS users for the Git Binary
+1. [](#bugfix)
+    * Fixed `LC_ALL` to use `C` instead of en_US.UTF-8`, to be more flexible (#124, #125, thanks @lambopedia)
+    
+# v2.0.0
+## 10/15/2018
+
+1. [](#new)
+    * Added support for new awesome Grav 1.6 Scheduler
+    * Added logic to display custom nested folders in wizard
+    * Other than `pages`, it is now possible to enable `config`, `data`, `plugins` and `themes` for synchronization. You can also add any custom folder you have in your `user` (#4, #21, #34, #58, #63, #83)
+    * Allow users with `admin.pages` permissions to synchronize through quick tray (#79, thanks @apfrod)
+    * When using Grav as committer, the user email will be now used for the commit (#81, thanks @apfrod)
+    * Added support for Webhook Secret (Bitbucket does not yet support them) (#72, #73, thanks @pathmissing)
+    * Added options to turn automatic synchronization on/off with page saves, delete and media changes (#105, thanks @AmauryCarrade)
+1. [](#improved)
+    * Fixed alignment of the git icon in the Wizard (#115)
+    * Prevent Wizard modal to get canceled when clicking on the overlay background (#115)
+    * Quick tray icon is now smarter. If GitSync has not been initialized yet, it will take you straight to wizard, otherwise it would perform a synchronization (#115)
+    * Rearranged blueprint order (thanks @paulhibbitts)
+    * GitLab: Updated wizard instructions to be inline with the new GitLab UI (#90)
+    * Tweaked alignment of links in the wizard (#57)
+    * Properly support local branches that aren't `master` (#56)
+    * Allow to specify custom local_repository (default, `USER_DIR`) (#95, thanks @Hydraner, also #54, #33, #25)
+    * Webhook URL is now more robust and secure, by default it is generated with a random value
+    * Git icon from Admin has been replaced to use the `git` text icon instead of the logo
+    * Prevent next step if Step 1 and Step 2 are not filled in (#92)
+    * Added notice in Step 2 explaning what GitSync expect from the repository structure (#92)
+1. [](#bugfix)
+    * Fixed issue where on first initialization the checkout process would error out
+    * Fixed issue with Pages save. 
+    * Fixed JS error in plugins list
+    * Fixed nested folders not synchronizing
+    * Fixed issue where Wizard wouldn't work in case the `admin` path was modified (#27, #94, #77, thanks @pathmissing)
+    * Fixed webhook generated URL when multi-lang active (#71)
+    * Resolved issue with untracked/uncommited files at the root of the `sync` folder. (#101, thanks @ScottHamper)
+
+# v1.0.4
+## 08/16/2017
+
+1. [](#new)
+    * CLI: Added `status` command to check config and git (#52, thanks @karfau)
+    * Allow local branches to be named differently than the remote branches (#48, thanks @denniswebb)
+    * Added support for new Admin Navigation Tray
+1. [](#bugfix)
+    * Fixed minimum Git required version to support `--all` (#32,#49, thanks @redrohX)
+
+# v1.0.3
+## 02/21/2017
+
+1. [](#bugfix)
+    * Fixed issue with new 'author' option that could trigger errors when settings were not saved. (#23)
+    * Fixed the 'More Details' button triggering the Modal to close instead of just expanding the details
+    
+# v1.0.2
+## 02/18/2017
+
+1. [](#new)
+    * It is now possible to change the committer name. You can choose between Git User, GitSync Committer Name, Grav User Name, Grav User Fullname (#14).
+2. [](#improved)
+    * Added more documentation and description about the support of 2FA and Access Tokens (#16, #19, thanks @OleVik)
+    * Added 4th Generic Git choice in the wizard for self-hosted and custom git services (Gogs/Gitea) (#7 - #22 - thanks @erlepereira)
+1. [](#bugfix)
+    * Fixed issue preventing the custom Git Binary Path from getting used (#15)
+    * Fixed issue with Webhook auto-generated URL where it would display double slashes in case of root domain (#15)
+    * Fixed issue with the modal not properly restoring the tutorial steps of the active selected service
+    
+# v1.0.1
+## 01/29/2017
+
+1. [](#bugfix)
+    * Changed default GitSync email for commits
+    
+# v1.0.0
+## 01/25/2017
+
+1. [](#new)
+    * Released plugin to stable GPM channel
+
+# v1.0.0-rc.3
+## 01/19/2017
+
+1. [](#new)
+    * Added logger setting to log Git command executions
+1. [](#improved)
+    * Improved Windows compatibility
+
+# v1.0.0-rc.2
+## 01/16/2017
+
+1. [](#new)
+    * Allow to change the path for the `git` binary (#1)
+    * Added CLI for synchronizing `bin/plugin git-sync sync` (#2)
+    * More security: Git password will now get encrypted and won't load in admin
+1. [](#improved)
+    * Wizard: Improved Bitbucket explanation about stripping out `user@` from the copied HTTPS url (#3)
+1. [](#bugfix)
+    * Fixed potential issue when retrieving the currently installed git version
+    * Fixed issue that would not properly hide the password from error messages if the password contained special chars
+    * Fixed issue preventing the plugin to properly get setup the very first time and causing 401 error (#4)
+    * Workaround for error thrown when removing the plugin
+
+# v1.0.0-rc.1
+##  12/19/2016
+
+1. [](#new)
+    * Initial Release

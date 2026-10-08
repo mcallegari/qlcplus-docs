@@ -8,7 +8,7 @@ taxonomy:
 
 The **Palette Manager** lists the **palettes** in your project and lets you
 create, edit and delete them. Open it with the **Palettes** button in the left
-panel of the [Fixtures and Functions](FixturesAndFunctions.md) workspace.
+panel of the [Fixtures and Functions](/fixtures-and-functions) workspace.
 
 A palette is a saved, reusable value of a particular kind — an intensity level,
 a colour, a pan/tilt position, or a 3D position — that you can apply to fixtures

@@ -24,11 +24,39 @@ A small toolbar sits at the top of the section:
 |--------|--------------|
 | <i class="fa fa-2x fa-plus" style="color:limegreen"></i> **Add a new channel** | Creates a new channel and opens the [Channel Editor](#channel-editor) on the right. |
 | <i class="fa fa-2x fa-minus" style="color:crimson"></i> **Remove the selected channel(s)** | Removes the selected channels from the fixture **and from all modes**. |
-| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Creates many similar channels at once (see [Capability wizard](#capability-wizard)). |
+| <i class="fa fa-2x fa-wand-magic-sparkles" style="color:cyan"></i> **Channel wizard** | Creates many similar channels at once (see [Channel wizard](#channel-wizard) below). |
 
 Click a channel to select it; **double-click** it to open it in the Channel
 Editor. Channels can be **dragged** from this list into a mode's channel list in
 the [Modes](../modes) section.
+
+## Channel wizard
+
+The Channel Wizard quickly creates one or more preset channels at once,
+instead of adding and configuring them one by one. It shares its dialog with
+the [Capability wizard](#capability-wizard) described below; the fields shown
+depend on which one you opened.
+
+|     |     |
+| --- | --- |
+| **Type** | The kind of channel(s) to create — see the table below. |
+| **Amount** | How many channels to create. For a multi-colour type (RGB, RGBW, …) this is the number of **complete groups**, not individual channels — e.g. "RGB" with Amount 2 creates 6 channels (two Red/Green/Blue triplets). |
+| **Label** | The name given to each new channel. Use a hash `#` to mark where an index number goes (e.g. "Head #" creates Head 1, Head 2, …). For a multi-colour type, each component is named after its colour and index instead (Red 1, Green 1, Blue 1, Red 2, …), and this field is ignored. |
+| **Preview** | Updates as you change the parameters, listing the channels that will be created. |
+
+**Type** can be any of:
+
+* A single primary colour channel: **Red, Green, Blue, White, Amber, UV, Lime**
+  or **Indigo**.
+* A multi-channel colour preset, which creates one primary-colour channel per
+  component: **RGB**, **RGBW**, **RGBA**, **RGBL** or **RGBAW**.
+* **Dimmer**, **Pan**, **Tilt**, **Color Macro** (for a colour wheel),
+  **Shutter**, **Beam** or **Effect**.
+
+Creating channels this way is equivalent to adding each one normally and
+picking the matching [Preset](#channel-editor) — it is simply faster when a
+fixture needs several of the same kind of channel, such as the individual
+heads of a pixel bar or several identical RGB sub-fixtures.
 
 ## Channel Editor
 

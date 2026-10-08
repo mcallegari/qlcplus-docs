@@ -3,7 +3,7 @@ title: Label
 date: '03:44 22-08-2023'
 ---
 
-A **Label** is a static piece of text on the [Virtual Console](VirtualConsole.md).
+A **Label** is a static piece of text on the [Virtual Console](/virtual-console).
 It does nothing when clicked — its job is to **title and organise** the console:
 section headings, page names, notes for the operator, and so on.
 
@@ -18,7 +18,7 @@ shared by every widget:
 * **Background image** — an optional image behind the text.
 * **Z-Index** — stacking order.
 
-See [Basic properties](VirtualConsole.md#basic-properties-all-widgets) for the
+See [Basic properties](/virtual-console#basic-properties-all-widgets) for the
 full list.
 
 ## Tips

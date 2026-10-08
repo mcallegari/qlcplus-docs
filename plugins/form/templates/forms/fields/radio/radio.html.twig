@@ -1,0 +1,24 @@
+{% extends "forms/field.html.twig" %}
+
+{% block input %}
+    {% for key, text in field.options %}
+        {% set id = field.id|default(field.name) ~ '-' ~ key %}
+
+        <div class="radio {{ form_field_wrapper_classes }} {{ field.wrapper_classes }}">
+            <input type="radio"
+                   value="{{ key|e }}"
+                   id="{{ id|e }}"
+                   name="{{ (scope ~ field.name)|fieldName }}"
+                   class="{{ form_field_radio_classes }} {{ field.classes }}"
+                   {% if key == value %}checked="checked" {% endif %}
+                   {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+                   {% if required %}required="required"{% endif %}
+                   {% if field.tabindex %}tabindex="{{ field.tabindex }}"{% endif %}
+            />
+            {# GHSA-5xv4-g337-2pg7: option labels are autoescaped by default. Set `markdown: true` on the
+               field to opt into rich option labels, the same flag that already enables markup in the
+               field's label, help and description. #}
+            <label style="display: inline" class="inline" for="{{ id|e }}">{% if field.markdown %}{{ text|t|markdown(false) }}{% else %}{{ text|t }}{% endif %}</label>
+        </div>
+    {% endfor %}
+{% endblock %}

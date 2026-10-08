@@ -39,6 +39,24 @@ To set the look, select the scene's fixtures and adjust their channels using the
 **channel capability tools** in the left panel (Intensity, Colour, Position,
 etc.) or the **DMX View**. The values are stored in the scene as you change them.
 
+## Controlling channels from an external controller
+
+While the Scene Editor is open, its bottom panel toolbar has extra buttons to
+drive the scene's channels directly from a patched **MIDI**, **OSC**, **DMX**
+or **HID** (joystick) controller — handy for dialling in values by hand instead
+of dragging sliders on screen.
+
+| Button | What it does |
+|--------|--------------|
+| <i class="fa fa-sliders fa-2x"></i> **Control the channels with an external controller** | Toggles external control. While enabled, the controller's faders/knobs are mapped 1:1 onto the scene's channels, in the order they appear in the console, and the **Virtual Console stops receiving input** from that controller until you turn this off or close the editor. |
+| ![](/basics/position.svg?resize=48,48) **Toggle Pan & Tilt mode** | Only shown while external control is on. Switches the mapping so the controller's first four faders/knobs instead drive **pan, pan fine, tilt and tilt fine** of a single fixture — handy for positioning a moving head with real faders rather than an [XY Pad](/virtual-console/xy-pad). |
+| <i class="fa fa-angle-left fa-2x"></i> / <i class="fa fa-angle-right fa-2x"></i> **Shift the faders mapping backward / forward** | Pages the mapping when there is more to control than the controller has faders for. In normal mode, a page is one block of channels the size of the controller's fader count; in Pan & Tilt mode, a page is a single fixture. |
+
+The channel currently driven by a controller is highlighted in the console, so
+you can see at a glance what each physical fader is doing. If one of the
+patched universes has a joystick (HID plugin), its axes are detected and made
+available to the mapping as well.
+
 ## Speed
 
 The collapsible **Speed** section sets how the scene fades when triggered:
@@ -51,4 +69,4 @@ in the time editor.
 
 > When a scene is part of a **Sequence**, it is edited through the Sequence
 > Editor's *Fixtures* tab rather than on its own. See
-> [Sequence Editor](SequenceEditor.md).
+> [Sequence Editor](../sequence-editor).

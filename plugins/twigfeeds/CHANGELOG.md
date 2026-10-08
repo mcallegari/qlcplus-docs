@@ -1,0 +1,386 @@
+# v5.1.0
+## 31-01-2026
+
+1. [](#new)
+   - Minor-release from betas
+2. [](#improved)
+   - README
+
+# v5.1.0-beta.13
+## 05-11-2025
+
+1. [](#improved)
+   - Compatibility with Grav 1.7 and 1.8 using unified Psr/Log-fix
+
+# v5.1.0-beta.12
+## 02-11-2025
+
+1. [](#improved)
+   - Note in README regarding compatibility with Grav 1.8 and PHP
+   - Add enabled-check earlier in processing
+   - Change version-specification for library
+
+# v5.1.0-beta.11
+## 14-09-2025
+
+1. [](#improved)
+   - Structure of and details in README
+   - Simplify Logging-method
+   - Command-line methods
+2. [](#bugfix)
+   - Parsing-modes and normalizations with 'direct'
+   - Corrections for testing
+   - Downgrade `psr/log`-library, both major-version 2 and 3 contain invalid interfaces
+
+# v5.1.0-beta.10
+## 12-09-2025
+
+1. [](#new)
+   - Unit-testing
+2. [](#improved)
+   - Updated `psr/log`-library
+2. [](#bugfix)
+   - Method-call in Parser
+
+# v5.1.0-beta.9
+## 11-09-2025
+
+1. [](#improved)
+   - Error-logging to defined log-file as well as `error_log`
+   - Error-handling in Parser-class
+
+# v5.1.0-beta.8
+## 24-08-2025
+
+1. [](#bugfix)
+   - Add missing `config` to live feed data
+
+# v5.1.0-beta.7
+## 24-08-2025
+
+1. [](#bugfix)
+   - Selectize-field misbehaving because of data-defaults
+
+# v5.1.0-beta.6
+## 10-08-2025
+
+1. [](#new)
+   - Categories- and Tags-settings for feeds
+   - `taxonomyValues`-method to get used taxons
+   - Add `Categories`- and `Tags`-setting natively
+1. [](#improved)
+   - README
+   - Move descriptions into placeholders in Admin-blueprints to conserve space
+   - Add execution-timers
+
+# v5.1.0-beta.5
+## 09-08-2025
+
+1. [](#new)
+   - `mode`-setting to switch operation between regular feed-parsing and direct-query
+2. [](#improved)
+   - `Parser`-class construction and method-separation
+
+# v5.1.0-beta.4
+## 02-08-2025
+
+1. ## [](#bugfix)
+   - Testing-setting in blueprints
+
+# v5.1.0-beta.3
+## 02-08-2025
+
+1. [](#new)
+   - Extended logging of Parser-output to `log://twigfeeds.log` with `log_file`-setting
+2. [](#improved)
+   - README
+   - Code quality
+   - Pass `request_options` per feed
+3. ## [](#bugfix)
+   - Shift blueprints
+   - Patch `FeedIo/Adapter/GuzzleClient.php` to re-enable GET-requests, see [upstream](https://github.com/php-feed-io/feed-io/pull/15) pull request
+
+# v5.1.0-beta.2
+## 25-07-2025
+
+1. [](#new)
+    * Added redundant fallbacks for `name` in cached feeds
+    * Bump parser-library to newest compatible minor-version
+2. [](#improved)
+    * Examples in README
+    * Main PHP-file internals
+
+# v5.1.0-beta.1
+## 07-06-2025
+
+1. [](#new)
+    * Refactor blueprints to allow for easier overrides
+    * Add Feed-config to `twig_feeds`
+1. [](#bugfix)
+    * Parsed feed regression
+    * Amount as argument and as property
+
+# v5.0.0
+## 30-05-2025
+
+1. [](#new)
+    * Release major-version
+
+# v5.0.0-beta.2
+## 12-04-2022
+
+1. [](#bugfix)
+    * Debug-parameter (#33), thanks @hughbris
+    * Testing-parameter (#32), thanks @hughbris
+
+# v5.0.0-beta.1
+## 02-02-2022
+
+1. [](#new)
+    * Major-version bump of FeedIO (#30, #31), thanks @lesion
+2. [](#improved)
+    * Require PHP v8
+    * Require Grav v1.7
+    * Remove PicoFeed-legacy [#ca09a6b](https://github.com/OleVik/grav-plugin-twigfeeds/pull/31/commits/ca09a6b0c65be52adbc6441b2c7b200e4acba4b9) and cleanup
+
+# v4.0.1
+## 16-10-2019
+
+1. [](#bugfix)
+    * Wrong variable in Parser
+
+# v4.0.0
+## 13-10-2019
+
+1. [](#new)
+    * Stable release of 4.0.0 refactor
+
+# v4.0.0-beta.1
+## 01-10-2019
+
+1. [](#new)
+    * Refactor: Replaced PicoFeed with FeedIO
+    * The `extra_tags` option has been deprecated
+    * A `request_options` option has been added
+2. [](#improved)
+    * Error-handling
+    - Use PSR-4 for autoloading
+    - Blueprints, Translations
+
+# v3.3.4
+## 16-01-2019
+
+1. [](#bugfix)
+    * Silent fallback from file exists check
+    * Change filename-hash to use entire source-URL
+    * Fix config-reference in Parser
+2. [](#improved)
+    * Grav version requirement bump
+
+# v3.3.3
+## 08-01-2019
+
+1. [](#bugfix)
+    * Fix config-reference in Parser
+
+# v3.3.2
+## 03-06-2018
+
+1. [](#bugfix)
+    * Change filename-hash to use entire source-URL
+
+# v3.3.1
+## 11-03-2018
+
+1. [](#improved)
+    * In the case of a timeout, fail silently and return empty
+
+# v3.3.0
+## 27-09-2017
+
+1. [](#improved)
+    * Option to silence security errors
+
+# v3.3.0-beta.1.1
+## 17-09-2017
+
+1. [](#improved)
+    * Option to silence security errors
+
+# v3.2.4
+## 22-06-2017
+
+1. [](#bugfix)
+    * Cache-check in Parser->parseFeed()
+
+# v3.2.3
+## 01-06-2017
+
+1. [](#bugfix)
+    * Removed Symfony/YAML from /vendor, its already in core
+    * Replaced getGrav() with Grav::instance() in CLI-commands
+
+# v3.2.2
+## 29-05-2017
+
+1. [](#new)
+    * Facilitate attributes-retrieval in non-standard tags
+2. [](#improved)
+    * Add note and example to README regarding attributes
+
+# v3.2.1
+## 15-05-2017
+
+1. [](#bugfix)
+    * Dependency version-range compatibly with Grav >=1.1.17
+
+# v3.2.0
+## 14-05-2017
+
+1. [](#improved)
+    * Facilitate non-standard tags in feed parsing
+    * Add note and example to README regarding non-standard tags
+    * Hash filenames to prevent conflict
+    * Minor cleanup
+2. [](#bugfix)
+    * Only recreate manifest after busting cache
+
+# v3.1.2
+## 14-05-2017
+
+1. [](#bugfix)
+    * Fix logic of updating manifest
+    * Remove Al Jazeera from example feeds, their feed-encoding is currently broken and will throw errors
+
+# v3.1.1
+## 14-04-2017
+
+1. [](#improved)
+    * Version-bump out of pre-release
+
+# v3.1.0
+## 30-03-2017
+
+1. [](#improved)
+    * Add method for busting cache on version update (major or minor)
+    * Add test for versions
+    * Update vendor libraries
+2. [](#new)
+    * Add Manifest->blueprintVersion
+    * Add Parser->getVersion() for retrieving blueprint or manifest version
+    * Add Parser->compareSemVer() for comparing versions
+    * Add Symfony/Component/Yaml and Naneau/SemVer libraries to Parser
+3. [](#bugfix)
+    * Fix Manifest->manifestStructure() time-declarations
+    * Fix changelog date for v3.0.4
+
+
+# v3.0.4
+## 28-03-2017
+
+1. [](#bugfix)
+    * Fix Exception-call
+
+# v3.0.3
+## 19-03-2017
+
+1. [](#bugfix)
+    * Add Exception for empty path passed to Parser->parseFeed()
+
+# v3.0.2
+## 09-03-2017
+
+1. [](#bugfix)
+    * Include 'name' and 'amount' in Manifest->compare()
+
+# v3.0.1
+## 08-03-2017
+
+1. [](#new)
+    * Version 3 release
+2. [](#improved)
+    * Plugin icon
+    * Update README
+
+# v3.0.0
+## 27-02-2017
+
+1. [](#improved)
+    * OOP-rewrite of entire plugin
+    * Simplify process and clarify inline comments
+    * Update README
+    * Default limit of retrieved and stored feed items to 50
+    * Default 'cache_time' set to 15 minutes (900 seconds)
+    * Default 'pass_headers' set to false, relying on 'cache_time' by default
+2. [](#new)
+    * Add 'cache_time' setting
+    * Add 'pass_headers' setting
+    * Document classes and methods
+    * Add Command Line Interface for clearing and building cache
+3. [](#bugfix)
+    * If plugin-config changes, cache is busted to ensure correct data
+
+# v2.0.4
+## 26-02-2017
+
+1. [](#bugfix)
+    * Add onTwigPageVariables to getSubscribedEvents
+
+# v2.0.3
+## 15-02-2017
+
+1. [](#bugfix)
+    * Cache custom name
+
+# v2.0.2
+## 09-02-2017
+
+1. [](#bugfix)
+    * Fix Changelog format
+
+# v2.0.1
+## 09-02-2017
+
+1. [](#bugfix)
+    * Blueprint list-field temporary fix
+    * DateTime fallback
+2. [](#improved)
+    * Debug message clarity
+
+# v2.0.0
+## 28-01-2017
+
+1. [](#improved)
+    * Added cache-functionality
+2. [](#new)
+    * Added cache, static_cache, and debug options
+
+# v1.2.0
+## 28-01-2017
+
+1. [](#improved)
+    * More specific Exceptions by vendor-library and plugin
+    * Declarative timezone: UTC
+2. [](#bugfix)
+     * Changelog date format
+
+# v1.1.0
+## 20-01-2017
+
+1. [](#improved)
+    * Added name-property to config and blueprint
+    * Added return values to returned array
+    * Changed return values to more declarative syntax
+    * Improved README
+
+# v1.0.1
+## 19-01-2017
+
+3. [](#bugfix)
+     * Fixed caching issues
+
+# v1.0.0
+## 20-01-2017
+
+1. [](#new)
+    * Initial release

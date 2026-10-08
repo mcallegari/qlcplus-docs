@@ -1,0 +1,1124 @@
+<?php
+namespace Grav\Plugin\Email;
+
+use Grav\Common\Config\Config;
+use Grav\Common\Grav;
+use Grav\Common\Utils;
+use Grav\Common\Language\Language;
+use Grav\Common\Markdown\Parsedown;
+use Grav\Common\Twig\Sandbox\SandboxConfig;
+use Grav\Common\Twig\Twig;
+use Grav\Framework\Form\Interfaces\FormInterface;
+use \Monolog\Logger;
+use \Monolog\Handler\StreamHandler;
+use RocketTheme\Toolbox\Event\Event;
+use RocketTheme\Toolbox\ResourceLocator\UniformResourceLocator;
+use Symfony\Component\Mailer\Envelope;
+use Symfony\Component\Mailer\Exception\HttpTransportException;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Symfony\Component\Mailer\Header\MetadataHeader;
+use Symfony\Component\Mailer\Header\TagHeader;
+use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\Transport;
+use Symfony\Component\Mailer\Transport\TransportInterface;
+use Symfony\Component\Mime\Address;
+use Symfony\Component\Mime\Header\Headers;
+use Twig\Extension\SandboxExtension;
+
+class Email
+{
+    /**
+     * Keys under `plugins.email` that email parameter Twig may read as
+     * `config.plugins.email.*`. Addresses and formatting only, deliberately
+     * no `mailer`, so transport credentials are not reachable. Covers both the
+     * string and array forms an address setting can take.
+     */
+    private const PARAM_CONFIG_KEYS = [
+        'to', 'to_name', 'from', 'from_name', 'cc', 'cc_name', 'bcc', 'bcc_name',
+        'reply_to', 'reply_to_name', 'charset', 'content_type',
+    ];
+
+    /**
+     * Filters allowed for email parameters on top of the content sandbox
+     * allowlist. `raw` is required by the documented
+     * `{{ config.site.emails.sales|raw }}` idiom: autoescape would turn a
+     * `My Name <me@example.com>` address into `&lt;`, which the transport
+     * rejects. Harmless here because the output is an email, not a DOM.
+     */
+    private const PARAM_EXTRA_FILTERS = ['raw'];
+
+    /**
+     * Optional `buildMessage()` parameters that go on the message as headers
+     * rather than as addresses, a subject or a body.
+     *
+     * A calling plugin asks about these through {@see supportsParameter()}
+     * rather than comparing version numbers, so it can pass the parameter on a
+     * plugin that understands it and keep its own fallback on one that does not.
+     */
+    private const HEADER_PARAMS = ['tags', 'metadata', 'headers'];
+
+    /**
+     * A header name as RFC 5322 defines one: one or more printable US-ASCII
+     * characters, colon excluded. Anything else cannot be written on the wire.
+     */
+    private const HEADER_NAME_PATTERN = '/^[!-9;-~]+$/';
+
+    /**
+     * The provider contract under `classes/Providers/`, asked for by name
+     * through {@see supportsFeature()}.
+     */
+    public const FEATURE_PROVIDERS = 'providers';
+
+    /**
+     * The providers collected on `onEmailProviders`, once per request.
+     *
+     * @var Providers\ProviderRegistry|null
+     */
+    protected static $providers;
+
+    /** @var Mailer */
+    protected $mailer;
+
+    /** @var TransportInterface */
+    protected $transport;
+
+    protected $log;
+
+    protected $message;
+    protected $debug;
+
+    public function __construct()
+    {
+        $this->initMailer();
+        $this->initLog();
+    }
+
+    /**
+     * Returns true if emails have been enabled in the system.
+     *
+     * @return bool
+     */
+    public static function enabled(): bool
+    {
+        return Grav::instance()['config']->get('plugins.email.mailer.engine') !== 'none';
+    }
+
+    /**
+     * Returns true if debugging on emails has been enabled.
+     *
+     * @return bool
+     */
+    public static function debug(): bool
+    {
+        return Grav::instance()['config']->get('plugins.email.debug') == 'true';
+    }
+
+    /**
+     * Does this copy of the plugin understand the given optional message
+     * parameter?
+     *
+     * Another plugin that wants to pass `headers`, `tags` or `metadata` has to
+     * know whether the Email plugin the site actually has installed will act on
+     * it or quietly drop it, and a version comparison is the wrong tool for
+     * that: it hard-codes a release number into every caller and gets it wrong
+     * the moment a fix is backported. Ask instead:
+     *
+     *     if (method_exists($email, 'supportsParameter') && $email::supportsParameter('headers')) {
+     *         // hand the headers over
+     *     } else {
+     *         // whatever you were doing before
+     *     }
+     *
+     * @param  string  $name
+     * @return bool
+     */
+    public static function supportsParameter(string $name): bool
+    {
+        return in_array($name, self::HEADER_PARAMS, true);
+    }
+
+    /**
+     * Does this copy of the plugin have the given extension point?
+     *
+     * The same question as {@see supportsParameter()} and asked the same way,
+     * about a whole feature rather than one message parameter. `providers` is
+     * the provider contract under `classes/Providers/`: the registry, the
+     * `onEmailProviders` event and the three lookups below.
+     *
+     *     if (method_exists($email, 'supportsFeature') && $email::supportsFeature('providers')) {
+     *         $provider = $email::providerFor($engine);
+     *     } else {
+     *         // whatever you were doing before
+     *     }
+     *
+     * The PHP check is not decoration. The provider classes use readonly
+     * promoted properties, which is PHP 8.1, while this plugin still installs
+     * on the 7.3 that Grav 1.7 allows. On such a site the honest answer to
+     * "does this copy have providers" is no, and answering it here means a
+     * caller never reaches a file it cannot parse.
+     *
+     * @param  string  $name
+     * @return bool
+     */
+    public static function supportsFeature(string $name): bool
+    {
+        if ($name === self::FEATURE_PROVIDERS) {
+            return PHP_VERSION_ID >= 80100;
+        }
+
+        return false;
+    }
+
+    /**
+     * Every provider a transport plugin registered, collected once.
+     *
+     * `onEmailProviders` is fired the first time this is asked and the answer
+     * is kept for the rest of the request: the plugins that listen build a
+     * value object each and the event is not free, and every screen that asks
+     * this asks it several times.
+     *
+     * @return Providers\ProviderRegistry
+     */
+    public static function providers(): Providers\ProviderRegistry
+    {
+        if (self::$providers !== null) {
+            return self::$providers;
+        }
+
+        $registry = new Providers\ProviderRegistry();
+        self::$providers = $registry;
+
+        Grav::instance()->fireEvent('onEmailProviders', new Event(['providers' => $registry]));
+
+        return $registry;
+    }
+
+    /**
+     * The provider that answers for an engine, or null when no plugin
+     * registered one for it.
+     *
+     * Null is a normal answer with a plain meaning: this transport cannot
+     * report deliveries. Say that rather than showing an address nothing will
+     * ever post to.
+     *
+     * @param  string  $engine
+     * @return Providers\Provider|null
+     */
+    public static function providerFor(string $engine): ?Providers\Provider
+    {
+        return self::providers()->forEngine($engine);
+    }
+
+    /**
+     * The provider with this key, or null.
+     *
+     * @param  string  $key
+     * @return Providers\Provider|null
+     */
+    public static function providerByKey(string $key): ?Providers\Provider
+    {
+        return self::providers()->byKey($key);
+    }
+
+    /**
+     * A mailer for a named engine, rather than for the one this site is
+     * configured with.
+     *
+     * The same transport building the configured mailer uses — the same switch,
+     * the same `onEmailTransportDsn` event, the same Symfony `Transport::fromDsn()`
+     * — with the engine passed in instead of read from the config. Everything
+     * else about how the transport is built is untouched, which is the point:
+     * the configured engine has to keep behaving exactly as it did.
+     *
+     * Nothing sends through this yet. It exists so that a store which one day
+     * wants to send some of its mail through a second provider has somewhere to
+     * ask for that mailer, without that day being the day the transport builder
+     * gets rewritten.
+     *
+     * @param  string  $engine
+     * @return Mailer
+     */
+    public static function buildMailerFor(string $engine): Mailer
+    {
+        return new Mailer(static::getTransport($engine));
+    }
+
+    /**
+     * Creates an email message.
+     *
+     * @param string|null $subject
+     * @param string|null $body
+     * @param string|null $contentType
+     * @param string|null $charset @deprecated
+     * @return Message
+     */
+    public function message(?string $subject = null, ?string $body = null, ?string $contentType = null, ?string $charset = null): Message
+    {
+        $message = new Message();
+        $message->subject($subject);
+        if ($contentType === 'text/html') {
+            $message->html($body);
+        } else {
+            $message->text($body);
+        }
+
+        return $message;
+    }
+
+    /**
+     * Send email.
+     *
+     * @param  Message  $message
+     * @param  Envelope|null  $envelope
+     * @return int
+     */
+    public function send(Message $message, ?Envelope $envelope = null): int
+    {
+        try {
+            $sent_msg = $this->transport->send($message->getEmail(), $envelope);
+            $status = 1;
+            $this->message = '✅';
+            $this->debug = $sent_msg->getDebug();
+        } catch (TransportExceptionInterface $e) {
+            $status = 0;
+            $this->message = '🛑 ' . $e->getMessage();
+            $this->debug = $e->getDebug();
+
+            // Capture HTTP transport errors with the raw response body for easier debugging (e.g., MailerSend 4xx/5xx).
+            if ($e instanceof HttpTransportException) {
+                try {
+                    $response = $e->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    $body = $response->getContent(false);
+
+                    if (!empty($body)) {
+                        $decoded = json_decode($body, true);
+                        if (json_last_error() === JSON_ERROR_NONE) {
+                            $body = json_encode($decoded, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+                        }
+                        $this->debug = trim((string)$this->debug) . "\n-- HTTP response body (status {$statusCode}) --\n" . $body;
+
+                        // If the exception message was empty, include a short summary in the user-facing message.
+                        if (trim($e->getMessage()) === '') {
+                            $this->message = sprintf('🛑 HTTP %d error while sending email. See debug for response body.', $statusCode);
+                        }
+                    }
+                } catch (\Throwable $httpError) {
+                    $this->debug = trim((string)$this->debug) . "\n-- Failed to read HTTP error response --\n" . $httpError->getMessage();
+                }
+            }
+        }
+
+        if ($this->debug()) {
+            $log_msg = "Email sent to %s at %s -> %s\n%s";
+            $to = $this->jsonifyRecipients($message->getEmail()->getTo());
+            $message = sprintf($log_msg, $to, date('Y-m-d H:i:s'), $this->message, $this->debug);
+            $this->log->info($message);
+        }
+
+        return $status;
+    }
+
+    /**
+     * Build e-mail message.
+     *
+     * Besides the address, subject and body parameters, `tags` and `metadata`
+     * add the headers the API transports read, and `headers` writes arbitrary
+     * headers by name; see {@see applyHeaders()}.
+     *
+     * @param array $params
+     * @param array $vars
+     * @return Message
+     */
+    public function buildMessage(array $params, array $vars = []): Message
+    {
+        /** @var Twig $twig */
+        $twig = Grav::instance()['twig'];
+        $twig->init();
+
+        /** @var Config $config */
+        $config = Grav::instance()['config'];
+
+        /** @var Language $language */
+        $language = Grav::instance()['language'];
+
+        // Create message object.
+        $message = new Message();
+        $headers = $message->getEmail()->getHeaders();
+        $email = $message->getEmail();
+
+        // Extend parameters with defaults.
+        $defaults = [
+            'bcc' => $config->get('plugins.email.bcc', []),
+            'bcc_name' => $config->get('plugins.email.bcc_name'),
+            'body' => $config->get('plugins.email.body', '{% include "forms/data.html.twig" %}'),
+            'cc' => $config->get('plugins.email.cc', []),
+            'cc_name' => $config->get('plugins.email.cc_name'),
+            'charset' =>  $config->get('plugins.email.charset', 'utf-8'),
+            'from' => $config->get('plugins.email.from'),
+            'from_name' => $config->get('plugins.email.from_name'),
+            'content_type' => $config->get('plugins.email.content_type', 'text/html'),
+            'reply_to' => $config->get('plugins.email.reply_to', []),
+            'reply_to_name' => $config->get('plugins.email.reply_to_name'),
+            'subject' => !empty($vars['form']) && $vars['form'] instanceof FormInterface ? $vars['form']->page()->title() : null,
+            'to' => $config->get('plugins.email.to'),
+            'to_name' => $config->get('plugins.email.to_name'),
+            'process_markdown' => false,
+            'template' => false,
+            'message' => $message
+        ];
+
+        foreach ($defaults as $key => $value) {
+            if (!key_exists($key, $params)) {
+                $params[$key] = $value;
+            }
+        }
+
+        // Trim the address parameters up front so a value that is nothing but whitespace is
+        // caught by the checks below, rather than passing them and failing much later with
+        // an unhelpful "email must have a From or a Sender header" from the mailer.
+        foreach (['to', 'from', 'cc', 'bcc', 'reply_to'] as $address_key) {
+            if (isset($params[$address_key]) && is_string($params[$address_key])) {
+                $params[$address_key] = trim($params[$address_key]);
+            }
+        }
+
+        if (!$params['to']) {
+            throw new \RuntimeException($language->translate('PLUGIN_EMAIL.PLEASE_CONFIGURE_A_TO_ADDRESS'));
+        }
+        if (!$params['from']) {
+            throw new \RuntimeException($language->translate('PLUGIN_EMAIL.PLEASE_CONFIGURE_A_FROM_ADDRESS'));
+        }
+
+
+        // make email configuration available to templates
+        $vars += [
+            'email' => $params,
+        ];
+
+        $params = $this->processParams($params, $vars);
+
+        // Process parameters.
+        foreach ($params as $key => $value) {
+            switch ($key) {
+                case 'body':
+                    if (is_string($value)) {
+                      $this->processBody($message, $params, $vars, $twig, $value);
+                    } elseif (is_array($value)) {
+                        foreach ($value as $body_part) {
+                            $params_part = $params;
+                            if (isset($body_part['content_type'])) {
+                                $params_part['content_type'] = $body_part['content_type'];
+                            }
+                            if (isset($body_part['template'])) {
+                                $params_part['template'] = $body_part['template'];
+                            }
+                            if (isset($body_part['body'])) {
+                                $this->processBody($message, $params_part, $vars, $twig, $body_part['body']);
+                            }
+                        }
+                    }
+                    break;
+
+                case 'subject':
+                    if ($value) {
+                        $message->subject($language->translate($value));
+                    }
+                    break;
+
+                case 'to':
+                case 'from':
+                case 'cc':
+                case 'bcc':
+                case 'reply_to':
+                    if ($recipients = $this->processRecipients($key, $params)) {
+                        $key = $key === 'reply_to' ? 'replyTo' : $key;
+                        $email->$key(...$recipients);
+                    }
+                    break;
+                case 'tags':
+                    foreach ((array) $value as $tag) {
+                        if (is_string($tag)) {
+                            $headers->add(new TagHeader($tag));
+                        }
+                    }
+                    break;
+                case 'metadata':
+                    foreach ((array) $value as $k => $v) {
+                        if (is_string($k) && is_string($v)) {
+                            $headers->add(new MetadataHeader($k, $v));
+                        }
+                    }
+                    break;
+            }
+        }
+
+        // Custom headers go on last, after the addresses, the subject, the tags
+        // and the metadata, so a caller that deliberately sets one of those by
+        // name gets the value it asked for rather than losing to a default.
+        if (isset($params['headers'])) {
+            $this->applyHeaders($message, $params['headers']);
+        }
+
+        return $message;
+    }
+
+    /**
+     * Write arbitrary headers onto a built message.
+     *
+     * `$headers` is a map of header name to value. A value that is a list writes
+     * the header once per entry, which only the headers allowed to repeat will
+     * take. Setting a header that is already on the message replaces it, so
+     * calling this twice with the same name leaves one header rather than two
+     * that clients will disagree about.
+     *
+     * The one this exists for is RFC 8058 one-click unsubscribe, which is a pair:
+     *
+     *     $email->applyHeaders($message, [
+     *         'List-Unsubscribe' => '<mailto:leave@example.com>, <https://example.com/u/abc>',
+     *         'List-Unsubscribe-Post' => 'List-Unsubscribe=One-Click',
+     *     ]);
+     *
+     * Nothing is filtered by name: a plugin sending bulk mail needs
+     * `List-Unsubscribe`, `Precedence` and its own `X-` headers, and there is no
+     * list of "approved" headers that would not be wrong within a year. A name
+     * that is not a valid RFC 5322 field name is skipped and logged, as is a
+     * value Symfony refuses for that particular header, so one bad entry costs
+     * you a header rather than the whole email.
+     *
+     * Public because `buildMessage()` is only one of the two ways a message gets
+     * built here: a plugin that used `message()` can hand its headers over the
+     * same way instead of reaching into the Symfony message itself.
+     *
+     * @param  Message  $message
+     * @param  array  $headers  header name => string value, or a list of values
+     * @return Message
+     */
+    public function applyHeaders(Message $message, array $headers): Message
+    {
+        $bag = $message->getEmail()->getHeaders();
+
+        foreach ($headers as $name => $value) {
+            if (!is_string($name) || !preg_match(self::HEADER_NAME_PATTERN, $name)) {
+                $this->logHeaderSkipped($name, 'that is not a valid header name');
+                continue;
+            }
+
+            $values = is_array($value) ? array_values($value) : [$value];
+            $bad = false;
+            foreach ($values as $line) {
+                if (!is_string($line) && !is_numeric($line)) {
+                    $this->logHeaderSkipped($name, 'the value is a ' . gettype($line) . ', not a string');
+                    $bad = true;
+                    break;
+                }
+            }
+            if ($bad || $values === []) {
+                continue;
+            }
+
+            // Build the header (or headers, when the value was a list) in a bag
+            // of its own first. `addHeader()` picks the class the name calls
+            // for, so a Message-ID becomes an identification header rather than
+            // failing as loose text, and a name that will not take this value —
+            // or a repeat of a name that has to be unique — throws here, where
+            // nothing has been changed yet.
+            $staged = new Headers();
+            try {
+                foreach ($values as $line) {
+                    $staged->addHeader($name, (string) $line);
+                }
+            } catch (\Throwable $e) {
+                $this->logHeaderSkipped($name, $e->getMessage());
+                continue;
+            }
+
+            // Replace rather than append. Symfony refuses a second Message-ID or
+            // Subject outright, and a second List-Unsubscribe is worse than
+            // refused: it goes out, and clients pick whichever one they like.
+            $bag->remove($name);
+            foreach ($staged->all($name) as $header) {
+                $bag->add($header);
+            }
+        }
+
+        return $message;
+    }
+
+    /**
+     * Say in both logs that a header was dropped.
+     *
+     * Loudly, and in both places, for the same reason a failed Twig render is:
+     * a header that silently did not go out is close to impossible to work back
+     * from when the only evidence is mail landing in spam a week later.
+     *
+     * @param  mixed  $name
+     * @param  string  $reason
+     * @return void
+     */
+    protected function logHeaderSkipped($name, string $reason): void
+    {
+        $label = is_string($name) || is_numeric($name) ? (string) $name : gettype($name);
+        $report = sprintf('Skipped the "%s" email header: %s', $label, $reason);
+
+        $this->log->warning($report);
+        Grav::instance()['log']->warning('plugin-email: ' . $report);
+    }
+
+    /**
+     * @param string $type
+     * @param array $params
+     * @return array
+     */
+    protected function processRecipients(string $type, array $params): array
+    {
+        if (array_key_exists($type, $params) && $params[$type] === null) {
+            return [];
+        }
+
+        $recipients = $params[$type] ?? Grav::instance()['config']->get('plugins.email.'.$type) ?? [];
+
+        $list = [];
+
+        if (!empty($recipients)) {
+            if (is_array($recipients)) {
+                if (Utils::isAssoc($recipients) || (count($recipients) ===2 && $this->isValidEmail($recipients[0]) && !$this->isValidEmail($recipients[1]))) {
+                    $address = $this->createAddress($recipients);
+                    if ($address !== null) {
+                        $list[] = $address;
+                    }
+                } else {
+                    foreach ($recipients as $recipient) {
+                        $address = $this->createAddress($recipient);
+                        if ($address !== null) {
+                            $list[] = $address;
+                        }
+                    }
+                }
+            } else {
+                if (is_string($recipients) && Utils::contains($recipients, ',')) {
+                    $recipients = array_map('trim', explode(',', $recipients));
+                    foreach ($recipients as $recipient) {
+                        $address = $this->createAddress($recipient);
+                        if ($address !== null) {
+                            $list[] = $address;
+                        }
+                    }
+                } else {
+                    if (!Utils::contains($recipients, ['<','>']) && (isset($params[$type."_name"]))) {
+                        $recipients = [$recipients, $params[$type."_name"]];
+                    }
+                    $address = $this->createAddress($recipients);
+                    if ($address !== null) {
+                        $list[] = $address;
+                    }
+                }
+            }
+        }
+
+        return $list;
+    }
+
+    /**
+     * @param $data
+     * @return Address|null
+     */
+    protected function createAddress($data): ?Address
+    {
+        if (is_string($data)) {
+            // Trim before matching, or a trailing space defeats the anchored pattern and the
+            // whole "Name <address>" string gets treated as the address itself.
+            $data = trim($data);
+            preg_match('/^(.*)\<(.*)\>$/', $data, $matches);
+            if (isset($matches[2])) {
+                $email = $matches[2];
+                $name = $matches[1];
+            } else {
+                $email = $data;
+                $name = '';
+            }
+        } elseif (Utils::isAssoc($data)) {
+            $first_key = array_key_first($data);
+            if ($this->isValidEmail($first_key)) {
+                $email = $first_key;
+                $name = $data[$first_key];
+            } else {
+                $email = $data['email'] ?? $data['mail'] ?? $data['address'] ?? '';
+                $name = $data['name'] ?? $data['fullname'] ?? '';
+            }
+        } else {
+            $email = $data[0] ?? '';
+            $name = $data[1] ?? '';
+        }
+
+        // Addresses routinely arrive with stray whitespace: a trailing space left in a YAML
+        // value, or a space after a comma in a list. Trim before validating, otherwise the
+        // address is dropped below and the message goes out missing that header entirely.
+        $email = is_string($email) ? trim($email) : '';
+        $name = is_string($name) ? trim($name) : '';
+
+        // Skip empty or invalid email addresses
+        if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return null;
+        }
+
+        return new Address($email, $name);
+    }
+
+    /**
+     * @return null|Mailer
+     * @internal
+     */
+    protected function initMailer(): ?Mailer
+    {
+        if (!$this->enabled()) {
+            return null;
+        }
+        if (!$this->mailer) {
+            $this->transport = $this->getTransport();
+            // Create the Mailer using your created Transport
+            $this->mailer = new Mailer($this->transport);
+        }
+        return $this->mailer;
+    }
+
+    /**
+     * @return void
+     * @throws \Exception
+     */
+    protected function initLog()
+    {
+        $log_file = Grav::instance()['locator']->findResource('log://email.log', true, true);
+        $this->log = new Logger('email');
+        /** @var UniformResourceLocator $locator */
+        $this->log->pushHandler(new StreamHandler($log_file, Logger::DEBUG));
+    }
+
+    /**
+     * Render the email action's parameters (subject, body, recipients, ...) as
+     * Twig.
+     *
+     * These are NOT operator-only configuration. A page's
+     * `form.process.email.*` front matter is authorable by anyone with
+     * page-write access, so every string here is editor content and is
+     * rendered under the Twig content sandbox. (GHSA-gh8j-q67c-j53f)
+     *
+     * @param array $params
+     * @param array $vars
+     * @return array
+     */
+    protected function processParams(array $params, array $vars = []): array
+    {
+        $twig = Grav::instance()['twig'];
+        $twig->init();
+
+        // Add twig vars to the context
+        $vars += $twig->twig_vars;
+
+        // On Grav 2.0 the sandbox replaces `config` with a facade that denies
+        // everything unless the operator opted into config access, which would
+        // break the documented `{{ config.site.emails.sales }}` and
+        // `{{ config.plugins.email.to }}` idioms. Supply the narrow slice those
+        // idioms need instead; the sandbox leaves a caller-supplied `config`
+        // alone.
+        //
+        // Grav 1.7 has no Twig content sandbox, so nothing replaces `config`
+        // there and narrowing it ourselves would only take away access those
+        // sites already have. Leave 1.7 exactly as it was.
+        if ($this->sandboxAvailable()) {
+            $vars['config'] = $this->buildParamConfig();
+            $vars = $this->filterParamVars($vars);
+        }
+
+        array_walk_recursive($params, function(&$value) use ($twig, $vars) {
+            if (is_string($value)) {
+                $value = $this->processTwigString($twig, $value, $vars);
+            }
+        });
+        return $params;
+    }
+
+    /**
+     * Is Grav's Twig content sandbox available and switched on?
+     *
+     * True on Grav 2.0 with `security.twig_sandbox.enabled`, false on Grav 1.7,
+     * which has no content sandbox at all, and false when an operator has
+     * turned it off. When false this plugin renders email parameters exactly
+     * as it always has, which is also why the 1.7 line is out of scope for
+     * GHSA-gh8j-q67c-j53f: reaching those parameters there needs a
+     * publisher-level account.
+     *
+     * @return bool
+     */
+    protected function sandboxAvailable(): bool
+    {
+        if (!class_exists(SandboxExtension::class) || !class_exists(SandboxConfig::class)) {
+            return false;
+        }
+
+        $twig = Grav::instance()['twig'];
+
+        return isset($twig->twig) && $twig->twig->hasExtension(SandboxExtension::class);
+    }
+
+    /**
+     * The `config` value exposed to email parameter Twig.
+     *
+     * A plain array, not the real Config, holding only what email parameters
+     * legitimately read: the site configuration (where operators keep their own
+     * addresses, e.g. `site.emails.sales`) and this plugin's own address
+     * fields. Everything else is simply absent: `system.*`, other plugins, and
+     * this plugin's own mailer credentials.
+     *
+     * The site subtree is read through {@see SandboxConfig} so that
+     * `security.twig_sandbox.config_denied_paths` is honoured here too: an
+     * operator who parks secrets under, say, `site.integrations` and denies
+     * that path gets it redacted in email parameters as well.
+     *
+     * @return array
+     */
+    protected function buildParamConfig(): array
+    {
+        /** @var Config $config */
+        $config = Grav::instance()['config'];
+
+        $denied = (array) $config->get('security.twig_sandbox.config_denied_paths', []);
+        $filtered = new SandboxConfig($config, $denied);
+
+        $email = [];
+        foreach (self::PARAM_CONFIG_KEYS as $key) {
+            $value = $config->get('plugins.email.' . $key);
+            if ($value !== null) {
+                $email[$key] = $value;
+            }
+        }
+
+        return [
+            'site' => $filtered->get('site', []),
+            'plugins' => ['email' => $email],
+        ];
+    }
+
+    /**
+     * Filter the raw `system`, `site` and `theme` variables inherited from
+     * `Twig::$twig_vars`.
+     *
+     * Narrowing `config` is not enough on its own. Those three are also
+     * exposed as top-level variables, they are plain PHP arrays, and Twig's
+     * sandbox has no jurisdiction over array key access, so
+     * `{{ system.cache.redis.password }}` in a form's `process.email.subject`
+     * renders the live value no matter how strict the policy is
+     * (GHSA-p597-crqc-m349).
+     *
+     * Grav 2.0.16 does this for page content and `@Var:` strings inside
+     * `Twig::processPage()` / `processString()`. This render calls
+     * `$twig->twig->render()` directly, so it has to apply the same filter
+     * itself, driven by the same `security.twig_sandbox.config_denied_paths`
+     * list so operators only maintain one.
+     *
+     * @param array $vars
+     * @return array
+     */
+    protected function filterParamVars(array $vars): array
+    {
+        /** @var Config $config */
+        $config = Grav::instance()['config'];
+
+        $filter = new SandboxConfig(
+            $config,
+            (array) $config->get('security.twig_sandbox.config_denied_paths', [])
+        );
+
+        foreach (['system', 'site', 'theme'] as $key) {
+            if (array_key_exists($key, $vars)) {
+                $vars[$key] = $filter->get($key, []);
+            }
+        }
+
+        return $vars;
+    }
+
+    /**
+     * Render a single email parameter string under the Twig content sandbox.
+     *
+     * The template is registered as `@EmailVar:`, which GravSourcePolicy
+     * sandboxes. Keeping that distinct name matters: Twig caches compiled
+     * templates by name and runs the sandbox tag/filter check once per compiled
+     * template, so sharing the `@Var:` namespace used by page content would let
+     * a string compiled here keep the relaxed policy below when the same string
+     * is later rendered as page content.
+     *
+     * @param Twig $twig
+     * @param string $string
+     * @param array $vars
+     * @return string
+     */
+    protected function processTwigString(Twig $twig, string $string, array $vars): string
+    {
+        // Skip if no Twig syntax
+        if (strpos($string, '{{') === false && strpos($string, '{%') === false) {
+            return $string;
+        }
+
+        $sandbox = null;
+        $policy = null;
+
+        if ($this->sandboxAvailable()) {
+            $sandbox = $twig->twig->getExtension(SandboxExtension::class);
+            $policy = $sandbox->getSecurityPolicy();
+        }
+
+        if ($sandbox && $policy) {
+            // Same restrictions as page content, plus the filters an email
+            // needs in order to emit an unescaped address. Restored in the
+            // finally below: this mutates the one shared SandboxExtension, so
+            // an escaping exception must not leave the relaxed policy live for
+            // the rest of the request.
+            $sandbox->setSecurityPolicy(new EmailParamPolicy($policy, self::PARAM_EXTRA_FILTERS));
+        }
+
+        try {
+            // Use Grav's setTemplate method which uses the loaderArray
+            $name = '@EmailVar:' . md5($string);
+            $twig->setTemplate($name, $string);
+
+            return $twig->twig->render($name, $vars);
+        } catch (\Exception $e) {
+            // A trusted email string (body, subject, recipient, etc.) failed to
+            // render. This is almost always a Twig syntax error or an
+            // unresolved {% extends %}/{% include %} in the template. We keep
+            // sending so one bad string doesn't block the whole notification,
+            // but the failure used to be completely silent, which made it very
+            // hard to trace (the raw, unrendered Twig just dropped into the
+            // email). Log it loudly to both the email log and the main Grav log
+            // with the Twig error and a snippet of the offending string.
+            $snippet = strlen($string) > 200 ? substr($string, 0, 200) . '…' : $string;
+            $report = sprintf('Twig render failed, sending raw string: %s | source: %s', $e->getMessage(), $snippet);
+
+            $this->log->error($report);
+            Grav::instance()['log']->error('plugin-email: ' . $report);
+
+            return $string;
+        } finally {
+            if ($sandbox && $policy) {
+                $sandbox->setSecurityPolicy($policy);
+            }
+        }
+    }
+
+    /**
+     * @param $message
+     * @param $params
+     * @param $vars
+     * @param $twig
+     * @param $body
+     * @return void
+     */
+    protected function processBody($message, $params, $vars, $twig, $body)
+    {
+        if ($params['process_markdown'] && $params['content_type'] === 'text/html') {
+            $body = (new Parsedown())->text($body);
+        }
+
+        if ($params['template']) {
+            $body = $twig->processTemplate($params['template'], ['content' => $body] + $vars);
+        }
+
+        $content_type = !empty($params['content_type']) ? $twig->processString($params['content_type'], $vars) : null;
+
+        if ($content_type === 'text/html') {
+            $message->html($body);
+        } else {
+            $message->text($body);
+        }
+    }
+
+    /**
+     * The transport for an engine.
+     *
+     * With no engine named it builds the one this site is configured with,
+     * which is what it has always done and what {@see initMailer()} still asks
+     * for. Naming one is how {@see buildMailerFor()} gets a mailer for a
+     * provider that is not the configured one, and it changes nothing about the
+     * configured path: same switch, same `onEmailTransportDsn` event, same
+     * `Transport::fromDsn()`.
+     *
+     * @param  string|null  $engine
+     * @return TransportInterface
+     */
+    protected static function getTransport(?string $engine = null): Transport\TransportInterface
+    {
+        /** @var Config $config */
+        $config = Grav::instance()['config'];
+        $engine = $engine !== null && trim($engine) !== ''
+            ? trim($engine)
+            : $config->get('plugins.email.mailer.engine');
+        $dsn = static::dsnForEngine((string)$engine, (array)$config->get('plugins.email.mailer'));
+
+        // An engine this plugin does not ship is a transport plugin's, and it
+        // names its own DSN — or hands back a whole transport object, which is
+        // how a plugin using a Symfony bridge registers one.
+        if ($dsn === null) {
+            $dsn = 'null://default';
+
+            $e = new Event(['engine' => $engine, ]);
+            Grav::instance()->fireEvent('onEmailTransportDsn', $e);
+            if (isset($e['dsn'])) {
+                $dsn = $e['dsn'];
+            }
+        }
+
+        if ($dsn instanceof TransportInterface) {
+            $transport = $dsn;
+        } else {
+           $transport = Transport::fromDsn($dsn) ;
+        }
+
+        return $transport;
+    }
+
+    /**
+     * The DSN for one of the engines this plugin ships, or null for one it
+     * does not.
+     *
+     * Lifted out of {@see getTransport()} unchanged, line for line, so that the
+     * one part of building a transport that is pure arithmetic on the config
+     * can be read and tested without a booted Grav. Null means "not mine", and
+     * is what sends `getTransport()` to `onEmailTransportDsn` to ask the
+     * plugins.
+     *
+     * @param  string  $engine
+     * @param  array   $mailer  the `plugins.email.mailer` config block
+     * @return string|null
+     */
+    protected static function dsnForEngine(string $engine, array $mailer): ?string
+    {
+        switch ($engine) {
+            case 'smtps':
+            case 'smtp':
+                $options = $mailer['smtp'] ?? [];
+                $dsn = $engine . '://';
+                $auth = '';
+
+                if (isset($options['encryption']) && $options['encryption'] === 'none') {
+                    $options['options']['verify_peer'] = 0;
+                }
+                if (isset($options['user'])) {
+                    $auth .= urlencode($options['user']);
+                }
+                if (isset($options['password'])) {
+                    $auth .= ':'. urlencode($options['password']);
+                }
+                if (!empty($auth)) {
+                    $dsn .= "$auth@";
+                }
+                if (isset($options['server'])) {
+                    $dsn .= urlencode($options['server']);
+                }
+                if (isset($options['port'])) {
+                    $dsn .= ":{$options['port']}";
+                }
+                if (isset($options['options'])) {
+                    $dsn .= '?' . http_build_query($options['options']);
+                }
+
+                return $dsn;
+            case 'mail':
+            case 'native':
+                return 'native://default';
+            case 'sendmail':
+                $dsn = 'sendmail://default';
+                $bin = $mailer['sendmail']['bin'] ?? null;
+                if (isset($bin)) {
+                    $dsn .= '?command=' . urlencode($bin);
+                }
+
+                return $dsn;
+        }
+
+        return null;
+    }
+
+    /**
+     * Get any message from the last send attempt
+     * @return string|null
+     */
+    public function getLastSendMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    /**
+     * Get any debug information from the last send attempt
+     * @return string|null
+     */
+    public function getLastSendDebug(): ?string
+    {
+        return $this->debug;
+    }
+
+    /**
+     * @param array $recipients
+     * @return string
+     */
+    protected function jsonifyRecipients(array $recipients): string
+    {
+        $json = [];
+        foreach ($recipients as $recipient) {
+            $json[] = str_replace('"', "", $recipient->toString());
+        }
+        return json_encode($json);
+    }
+
+    protected function isValidEmail($email): bool
+    {
+        return is_string($email) && filter_var(trim($email), FILTER_VALIDATE_EMAIL) !== false;
+    }
+
+    /**
+     * @return void
+     * @deprecated 4.0 Switched from Swiftmailer to Symfony/Mailer - No longer supported
+     */
+    public static function flushQueue() {}
+
+    /**
+     * @return void
+     * @deprecated 4.0 Switched from Swiftmailer to Symfony/Mailer - No longer supported
+     */
+    public static function clearQueueFailures() {}
+
+        /**
+     * Creates an attachment.
+     *
+     * @param string $data
+     * @param string $filename
+     * @param string $contentType
+     * @deprecated 4.0 Switched from Swiftmailer to Symfony/Mailer - No longer supported
+     * @return void
+     */
+    public function attachment($data = null, $filename = null, $contentType = null) {}
+
+    /**
+     * Creates an embedded attachment.
+     *
+     * @param string $data
+     * @param string $filename
+     * @param string $contentType
+     * @deprecated 4.0 Switched from Swiftmailer to Symfony/Mailer - No longer supported
+     * @return void
+     */
+    public function embedded($data = null, $filename = null, $contentType = null) {}
+
+
+    /**
+     * Creates an image attachment.
+     *
+     * @param string $data
+     * @param string $filename
+     * @param string $contentType
+     * @deprecated 4.0 Switched from Swiftmailer to Symfony/Mailer - No longer supported
+     * @return void
+     */
+    public function image($data = null, $filename = null, $contentType = null) {}
+
+}

@@ -1,0 +1,15 @@
+enabled: true
+built_in_css: true
+translated_urls: true
+untranslated_pages_behavior: none
+language_display: custom
+language_labels:
+  v4: "Version 4 English"
+  v4_de: "Version 4 Deutsch"
+  v4_ca: "Version 4 Català"
+  v5: "Version 5 English"
+  v5_de: "Version 5 Deutsch"
+  v5_es: "Version 5 Español"
+  v5_it: "Version 5 Italiano"
+  v5_fr: "Version 5 Français"
+  v5_ca: "Version 5 Català"

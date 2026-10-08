@@ -1,0 +1,34 @@
+matrix:
+- name: Markdown
+  expect_match: false
+  apsell:
+    lang: en
+    d: en_GB
+
+  dictionary:
+    wordlists:
+    - .wordlist.txt
+    output: wordlist.dic
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.markdown:
+      markdown_extensions:
+      - markdown.extensions.extra:
+  - pyspelling.filters.html:
+      comments: false
+      attributes:
+      - alt
+      ignores:
+      - ':matches(code, pre)'
+      - 'code'
+      - 'pre'
+      - 'blockquote'
+  sources:
+  - "pages/**/*chapter.v4.md"
+  - "pages/**/*chapter.v5.md"
+  - "pages/**/*docs.md"
+  - "pages/**/*docs.v4.md"
+  - "pages/**/*docs.v5.md"
+  - "pages/**/*default.v4.md"
+  - "pages/**/*default.v5.md"
+

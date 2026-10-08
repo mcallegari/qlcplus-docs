@@ -6,7 +6,7 @@ media_order: 'xypad.png,xypad2.png,xypad-efx.png'
 
 An **XY Pad** is a two-axis control for **pan and tilt** — drag the cursor around
 the pad and the attached moving fixtures follow. It's the natural way to position
-moving heads and scanners by hand from the [Virtual Console](VirtualConsole.md).
+moving heads and scanners by hand from the [Virtual Console](/virtual-console).
 
 The pad's horizontal axis drives **pan** and the vertical axis drives **tilt**.
 The whole area represents the complete range of movement your fixtures can reach:
@@ -102,6 +102,36 @@ and everything in between is scaled proportionally.
 * **Inverted Y-Axis** — flip the vertical axis, so the maximum tilt value is
   reached at the top of the pad instead of the bottom. Useful for fixtures rigged
   upside down on a truss.
+* **Floor control** — switches the pad from raw pan/tilt control to aiming at a
+  position on the **stage floor**. See *Floor control* below.
+
+### Floor control
+
+With **Floor control** enabled, the pad no longer drives pan and tilt directly.
+Instead, the main area becomes a top-down plan of the stage — the same
+environment size (Width/Depth) set in the [3D View](/fixtures-and-functions/3d-view)
+— and dragging the cursor moves a crosshair **target** on the floor. QLC+ then
+works out the pan/tilt each controlled head needs to aim at that exact X/Z point,
+using the head's own 3D position, so a mixed rig of fixtures hung at different
+places all point at the *same spot* without any per-fixture range tweaking.
+
+* The vertical **value slider** on the right, which normally sets the Y
+  (tilt) position, is replaced by a **height slider** (0–20 m) that raises or
+  lowers the target above the floor — useful for aiming above head height, or
+  down at the floor itself.
+* A coordinate readout in the corner of the pad shows the current target as
+  **X / Z / H**, all in metres.
+* The target marker grows a ring around it as the height increases, as a visual
+  hint that the aim point is lifted off the floor.
+* The **fixture position dots** and the **range window** scaling described
+  above are specific to raw pan/tilt control and are hidden while floor control
+  is active; the per-fixture Pan/Tilt range dialog and limits still apply to
+  how far each head can physically turn to reach the target.
+
+Floor control depends on fixtures having a known position — set automatically
+when they are placed in the 3D View (including by the [Show Wizard](/fixtures-and-functions/show-wizard)),
+or manually from the 3D View's properties. A head with no known position is
+driven as if it were at the centre of the floor.
 
 ### Range Display Mode
 
@@ -113,7 +143,9 @@ Selects the units used when displaying and editing the fixtures' Pan/Tilt ranges
 * **DMX** — raw DMX values, 0–255.
 
 Changing the mode does not change the stored ranges, only how they are shown and
-entered.
+entered. Click the small button showing the current unit (°, % or DMX), next to
+the **Fixtures** list toolbar, to cycle through the three modes without opening
+the Settings tab.
 
 ### Fixtures
 
