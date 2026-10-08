@@ -119,7 +119,7 @@ Seqüències, EFX, Matrius RGB, Col·leccions, Scripts, Àudio, Vídeo i Shows.
 |--------|--------------|
 | ![](../basics/functions.svg?resize=48,48) **Gestor de Funcions** | Obre la llista de totes les teves funcions, organitzades en carpetes. Selecciona una funció aquí per editar-la. |
 | <i class="fa fa-stopwatch fa-2x" style="color:turquoise"></i>**Configuració de Temps** | (Només al [Gestor de Shows](/show-manager)) Ajusta la configuració de temps per al show. |
-| <i class="fa fa-hat-wizard fa-2x" style="color:yellow"></i>**Show Wizard** | Obre el [Show Wizard](/fixtures-and-functions/show-wizard), que construeix un show complet — disposició d'escenari, funcions i Virtual Console — a partir d'unes quantes opcions d'alt nivell. |
+| <i class="fa fa-hat-wizard fa-2x" style="color:#edc111"></i>**Show Wizard** | Obre el [Show Wizard](/fixtures-and-functions/show-wizard), que construeix un show complet — disposició d'escenari, funcions i Virtual Console — a partir d'unes quantes opcions d'alt nivell. |
 | <i class="fa fa-plus fa-2x" style="color:limegreen"></i>**Afegeix una funció nova** | Obre un menú per crear una funció nova. Tria el tipus i el seu editor s'obre automàticament. (Només disponible quan l'edició de funcions està permesa.) |
 | <i class="fa fa-minus fa-2x" style="color:crimson"></i>**Elimina** | Elimina les funcions i carpetes seleccionades, després de demanar-te confirmació. |
 | ![](../basics/rename.svg?resize=48,48) **Canvia el nom** | Canvia el nom de l'element seleccionat. Quan hi ha diversos elements seleccionats, pots canviar-los el nom tots alhora amb numeració automàtica. |
