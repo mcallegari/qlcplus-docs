@@ -114,7 +114,7 @@ PLUGIN_LOGIN:
   USE_PARENT_ACL_LABEL: "Use parent access rules"
   USE_PARENT_ACL_HELP: "Check for parent access rules if no rules are defined"
   PROTECT_PROTECTED_PAGE_MEDIA_LABEL: "Protect a login-protected page media"
-  PROTECT_PROTECTED_PAGE_MEDIA_HELP: "If enabled, media of a login protected page is login protected as well and cannot be seen unless logged in"
+  PROTECT_PROTECTED_PAGE_MEDIA_HELP: "Applies the page's <code>access</code> rules to media requested through the page route, such as <code>/my-page/report.pdf</code>. It cannot protect a request made straight to the file's own path under <code>user/pages/</code>, because your web server answers those without ever running Grav. Files that must never be readable by an anonymous visitor should not be stored as page media."
   SECURITY_TAB: "Security"
   MAX_RESETS_COUNT: "Max password resets count"
   MAX_RESETS_COUNT_HELP: "Password reset flood protection setting (0 - not limited)"
@@ -139,6 +139,7 @@ PLUGIN_LOGIN:
   MAX_REGISTRATIONS_INTERVAL: "Max registration attempts interval"
   MAX_REGISTRATIONS_INTERVAL_HELP: "The time interval for the max registration attempts count value"
   TOO_MANY_LOGIN_ATTEMPTS: "Too many failed login attempted in the configured time (%s minutes)"
+  TOO_MANY_LOGIN_ATTEMPTS_RETRY: "Too many failed login attempts. Please try again in %s minutes"
   TOO_MANY_2FA_ATTEMPTS: "Too many incorrect two-factor codes in the configured time (%s minutes)"
   SECONDS: "seconds"
   MINUTES: "minutes"
@@ -172,6 +173,7 @@ PLUGIN_LOGIN:
   IPV6_SUBNET_SIZE: "IPv6 Subnet Size"
   IPV6_SUBNET_SIZE_HELP: "The number of IPv6 addresses typically assigned to a machine"
   PROFILE_UPDATED: "Your profile has been updated"
+  PROFILE_NOT_UPDATED: "Your profile could not be updated"
   ENTER_EMAIL: "Enter your email"
   ENTER_NEW_PASSWORD: "Enter new password"
   ENTER_PASSWORD: "Enter a password"
@@ -212,3 +214,20 @@ PLUGIN_LOGIN:
   LOCKOUT_UNLOCK_LABEL: "Clear login lockout"
   LOCKOUT_UNLOCKED: 'Cleared the login lockout for "%s"'
   LOCKOUT_NOT_LOCKED: '"%s" was not locked out'
+  # Titles and body copy for the pages the plugin provides. Titles are applied
+  # in Login::getPage(); body headings use the [translate] shortcode. Both only
+  # apply to the plugin's own pages: a page the site provides at the same route
+  # keeps its own wording.
+  LOGIN_PAGE_TITLE: "Login"
+  LOGIN_PAGE_HEADING: "User Login"
+  FORGOT_PAGE_TITLE: "Forgot password"
+  FORGOT_PAGE_HEADING: "Recover your password"
+  FORGOT_PAGE_DESC: "Enter your email to recover your password"
+  RESET_PAGE_TITLE: "Reset password"
+  RESET_PAGE_HEADING: "Password Reset"
+  REGISTER_PAGE_TITLE: "Register User"
+  REGISTER_PAGE_HEADING: "Register"
+  REGISTER_PAGE_DESC: "Create a new user account by entering all the required fields below:"
+  PROFILE_PAGE_TITLE: "Profile"
+  UNAUTHORIZED_PAGE_TITLE: "Unauthorized"
+  UNAUTHORIZED_PAGE_HEADING: "You don't have access to this page..."

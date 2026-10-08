@@ -97,13 +97,17 @@ class Login
      * permission and/or group. Shared by the `authenticated()` Twig function
      * and the `[authenticated]` / `[guest]` shortcodes:
      *
-     *     $grav['login']->isAuthenticated()                  logged in at all
+     *     $grav['login']->isAuthenticated()                  fully logged in
      *     $grav['login']->isAuthenticated('admin.super')     logged in + authorized
      *     $grav['login']->isAuthenticated(null, 'editors')   logged in + in group
      *
      * `permission` and `group` each accept a single value or a list, and match
      * if the user satisfies any one of them. When both are given the user must
      * satisfy both.
+     *
+     * A session which has passed the password step but has not yet answered the
+     * two-factor challenge is `authenticated` but not `authorized`, and is not
+     * logged in for any of these checks.
      *
      * @param string|array|null $permission Permission action(s) to authorize.
      * @param string|array|null $group      Group name(s) the user must be in.
@@ -112,6 +116,14 @@ class Login
     {
         $user = $this->grav['user'] ?? null;
         if (!$user instanceof UserInterface || !$user->authenticated) {
+            return false;
+        }
+
+        // Two-factor challenge still open: the password step alone is not a login.
+        // The permission branch below inherits this from UserObject::authorize(), but
+        // the no-argument and group forms never reach it, so gate all three here.
+        // Same test as Login::isUserAuthorizedForPage(). (GHSA-636m-8598-45r9)
+        if (!$user->authorized) {
             return false;
         }
 
@@ -358,19 +370,26 @@ class Login
     {
         $ipKey = $this->getIpKey($ip);
         $rateLimiter = $this->getRateLimiter('login_attempts');
-        // Link the IP counter to the username so an administrator unlocking the
-        // account can clear the IP side too, which is what the check below hits
-        // first.
-        $rateLimiter->registerRateLimitedAction($ipKey, 'ip', ['username' => $username])
-            ->registerRateLimitedAction($username);
 
-        // Check rate limit for both IP and user, but allow each IP a single try even if user is already rate limited.
-        $attempts = \count($rateLimiter->getAttempts($ipKey, 'ip'));
-        if ($rateLimiter->isRateLimited($ipKey, 'ip') || ($attempts && $rateLimiter->isRateLimited($username))) {
-            return $rateLimiter->getInterval();
+        // Refuse at the limit without registering the attempt, so retrying while
+        // locked out can't keep pushing the end of the lockout further away.
+        if (!$rateLimiter->hasReachedLimit($ipKey, 'ip') && !$rateLimiter->hasReachedLimit($username)) {
+            // Link the IP counter to the username so an administrator unlocking the
+            // account can clear the IP side too.
+            $rateLimiter->registerRateLimitedAction($ipKey, 'ip', ['username' => $username])
+                ->registerRateLimitedAction($username);
+
+            return 0;
         }
 
-        return 0;
+        // Still record which account was tried from a locked IP, without counting
+        // the attempt, so the lockout lists and unlock-user can find it.
+        $rateLimiter->addLinks($ipKey, 'ip', ['username' => $username]);
+
+        $seconds = max($rateLimiter->getRetryAfter($ipKey, 'ip'), $rateLimiter->getRetryAfter($username));
+
+        // The oldest attempt can expire between the check above and this one.
+        return max(1, (int)ceil($seconds / 60));
     }
 
     /**
@@ -398,7 +417,7 @@ class Login
      * Every account currently locked out of logging in.
      *
      * Mirrors checkLoginRateLimit(): an account counts as locked when its own
-     * counter is over the limit, or when an IP it has been tried from is. The
+     * counter has reached the limit, or when an IP it has been tried from has. The
      * whole set is resolved in one sweep of the index so that listing N accounts
      * costs one pass, not N.
      *
@@ -409,7 +428,7 @@ class Login
         $rateLimiter = $this->getRateLimiter('login_attempts');
 
         $locked = [];
-        foreach ($rateLimiter->getRegisteredKeys(null, true) as $entry) {
+        foreach ($rateLimiter->getRegisteredKeys(null, true, true) as $entry) {
             if ($entry['type'] === 'username') {
                 $existing = $locked[$entry['key']] ?? ['attempts' => 0, 'last' => null, 'by_ip' => false];
                 $locked[$entry['key']] = [
@@ -509,7 +528,7 @@ class Login
     {
         $out = [];
         foreach (static::getRateLimitContexts() as $context) {
-            $entries = $this->getRateLimiter($context)->getRegisteredKeys(null, $limitedOnly);
+            $entries = $this->getRateLimiter($context)->getRegisteredKeys(null, $limitedOnly, $context === 'login_attempts');
             if ($entries) {
                 $out[$context] = $entries;
             }
@@ -891,7 +910,14 @@ class Login
             return null;
         }
 
-        if ($page) {
+        // Password-reset URLs carry a bearer credential. Never render a
+        // user-authored page at that route: page content is sandboxed, but it
+        // can still read request parameters and ordinary template variables.
+        // The bundled page and trusted template are the only renderers allowed
+        // to receive the reset request.
+        if ($type === 'reset') {
+            $page = null;
+        } elseif ($page) {
             $page->route($route);
             $page->slug(basename($route));
         } else {
@@ -899,12 +925,14 @@ class Login
             $pages = $this->grav['pages'];
             $page = $pages->find($route);
         }
+
         if (!$page instanceof PageInterface) {
             // Only add login page if it hasn't already been defined.
             $page = new Page();
             $page->init(new \SplFileInfo('plugin://login/pages/' . $type . '.md'));
             $page->route($route);
             $page->slug(basename($route));
+            $this->translatePageTitle($page, $type);
         }
 
         // Login page may not have the correct Cache-Control header set, force no-store for the proxies.
@@ -914,6 +942,46 @@ class Login
         }
 
         return $page;
+    }
+
+    /**
+     * Translate the title of a page the plugin provides itself.
+     *
+     * Page frontmatter is plain YAML: `title:` is never run through the
+     * translator, and Twig in frontmatter is gated off by default on Grav 2, so
+     * there is no in-content equivalent for the title the way there is for the
+     * body ([translate] shortcode). Only pages the plugin built are touched: a
+     * page the site provides at the same route keeps its own title.
+     *
+     * @param PageInterface $page
+     * @param string $type
+     * @return void
+     */
+    protected function translatePageTitle(PageInterface $page, string $type): void
+    {
+        $keys = [
+            'login' => 'PLUGIN_LOGIN.LOGIN_PAGE_TITLE',
+            'forgot' => 'PLUGIN_LOGIN.FORGOT_PAGE_TITLE',
+            'magic' => 'PLUGIN_LOGIN.MAGIC_PAGE_TITLE',
+            'reset' => 'PLUGIN_LOGIN.RESET_PAGE_TITLE',
+            'register' => 'PLUGIN_LOGIN.REGISTER_PAGE_TITLE',
+            'profile' => 'PLUGIN_LOGIN.PROFILE_PAGE_TITLE',
+            'unauthorized' => 'PLUGIN_LOGIN.UNAUTHORIZED_PAGE_TITLE',
+        ];
+
+        $key = $keys[$type] ?? null;
+        if (null === $key) {
+            return;
+        }
+
+        /** @var Language $language */
+        $language = $this->grav['language'];
+        $title = $language->translate([$key]);
+
+        // translate() hands back the key itself when nothing matched.
+        if ($title !== $key && $title !== '') {
+            $page->title($title);
+        }
     }
 
     /**

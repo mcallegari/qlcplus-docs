@@ -1,3 +1,20 @@
+# v3.4.13
+## 09/17/2026
+
+1. [](#bugfix)
+    * **[security] A user's name and email address are now passed to Git as data, never as part of the command.** The commit author was assembled into the command line with only its outer quotes, so a full name containing the right punctuation could run commands on the server as the web user. Thanks to @AlpetGexha
+    * **[security] Webhook secrets are now compared in constant time, and only recognized signature algorithms are accepted.** The GitHub signature header was also split apart without checking its shape, so a malformed header could error instead of being rejected. Thanks to @AlpetGexha
+    * Disabling automatic sync on save now also applies to Flex objects and configuration saves, so automatic sync can be fully disabled. Saving Git Sync settings still configures the repository. [#266](https://github.com/trilbymedia/grav-plugin-git-sync/issues/266)
+
+# v3.4.12
+## 09/10/2026
+
+1. [](#bugfix)
+    * Your repository password is no longer left in plain text in `user/.git/config` when a sync fails. It used to stay there until the next successful sync. Thanks to @onetrev [#265](https://github.com/trilbymedia/grav-plugin-git-sync/issues/265)
+    * A Git credential helper set up on the server no longer keeps its own copy of the Git Sync password after a sync or a connection test
+    * With logging turned on, the connection test no longer writes the password it is checking to the log
+    * An API key limited to specific permissions can no longer read or change Git Sync settings unless it was given Git Sync access, even when the account that created it is a super admin
+
 # v3.4.11
 ## 09/03/2026
 

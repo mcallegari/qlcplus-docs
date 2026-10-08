@@ -225,7 +225,7 @@ route_unauthorized: '/user_unauthorized'    # Route for a page to display if use
 twofa_enabled: false                        # Two factor authentication enabled
 dynamic_page_visibility: false              # Integrate access into page visibility so things can be shown or hidden in the menu
 parent_acl: false                           # Look to parent `access` rules for access requirements
-protect_protected_page_media: false         # Take `access` rules into account when directly accessing a page's media
+protect_protected_page_media: false         # Apply `access` rules to page media requested through the page route. Route only: a direct request to user/pages/<folder>/<file> is served by the web server without invoking Grav and cannot be blocked from PHP
 
 site_host:                                  # Optionally used in password reset and activation emails, to avoid "password poisoning attacks", this should be the URL of your site including the protocol.  e.g. https://foo.com
 
@@ -730,7 +730,7 @@ To use invitations, you need to create a page with a form that triggers the `log
 ---
 title: Invite Users
 access:
-  admin.login: true
+  admin.users: true
 
 form:
   name: invite-form
@@ -769,6 +769,8 @@ form:
 
 Use this form to invite new users to register on the site.
 ```
+
+> **Important:** Only a signed-in user who manages accounts (`admin.users` or `api.users.write`, or a super user) can send invitations, whatever the page's own `access` says. Only a super user can invite someone into super access or into groups; for anyone else those are removed from the invitation.
 
 > **Important:** The `form.meta.invite` section controls invitation behavior. The `expiration` sets how long the token remains valid (in seconds), and `account` defines the default access permissions applied to the new user upon registration.
 

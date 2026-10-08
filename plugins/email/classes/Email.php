@@ -19,6 +19,7 @@ use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\Header\MetadataHeader;
 use Symfony\Component\Mailer\Header\TagHeader;
 use Symfony\Component\Mailer\Mailer;
+use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport;
 use Symfony\Component\Mailer\Transport\TransportInterface;
 use Symfony\Component\Mime\Address;
@@ -70,6 +71,13 @@ class Email
     public const FEATURE_PROVIDERS = 'providers';
 
     /**
+     * The inbound mail contract under `classes/Providers/Inbound/` and the IMAP
+     * client under `classes/Inbound/Imap/`, asked for by name through
+     * {@see supportsFeature()}.
+     */
+    public const FEATURE_INBOUND = 'inbound';
+
+    /**
      * The providers collected on `onEmailProviders`, once per request.
      *
      * @var Providers\ProviderRegistry|null
@@ -86,6 +94,22 @@ class Email
 
     protected $message;
     protected $debug;
+
+    /**
+     * The provider's own id for the last message sent, or null.
+     *
+     * Every API transport answers one — Resend, Postmark, SES, SendGrid,
+     * Mailgun and MailerSend all call `SentMessage::setMessageId()` with
+     * whatever their API returned — and it is the same string that provider
+     * then names in its delivery webhooks. It was being collected and dropped,
+     * which left anything wanting to join an event back to a send relying on
+     * the sending domain's own `Message-ID` surviving the trip. It frequently
+     * does not: Resend runs on Amazon SES, SES mints its own on the way out,
+     * and the webhook reports that one. See getLastSendId().
+     *
+     * @var string|null
+     */
+    protected $sendId;
 
     public function __construct()
     {
@@ -143,7 +167,10 @@ class Email
      * The same question as {@see supportsParameter()} and asked the same way,
      * about a whole feature rather than one message parameter. `providers` is
      * the provider contract under `classes/Providers/`: the registry, the
-     * `onEmailProviders` event and the three lookups below.
+     * `onEmailProviders` event and the three lookups below. `inbound` is the
+     * inbound mail contract: `Providers\Inbound\InboundGateway`, the built-in
+     * `cloudflare` and `generic` receivers, and the IMAP client in
+     * `Inbound\Imap\ImapMailbox`.
      *
      *     if (method_exists($email, 'supportsFeature') && $email::supportsFeature('providers')) {
      *         $provider = $email::providerFor($engine);
@@ -162,7 +189,7 @@ class Email
      */
     public static function supportsFeature(string $name): bool
     {
-        if ($name === self::FEATURE_PROVIDERS) {
+        if ($name === self::FEATURE_PROVIDERS || $name === self::FEATURE_INBOUND) {
             return PHP_VERSION_ID >= 80100;
         }
 
@@ -279,8 +306,10 @@ class Email
             $status = 1;
             $this->message = '✅';
             $this->debug = $sent_msg->getDebug();
+            $this->sendId = $this->idOf($sent_msg);
         } catch (TransportExceptionInterface $e) {
             $status = 0;
+            $this->sendId = null;
             $this->message = '🛑 ' . $e->getMessage();
             $this->debug = $e->getDebug();
 
@@ -310,9 +339,19 @@ class Email
         }
 
         if ($this->debug()) {
-            $log_msg = "Email sent to %s at %s -> %s\n%s";
+            $log_msg = "Email sent to %s at %s -> %s [provider id: %s]\n%s";
             $to = $this->jsonifyRecipients($message->getEmail()->getTo());
-            $message = sprintf($log_msg, $to, date('Y-m-d H:i:s'), $this->message, $this->debug);
+            $message = sprintf(
+                $log_msg,
+                $to,
+                date('Y-m-d H:i:s'),
+                $this->message,
+                // What the provider called it, which is what a delivery webhook
+                // will name and therefore the first thing worth knowing when
+                // one cannot be matched to the message it is about.
+                $this->sendId ?? 'none',
+                $this->debug
+            );
             $this->log->info($message);
         }
 
@@ -559,13 +598,36 @@ class Email
     protected function logHeaderSkipped($name, string $reason): void
     {
         $label = is_string($name) || is_numeric($name) ? (string) $name : gettype($name);
-        $report = sprintf('Skipped the "%s" email header: %s', $label, $reason);
 
+        $this->logWarning(sprintf('Skipped the "%s" email header: %s', $label, $reason));
+    }
+
+    /**
+     * Say something in both this plugin's own log and Grav's.
+     *
+     * Both, because the two have different readers: `logs/email.log` is where
+     * somebody goes once they already suspect the mail, and `logs/grav.log` is
+     * where somebody goes when they have no idea yet.
+     *
+     * @param  string  $report
+     * @return void
+     */
+    protected function logWarning(string $report): void
+    {
         $this->log->warning($report);
         Grav::instance()['log']->warning('plugin-email: ' . $report);
     }
 
     /**
+     * Turn the `to`, `from`, `cc`, `bcc` or `reply_to` parameter into addresses.
+     *
+     * Anything `createAddress()` refuses is dropped, and every drop is logged.
+     * It used to be dropped in silence, which is the worst possible outcome: an
+     * address parameter that produced nothing at all left `buildMessage()`
+     * skipping the `to()` call entirely, so the message went out with no To
+     * header, the form told the visitor it had been sent, and nothing anywhere
+     * recorded that it had not. See logRecipientsDropped() for what is said.
+     *
      * @param string $type
      * @param array $params
      * @return array
@@ -579,44 +641,131 @@ class Email
         $recipients = $params[$type] ?? Grav::instance()['config']->get('plugins.email.'.$type) ?? [];
 
         $list = [];
+        $dropped = [];
 
         if (!empty($recipients)) {
             if (is_array($recipients)) {
                 if (Utils::isAssoc($recipients) || (count($recipients) ===2 && $this->isValidEmail($recipients[0]) && !$this->isValidEmail($recipients[1]))) {
-                    $address = $this->createAddress($recipients);
-                    if ($address !== null) {
-                        $list[] = $address;
-                    }
+                    $this->collectAddress($recipients, $list, $dropped);
                 } else {
                     foreach ($recipients as $recipient) {
-                        $address = $this->createAddress($recipient);
-                        if ($address !== null) {
-                            $list[] = $address;
-                        }
+                        $this->collectAddress($recipient, $list, $dropped);
                     }
                 }
             } else {
                 if (is_string($recipients) && Utils::contains($recipients, ',')) {
                     $recipients = array_map('trim', explode(',', $recipients));
                     foreach ($recipients as $recipient) {
-                        $address = $this->createAddress($recipient);
-                        if ($address !== null) {
-                            $list[] = $address;
-                        }
+                        $this->collectAddress($recipient, $list, $dropped);
                     }
                 } else {
                     if (!Utils::contains($recipients, ['<','>']) && (isset($params[$type."_name"]))) {
                         $recipients = [$recipients, $params[$type."_name"]];
                     }
-                    $address = $this->createAddress($recipients);
-                    if ($address !== null) {
-                        $list[] = $address;
-                    }
+                    $this->collectAddress($recipients, $list, $dropped);
                 }
             }
         }
 
+        if ($dropped !== []) {
+            $this->logRecipientsDropped($type, $dropped, $list === []);
+        }
+
         return $list;
+    }
+
+    /**
+     * Parse one candidate address onto the list, or onto the dropped pile.
+     *
+     * Exists only so that the five places above which each called
+     * `createAddress()` and discarded a null keep behaving exactly as they did,
+     * while the discarded value is still around to be logged.
+     *
+     * @param  mixed  $candidate
+     * @param  array  $list
+     * @param  array  $dropped
+     * @return void
+     */
+    protected function collectAddress($candidate, array &$list, array &$dropped): void
+    {
+        $address = $this->createAddress($candidate);
+
+        if ($address !== null) {
+            $list[] = $address;
+        } else {
+            $dropped[] = $candidate;
+        }
+    }
+
+    /**
+     * Say in both logs that one or more addresses were thrown away.
+     *
+     * In both places, and at warning level, for the same reason
+     * {@see logHeaderSkipped()} is: the send itself reports success either way,
+     * so without this the only evidence is mail that never arrives.
+     *
+     * The escaping hint is here because that is what causes this in practice. A
+     * `name-addr` value that has been through Twig's `escape` filter — written
+     * as `|e`, or applied by autoescape — reaches the mailer as
+     * `John Doe &lt;john@example.com&gt;`, which is not an email address by any
+     * reading, so it is dropped and the form still says it sent. Address
+     * parameters want `|raw`.
+     *
+     * @param  string  $type  the parameter the addresses came from: to, cc, bcc, ...
+     * @param  array  $dropped  the values that could not be parsed
+     * @param  bool  $none_left  true when nothing usable survived
+     * @return void
+     */
+    protected function logRecipientsDropped(string $type, array $dropped, bool $none_left): void
+    {
+        $count = count($dropped);
+        $values = implode(', ', array_map([$this, 'describeAddressValue'], $dropped));
+
+        // Truncate: a `to` built from a mailing list can be thousands of
+        // addresses long, and a log line that big helps nobody.
+        if (mb_strlen($values) > 200) {
+            $values = mb_substr($values, 0, 200) . '...';
+        }
+
+        $report = sprintf(
+            '%s in the "%s" email parameter could not be parsed and %s dropped: %s. %s %s',
+            $count === 1 ? 'An address' : sprintf('%d addresses', $count),
+            $type,
+            $count === 1 ? 'was' : 'were',
+            $values,
+            $none_left
+                ? sprintf('Nothing usable was left, so the message has no %s addresses at all.', ucwords(str_replace('_', '-', $type), '-'))
+                : 'The message kept the addresses that did parse.',
+            'If the value looks HTML-escaped, a "Name <address>" string has been through Twig\'s escape filter (|e, or autoescape) and arrived as "Name &lt;address&gt;" — use |raw on address parameters.'
+        );
+
+        $this->logWarning($report);
+    }
+
+    /**
+     * Render one rejected address value as something readable in a log line.
+     *
+     * @param  mixed  $value
+     * @return string
+     */
+    protected function describeAddressValue($value): string
+    {
+        if (is_string($value) || is_numeric($value)) {
+            return '"' . trim((string) $value) . '"';
+        }
+
+        if (is_array($value)) {
+            $parts = [];
+            foreach ($value as $key => $item) {
+                $parts[] = is_int($key)
+                    ? $this->describeAddressValue($item)
+                    : $this->describeAddressValue($key) . ' => ' . $this->describeAddressValue($item);
+            }
+
+            return '[' . implode(', ', $parts) . ']';
+        }
+
+        return '(' . gettype($value) . ')';
     }
 
     /**
@@ -962,19 +1111,38 @@ class Email
             $dsn = 'null://default';
 
             $e = new Event(['engine' => $engine, ]);
-            Grav::instance()->fireEvent('onEmailTransportDsn', $e);
-            if (isset($e['dsn'])) {
-                $dsn = $e['dsn'];
+
+            // Everything from here to the transport is somebody else's code
+            // running on every request of the site, long before anything has
+            // decided whether this request sends mail: a provider plugin
+            // naming its DSN, and then Symfony parsing it. Either can throw on
+            // a store that has saved its settings form with one field still
+            // empty — and a throw here is not a failed send, it is a white
+            // screen on every page including the admin, which is where the
+            // field would have been filled in. See UnusableTransport.
+            try {
+                Grav::instance()->fireEvent('onEmailTransportDsn', $e);
+                if (isset($e['dsn'])) {
+                    $dsn = $e['dsn'];
+                }
+
+                return $dsn instanceof TransportInterface ? $dsn : Transport::fromDsn($dsn);
+            } catch (\Throwable $error) {
+                $reason = sprintf('The %s transport could not be set up: %s', $engine, $error->getMessage());
+                Grav::instance()['log']->error('email: ' . $reason);
+
+                return new UnusableTransport($reason);
             }
         }
 
-        if ($dsn instanceof TransportInterface) {
-            $transport = $dsn;
-        } else {
-           $transport = Transport::fromDsn($dsn) ;
-        }
+        try {
+            return Transport::fromDsn($dsn);
+        } catch (\Throwable $error) {
+            $reason = sprintf('The %s transport could not be set up: %s', $engine, $error->getMessage());
+            Grav::instance()['log']->error('email: ' . $reason);
 
-        return $transport;
+            return new UnusableTransport($reason);
+        }
     }
 
     /**
@@ -1055,6 +1223,133 @@ class Email
     public function getLastSendDebug(): ?string
     {
         return $this->debug;
+    }
+
+    /**
+     * The provider's own id for the last message sent, or null.
+     *
+     * Null on a failed send, on a transport that answers no id, and on SMTP,
+     * where the id belongs to the receiving server rather than to a provider's
+     * API. A caller storing this can join a delivery webhook to the message it
+     * is about without depending on the provider echoing a header or repeating
+     * the `Message-ID` it was given — neither of which every provider does.
+     *
+     * @return string|null
+     */
+    public function getLastSendId(): ?string
+    {
+        return $this->sendId;
+    }
+
+    /**
+     * The id off a SentMessage, where there is one worth keeping.
+     *
+     * Symfony's SMTP transports put the message's own `Message-ID` here, which
+     * the caller already knows and which is not what a webhook will name, so
+     * only an id that differs from the one on the message is an answer. An
+     * empty string is not an id either: a transport that sets one from a
+     * missing response field answers `''` rather than null.
+     */
+    protected function idOf(SentMessage $sent): ?string
+    {
+        $id = trim((string)$sent->getMessageId());
+        if ($id === '') {
+            // Nothing from the transport, which is every SMTP send: Symfony's
+            // `SmtpTransport` reads the server's answer to the message, checks
+            // the response code and drops the line. But it also appends the
+            // whole conversation to the `SentMessage`, so the answer is still
+            // here to be read. See queuedIdIn().
+            return self::queuedIdIn((string)$sent->getDebug());
+        }
+
+        // `Message-ID` is an identification header, and Symfony answers those
+        // with a *list* of ids rather than a string — so this was casting an
+        // array and comparing against the word "Array", which no id has ever
+        // equalled. The guard has therefore never once fired, and every
+        // transport that answers its send with the message's own id has been
+        // recording that id as the provider's.
+        $ours = $sent->getOriginalMessage()->getHeaders()->getHeaderBody('Message-ID');
+        $ours = \is_array($ours) ? (string)($ours[0] ?? '') : (string)$ours;
+
+        // Compared without the angle brackets, because whether they are there
+        // is the transport's habit rather than a difference in the id. Mailgun
+        // answers its send with `<the-message-id@domain>` — the same id the
+        // message left with, in its wire form — and only one side of this was
+        // being unwrapped, so it read as a new id from the provider and got
+        // stored as one. What that produced was a `provider_message_id` column
+        // holding the store's own Message-ID, which then matched no event: the
+        // id Mailgun names in a webhook is a different string again.
+        return self::bare($id) === self::bare($ours) ? null : $id;
+    }
+
+    /**
+     * A message id without the angle brackets a header carries it in.
+     */
+    private static function bare(string $id): string
+    {
+        return trim(trim($id), '<>');
+    }
+
+    /**
+     * The id the receiving server gave the message, out of the SMTP transcript.
+     *
+     * `250 Message queued as 68bf1c…` — the last thing a server says after the
+     * message body, and on a provider's own relay it is that provider's id for
+     * the message. MailerSend documents the id in this line as the same one
+     * their webhooks report events under, and since their webhooks carry no
+     * headers, no metadata and not the `Message-ID` either, it is the only
+     * handle a store on SMTP will ever get from them. SMTP2GO and SendGrid
+     * answer the same way in `queued as`, and an Exim relay in `id=`.
+     *
+     * On a plain relay that is not a provider — a store's own Postfix — the id
+     * belongs to that server and no webhook will ever name it. That costs
+     * nothing: the id is only ever used to look an event up by, and one nothing
+     * reports simply never matches.
+     *
+     * The final response only. Everything before it is the answer to `MAIL
+     * FROM` and each `RCPT TO`, which are about an address rather than about
+     * the message.
+     */
+    private static function queuedIdIn(string $debug): ?string
+    {
+        if ($debug === '') {
+            return null;
+        }
+
+        // Their own words, in the order servers use them.
+        $patterns = [
+            '/\bqueued as\s+([^\s<>]+)/i',
+            '/\bid=([^\s<>]+)/i',
+        ];
+
+        // Read from the end, because a transcript holds one line per command
+        // and the message's own answer is the last of them.
+        $lines = array_reverse(preg_split('/\r\n|\r|\n/', $debug) ?: []);
+
+        foreach ($lines as $line) {
+            // Symfony writes the transcript as a dialogue — `> ` for what was
+            // sent and `< ` for what came back — so the response code is not
+            // at the start of the line.
+            $line = ltrim($line, " \t<>");
+
+            if (!str_starts_with($line, '250')) {
+                continue;
+            }
+
+            foreach ($patterns as $pattern) {
+                if (preg_match($pattern, $line, $found) === 1) {
+                    $id = trim($found[1], " \t.,;");
+
+                    return $id === '' ? null : $id;
+                }
+            }
+
+            // A `250` with nothing nameable in it — "250 2.0.0 Ok" — is a
+            // server that accepted the message without giving it a name.
+            return null;
+        }
+
+        return null;
     }
 
     /**

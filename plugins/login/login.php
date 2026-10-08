@@ -68,6 +68,10 @@ class LoginPlugin extends Plugin
 
     protected $temp_redirect;
     protected $temp_messages;
+    /** @var string|null The page to return to after login, kept until a waiting session starts (system.session.lazy). */
+    protected $lazy_redirect;
+    /** @var UserInterface|null The guest user, kept until a waiting session starts (system.session.lazy). */
+    protected $lazy_user;
 
     /**
      * @return array
@@ -111,6 +115,7 @@ class LoginPlugin extends Plugin
             'onUserLoginFailure'        => ['userLoginGuest', 0],
             'onUserLoginGuest'          => ['userLoginGuest', 0],
             'onUserLogin'               => [['userLoginResetRateLimit', 1000], ['userLogin', 10]],
+            'onUserLoginAuthorized'     => ['userLoginAuthorized', 0],
             'onUserLogout'              => ['userLogout', 0],
         ];
     }
@@ -170,6 +175,19 @@ class LoginPlugin extends Plugin
             $session->messages = $this->temp_messages;
             unset($this->temp_messages);
         }
+        // What this request would have stored while the session was still waiting to start.
+        if (isset($this->lazy_user)) {
+            if (empty($session->user)) {
+                $session->user = $this->lazy_user;
+            }
+            unset($this->lazy_user);
+        }
+        if (isset($this->lazy_redirect)) {
+            if (empty($session->redirect_after_login)) {
+                $session->redirect_after_login = $this->lazy_redirect;
+            }
+            unset($this->lazy_redirect);
+        }
 
         $user = $session->user ?? null;
         if ($user && $user->exists() && ($this->config()['session_user_sync'] ?? false)) {
@@ -222,15 +240,32 @@ class LoginPlugin extends Plugin
         }
 
         // Define current user service.
-        $this->grav['user'] = static function (Grav $c) {
+        $plugin = $this;
+        $this->grav['user'] = static function (Grav $c) use ($plugin) {
             $session = $c['session'];
 
             if (empty($session->user)) {
                 // Try remember me login.
-                $session->user = $c['login']->login(
+                $user = $c['login']->login(
                     ['username' => ''],
-                    ['remember_me' => true, 'remember_me_login' => true, 'failureEvent' => 'onUserLoginGuest']
+                    [
+                        'remember_me' => true,
+                        'remember_me_login' => true,
+                        'twofa' => $c['config']->get('plugins.login.twofa_enabled', false),
+                        'failureEvent' => 'onUserLoginGuest'
+                    ]
                 );
+
+                // A guest has nothing worth keeping, and storing one would start a session
+                // that is waiting for its first write (system.session.lazy). The same guest is
+                // stored if the session starts later in this request.
+                if (!$user->authenticated && self::isSessionWaiting($session)) {
+                    $plugin->lazy_user = $user;
+
+                    return $user;
+                }
+
+                $session->user = $user;
             }
 
             return $session->user;
@@ -383,7 +418,87 @@ class LoginPlugin extends Plugin
             $redirect = $this->grav['session']->redirect_after_login;
         }
 
+        // A session waiting for its first write (system.session.lazy): keep the page in memory
+        // and store it only if the session starts, so an ordinary page view sets no cookie.
+        if (self::isSessionWaiting($this->grav['session'])) {
+            if (!$redirect && !$this->login->getRoute('after_login') && in_array($current_route, $invalid_redirect_routes, true)) {
+                // Nothing was stored on the way here, so on the login page the page to go back
+                // to is the one the visitor came from.
+                $redirect = $this->referrerRedirect($invalid_redirect_routes);
+            }
+            $this->lazy_redirect = $redirect ?: null;
+
+            return;
+        }
+
         $this->grav['session']->redirect_after_login = $redirect;
+    }
+
+    /**
+     * The page named by the Referer header, when it is a page of this site that a visitor
+     * may be sent back to after login.
+     *
+     * @param string[] $invalid_redirect_routes
+     * @return string|null
+     */
+    protected function referrerRedirect(array $invalid_redirect_routes): ?string
+    {
+        $referrer = $_SERVER['HTTP_REFERER'] ?? '';
+        if (!is_string($referrer) || $referrer === '') {
+            return null;
+        }
+
+        /** @var Uri $uri */
+        $uri = $this->grav['uri'];
+        // The route relative to this site, without a language prefix. A referrer from another
+        // site gives the current route, which is one of the invalid routes.
+        // Not parse_url(): it rejects a path with a Grav param in it (`/blog/page:2`).
+        $path = explode('#', explode('?', (string)$uri->referrer(null, null, true), 2)[0], 2)[0];
+
+        $sep = (string)$this->config->get('system.param_sep', ':');
+        $route = '';
+        $params = '';
+        foreach (explode('/', $path) as $part) {
+            if ($part === '') {
+                continue;
+            }
+            if ($sep !== '' && str_contains($part, $sep)) {
+                $key = rawurldecode(explode($sep, $part, 2)[0]);
+                if (!in_array($key, ['task', 'nonce', 'login-nonce', 'logout-nonce'], true)) {
+                    $params .= '/' . $part;
+                }
+            } elseif ($params === '') {
+                $route .= '/' . rawurldecode($part);
+            }
+        }
+        $route = $route ?: '/';
+
+        if (in_array($route, $invalid_redirect_routes, true)) {
+            return null;
+        }
+
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
+        $page = $pages->find($route);
+        if (!$page || !$page->routable() || ($page->header()->login_redirect_here ?? true) !== true) {
+            return null;
+        }
+
+        $redirect = $page->route();
+
+        return in_array($redirect, $invalid_redirect_routes, true) ? null : $redirect . $params;
+    }
+
+    /**
+     * True while the session waits for its first write to start (system.session.lazy,
+     * Grav 2.2+). Always false on older cores and with lazy sessions off.
+     *
+     * @param mixed $session
+     * @return bool
+     */
+    protected static function isSessionWaiting($session): bool
+    {
+        return is_object($session) && method_exists($session, 'isPending') && $session->isPending();
     }
 
     /**
@@ -724,6 +839,19 @@ class LoginPlugin extends Plugin
                     return;
                 }
                 break;
+
+            case 'logout':
+                // CSRF hardening (GHSA-cmm3-j4qp-472x): `logout` had neither a nonce
+                // nor a method check, so a cross-site top-level GET carried the
+                // session cookie (SameSite=Lax sends it on navigations) and forced
+                // the victim out. Worse, when that browser held no valid remember-me
+                // cookie, userLogout() falls through to cleanAllTriplets() and wipes
+                // the account's persistent login on *every* device.
+                if (!$this->isSelfInitiatedLogout($uri, $post)) {
+                    $this->grav['messages']->add($this->grav['language']->translate('PLUGIN_LOGIN.ACCESS_DENIED'), 'info');
+                    return;
+                }
+                break;
         }
 
         $controller = new Controller($this->grav, $task, $post);
@@ -732,17 +860,105 @@ class LoginPlugin extends Plugin
     }
 
     /**
+     * Decide whether a `login.logout` request was started by the user rather than
+     * forged by a third-party page.
+     *
+     * Logout is deliberately more permissive than the other tasks. The plugin has
+     * always accepted a plain link, and third-party themes rely on that -- several
+     * ship a bare `<a href="...?task=login.logout">` with no nonce at all, and this
+     * plugin's own 2FA cancel button posts the task carrying `login-form-nonce`
+     * rather than `logout-nonce`. Forcing every theme onto a nonced POST would break
+     * working sites for an issue whose whole impact is an unwanted sign-out, so this
+     * accepts any credible proof the request is the user's own.
+     *
+     * @param Uri   $uri
+     * @param array $post
+     * @return bool
+     */
+    protected function isSelfInitiatedLogout(Uri $uri, array $post): bool
+    {
+        // 1. The canonical logout link this plugin renders. login-status.html.twig
+        //    and login-form.html.twig have always called
+        //    uri.addNonce(..., 'logout-form', 'logout-nonce'); nothing ever verified it.
+        $nonce = $post['logout-nonce'] ?? $uri->param('logout-nonce');
+        if (is_string($nonce) && $nonce !== '' && Utils::verifyNonce($nonce, 'logout-form')) {
+            return true;
+        }
+
+        // 2. The 2FA screen's cancel button posts task=login.logout from the login
+        //    form, so it carries the `login-form` nonce instead.
+        if (isset($post['login-form-nonce']) && Utils::verifyNonce($post['login-form-nonce'], 'login-form')) {
+            return true;
+        }
+
+        // 3. No nonce. Ask the browser where the request came from. Every engine that
+        //    supports fetch metadata sends Sec-Fetch-Site on navigations: `cross-site`
+        //    is the forged case, and `none` means the user typed the URL or followed a
+        //    bookmark. This is what keeps a theme's bare <a> working on a same-origin
+        //    click while rejecting the attacker's cross-site navigation.
+        $fetchSite = $_SERVER['HTTP_SEC_FETCH_SITE'] ?? null;
+        if (is_string($fetchSite) && $fetchSite !== '') {
+            return in_array(strtolower($fetchSite), ['same-origin', 'same-site', 'none'], true);
+        }
+
+        // 4. A browser too old to send fetch metadata. Compare the referring origin:
+        //    the strict-origin-when-cross-origin policy browsers now default to still
+        //    sends the origin across sites.
+        $referrer = $_SERVER['HTTP_REFERER'] ?? null;
+        if (is_string($referrer) && $referrer !== '') {
+            $parts = parse_url($referrer);
+            if (!isset($parts['scheme'], $parts['host'])) {
+                return false;
+            }
+
+            $origin = $parts['scheme'] . '://' . $parts['host'];
+            if (isset($parts['port'])) {
+                $origin .= ':' . $parts['port'];
+            }
+
+            // Uri::base() is the scheme://host[:port] origin; Uri::rootUrl(true)
+            // would also carry any subdirectory, which is not part of an origin.
+            return rtrim($origin, '/') === rtrim($uri->base(), '/');
+        }
+
+        // 5. No nonce, no fetch metadata, no referrer: a bare navigation from a
+        //    pre-2020 browser. Allow it rather than stranding those visitors with no
+        //    way to sign out. The nonced link above closes the vector for every
+        //    current browser, and the impact here is a sign-out, not a compromise.
+        return true;
+    }
+
+    /**
      * Authorize the Page fallback url (page media accessed through the page route)
      */
     public function authorizeFallBackUrl(): void
     {
-        if ($this->config->get('plugins.login.protect_protected_page_media', false)) {
-            $page_url = \dirname($this->grav['uri']->path());
-            $page = $this->grav['pages']->find($page_url);
-            unset($this->grav['page']);
-            $this->grav['page'] = $page;
-            $this->authorizePage();
+        if (!$this->config->get('plugins.login.protect_protected_page_media', false)) {
+            return;
         }
+
+        $page_url = \dirname($this->grav['uri']->path());
+
+        // Resolve the page the same way `Grav::fallbackUrl()` does, so the rules
+        // being checked belong to the page core is about to serve the file from.
+        // Without `$all`, a `site.routes` entry can hand back a different page.
+        $page = $this->grav['pages']->find($page_url, true);
+
+        // Media stored inside a module folder (`_module`) belongs to the page that
+        // includes the module, so climb to the nearest non-module ancestor and apply
+        // that page's `access` rules. `authorizePage()` skips modules outright, which
+        // left module media served to anyone. getgrav/grav-plugin-login#294
+        while ($page instanceof PageInterface && $page->isModule()) {
+            $page = $page->parent();
+        }
+
+        if (!$page instanceof PageInterface) {
+            return;
+        }
+
+        unset($this->grav['page']);
+        $this->grav['page'] = $page;
+        $this->authorizePage();
     }
 
     /**
@@ -906,6 +1122,11 @@ class LoginPlugin extends Plugin
         $authenticated = $user->authenticated && $user->authorized;
         $login_route = $this->login->getRoute('login');
         if (!$authenticated && $this->redirect_to_login && $login_route) {
+            // The visitor is off to log in, so a session waiting for its first write
+            // (system.session.lazy) starts here to remember which page to come back to.
+            if (isset($this->lazy_redirect)) {
+                $this->grav['session']->redirect_after_login = $this->lazy_redirect;
+            }
             $this->grav->redirectLangSafe($login_route, 302);
         }
 
@@ -1284,16 +1505,41 @@ class LoginPlugin extends Plugin
         $user     = $this->grav['user'];
         $language = $this->grav['language'];
 
-        $form->validate();
-
         /** @var Data $form_data */
         $form_data = $form->getData();
+        // The form has already filtered empty strings to null. Keep those clear
+        // operations when validation filters the data a second time.
+        $form_data->setMissingValuesAsNull(true);
+        if (!$form->validate()) {
+            // Match the returns below: without firing the event and stopping
+            // propagation, Form::process() carries on to the `message` action and
+            // reports the profile as updated when nothing was saved.
+            $this->grav->fireEvent('onFormValidationError', new Event([
+                'form'     => $form,
+                'message'  => $form->getError() ?: $language->translate('PLUGIN_LOGIN.PROFILE_NOT_UPDATED'),
+                'messages' => $form->getErrors()
+            ]));
+            $event->stopPropagation();
+            return false;
+        }
 
         // Don't save if user doesn't exist
         if (!$user->exists()) {
             $this->grav->fireEvent('onFormValidationError', new Event([
                 'form'    => $form,
                 'message' => $language->translate('PLUGIN_LOGIN.USER_IS_REMOTE_ONLY')
+            ]));
+            $event->stopPropagation();
+            return false;
+        }
+
+        // A user who has supplied the correct password but has not completed
+        // the second-factor challenge exists in the session, but is not yet
+        // authorized to change account data.
+        if ($user->authorized !== true) {
+            $this->grav->fireEvent('onFormValidationError', new Event([
+                'form'    => $form,
+                'message' => $language->translate('PLUGIN_LOGIN.PROFILE_NOT_UPDATED')
             ]));
             $event->stopPropagation();
             return false;
@@ -1340,6 +1586,8 @@ class LoginPlugin extends Plugin
         // persist straight to the account and grant super-admin (GHSA-h33v-82r9-v8pm).
         $privilegeFields = ['groups', 'access'];
 
+        $formValues = $form_data->toArray();
+        $missing = new \stdClass();
         $data = [];
         foreach ($fields as $field) {
             if (in_array($field, $privilegeFields, true)) {
@@ -1353,9 +1601,20 @@ class LoginPlugin extends Plugin
                 continue;
             }
 
-            $data_field = $form_data->get($field);
-            if (!isset($data[$field]) && isset($data_field)) {
-                $data[$field] = $form_data->get($field);
+            // Preserve dot-path lookup while distinguishing a cleared value from an absent field.
+            $data_field = $formValues;
+            foreach (explode('.', $field) as $segment) {
+                if (is_object($data_field) && isset($data_field->{$segment})) {
+                    $data_field = $data_field->{$segment};
+                } elseif (is_array($data_field) && array_key_exists($segment, $data_field)) {
+                    $data_field = $data_field[$segment];
+                } else {
+                    $data_field = $missing;
+                    break;
+                }
+            }
+            if (!array_key_exists($field, $data) && $data_field !== $missing) {
+                $data[$field] = $data_field;
             }
         }
 
@@ -1414,12 +1673,12 @@ class LoginPlugin extends Plugin
         $credentials = $event->getCredentials();
         $username = $credentials['username'];
 
-        // Check rate limit for both IP and user, but allow each IP a single try even if user is already rate limited.
+        // Refuse while either the IP or the username has used up its attempts.
         if ($interval = $this->login->checkLoginRateLimit($username)) {
             /** @var Language $t */
             $t = $this->grav['language'];
 
-            $event->setMessage($t->translate(['PLUGIN_LOGIN.TOO_MANY_LOGIN_ATTEMPTS', $interval]), 'error');
+            $event->setMessage($t->translate(['PLUGIN_LOGIN.TOO_MANY_LOGIN_ATTEMPTS_RETRY', $interval]), 'error');
             $event->setRedirect($this->login->getRoute('login') ?? '/');
             $event->setStatus(UserLoginEvent::AUTHENTICATION_CANCELLED);
             $event->stopPropagation();
@@ -1598,6 +1857,14 @@ class LoginPlugin extends Plugin
         $user = $users->load('');
 
         $event->setUser($user);
+
+        // A session waiting for its first write (system.session.lazy) holds nothing to
+        // clear, and a guest is not worth starting one for.
+        if (self::isSessionWaiting($this->grav['session'])) {
+            return;
+        }
+
+        unset($this->grav['session']->remember_me_pending);
         $this->grav['session']->user = $user;
     }
 
@@ -1631,8 +1898,29 @@ class LoginPlugin extends Plugin
             // If the user wants to be remembered, create Rememberme cookie.
             $username = $user->get('username');
             if ($event->getCredential('rememberme')) {
-                $login->rememberMe()->createCookie($username);
+                if ($event->isDelayed()) {
+                    // Defer issuance until the second factor succeeds.
+                    $session->remember_me_pending = $username;
+                } else {
+                    $login->rememberMe()->createCookie($username);
+                }
             }
+        }
+    }
+
+    /**
+     * Complete a deferred remember-me request after the second factor succeeds.
+     */
+    public function userLoginAuthorized(UserLoginEvent $event): void
+    {
+        /** @var SessionInterface $session */
+        $session = $this->grav['session'];
+        $pending = $session->remember_me_pending ?? null;
+        unset($session->remember_me_pending);
+
+        $username = (string)$event->getUser()->get('username');
+        if (is_string($pending) && $pending !== '' && hash_equals($pending, $username)) {
+            $this->grav['login']->rememberMe()->createCookie($username);
         }
     }
 

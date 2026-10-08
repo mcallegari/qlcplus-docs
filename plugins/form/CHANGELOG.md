@@ -1,3 +1,78 @@
+# v9.1.33
+## 10/07/2026
+
+1. [](#improved)
+    * The Cap checkbox widget's labels can now be translated, and a site can change them in its own language files without overriding the template. Thanks @bago [#657](https://github.com/getgrav/grav-plugin-form/pull/657)
+1. [](#bugfix)
+    * A page with a Cap captcha no longer crashes Safari 17 and older. The widget solves on one worker per CPU core and hands them all the same compiled solver, and Safari 17.6 kills the page when several workers run it at once, so a page with an invisible Cap form reloaded in a loop and ended on "A problem repeatedly occurred". Safari 17 and older, and every browser on iOS 17 and older, now solve on a single worker, which takes a second or two
+
+# v9.1.32
+## 09/28/2026
+
+1. [](#bugfix)
+    * An invisible Cap captcha no longer fails on a page that was left open for a while. The widget solved once when the page loaded and posted that token whenever the form was sent, but the server only keeps a token for 20 minutes and each one works once, so a login or signup form that sat open, or was sent a second time without a page reload, came back with a captcha error. The token is now solved again before sending when it is older than 15 minutes or was already used, and that new solve starts as soon as the visitor clicks into the form
+    * A form with an invisible Cap captcha no longer does nothing when the solve fails, for example on a network error. The form is sent anyway, so the visitor sees the server's captcha error instead of a button that does not respond
+    * A field's inline error message is now escaped, so a submitted value quoted back in it shows as text. Thanks @ma4ter
+
+# v9.1.31
+## 09/26/2026
+
+1. [](#bugfix)
+    * Forms defined on another page, such as a signup form included in a theme footer, stayed unknown after a cache clear. The pages rebuild saved the forms cache before Grav settled its final pages cache id, so from the second request on the form rendered with no name and its XHR submit came back as the whole page. The forms are now saved again under the final id
+
+# v9.1.30
+## 09/24/2026
+
+1. [](#bugfix)
+    * Pages with a Cap captcha no longer fail the Lighthouse "Links are not crawlable" SEO check. The widget adds a hidden troubleshooting link with no address until a solve fails, and it now carries the troubleshooting URL from the start
+
+# v9.1.29
+## 09/22/2026
+
+1. [](#improved)
+    * The FilePond upload field no longer pulls in jQuery, because nothing it loads uses it
+    * The Object.assign polyfill for Internet Explorer is gone, along with the browser check that loaded it. Grav 2 does not support a browser that needs it
+
+1. [](#bugfix)
+    * The File upload field works again on themes that write their scripts into the page head. The jQuery library it depends on was registered for the head, which those themes have already written out by the time a form field renders, so the uploader never started. It now loads with the rest of the form's scripts, and a theme that loads jQuery itself keeps its own copy where it was. Thanks @onetrev [#656](https://github.com/getgrav/grav-plugin-form/issues/656)
+
+# v9.1.28
+## 09/15/2026
+
+1. [](#bugfix)
+    * The FilePond uploader is no longer unstyled on some themes. Its two stylesheets were registered for the page head, which on a theme that writes its stylesheets out without deferring them has already been written by the time a form field renders, so they never reached the page at all. They now go out with the field [#653](https://github.com/getgrav/grav-plugin-form/issues/653)
+
+# v9.1.27
+## 09/15/2026
+
+1. [](#improved)
+    * **The Cap captcha checkbox no longer trips accessibility checks.** The widget put the whole box in a button role with its credit and troubleshooting links inside it, which auditing tools flag as serious and which reads to a screen reader as a button containing links. The bundled widget is updated to 0.1.57, where the box is a group, the part you click is its own button, and both links sit beside it rather than inside. Thanks @onetrev [#655](https://github.com/getgrav/grav-plugin-form/issues/655)
+    * The Cap captcha stays fully self-hosted on older browsers. The updated widget falls back to a compression library when the browser has none built in, which Safari before 16.4 and Firefox before 113 do not, and it would have fetched that from a CDN. It is bundled alongside the widget and served from your own site, like the rest of Cap
+
+# v9.1.26
+## 09/14/2026
+
+1. [](#bugfix)
+    * **Form emails work again on Grav 1.7.** A change in 9.1.25 that made page variables available inside the form data template stopped that template rendering at all on the older Twig that Grav 1.7 ships, so form emails went out as the raw include tag instead of the submission. Grav 2 sites were unaffected [#654](https://github.com/getgrav/grav-plugin-form/issues/654)
+    * The Turnstile field's script now loads with the rest of the form's scripts, so the widget appears on themes that write their scripts into the page head [#653](https://github.com/getgrav/grav-plugin-form/issues/653)
+    * The Basic Captcha refresh button works on those same themes, for the same reason
+
+# v9.1.25
+## 09/13/2026
+
+1. [](#bugfix)
+    * The Cloudflare Turnstile settings now show their own labels instead of reCAPTCHA's, completing the fix started in 9.1.24 [#590](https://github.com/getgrav/grav-plugin-form/issues/590)
+    * A failed CAPTCHA now highlights the field and shows the error next to it, rather than only at the top of the form [#627](https://github.com/getgrav/grav-plugin-form/issues/627)
+    * Custom checkbox templates can once again add content before and after the checkbox [#565](https://github.com/getgrav/grav-plugin-form/issues/565)
+    * A field holding several values now lists them readably in Flex listings instead of showing raw JSON [#606](https://github.com/getgrav/grav-plugin-form/issues/606)
+    * Values passed in to the form data template, such as the site URL, are available again inside field output [#569](https://github.com/getgrav/grav-plugin-form/issues/569)
+    * Files written by the save action keep submitted text exactly as entered, instead of turning characters like `&` into HTML entities. Email bodies are unaffected and still escape. A form that sets an explicit `body` on its save action keeps the old output until that line is removed or repointed, and the readme says how [#556](https://github.com/getgrav/grav-plugin-form/issues/556)
+    * A placeholder set to `0` now shows, instead of being treated as no placeholder at all, on text, textarea, number, select and key fields [#511](https://github.com/getgrav/grav-plugin-form/issues/511)
+
+1. [](#improved)
+    * The reCAPTCHA v3 score threshold is now a setting in the plugin's Admin configuration, and the readme explains how to use it [#600](https://github.com/getgrav/grav-plugin-form/issues/600)
+    * The readme now shows how a plugin handles its own form process action, which does not need a built-in action alongside it [#3879](https://github.com/getgrav/grav/issues/3879)
+
 # v9.1.24
 ## 08/27/2026
 

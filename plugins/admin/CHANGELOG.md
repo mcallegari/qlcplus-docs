@@ -1,3 +1,27 @@
+# v1.10.60
+## 09/28/2026
+
+1. [](#bugfix)
+    * Retrying an admin login while locked out no longer extends the lockout, and the message says how many minutes are actually left. The admin now uses the same login check as the frontend, so it needs Login 3.9.12 [getgrav/grav-plugin-login#343](https://github.com/getgrav/grav-plugin-login/pull/343)
+
+# v1.10.59
+## 09/13/2026
+
+1. [](#bugfix)
+    * The Expand All and Collapse All buttons now appear above a list field when its controls are set to `top` or `both`. Thanks @sridharkalaibala [#2503](https://github.com/getgrav/grav-plugin-admin/issues/2503)
+    * A placeholder set to `0` now shows instead of being treated as no placeholder at all. Thanks @sridharkalaibala [#2521](https://github.com/getgrav/grav-plugin-admin/pull/2521)
+    * SVG files now show a preview in the file picker, matching the media manager. Thanks @sridharkalaibala [#2522](https://github.com/getgrav/grav-plugin-admin/pull/2522)
+
+# v1.10.58
+## 09/09/2026
+
+1. [](#improved)
+    * A field's `classes` are now applied to the `array`, `column`, and `columns` field types, which previously ignored them [#2508](https://github.com/getgrav/grav-plugin-admin/pull/2508)
+    * Corrected and completed the Spanish translations [#2509](https://github.com/getgrav/grav-plugin-admin/pull/2509)
+
+1. [](#bugfix)
+    * The `array` field no longer renders a second `class` attribute for its one-child state, which meant the attribute was silently dropped
+
 # v1.10.57
 ## 09/01/2026
 
