@@ -1,6 +1,6 @@
 ---
 title: 'Script Editor'
-date: '04:07 22-08-2023'
+date: '04:04 13-10-2026'
 ---
 
 A **Script** is a function written as a small **JavaScript** program. It lets you control fixtures and other functions with logic — starting and stopping functions, setting channels, waiting, generating random values, running system commands and more. The Script Editor opens in the right panel of the [Fixtures and Functions](/fixtures-and-functions) workspace.
@@ -81,6 +81,7 @@ and a function's speed attributes. They can be addressed by index or by name.
 |--------|-------------|
 | `Engine.setFixture(fxID, channel, value)` | Sets `channel` (index starting at `0`, relative to the fixture) of fixture `fxID` to the DMX `value` (0–255). Returns `true` on success. |
 | `Engine.setFixture(fxID, channel, value, time)` | As above, but fades to the value over `time` milliseconds. |
+| `Engine.getFixtureChannelValue(fxID, channel)` | Returns the current DMX value (0–255) of the given zero-based `channel` of fixture `fxID`. Returns `0` if invalid. |
 | `Engine.getChannelValue(universe, channel)` | Returns the current DMX value (0–255) of an **absolute** channel in a universe. Note: `universe` and `channel` here are zero-based universe index and channel index, **not** a fixture-relative channel. |
 
 ### Timing and flow
@@ -89,16 +90,42 @@ and a function's speed attributes. They can be addressed by index or by name.
 |--------|-------------|
 | `Engine.waitTime(ms)` | Pauses the script for `ms` milliseconds before running the next line. |
 | `Engine.waitTime(time)` | Pauses the script for the given QLC+ time string (e.g. `"1s.500"`). |
+| `Engine.waitTick(ticks)` | Pauses the script for a given number of MasterTimer engine ticks (default: `1`). |
+| `Engine.waitBeat(beats)` | Pauses the script until the specified number of beat pulses occur (default: `1`). |
 | `Engine.random(min, max)` | Returns a random integer between `min` and `max` **milliseconds** (numbers). Handy combined with `waitTime`. |
 | `Engine.random(minTime, maxTime)` | Returns a random number of milliseconds between two QLC+ time strings (e.g. `Engine.random("1s", "5s")`). |
 
-### Global control
+### Global and Debug control
 
 | Method | Description |
 |--------|-------------|
 | `Engine.setBlackout(enable)` | Requests blackout when `enable` is `true`, releases it when `false`. Returns `true` on success. |
 | `Engine.setBPM(bpm)` | Sets the beats-per-minute of the internal beat generator. Returns `true` on success. |
+| `Engine.getBPM()` | Returns the current beats-per-minute tracked by QLC+. |
+| `Engine.debugLog(message)` | Prints `message` to QLC+'s debug console (`qDebug`). Useful for troubleshooting scripts. |
 | `Engine.systemCommand(command)` | Runs an external program detached from QLC+. The first word is the program; the rest are arguments. Wrap an argument that contains spaces in single quotes — for example `Engine.systemCommand("aplay '/home/me/my file.wav'")`. (Not available on iOS.) |
+
+### Persistent Value Store
+
+The persistent store allows scripts to preserve data across separate runs while QLC+ is open.
+
+| Method | Description |
+|--------|-------------|
+| `Engine.storeValue(key, value)` | Stores a value under `key` in shared memory that persists across script runs. |
+| `Engine.getValue(key)` | Retrieves a stored value by `key`. Returns `undefined` if key does not exist. |
+| `Engine.listValues()` | Returns an array of string keys currently stored in memory. |
+| `Engine.clearValue(key)` | Deletes a stored value under `key`. Returns `true` if successfully removed. |
+| `Engine.clearAllValues()` | Clears all key-value pairs stored in memory. |
+
+### Palettes
+
+| Method | Description |
+|--------|-------------|
+| `Engine.getPalette(pID)` | Returns an object containing the ID, name, type, and values of Palette `pID`. |
+| `Engine.applyPalette(pID, fixtureIDs, fadeTime)` | Applies Palette `pID` to fixture ID(s) or head object(s) with optional `fadeTime` (ms). `fixtureIDs` accepts a single ID (`1`), array (`[1, 2]`), or head object (`[{fxID: 1, head: 0}]`). |
+| `Engine.applyPaletteHead(pID, fxID, head, fadeTime)` | Applies Palette `pID` to a specific 0-based `head` index of fixture `fxID`. |
+| `Engine.createPalette(name, typeStr, values)` | Creates a new Palette (`"Color"`, `"Dimmer"`, `"PanTilt"`, `"Zoom"`) with given values and returns its auto-assigned ID. |
+| `Engine.updatePalette(pID, name, typeStr, values)` | Updates an existing Palette's name or values. |
 
 ### Example
 
@@ -106,6 +133,15 @@ and a function's speed attributes. They can be addressed by index or by name.
 // Fade fixture 0's first channel (dimmer) up over 2 seconds
 Engine.setFixture(0, 0, 255, 2000);
 Engine.waitTime("2s");
+
+// Save state across script runs
+var runCount = Engine.getValue("script_runs") || 0;
+Engine.storeValue("script_runs", runCount + 1);
+Engine.debugLog("Script has executed " + (runCount + 1) + " times.");
+
+// Wait for 2 beats, then apply a color palette to fixture 1
+Engine.waitBeat(2);
+Engine.applyPalette(1, [0, 1], 1000);
 
 // Start a chaser and let it run on its own after the script ends
 Engine.stopOnExit(false);
