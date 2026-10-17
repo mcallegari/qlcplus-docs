@@ -1,6 +1,7 @@
 ---
 title: 'Show Manager'
 date: '14:07 21-08-2023'
+media_order: tempo-lane-clip.png
 taxonomy:
     category: docs
 ---
@@ -74,6 +75,8 @@ Each track is one row of the timeline.
 ## Tempo sections
 
 A show often plays several songs, each at its own tempo. **Tempo sections** give the show the tempo of each part of the timeline, so chasers, sequences and EFX set to a **Beats** tempo follow the beat of the song they play over instead of the global BPM. Items in a collection follow too. Shows without sections are unchanged.
+
+![Two songs on the tempo lane, each with its own BPM and bar numbers, above their audio and chasers](tempo-lane-clip.png)
 
 Click <i class="fa fa-drum"></i> **Show the tempo sections** to show the tempo lane. A section has a start, a length, a **BPM** (decimals allowed), the **beats per bar** and a name, normally one per song. Drag a section to move it, or its edges to resize it. Sections can't overlap, and edges snap to item edges. Place a section's start on the song's first downbeat, and moving or editing a section never moves the show items.
 
