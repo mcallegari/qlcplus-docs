@@ -47,6 +47,27 @@ settings panel. Its sections can be expanded and collapsed.
   Higher settings look better but demand more from your graphics hardware.
 * **Ambient light** — overall brightness of the scene when no fixtures are lit
   (0–100%).
+* **Fixture light** — a global multiplier on the light fixtures cast onto the
+  stage and set (0–200%, 100% by default). The 3D view adds up the output of
+  every fixture, so many fixtures aimed at one area can wash it out to flat
+  white. Turn this down to restore detail without dimming the environment
+  (**Ambient light**). It does not affect the beams in the air (**Smoke amount**).
+* **Lumens (experimental)** — render the rig photometrically instead of giving
+  every fixture the same output (off by default):
+  1. Each fixture is scaled by the **Lumens** value in its definition, spread
+    over the beam angle, relative to the brightest fixture in the project,
+    which keeps its current brightness. A fixture with no Lumens value is
+    treated as that reference, so it never goes dark.
+  2. Light falls off with distance, measured against the average height of your
+    fixtures: a high fixture lays a wider, dimmer pool, and zooming a beam in
+    concentrates it.
+
+  Use **Fixture light** alongside it to set the overall level. It is
+  experimental because the look may still change and many fixture definitions
+  lack sensible Lumens and beam angle values. Floor standing fixtures are
+  averaged in with the hung rig, so a mixed rig can render uplighters very hot;
+  turn **Fixture light** down if so. The distance falloff does not affect the
+  beams in the air.
 * **Smoke amount** — how much atmospheric haze is in the air (0–100%), which
   makes beams more visible.
 * **Show FPS** — displays a frame-rate counter, useful for judging performance.
