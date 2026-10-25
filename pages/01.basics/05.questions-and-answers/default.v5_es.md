@@ -87,9 +87,9 @@ de códecs adicional como K-Lite, [disponible aquí](https://www.codecguide.com/
 **R:** Debe añadir una opción a la línea de comandos de QLC+ para indicar a las librerías Qt que escalen automáticamente
 la interfaz en una pantalla de alta densidad (High DPI). Ejemplos:
 
-* **Linux (desde terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`
-* **Acceso directo de Windows**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`
-* **Mac OS (desde terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`
+* **Linux (desde terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus5`
+* **Acceso directo de Windows**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus5.exe"`
+* **Mac OS (desde terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus5`
 
 En cualquier caso, consulte la página de [parámetros de línea de comandos](/advanced/command-line-parameters) para más información.
 

@@ -87,9 +87,9 @@ supplémentaire comme K-Lite, [disponible ici](https://www.codecguide.com/downlo
 **R :** Vous devez ajouter une option à la ligne de commande de QLC+ pour indiquer aux bibliothèques Qt de mettre à l'échelle
 automatiquement l'interface sur un écran haute résolution (High DPI). Exemples :
 
-* **Linux (depuis un terminal)** : `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`
-* **Raccourci Windows** : `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`
-* **Mac OS (depuis un terminal)** : `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`
+* **Linux (depuis un terminal)** : `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus5`
+* **Raccourci Windows** : `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus5.exe"`
+* **Mac OS (depuis un terminal)** : `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus5`
 
 Le cas échéant, consultez la page des [paramètres de ligne de commande](/advanced/command-line-parameters) pour plus d'informations.
 

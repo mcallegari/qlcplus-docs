@@ -87,9 +87,9 @@ aggiuntivi come K-Lite, [disponibile qui](https://www.codecguide.com/download_kl
 **R:** Dovete aggiungere un'opzione alla riga di comando di QLC+ per dire alle librerie Qt di ridimensionare automaticamente
 l'interfaccia su un display ad alta densità di pixel (High DPI). Esempi:
 
-* **Linux (da terminale)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`
-* **Collegamento Windows**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`
-* **Mac OS (da terminale)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`
+* **Linux (da terminale)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus5`
+* **Collegamento Windows**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus5.exe"`
+* **Mac OS (da terminale)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus5`
 
 Nel caso, consultate la pagina [parametri della riga di comando](/advanced/command-line-parameters) per ulteriori informazioni.
 

@@ -84,9 +84,9 @@ Leider sind die von Windows unterstützten grundlegenden Codecs ziemlich dürfti
 **A:** Sie müssen der QLC+-Befehlszeile eine Option hinzufügen, um die Qt-Bibliotheken anzuweisen, automatisch zu skalieren
 die Schnittstelle auf einem High-DPI-Display. Beispiele:
 
-* **Linux (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus`
-* **Windows shortcut**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus.exe"`
-* **Mac OS (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus`
+* **Linux (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 qlcplus5`
+* **Windows shortcut**: `C:\\Windows\\System32\\cmd.exe /c "SET QT_AUTO_SCREEN_SCALE_FACTOR=1 && START /D ^"C:\\QLC+^" qlcplus5.exe"`
+* **Mac OS (from terminal)**: `QT_AUTO_SCREEN_SCALE_FACTOR=1 QLC+.app\\Contents\\MacOS\\qlcplus5`
 
 Im Falle, schaue nach den [command line parameters page](/advanced/command-line-parameters) für weitere Informationen.
 
