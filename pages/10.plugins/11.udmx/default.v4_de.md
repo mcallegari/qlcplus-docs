@@ -1,12 +1,13 @@
 ---
 title: uDMX
 date: '05:20 22-08-2023'
+media_order: zadig_udmx_windows.png
 ---
 
 Einführung
 ------------
 
-Das uDMX-Ausgabe-Plugin unterstützt die USB-DMX-Schnittstelle [Anyma uDMX](https://www.anyma.ch/research/udmx/) unter Linux und macOS.
+Das uDMX-Ausgabe-Plugin unterstützt die USB-DMX-Schnittstelle [Anyma uDMX](https://www.anyma.ch/research/udmx/) unter Linux, macOS und Windows.
 
 Anforderungen
 ------------
@@ -21,7 +22,9 @@ Unter Apple macOS benötigen Sie überhaupt keine Treiber, da QLC+ die native US
 
 ### Windows
 
-Dieses Gerät wird unter Windows noch nicht unterstützt.
+QLC+ kommuniziert mit uDMX-Geräten über libusb, das im QLC+-Installationsprogramm enthalten ist, daher wird keine zusätzliche DLL benötigt. Das Gerät muss den **WinUSB**-Treiber verwenden, der mit [Zadig](https://zadig.akeo.ie) installiert werden kann: Öffnen Sie Zadig, wählen Sie **Options > List All Devices**, wählen Sie das uDMX-Gerät aus, wählen Sie **WinUSB** und klicken Sie auf **Install Driver**.
+
+![](zadig_udmx_windows.png)
 
 Abstimmung
 ------

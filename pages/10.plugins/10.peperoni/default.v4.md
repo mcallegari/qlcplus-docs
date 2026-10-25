@@ -22,10 +22,10 @@ Nothing special is needed for Mac OS X. All required components are already insi
 
 ### Windows
 
-You must install the [Peperoni USBDMX Windows drivers](http://www.lighting-solutions.de/support/driver.html). Usually these come on a CD along with the Peperoni device you've bought.  
-If after installing the driver, QLC+ still doesn't detect your Peperoni device, copy the usbdmx.dll file you find inside the driver ZIP package (i386 folder) into the main QLC+ folder.
+QLC+ talks to Peperoni devices through libusb, which is included in the QLC+ installer, so no extra DLL is needed. The device must use the **WinUSB** driver:
 
-* Unzip the driver package to a folder on your hard disk.
-* Plug the peperoni device to a USB port.
-* If you're running a 32bit version of Windows, point the "Found new hardware" wizard to look for the driver under **windows/i386**.
-* If you're running a 64bit version of Windows, point the "Found new hardware" wizard to look for the driver under **windows/ia64** or **windows/amd64**.
+* Devices with firmware 0x1000 or newer install the WinUSB driver automatically when plugged in.
+* Devices with older firmware need the WinUSB driver installed manually with [Zadig](https://zadig.akeo.ie): open Zadig, select **Options > List All Devices**, choose the Peperoni device, select **WinUSB** and click **Install Driver**. Alternatively, update the device firmware.
+* For the X-Switch, select **libusbK** instead of WinUSB in Zadig, since WinUSB can't change the device's USB configuration.
+
+![](zadig-peperoni-usb.png)

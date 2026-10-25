@@ -1,12 +1,13 @@
 ---
 title: uDMX
 date: '05:20 22-08-2023'
+media_order: zadig_udmx_windows.png
 ---
 
 Introducció
 ------------
 
-El connector de sortida uDMX admet la interfície [Anyma uDMX](https://www.anyma.ch/research/udmx/) USB-DMX a Linux i macOS.
+El connector de sortida uDMX admet la interfície [Anyma uDMX](https://www.anyma.ch/research/udmx/) USB-DMX a Linux, macOS i Windows.
 
 Requisits
 ------------
@@ -21,7 +22,9 @@ A l'Apple macOS, no necessites cap controlador, ja que QLC+ utilitza la interfí
 
 ### Windows
 
-Aquest dispositiu encara no està admès al Windows.
+QLC+ es comunica amb els dispositius uDMX mitjançant libusb, que s'inclou a l'instal·lador de QLC+, de manera que no cal cap DLL addicional. El dispositiu ha d'utilitzar el controlador **WinUSB**, que es pot instal·lar amb [Zadig](https://zadig.akeo.ie): obriu Zadig, seleccioneu **Options > List All Devices**, trieu el dispositiu uDMX, seleccioneu **WinUSB** i feu clic a **Install Driver**.
+
+![](zadig_udmx_windows.png)
 
 Ajustaments
 ------

@@ -1,6 +1,7 @@
 ---
 title: Peperoni
 date: '05:19 22-08-2023'
+media_order: zadig-peperoni-usb.png
 ---
 
 Einführung
@@ -21,10 +22,10 @@ Für Mac OS X ist nichts Besonderes erforderlich. Alle erforderlichen Komponente
 
 ### Windows
 
-Sie müssen die [Peperoni USBDMX Windows-Treiber](http://www.lighting-solutions.de/support/driver.html) installieren. Normalerweise liegen diese zusammen mit dem Peperoni-Gerät, das Sie gekauft haben, auf einer CD bei.  
-Wenn QLC+ Ihr Peperoni-Gerät nach der Installation des Treibers immer noch nicht erkennt, kopieren Sie die Datei usbdmx.dll, die Sie im Treiber-ZIP-Paket (Ordner i386) finden, in den Hauptordner von QLC+.
+QLC+ kommuniziert mit Peperoni-Geräten über libusb, das im QLC+-Installationsprogramm enthalten ist, daher wird keine zusätzliche DLL benötigt. Das Gerät muss den **WinUSB**-Treiber verwenden:
 
-* Entpacken Sie das Treiberpaket in einen Ordner auf Ihrer Festplatte.
-* Schließen Sie das Peperoni-Gerät an einen USB-Anschluss an.
-* Wenn Sie eine 32-Bit-Version von Windows verwenden, rufen Sie den Assistenten „Neue Hardware gefunden“ auf, um unter **windows/i386** nach dem Treiber zu suchen.
-* Wenn Sie eine 64-Bit-Version von Windows verwenden, rufen Sie den Assistenten „Neue Hardware gefunden“ auf, um unter **windows/ia64** oder **windows/amd64** nach dem Treiber zu suchen.
+* Geräte mit Firmware 0x1000 oder neuer installieren den WinUSB-Treiber automatisch beim Anschließen.
+* Bei Geräten mit älterer Firmware muss der WinUSB-Treiber manuell mit [Zadig](https://zadig.akeo.ie) installiert werden: Öffnen Sie Zadig, wählen Sie **Options > List All Devices**, wählen Sie das Peperoni-Gerät aus, wählen Sie **WinUSB** und klicken Sie auf **Install Driver**. Alternativ können Sie die Firmware des Geräts aktualisieren.
+* Wählen Sie für den X-Switch in Zadig **libusbK** statt WinUSB, da WinUSB die USB-Konfiguration des Geräts nicht ändern kann.
+
+![](zadig-peperoni-usb.png)
