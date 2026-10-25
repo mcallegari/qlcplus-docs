@@ -1,6 +1,7 @@
 ---
 title: Peperoni
 date: '05:19 22-08-2023'
+media_order: zadig-peperoni-usb.png
 ---
 
 Introduction
