@@ -73,6 +73,28 @@ If you find a problem but don't have the time to fix it, you can [open an issue]
 
 </details>
 
+## PDF manuals
+<details>
+<summary>How the PDFs are built</summary>
+
+Pushing a tag builds one PDF per language for the matching version and attaches them to the GitHub release:
+
+```
+git tag 4.14.4 && git push origin 4.14.4   # v4 PDFs (en, ca, de)
+git tag 5.1.0  && git push origin 5.1.0    # v5 PDFs (en, ca, de, es, fr, it)
+```
+
+Languages are found from the files in `pages/`, so a new translation is included automatically.
+To test a build without releasing, run the **Release** workflow from the Actions tab with any branch and `publish` unchecked.
+
+To build locally (needs Python 3, ImageMagick, `rsvg-convert` and Docker or a local pandoc + LaTeX):
+
+```
+RELEASE=5.3.1 scripts/build-pdf.sh v5 it   # -> build/pdf/QLC+_5.3.1_User_Manual_IT.pdf
+```
+
+</details>
+
 ## Support QLC+
 If QLC+ helps you to make your lights shine, please consider donating or buying merch. Use these links to find out more:
 <table>

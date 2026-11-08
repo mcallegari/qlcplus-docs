@@ -1,0 +1,52 @@
+% Cover page of the PDF manuals: a dark stage with light beams and the QLC+ logo.
+% scripts/merge_docs.py fills in the <<...>> placeholders for each language.
+% Coordinates inside the scope go from (0,0) bottom-left to (1,1) top-right of the page.
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\begin{scope}[shift={(current page.south west)}, x=\paperwidth, y=\paperheight]
+
+  % Stage background
+  \shade[top color=qlcdeep, bottom color=qlcnight] (0,0) rectangle (1,1);
+
+  % Light beams from three fixtures at the top
+  \fill[qlcyellow, opacity=0.16, path fading=south] (0.14,1) -- (0.20,1) -- (0.70,0.18) -- (0.30,0.18) -- cycle;
+  \fill[white,     opacity=0.07, path fading=south] (0.47,1) -- (0.53,1) -- (0.70,0.20) -- (0.30,0.20) -- cycle;
+  \fill[qlcyellow, opacity=0.16, path fading=south] (0.80,1) -- (0.86,1) -- (0.70,0.18) -- (0.30,0.18) -- cycle;
+
+  % Fixture lenses
+  \foreach \x in {0.17, 0.50, 0.83} {
+    \fill[qlcyellow, opacity=0.35, path fading=qlcglow] (\x,0.995) circle (1cm);
+    \fill[qlcnight] (\x-0.035,1.0) rectangle (\x+0.035,0.985);
+    \fill[white!92!qlcyellow] (\x,0.985) ellipse (0.45cm and 0.1cm);
+  }
+
+  % Glow behind the logo
+  \fill[qlcyellow, opacity=0.30, path fading=qlcglow] (0.5,0.66) circle (7cm);
+  \fill[white, opacity=0.10, path fading=qlcglow] (0.5,0.66) circle (3.5cm);
+
+  % Logo
+  \node at (0.5,0.66) {\includegraphics[width=0.30\paperwidth, height=0.30\paperwidth]{<<LOGO>>}};
+
+  % Title block
+  \node[anchor=base, text=white] at (0.5,0.425)
+    {\qlcheavy\fontsize{38}{42}\selectfont Q Light Controller+};
+  \node[anchor=base, text=qlcyellow] at (0.5,0.375)
+    {\qlclight\fontsize{26}{30}\selectfont <<DOC>>};
+  \node[anchor=base, text=white!70!qlcdeep] at (0.5,0.335)
+    {\qlclight\fontsize{13}{16}\selectfont <<SUBTITLE>>};
+  \node[fill=qlcyellow, text=qlcnight, rounded corners=8pt, inner xsep=14pt, inner ysep=5pt]
+    at (0.5,0.285) {\qlcbold\small <<VERSION_LABEL>>};
+
+  % Footer band
+  \fill[qlcnight, opacity=0.85, path fading=north] (0,0) rectangle (1,0.20);
+  \draw[qlcyellow, line width=1pt] (0.08,0.115) -- (0.92,0.115);
+  \node[anchor=north west, align=left, text=white] at (0.08,0.10)
+    {<<RELEASE_BLOCK>>};
+  \node[anchor=north, align=center, text=white!75!qlcdeep] at (0.5,0.10)
+    {\qlcbold\small docs.qlcplus.org\\[2pt]\qlclight\footnotesize <<WRITTEN>>};
+  \node[anchor=north east, align=right, text=white] at (0.92,0.10)
+    {\qlclight\footnotesize\color{white!60!qlcdeep} <<DATE_LABEL>>\\[2pt]\qlcbold\small <<DATE>>};
+
+\end{scope}
+\end{tikzpicture}
+\end{titlepage}

@@ -1,0 +1,85 @@
+% LaTeX preamble for the PDF manuals.
+% scripts/merge_docs.py fills in the <<...>> placeholders for each language.
+
+% ---------- Colours (from the QLC+ logo) ----------
+\definecolor{qlcslate}{HTML}{364E5E}
+\definecolor{qlcyellow}{HTML}{FFD42A}
+\definecolor{qlcgold}{HTML}{C79A00}
+\definecolor{qlcdeep}{HTML}{22333D}
+\definecolor{qlcnight}{HTML}{0D1418}
+\definecolor{qlcmuted}{HTML}{7D8F9A}
+\definecolor{qlclink}{HTML}{1C6E8C}
+
+% ---------- Fonts ----------
+% Inter + JetBrains Mono are downloaded by scripts/build-pdf.sh into build/fonts.
+% Without them the build still works, with the default LaTeX fonts.
+\IfFontExistsTF{Inter-Regular.ttf}{%
+  \defaultfontfeatures{Ligatures=TeX}%
+  \setmainfont{Inter}[Extension=.ttf, UprightFont=*-Regular, BoldFont=*-SemiBold,
+    ItalicFont=*-Italic, BoldItalicFont=*-SemiBoldItalic]%
+  \setsansfont{Inter}[Extension=.ttf, UprightFont=*-Regular, BoldFont=*-SemiBold,
+    ItalicFont=*-Italic, BoldItalicFont=*-SemiBoldItalic]%
+  \newfontfamily\qlcheavy{Inter}[Extension=.ttf, UprightFont=*-ExtraBold]%
+  \newfontfamily\qlcbold{Inter}[Extension=.ttf, UprightFont=*-SemiBold]%
+  \newfontfamily\qlclight{Inter}[Extension=.ttf, UprightFont=*-Light]%
+}{%
+  \newcommand\qlcheavy{\bfseries}\newcommand\qlcbold{\bfseries}\newcommand\qlclight{}%
+}
+\IfFontExistsTF{JetBrainsMono-Regular.ttf}{%
+  \setmonofont{JetBrainsMono}[Extension=.ttf, UprightFont=*-Regular, BoldFont=*-Bold,
+    ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic, Scale=MatchLowercase]%
+}{}
+\linespread{1.12}
+
+% ---------- Headings ----------
+\renewcommand{\chaptername}{<<CHAPTER>>}
+\IfFileExists{titlesec.sty}{%
+  \usepackage{titlesec}
+  \titleformat{\chapter}[display]
+    {\normalfont\color{qlcslate}}
+    {\qlcbold\small\color{qlcmuted}\MakeUppercase{\chaptertitlename}\enspace\thechapter}
+    {2pt}
+    {\qlcheavy\fontsize{30}{34}\selectfont}
+    [\vspace{8pt}{\color{qlcyellow}\titlerule[3pt]}]
+  \titlespacing*{\chapter}{0pt}{0pt}{24pt}
+  \titleformat{\section}
+    {\qlcbold\Large\color{qlcslate}}{\textcolor{qlcgold}{\thesection}}{0.8em}{}
+  \titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{1.4ex plus .2ex}
+  \titleformat{\subsection}{\qlcbold\large\color{qlcslate}}{\thesubsection}{0.8em}{}
+  \titleformat{\subsubsection}{\qlcbold\normalsize\color{qlcslate}}{\thesubsubsection}{0.8em}{}
+  \titleformat{\paragraph}[hang]{\qlcbold\normalsize\color{qlcslate}}{}{0pt}{}
+  \titlespacing*{\paragraph}{0pt}{2ex plus .5ex}{0.6ex}
+  \titleformat{\subparagraph}[hang]{\qlcbold\small\color{qlcslate}}{}{0pt}{}
+  \titlespacing*{\subparagraph}{0pt}{1.6ex plus .5ex}{0.4ex}
+
+  % Running header and footer
+  \usepackage{titleps}
+  \newpagestyle{qlc}{%
+    \sethead{}{}{\small\color{qlcmuted}\chaptertitle}%
+    \setfoot{\small\color{qlcmuted}<<FOOTER>>}{}{\small\qlcbold\color{qlcslate}\thepage}%
+  }
+  \renewpagestyle{plain}{\setfoot{}{}{\small\qlcbold\color{qlcslate}\thepage}}
+  \pagestyle{qlc}
+}{}
+
+% Room for two-digit section numbers (3.10) in the table of contents
+\makeatletter\renewcommand*\l@section{\@dottedtocline{1}{1.5em}{3em}}\makeatother
+
+% ---------- Links ----------
+\AtBeginDocument{\hypersetup{linkcolor=qlclink, urlcolor=qlclink}}
+
+% ---------- Code ----------
+% Wrap long lines in code blocks instead of running off the page
+\IfFileExists{fvextra.sty}{%
+  \usepackage{fvextra}
+  \ifdefined\Highlighting\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}\fi
+  \RecustomVerbatimEnvironment{verbatim}{Verbatim}{breaklines,breakanywhere}
+}{}
+
+% ---------- Cover ----------
+\usepackage{tikz}
+\usetikzlibrary{fadings}
+\tikzfading[name=qlcglow, inner color=transparent!0, outer color=transparent!100]
+
+% ---------- Language ----------
+<<BABEL>>

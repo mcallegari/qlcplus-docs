@@ -14,25 +14,5 @@ jobs:
           config_path: .spellcheck.yml
           task_name: Markdown
 
-  build-pdf:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
-
-      - id: build
-        uses: ./.github/actions/build-pdf
-        with:
-          lang: en
-
-      - name: Upload-PDF
-        uses: actions/upload-artifact@v7
-        with:
-            name: qlcplus-docs-en-pdf
-            path: ./.github/workflows/bin/pdf/
-  
-      - name: Upload-Markdown
-        uses: actions/upload-artifact@v7
-        with:
-            name: qlcplus-docs-en-markdown
-            path: ./.github/workflows/bin/markdown/
+# PDFs are built by release.yml when a tag is pushed
+# (or by running it manually from the Actions tab for a test build).
